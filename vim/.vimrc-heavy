@@ -1,0 +1,370 @@
+" vim: foldmethod=marker foldlevel=0
+
+" Nocompatible isn't assumed when starting vim with -u option
+set nocompatible
+
+call plug#begin('~/.vim/bundle')
+
+let mapleader=""
+
+" filetype off
+
+map [12^ :PlugUpdate<CR>
+
+Plug 'ardagnir/united-front'
+
+Plug 'kien/ctrlp.vim' " {{{
+
+let g:ctrlp_map = '<Leader>ff'
+" let g:ctrlp_cmd = 'CtrlPMixed'
+nnoremap <Leader>fe :CtrlP <C-R>=expand('%:p:h')<CR><CR>
+" nnoremap <Leader>fb :CtrlPBuffer<CR>
+" I never use this:
+" nnoremap <Leader><Space> :CtrlPLine<CR>
+" nnoremap <Leader>ft :CtrlPBufTagAll<CR>
+nnoremap <Leader>ft :CtrlPTag<CR>
+nnoremap <Leader>fd :CtrlPBufTag<CR>
+nnoremap <Leader>fch :CtrlPChange<CR>
+nnoremap <Leader>fr :CtrlPMRU<CR>
+let g:ctrlp_open_multiple_files = '1vjr'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_custom_ignore = {
+            \'dir': '\v&HOME/(music|video|editing|torrents|misc)$'
+            \}
+let g:ctrlp_extensions = ['sessions']
+let g:ctrlp_clear_cache_on_exit=0
+let g:ctrlp_prompt_mappings  = {'PrtBS()' : ['<bs>', '<c-h>', '<>']}
+" }}}
+Plug 'pielgrzym/ctrlp-sessions' " {{{
+nnoremap <Leader>fs :CtrlPSessions<CR>
+let g:ctrlp_session_dir = '.vim/sessions'
+" }}}
+
+Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
+nnoremap <F5> :UndotreeToggle<CR>
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_WindowLayout = 2
+" }}}
+
+Plug 'majutsushi/tagbar', { 'on' : 'TagbarOpen' } " {{{
+nnoremap <silent> <F6> :TagbarOpen fjc<CR>
+let g:tagbar_singleclick = 1
+let g:tagbar_foldlevel = 1
+" }}}
+
+Plug 'scrooloose/syntastic', { 'for' : ['python', 'javascript'] } " {{{
+nnoremap <Leader>ss :SyntasticCheck<CR>
+nnoremap <Leader>st :SyntasticToggleMode<CR>
+nnoremap <Leader>se :Errors<CR>
+nnoremap <Leader>sn :lnext<CR>
+nnoremap <Leader>sp :lprev<CR>
+let g:syntastic_python_checkers = ['python', 'pylint2']
+let g:syntastic_python_pylint_exec = 'python2'
+" let g:syntastic_python_pylint_postargs
+let g:syntastic_javascript_checkers = ['jshint'] 
+" let g:syntastic_html_checkers = ['w3', 'validator']
+" }}}
+
+Plug 'Lokaltog/vim-easymotion' " {{{
+" let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*():;"<>.,/?[]{}ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+let g:EasyMotion_keys = 'asdkghlqwertyuiopbvnmcASDFGHJKLQWERTYUIOP1234fj'
+let g:EasyMotion_leader_key = '<Tab>'
+let g:EasyMotion_startofline = 0
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_enter_jump_first = 1
+let g:EasyMotion_space_jump_first = 1
+let g:EasyMotion_do_special_mapping = 1
+let g:EasyMotion_add_search_history = 0
+" map <Tab>r <Plug>(easymotion-repeat)
+map <Tab>l <Plug>(easymotion-lineforward)
+map <Tab>h <Plug>(easymotion-linebackward)
+map <Tab><Tab> <Plug>(easymotion-sn)
+map <Tab>k <Plug>(easymotion-k)
+map <Tab>j <Plug>(easymotion-j)
+omap <Tab>k V<Plug>(easymotion-k)
+omap <Tab>j V<Plug>(easymotion-j)
+" }}}
+
+Plug 'SirVer/ultisnips' " {{{
+let g:UltiSnipsEditSplit = 'horizontal'
+let g:UltiSnipsSnippetsDir = '~/.vim/usnippets/'
+let g:UltiSnipsSnippetDirectories = ['usnippets']
+let g:UltiSnipsExpandTrigger = '<tab>'
+nnoremap <Leader>u :UltiSnipsEdit<CR>
+" }}}
+
+Plug 'bootleq/vim-cycle' " {{{
+let g:cycle_no_mappings = 1
+nmap <silent> <C-A> <Plug>CycleNext
+nmap <silent> <C-X> <Plug>CyclePrev
+vmap <silent> <C-A> <Plug>CycleNext
+vmap <silent> <C-X> <Plug>CyclePrev
+noremap <silent> <Plug>CycleFallbackNext <C-A>
+noremap <silent> <Plug>CycleFallbackPrev <C-X>
+
+let g:cycle_default_groups = [
+            \   [['true', 'false']],
+            \   [['and', 'or']],
+            \   [['{:}', '[:]', '(:)'], 'sub_pairs'],
+            \   [['today', 'tomorrow']],
+            \   [['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']],
+            \   [['this', 'next']],
+            \   [['Bundle', 'Plug']],
+            \ ]
+
+"  -- Python
+let g:cycle_default_groups += [
+            \ [['assertTrue', 'assertEqual']],
+            \ [['in', 'not in']],
+            \ ]
+
+"  -- CSS
+let g:cycle_default_groups += [
+            \   [["show", "hide"]],
+            \   [["left", "right"]],
+            \   [["none", "top", "bottom"]],
+            \   [["margin", "padding"]],
+            \   [["before", "after"]],
+            \   [["absolute", "relative"]],
+            \   [["first", "last"]],
+            \   [["hidden", "auto"]],
+            \ ]
+
+"  -- HTML
+let g:cycle_default_groups += [
+            \   [['h1', 'h2', 'h3'], 'sub_tag'],
+            \   [['ul', 'select', 'ol'], 'sub_tag'],
+            \   [['em', 'strong', 'small'], 'sub_tag'],
+            \   [['a', 'button'], 'sub_tag'],
+            \   [['div', 'form', 'p'], 'sub_tag'],
+            \   [['class', 'id', 'style']],
+            \ ]
+" }}}
+
+Plug 'c9s/bufexplorer' " <Leader>be, <Leader>bs, <Leader>bs
+
+Plug 'gcmt/taboo.vim' " {{{
+set sessionoptions+=tabpages,globals
+nnoremap <Leader>gT :TabooOpen 
+let g:taboo_tab_format="%N %f%m "
+let g:taboo_renamed_tab_format="%N %f%m "
+" }}}
+
+Plug 'tmhedberg/matchit'
+
+Plug 'briandoll/change-inside-surroundings.vim' " <Leader>ci
+
+Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
+
+Plug 'tommcdo/vim-exchange'
+
+Plug 'tomtom/tcomment_vim'
+
+Plug 'gerw/vim-HiLinkTrace' " {{{
+nnoremap <Leader>eh :HLT<CR>
+" }}}
+
+Plug 'dbakker/vim-projectroot' " {{{
+nnoremap <Leader>ep :echo ProjectRootGuess()<CR>
+nnoremap <Leader>dt :ProjectRootExe !ctags -R<CR>
+" - Projectroot Make
+command! Make :silent! ProjectRootExe make | redraw!
+nnoremap <Leader>dm :Make<CR>
+" }}}
+
+Plug 'rking/ag.vim'  " {{{
+let g:agprg = 'ag --hidden --nogroup --nocolor --column --smart-case --skip-vcs-ignores'
+let g:aghighlight=1
+
+nnoremap <Leader>ge :Ag <C-R><C-W> "<C-R>=expand('%:p:h')<CR>/"<C-left><Left>
+nnoremap <Leader>gg :ProjectRootExe Ag <C-R><C-W>
+nnoremap <Leader>gf :ProjectRootExe find **/<C-R><C-W>*<CR>
+" }}}
+
+Plug 'kshenoy/vim-signature'
+
+Plug 'terryma/vim-multiple-cursors' " {{{
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key = '<C-l>'
+let g:multi_cursor_prev_key = '<C-h>'
+let g:multi_cursor_skip_key = '<C-x>'
+let g:multi_cursor_quit_key = '<Esc>'
+" }}}
+
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
+Plug 'Shougo/vimshell.vim' " {{{
+nnoremap <C-W>e :VimShell<CR>
+nnoremap <Leader>vp :exe 'VimShell -popup' ProjectRootGuess()<CR>
+nnoremap <Leader>vP :exe 'VimShell -split' ProjectRootGuess()<CR>
+nnoremap <Leader>vb :VimShellBufferDir -popup<CR>
+nnoremap <Leader>vB :VimShellBufferDir -split<CR>
+nnoremap <Leader>vv :VimShellSendString h<CR>
+nmap <Leader>vw yw:VimShell<CR><Esc><C-P>A<C-W><C-R>"<CR><Esc><C-W>p
+nmap <Leader>vf wyw:VimShell<CR><Esc><C-P>A<C-W><C-R>"<CR><Esc><C-W>p
+nmap <Leader>va yw:VimShell<CR><Esc><C-P>A.<C-R>"<CR><Esc><C-W>p
+nmap <Leader>vu yw:VimShell<CR><Esc><C-P>A<C-W><C-W><CR><Esc><C-W>p
+" Use current directory as vimshell prompt.
+let g:vimshell_prompt_expr =
+            \ 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
+let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
+let g:vimshell_scrollback_limit = 65535
+" }}}
+
+Plug 'kana/vim-operator-user'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-line' " {{{
+let g:textobj_line_no_default_key_mappings = 1
+nmap vv v<Plug>(textobj-line-i)
+" }}}
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-lastpat'
+
+Plug 'sgur/vim-textobj-parameter'
+
+Plug 'akiyan/vim-textobj-xml-attribute'
+
+Plug 'wellle/targets.vim' " {{{
+let g:targets_separators = '. ; : + - ~ _ * \ |'
+" }}}
+
+Plug 'junegunn/vim-after-object' " {{{
+autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
+" }}}
+
+Plug 't9md/vim-choosewin' " {{{
+let g:choosewin_label_align='center'
+let g:choosewin_label='ASDFJKLGHQWERUIO'
+" nmap s <Plug>(choosewin)
+nmap <Space><Space> <Plug>(choosewin)
+" }}}
+Plug 't9md/vim-textmanip' " {{{
+xmap <C-j> <Plug>(textmanip-move-down)
+xmap <C-k> <Plug>(textmanip-move-up)
+" xmap <C-h> <Plug>(textmanip-move-left)
+" xmap <C-l> <Plug>(textmanip-move-right)
+nmap <C-k><C-k> V<Plug>(textmanip-move-up)
+nmap <C-j><C-j> V<Plug>(textmanip-move-down)
+
+nmap g<C-k> <Plug>(textmanip-duplicate-up)
+nmap g<C-j> <Plug>(textmanip-duplicate-down)
+xmap g<C-k> <Plug>(textmanip-duplicate-up)
+xmap g<C-j> <Plug>(textmanip-duplicate-down)
+
+xmap [<Space> <Plug>(textmanip-blank-above)
+xmap ]<Space> <Plug>(textmanip-blank-below)
+" }}}
+Plug 't9md/vim-quickhl' " {{{
+nmap <Leader>m <Plug>(quickhl-manual-this)
+xmap <Leader>m <Plug>(quickhl-manual-this)
+nmap <Leader>M <Plug>(quickhl-manual-reset)
+xmap <Leader>M <Plug>(quickhl-manual-reset)
+
+" nmap <Space>J <Plug>(quickhl-cword-toggle)
+" nmap <Space>] <Plug>(quickhl-tag-toggle)
+" For use with vim-operator-user
+" map H <Plug>(operator-quickhl-manual-this-motion)
+" }}}
+
+Plug 'haya14busa/vim-easyoperator-line' " {{{
+let g:EasyOperator_line_do_mapping = 0
+nmap <Tab>y <Plug>(easyoperator-line-yank)
+nmap <Tab>d <Plug>(easyoperator-line-delete)
+" }}}
+
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-eunuch' " {{{
+nnoremap <F2> :Rename <C-R>=expand("%:t")<CR>
+" }}}
+Plug 'tpope/vim-fugitive' " {{{
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>G :Gstatus<CR>
+nnoremap <Leader>D :Gdiff<CR>
+nnoremap <Leader>C :Gcommit<CR>
+nnoremap <Leader>gl :silent! Glog<CR>:bot copen<CR>
+" Also, grep commit text in all or current file:
+" :Glog --grep=query --
+" :Glog --grep=query -- %
+" Find text added by commit:
+" :Glog --Sfindme --
+" :Glog --Sfindme -- %
+command! Gcurrent :exe "Gcommit -v -q %:p"
+nnoremap <Leader>gc :Gcurrent<CR>
+command! Gcached :Gvsplit! diff --staged
+" }}}
+
+Plug 'cohama/agit.vim' " {{{
+" let g:agit_no_default_mappings = 1
+let g:agit_enable_auto_show_commit = 0
+nnoremap <Leader>gA :Agit<CR>
+" }}}
+
+Plug 'mwgkgk/CamelCaseMotion' " {{{
+
+let g:CamelCaseMotion_dont_use_default_mappings = 1
+
+omap <silent> <C-f> <Plug>CamelCaseMotion_iw
+xmap <silent> <C-f> <Plug>CamelCaseMotion_iw
+map <silent> <C-f> <Plug>CamelCaseMotion_w
+
+omap <silent> <C-b> <Plug>CamelCaseMotion_ib
+xmap <silent> <C-b> <Plug>CamelCaseMotion_ib
+map <silent> <C-b> <Plug>CamelCaseMotion_b
+
+" Prior to rebinding c-e, we want C-Y to function as a reading scroll.
+nnoremap <C-y> 3<C-e>3j
+
+omap <silent> <C-e> <Plug>CamelCaseMotion_ie
+xmap <silent> <C-e> <Plug>CamelCaseMotion_ie
+map <silent> <C-e> <Plug>CamelCaseMotion_e
+
+" kill-small-word insert mode:
+imap <C-b> <Esc><C-b>cw
+
+" }}}
+Plug 'mwgkgk/vim-operator-append' " {{{
+map <Tab>a <Plug>(operator-append)
+" }}}
+Plug 'mwgkgk/vim-operator-insert' " {{{
+map <Tab>i <Plug>(operator-insert)
+" }}}
+Plug 'mwgkgk/vim-sync-schemes'
+
+" Python
+Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
+nmap ]f ]pf
+nmap [f [pf
+" }}}
+
+" Django
+Plug 'mjbrownie/delete-surround-html', { 'for' : 'htmldjango' }
+Plug 'mjbrownie/django-template-textobjects', { 'for' : 'htmldjango' }
+
+" Local
+Plug '~/.vim/bundle/cpp-stuff', { 'for' : 'cpp' }
+Plug '~/.vim/bundle/django-stuff', { 'for' : 'htmldjango' }
+
+" Colors
+Plug 'romainl/Apprentice'
+Plug 'romainl/Disciple'
+Plug 'jnurmine/Zenburn'
+Plug 'sjl/badwolf'
+Plug 'jordwalke/flatlandia'
+Plug 'mitsuhiko/fruity-vim-colorscheme'
+Plug 'morhetz/gruvbox'
+Plug 'sk1418/last256'
+Plug 'wolf-dog/sceaduhelm.vim'
+Plug 'wolf-dog/nighted.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'cloudhead/shady.vim'
+Plug 'Tuurlijk/typofree.vim'
+Plug 'mattsacks/vim-eddie'
+Plug 'w0ng/vim-hybrid'
+Plug 'jonathanfilip/vim-lucius'
+
+call plug#end()
+
+" Source the light vimrc
+source ~/.vimrc
+

@@ -1,0 +1,54 @@
+" ==Vimperator_Color_Scheme==
+" name: seaweed
+" ==Seaweed_Colorscheme_Settings==
+hi clear;
+hi Bell					border: 0 none; background-color: #2f2f2f;font-size:13pt; font-family: Segoe UI;
+hi Boolean				color: #f6e9e9; font-size:13pt; font-family: Segoe UI;
+hi CmdLine        color: #d4d4d4; background: #333; font-family: Segoe UI; font-size: 13pt; padding: 0px; vertical-align: middle; border: none;
+hi CmdOutput			white-space: pre;font-size:13pt; font-family: Segoe UI;
+hi CompDesc				color: #77a8c1; width: 50%; font-size:13pt; font-family Segoe UI;
+hi CompItem[selected]   background: black;
+hi CompIcon				width: 16px; min-width: 16px; display: inline-block; margin-right: .5ex;font-size:13pt; font-family: Segoe UI;
+hi CompLess				text-align: center; height: 0; line-height: .5ex; padding-top: 1ex;font-size:13pt; font-family: Segoe UI;
+hi CompLess::after		color: #6577bf; content: "\2303" /* Unicode up arrowhead */
+hi CompMore				text-align: center; height: .5ex; line-height: .5ex; margin-bottom: -.5ex;font-size:13pt; font-family: Segoe UI;
+hi CompMore::after		color: #6577bf; content: "\2304" /* Unicode down arrowhead */
+hi CompMsg				font-style: italic; margin-left: 16px;font-size:13pt; font-family: Segoe UI;
+hi CompResult			width: 45%; overfloaw: hidden;font-size:13pt; font-family: Segoe UI;
+hi CompTitle			color: #6577bf; background: #2f2f2f; font-weight: bold;font-size:13pt; font-family: Segoe UI;
+hi CompTitle>*			padding: 0 .5ex;font-size:13pt; font-family: Segoe UI;
+hi ErrorMsg				color: #249cbd; background: #2f2f2f;font-size:13pt; font-family: Segoe UI;
+hi Filter				color: yellow; font-size:13pt; font-family: Segoe UI;
+hi FrameIndicator		background-color: #2f2f2f; opacity: 0.5; z-index: 999; position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+hi Function				color: navy;font-size:13pt; font-family: Segoe UI;
+hi Gradient				height: 1px; margin-bottom: -1px; margin-top: -1px;font-size:13pt; font-family: Segoe UI;
+hi GradientLeft			background-color: #2f2f2f;font-size:13pt; font-family: Segoe UI;
+hi GradientRight		background-color: #2f2f2f;font-size:13pt; font-family: Segoe UI;
+hi Hint						color: white; background-color: #800; border-color: ButtonShadow; font-family: Terminus; font-size: 20px; border-width: 0px; border-style: solid; padding 0 1px;
+hi Hint::after				content: attr(number);
+hi HintActive				color: black; background: #480;
+hi HintElem					color: black; background-color: #880; 
+hi HintImage				opacity: .5;
+hi Indicator			color: #7471b0;
+hi InfoMsg				color: #249cbd; background: #2f2f2f;font-size:13pt; font-family: Segoe UI;
+hi LineNr				color: #249cbd; background: #2f2f2f; font-size:13pt; font-family: Segoe UI;
+hi Message				white-space: normal; min-width: 100%; padding-left: 2em; text-indent: -2em; display: block;
+hi ModeMsg				color: #249cbd; background: #2f2f2f;font-size:13pt; font-family: Segoe UI;
+hi MoreMsg				color: #249cbd; background: #2f2f2f;font-size:13pt; font-family: Segoe UI;
+hi NonText				color: #6577bf; min-height: 16px; padding-left: 2px;font-size:13pt; font-family: Segoe UI;
+hi Normal				color: #a1a1a1; background: #2f2f2f; font-size:13pt; font-family: Segoe UI;
+hi Null					color: blue;font-size:13pt; font-family: Segoe UI;
+hi Number				color: blue;font-size:13pt; font-family: Segoe UI;
+hi Object				color: maroon;font-size:13pt; font-family: Segoe UI;
+hi Preview				color: yellow;font-size:13pt; font-family: Segoe UI;
+hi Question				color: #249cbd; background: #249cbd;font-size:13pt; font-family: Segoe UI;
+hi Search				padding: 0; color: #2f2f2f; background-color: grey; padding: 0; font-size:13pt; font-family: Segoe UI;
+hi StatusLine			color: #2dabc4; background: #2f2f2f; font-size:13pt; font-family: Segoe UI; font-weight: normal;margin-top:1px;
+hi StatusLineBroken		color: red; background: #2f2f2f;font-size:13pt; font-family: Segoe UI;
+hi StatusLineSecure		color: #77a8c1; background: #2f2f2f;font-size:13pt; font-family: Segoe UI;
+hi String				color: #249cbd;font-size:13pt; font-family: Segoe UI;
+hi Tag					color: blue;font-size:13pt; font-family: Segoe UI;
+hi Title				color: #249cbd; background: #2f2f2f;
+hi URL					text-decoration: none; color: #2dc476; background: inherit; font-size:13pt; font-family: Segoe UI;
+hi URL:hover			text-decoration: underline; cursor: pointer; font-size:13pt; font-family: Segoe UI;
+hi WarningMsg			color: red; background: #2f2f2f; font-size:13pt; font-family: Segoe UI;

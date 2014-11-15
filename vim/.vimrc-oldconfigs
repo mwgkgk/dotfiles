@@ -1,0 +1,156 @@
+" Bundle 'scrooloose/nerdtree'
+" nnoremap <F2> :let NERDTreeWinPos = "left"<cr>:NERDTreeFind<cr>
+" nnoremap <F3> :let NERDTreeWinPos = "right"<cr>:NERDTreeFind<cr>
+" let g:NERDTreeQuitOnOpen=1
+
+" Ultisnips + YouCompleteMe compatibility:
+
+" function! g:UltiSnips_Complete()
+"     call UltiSnips_ExpandSnippet()
+"     if g:ulti_expand_res == 0
+"         " if pumvisible()
+"             return "\<C-n>"
+"         else
+"             call UltiSnips_JumpForwards()
+"             if g:ulti_jump_forwards_res == 0
+"                return "\<TAB>"
+"             endif
+"         endif
+"     endif
+"     return ""
+" endfunction
+
+" Shougo/neocomplete.vim
+" let g:neocomplete#enable_at_startup = 1
+" let g:neocomplete#enable_smart_case = 1
+" let g:neocomplete#sources#syntax#min_keyword_length = 4
+" let g:neocomplete#auto_completion_start_length = 4
+" let g:neocomplete#enable_auto_delimiter = 1
+" let g:neocomplete#enable_fuzzy_completion = 0
+"
+" <TAB>: completion.
+" inoremap <expr><Tab>  neocomplete#start_manual_complete()
+" <C-h>, <BS>: close popup and delete backword char.
+" inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" inoremap <expr><C-y>  neocomplete#close_popup()
+" inoremap <expr><C-e>  neocomplete#cancel_popup()
+" Enable omni completion.
+" autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+" autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+" autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" MatchTagAlways :
+" let g:mta_filetypes = {
+"     \ 'html' : 1,
+"     \ 'htmldjango' : 1,
+"     \ 'xhtml' : 1,
+"     \ 'xml' : 1,
+"     \ 'jinja' : 1,
+"     \}
+" let g:mta_use_matchparen_group=0
+" let g:mta_set_default_matchtag_color=0
+" autocmd ColorScheme * highlight MatchTag guifg=lightgreen guibg=NONE
+
+" Vim-smooth-scroll
+" noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 20, 2)<CR>
+" noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 20, 2)<CR>
+" noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 20, 4)<CR>
+" noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 20, 4)<CR>
+
+" " Dragvisuals
+" vmap  <expr>  <C-h>  DVB_Drag('left')
+" vmap  <expr>  <C-l>  DVB_Drag('right')
+" vmap  <expr>  <C-j>  DVB_Drag('down')
+" vmap  <expr>  <C-k>  DVB_Drag('up')
+" CamelCaseMotion
+" map <silent> W <Plug>CamelCaseMotion_w
+" map <silent> B <Plug>CamelCaseMotion_b
+" map <silent> E <Plug>CamelCaseMotion_e
+" sunmap W
+" sunmap B
+" sunmap E
+
+" machakann/vim-columnmove
+" let g:columnmove_no_default_key_mappings = 1
+" let g:columnmove_strict_wbege = 0
+"
+" nmap <Space>j <Plug>(columnmove-f)
+" vmap <Space>j <Plug>(columnmove-f)
+" omap <Space>j V<Plug>(columnmove-f)
+"
+" nmap <Space>k <Plug>(columnmove-F)
+" vmap <Space>k <Plug>(columnmove-F)
+" omap <Space>k V<Plug>(columnmove-F)
+"
+" nmap <Space>w <Plug>(columnmove-w)
+" vmap <Space>w <Plug>(columnmove-w)
+" omap <Space>w V<Plug>(columnmove-w)
+"
+" nmap <Space>e <Plug>(columnmove-e)
+" vmap <Space>e <Plug>(columnmove-e)
+" omap <Space>e V<Plug>(columnmove-e)
+"
+" nmap <Space>ge <Plug>(columnmove-ge)
+" vmap <Space>ge <Plug>(columnmove-ge)
+" omap <Space>ge V<Plug>(columnmove-ge)
+"
+" nmap <Space>b <Plug>(columnmove-b)
+" vmap <Space>b <Plug>(columnmove-b)
+" omap <Space>b V<Plug>(columnmove-b)
+"
+" nmap <Space>; <Plug>(columnmove-;)
+
+" t9md/vim-smalls:
+nmap s <Plug>(smalls)
+xmap s <Plug>(smalls)
+omap S V<Plug>(smalls)
+" function! g:UltiSnips_Complete()
+"     call UltiSnips#ExpandSnippet()
+"     if g:ulti_expand_res == 0
+"         if pumvisible()
+"             return "\<C-P>"
+"         endif
+"         if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+"             return "\<Tab>"
+"         " elseif exists('&omnifunc') && &omnifunc != ''
+"         "     return "\<C-X>\<C-O>"
+"         else
+"             return "\<C-P>"
+"         endif
+"     endif
+"     return ""
+" endfunction
+
+" au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+
+snippet "([\w\s]+)?st" "HTML Style" !irs
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1).rstrip() + ' '
+else:
+	snip.rv = ' '`style="${1}${VISUAL}"
+endsnippet
+" Vifm.vim
+" let g:vifm_term = 'urxvt -e'
+" let g:vifm_exec_args = "-c 'colorscheme GreenDay'"
+" nnoremap <F2> :SplitVifm<CR>
+
+" - Insert mode newline below (needs more work):
+" inoremap <C-o> <Esc>O
+Plug 'airblade/vim-gitgutter', { 'on' : 'GitGutterToggle' } " {{{
+let g:gitgutter_enabled = 0
+nnoremap <leader>tg :GitGutterToggle<CR>
+" }}}
+
+Plug 'maxbrunsfeld/vim-yankstack' " {{{
+let g:yankstack_map_keys = 0
+let g:yankstack_yank_keys = ['c', 'C', 'd', 'D', 'x', 'X', 'y', 'Y']
+nmap <leader>a <Plug>yankstack_substitute_older_paste
+nmap <leader>x <Plug>yankstack_substitute_newer_paste
+
+" call yankstack#setup()
+" }}}
+

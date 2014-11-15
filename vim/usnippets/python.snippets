@@ -1,0 +1,928 @@
+###########################################################################
+#                            TEXTMATE SNIPPETS                            #
+###########################################################################
+
+#! header
+snippet #! "Shebang header for python scripts" b
+#!/usr/bin/env python
+# encoding: utf-8
+$0
+endsnippet
+
+snippet utf "Description" !b
+# -*- coding: utf-8 -*-
+endsnippet
+
+snippet ifmain "ifmain" b
+if __name__ == '__main__':
+	${1:main()}$0
+endsnippet
+
+
+##########
+# COMMON #
+##########
+
+# The smart def and smart class snippets use a global option called
+# "g:ultisnips_python_style" which, if set to "doxygen" will use doxygen
+# style comments in docstrings.
+
+global !p
+
+NORMAL  = 0x1
+DOXYGEN = 0x2
+SPHINX  = 0x3
+
+SINGLE_QUOTES = 0x1
+DOUBLE_QUOTES = 0x2
+
+def get_args(arglist):
+	args = [arg.split('=')[0].strip() for arg in arglist.split(',') if arg]
+	args = [arg for arg in args if arg and arg != "self"]
+
+	return args
+
+
+def get_quoting_style(snip):
+	style = snip.opt("g:ultisnips_python_quoting_style", "double")
+	if style == 'single':
+		return SINGLE_QUOTES
+	return DOUBLE_QUOTES
+
+def tripple_quotes(snip):
+	if get_quoting_style(snip) == SINGLE_QUOTES:
+		return "'''"
+	return '"""'
+
+def get_style(snip):
+	style = snip.opt("g:ultisnips_python_style", "normal")
+
+	if    style == "doxygen": return DOXYGEN
+	elif  style == "sphinx": return SPHINX
+	else: return NORMAL
+
+
+def format_arg(arg, style):
+	if style == DOXYGEN:
+		return "@param %s @todo" % arg
+	elif style == SPHINX:
+		return ":param %s: @todo" % arg
+	elif style == NORMAL:
+		return ":%s: @todo" % arg
+
+
+def format_return(style):
+	if style == DOXYGEN:
+		return "@return: @todo"
+	elif style in (NORMAL, SPHINX):
+		return ":returns: @todo"
+
+
+def write_docstring_args(args, snip):
+	if not args:
+		snip.rv += ' {0}'.format(tripple_quotes(snip))
+		return
+
+	snip.rv += '\n' + snip.mkline('', indent='')
+
+	style = get_style(snip)
+
+	for arg in args:
+		snip += format_arg(arg, style)
+
+
+def write_init_body(args, parents, snip):
+	parents = [p.strip() for p in parents.split(",")]
+	parents = [p for p in parents if p != 'object']
+
+	for p in parents:
+		snip += p + ".__init__(self)"
+
+	if parents:
+		snip.rv += '\n' + snip.mkline('', indent='')
+
+	for arg in args:
+		snip += "self._%s = %s" % (arg, arg)
+
+
+def write_slots_args(args, snip):
+	args = ['"_%s"' % arg for arg in args]
+	snip += '__slots__ = (%s,)' % ', '.join(args)
+
+endglobal
+
+########################################
+# Class & Special Method Name Snippets #
+########################################
+
+snippet class "class with docstrings" b
+class ${1:MyClass}(${2:object}):
+	`!p snip.rv = tripple_quotes(snip)`
+	${3:Docstring for $1. }
+
+	`!p snip.rv = tripple_quotes(snip)`
+
+	def __init__(self$4):
+		`!p snip.rv = tripple_quotes(snip)`${5:@todo: to be defined1.}`!p
+snip.rv = ""
+snip >> 2
+
+args = get_args(t[4])
+
+write_docstring_args(args, snip)
+if args:
+	snip.rv += '\n' + snip.mkline('', indent='')
+	snip += '{0}'.format(tripple_quotes(snip))
+
+write_init_body(args, t[2], snip)
+`
+		$0
+endsnippet
+
+
+snippet slotclass "class with slots and docstrings" b
+class ${1:MyClass}(${2:object}):
+
+	`!p snip.rv = tripple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = tripple_quotes(snip)`
+`!p
+snip >> 1
+args = get_args(t[4])
+write_slots_args(args, snip)
+`
+
+	def __init__(self$4):
+		`!p snip.rv = tripple_quotes(snip)`${5:@todo: to be defined.}`!p
+snip.rv = ""
+snip >> 2
+
+args = get_args(t[4])
+
+write_docstring_args(args, snip)
+if args:
+	snip.rv += '\n' + snip.mkline('', indent='')
+	snip += tripple_quotes(snip)
+
+write_init_body(args, t[2], snip)
+`
+		$0
+endsnippet
+
+
+snippet contain "methods for emulating a container type" b
+def __len__(self):
+	${1:pass}
+
+def __getitem__(self, key):
+	${2:pass}
+
+def __setitem__(self, key, value):
+	${3:pass}
+
+def __delitem__(self, key):
+	${4:pass}
+
+def __iter__(self):
+	${5:pass}
+
+def __reversed__(self):
+	${6:pass}
+
+def __contains__(self, item):
+	${7:pass}
+endsnippet
+
+
+snippet context "context manager methods" b
+def __enter__(self):
+	${1:pass}
+
+def __exit__(self, exc_type, exc_value, traceback):
+	${2:pass}
+endsnippet
+
+
+snippet attr "methods for customizing attribute access" b
+def __getattr__(self, name):
+	${1:pass}
+
+def __setattr__(self, name, value):
+	${2:pass}
+
+def __delattr__(self, name):
+	${3:pass}
+endsnippet
+
+
+snippet desc "methods implementing descriptors" b
+def __get__(self, instance, owner):
+	${1:pass}
+
+def __set__(self, instance, value):
+	${2:pass}
+
+def __delete__(self, instance):
+	${3:pass}
+endsnippet
+
+
+snippet cmp "methods implementing rich comparison"
+def __eq__(self, other):
+	${1:pass}
+
+def __ne__(self, other):
+	${2:pass}
+
+def __lt__(self, other):
+	${3:pass}
+
+def __le__(self, other):
+	${4:pass}
+
+def __gt__(self, other):
+	${5:pass}
+
+def __ge__(self, other):
+	${6:pass}
+
+def __cmp__(self, other):
+	${7:pass}
+endsnippet
+
+
+snippet repr "methods implementing string representation"
+def __repr__(self):
+	${1:pass}
+
+def __str__(self):
+	${2:pass}
+
+def __unicode__(self):
+	${3:pass}
+endsnippet
+
+
+# note: reflected operands and augmented arithmeitc assignements have been
+# intentionally ommited to reduce verbosity.
+snippet numeric "methods for emulating a numeric type" b
+def __add__(self, other):
+	${1:pass}
+
+def __sub__(self, other):
+	${2:pass}
+
+def __mul__(self, other):
+	${3:pass}
+
+def __div__(self, other):
+	${4:pass}
+
+def __truediv__(self, other):
+	${5:pass}
+
+def __floordiv__(self, other):
+	${6:pass}
+
+
+def __mod__(self, other):
+	${7:pass}
+
+def __divmod__(self, other):
+	${8:pass}
+
+def __pow__(self, other):
+	${9:pass}
+
+
+def __lshift__(self, other):
+	${10:pass}
+
+def __rshift__(self, other):
+	${11:pass}
+
+def __and__(self, other):
+	${12:pass}
+
+def __xor__(self, other):
+	${13:pass}
+
+def __or__(self, other):
+	${14:pass}
+
+
+def __neg__(self):
+	${15:pass}
+
+def __pos__(self):
+	${16:pass}
+
+def __abs__(self):
+	${17:pass}
+
+def __invert__(self):
+	${18:pass}
+
+
+def __complex__(self):
+	${19:pass}
+
+def __int__(self):
+	${20:pass}
+
+def __long__(self):
+	${21:pass}
+
+def __float__(self):
+	${22:pass}
+
+
+def __oct__(self):
+	${22:pass}
+
+def __hex__(self):
+	${23:pass}
+
+
+def __index__(self):
+	${24:pass}
+
+def __coerce__(self, other):
+	${25:pass}
+endsnippet
+
+snippet def "function with docstrings" b
+def ${1:function}(`!p
+if snip.indent:
+	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
+	`!p snip.rv = tripple_quotes(snip)`${4:@todo: Docstring for $1.}`!p
+snip.rv = ""
+snip >> 1
+
+args = get_args(t[2])
+if args:
+	write_docstring_args(args, snip)
+
+style = get_style(snip)
+snip += format_return(style)
+snip.rv += '\n' + snip.mkline('', indent='')
+snip += tripple_quotes(snip) `
+	${0:pass}
+endsnippet
+
+snippet def "function with no docstrings" b!
+def ${1:function}(`!p
+if snip.indent:
+	snip.rv = 'self' + (", " if len(t[2]) else "")`${2}):
+	${0:pass}
+endsnippet
+
+#snippet /def(\s\w+)/ "regex function" br!
+#def`!p
+#if match.group(1) is not None:
+#	snip.rv = match.group(1)`(`!p
+#if snip.indent:
+#	snip.rv = 'self' + (", " if len(t[2]) else "")`${2}):
+#	${0:pass}
+#endsnippet
+
+# doesn't expand when there is a word in front
+snippet /(^|(?<=\W))\./ "self." r
+self.
+endsnippet
+
+snippet from "from module import name" b
+from ${1:module} import ${2:Stuff}
+endsnippet
+
+snippet "from (\S)+" "from regex" rb
+`!p
+if match.group(0) is not None:
+    snip.rv = match.group(0)` import $1
+endsnippet
+
+snippet i "import" b
+import $1
+endsnippet
+
+snippet doc "Just a doctstring" !b
+""" $1 """
+endsnippet
+
+##############
+# PROPERTIES #
+##############
+snippet roprop "Read Only Property" b
+@property
+def ${1:name}(self):
+	${2:return self._$1}$0
+endsnippet
+
+snippet rwprop "Read write property" b
+def ${1:name}():
+	`!p snip.rv = tripple_quotes(snip) if t[2] else ''
+`${2:@todo: Docstring for $1.}`!p
+if t[2]:
+	snip >> 1
+
+	style = get_style(snip)
+	snip.rv += '\n' + snip.mkline('', indent='')
+	snip += format_return(style)
+	snip.rv += '\n' + snip.mkline('', indent='')
+	snip += tripple_quotes(snip)
+else:
+	snip.rv = ""`
+	def fget(self):
+		return self._$1$0
+
+	def fset(self, value):
+		self._$1 = value
+	return locals()
+
+$1 = property(**$1(), doc=$1.__doc__)
+endsnippet
+
+
+####################
+# If / Else / Elif #
+####################
+snippet if "If" b
+if ${1:condition}:
+	${2:pass}
+endsnippet
+
+snippet ife "If / Else" b
+if ${1:condition}:
+	${2:pass}
+else:
+	${3:pass}
+endsnippet
+
+snippet ifee "If / Elif / Else" b
+if ${1:condition}:
+	${2:pass}
+elif ${3:condition}:
+	${4:pass}
+else:
+	${5:pass}
+endsnippet
+
+
+##########################
+# Try / Except / Finally #
+##########################
+snippet try "Try / Except" b
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+endsnippet
+
+snippet try "Try / Except / Else" b
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+else:
+	${5:pass}
+endsnippet
+
+snippet try "Try / Except / Finally" b
+try:
+	${1:pass}
+except ${2:Exception}, ${3:e}:
+	${4:raise $3}
+finally:
+	${5:pass}
+endsnippet
+
+snippet try "Try / Except / Else / Finally" b
+try:
+	${1:pass}
+except${2: ${3:Exception}, ${4:e}}:
+	${5:raise}
+else:
+	${6:pass}
+finally:
+	${7:pass}
+endsnippet
+
+
+#####################
+# Assertions & Tests #
+#####################
+
+snippet print "print" !b
+print ${1} # DEBUG
+endsnippet
+
+snippet pdb "Set PDB breakpoint" b
+import pdb; pdb.set_trace() # DEBUG
+endsnippet
+
+snippet rdb "celery debug" b
+from celery.contrib import rdb; rdb.set_trace() # DEBUG
+endsnippet
+
+snippet sql "sql" !b
+from django.db import connection # DEBUG
+print len(connection.queries)
+endsnippet
+
+snippet ipdb "Set IPDB breakpoint" b
+import ipdb; ipdb.set_trace()
+endsnippet
+
+snippet pudb "Set PUDB breakpoint" b
+import pudb; pudb.set_trace()
+endsnippet
+
+snippet ard "assert redirects" !b
+self.assertRedirects(self.resp, ${1:expected_url}, status_code=302, target_status_code=200, msg_prefix='')
+endsnippet
+
+snippet ae "Assert equal" !b
+self.assertEqual(${1})
+endsnippet
+
+snippet at "Assert True" !b
+self.assertTrue(${1})
+endsnippet
+
+snippet af "Assert False" !b
+self.assertFalse(${1})
+endsnippet
+
+snippet aae "Assert almost equal" !b
+self.assertAlmostEqual(${1})
+endsnippet
+
+snippet ara "Assert raises" b
+self.assertRaises(${1:exception}, ${2:func}${3/.+/, /}${3:arguments})
+endsnippet
+
+
+snippet testcase "pyunit testcase" b
+class Test${1:Class}(${2:unittest.TestCase}):
+
+	`!p snip.rv = tripple_quotes(snip)`${3:Test case docstring.}`!p snip.rv = tripple_quotes(snip)`
+
+	def setUp(self):
+		${4:pass}
+
+	def tearDown(self):
+		${5:pass}
+
+	def test_${6:name}(self):
+		${7:pass}
+endsnippet
+
+snippet inxt "test in context" !b
+self.assertTrue('$1' in self.resp.context)
+endsnippet
+
+snippet innt "test in content" !b
+self.assertTrue('$1' in self.resp.content)
+endsnippet
+
+snippet fixt "fixtures" !b
+fixtures = ['${1}']
+endsnippet
+
+snippet testvars "TEST_VARS" !b
+TEST_VARS = {
+	'$1' : '${2:$1}',
+}
+endsnippet
+
+snippet tv "Description" i
+TEST_VARS['$1']
+endsnippet
+
+snippet mom "mommy.make" !b
+self.${1/.*\.(\w*)/\L$1\E/} = mommy.make('$1')
+endsnippet
+
+snippet "(\w+\ =\ mom)" "mommy.make regex" !r
+`!p
+snip.rv = match.group(1)`my.make('$1')
+endsnippet
+
+snippet writetest "Description" !b
+import os
+f = open(os.path.join(os.path.expanduser('~'), 'heap', 'out.html'), 'w')
+f.write(self.resp.content)
+f.close()
+endsnippet
+
+snippet setup "setUp" !b
+def setUp(self):
+	$1
+endsnippet
+
+snippet pd "post_dict" !b
+post_dict = {
+	$1,
+}
+self.resp = self.client.post(self.url, post_dict)
+endsnippet
+
+snippet pdaj "post dict ajax" !b
+post_dict = {
+	$1,
+}
+self.resp = self.post_ajax(self.url, post_dict)
+self.resp.context = simplejson.loads(self.resp.content)
+endsnippet
+
+snippet as200 "response okay" !b
+self.assertEqual(self.resp.status_code, 200)
+endsnippet
+
+snippet as302 "response okay" !b
+self.assertEqual(self.resp.status_code, 302)
+endsnippet
+
+snippet testfailsanon "Description" !b
+class ${1}AnonTestCase(TestCase):
+
+    def setUp(self):
+        self.resp = self.client.get(TEST_VARS['${2}'])
+
+    def test_anonymous_response_redirect(self):
+        self.assertEqual(self.resp.status_code, 302)
+        self.assertRedirects(self.resp, TEST_VARS['${3}'],
+                status_code=302, target_status_code=200, msg_prefix='')
+endsnippet
+
+snippet testfailsnonadmin "Description" !b
+class ${1}AnonTestCase(TestCase):
+
+    def setUp(self):
+        self.resp = self.client.get(TEST_VARS['${2}'])
+
+    def test_asks_for_staff_login(self):
+        self.assertEqual(self.resp.status_code, 200)
+        self.assertTrue('<h1 id="site-name">Django administration</h1>' in
+                self.resp.content)
+
+class $1UserTestCase(TestCase):
+
+    def setUp(self):
+        self.login_user()
+        self.resp = self.client.get(TEST_VARS['$2'])
+
+    def test_asks_for_staff_login(self):
+        self.assertEqual(self.resp.status_code, 200)
+        self.assertTrue('<h1 id="site-name">Django administration</h1>' in
+                self.resp.content)
+endsnippet
+
+snippet testok "Description" !b
+def test_response_ok(self):
+	self.assertEqual(self.resp.status_code, 200)
+endsnippet
+
+############
+#  django  #
+############
+
+snippet "(class )?testc" "django testcase" r
+class ${1}TestCase(TestCase${2}):
+
+	def setUp(self):
+		${4:pass}
+endsnippet
+
+snippet "(class )?testw" "webdriver testcase" r
+class ${1}TestCase(LiveServerTestCase${2}):
+
+	def setUp(self):
+        self.browser = webdriver.Firefox()
+
+    def tearDown(self):
+        self.browser.quit()
+endsnippet
+
+snippet "(def )?test_?" "django test inline" r
+def test_${1}(self):
+	${2:pass}
+endsnippet
+
+snippet "(def test_.+)" "django test inline with preentered name" r
+`!p snip.rv = match.group(1)`(self):
+	${1:pass}
+endsnippet
+
+snippet view "django view" !b
+def ${1}(request${2}):
+
+	context = {}${4}
+
+	return render(request, '${5:`!p snip.rv = os.path.basename(os.path.dirname(path))`/$1.html}', context)
+endsnippet
+
+snippet mess "context message shortcut" !b
+context['messages'].append("${1}")
+endsnippet
+
+snippet err "context error message shortcut" !b
+context['errors'].append("${1}")
+endsnippet
+
+snippet model "model" !b
+class ${1}(models.Model):
+	"""
+	${2}
+
+	"""
+
+	${3}
+
+	def __unicode__(self):
+		return ${4:self.name}
+endsnippet
+
+snippet modform "model form" !b
+class ${1}Form(forms.ModelForm):
+	class Meta:
+		model = $1
+		fields = [ '${2}' ]
+endsnippet
+
+snippet save "save model method" !
+save(self, *args, **kwargs):
+	$2
+
+	return super(${1}, self).save(*args, **kwargs)
+endsnippet
+
+snippet init "init method" !
+__init__(self, *args, **kwargs):
+	super(${1}, self).__init__(*args, **kwargs)
+endsnippet
+
+snippet f "method wrapped around visual" !
+${1}(${VISUAL:/\n//g})
+endsnippet
+
+snippet bla "blank true" !i
+blank=True, null=True
+endsnippet
+
+snippet char "CharField" !i
+models.CharField(max_length=${1:75})
+endsnippet
+
+snippet text "TextField" !i
+models.TextField(${1})
+endsnippet
+
+snippet bool "BooleanField" !i
+models.BooleanField(${1:default=False})
+endsnippet
+
+snippet float "FloatField" !i
+models.FloatField(${1:default=0})
+endsnippet
+
+snippet fk "ForeignKey" !i
+models.ForeignKey(${1})
+endsnippet
+
+snippet m2m "ManyToMany" !i
+models.ManyToManyField(${1}, related_name='${2}'${3:, blank=True, null=True})
+endsnippet
+
+snippet url "django url" !b
+url(r'^${1}$', ${2}, name="${3}"),
+endsnippet
+
+snippet admin "django admin model" !b
+class ${1}Admin(admin.ModelAdmin):
+	list_display = ('${2}', ${3})
+	ordering = ('${4}', )
+	search_fields = ['${5}', ]
+
+admin.site.register($1, $1Admin)
+endsnippet
+
+snippet adminin "django inline admin model" !b
+class ${1}Inline(admin.${2:Tabular}Inline):
+	model = $1
+endsnippet
+
+snippet cont "context" !b
+context['${1}'] = ${2:$1}
+endsnippet
+
+snippet ifpost "if request.method == 'POST':" !b
+if request.method == 'POST':
+	${0:pass}
+endsnippet
+
+snippet ifget "if request.method == 'GET':" !b
+if request.method == 'GET':
+	${0:pass}
+endsnippet
+
+snippet tryget "tryget" !b
+try:
+	$1 = ${4}.objects.get(id=$1_id)
+except $4.DoesNotExist:
+	$1 = None
+
+if $1:
+	${5:pass}
+endsnippet
+
+snippet tryint "tryint" !b
+try:
+	$1 = int($1)
+except ValueError:
+	$1 = ${2:0}
+endsnippet
+
+snippet getall "getall" !b
+${1} = ${2}.objects.all()
+
+context['$1'] = $1
+endsnippet
+
+snippet getfilter "getfilter" !b
+${1} = ${2}.objects.filter(${3})
+
+context['$1'] = $1
+endsnippet
+
+snippet fm "From Model" !b
+from ${1}.models import ${2}
+endsnippet
+
+snippet for "For item in items" !b
+for ${1:item} in ${2:$1s}:
+	${3:pass}
+endsnippet
+
+snippet "for (\S+)" "for regex" r
+`!p
+if match.group(0) is not None:
+    snip.rv = match.group(0)` in ${1:`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`s}:
+	${2:pass}
+endsnippet
+
+snippet sleep "Description" !b
+import time
+time.sleep(${1:5})
+endsnippet
+
+snippet pylint "Description" !b
+# pylint: disable=${1:C0103}
+${VISUAL}${2}
+# pylint: enable=$1
+endsnippet
+
+snippet kw "kwargs" !i
+kwargs['${VISUAL}${1}']
+endsnippet
+
+snippet rg "request.GET" i
+request.GET
+endsnippet
+
+snippet request.GET "request.GET continued" i
+request.GET['$1']
+endsnippet
+
+snippet inget "in request.GET" b
+if '$1' in request.GET:
+	${2:pass}
+endsnippet
+
+snippet rp "request.POST" i
+request.POST
+endsnippet
+
+snippet request.POST "request.POST continued" i
+request.POST['$1']
+endsnippet
+
+snippet inpost "in request.POST" b
+if '$1' in request.POST:
+	${2:pass}
+endsnippet
+
+snippet .get "Description" !i
+.get('$1', ${2:None})
+endsnippet
+
+# Decorators:
+
+snippet imlr "Description" !b
+from django.contrib.auth.decorators import login_required
+endsnippet
+
+snippet @log "login required" !b
+@login_required
+endsnippet
+# vim:ft=snippets:

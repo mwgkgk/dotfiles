@@ -1,0 +1,121 @@
+snippet "(\$\(.*\)\.click)" "inline jquery click" ir
+`!p snip.rv = match.group(1)`(function(${1}){
+	${2}
+});
+endsnippet
+
+snippet on "on" !i
+on('${1:click}', function (${2:event}) {
+	${3}
+});
+endsnippet
+
+snippet unb "unbind" !i
+unbind('click').
+endsnippet
+
+snippet each "inline jquery each" !i
+each(function (${1}) {
+	${2}
+});
+endsnippet
+
+snippet each "jquery each" !b
+\$(${1}).each(function(${2}){
+	${3}
+});
+endsnippet
+
+snippet this "this" !
+$(this).
+endsnippet
+
+snippet et "event.target" !i
+$(event.target).
+endsnippet
+
+snippet attr "attr" !i
+attr('${1}'${2});
+endsnippet
+
+snippet hasc "hasClass" !i
+hasClass('${1}')
+endsnippet
+
+snippet remc "removeClass" !i
+removeClass('${1}')
+endsnippet
+
+snippet addc "addClass" !i
+addClass('${1}')
+endsnippet
+
+snippet ajax "ajax" !b
+$.ajax({
+	type: ${1:frm.attr('method')},
+	url: ${2:frm.attr('action')},
+	data: ${3:frm.serialize()},
+	dataType: 'html',
+	complete: function (data) {
+		${4}
+	},
+});
+endsnippet
+
+snippet rdy "document ready" !b
+$(function() {
+	${1}
+});
+endsnippet
+
+snippet sc "class selector" !b
+$('.${1}').${2}
+endsnippet
+
+snippet si "id selector" !i
+$('#${1}').${2}
+endsnippet
+
+snippet loadj "jquery load" !i
+html('&nbsp;').load(${1}${2:, function() {
+	${3}
+}});
+endsnippet
+
+snippet cb "callback" !i
+function(){
+	$1
+}
+endsnippet
+
+snippet appendinp "Description" !i
+append($("<input>", { type: "hidden", name: "${1}", value: ${2} }));
+endsnippet
+
+snippet clo "closest" !i
+closest('$1').
+endsnippet
+
+snippet find "find" !i
+find('.$1').$0
+endsnippet
+
+snippet high "highlight" !i
+effect('highlight',{color: '${1:#FDBE56}'}, 2000);
+endsnippet
+
+snippet dial "dialog" !i
+dialog({
+	resizable: false,
+	draggable: false,
+	modal: true,
+	buttons: {
+		No: function() {
+			$(this).dialog( "close" );$1
+		},
+		Yes: function() {
+			$(this).dialog( "close" );$2
+		}
+	}
+});
+endsnippet

@@ -1,0 +1,9 @@
+xterm*Background: black
+xterm*Foreground: DarkGoldenrod1
+XTerm*VT100.Translations: #override \
+	ShiftInsert: insert-selection(CLIPBOARD) \n\
+	Insert: insert-selection(PRIMARY) \n\
+	Shift: insert-selection(CLIPBOARD) \n\
+	Shift: select-start() \n\
+	Shift: select-extend() \n\
+	Shift: select-end(CLIPBOARD)

@@ -1,0 +1,47 @@
+! URxvt*.transparent: true
+! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
+! URxvt*.shading: 90
+
+! Fixing flickering:
+! URxvt*.transparent:  false
+! URxvt*.inheritPixmap: false
+
+URxvt.perl-ext-common: default,tabbedex
+URxvt.tabbed.autohide: yes
+URxvt.tabbed.title: false
+
+URxvt*.scrollBar: false
+
+! URxvt.foreground: DarkGoldenrod1
+! URxvt*.foreground: #EBC593
+URxvt*.foreground: #ffaf00
+URxvt*.background: #1b1b1b
+! URxvt.depth: 24
+! URxvt.background: [15]#000000
+
+! URxvt*.tabbed.tab-bg: #98D53D
+! URxvt*.tabbed.tab-bg: 5
+URxvt*.color0: #3F3F3F
+URxvt*.color9: #98D53D
+URxvt*.tabbed.tab-bg: 9
+
+URxvt.keysym.Meta-k: perl:tabbedex:prev_tab
+URxvt.keysym.Meta-j: perl:tabbedex:next_tab
+URxvt.keysym.Meta-n: perl:tabbedex:new_tab
+URxvt.keysym.Meta-r: perl:tabbedex:rename_tab
+
+URxvt.font: xft:Liberation Mono:pixelsize=11
+URxvt.boldFont: xft:Liberation Mono:bold:pixelsize=11
+! URxvt*font: xft:Fixed:size=8:antialias=true
+! URxvt*boldFont: xft:Fixed:size=8:weight=Bold:antialias=true
+
+URxvt.letterSpace: -1
+
+!Black
+! *color0: #262626
+!Blue
+! *color4: #4CB4E8
+!Bright blue
+! *color12: #3DC3D7
+!Yellow
+! *color3: #CFC17A

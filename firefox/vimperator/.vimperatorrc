@@ -1,0 +1,13 @@
+highlight Hint font-size:95%;color:yellow;background-color:black;padding:2px;
+set hintchars=asdfgqwertjkl
+
+
+map J gt
+map K gT
+noremap go O
+map O :tabopen 
+map <silent> <C-y> :js util.copyToClipboard(content.document.title,true)<cr>
+
+colorscheme darkness2
+
+set defsearch=g
