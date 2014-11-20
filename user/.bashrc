@@ -20,6 +20,10 @@ LS_COLORS='di=0;32'; export LS_COLORS
 
 export TSOCKS_CONF_FILE=$HOME/.tsocks.conf
 
+if [ -f ~/.bash_opam ]; then
+    source ~/.bash_opam
+fi
+
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
