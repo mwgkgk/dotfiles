@@ -349,24 +349,24 @@ def __coerce__(self, other):
 	${25:pass}
 endsnippet
 
-snippet def "function with docstrings" b
-def ${1:function}(`!p
-if snip.indent:
-	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
-	`!p snip.rv = tripple_quotes(snip)`${4:@todo: Docstring for $1.}`!p
-snip.rv = ""
-snip >> 1
-
-args = get_args(t[2])
-if args:
-	write_docstring_args(args, snip)
-
-style = get_style(snip)
-snip += format_return(style)
-snip.rv += '\n' + snip.mkline('', indent='')
-snip += tripple_quotes(snip) `
-	${0:pass}
-endsnippet
+# snippet def "function with docstrings" b
+# def ${1:function}(`!p
+# if snip.indent:
+# 	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
+# 	`!p snip.rv = tripple_quotes(snip)`${4:@todo: Docstring for $1.}`!p
+# snip.rv = ""
+# snip >> 1
+#
+# args = get_args(t[2])
+# if args:
+# 	write_docstring_args(args, snip)
+#
+# style = get_style(snip)
+# snip += format_return(style)
+# snip.rv += '\n' + snip.mkline('', indent='')
+# snip += tripple_quotes(snip) `
+# 	${0:pass}
+# endsnippet
 
 snippet def "function with no docstrings" b!
 def ${1:function}(`!p
