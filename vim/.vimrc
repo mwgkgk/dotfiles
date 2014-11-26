@@ -129,7 +129,7 @@ if has('gui_running')
     set guiheadroom=0
     set guioptions=a
     " Font
-    set guifont=Liberation\ Mono\ 9
+    set guifont=Liberation\ Mono\ 8
     " set guifont=Fixed\ 8
     " set guifont=Anonymous\ Pro\ 10
     " set showtabline=0
