@@ -161,6 +161,10 @@ Plug 'tommcdo/vim-exchange'
 
 Plug 'tomtom/tcomment_vim'
 
+Plug 'ivyl/vim-bling' " {{{
+let g:bling_time = 100
+" }}}
+
 Plug 'gerw/vim-HiLinkTrace' " {{{
 nnoremap <Leader>eh :HLT<CR>
 " }}}
