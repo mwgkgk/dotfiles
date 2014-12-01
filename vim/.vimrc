@@ -203,7 +203,7 @@ inoremap <C-e> <Esc>A
 " insert word of the line above (C-Y improved)
 imap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
 " - Insert mode paste default:
-inoremap <C-R><Enter> <C-R>"
+inoremap <C-R><Space> <C-R>"
 " Easier completion:
 inoremap <C-f> <C-x><C-f>
 inoremap <C-l> <C-x><C-l>
