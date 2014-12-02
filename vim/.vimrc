@@ -145,7 +145,7 @@ set laststatus=2 " Show even in last window
 " - No ex-mode for now
 nnoremap Q <nop>
 " - No accidental macro recording
-nnoremap <Tab>q q
+nnoremap <Leader>q q
 nnoremap q <nop>
 " - No K in visual
 vnoremap K <nop>
@@ -470,8 +470,8 @@ function! MoveToNextTab()
   exe "b".l:cur_buf
 endfunc
 
-nnoremap <Tab>mn :call MoveToNextTab()<CR>
-nnoremap <Tab>mp :call MoveToPrevTab()<CR>
+nnoremap <Leader>th :call MoveToNextTab()<CR>
+nnoremap <Leader>tl :call MoveToPrevTab()<CR>
 " }}}
 
 " Commands 

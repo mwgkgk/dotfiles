@@ -20,7 +20,7 @@ let g:ctrlp_map = '<Leader>ff'
 nnoremap <Leader>fe :CtrlP <C-R>=expand('%:p:h')<CR><CR>
 " nnoremap <Leader>fb :CtrlPBuffer<CR>
 " I never use this:
-nnoremap <Tab><Space> :CtrlPLine<CR>
+nnoremap <Leader>f<Space> :CtrlPLine<CR>
 " nnoremap <Leader>ft :CtrlPBufTagAll<CR>
 nnoremap <Leader>ft :CtrlPTag<CR>
 nnoremap <Leader>fd :CtrlPBufTag<CR>
@@ -69,21 +69,21 @@ let g:syntastic_javascript_checkers = ['jshint']
 Plug 'Lokaltog/vim-easymotion' " {{{
 " let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*():;"<>.,/?[]{}ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 let g:EasyMotion_keys = 'asdkghlqwertyuiopbvnmcASDFGHJKLQWERTYUIOP1234fj'
-let g:EasyMotion_leader_key = '<Tab>'
+let g:EasyMotion_leader_key = '<Leader><Leader>'
 let g:EasyMotion_startofline = 0
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_enter_jump_first = 1
 let g:EasyMotion_space_jump_first = 1
 let g:EasyMotion_do_special_mapping = 1
 let g:EasyMotion_add_search_history = 0
-" map <Tab>r <Plug>(easymotion-repeat)
-map <Tab>l <Plug>(easymotion-lineforward)
-map <Tab>h <Plug>(easymotion-linebackward)
-map <Tab><Tab> <Plug>(easymotion-sn)
-map <Tab>k <Plug>(easymotion-k)
-map <Tab>j <Plug>(easymotion-j)
-omap <Tab>k V<Plug>(easymotion-k)
-omap <Tab>j V<Plug>(easymotion-j)
+" map <Leader>r <Plug>(easymotion-repeat)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader><Space> <Plug>(easymotion-sn)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>j <Plug>(easymotion-j)
+omap <Leader>k V<Plug>(easymotion-k)
+omap <Leader>j V<Plug>(easymotion-j)
 " }}}
 
 Plug 'SirVer/ultisnips' " {{{
@@ -268,8 +268,8 @@ xmap <Leader>M <Plug>(quickhl-manual-reset)
 
 Plug 'haya14busa/vim-easyoperator-line' " {{{
 let g:EasyOperator_line_do_mapping = 0
-nmap <Tab>y <Plug>(easyoperator-line-yank)
-nmap <Tab>d <Plug>(easyoperator-line-delete)
+nmap <Leader><Leader>y <Plug>(easyoperator-line-yank)
+nmap <Leader><Leader>d <Plug>(easyoperator-line-delete)
 " }}}
 
 Plug 'tpope/vim-surround'
@@ -324,10 +324,10 @@ imap <C-b> <Esc><C-b>cw
 
 " }}}
 Plug 'mwgkgk/vim-operator-append' " {{{
-map <Tab>a <Plug>(operator-append)
+map <Leader>a <Plug>(operator-append)
 " }}}
 Plug 'mwgkgk/vim-operator-insert' " {{{
-map <Tab>i <Plug>(operator-insert)
+map <Leader>i <Plug>(operator-insert)
 " }}}
 Plug 'mwgkgk/vim-sync-schemes'
 
