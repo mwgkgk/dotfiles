@@ -5,7 +5,7 @@ set nocompatible
 
 call plug#begin('~/.vim/bundle')
 
-let mapleader=""
+let mapleader="	"
 
 " filetype off
 
