@@ -33,6 +33,10 @@ set scrolloff=5
 set mouse=a
 set number
 set cursorline
+if has('autocmd')
+    autocmd WinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+endif
 set colorcolumn=80
 
 " Man.vim
