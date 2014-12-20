@@ -255,6 +255,7 @@ nnoremap <Leader>tb :windo set scrollbind!<CR>
 nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 " Explorer
 nnoremap <silent> - :silent! Sex<CR>
+nnoremap <silent> _ :silent! Explore<CR>
 " }}}
 " Visual-mode-related {{{
 " - Visual search
