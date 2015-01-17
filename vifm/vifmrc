@@ -344,5 +344,6 @@ nmap U :undolist<cr>
 
 nmap <f2> :q<cr>
 nmap <Space>q :q<cr>
+nmap <Space>Q :q<cr>
 
 source ~/.vifmrc-local
