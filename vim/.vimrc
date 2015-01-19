@@ -291,15 +291,15 @@ nnoremap <silent> <Leader>ttb :se ft=sh<CR>
 " }}}
 " Tabs-related {{{
 " Switch between tabs:
-nnoremap <Leader>1 1gt
-nnoremap <Leader>2 2gt
-nnoremap <Leader>3 3gt
-nnoremap <Leader>4 4gt
-nnoremap <Leader>5 5gt
-nnoremap <Leader>6 6gt
-nnoremap <Leader>7 7gt
-nnoremap <Leader>8 8gt
-nnoremap <Leader>9 :tabl<CR>
+nnoremap <Space>1 1gt
+nnoremap <Space>2 2gt
+nnoremap <Space>3 3gt
+nnoremap <Space>4 4gt
+nnoremap <Space>5 5gt
+nnoremap <Space>6 6gt
+nnoremap <Space>7 7gt
+nnoremap <Space>8 8gt
+nnoremap <Space>9 :tabl<CR>
 " Open tab
 nnoremap <C-W>gt :tabe<CR>
 " }}}
