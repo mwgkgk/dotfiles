@@ -92,6 +92,9 @@ set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set expandtab
+if has('autocmd')
+    autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2
+endif
 
 " Show invisibles :
 set list
