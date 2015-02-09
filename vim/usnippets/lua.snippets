@@ -34,4 +34,14 @@ snippet local "local x = 1"
 local ${1:x} = ${0:1}
 endsnippet
 
+snippet mes "message" b
+message(${2:'${1:Hi}'})
+endsnippet
+
+snippet if "if" b
+if $1 then
+	$2
+end
+endsnippet
+
 # vim:ft=snippets:
