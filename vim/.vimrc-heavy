@@ -53,7 +53,7 @@ let g:tagbar_singleclick = 1
 let g:tagbar_foldlevel = 1
 " }}}
 
-Plug 'scrooloose/syntastic', { 'for' : ['python', 'javascript'] } " {{{
+Plug 'scrooloose/syntastic', { 'for' : ['python', 'javascript', 'cpp'] } " {{{
 nnoremap <Leader>ss :SyntasticCheck<CR>
 nnoremap <Leader>st :SyntasticToggleMode<CR>
 nnoremap <Leader>se :Errors<CR>
@@ -63,6 +63,8 @@ let g:syntastic_python_checkers = ['python', 'pylint2']
 let g:syntastic_python_pylint_exec = 'python2'
 " let g:syntastic_python_pylint_postargs
 let g:syntastic_javascript_checkers = ['jshint'] 
+let g:syntastic_cpp_checkers = ['cpplint']
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
 " let g:syntastic_html_checkers = ['w3', 'validator']
 " }}}
 
