@@ -81,6 +81,7 @@ set copyindent
 set wrap
 set linebreak
 set nocindent
+set cinoptions+=g1,h1
 if has('autocmd')
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
     autocmd Filetype markdown,python setlocal tw=79
