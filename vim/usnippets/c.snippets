@@ -18,12 +18,8 @@ ${VISUAL}${0:${VISUAL/(.*)/(?1::code)/}}
 #endif
 endsnippet
 
-snippet inc "#include local header (inc)"
-#include "${1:`!p snip.rv = snip.basename + '.h'`}"
-endsnippet
-
 snippet i "#include <> (Inc)" b
-#include <${1:.h}>
+#include <${1:${2:`!p snip.rv = snip.basename `}.h}>
 endsnippet
 
 snippet mark "#pragma mark (mark)"
@@ -61,21 +57,30 @@ snippet enum "Enumeration"
 enum ${1:name} { $0 };
 endsnippet
 
-snippet once "Include header once only guard"
-#ifndef ${1:`!p
-if not snip.c:
-	import random, string
-	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
-	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
-	snip.rv = ('%s_%s' % (name,rand)).upper()
-else:
-    snip.rv = snip.c`}
+# snippet once "Include header once only guard"
+# #ifndef ${1:`!p
+# if not snip.c:
+# 	import random, string
+# 	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+# 	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
+# 	snip.rv = ('%s_%s' % (name,rand)).upper()
+# else:
+#     snip.rv = snip.c`}
+# #define $1
+#
+# ${0}
+#
+# #endif /* end of include guard: $1 */
+#
+# endsnippet
+
+snippet once "def once simple" b
+#ifndef ${1:`!p snip.rv = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()`_}
 #define $1
 
 ${0}
 
-#endif /* end of include guard: $1 */
-
+#endif  // $1
 endsnippet
 
 snippet td "Typedef"
@@ -99,8 +104,7 @@ fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%
 endsnippet
 
 snippet if "if .. (if)"
-if (${1:/* condition */})
-{
+if (${1:/* condition */}) {
 	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }
 endsnippet
@@ -133,15 +137,23 @@ struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`}
 };
 endsnippet
 
-snippet fun "function" b
-${1:void} ${2:function_name}(${3})
-{
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-}
+snippet f "function" b
+${1:void} ${2:function_name}(${3:const int &${4:a}})${5: {$6}}
 endsnippet
 
 snippet fund "function declaration" b
 ${1:void} ${2:function_name}(${3});
 endsnippet
 
+snippet copy "copyright" b
+// Copyright `!v system('date +"%Y" | tr -d "\n"')` github.com/mwgkgk
+endsnippet
+
+priority -2
+
+snippet "(\w+)" "dereferencing" irs
+`!p
+if match.group(0) is not None:
+    snip.rv = match.group(0)`->$0
+endsnippet
 # vim:ft=snippets:

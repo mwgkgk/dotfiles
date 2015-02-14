@@ -54,7 +54,25 @@ using namespace $1;
 endsnippet
 
 snippet cout "cout" !b
-std::cout << ${2:"${1:Hello}"};
+std::cout << ${2:"${1:Hello}"} << "\n";
 endsnippet
 
+snippet fg "getter method" b
+${1:int} ${2:name}() { return $2_; }
+endsnippet
+
+snippet fs "setter method" b
+void set_${1:name}(const ${2:int} &${3:e}) { $1_ = $3; }
+endsnippet
+
+snippet fgs "getter and setter" b
+${1:int} ${2:name}() { return $2_; }
+void set_$2(const $1 &${3:e}) { $2_ = $3; }
+endsnippet
+
+snippet t "boost test case" b
+BOOST_AUTO_TEST_CASE(test_$1) {
+  ${VISUAL}$0
+}
+endsnippet
 # vim:ft=snippets:
