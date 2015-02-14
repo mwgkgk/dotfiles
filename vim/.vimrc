@@ -211,7 +211,9 @@ inoremap <C-e> <Esc>A
 " insert word of the line above (C-Y improved)
 imap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
 " - Insert mode paste default:
-inoremap <C-R><Space> <C-R>"
+inoremap <C-R><Enter> <C-R>"
+" - Insert show regs:
+inoremap <C-R><Space> <Esc><C-O>:reg<CR>
 " Easier completion:
 inoremap <C-f> <C-x><C-f>
 inoremap <C-l> <C-x><C-l>
@@ -260,6 +262,8 @@ nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 " Explorer
 nnoremap <silent> - :silent! Sex<CR>
 nnoremap <silent> _ :silent! Explore<CR>
+" Regs
+nnoremap <Leader>" :reg<CR>
 " }}}
 " Visual-mode-related {{{
 " - Visual search
