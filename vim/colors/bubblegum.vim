@@ -71,25 +71,25 @@ hi Todo            ctermfg=189    ctermbg=bg     cterm=none    guifg=#D7D7FF    
 "
 " minor groups
 "
-hi StatusLine      ctermfg=fg     ctermbg=237    cterm=none    guifg=fg    guibg=#3A3A3A    gui=none
-hi StatusLineNC    ctermfg=244    ctermbg=237    cterm=none    guifg=#808080    guibg=#3A3A3A    gui=none
-hi TabLine         ctermfg=fg     ctermbg=237    cterm=none    guifg=fg    guibg=#3A3A3A    gui=none
+hi StatusLine      ctermfg=fg     ctermbg=238    cterm=none    guifg=fg    guibg=#3A3A3A    gui=none
+hi StatusLineNC    ctermfg=244    ctermbg=238    cterm=none    guifg=#808080    guibg=#3A3A3A    gui=none
+hi TabLine         ctermfg=fg     ctermbg=238    cterm=none    guifg=fg    guibg=#3A3A3A    gui=none
 hi TabLineSel      ctermfg=253    ctermbg=238    cterm=none    guifg=#DADADA    guibg=#444444    gui=none
-hi TabLineFill     ctermfg=fg     ctermbg=237    cterm=none    guifg=fg    guibg=#3A3A3A    gui=none
+hi TabLineFill     ctermfg=fg     ctermbg=238    cterm=none    guifg=fg    guibg=#3A3A3A    gui=none
 
-hi Pmenu           ctermfg=fg     ctermbg=237    guifg=fg    guibg=#3A3A3A
+hi Pmenu           ctermfg=fg     ctermbg=238    guifg=fg    guibg=#3A3A3A
 hi PmenuSel        ctermfg=231    ctermbg=244    guifg=#FFFFFF    guibg=#808080
 hi PmenuSbar       ctermfg=231    ctermbg=244    guifg=#FFFFFF    guibg=#808080
-hi WildMenu        ctermfg=71     ctermbg=237    cterm=none    guifg=#5FAF5F    guibg=#3A3A3A    gui=none
+hi WildMenu        ctermfg=71     ctermbg=238    cterm=none    guifg=#5FAF5F    guibg=#3A3A3A    gui=none
 
 hi Visual          ctermfg=bg     ctermbg=117    guifg=bg    guibg=#87D7FF
 hi VisualNOS       ctermfg=bg     ctermbg=116    guifg=bg    guibg=#87D7D7
-hi VertSplit       ctermfg=244    ctermbg=237    cterm=none    guifg=#808080    guibg=#3A3A3A    gui=none
-hi LineNr          ctermfg=244    ctermbg=237    guifg=#808080    guibg=#3A3A3A
+hi VertSplit       ctermfg=244    ctermbg=238    cterm=none    guifg=#808080    guibg=#3A3A3A    gui=none
+hi LineNr          ctermfg=244    ctermbg=235    guifg=#808080    guibg=#3A3A3A
 
 hi Title           ctermfg=109    guifg=#87AFAF
 hi SpecialKey      ctermfg=114    guifg=#87D787
-hi NonText         ctermfg=244    guifg=#808080
+hi NonText         ctermfg=238    guifg=#808080
 hi MatchParen      ctermfg=16     ctermbg=72    guifg=#000000    guibg=#5FAF87
 hi Directory       ctermfg=103    guifg=#8787AF
 
@@ -105,7 +105,7 @@ hi Question        ctermfg=38    guifg=#00AFD7
 hi Folded          ctermfg=244    ctermbg=bg    guifg=#808080    guibg=bg
 hi FoldColumn      ctermfg=79     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
 hi SignColumn      ctermfg=79     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
-hi ColorColumn     ctermfg=79     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
+hi ColorColumn     ctermfg=none     ctermbg=237    guifg=#5FD7AF    guibg=#3A3A3A
 
 hi CursorColumn    ctermbg=237    cterm=none    guibg=#3A3A3A    gui=none
 hi CursorLine      ctermbg=237    cterm=none    guibg=#3A3A3A    gui=none
@@ -118,6 +118,9 @@ hi htmlTag         ctermfg=147    guifg=#AFAFFF
 hi htmlEndTag      ctermfg=147    guifg=#AFAFFF
 hi htmlTagName     ctermfg=175    guifg=#D787AF
 hi htmlString      ctermfg=144    guifg=#AFAF87
+
+hi markdownH1      ctermfg=150    guifg=#AFAF87
+hi markdownH2      ctermfg=150    guifg=#AFAF87
 
 hi diffFile        ctermfg=244    guifg=#808080
 hi diffLine        ctermfg=244    guifg=#808080
