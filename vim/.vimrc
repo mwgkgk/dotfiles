@@ -309,7 +309,7 @@ nnoremap <Space>7 7gt
 nnoremap <Space>8 8gt
 nnoremap <Space>9 :tabl<CR>
 " Open tab
-nnoremap <C-W>gt :tabe<CR>
+nnoremap <C-W>c :tabe<CR>
 " }}}
 
 " Functions & bits
