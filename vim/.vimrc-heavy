@@ -35,6 +35,7 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_extensions = ['sessions']
 let g:ctrlp_clear_cache_on_exit=0
 let g:ctrlp_prompt_mappings  = {'PrtBS()' : ['<bs>', '<c-h>', '<>']}
+let g:ctrlp_switch_buffer = 'E'
 " }}}
 Plug 'pielgrzym/ctrlp-sessions' " {{{
 nnoremap <Leader>fs :CtrlPSessions<CR>
