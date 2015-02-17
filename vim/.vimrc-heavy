@@ -150,9 +150,9 @@ Plug 'c9s/bufexplorer' " <Leader>be, <Leader>bs, <Leader>bs
 
 Plug 'gcmt/taboo.vim' " {{{
 set sessionoptions+=tabpages,globals
-nnoremap <Leader>gT :TabooOpen 
+nnoremap <C-W>C :TabooOpen 
 let g:taboo_tab_format="%N %f%m "
-let g:taboo_renamed_tab_format="%N %f%m "
+let g:taboo_renamed_tab_format="%N %l%m "
 " }}}
 
 Plug 'tmhedberg/matchit'
