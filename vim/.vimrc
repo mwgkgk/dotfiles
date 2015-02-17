@@ -195,6 +195,8 @@ nnoremap <C-W>Q :qa<CR>
 nnoremap <C-W>w :w<CR>
 " Write & close
 nnoremap <Leader>wq :wq<CR>
+" Edit
+nnoremap <C-W>e :e <C-R>=expand('%:h').'/'<CR>
 " }}}
 " Insert-mode-related {{{
 " - Mouse insert made easier :
