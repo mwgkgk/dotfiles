@@ -49,9 +49,10 @@ let g:undotree_WindowLayout = 2
 " }}}
 
 Plug 'majutsushi/tagbar', { 'on' : 'TagbarOpen' } " {{{
-nnoremap <silent> <F6> :TagbarOpen fjc<CR>
+nnoremap <silent> <F4> :TagbarOpen fjc<CR>
 let g:tagbar_singleclick = 1
 let g:tagbar_foldlevel = 1
+let g:tagbar_left = 1
 " }}}
 
 Plug 'scrooloose/syntastic', { 'for' : ['python', 'javascript', 'cpp'] } " {{{
