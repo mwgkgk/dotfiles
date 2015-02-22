@@ -197,6 +197,8 @@ nnoremap <C-W>w :w<CR>
 nnoremap <Leader>wq :wq<CR>
 " Edit
 nnoremap <C-W>e :e <C-R>=expand('%:h').'/'<CR>
+" Sp
+nnoremap <C-W>s :sp <C-R>=expand('%:h').'/'<CR>
 " }}}
 " Insert-mode-related {{{
 " - Mouse insert made easier :
@@ -487,6 +489,16 @@ endfunc
 
 nnoremap <Leader>th :call MoveToNextTab()<CR>
 nnoremap <Leader>tl :call MoveToPrevTab()<CR>
+" }}}
+" Quick & dirty version of C-] that switches to open window with tag {{{
+function! TagOpenOrSwitch()
+    normal 
+    let cur_pos = getcurpos()
+    normal 
+    sb #
+    call setpos(".", cur_pos)
+endfunction
+nnoremap <Space>] :call TagOpenOrSwitch()<CR>
 " }}}
 
 " Commands 
