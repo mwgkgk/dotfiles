@@ -199,6 +199,8 @@ nnoremap <Leader>wq :wq<CR>
 nnoremap <C-W>e :e <C-R>=expand('%:h').'/'<CR>
 " Sp
 nnoremap <C-W>s :sp <C-R>=expand('%:h').'/'<CR>
+" Vs
+nnoremap <C-W>v :vs <C-R>=expand('%:h').'/'<CR>
 " }}}
 " Insert-mode-related {{{
 " - Mouse insert made easier :
