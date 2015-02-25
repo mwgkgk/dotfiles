@@ -56,7 +56,7 @@ done
 endsnippet
 
 snippet forin "for ... in ... done (forin)"
-for ${1:i}${2/.+/ in /}${2:words}; do
+for ${1:arg}${2/.+/ in /}${2:"$@"}; do
 	${0:#statements}
 done
 endsnippet
