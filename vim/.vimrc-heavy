@@ -234,7 +234,7 @@ let g:targets_separators = '. ; : + - ~ _ * \ |'
 " }}}
 
 Plug 'junegunn/vim-after-object' " {{{
-autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ')
+autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';')
 " }}}
 
 Plug 't9md/vim-choosewin' " {{{
