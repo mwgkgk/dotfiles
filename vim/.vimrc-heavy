@@ -84,13 +84,13 @@ let g:EasyMotion_space_jump_first = 1
 let g:EasyMotion_do_special_mapping = 1
 let g:EasyMotion_add_search_history = 0
 " map <Enter>r <Plug>(easymotion-repeat)
-map <Enter>l <Plug>(easymotion-lineforward)
-map <Enter>h <Plug>(easymotion-linebackward)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>h <Plug>(easymotion-linebackward)
 map <Enter><Enter> <Plug>(easymotion-sn)
-map <Enter>k <Plug>(easymotion-k)
-map <Enter>j <Plug>(easymotion-j)
-omap <Enter>k V<Plug>(easymotion-k)
-omap <Enter>j V<Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>j <Plug>(easymotion-j)
+omap <Leader>k V<Plug>(easymotion-k)
+omap <Leader>j V<Plug>(easymotion-j)
 " }}}
 
 Plug 'SirVer/ultisnips' " {{{
