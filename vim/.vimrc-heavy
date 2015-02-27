@@ -86,7 +86,7 @@ let g:EasyMotion_add_search_history = 0
 " map <Enter>r <Plug>(easymotion-repeat)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
-" map <Enter><Enter> <Plug>(easymotion-sn)
+map <Leader><Space> <Plug>(easymotion-sn)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>j <Plug>(easymotion-j)
 omap <Leader>k V<Plug>(easymotion-k)
@@ -249,7 +249,7 @@ Plug 't9md/vim-choosewin' " {{{
 let g:choosewin_label_align='center'
 let g:choosewin_label='ASDFJKLGHQWERUIO'
 " nmap s <Plug>(choosewin)
-nmap <Space><Space> <Plug>(choosewin)
+nmap <Space><Enter> <Plug>(choosewin)
 " }}}
 Plug 't9md/vim-textmanip' " {{{
 xmap <C-j> <Plug>(textmanip-move-down)
