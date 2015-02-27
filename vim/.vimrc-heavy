@@ -93,6 +93,12 @@ omap <Leader>k V<Plug>(easymotion-k)
 omap <Leader>j V<Plug>(easymotion-j)
 " }}}
 
+Plug 'vim-scripts/marvim' "{{{
+let marvim_find_key='<Space>m'
+let marvim_store_key = 'X'
+let marvim_register = 'q' " Default
+" }}}
+
 Plug 'SirVer/ultisnips' " {{{
 let g:UltiSnipsEditSplit = 'horizontal'
 let g:UltiSnipsSnippetsDir = '~/.vim/usnippets/'
