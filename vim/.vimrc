@@ -210,7 +210,7 @@ vnoremap <MIddleMouse> c<MiddleMouse><Esc>
 " - Insert-mode surround PREVIOUS word with backticks:
 imap <C-g><C-b> <Esc>bysw`Ea
 " - Insert-mode uppercase prev word:
-imap <C-g><C-u> <Esc>bgUwEa
+imap <C-g><C-u> <Esc>bgUwgi
 " - Insert-mode emacs maps:
 inoremap <C-a> <Esc>I
 inoremap <C-e> <Esc>A
