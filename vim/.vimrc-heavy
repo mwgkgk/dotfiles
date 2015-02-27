@@ -76,7 +76,7 @@ let g:syntastic_cpp_cpplint_args = '--filter=-legal/copyright'
 Plug 'Lokaltog/vim-easymotion' " {{{
 " let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*():;"<>.,/?[]{}ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 let g:EasyMotion_keys = 'asdkghlqwertyuiopbvnmcASDFGHJKLQWERTYUIOP1234fj'
-let g:EasyMotion_leader_key = '<Enter>'
+let g:EasyMotion_leader_key = '<Leader><Enter>'
 let g:EasyMotion_startofline = 0
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_enter_jump_first = 1
@@ -86,7 +86,7 @@ let g:EasyMotion_add_search_history = 0
 " map <Enter>r <Plug>(easymotion-repeat)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
-map <Enter><Enter> <Plug>(easymotion-sn)
+" map <Enter><Enter> <Plug>(easymotion-sn)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>j <Plug>(easymotion-j)
 omap <Leader>k V<Plug>(easymotion-k)
