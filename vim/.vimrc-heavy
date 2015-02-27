@@ -358,6 +358,8 @@ Plug 'mjbrownie/django-template-textobjects', { 'for' : 'htmldjango' }
 Plug '~/.vim/bundle/cpp-stuff', { 'for' : 'cpp' }
 Plug '~/.vim/bundle/django-stuff', { 'for' : 'htmldjango' }
 
+Plug '~/code/mwgkgk/vim-insert-yank'
+
 " Colors
 Plug 'romainl/Apprentice'
 Plug 'romainl/Disciple'
