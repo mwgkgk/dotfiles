@@ -95,8 +95,9 @@ omap <Leader>j V<Plug>(easymotion-j)
 
 Plug 'vim-scripts/marvim' "{{{
 let marvim_find_key='<Space>m'
-let marvim_store_key = 'X'
+let marvim_store_key = '<Leader>"'
 let marvim_register = 'q' " Default
+let marvim_prefix = 0
 " }}}
 
 Plug 'SirVer/ultisnips' " {{{
