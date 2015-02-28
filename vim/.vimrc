@@ -275,7 +275,6 @@ nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 nnoremap <silent> - :silent! Sex<CR>
 nnoremap <silent> _ :silent! Explore<CR>
 " Regs
-nnoremap <Leader>" :reg<CR>
 nnoremap <C-W>" :reg<CR>
 " }}}
 " Visual-mode-related {{{
