@@ -11,8 +11,6 @@ let mapleader="	"
 
 map [12^ :PlugUpdate<CR>
 
-Plug 'ardagnir/united-front'
-
 Plug 'kien/ctrlp.vim' " {{{
 
 let g:ctrlp_map = '<Leader>ff'
