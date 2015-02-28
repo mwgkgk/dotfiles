@@ -173,8 +173,6 @@ nnoremap <Leader># :%s /<C-R>///g<Left><Left>
 " - Auto-center things
 nnoremap n nzz
 nnoremap N Nzz
-nnoremap <C-o> <C-o>zz
-nnoremap <C-i> <C-i>zz
 " }}}
 " Help-related {{{
 nnoremap <F1> :help <C-r><C-w>
