@@ -232,6 +232,7 @@ nmap vv v<Plug>(textobj-line-i)
 " }}}
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-lastpat'
+Plug 'kana/vim-textobj-entire'
 
 Plug 'sgur/vim-textobj-parameter'
 
