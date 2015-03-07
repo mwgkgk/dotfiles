@@ -359,10 +359,9 @@ Plug 'mjbrownie/delete-surround-html', { 'for' : 'htmldjango' }
 Plug 'mjbrownie/django-template-textobjects', { 'for' : 'htmldjango' }
 
 " Local
-Plug '~/.vim/bundle/cpp-stuff', { 'for' : 'cpp' }
-Plug '~/.vim/bundle/django-stuff', { 'for' : 'htmldjango' }
-
-Plug '~/code/mwgkgk/vim-insert-yank'
+if filereadable(glob("~/.vimrc-heavy-local")) 
+    source ~/.vimrc-heavy-local
+endif
 
 " Colors
 Plug 'romainl/Apprentice'
