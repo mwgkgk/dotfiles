@@ -20,9 +20,7 @@ nnoremap <Leader>f<Space> :CtrlPBuffer<CR>
 " I never use this:
 " nnoremap <Leader>ft :CtrlPBufTagAll<CR>
 nnoremap <Leader>ft :CtrlPTag<CR>
-nnoremap <Leader>fd :CtrlPBufTag<CR>
 nnoremap <Leader>fn :CtrlPChange<CR>
-nnoremap <Leader>fr :CtrlPMRU<CR>
 let g:ctrlp_open_multiple_files = '1vjr'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_follow_symlinks = 1
@@ -39,6 +37,10 @@ let g:ctrlp_switch_buffer = 'E'
 Plug 'pielgrzym/ctrlp-sessions' " {{{
 nnoremap <Leader>fs :CtrlPSessions<CR>
 let g:ctrlp_session_dir = '.vim/sessions'
+" }}}
+Plug 'mattn/ctrlp-register' " {{{
+nnoremap <Leader>fr :CtrlPRegister<CR>
+inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
 nnoremap <Leader>fc :CtrlPCmdPalette<CR>
@@ -86,7 +88,7 @@ let g:EasyMotion_add_search_history = 0
 " map <Enter>r <Plug>(easymotion-repeat)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
-map <Leader><Space> <Plug>(easymotion-sn)
+map <Leader><Leader> <Plug>(easymotion-sn)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>j <Plug>(easymotion-j)
 omap <Leader>k V<Plug>(easymotion-k)
