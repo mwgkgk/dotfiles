@@ -41,8 +41,12 @@ snippet map "std::map (map)"
 std::map<${1:key}, ${2:value}> map$0;
 endsnippet
 
-snippet vector "std::vector (v)"
-std::vector<${1:char}> v$0;
+snippet vec "std::vector"
+std::vector$0
+endsnippet
+
+snippet str "std::string"
+std::string$0
 endsnippet
 
 snippet tp "template <typename ..> (template)"
@@ -55,6 +59,10 @@ endsnippet
 
 snippet cout "cout" !b
 std::cout << ${2:"${1:Hello}"} << "\n";
+endsnippet
+
+snippet cv "cout var" !b
+std::cout << "${1:var}: " << ${2:$1} << "\n";
 endsnippet
 
 snippet fg "getter method" b
@@ -78,5 +86,10 @@ endsnippet
 
 snippet tt "boost test case prototype" b
 // BOOST_AUTO_TEST_CASE(test_$1) {}
+endsnippet
+
+snippet fore "Description" b
+for (${1:std::string} ${2:item} : ${3:items})
+	$0
 endsnippet
 # vim:ft=snippets:
