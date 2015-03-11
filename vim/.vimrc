@@ -493,16 +493,6 @@ endfunc
 nnoremap <Leader>th :call MoveToNextTab()<CR>
 nnoremap <Leader>tl :call MoveToPrevTab()<CR>
 " }}}
-" Quick & dirty version of C-] that switches to open window with tag {{{
-function! TagOpenOrSwitch()
-    normal 
-    let cur_pos = getcurpos()
-    normal 
-    sb #
-    call setpos(".", cur_pos)
-endfunction
-nnoremap <Space>] :call TagOpenOrSwitch()<CR>
-" }}}
 
 " Commands 
 " Commands {{{
