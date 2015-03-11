@@ -196,11 +196,11 @@ nnoremap <C-W>w :w<CR>
 " Write & close
 nnoremap <Leader>wq :wq<CR>
 " Edit
-nnoremap <C-W>e :e <C-R>=expand('%:h').'/'<CR>
+nnoremap <C-W>e :e <C-R>=expand('%:h').'/'<CR><C-D>
 " Sp
-nnoremap <C-W>s :sp <C-R>=expand('%:h').'/'<CR>
+nnoremap <C-W>s :sp <C-R>=expand('%:h').'/'<CR><C-D>
 " Vs
-nnoremap <C-W>v :vs <C-R>=expand('%:h').'/'<CR>
+nnoremap <C-W>v :vs <C-R>=expand('%:h').'/'<CR><C-D>
 " }}}
 " Insert-mode-related {{{
 " - Mouse insert made easier :
