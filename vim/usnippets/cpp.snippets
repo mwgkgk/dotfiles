@@ -41,11 +41,11 @@ snippet map "std::map (map)"
 std::map<${1:key}, ${2:value}> map$0;
 endsnippet
 
-snippet vec "std::vector"
-std::vector$0
+snippet vec "std::vector" i
+std::vector${VISUAL:/.+/<$0>/g}$0
 endsnippet
 
-snippet str "std::string"
+snippet str "std::string" i
 std::string$0
 endsnippet
 
