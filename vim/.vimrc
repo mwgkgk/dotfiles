@@ -214,6 +214,9 @@ imap <C-g><C-u> <Esc>bgUwgi
 " - Insert-mode emacs maps:
 inoremap <C-a> <Esc>I
 inoremap <C-e> <Esc>A
+" - Improve default i_CTRL-k i_CTRL-j
+inoremap <C-k> <Esc>kA
+inoremap <C-j> <Esc>jA
 " insert word of the line above (C-Y improved)
 imap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
 " - Insert mode paste default:
