@@ -40,6 +40,7 @@ let g:ctrlp_session_dir = '.vim/sessions'
 " }}}
 Plug 'mattn/ctrlp-register' " {{{
 nnoremap <Leader>fr :CtrlPRegister<CR>
+nnoremap <C-W>r :CtrlPRegister<CR>
 inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
