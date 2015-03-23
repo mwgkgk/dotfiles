@@ -87,6 +87,7 @@ let g:EasyMotion_space_jump_first = 1
 let g:EasyMotion_do_special_mapping = 1
 let g:EasyMotion_add_search_history = 0
 " map <Enter>r <Plug>(easymotion-repeat)
+map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
 map <Leader><Leader> <Plug>(easymotion-sn)
@@ -237,6 +238,9 @@ nmap vv v<Plug>(textobj-line-i)
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-submode' " {{{
+let g:submode_timeoutlen = 500
+" }}}
 
 Plug 'sgur/vim-textobj-parameter'
 
