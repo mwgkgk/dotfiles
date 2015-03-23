@@ -194,7 +194,7 @@ nnoremap <C-W>Q :qa<CR>
 " Write
 nnoremap <C-W>w :w<CR>
 " Write & close
-nnoremap <Leader>wq :wq<CR>
+nnoremap <C-W>W :wq<CR>
 " Edit
 nnoremap <C-W>e :e <C-R>=expand('%:h').'/'<CR><C-D>
 " Sp
