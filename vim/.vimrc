@@ -3,7 +3,7 @@
 filetype plugin indent on
 syntax on
 
-let mapleader="	"
+let mapleader=";"
 
 
 " No backup
@@ -161,6 +161,7 @@ vnoremap K <nop>
 vnoremap J <nop>
 " }}}
 " Search-related {{{
+nmap s /
 " nnoremap / /\v
 nnoremap <Leader>/ /<C-R>/
 " - Search peculiarities:
@@ -247,6 +248,8 @@ nnoremap =A gg=G``
 " Improved pastes:
 nnoremap <Leader>p "_ddP
 vnoremap <Leader>p "_dP
+" Enter insert mode @ the end:
+nnoremap gA GA
 " }}}
 " Commandline-related {{{
 nnoremap <Leader>: :<C-P>
@@ -293,8 +296,8 @@ vnoremap <Leader>nr y<C-W>npk"_dd
 " }}}
 " Source {{{
 if has('autocmd')
-    autocmd FileType vim vnoremap <Leader>S y:execute @@<cr>:echo 'Sourced selection.'<cr>
-    autocmd Filetype vim nnoremap <Leader>S ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
+    autocmd FileType vim vnoremap X y:execute @@<cr>:echo 'Sourced selection.'<cr>
+    autocmd Filetype vim nnoremap X ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
 endif
 " }}}
 " Filetype bindings {{{

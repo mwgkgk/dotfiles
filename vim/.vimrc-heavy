@@ -5,7 +5,7 @@ set nocompatible
 
 call plug#begin('~/.vim/bundle')
 
-let mapleader="	"
+let mapleader=";"
 
 " filetype off
 
@@ -90,7 +90,7 @@ let g:EasyMotion_add_search_history = 0
 map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
-map <Leader><Leader> <Plug>(easymotion-sn)
+map <Tab> <Plug>(easymotion-sn)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>j <Plug>(easymotion-j)
 omap <Leader>k V<Plug>(easymotion-k)
@@ -239,8 +239,10 @@ Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-submode' " {{{
-let g:submode_timeoutlen = 500
+let g:submode_timeoutlen = 700
 " }}}
+
+Plug 'rhysd/clever-f.vim'
 
 Plug 'sgur/vim-textobj-parameter'
 
@@ -258,7 +260,7 @@ Plug 't9md/vim-choosewin' " {{{
 let g:choosewin_label_align='center'
 let g:choosewin_label='ASDFJKLGHQWERUIO'
 " nmap s <Plug>(choosewin)
-nmap <Space><Enter> <Plug>(choosewin)
+nmap <Space><Space> <Plug>(choosewin)
 " }}}
 Plug 't9md/vim-textmanip' " {{{
 xmap <C-j> <Plug>(textmanip-move-down)
