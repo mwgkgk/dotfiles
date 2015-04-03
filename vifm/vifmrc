@@ -168,6 +168,9 @@ command getphotos gphoto2 --get-all-files
 filetype *.pdf zathura %f,apvlv %f,xpdf %f
 fileview *.pdf pdftotext -nopgbrk %c -
 
+" Exe
+filetype *.exe wine %f
+
 " PostScript
 filextype *.ps,*.ps.gz gv %c %i &
 
@@ -320,13 +323,14 @@ nmap A cw<c-w>
 nmap \t :!xterm -fg chartreuse3 -bg black &<cr>
 
 " Opening vim to edit .vifmrc
-nmap \c :execute ':!vim $MYVIFMRC' | restart<cr>
+nmap ;c :execute ':!v $MYVIFMRC' | restart<cr>
 " Opening gvim to edit .vifmrc
-nmap \C :execute ':!v $MYVIFMRC' | restart<cr>
+" nmap ;C :execute ':!v $MYVIFMRC' | restart<cr>
+nmap ;C :execute ':!v ~/.vifmrc-local' | restart<cr>
 " nmap \C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
 
 " Toggle wrap setting on ,w key
-nmap \w :set wrap!<cr>
+nmap ;w :set wrap!<cr>
 
 " Example of standard two-panel file managers mappings
 nmap <f3> :!less %f<cr>
