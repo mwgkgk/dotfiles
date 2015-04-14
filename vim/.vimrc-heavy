@@ -238,8 +238,20 @@ nmap vv v<Plug>(textobj-line-i)
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-submode' " {{{
+Plug 'kana/vim-submode', {'on' : [] } " {{{
 let g:submode_timeoutlen = 700
+
+silent! call plug#load('vim-submode')
+
+call submode#enter_with('xpdfscroll', 'n', '', '[k', ':silent! VimProcBang xpdf -remote defaultServer -exec scrollUp\(64\)<CR>')
+call submode#enter_with('xpdfscroll', 'n', '', '[j', ':silent! VimProcBang xpdf -remote defaultServer -exec scrollDown\(64\)<CR>')
+call submode#map('xpdfscroll', 'n', '', 'k', ':silent! VimProcBang xpdf -remote defaultServer -exec scrollUp\(64\)<CR>')
+call submode#map('xpdfscroll', 'n', '', 'j', ':silent! VimProcBang xpdf -remote defaultServer -exec scrollDown\(64\)<CR>')
+
+call submode#enter_with('vimscroll', 'n', '', ']k', '3<C-Y>')
+call submode#enter_with('vimscroll', 'n', '', ']j', '3<C-E>')
+call submode#map('vimscroll', 'n', '', 'k', '3<C-Y>')
+call submode#map('vimscroll', 'n', '', 'j', '3<C-E>')
 " }}}
 
 Plug 'rhysd/clever-f.vim'
