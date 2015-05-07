@@ -161,7 +161,9 @@ let g:cycle_default_groups += [
             \ ]
 " }}}
 
-Plug 'c9s/bufexplorer' " <Leader>be, <Leader>bs, <Leader>bs
+Plug 'c9s/bufexplorer' "{{{
+nnoremap <C-W>S :BufExplorerHorizontalSplit<CR>
+" }}}
 
 Plug 'gcmt/taboo.vim' " {{{
 set sessionoptions+=tabpages,globals
