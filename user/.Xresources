@@ -14,7 +14,9 @@ URxvt*.scrollBar: false
 
 ! URxvt.foreground: DarkGoldenrod1
 ! URxvt*.foreground: #EBC593
-URxvt*.foreground: #ffaf00
+! URxvt*.foreground: #ffaf00
+! URxvt*.background: #1b1b1b
+URxvt*.foreground: #75F7EF
 URxvt*.background: #1b1b1b
 ! URxvt.depth: 24
 ! URxvt.background: [15]#000000
