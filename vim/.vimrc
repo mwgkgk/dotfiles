@@ -161,9 +161,8 @@ vnoremap K <nop>
 vnoremap J <nop>
 " }}}
 " Search-related {{{
-nmap s /
 " nnoremap / /\v
-nnoremap <Leader>/ /<C-R>/
+nnoremap <C-W>/ /<C-R>/
 " - Search peculiarities:
 cnoremap <C-N> <CR>/<C-P>
 cnoremap <C-O> <CR>NN/<C-P>

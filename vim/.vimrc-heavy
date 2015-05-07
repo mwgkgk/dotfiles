@@ -13,14 +13,15 @@ map [12^ :PlugUpdate<CR>
 
 Plug 'kien/ctrlp.vim' " {{{
 
-let g:ctrlp_map = '<Leader>ff'
+map s <NOP>
+let g:ctrlp_map = 'sf'
 " let g:ctrlp_cmd = 'CtrlPMixed'
-nnoremap <Leader>fe :CtrlP <C-R>=expand('%:p:h')<CR><CR>
-nnoremap <Leader>f<Space> :CtrlPBuffer<CR>
+nnoremap se :CtrlP <C-R>=expand('%:p:h')<CR><CR>
+nnoremap sb :CtrlPBuffer<CR>
 " I never use this:
-" nnoremap <Leader>ft :CtrlPBufTagAll<CR>
-nnoremap <Leader>ft :CtrlPTag<CR>
-nnoremap <Leader>fn :CtrlPChange<CR>
+" nnoremap st :CtrlPBufTagAll<CR>
+nnoremap st :CtrlPTag<CR>
+nnoremap sn :CtrlPChange<CR>
 let g:ctrlp_open_multiple_files = '1vjr'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_follow_symlinks = 1
@@ -36,16 +37,16 @@ let g:ctrlp_prompt_mappings  = {'PrtBS()' : ['<bs>', '<c-h>', '<>'],
 let g:ctrlp_switch_buffer = 'E'
 " }}}
 Plug 'pielgrzym/ctrlp-sessions' " {{{
-nnoremap <Leader>fs :CtrlPSessions<CR>
+nnoremap sS :CtrlPSessions<CR>
 let g:ctrlp_session_dir = '.vim/sessions'
 " }}}
 Plug 'mattn/ctrlp-register' " {{{
-nnoremap <Leader>fr :CtrlPRegister<CR>
+nnoremap sr :CtrlPRegister<CR>
 nnoremap <C-W>r :CtrlPRegister<CR>
 inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
-nnoremap <Leader>fc :CtrlPCmdPalette<CR>
+nnoremap s; :CtrlPCmdPalette<CR>
 " }}}
 
 Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
