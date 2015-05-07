@@ -209,7 +209,9 @@ nnoremap <C-W>z :cclose<CR>:lclose<CR><C-W>z
 " - Mouse insert made easier :
 nnoremap <MiddleMouse> a<MiddleMouse><Esc>
 inoremap <MiddleMouse> <MiddleMouse><Esc>
-vnoremap <MIddleMouse> c<MiddleMouse><Esc>
+vnoremap <MiddleMouse> c<MiddleMouse><Esc>
+" - Quote pasting
+nnoremap <Tab> :let @* = substitute(@*, '^\n+', '', 'g')<CR>GA<CR><CR>"<C-R>*"<Esc>
 " - Insert-mode surround PREVIOUS word with backticks:
 imap <C-g><C-b> <Esc>bysw`Ea
 " - Insert-mode uppercase prev word:
@@ -279,6 +281,8 @@ nnoremap <silent> - :silent! Sex<CR>
 nnoremap <silent> _ :silent! Explore<CR>
 " Regs
 nnoremap <C-W>" :reg<CR>
+" Go line
+nnoremap <Leader>gl :<C-R><C-W><CR>
 " }}}
 " Visual-mode-related {{{
 " - Visual search
@@ -517,7 +521,7 @@ command! Q q
 command! Qa qa
 " - Save and source
 command! Source silent! :w | :source %
-nnoremap <Leader><Leader>S :Source<CR>:echo 'Sourced file.'<CR>
+nnoremap <C-w>x :Source<CR>:echo 'Sourced file.'<CR>
 " }}}
 
 if filereadable(glob("~/.vimrc-local")) 
