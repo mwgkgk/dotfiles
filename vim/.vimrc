@@ -521,7 +521,7 @@ command! Q q
 command! Qa qa
 " - Save and source
 command! Source silent! :w | :source %
-nnoremap <C-w>x :Source<CR>:echo 'Sourced file.'<CR>
+nnoremap <Space>x :Source<CR>:echo 'Sourced file.'<CR>
 " }}}
 
 if filereadable(glob("~/.vimrc-local")) 
