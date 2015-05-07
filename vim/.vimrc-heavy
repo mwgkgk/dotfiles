@@ -31,7 +31,8 @@ let g:ctrlp_user_command = ['.git/',
             \'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_extensions = ['sessions']
 let g:ctrlp_clear_cache_on_exit=0
-let g:ctrlp_prompt_mappings  = {'PrtBS()' : ['<bs>', '<c-h>', '<>']}
+let g:ctrlp_prompt_mappings  = {'PrtBS()' : ['<bs>', '<c-h>', '<>'],
+            \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<Space>']}
 let g:ctrlp_switch_buffer = 'E'
 " }}}
 Plug 'pielgrzym/ctrlp-sessions' " {{{
@@ -90,7 +91,7 @@ let g:EasyMotion_add_search_history = 0
 map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
-map <Tab> <Plug>(easymotion-sn)
+" map <Tab> <Plug>(easymotion-sn)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>j <Plug>(easymotion-j)
 omap <Leader>k V<Plug>(easymotion-k)
@@ -318,7 +319,7 @@ nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>G :Gstatus<CR>
 nnoremap <Leader>D :Gdiff<CR>
 nnoremap <Leader>C :Gcommit<CR>
-nnoremap <Leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " Also, grep commit text in all or current file:
 " :Glog --grep=query --
 " :Glog --grep=query -- %
