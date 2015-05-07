@@ -283,6 +283,8 @@ nnoremap <silent> _ :silent! Explore<CR>
 nnoremap <C-W>" :reg<CR>
 " Go line
 nnoremap <Leader>gl :<C-R><C-W><CR>
+" Alt file
+nnoremap <C-W>a <C-^>
 " }}}
 " Visual-mode-related {{{
 " - Visual search
