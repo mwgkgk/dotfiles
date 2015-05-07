@@ -14,3 +14,4 @@ alias df='pydf'
 alias fm="vifm"
 alias emacs="emacs --no-window-system"
 alias feh="feh -d."
+alias rtor="rtorrent"
