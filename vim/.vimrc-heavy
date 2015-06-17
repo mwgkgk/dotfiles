@@ -261,8 +261,6 @@ call submode#map('vimscroll', 'n', '', 'k', '3<C-Y>')
 call submode#map('vimscroll', 'n', '', 'j', '3<C-E>')
 " }}}
 
-Plug 'rhysd/clever-f.vim'
-
 Plug 'sgur/vim-textobj-parameter'
 
 Plug 'akiyan/vim-textobj-xml-attribute'
