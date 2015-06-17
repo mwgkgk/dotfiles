@@ -282,6 +282,8 @@ nnoremap <C-W>" :reg<CR>
 nnoremap <Leader>gl :<C-R><C-W><CR>
 " Alt file
 nnoremap <C-W>a <C-^>
+" Xpdf gotoPage
+nnoremap [gl :silent! VimProcBang xpdf -remote defaultServer -exec gotoPage\(<C-R><C-W>\)<CR>
 " }}}
 " Visual-mode-related {{{
 " - Visual search
