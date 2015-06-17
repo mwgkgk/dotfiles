@@ -5,6 +5,8 @@ syntax on
 
 let mapleader=";"
 
+" fix leader:
+nnoremap ;; ;
 
 " No backup
 set nobackup
@@ -103,7 +105,7 @@ set listchars=tab:▸\ ,eol:¬
 
 " Make
 if has('autocmd')
-    autocmd Filetype java set makeprg=javac\ %
+    autocmd Filetype java setlocal makeprg=javac\ %
 endif
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
 map <F9> :make<Return>:copen<Return>
@@ -248,10 +250,12 @@ nnoremap =A gg=G``
 nnoremap <Leader>p "_ddP
 vnoremap <Leader>p "_dP
 " Enter insert mode @ the end:
-nnoremap gA GA
+nnoremap ga GA
+" Ease up regs:
+nmap q "
 " }}}
 " Commandline-related {{{
-nnoremap <Leader>: :<C-P>
+nnoremap <Space><Leader> :<C-P><CR>
 " - Directory of the current file :
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 " - Prev command with a bang:
