@@ -522,7 +522,9 @@ command! Q q
 command! Qa qa
 " - Save and source
 command! Source silent! :w | :source %
-nnoremap <Space>x :Source<CR>:echo 'Sourced file.'<CR>
+autocmd FileType vim nnoremap <buffer> <Space>x :Source<CR>:echo 'Sourced file.'<CR>
+" - Random
+command! RandomLine execute 'normal! '.(matchstr(system('od -vAn -N3 -tu4 /dev/urandom'), '^\_s*\zs.\{-}\ze\_s*$') % line('$')).'G'
 " }}}
 
 if filereadable(glob("~/.vimrc-local")) 
