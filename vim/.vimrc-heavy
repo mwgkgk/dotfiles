@@ -17,7 +17,7 @@ map s <NOP>
 let g:ctrlp_map = 'sf'
 " let g:ctrlp_cmd = 'CtrlPMixed'
 nnoremap se :CtrlP <C-R>=expand('%:p:h')<CR><CR>
-nnoremap sb :CtrlPBuffer<CR>
+nnoremap s<Space> :CtrlPBuffer<CR>
 " I never use this:
 " nnoremap st :CtrlPBufTagAll<CR>
 nnoremap st :CtrlPTag<CR>
@@ -30,7 +30,7 @@ let g:ctrlp_custom_ignore = {
             \}
 let g:ctrlp_user_command = ['.git/', 
             \'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_extensions = ['sessions']
+let g:ctrlp_extensions = ['sessions', 'filetype']
 let g:ctrlp_clear_cache_on_exit=0
 let g:ctrlp_prompt_mappings  = {'PrtBS()' : ['<bs>', '<c-h>', '<>'],
             \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<Space>']}
@@ -47,6 +47,9 @@ inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
 nnoremap s; :CtrlPCmdPalette<CR>
+" }}}
+Plug 'endel/ctrlp-filetype.vim' " {{{
+nnoremap <silent> <Leader>tt :CtrlPFiletype<CR>
 " }}}
 
 Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
