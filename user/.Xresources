@@ -32,12 +32,13 @@ URxvt.keysym.Meta-j: perl:tabbedex:next_tab
 URxvt.keysym.Meta-n: perl:tabbedex:new_tab
 URxvt.keysym.Meta-r: perl:tabbedex:rename_tab
 
-URxvt.font: xft:Liberation Mono:pixelsize=11
-URxvt.boldFont: xft:Liberation Mono:bold:pixelsize=11
-URxvt.letterSpace: -1
+! URxvt.font: xft:Liberation Mono:pixelsize=11
+! URxvt.boldFont: xft:Liberation Mono:bold:pixelsize=11
+! URxvt.letterSpace: -1
 
-! URxvt*font: xft:Fixed:size=8:antialias=true
-! URxvt*boldFont: xft:Fixed:size=8:weight=Bold:antialias=true
+URxvt*font: xft:Fixed:size=11:antialias=false
+URxvt*boldFont: xft:Fixed:size=11:weight=Bold:antialias=false
+URxvt.letterSpace: 0
 
 
 !Black
