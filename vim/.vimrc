@@ -301,8 +301,9 @@ vnoremap <Leader>nr y<C-W>npk"_dd
 " }}}
 " Source {{{
 if has('autocmd')
-    autocmd FileType vim vnoremap X y:execute @@<cr>:echo 'Sourced selection.'<cr>
-    autocmd Filetype vim nnoremap X ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
+    autocmd FileType vim vnoremap <buffer> X y:execute @@<cr>:echo 'Sourced selection.'<cr>
+    autocmd Filetype vim nnoremap <buffer> X ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
+    autocmd FileType haskell nnoremap <buffer> X :Shell xmonad --recompile<CR>
 endif
 " }}}
 " Tabs-related {{{
