@@ -209,8 +209,6 @@ nnoremap <C-W>z :cclose<CR>:lclose<CR><C-W>z
 nnoremap <MiddleMouse> a<MiddleMouse><Esc>
 inoremap <MiddleMouse> <MiddleMouse><Esc>
 vnoremap <MiddleMouse> c<MiddleMouse><Esc>
-" - Quote pasting
-nnoremap <Tab> :let @* = substitute(@*, '^\n+', '', 'g')<CR>GA<CR><CR>"<C-R>*"<Esc>
 " - Insert-mode surround PREVIOUS word with backticks:
 imap <C-g><C-b> <Esc>bysw`Ea
 " - Insert-mode uppercase prev word:
@@ -304,18 +302,6 @@ if has('autocmd')
     autocmd FileType vim vnoremap X y:execute @@<cr>:echo 'Sourced selection.'<cr>
     autocmd Filetype vim nnoremap X ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
 endif
-" }}}
-" Filetype bindings {{{
-nnoremap <silent> <Leader>ttd :se ft=htmldjango<CR>
-nnoremap <silent> <Leader>tth :se ft=html<CR>
-nnoremap <silent> <Leader>ttp :se ft=python<CR>
-nnoremap <silent> <Leader>ttm :se ft=markdown<CR>
-nnoremap <silent> <Leader>ttv :se ft=vim<CR>
-nnoremap <silent> <Leader>ttcss :se ft=css<CR>
-nnoremap <silent> <Leader>ttco :se ft=conf<CR>
-nnoremap <silent> <Leader>ttcpp :se ft=cpp<CR>
-nnoremap <silent> <Leader>ttj :se ft=javascript<CR>
-nnoremap <silent> <Leader>ttb :se ft=sh<CR>
 " }}}
 " Tabs-related {{{
 " Switch between tabs:
