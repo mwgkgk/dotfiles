@@ -294,7 +294,7 @@ nnoremap [gl :silent! VimProcBang xpdf -remote defaultServer -exec gotoPage\(<C-
 " - Visual search
 vnoremap * y/<C-R>"<CR>
 " - select last paste visually
-nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+nnoremap <expr> vp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " - Select line without identation and EOL
 nnoremap <Leader>v ^v$h
 " - Yank to +:
