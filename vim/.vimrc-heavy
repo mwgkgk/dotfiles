@@ -250,15 +250,19 @@ let g:submode_timeoutlen = 700
 
 silent! call plug#load('vim-submode')
 
-call submode#enter_with('xpdfscroll', 'n', '', '[k', ':silent! VimProcBang xpdf -remote defaultServer -exec scrollUp\(64\)<CR>')
-call submode#enter_with('xpdfscroll', 'n', '', '[j', ':silent! VimProcBang xpdf -remote defaultServer -exec scrollDown\(64\)<CR>')
-call submode#map('xpdfscroll', 'n', '', 'k', ':silent! VimProcBang xpdf -remote defaultServer -exec scrollUp\(64\)<CR>')
-call submode#map('xpdfscroll', 'n', '', 'j', ':silent! VimProcBang xpdf -remote defaultServer -exec scrollDown\(64\)<CR>')
+call submode#enter_with('Remote', 'n', '', '[k', ':silent! VimProcBang remote-view scrollUp<CR>')
+call submode#enter_with('Remote', 'n', '', '[j', ':silent! VimProcBang remote-view scrollDown<CR>')
+call submode#enter_with('Remote', 'n', '', '[zo', ':silent! VimProcBang remote-view zoomOut<CR>')
+call submode#enter_with('Remote', 'n', '', '[zi', ':silent! VimProcBang remote-view zoomIn<CR>')
+call submode#map('Remote', 'n', '', 'k', ':silent! VimProcBang remote-view scrollUp<CR>')
+call submode#map('Remote', 'n', '', 'j', ':silent! VimProcBang remote-view scrollDown<CR>')
+call submode#map('Remote', 'n', '', 'zo', ':silent! VimProcBang remote-view zoomOut<CR>')
+call submode#map('Remote', 'n', '', 'zi', ':silent! VimProcBang remote-view zoomIn<CR>')
 
-call submode#enter_with('vimscroll', 'n', '', ']k', '3<C-Y>')
-call submode#enter_with('vimscroll', 'n', '', ']j', '3<C-E>')
-call submode#map('vimscroll', 'n', '', 'k', '3<C-Y>')
-call submode#map('vimscroll', 'n', '', 'j', '3<C-E>')
+call submode#enter_with('Scroll', 'n', '', ']k', '3<C-Y>')
+call submode#enter_with('Scroll', 'n', '', ']j', '3<C-E>')
+call submode#map('Scroll', 'n', '', 'k', '3<C-Y>')
+call submode#map('Scroll', 'n', '', 'j', '3<C-E>')
 " }}}
 
 Plug 'sgur/vim-textobj-parameter'
