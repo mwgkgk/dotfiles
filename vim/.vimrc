@@ -162,6 +162,7 @@ nnoremap q <nop>
 vnoremap K <nop>
 " - No join in visual
 vnoremap J <nop>
+nnoremap [[ <nop>
 " }}}
 " Search-related {{{
 " nnoremap / /\v
