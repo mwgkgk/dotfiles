@@ -93,18 +93,16 @@ let g:EasyMotion_space_jump_first = 1
 let g:EasyMotion_do_special_mapping = 1
 let g:EasyMotion_add_search_history = 0
 " map <Enter>r <Plug>(easymotion-repeat)
-map <Leader>w <Plug>(easymotion-bd-w)
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>h <Plug>(easymotion-linebackward)
-map <Leader>f <Plug>(easymotion-f)
-map <Leader>F <Plug>(easymotion-F)
+" map gw <Plug>(easymotion-bd-w)
+map gl <Plug>(easymotion-lineforward)
+map gh <Plug>(easymotion-linebackward)
+map gf <Plug>(easymotion-f)
+map gF <Plug>(easymotion-F)
 map ss <Plug>(easymotion-sn)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>j <Plug>(easymotion-j)
-map sk <Plug>(easymotion-k)
-map sj <Plug>(easymotion-j)
-omap <Leader>k V<Plug>(easymotion-k)
-omap <Leader>j V<Plug>(easymotion-j)
+map gk <Plug>(easymotion-k)
+map gj <Plug>(easymotion-j)
+omap gk V<Plug>(easymotion-k)
+omap gj V<Plug>(easymotion-j)
 " }}}
 
 Plug 'vim-scripts/marvim' "{{{
