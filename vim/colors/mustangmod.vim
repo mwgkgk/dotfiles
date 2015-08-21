@@ -44,7 +44,7 @@ hi Directory    guifg=#b1d631 gui=none ctermfg=148
 hi Search       guibg=#C5C08A guifg='black' ctermbg=185 ctermfg=234
 
 " Syntax highlighting
-hi Comment      guifg=#808080 gui=none ctermfg=239
+hi Comment      guifg=#808080 gui=none ctermfg=245
 hi Todo         guifg=#8f8f8f gui=none ctermfg=245
 hi Boolean      guifg=#b1d631 gui=none ctermfg=148
 hi String       guifg=#b1d631 gui=none ctermfg=148
