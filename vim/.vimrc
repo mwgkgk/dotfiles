@@ -207,6 +207,11 @@ nnoremap <C-W>s :sp <C-R>=expand('%:h').'/'<CR><C-D>
 nnoremap <C-W>v :vs <C-R>=expand('%:h').'/'<CR><C-D>
 " Unite :cclose :lclose and <C-W>z
 nnoremap <C-W>z :cclose<CR>:lclose<CR><C-W>z
+" C-W #
+nnoremap <C-W># :sp #<CR>
+" + / -
+nnoremap <Space>+ 10<C-W>+
+nnoremap <Space>- 10<C-W>-
 " }}}
 " Insert-mode-related {{{
 " - Mouse insert made easier :
@@ -255,6 +260,8 @@ vnoremap <Leader>p "_dP
 nnoremap ga GA
 " Ease up regs:
 nmap q "
+" Kill line
+nnoremap <Delete> dd
 " }}}
 " Commandline-related {{{
 nnoremap <Space><Leader> :<C-P><CR>
