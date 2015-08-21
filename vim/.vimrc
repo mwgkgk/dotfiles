@@ -509,12 +509,6 @@ command! Chr    execute "!chromium --incognito % &"
 command! Ff     execute "!firefox % &"
 " - Mksession to .vim/sessions/last.vim:
 command! Mklast execute "mksession! ~/.vim/sessions/last.vim"
-" - No more fucking up
-command! WQ wq
-command! Wq wq
-command! W w
-command! Q q
-command! Qa qa
 " - Save and source
 command! Source silent! :w | :source %
 autocmd FileType vim nnoremap <buffer> <Space>x :Source<CR>:echo 'Sourced file.'<CR>
