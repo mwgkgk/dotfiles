@@ -377,7 +377,6 @@ map <Leader>a <Plug>(operator-append)
 Plug 'mwgkgk/vim-operator-insert' " {{{
 map <Leader>i <Plug>(operator-insert)
 " }}}
-Plug 'mwgkgk/vim-sync-schemes'
 
 " Python
 Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
