@@ -351,7 +351,7 @@ nmap <Space>l <Tab>
 nmap U :undolist<cr>
 nmap <Space>s :sync<CR><Tab>
 
-nmap <f2> :q<cr>
+nmap <f2> cw
 nmap <Space>q :q<cr>
 nmap <Space>Q :q<cr>
 nmap q :q<cr>
