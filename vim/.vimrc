@@ -519,6 +519,7 @@ command! Mklast execute "mksession! ~/.vim/sessions/last.vim"
 " - Save and source
 command! Source silent! :w | :source %
 autocmd FileType vim nnoremap <buffer> <Space>x :Source<CR>:echo 'Sourced file.'<CR>
+autocmd FileType vader nnoremap <buffer> <Space>x :Vader<CR>
 " - Random
 command! RandomLine execute 'normal! '.(matchstr(system('od -vAn -N3 -tu4 /dev/urandom'), '^\_s*\zs.\{-}\ze\_s*$') % line('$')).'G'
 " }}}
