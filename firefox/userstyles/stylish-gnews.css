@@ -1,0 +1,52 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("news.google.com") {
+  .gb_hd {
+    background-color: #2f2f2f;
+  }
+  #gb#gb a.gb_b {
+    color: #c6c6c6;
+  }
+  a {
+    color:burlywood;
+  }
+  .lt-col {
+    padding-left:250px;
+  }
+  .lt-col-col {
+    width:70%;
+
+  }
+  .st-col {
+
+  }
+  .rt-col {
+    display: none;
+  }
+  .main-content-with-gutter {
+    /* margin-left:250px;*/
+  }
+  body {
+    background-color: #1c1c1c;
+  }
+  .anchorman-blended-story {
+    background-color: #2f2f2f;
+    color:#c6c6c6;
+  }
+  #nav-menu-wrapper {
+    background-color: #2f2f2f;
+  }
+  .nav a.persistentblue, a.persistentblue, .nav-items .nav-item .topic a {
+    color: yellowgreen; !important
+  }
+  .kd-appbar {
+    border-bottom: 1px solid yellowgreen;
+  }
+  .rt-col .basic-title, .basic-title {
+    background-color: #2f2f2f;
+    border-bottom: 1px solid yellowgreen;
+  }
+  .basic-title .text {
+    color: yellowgreen;
+  }
+}
