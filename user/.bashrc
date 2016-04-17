@@ -15,7 +15,8 @@ function EXT_COLOR () { echo -ne "\[\033[38;5;$1m\]"; }
 NO_COLOR="\[\033[0m\]"
 
 # PS1="`EXT_COLOR 172`[\u@\h \j \W ]\$${NO_COLOR} "
-PS1="[\u@\h \j \W ]\$ "
+# PS1="[\u@\h \j \W ]\$ "
+PS1="[\u@\h \j \W ]`EXT_COLOR 174`\$${NO_COLOR} "
 
 LS_COLORS='di=0;32'; export LS_COLORS
 
