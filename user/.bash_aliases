@@ -4,11 +4,14 @@ alias ls='ls --color=auto -F'
 alias grep='grep --color=auto'
 alias tmux='tmux -2'
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias pp="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias cal="cal -3m"
 alias myip="curl http://ipecho.net/plain; echo"
 alias b="bc -l <<< "
 alias m="make"
 alias so="xrdb ~/.Xresources && source ~/.bashrc"
+alias yesorno="perl -e 'print int rand 2, \"\n\"; '"
+alias kk="pkill -fi"
 
 alias df='pydf'
 alias fm="vifm"
