@@ -448,6 +448,7 @@ Plug 'cloudhead/shady.vim'
 Plug 'mattsacks/vim-eddie'
 Plug 'w0ng/vim-hybrid'
 Plug 'jonathanfilip/vim-lucius'
+Plug 'mwgkgk/vim-kalisi'
 
 call plug#end()
 
