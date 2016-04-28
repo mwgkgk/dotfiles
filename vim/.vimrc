@@ -154,9 +154,10 @@ set laststatus=2 " Show even in last window
 " Mappings
 " Unmappings {{{
 " - No ex-mode for now
-nnoremap Q <nop>
+" nnoremap Q <nop>
 " - No accidental macro recording
-nnoremap <Leader>q q
+" nnoremap <Leader>q q
+nnoremap Q q
 nnoremap q <nop>
 " - No K in visual
 vnoremap K <nop>
