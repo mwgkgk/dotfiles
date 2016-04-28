@@ -16,7 +16,8 @@ URxvt*.scrollBar: false
 ! URxvt*.foreground: #EBC593
 ! URxvt*.foreground: #ffaf00
 ! URxvt*.background: #1b1b1b
-URxvt*.foreground: #75F7EF
+! URxvt*.foreground: #75F7EF
+URxvt*.foreground: #E6C29E
 URxvt*.background: #1b1b1b
 ! URxvt.depth: 24
 ! URxvt.background: [15]#000000
