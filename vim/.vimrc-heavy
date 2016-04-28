@@ -284,14 +284,14 @@ let g:submode_timeoutlen = 700
 
 silent! call plug#load('vim-submode')
 
-call submode#enter_with('Remote', 'n', '', '[k', ':silent! VimProcBang remote-view scrollUp<CR>')
-call submode#enter_with('Remote', 'n', '', '[j', ':silent! VimProcBang remote-view scrollDown<CR>')
-call submode#enter_with('Remote', 'n', '', '[zo', ':silent! VimProcBang remote-view zoomOut<CR>')
-call submode#enter_with('Remote', 'n', '', '[zi', ':silent! VimProcBang remote-view zoomIn<CR>')
-call submode#map('Remote', 'n', '', 'k', ':silent! VimProcBang remote-view scrollUp<CR>')
-call submode#map('Remote', 'n', '', 'j', ':silent! VimProcBang remote-view scrollDown<CR>')
-call submode#map('Remote', 'n', '', 'zo', ':silent! VimProcBang remote-view zoomOut<CR>')
-call submode#map('Remote', 'n', '', 'zi', ':silent! VimProcBang remote-view zoomIn<CR>')
+call submode#enter_with('Remote', 'n', '', '[k', ':silent! VimProcBang bro scrollUp<CR>')
+call submode#enter_with('Remote', 'n', '', '[j', ':silent! VimProcBang bro scrollDown<CR>')
+call submode#enter_with('Remote', 'n', '', '[zo', ':silent! VimProcBang bro zoomOut<CR>')
+call submode#enter_with('Remote', 'n', '', '[zi', ':silent! VimProcBang bro zoomIn<CR>')
+call submode#map('Remote', 'n', '', 'k', ':silent! VimProcBang bro scrollUp<CR>')
+call submode#map('Remote', 'n', '', 'j', ':silent! VimProcBang bro scrollDown<CR>')
+call submode#map('Remote', 'n', '', 'zo', ':silent! VimProcBang bro zoomOut<CR>')
+call submode#map('Remote', 'n', '', 'zi', ':silent! VimProcBang bro zoomIn<CR>')
 
 call submode#enter_with('Scroll', 'n', '', ']k', '3<C-Y>')
 call submode#enter_with('Scroll', 'n', '', ']j', '3<C-E>')
