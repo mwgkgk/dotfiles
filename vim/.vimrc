@@ -265,6 +265,8 @@ nnoremap ga GA
 nmap q "
 " Kill line
 nnoremap <Delete> dd
+" + To paste +
+nnoremap + a<C-R>+<Esc>
 " }}}
 " Commandline-related {{{
 nnoremap <Space><Leader> :<C-P><CR>
