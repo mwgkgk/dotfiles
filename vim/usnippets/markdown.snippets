@@ -45,47 +45,52 @@ endsnippet
 #  Custom stuff  #
 ##################
 
-snippet / *date/ "Date" rb
+snippet / *da(te)?/ "Date" rb
 # `!v system("date")`${0}
 endsnippet
 
 snippet / *tod/ "Today" rb
-# `!v system('date +"%a, %b %d" | tr -d "\n"')`: Today >
-  -${0:>}
+# `!v system('date +"%a, %b %d" | tr -d "\n"')` ${0}
 endsnippet
 
 snippet / *tom/ "Tomorrow" rb
-# `!v system('date -d tomorrow +"%a, %b %d"')`  ${0}
+# `!v system('date -d tomorrow +"%a, %b %d" | tr -d "\n"')` ${0}
 endsnippet
 
 snippet " *(sun|mon|tue|wed|thu|fri|sat)" "Weekday" rb
 `!p
 if match.group(0) is not None:
-	call_str = "date -d '" + match.group(0) + "' +'%a, %b %d'"
+	call_str = "date -d '" + match.group(0) + "' +'%a, %b %d' | tr -d '\n'"
 	import subprocess
-	snip.rv = "# " + subprocess.check_output(call_str, shell=True).decode('ascii')`  ${0}
+	snip.rv = "# " + subprocess.check_output(call_str, shell=True).decode('ascii')` ${0}
 endsnippet
 
 snippet " *next (sun|mon|tue|wed|thu|fri|sat)" "next Weekday" rb
 `!p
 if match.group(0) is not None:
-	call_str = "date -d '" + match.group(0) + "' +'%a, %b %d'"
+	call_str = "date -d '" + match.group(0) + "' +'%a, %b %d' | tr -d '\n'"
 	import subprocess
-	snip.rv = "# " + subprocess.check_output(call_str, shell=True).decode('ascii')`  ${0}
+	snip.rv = "# " + subprocess.check_output(call_str, shell=True).decode('ascii')` ${0}
 endsnippet
 
 snippet / *3days/ "in 3 days" rb
-# `!v system('date -d "+3 days" +"%a, %b %d"')`  ${0}
+# `!v system('date -d "+3 days" +"%a, %b %d" | tr -d "\n"')` ${0}
 endsnippet
 
 snippet / *2days/ "in 2 days" rb
-# `!v system('date -d "+2 days" +"%a, %b %d"')`  ${0}
+# `!v system('date -d "+2 days" +"%a, %b %d" | tr -d "\n"')` ${0}
 endsnippet
 
 snippet /# \w\w\w, \w\w\w \d\d/ "date continued: today" rb
 `!p
 if match.group(0) is not None:
     snip.rv = match.group(0)`: Today >
+endsnippet
+
+snippet /(# \w\w\w, \w\w\w \d\d) tom/ "date continued: tomorrow" rb
+`!p
+if match.group(1) is not None:
+    snip.rv = match.group(1)`: Tomorrow
 endsnippet
 
 snippet ms "makes sense" i
