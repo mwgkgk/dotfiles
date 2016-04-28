@@ -58,7 +58,7 @@ highlight  StatusLineNC guifg=bg      guibg=#544a47 gui=NONE
 highlight  TabLine      guifg=bg      guibg=#544a47 gui=NONE     
 highlight  TabLineFill  guifg=fg      guibg=#bba58b gui=NONE     
 highlight  TabLineSel   guifg=bg      guibg=#7a1e2a gui=NONE     
-highlight  Title        guifg=#6E6262 guibg=bg      gui=bold     
+highlight  Title        guifg=#000000 guibg=bg      gui=bold     
 highlight  Visual       guifg=bg      guibg=#7a1e2a gui=NONE     
 highlight  VisualNOS    guifg=bg      guibg=fg      gui=underline
 highlight  WarningMsg   guifg=#ff0000 guibg=NONE    gui=NONE     
