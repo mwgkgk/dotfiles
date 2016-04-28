@@ -124,13 +124,16 @@ mark h ~/
 " %m run the command in a menu window
 
 command df df -h %m 2> /dev/null
+command rm rm %f
 command diff vim -d %f %F
 command zip zip -r %f.zip %f
-command run !! ./%f
+command shellrun !! ./%f
 command make !!make
 command vimgrep vim "+vimgrep /%a/g %d/**"
 command unzip unzip %f
-command gunzip gunzip %f
+" command un7zip 7za x %f
+" command un7zip 7z e %f
+command ungz gunzip %f
 command unrar unrar x %f
 command tar tar -czf %f.tar.gz %f
 command untar tar -xzf %f
@@ -179,7 +182,7 @@ filextype *.ps,*.ps.gz gv %c %i &
 filextype *.djvu apvlv %f
 
 " Audio
-filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a
+filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.bik
        \ {Play using vlc}
        \ vlc -q --one-instance %f &,
        \ {Play using ffplay}
@@ -189,7 +192,7 @@ filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a
 fileviewer *.mp3 mp3info
 
 " Video
-filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv
+filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flvm,*.webm
         \ {View using vlc}
         \ vlc -q --one-instance %f &,
         \ {View using ffplay}
@@ -202,7 +205,7 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
          \ ffprobe -show_files -pretty %f 2> /dev/null
 
 " Web
-filetype *.html,*.htm links,mozilla,uzbl-browser %f %i &
+filetype *.html,*.htm firefox-default %f &,links,mozilla,uzbl-browser %f %i &
 
 " Object
 filetype *.o nm %f | less
@@ -214,7 +217,8 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ {View in gpicview}
         \ gpicview %c,
         \ {View in feh}
-        \ feh -dF %c,
+        " \ feh -dF %c,
+        \ feh -FZ %d --start-at %d/%c 2>/dev/null,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm convert -identify %f -verbose /dev/null
 
 " MD5
@@ -310,10 +314,15 @@ nmap O :!gvim %f<cr>
 nmap gb :file &<cr>l
 
 " Yank current directory path into the clipboard
-nmap yd :!echo %d | xclip %i<cr>
+" nmap yd :!echo %d | xclip %i<cr>
+nmap yd :!yankpath %d<CR>
 
 " Yank current file path into the clipboard
-nmap yf :!echo %c:p | xclip %i<cr>
+" nmap yf :!echo %c:p | xclip %i<cr>
+nmap yf :!yankpath %c:p<CR>
+
+" Yank root
+nmap yr :!yankpath %c:r <CR>
 
 " Mappings for faster renaming
 nmap I cw<c-a>
