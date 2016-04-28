@@ -336,10 +336,10 @@ xmap [<Space> <Plug>(textmanip-blank-above)
 xmap ]<Space> <Plug>(textmanip-blank-below)
 " }}}
 Plug 't9md/vim-quickhl' " {{{
-nmap <Leader>m <Plug>(quickhl-manual-this)
-xmap <Leader>m <Plug>(quickhl-manual-this)
-nmap <Leader>M <Plug>(quickhl-manual-reset)
-xmap <Leader>M <Plug>(quickhl-manual-reset)
+nmap <Space>m <Plug>(quickhl-manual-this)
+xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
 
 " nmap <Space>J <Plug>(quickhl-cword-toggle)
 " nmap <Space>] <Plug>(quickhl-tag-toggle)
