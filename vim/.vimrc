@@ -163,7 +163,8 @@ nnoremap q <nop>
 vnoremap K <nop>
 " - No join in visual
 vnoremap J <nop>
-nnoremap [[ <nop>
+nnoremap [ <nop>
+nnoremap ] <nop>
 " }}}
 " Search-related {{{
 " nnoremap / /\v
@@ -184,6 +185,7 @@ nnoremap <C-F1> :Man
 " <C-W>-related {{{
 " - No more c-w
 nmap <Space> <C-W>
+vmap <Space> <C-W>
 " - Switch & maximise window:
 nnoremap <C-W>gj <C-W>j<C-W>_
 nnoremap <C-W>gk <C-W>k<C-W>_
@@ -245,7 +247,7 @@ inoremap <C-BS> <C-W>
 " - Y to behave like C & D :
 map Y y$
 " - Add newlines before and after :
-nnoremap [<Space> O<Esc>j
+" nnoremap [<Space> O<Esc>j
 nnoremap ]<Space> o<Esc>k
 " - Join up
 nnoremap K -J
@@ -452,15 +454,6 @@ function! RemoveTrailingWhitespace()
 endfunc
 command! Trailing :call RemoveTrailingWhitespace()
 " }}}
-" - Mark something as done (change dash to plus) {{{
-function! MarkDone()
-    " let l:ln=substitute(getline('.'), "^\(\s*\)\-", "\=submatch(1)" . "+", "g")
-    call setline('.', substitute(getline('.'), "^\\(\\s*\\)-",
-                \ "\\=submatch(1).'+'", ""))
-endfunction
-nnoremap <Leader>gd :call MarkDone()<CR>
-vnoremap <Leader>gd :call MarkDone()<CR>
-" }}}
 " Move to next/prev tab {{{
 function! MoveToPrevTab()
   "there is only one window
@@ -506,8 +499,8 @@ function! MoveToNextTab()
   exe "b".l:cur_buf
 endfunc
 
-nnoremap <Leader>th :call MoveToNextTab()<CR>
-nnoremap <Leader>tl :call MoveToPrevTab()<CR>
+nnoremap <Leader>tl :call MoveToNextTab()<CR>
+nnoremap <Leader>th :call MoveToPrevTab()<CR>
 " }}}
 
 " Commands 
