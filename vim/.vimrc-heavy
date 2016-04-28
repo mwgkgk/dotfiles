@@ -197,6 +197,8 @@ Plug 'tommcdo/vim-exchange'
 
 Plug 'tomtom/tcomment_vim'
 
+Plug 'arecarn/selection.vim'
+
 Plug 'gerw/vim-HiLinkTrace' " {{{
 nnoremap <Leader>eh :HLT<CR>
 " }}}
