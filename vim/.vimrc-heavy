@@ -22,7 +22,7 @@ nnoremap s<Space> :CtrlPBuffer<CR>
 " nnoremap st :CtrlPBufTagAll<CR>
 nnoremap st :CtrlPTag<CR>
 nnoremap sn :CtrlPChange<CR>
-let g:ctrlp_open_multiple_files = '1vjr'
+let g:ctrlp_open_multiple_files = 'hj'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_custom_ignore = {
@@ -33,7 +33,9 @@ let g:ctrlp_user_command = ['.git/',
 let g:ctrlp_extensions = ['sessions', 'filetype']
 let g:ctrlp_clear_cache_on_exit=0
 let g:ctrlp_prompt_mappings  = {'PrtBS()' : ['<bs>', '<c-h>', '<>'],
-            \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<Space>']}
+            \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<Space>'],
+            \ 'PrtCurRight()':        ['<right>'],
+            \ 'AcceptSelection("v")': ['<c-v>', '<c-l>']}
 let g:ctrlp_switch_buffer = 'E'
 " }}}
 Plug 'pielgrzym/ctrlp-sessions' " {{{
