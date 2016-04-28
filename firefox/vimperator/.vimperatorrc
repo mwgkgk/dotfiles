@@ -11,3 +11,5 @@ map <silent> <C-y> :js util.copyToClipboard(content.document.title,true)<cr>
 colorscheme darkness2
 
 set defsearch=g
+
+set showstatuslinks=3
