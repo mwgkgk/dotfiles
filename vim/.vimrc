@@ -303,6 +303,8 @@ nnoremap <Leader>gl :<C-R><C-W><CR>
 nnoremap <C-W>a <C-^>
 " Xpdf gotoPage
 nnoremap [gl :silent! VimProcBang xpdf -remote defaultServer -exec gotoPage\(<C-R><C-W>\)<CR>
+" Space on firefox
+nnoremap [<Space> :silent! VimProcBang bro space<CR>
 " }}}
 " Visual-mode-related {{{
 " - Visual search
