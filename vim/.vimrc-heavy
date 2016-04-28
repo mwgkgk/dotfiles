@@ -355,8 +355,8 @@ let g:operator#flashy#group = "Search"
 " }}}
 Plug 'haya14busa/vim-easyoperator-line' " {{{
 let g:EasyOperator_line_do_mapping = 0
-nmap <Leader><Space>y <Plug>(easyoperator-line-yank)
-nmap <Leader><Space>d <Plug>(easyoperator-line-delete)
+nmap gy <Plug>(easyoperator-line-yank)
+nmap gd <Plug>(easyoperator-line-delete)
 " }}}
 
 Plug 'tpope/vim-surround'
