@@ -246,7 +246,12 @@ let g:multi_cursor_skip_key = '<C-x>'
 let g:multi_cursor_quit_key = '<Esc>'
 " }}}
 
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' } " {{{
+nnoremap gx yaW:call vimproc#system('firefox-default <C-R>" &')<CR>
+vnoremap gx y:call vimproc#system('firefox-default <C-R>" &')<CR>
+nnoremap gX yaW:call vimproc#system('firefox-default https://google.com/search?hl=en&q=<C-R>" &')<CR>
+vnoremap gX y:call vimproc#system('firefox-default https://google.com/search?hl=en&q=<C-R>" &')<CR>
+" }}}
 Plug 'Shougo/vimshell.vim' " {{{
 nnoremap <C-W>e :VimShell<CR>
 nnoremap <Leader>vp :exe 'VimShell -popup' ProjectRootGuess()<CR>
