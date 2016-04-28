@@ -96,11 +96,17 @@ let g:EasyMotion_do_special_mapping = 1
 let g:EasyMotion_add_search_history = 0
 " map <Enter>r <Plug>(easymotion-repeat)
 " map gw <Plug>(easymotion-bd-w)
-map gl <Plug>(easymotion-lineforward)
-map gh <Plug>(easymotion-linebackward)
-map gf <Plug>(easymotion-f)
-map gF <Plug>(easymotion-F)
-map ss <Plug>(easymotion-sn)
+" map gl <Plug>(easymotion-lineforward)
+" map gh <Plug>(easymotion-linebackward)
+map gl <Plug>(easymotion-f)
+map gh <Plug>(easymotion-F)
+map gL <Plug>(easymotion-t)
+map gH <Plug>(easymotion-T)
+nmap t <Plug>(easymotion-sn)
+
+nnoremap j gj
+nnoremap k gk
+
 map gk <Plug>(easymotion-k)
 map gj <Plug>(easymotion-j)
 omap gk V<Plug>(easymotion-k)
