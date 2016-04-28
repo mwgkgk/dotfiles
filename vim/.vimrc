@@ -269,6 +269,7 @@ nnoremap <Delete> dd
 nnoremap + a<C-R>+<Esc>
 " }}}
 " Commandline-related {{{
+nnoremap <Leader>: :<C-P>
 nnoremap <Space><Leader> :<C-P><CR>
 " - Directory of the current file :
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
