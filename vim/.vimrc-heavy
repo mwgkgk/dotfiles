@@ -347,6 +347,12 @@ xmap <Space>M <Plug>(quickhl-manual-reset)
 " map H <Plug>(operator-quickhl-manual-this-motion)
 " }}}
 
+Plug 'haya14busa/vim-operator-flashy' " {{{
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
+" let g:operator#flashy#group = "Visual"
+let g:operator#flashy#group = "Search"
+" }}}
 Plug 'haya14busa/vim-easyoperator-line' " {{{
 let g:EasyOperator_line_do_mapping = 0
 nmap <Leader><Space>y <Plug>(easyoperator-line-yank)
