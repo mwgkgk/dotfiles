@@ -306,6 +306,7 @@ Plug 'akiyan/vim-textobj-xml-attribute'
 Plug 'wellle/targets.vim' " {{{
 let g:targets_separators = '. ; : + - ~ _ * \ |'
 " }}}
+Plug 'wellle/visual-split.vim'
 
 Plug 'junegunn/vim-after-object' " {{{
 autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';')
