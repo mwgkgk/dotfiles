@@ -201,6 +201,10 @@ Plug 'arecarn/selection.vim'
 
 Plug 'gerw/vim-HiLinkTrace' " {{{
 nnoremap <Leader>eh :HLT<CR>
+Plug 'arecarn/crunch.vim' " {{{
+inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
+" }}}
+
 " }}}
 
 Plug 'dbakker/vim-projectroot' " {{{
