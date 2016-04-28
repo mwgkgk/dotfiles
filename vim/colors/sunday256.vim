@@ -35,8 +35,8 @@ hi StatusLine     ctermbg=6   ctermfg=255  guibg=#008080 guifg=#eeeeee
 hi StatusLineNC   ctermbg=6   ctermfg=255  guibg=#008080 guifg=#eeeeee
 hi VertSplit      ctermbg=6   ctermfg=255  guibg=#008080 guifg=#eeeeee
 
-hi CursorLine     ctermbg=228 cterm=none   guibg=#ffff87 gui=none
-hi CursorColumn   ctermbg=228 cterm=none   guibg=#ffff87 gui=none
+hi CursorLine     ctermbg=230 cterm=none   guibg=#ffff87 gui=none
+hi CursorColumn   ctermbg=230 cterm=none   guibg=#ffff87 gui=none
 hi ColorColumn    ctermbg=224 cterm=none   guibg=#ffd7d7 gui=none
 
 hi Folded         ctermbg=255 ctermfg=0    guibg=#eeeeee guifg=#000000
