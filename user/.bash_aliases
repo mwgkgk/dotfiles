@@ -12,6 +12,7 @@ alias m="make"
 alias so="xrdb ~/.Xresources && source ~/.bashrc"
 alias yesorno="perl -e 'print int rand 2, \"\n\"; '"
 alias kk="pkill -fi"
+alias ins="pacaur -S"
 
 alias df='pydf'
 alias fm="vifm"
