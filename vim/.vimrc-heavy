@@ -435,6 +435,9 @@ if filereadable(glob("~/.vimrc-heavy-local"))
 endif
 
 " Colors
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-colorscheme-switcher'
+
 Plug 'romainl/Apprentice'
 Plug 'romainl/Disciple'
 Plug 'jnurmine/Zenburn'
