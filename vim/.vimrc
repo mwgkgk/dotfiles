@@ -244,8 +244,10 @@ inoremap <C-f> <C-x><C-f>
 inoremap <C-l> <C-x><C-l>
 " kill-word for gvim:
 inoremap <C-BS> <C-W>
-" }}}
-" Normal-mode-related {{{
+" Paste + with preceding >
+inoremap <C-R>> <Esc>0C<C-R>+<Esc>I> <Esc>
+" Insert system()
+inoremap <C-R>! <C-R>=system('')<Left><Left>
 " - Y to behave like C & D :
 map Y y$
 " - Add newlines before and after :
