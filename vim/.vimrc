@@ -65,7 +65,7 @@ endif
 " Wildmenu :
 set wildmenu
 set wildmode=longest,list:longest
-set wildignore=*.o,*~,*.pyc,*.jpg,*.jpeg,*.JPG,*.png,*.xcf,*.gif,*.bmp,*.pdf
+set wildignore=*.o,*~,*.pyc,*.jpg,*.jpeg,*.JPG,*.png,*.xcf,*.gif,*.bmp,*.pdf,*.beam
 
 " Folding
 set foldmethod=indent
