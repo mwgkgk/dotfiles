@@ -28,8 +28,8 @@ let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_custom_ignore = {
             \'dir': '\v&HOME/(music|video|editing|torrents|misc)$'
             \}
-let g:ctrlp_user_command = ['.git/', 
-            \'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" let g:ctrlp_user_command = ['.git/', 
+"             \'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_extensions = ['sessions', 'filetype']
 let g:ctrlp_clear_cache_on_exit=0
 let g:ctrlp_prompt_mappings  = {'PrtBS()' : ['<bs>', '<c-h>', '<>'],
