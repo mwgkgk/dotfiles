@@ -201,18 +201,6 @@ Plug 'tomtom/tcomment_vim'
 
 Plug 'arecarn/selection.vim'
 
-Plug 'miyakogi/conoline.vim' " {{{
-let g:conoline_colorscheme_normal=1
-let g:conoline_color_normal_dark = 'ctermbg=236'
-let g:conoline_color_normal_nr_dark='ctermbg=236'
-let g:conoline_color_insert_dark = 'ctermbg=234'
-let g:conoline_color_insert_nr_dark = 'ctermbg=210'
-let g:conoline_color_normal_light = 'ctermbg=230'
-let g:conoline_color_normal_nr_light='ctermbg=230'
-let g:conoline_color_insert_light = 'ctermbg=230'
-let g:conoline_color_insert_nr_light = 'ctermbg=6'
-" }}}
-
 Plug 'arecarn/crunch.vim' " {{{
 inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
 " }}}
