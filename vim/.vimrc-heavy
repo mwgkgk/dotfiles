@@ -429,6 +429,12 @@ nmap [f [pf
 " Rust
 Plug 'rust-lang/rust.vim'
 
+" JS
+Plug 'pangloss/vim-javascript'
+Plug 'maksimr/vim-jsbeautify' " {{{
+vnoremap <silent> <Leader>b :call RangeJsBeautify()<CR>
+" }}}
+
 " Local
 if filereadable(glob("~/.vimrc-heavy-local")) 
     source ~/.vimrc-heavy-local
