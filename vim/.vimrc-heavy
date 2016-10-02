@@ -163,6 +163,8 @@ let g:cycle_default_groups += [
             \   [["absolute", "relative"]],
             \   [["first", "last"]],
             \   [["hidden", "auto"]],
+            \   [['background-color', 'color']],
+            \   [['width', 'height']],
             \ ]
 
 "  -- HTML
