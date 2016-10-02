@@ -248,6 +248,8 @@ inoremap <C-BS> <C-W>
 inoremap <C-R>> <Esc>0C<C-R>+<Esc>I> <Esc>
 " Insert system()
 inoremap <C-R>! <C-R>=system('')<Left><Left>
+" }}}
+" Normal-mode-related {{{
 " - Y to behave like C & D :
 map Y y$
 " - Add newlines before and after :
