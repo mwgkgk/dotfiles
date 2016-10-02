@@ -419,6 +419,11 @@ Plug 'mwgkgk/vim-operator-insert' " {{{
 map <Leader>i <Plug>(operator-insert)
 " }}}
 
+" Many languages
+Plug 'sheerun/vim-polyglot' " {{{
+let g:polyglot_disabled = ['markdown']
+" }}}
+
 " Python
 Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
 nmap ]f ]pf
