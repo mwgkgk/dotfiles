@@ -267,10 +267,6 @@ vnoremap <Leader>p "_dP
 nnoremap ga GA
 " Ease up regs:
 nmap q "
-" Kill line
-nnoremap <Delete> dd
-" + To paste +
-nnoremap + a<C-R>+<Esc>
 " }}}
 " Commandline-related {{{
 nnoremap <Leader>: :<C-P>
