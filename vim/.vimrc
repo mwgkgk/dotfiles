@@ -179,9 +179,10 @@ nnoremap <Leader>* :%s /<C-R><C-W>//g<Left><Left>
 nnoremap <Leader># :%s /<C-R>///g<Left><Left>
 " }}}
 " Help-related {{{
-nnoremap <F1> :help <C-r><C-w>
+nnoremap <F1> :help 
 nnoremap [11^ :Man 
 nnoremap <C-F1> :Man 
+nnoremap <Leader>h :help <C-r><C-w><CR>
 " }}}
 " <C-W>-related {{{
 " - No more c-w
