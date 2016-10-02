@@ -212,6 +212,7 @@ nnoremap <Leader>eh :HLT<CR>
 Plug 'dbakker/vim-projectroot' " {{{
 nnoremap <Leader>ep :echo ProjectRootGuess()<CR>
 nnoremap <Leader>dt :ProjectRootExe !ctags -R<CR>
+nnoremap <F12> :ProjectRootExe :Shell git-store-wip<CR>
 " - Projectroot Make
 command! Make :silent! ProjectRootExe make | redraw!
 nnoremap <Leader>dm :Make<CR>
