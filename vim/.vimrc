@@ -292,6 +292,8 @@ nnoremap <Leader>n :let @/=""<CR>
 " - Next/prev:
 nnoremap <C-n> :cn<CR>
 nnoremap <C-p> :cp<CR>
+nnoremap <C-w>> :ne<CR>
+nnoremap <C-w>< :prev<CR>
 " Toggle scrollbind:
 nnoremap <Leader>tb :windo set scrollbind!<CR>
 " Toggle scrolloff mode:
