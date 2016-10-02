@@ -131,7 +131,7 @@ command shellrun !! ./%f
 command make !!make
 command vimgrep vim "+vimgrep /%a/g %d/**"
 command unzip unzip %f
-" command un7zip 7za x %f
+command unszip 7za x %f
 " command un7zip 7z e %f
 command ungz gunzip %f
 command unrar unrar x %f
