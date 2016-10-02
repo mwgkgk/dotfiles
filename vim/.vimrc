@@ -383,7 +383,7 @@ function! HardWrapToggle()
     endif
     echo &textwidth
 endfunc
-nnoremap <Leader>hw :call HardWrapToggle()<CR>
+nnoremap <Leader>tw :call HardWrapToggle()<CR>
 " }}}
 " From suckless.vim: WindowMove {{{
 function! WindowMove(direction)
