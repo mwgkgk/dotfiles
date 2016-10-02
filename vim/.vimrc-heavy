@@ -197,7 +197,10 @@ Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 
 Plug 'tommcdo/vim-exchange'
 
-Plug 'tomtom/tcomment_vim'
+Plug 'tomtom/tcomment_vim' " {{{
+" Comment and clone
+nnoremap gcd yypk:TComment<CR>j
+" }}}
 
 Plug 'arecarn/selection.vim'
 
