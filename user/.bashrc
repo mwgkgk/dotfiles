@@ -37,3 +37,8 @@ fi
 if [ -f ~/.bashrc-local ]; then
     source ~/.bashrc-local
 fi
+
+# Causes launch delay:
+# if [ -f /usr/share/nvm/init-nvm.sh ]; then
+#     source /usr/share/nvm/init-nvm.sh
+# fi
