@@ -269,6 +269,8 @@ vnoremap <Leader>p "_dP
 nnoremap ga GA
 " Ease up regs:
 nmap q "
+" HL
+nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 " }}}
 " Commandline-related {{{
 nnoremap <Leader>: :<C-P>
