@@ -12,7 +12,6 @@ let mapleader=";"
 map [12^ :PlugUpdate<CR>
 
 Plug 'kien/ctrlp.vim' " {{{
-
 map s <NOP>
 let g:ctrlp_map = 'sf'
 " let g:ctrlp_cmd = 'CtrlPMixed'
