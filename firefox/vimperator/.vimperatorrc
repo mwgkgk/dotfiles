@@ -1,15 +1,28 @@
-highlight Hint font-size:95%;color:yellow;background-color:black;padding:2px;
-set hintchars=asdfgqwertjkl
-
+" Mappings
 
 map J gt
 map K gT
 noremap go O
 map O :tabopen 
+noremap Q q
+noremap q <nop>
+
+" - Yank title to 2ndary
 map <silent> <C-y> :js util.copyToClipboard(content.document.title,true)<cr>
+
+" - Yank url to X clipboard when copying text
+" nnoremap <silent> <C-c> :js util.copyToClipboard(window.location.href,true)<cr>:!clipswap<CR><C-c>
+nnoremap <silent> <C-c> :execute "silent !xyank " + content.location.href<CR><C-c>
 
 colorscheme darkness2
 
-set defsearch=g
+highlight Hint font-size:95%;color:#FFF1BA;background-color:black;padding:2px;
 
+set defsearch=g
 set showstatuslinks=3
+set hintchars=asdfgqwertjkl
+set complete=sb
+
+:set! middlemouse.contentLoadURL=false
+
+" # vi: ft=vim
