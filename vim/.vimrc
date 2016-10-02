@@ -324,6 +324,10 @@ nnoremap <expr> vp '`[' . strpart(getregtype(), 0, 1) . '`]'
 nnoremap <Leader>v ^v$h
 " - Yank to +:
 vnoremap <C-Y> "+y
+vnoremap <Space>y "+y
+" - Propagate "" to "+ :
+nnoremap <silent> <Space>y :let @+=@"<CR>:echo 'Yanked ' .
+            \ Pluralize('line', len(split(@+, '\n'))) . ' to +.'<CR>
 " - Yank to ":
 vnoremap <LeftRelease> "*y<LeftRelease>
 " Narrowregion-like:
