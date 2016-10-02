@@ -205,10 +205,6 @@ Plug 'arecarn/crunch.vim' " {{{
 inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
 " }}}
 
-Plug 'gerw/vim-HiLinkTrace' " {{{
-nnoremap <Leader>eh :HLT<CR>
-" }}}
-
 Plug 'dbakker/vim-projectroot' " {{{
 nnoremap <Leader>ep :echo ProjectRootGuess()<CR>
 nnoremap <Leader>dt :ProjectRootExe !ctags -R<CR>
