@@ -1,0 +1,27 @@
+snippet "\sf" "inline function" r
+ &(${VISUAL}$1)
+endsnippet
+
+snippet do "do..end" i
+do
+	${VISUAL}$1
+end
+endsnippet
+
+snippet defm "defmodule" b
+defmodule ${1:Default} do
+	${VISUAL}$2
+end
+endsnippet
+
+snippet rec "receive" b
+receive do
+	${VISUAL}$1
+end
+endsnippet
+
+snippet test "test" b
+test "${1:does something}", %{${2:values}: $2} do
+	${VISUAL}$3
+end
+endsnippet

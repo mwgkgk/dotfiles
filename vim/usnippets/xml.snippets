@@ -12,3 +12,11 @@ endsnippet
 snippet ti "Inline tag" b
 <${1:tag}>${2:content}</${1/([\w:._-]+).*/$1/}>
 endsnippet
+
+snippet v "video link" b
+<video>
+	<date-added>`!v system('date | tr -d "\n"')`</date-added>
+	<url>`!v @+`</url>
+	<title>`!v GetTitleFromUrl()`</title>
+</video>
+endsnippet

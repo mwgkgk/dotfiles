@@ -1,4 +1,6 @@
 extends jquery
+extends phantomjs
+extends node
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
@@ -51,8 +53,14 @@ function ${1:function_name}(${2:event}) {
 }
 endsnippet
 
+snippet f "anon function" i
+function(${1:request, reply}) {
+	${VISUAL}$0
+}
+endsnippet
+
 snippet iifej "Immediately-Invoked Function Expression (iife)"
-(function (${1:argument}) {
+(function(${1:argument}) {
 	${VISUAL}$0
 }(${2:$1}));
 endsnippet
@@ -72,6 +80,11 @@ if (${1:condition}) {
 }
 endsnippet
 
+snippet if "Description" b
+if ($1)
+	$0
+endsnippet
+
 snippet timeout "setTimeout function"
 window.setTimeout(function() {
   ${VISUAL}$0
@@ -81,7 +94,11 @@ endsnippet
 # Snippets for Console Debug Output
 
 snippet log "console.log"
-console.log(${1:"${2:value}"});
+console.log(${1:JSON.stringify(${2:${VISUAL}}, null, 4)});
+endsnippet
+
+snippet sup "console.log"
+console.log("${1:sup}");
 endsnippet
 
 snippet cw "console.warn"
@@ -146,5 +163,26 @@ snippet iffn "if func" !b
 if (typeof $1 === 'function') {
 	$1($2);
 }
+endsnippet
+
+snippet ifu "if not undefined" b
+if (typeof $1 !== 'undefined') {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet use "use strict" b
+"use strict";
+
+endsnippet
+
+snippet { "{" i
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet enc "encodeURIComponent" i
+encodeURIComponent(${VISUAL}$1)$0
 endsnippet
 # vim:ft=snippets:

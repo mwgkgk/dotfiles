@@ -21,9 +21,6 @@ endglobal
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
-snippet #
-`!p snip.rv = '#!/bin/' + getShell() + "\n\n" `
-endsnippet
 
 snippet !env "#!/usr/bin/env (!env)"
 `!p snip.rv = '#!/usr/bin/env ' + getShell() + "\n\n" `
@@ -87,8 +84,13 @@ endsnippet
 
 snippet f "function" b
 ${1:function_name} () {
-	$2
+	${VISUAL}$2
 }
 endsnippet
 
+priority 1
+
+snippet #
+`!p snip.rv = '#!/bin/' + getShell() + "\n\n" `
+endsnippet
 # vim:ft=snippets:

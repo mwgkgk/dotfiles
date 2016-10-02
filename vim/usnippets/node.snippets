@@ -1,0 +1,10 @@
+extends hapijs
+extends tape
+
+# snippet req "require" i
+# require('$1');
+# endsnippet
+
+snippet req "var require" i
+var ${1:Hapi} = require('${1/\w+/\L$0\E/}');
+endsnippet

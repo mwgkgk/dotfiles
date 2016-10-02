@@ -17,3 +17,12 @@ snippet o "Object" b
 },
 endsnippet
 
+snippet v "video link" b
+{
+	"dateAdded" : "`date | tr -d "\n"`",
+	"url" : "`!v @+`",
+	"title" : `!v GetTitleFromUrl()`,
+	"tags" : [ "music"$0 ]
+},
+endsnippet
+

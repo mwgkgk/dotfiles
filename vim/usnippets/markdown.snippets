@@ -50,11 +50,11 @@ snippet / *da(te)?/ "Date" rb
 endsnippet
 
 snippet / *tod/ "Today" rb
-# `!v system('date +"%a, %b %d" | tr -d "\n"')` ${0}
+# `!v system('date +"%a, %b %d" | tr -d "\n"')`${0}
 endsnippet
 
 snippet / *tom/ "Tomorrow" rb
-# `!v system('date -d tomorrow +"%a, %b %d" | tr -d "\n"')` ${0}
+# `!v system('date -d tomorrow +"%a, %b %d" | tr -d "\n"')`${0}
 endsnippet
 
 snippet " *(sun|mon|tue|wed|thu|fri|sat)" "Weekday" rb
@@ -62,7 +62,7 @@ snippet " *(sun|mon|tue|wed|thu|fri|sat)" "Weekday" rb
 if match.group(0) is not None:
 	call_str = "date -d '" + match.group(0) + "' +'%a, %b %d' | tr -d '\n'"
 	import subprocess
-	snip.rv = "# " + subprocess.check_output(call_str, shell=True).decode('ascii')` ${0}
+	snip.rv = "# " + subprocess.check_output(call_str, shell=True).decode('ascii')`${0}
 endsnippet
 
 snippet " *next (sun|mon|tue|wed|thu|fri|sat)" "next Weekday" rb
@@ -70,21 +70,29 @@ snippet " *next (sun|mon|tue|wed|thu|fri|sat)" "next Weekday" rb
 if match.group(0) is not None:
 	call_str = "date -d '" + match.group(0) + "' +'%a, %b %d' | tr -d '\n'"
 	import subprocess
-	snip.rv = "# " + subprocess.check_output(call_str, shell=True).decode('ascii')` ${0}
+	snip.rv = "# " + subprocess.check_output(call_str, shell=True).decode('ascii')`${0}
 endsnippet
 
 snippet / *3days/ "in 3 days" rb
-# `!v system('date -d "+3 days" +"%a, %b %d" | tr -d "\n"')` ${0}
+# `!v system('date -d "+3 days" +"%a, %b %d" | tr -d "\n"')`${0}
 endsnippet
 
 snippet / *2days/ "in 2 days" rb
-# `!v system('date -d "+2 days" +"%a, %b %d" | tr -d "\n"')` ${0}
+# `!v system('date -d "+2 days" +"%a, %b %d" | tr -d "\n"')`${0}
 endsnippet
 
 snippet /# \w\w\w, \w\w\w \d\d/ "date continued: today" rb
 `!p
 if match.group(0) is not None:
     snip.rv = match.group(0)`: Today >
+endsnippet
+
+snippet /Today >/ "tomorrow" r
+Tomorrow >
+endsnippet
+
+snippet /Tomorrow >/ "today" r
+Today >
 endsnippet
 
 snippet /(# \w\w\w, \w\w\w \d\d) tom/ "date continued: tomorrow" rb
@@ -97,12 +105,24 @@ snippet ms "makes sense" i
 makes sense
 endsnippet
 
+snippet Ms "makes sense" i
+Makes sense.
+endsnippet
+
 snippet mas "makes a lot of sense" i
 makes a lot of sense
 endsnippet
 
+snippet Mas "makes a lot of sense" i
+Makes a lot of sense.
+endsnippet
+
 snippet fe "Description" b
 fair enough
+endsnippet
+
+snippet gb "Description" b
+god bless
 endsnippet
 
 priority -1

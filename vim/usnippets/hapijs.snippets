@@ -1,0 +1,74 @@
+snippet reg "server.register" b
+server.register(require('${1:vision}'), (err) => {
+	if (err) throw err;
+
+	${VISUAL}$0
+});
+endsnippet
+
+snippet start "server.start" b
+server.start((err) => {
+    if (err) throw err;$0
+});
+endsnippet
+
+snippet views "server.views" b
+server.views({
+	engines: {
+		${1:html}: require('${2:handlebars}')
+	},
+	path: Path.join(__dirname, '${3:templates}')
+});
+endsnippet
+
+snippet route "server.route" b
+server.route({
+	path: ${2:'/${1:account}'},
+	method: '${3:GET}',
+	handler: ${6:function(request, reply) {
+		reply('${4:${5:${1/\w+/\u$0/}} page.}');
+	}}
+});
+endsnippet
+
+snippet ro "Description" b
+{
+	path: ${2:'/${1:account}'},
+	method: '${3:GET}',
+	handler: ${6:function(request, reply) {
+		reply('${4:${5:${1/\w+/\u$0/}} page.}');
+	}}
+},
+endsnippet
+
+snippet conn "Description" b
+var server = new Hapi.Server();
+
+server.connection({
+	port: Number(process.argv[2] || 8080),
+	address: 'localhost'
+});
+endsnippet
+
+snippet hapi "Description" b
+"use strict";
+
+var Hapi = require('hapi');
+
+var server = new Hapi.Server();
+
+server.connection({
+	port: Number(process.argv[2] || 8080),
+	address: 'localhost'
+});
+
+$0
+
+server.start((err) => {
+    if (err) throw err;
+});
+endsnippet
+
+snippet path "path.join" i
+Path.join(__dirname, '${1:templates}')
+endsnippet

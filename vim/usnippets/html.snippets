@@ -1,5 +1,6 @@
 extends javascript
 extends css
+extends marko
 
 global !p
 def x(snip):
@@ -222,7 +223,15 @@ snippet head "XHTML <head>"
 endsnippet
 
 snippet link "XHTML <link>"
-<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" title="${4:no title}" charset="${5:utf-8}"`!p x(snip)`>
+<link rel="${1:stylesheet}" href="${2:css/master.css}" type="text/css" media="${3:screen}" title="${4:no title}" charset="${5:utf-8}"`!p x(snip)`>
+endsnippet
+
+snippet css "css" b
+<link rel="${3:stylesheet}" href="${2:/static/css/${1:global}.css}" type="text/css"`!p x(snip)`>
+endsnippet
+
+snippet js "js" b
+<script type="text/javascript" src="${2:/static/js/${1:global}.js}"></script>
 endsnippet
 
 snippet meta "XHTML <meta>"
@@ -264,16 +273,21 @@ snippet table "XHTML <table>"
 </table>
 endsnippet
 
-snippet href "Link" i
+snippet <a "Link" i
 <a href="${1}"${2}>${VISUAL}${3}</a>
 endsnippet
 
+snippet "(\s+)a" "Description" r
+`!p snip.rv = match.group(1)
+	`<a href="${1}"${2}>${VISUAL}${3}</a>
+endsnippet
+
 snippet p "paragraph"
-<p${1}>${VISUAL}${2}</p>
+<p$2>${VISUAL}${1}</p>
 endsnippet
 
 snippet li "list item"
-<li${1}>${VISUAL}${2}</li>
+<li${2}>${VISUAL}${1}</li>
 endsnippet
 
 snippet ul "unordered list"
@@ -328,18 +342,18 @@ endsnippet
 
 snippet html5 "HTML5 Template"
 <!DOCTYPE html>
-<html>
-<head>
-    <title>${1}</title>
-    <meta charset="utf-8" />
+<html lang="en">
+	<head>
+		<title>${1}</title>
+		<meta charset="utf-8" />
 </head>
 <body>
-    <header>
-        ${2}
-    </header>
-    <footer>
-        ${4}
-    </footer>
+	<header>
+		${2}
+	</header>
+	<footer>
+		${4}
+	</footer>
 </body>
 </html>
 endsnippet
@@ -368,12 +382,28 @@ else:
 	snip.rv = ' '`style="${1}${VISUAL}" $0
 endsnippet
 
-snippet div "Inline <div>" i
+snippet divi "forced inline <div>" bi
 <div${1}>${VISUAL}${2}</div>
+endsnippet
+
+snippet divc "forced inline <div>" bi
+<div class="${1}">${VISUAL}${2}</div>
 endsnippet
 
 snippet span "Inline <span>" i
 <span${1}>${VISUAL}${2}</span>
+endsnippet
+
+snippet main "main" b
+<main>
+	$1
+</main>
+endsnippet
+
+snippet nav "Description" b
+<nav>
+	$1
+</nav>
 endsnippet
 
 snippet <div "Div: continued" b
@@ -423,6 +453,10 @@ snippet div "Div: beginning" b
 <div${1}>
 	${VISUAL}${2}
 </div>
+endsnippet
+
+snippet iframe "Description" b
+<iframe src="${VISUAL}$1"></iframe>
 endsnippet
 
 # vim:ft=snippets:

@@ -26,7 +26,7 @@ snippet each "jquery each" !b
 });
 endsnippet
 
-snippet this "this" !
+snippet this "this" !i
 $(this).
 endsnippet
 
@@ -36,6 +36,10 @@ endsnippet
 
 snippet attr "attr" !i
 attr('${1}'${2});
+endsnippet
+
+snippet href "href" !i
+attr('href');
 endsnippet
 
 snippet hasc "hasClass" !i
@@ -118,4 +122,8 @@ dialog({
 		}
 	}
 });
+endsnippet
+
+snippet $ "$" i
+$('$1').
 endsnippet

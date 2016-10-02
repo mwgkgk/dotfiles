@@ -20,8 +20,8 @@ snippet background "background-color:  color-hex (background)"
 background-color: #${1:DDD};$0
 endsnippet
 
-snippet background "background-color:  color-name (background)"
-background-color: ${1:red};$0
+snippet bgc "background-color:  color-hex (background)"
+background-color: #${1:4C4C4C};$0
 endsnippet
 
 snippet background "background-color:  color-rgb (background)"
@@ -136,15 +136,11 @@ snippet clear "clear: value (clear)"
 clear: ${1:left/right/both/none};$0
 endsnippet
 
-snippet color "color:  color-hex (color)"
+snippet fgc "color:  color-hex (color)"
 color: #${1:DDD};$0
 endsnippet
 
-snippet color "color:  color-name (color)"
-color: ${1:red};$0
-endsnippet
-
-snippet color "color:  color-rgb (color)"
+snippet rbg "color:  color-rgb (color)"
 color: rgb(${1:255},${2:255},${3:255});$0
 endsnippet
 
@@ -338,6 +334,12 @@ snippet "([\.#].*)" "block re" rb
 }
 endsnippet
 
+snippet { "{" i
+{
+	$0
+}
+endsnippet
+
 snippet scrollbar "scrollbar"
 scrollbar-base-color:       ${1:#CCCCCC};${2:
 scrollbar-arrow-color:      ${3:#000000};
@@ -457,6 +459,12 @@ endsnippet
 
 snippet cur "cursor: pointer" !i
 cursor: pointer;
+endsnippet
+
+snippet med "media" b
+@media screen and (max-width: ${1:800}px) {
+	${VISUAL}$0
+}
 endsnippet
 
 # vim:ft=snippets:
