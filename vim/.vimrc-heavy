@@ -426,6 +426,9 @@ nmap [f [pf
 " }}}
 
 " Django
+Plug 'mjbrownie/delete-surround-html', { 'for' : 'htmldjango' }
+Plug 'mjbrownie/django-template-textobjects', { 'for' : 'htmldjango' }
+
 " Rust
 Plug 'rust-lang/rust.vim'
 
