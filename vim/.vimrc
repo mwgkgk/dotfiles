@@ -7,7 +7,7 @@ set encoding=utf-8
 let mapleader=";"
 
 " fix leader:
-nnoremap ;; ;
+nnoremap \ ;
 
 " No backup
 set nobackup
