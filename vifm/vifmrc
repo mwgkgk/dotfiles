@@ -205,7 +205,7 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
          \ ffprobe -show_files -pretty %f 2> /dev/null
 
 " Web
-filetype *.html,*.htm firefox-default %f &,links,mozilla,uzbl-browser %f %i &
+filetype *.html,*.htm v, firefox-default %f &,links,mozilla,uzbl-browser %f %i &
 
 " Object
 filetype *.o nm %f | less
