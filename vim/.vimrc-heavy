@@ -74,7 +74,7 @@ nnoremap <Leader>se :Errors<CR>
 nnoremap <Leader>sn :lnext<CR>
 nnoremap <Leader>sp :lprev<CR>
 let g:syntastic_python_checkers = ['python', 'pylint2']
-let g:syntastic_python_pylint_exec = 'python2'
+let g:syntastic_python_pylint_exec = 'python'
 " let g:syntastic_python_pylint_postargs
 let g:syntastic_javascript_checkers = ['jshint'] 
 let g:syntastic_cpp_checkers = ['cpplint']
