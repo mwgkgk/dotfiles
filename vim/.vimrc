@@ -516,6 +516,13 @@ function! MoveToNextTab()
   "opening current buffer in new window
   exe "b".l:cur_buf
 endfunc
+function! Pluralize(word, count)
+    let l:plural = ""
+    if a:count > 1
+        let l:plural = "s"
+    endif
+    return a:count . " " .  a:word . l:plural
+endfunction
 
 nnoremap <Leader>tl :call MoveToNextTab()<CR>
 nnoremap <Leader>th :call MoveToPrevTab()<CR>
