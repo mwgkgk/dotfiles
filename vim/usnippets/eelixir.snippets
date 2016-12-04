@@ -1,0 +1,5 @@
+extends html
+
+snippet % "eex tag" i
+<%= ${1:${2:page}_path(@conn, :${3:index})} %>
+endsnippet
