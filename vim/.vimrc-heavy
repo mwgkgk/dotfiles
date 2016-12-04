@@ -67,20 +67,12 @@ let g:tagbar_foldlevel = 1
 let g:tagbar_left = 1
 " }}}
 
-Plug 'scrooloose/syntastic', { 'for' : ['python', 'javascript', 'cpp'] } " {{{
-nnoremap <Leader>ss :SyntasticCheck<CR>
-nnoremap <Leader>st :SyntasticToggleMode<CR>
-nnoremap <Leader>se :Errors<CR>
-nnoremap <Leader>sn :lnext<CR>
-nnoremap <Leader>sp :lprev<CR>
-let g:syntastic_python_checkers = ['python', 'pylint2']
-let g:syntastic_python_pylint_exec = 'python'
-" let g:syntastic_python_pylint_postargs
-let g:syntastic_javascript_checkers = ['jshint'] 
-let g:syntastic_cpp_checkers = ['cpplint']
-let g:syntastic_cpp_cpplint_exec = 'cpplint'
-let g:syntastic_cpp_cpplint_args = '--filter=-legal/copyright'
-" let g:syntastic_html_checkers = ['w3', 'validator']
+Plug 'w0rp/ale' " {{{ lint
+let g:ale_sign_error = '>'
+let g:ale_sign_warning = '!'
+let g:ale_lint_on_save = 1
+nmap <silent> <Leader>S <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>s <Plug>(ale_next_wrap)
 " }}}
 
 Plug 'Lokaltog/vim-easymotion' " {{{
