@@ -229,8 +229,8 @@ imap <C-g><C-b> <Esc>bysw`Ea
 " - Insert-mode uppercase prev word:
 imap <C-g><C-u> <Esc>bgUwgi
 " - Insert-mode emacs maps:
-inoremap <C-a> <Esc>I
-inoremap <C-e> <Esc>A
+" inoremap <C-a> <Esc>I
+" inoremap <C-e> <Esc>A
 " - Improve default i_CTRL-k i_CTRL-j
 inoremap <C-k> <Esc>kA
 inoremap <C-j> <Esc>jA
@@ -241,7 +241,7 @@ inoremap <C-R><Enter> <C-R>"
 " - Insert show regs:
 inoremap <C-R><Space> <Esc><C-O>:reg<CR>
 " Easier completion:
-inoremap <C-f> <C-x><C-f>
+" inoremap <C-f> <C-x><C-f> " Conflicts with tpope/vim-rsi
 inoremap <C-l> <C-x><C-l>
 " kill-word for gvim:
 inoremap <C-BS> <C-W>
@@ -260,7 +260,7 @@ nnoremap ]<Space> o<Esc>k
 nnoremap K -J
 nnoremap gK -gJ
 " - Swap parameters:
-nnoremap <Leader>s, "qdt,dwt)p"qp
+" nnoremap <Leader>s, "qdt,dwt)p"qp
 " - Indent everything:
 nnoremap =A gg=G``
 " Improved pastes:
