@@ -302,7 +302,7 @@ Plug 't9md/vim-choosewin' " {{{
 let g:choosewin_label_align='center'
 let g:choosewin_label='ASDFJKLGHQWERUIO'
 " nmap s <Plug>(choosewin)
-nmap <Space><Space> <Plug>(choosewin)
+nmap T <Plug>(choosewin)
 " }}}
 Plug 't9md/vim-textmanip' " {{{
 xmap <C-j> <Plug>(textmanip-move-down)
