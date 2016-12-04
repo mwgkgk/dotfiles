@@ -30,4 +30,11 @@ if match.group(${1:0}) is not None:
     snip.rv = match.group($1)\`$0
 endsnippet
 
+snippet pp "python block" i
+\`!p snip.rv = $1\`
+endsnippet
+
+snippet r "return" b
+return $0
+endsnippet
 # vim:ft=snippets:

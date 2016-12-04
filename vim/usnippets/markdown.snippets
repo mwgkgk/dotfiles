@@ -81,6 +81,10 @@ snippet / *2days/ "in 2 days" rb
 # `!v system('date -d "+2 days" +"%a, %b %d" | tr -d "\n"')`${0}
 endsnippet
 
+snippet / *10days/ "in 2 days" rb
+# `!v system('date -d "+10 days" +"%a, %b %d" | tr -d "\n"')`${0}
+endsnippet
+
 snippet /# \w\w\w, \w\w\w \d\d/ "date continued: today" rb
 `!p
 if match.group(0) is not None:

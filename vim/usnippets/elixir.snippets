@@ -1,3 +1,22 @@
+global !p
+def unpack_fn(str):
+	return (''.join(x.capitalize() for x in str.split('_')).split('.')[0],
+			str.split('_')[0])
+def mix_project():
+	from os.path import exists, join, dirname, abspath
+	p = path
+	i = 0
+	while True:
+		mixfile = join(dirname(abspath(p)), "mix.exs")
+		if exists(mixfile):
+			with open(mixfile) as f:
+				return  f.readline().split()[1].split('.')[0]
+		i += 1
+		if i >= 5 :
+			return "Unknown"
+		p = dirname(p)
+endglobal
+
 snippet "\sf" "inline function" r
  &(${VISUAL}$1)
 endsnippet
@@ -23,5 +42,40 @@ endsnippet
 snippet test "test" b
 test "${1:does something}", %{${2:values}: $2} do
 	${VISUAL}$3
+end
+endsnippet
+
+snippet scope "phoenix scope" b
+scope "/${1:scope}", ${2:Pweb} do
+	pipe_through :browser
+
+	get "/", ${3:${1/\w+/\u$0/}}Controller, :index
+end
+endsnippet
+
+snippet get "phoenix get" b
+get "/${1:status}", ${2:Some}Controller, :${3:$1}
+endsnippet
+
+snippet act "phoenix action" b
+def ${1:status}(conn, _params) do
+	render conn, "${2:$1}.html"
+end
+endsnippet
+
+snippet red "phoenix redirect" b
+redirect conn, to: "/$1"
+endsnippet
+
+snippet chan "phoenix channel" b
+defmodule ${1:`!p snip.rv = mix_project()`}.${2:`!p snip.rv, chan_name = unpack_fn(fn)`} do
+	use Phoenix.Channel
+
+	def join("${3:`!p snip.rv = chan_name`}:${4:lobby}", _message, socket) do
+		{:ok, socket}
+	end
+	def join("$3:" <> _private_room_id, _params, _socket) do
+		{:error, %{reason: "unauthorized"}}
+	end
 end
 endsnippet
