@@ -354,8 +354,10 @@ nnoremap <Space>6 6gt
 nnoremap <Space>7 7gt
 nnoremap <Space>8 8gt
 nnoremap <Space>9 :tabl<CR>
-" Open tab
+" Open tab:
 nnoremap <C-W>c :tabe<CR>
+" Prev tab:
+nnoremap <Space><Space> gT
 " }}}
 
 " Functions & bits
