@@ -528,6 +528,56 @@ endfunction
 nnoremap <Leader>tl :call MoveToNextTab()<CR>
 nnoremap <Leader>th :call MoveToPrevTab()<CR>
 " }}}
+" :sp multiple files {{{
+function! Split(...)
+    if(a:0 == 0)
+        sp
+    else
+        let i = a:0
+        while(i > 0)
+            execute 'let file = a:' . i
+            execute 'sp ' . file
+            let i = i - 1
+        endwhile
+    endif
+endfunction
+command! -nargs=* -complete=file Sp call Split(<f-args>)
+cab sp Sp
+" }}}
+" :e multiple files {{{
+function! Edit(...)
+    if(a:0 == 0)
+        e
+    else
+        let file = a:1
+        execute 'e ' . file
+        let i = a:0
+        while(i > 1)
+            execute 'let file = a:' . i
+            execute 'sp ' . file
+            let i = i - 1
+        endwhile
+    endif
+endfunction
+command! -nargs=* -complete=file Edit call Edit(<f-args>)
+cab e Edit
+"}}}
+" :vs multiple files {{{
+function! VSplit(...)
+    if(a:0 == 0)
+        vs
+    else
+        let i = a:0
+        while(i > 0)
+            execute 'let file = a:' . i
+            execute 'vs ' . file
+            let i = i - 1
+        endwhile
+    endif
+endfunction
+command! -nargs=* -complete=file Vs call VSplit(<f-args>)
+cab vs Vs
+" }}}
 
 " Commands 
 " Commands {{{
