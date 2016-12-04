@@ -190,4 +190,3 @@ let g:syntastic_cpp_cpplint_exec = 'cpplint'
 let g:syntastic_cpp_cpplint_args = '--filter=-legal/copyright'
 " let g:syntastic_html_checkers = ['w3', 'validator']
 " }}}
-
