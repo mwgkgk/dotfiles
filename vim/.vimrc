@@ -44,6 +44,7 @@ set colorcolumn=80
 
 " Man.vim
 runtime! ftplugin/man.vim
+cab man Man
 
 " Matching brackets :
 set showmatch
