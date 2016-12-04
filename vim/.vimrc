@@ -233,7 +233,7 @@ imap <C-g><C-u> <Esc>bgUwgi
 " inoremap <C-e> <Esc>A
 " - Improve default i_CTRL-k i_CTRL-j
 inoremap <F1> <C-k>
-
+inoremap <C-k> <Esc>kA
 inoremap <C-j> <Esc>jA
 " insert word of the line above (C-Y improved)
 imap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
