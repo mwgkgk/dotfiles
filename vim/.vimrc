@@ -232,7 +232,8 @@ imap <C-g><C-u> <Esc>bgUwgi
 " inoremap <C-a> <Esc>I
 " inoremap <C-e> <Esc>A
 " - Improve default i_CTRL-k i_CTRL-j
-inoremap <C-k> <Esc>kA
+inoremap <F1> <C-k>
+
 inoremap <C-j> <Esc>jA
 " insert word of the line above (C-Y improved)
 imap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
@@ -275,6 +276,7 @@ nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") 
 " }}}
 " Commandline-related {{{
 nnoremap <Leader>: :<C-P>
+nnoremap <Leader><Leader> :<C-P>
 nnoremap <Space><Leader> :<C-P><CR>
 " - Directory of the current file :
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
