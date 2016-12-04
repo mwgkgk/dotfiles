@@ -375,6 +375,7 @@ command! Gcurrent :exe "Gcommit -v -q %:p"
 nnoremap <Leader>gc :Gcurrent<CR>
 command! Gcached :Gvsplit! diff --staged
 " }}}
+Plug 'tpope/vim-rsi'
 
 Plug 'cohama/agit.vim' " {{{
 " let g:agit_no_default_mappings = 1
