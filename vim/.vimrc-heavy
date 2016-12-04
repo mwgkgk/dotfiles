@@ -415,6 +415,10 @@ Plug 'mwgkgk/vim-operator-insert' " {{{
 map <Leader>i <Plug>(operator-insert)
 " }}}
 
+Plug 'vifm/vifm.vim' " {{{
+cab fm SplitVifm
+" }}}
+
 " Many languages
 Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown']
