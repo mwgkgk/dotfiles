@@ -186,6 +186,8 @@ Plug 'tmhedberg/matchit'
 
 Plug 'briandoll/change-inside-surroundings.vim' " <Leader>ci
 
+Plug 'jiangmiao/auto-pairs'
+
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 
 Plug 'tommcdo/vim-exchange'
