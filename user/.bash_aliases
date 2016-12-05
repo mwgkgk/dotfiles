@@ -26,7 +26,7 @@ alias rtor="rtorrent"
 alias ptp="ptpython"
 alias ptp2="ptpython2"
 
-alias ali='v -O ~/.bash_aliases ~/.bashrc-local '
+alias ali='v ~/.bash_aliases , ~/.bashrc-local'
 alias v-empty="vim -u ~/.vimrc-heavy-empty"
 alias vl="v last"
 alias vcol="v col"
