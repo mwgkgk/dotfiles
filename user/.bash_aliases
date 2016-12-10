@@ -31,6 +31,7 @@ alias vl="v last"
 alias vcol="v col"
 alias sv='sudo -E v'
 alias man="viman"
+alias vv='tmux split-window -h -c "#{pane_current_path}" -p 70 v'
 alias t="timer"
 alias wip="git --git-dir=.wip --work-tree=."
 
