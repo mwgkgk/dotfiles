@@ -107,6 +107,7 @@ set list
 set listchars=tab:▸\ ,eol:¬
 
 " Make
+set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ -C\ ..  
 if has('autocmd')
     autocmd Filetype java setlocal makeprg=javac\ %
 endif
