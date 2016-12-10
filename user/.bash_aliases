@@ -15,7 +15,7 @@ alias so="xrdb ~/.Xresources && source ~/.bashrc"
 alias so-nvm="source /usr/share/nvm/init-nvm.sh"
 alias yesorno="perl -e 'print int rand 2, \"\n\"; '"
 alias kk="pkill -fi"
-alias I="pacaur"
+alias i="pacaur"
 
 alias df='pydf'
 alias fm="vifm"
