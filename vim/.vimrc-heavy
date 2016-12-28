@@ -455,6 +455,13 @@ nmap [f [pf
 Plug 'mjbrownie/delete-surround-html', { 'for' : 'htmldjango' }
 Plug 'mjbrownie/django-template-textobjects', { 'for' : 'htmldjango' }
 
+" Hylang
+Plug 'hylang/vim-hy'" {{{
+if has('autocmd')
+    autocmd FileType hy set lisp
+endif
+" }}}
+
 " Rust
 Plug 'rust-lang/rust.vim'
 
