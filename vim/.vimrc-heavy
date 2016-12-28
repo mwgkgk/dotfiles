@@ -426,7 +426,7 @@ xmap <silent> <C-e> <Plug>CamelCaseMotion_ie
 map <silent> <C-e> <Plug>CamelCaseMotion_e
 
 " kill-small-word insert mode:
-imap <C-b> <Esc><C-b>cw
+imap <C-g><C-w> <Esc><C-b>cw
 
 " }}}
 Plug 'mwgkgk/vim-operator-append' " {{{
