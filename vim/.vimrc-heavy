@@ -207,10 +207,6 @@ nnoremap gcd yypk:TComment<CR>j
 
 Plug 'arecarn/selection.vim'
 
-Plug 'arecarn/crunch.vim' " {{{
-inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
-" }}}
-
 Plug 'dbakker/vim-projectroot' " {{{
 nnoremap <Leader>ep :echo ProjectRootGuess()<CR>
 nnoremap <Leader>dt :ProjectRootExe !ctags -R<CR>
@@ -281,6 +277,10 @@ let g:vimshell_scrollback_limit = 65535
 " }}}
 
 Plug 'skywind3000/asyncrun.vim'
+
+Plug 'arecarn/crunch.vim' " {{{
+inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
+" }}}
 
 Plug 'thinca/vim-quickrun'
 
