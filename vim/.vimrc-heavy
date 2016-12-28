@@ -220,6 +220,10 @@ command! Make :silent! ProjectRootExe make | redraw!
 nnoremap <Leader>dm :Make<CR>
 " }}}
 
+Plug 'Valloric/ListToggle' " {{{
+let g:lt_quickfix_list_toggle_map = '<Space>`'
+" }}}
+
 Plug 'ardagnir/united-front'
 
 Plug 'rking/ag.vim'  " {{{
