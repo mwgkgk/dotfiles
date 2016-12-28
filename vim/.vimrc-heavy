@@ -438,6 +438,7 @@ map <Leader>i <Plug>(operator-insert)
 
 Plug 'vifm/vifm.vim' " {{{
 cab fm SplitVifm
+nnoremap <F2> :SplitVifm<CR>
 " }}}
 
 " Many languages
