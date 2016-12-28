@@ -120,6 +120,12 @@ let g:UltiSnipsSnippetDirectories = ['usnippets']
 let g:UltiSnipsExpandTrigger = '<tab>'
 nnoremap <Leader>u :UltiSnipsEdit<CR>
 " }}}
+Plug 'pgilad/vim-skeletons' " {{{
+let skeletons#autoRegister = 1
+nnoremap sk :CtrlP ~/.vim/skeletons/<CR><F5>
+command! SKBash :%!cat ~/.vim/skeletons/skeleton.sh
+command! SKPy :%!cat ~/.vim/skeletons/skeleton.py
+" }}}
 
 Plug 'bootleq/vim-cycle' " {{{
 let g:cycle_no_mappings = 1
