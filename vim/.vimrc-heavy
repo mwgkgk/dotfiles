@@ -232,6 +232,15 @@ nnoremap <Leader>gf :ProjectRootExe find **/<C-R><C-W>*<CR>
 
 Plug 'kshenoy/vim-signature'
 
+Plug 'Chiel92/vim-autoformat' " {{{
+let g:formatdef_elmformat = '"elm-format --upgrade --yes --stdin"'
+let g:formatters_elm = ['elmformat']
+if has('autocmd')
+"     autocmd BufWrite *.elm :Autoformat
+      autocmd FileType elm nnoremap <buffer> <C-w>d :Autoformat<CR>
+endif
+" }}}
+
 Plug 'terryma/vim-multiple-cursors' " {{{
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key = '<C-l>'
