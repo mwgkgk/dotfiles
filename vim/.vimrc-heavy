@@ -464,6 +464,9 @@ Plug 'maksimr/vim-jsbeautify' " {{{
 vnoremap <silent> <Leader>b :call RangeJsBeautify()<CR>
 " }}}
 
+" Elm
+Plug 'lambdatoast/elm.vim'
+
 " Local
 if filereadable(glob("~/.vimrc-heavy-local")) 
     source ~/.vimrc-heavy-local
