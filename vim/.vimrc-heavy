@@ -282,6 +282,8 @@ let g:vimshell_scrollback_limit = 65535
 
 Plug 'skywind3000/asyncrun.vim'
 
+Plug 'thinca/vim-quickrun'
+
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line' " {{{
