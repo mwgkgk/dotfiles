@@ -219,6 +219,8 @@ command! Make :silent! ProjectRootExe make | redraw!
 nnoremap <Leader>dm :Make<CR>
 " }}}
 
+Plug 'ardagnir/united-front'
+
 Plug 'rking/ag.vim'  " {{{
 let g:ag_prg = 'ag --hidden --nogroup --nocolor --column --smart-case --skip-vcs-ignores'
 let g:ag_highlight=1
