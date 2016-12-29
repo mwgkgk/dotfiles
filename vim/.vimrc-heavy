@@ -195,6 +195,12 @@ Plug 'briandoll/change-inside-surroundings.vim' " <Leader>ci
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'machakann/vim-patternjump' " {{{
+let g:patternjump_patterns = {
+		\ '_' : ['\<\h\k*\>'],
+		\ }
+" }}}
+
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 Plug 'AndrewRadev/dsf.vim'
 
