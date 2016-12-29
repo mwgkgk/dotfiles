@@ -282,6 +282,8 @@ nnoremap <Leader>p "_ddP
 vnoremap <Leader>p "_dP
 " Enter insert mode @ the end:
 nnoremap ga GA
+" Zoom down:
+nmap zd zb12<C-E>
 " Ease up regs:
 nmap q "
 " HL
