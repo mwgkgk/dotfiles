@@ -151,7 +151,7 @@ endif
 
 " Statusline
 " the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-set statusline=%n\ %<%{expand('%:h:t')}/%t\ %h%y%r%m\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %=%{expand('#:t')}\ %P
+set statusline=\ %{WinLabel()}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %=\ %{expand('#:t')}\ %P
 set laststatus=2 " Show even in last window
 
 " Mappings
