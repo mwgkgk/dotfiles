@@ -2,7 +2,7 @@
 
 .
 ├── [   0]  README.mkd
-├── [ 220]  Makefile
+├── [ 311]  Makefile
 ├── [ 67K]  vim
 │   ├── [ 19K]  .vimrc-heavy
 │   ├── [4.0K]  colors [83 entries exceeds filelimit, not opening dir]
@@ -57,3 +57,5 @@
             └── [2.2K]  molokai.vimp
 
  173K used in 14 directories, 40 files
+
+> Generated on Thursday, December 29, 2016 at 14:23:24 PM UTC.
