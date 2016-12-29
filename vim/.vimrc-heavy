@@ -342,19 +342,48 @@ let g:submode_timeoutlen = 700
 
 silent! call plug#load('vim-submode')
 
-call submode#enter_with('Remote', 'n', '', '[k', ':silent! VimProcBang bro scrollUp<CR>')
-call submode#enter_with('Remote', 'n', '', '[j', ':silent! VimProcBang bro scrollDown<CR>')
-call submode#enter_with('Remote', 'n', '', '[zo', ':silent! VimProcBang bro zoomOut<CR>')
-call submode#enter_with('Remote', 'n', '', '[zi', ':silent! VimProcBang bro zoomIn<CR>')
-call submode#map('Remote', 'n', '', 'k', ':silent! VimProcBang bro scrollUp<CR>')
-call submode#map('Remote', 'n', '', 'j', ':silent! VimProcBang bro scrollDown<CR>')
-call submode#map('Remote', 'n', '', 'zo', ':silent! VimProcBang bro zoomOut<CR>')
-call submode#map('Remote', 'n', '', 'zi', ':silent! VimProcBang bro zoomIn<CR>')
+call submode#enter_with('Remote↑↓', 'n', '', '[k', ':silent! VimProcBang bro scrollUp<CR>')
+call submode#map(       'Remote↑↓', 'n', '',  'k', ':silent! VimProcBang bro scrollUp<CR>')
+call submode#enter_with('Remote↑↓', 'n', '', '[j', ':silent! VimProcBang bro scrollDown<CR>')
+call submode#map(       'Remote↑↓', 'n', '',  'j', ':silent! VimProcBang bro scrollDown<CR>')
+
+call submode#enter_with('RemoteYT', 'n', '', '[l', ':silent! VimProcBang bro ytForward5<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'l', ':silent! VimProcBang bro ytForward5<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[L', ':silent! VimProcBang bro ytForward10<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'L', ':silent! VimProcBang bro ytForward10<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[h', ':silent! VimProcBang bro ytBackward5<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'h', ':silent! VimProcBang bro ytBackward5<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[H', ':silent! VimProcBang bro ytBackward10<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'H', ':silent! VimProcBang bro ytBackward10<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[<', ':silent! VimProcBang bro ytFaster<CR>')
+call submode#map(       'RemoteYT', 'n', '',  '<', ':silent! VimProcBang bro ytFaster<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[>', ':silent! VimProcBang bro ytSlower<CR>')
+call submode#map(       'RemoteYT', 'n', '',  '>', ':silent! VimProcBang bro ytSlower<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[<Space>', ':silent! VimProcBang bro space<CR>')
+call submode#map(       'RemoteYT', 'n', '',  '<Space>', ':silent! VimProcBang bro space<CR>')
+
+call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-y>', '<Esc>:silent! VimProcBang bro ytBackward5<CR>gi')
+call submode#map(       'RemoteYT_I', 'i', '', '<C-y>', '<Esc>:silent! VimProcBang bro ytBackward5<CR>gi')
+
+call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-u>', '<Esc>:silent! VimProcBang bro space<CR>gi')
+call submode#map(       'RemoteYT_I', 'i', '', '<C-u>', '<Esc>:silent! VimProcBang bro space<CR>gi')
+
+call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-i>', '<Esc>:silent! VimProcBang bro ytForward5<CR>gi')
+call submode#map(       'RemoteYT_I', 'i', '', '<C-i>', '<Esc>:silent! VimProcBang bro ytForward5<CR>gi')
+
+inoremap <C-u><C-t> <Esc>:silent! VimProcBang bro ytPls<CR>gi
+
+nnoremap [u :silent! VimProcBang bro space<CR>
+
+call submode#enter_with('RemoteZoom', 'n', '', '[zo', ':silent! VimProcBang bro zoomOut<CR>')
+call submode#map(       'RemoteZoom', 'n', '',   'o', ':silent! VimProcBang bro zoomOut<CR>')
+call submode#enter_with('RemoteZoom', 'n', '', '[zi', ':silent! VimProcBang bro zoomIn<CR>')
+call submode#map(       'RemoteZoom', 'n', '',   'i', ':silent! VimProcBang bro zoomIn<CR>')
 
 call submode#enter_with('Scroll', 'n', '', ']k', '3<C-Y>')
+call submode#map(       'Scroll', 'n', '',  'k', '3<C-Y>')
 call submode#enter_with('Scroll', 'n', '', ']j', '3<C-E>')
-call submode#map('Scroll', 'n', '', 'k', '3<C-Y>')
-call submode#map('Scroll', 'n', '', 'j', '3<C-E>')
+call submode#map(       'Scroll', 'n', '',  'j', '3<C-E>')
 " }}}
 
 Plug 'sgur/vim-textobj-parameter'
