@@ -1,0 +1,7 @@
+snippet /\s*w/ "tmux window" r
+  - ${1:vdev}:
+      root: ~/code/$2
+      layout: even-horizontal
+      panes:
+        - v $1
+endsnippet

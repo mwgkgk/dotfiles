@@ -1,0 +1,34 @@
+snippet i "import" b
+import ${1:Regex} exposing (${2:regex, contains})
+endsnippet
+
+snippet f "function" b
+${1:fname} : ${2:Model} -> ${3:Html msg}
+$1 ${4:${2/\w+/\L$0\E/}} =
+	${VISUAL}$4
+endsnippet
+
+snippet let "let" b
+let
+	$1
+in
+	${VISUAL}$2
+endsnippet
+
+snippet div "div" i
+div [$1]
+	[ ${VISUAL}$2
+	]
+endsnippet
+
+snippet /div cl/ "/div cl/" r
+div [ class "$1" ] [ $2 ]
+endsnippet
+
+snippet /\[\s*cl/ "/[ cl" r
+[ class "$1" 
+endsnippet
+
+snippet /, div/ "div" r
+div [$1] [$2]
+endsnippet

@@ -2,3 +2,8 @@ snippet all "all" b
 all:
 	g++ ${1:main}.cpp -o $1
 endsnippet
+
+snippet t "target" b
+${1:install}: ${2:all}
+	@echo -e ""\`date +'%a, %b %d %H:%M:%S'\`"\033[0;37m - ${3:$1ing}..\033[0m"
+endsnippet

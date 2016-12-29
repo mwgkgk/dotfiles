@@ -1,0 +1,38 @@
+snippet # "#" b
+#!/usr/bin/env hy3
+endsnippet
+
+snippet v "Description" b
+(setv $1)
+endsnippet
+
+snippet setv "Description" b
+(setv $1)
+endsnippet
+
+snippet f "defn" b
+(defn $1 [$2]$3)
+endsnippet
+
+snippet defn "defn" b
+(defn $1 [$2]$3)
+endsnippet
+
+snippet defc "defclass" b
+(defclass ${1:Classname} [$2]
+	[${3:name} None]
+	(defn --init-- [self $3]
+		(setv self.$3 $3)))
+endsnippet
+
+snippet main "main" b
+(defmain [&rest args] (start))
+endsnippet
+
+snippet for "for" b
+(for [${1:ele} ${2:[1 2 3]}] ($3))
+endsnippet
+
+snippet if "if" b
+(if ($1) ${VISUAL}$2)
+endsnippet

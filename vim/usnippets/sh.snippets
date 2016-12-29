@@ -46,13 +46,13 @@ elif ${2:[ ${1:condition} ]}; then
 	${0:#statements}
 endsnippet
 
-snippet for "for ... done (for)"
+snippet fori "for ... done (for)"
 for (( i = 0; i < ${1:10}; i++ )); do
 	${0:#statements}
 done
 endsnippet
 
-snippet forin "for ... in ... done (forin)"
+snippet for "for ... in ... done (forin)"
 for ${1:arg}${2/.+/ in /}${2:"$@"}; do
 	${0:#statements}
 done
@@ -86,6 +86,10 @@ snippet f "function" b
 ${1:function_name} () {
 	${VISUAL}$2
 }
+endsnippet
+
+snippet ali "ali" b
+alias $1="$2"
 endsnippet
 
 priority 1
