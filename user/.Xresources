@@ -22,6 +22,7 @@ URxvt*.foreground: #FFAF5F
 URxvt*.background: #1b1b1b
 ! URxvt.depth: 24
 ! URxvt.background: [15]#000000
+URxvt*.cursorColor: #F76345
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
@@ -38,10 +39,17 @@ URxvt.keysym.Meta-r: perl:tabbedex:rename_tab
 ! URxvt.boldFont: xft:Liberation Mono:bold:pixelsize=11
 ! URxvt.letterSpace: -1
 
-URxvt*font: xft:Fixed:size=11:antialias=false
-URxvt*boldFont: xft:Fixed:size=11:weight=Bold:antialias=false
-URxvt.letterSpace: 0
+! URxvt*font: xft:Fixed:size=11:antialias=false
+! URxvt*boldFont: xft:Fixed:size=11:weight=Bold:antialias=false
+! URxvt.letterSpace: 0
 
+URxvt*font: xft:Monospace:size=8:antialias=true
+URxvt*boldFont: xft:Monospace:size=8:weight=Bold:antialias=true
+URxvt.letterSpace: -1
+
+! URxvt*font: xft:Anka/Coder Narrow:size=10:antialias=true
+! URxvt*boldFont: xft:Anka/Coder Narrow:size=10:weight=Bold:antialias=true
+! URxvt.letterSpace: 0
 
 !Black
 ! *color0: #262626
