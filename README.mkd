@@ -1,12 +1,11 @@
-`tree -atrhn --du --filelimit 20 -I .git -o README.mkd`
+`tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 
 .
-├── [   0]  README.mkd
-├── [ 311]  Makefile
+├── [ 324]  Makefile
 ├── [ 67K]  vim
+│   ├── [ 15K]  .vimrc
 │   ├── [ 19K]  .vimrc-heavy
 │   ├── [4.0K]  colors [83 entries exceeds filelimit, not opening dir]
-│   ├── [ 15K]  .vimrc
 │   ├── [6.9K]  .vimrc-oldconfigs
 │   ├── [5.2K]  skeletons
 │   │   ├── [ 174]  skeleton.sh
@@ -56,6 +55,6 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 173K used in 14 directories, 40 files
+ 173K used in 14 directories, 39 files
 
-> Generated on Thursday, December 29, 2016 at 14:23:24 PM UTC.
+> Generated on Thursday, December 29, 2016 at 20:58:48 PM UTC.
