@@ -220,6 +220,8 @@ nnoremap <C-W># :sp #<CR>
 " + / -
 nnoremap <Space>+ 10<C-W>+
 nnoremap <Space>- 10<C-W>-
+" Prev window:
+nnoremap <C-w><C-w> <C-w>p
 " }}}
 " Insert-mode-related {{{
 " - Mouse insert made easier :
