@@ -575,7 +575,6 @@ function! Edit(...)
     endif
 endfunction
 command! -nargs=* -complete=file Edit call Edit(<f-args>)
-cab e Edit
 "}}}
 " :vs multiple files {{{
 function! VSplit(...)
