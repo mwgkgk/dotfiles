@@ -300,9 +300,6 @@ cnoremap %% <C-R>=expand('%:h').'/'<CR>
 cnoremap $$ <C-F>kk$ea!<Esc><C-C><End>
 " - Args of a previous command
 cnoremap !$ <C-F>k0f y$G<C-C><End><C-R>"
-" - Commandline emacs maps:
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
 " }}}
 " Normal mode shortcuts for commandline commands {{{
 " - noh:
