@@ -2,7 +2,7 @@ all:
 	@echo "Nothing to do."
 
 README_TARGET:=README.mkd
-TREE_CMD:=tree -atrhn --du --filelimit 20 -I .git -o $(README_TARGET)
+TREE_CMD:=tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o $(README_TARGET)
 
 readme:
 	$(TREE_CMD)
