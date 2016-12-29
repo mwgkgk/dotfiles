@@ -327,8 +327,6 @@ nnoremap [gl :silent! VimProcBang xpdf -remote defaultServer -exec gotoPage\(<C-
 " Up / down
 nnoremap OA 3<C-Y>
 nnoremap OB 3<C-E>
-" Space on firefox
-nnoremap [<Space> :silent! VimProcBang bro space<CR>
 " }}}
 " Visual-mode-related {{{
 " - Visual search
