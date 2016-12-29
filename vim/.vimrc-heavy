@@ -306,7 +306,13 @@ nmap vv v<Plug>(textobj-line-i)
 " }}}
 Plug 'kana/vim-textobj-indent'
 Plug 'kana/vim-textobj-lastpat'
-Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-entire' " {{{
+let g:textobj_entire_no_default_key_mappings = 1
+xmap iF <Plug>(textobj-entire-i)
+omap iF <Plug>(textobj-entire-i)
+xmap aF <Plug>(textobj-entire-a)
+omap aF <Plug>(textobj-entire-a)
+" }}}
 Plug 'kana/vim-submode', {'on' : [] } " {{{
 let g:submode_timeoutlen = 700
 
