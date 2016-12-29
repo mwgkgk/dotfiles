@@ -1,0 +1,59 @@
+`tree -atrhn --du --filelimit 20 -I .git -o README.mkd`
+
+.
+├── [   0]  README.mkd
+├── [ 220]  Makefile
+├── [ 67K]  vim
+│   ├── [ 19K]  .vimrc-heavy
+│   ├── [4.0K]  colors [83 entries exceeds filelimit, not opening dir]
+│   ├── [ 15K]  .vimrc
+│   ├── [6.9K]  .vimrc-oldconfigs
+│   ├── [5.2K]  skeletons
+│   │   ├── [ 174]  skeleton.sh
+│   │   ├── [ 144]  skeleton.py
+│   │   ├── [  59]  skeleton.hy
+│   │   └── [ 820]  skeleton.elm
+│   ├── [4.0K]  usnippets [62 entries exceeds filelimit, not opening dir]
+│   ├── [8.3K]  after
+│   │   └── [4.3K]  ftplugin
+│   │       ├── [ 149]  text.vim
+│   │       ├── [  64]  java.vim
+│   │       ├── [  64]  html.vim
+│   │       └── [  64]  css.vim
+│   └── [ 661]  filetype.vim
+├── [1.1K]  install.sh
+├── [8.0K]  user
+│   ├── [1.1K]  .bash_aliases
+│   ├── [1.6K]  .Xresources
+│   ├── [ 850]  .bashrc
+│   ├── [ 170]  .bash_profile
+│   └── [ 305]  .Xdefaults
+├── [6.1K]  tmux
+│   └── [2.1K]  .tmux.conf
+├── [ 37K]  vifm
+│   ├── [9.7K]  vifmrc
+│   └── [ 23K]  colors
+│       ├── [2.0K]  sunday256.vifm
+│       ├── [1.2K]  matrix.vifm
+│       ├── [3.2K]  GreenDay.vifm
+│       ├── [3.2K]  Foggy.vifm
+│       ├── [3.2K]  Day.vifm
+│       ├── [3.2K]  Black.vifm
+│       └── [3.2K]  Default.vifm
+└── [ 50K]  firefox
+    ├── [ 15K]  userstyles
+    │   ├── [5.2K]  midnight-modified.css
+    │   ├── [ 927]  stylish-gnews.css
+    │   └── [5.0K]  backlight.css
+    └── [ 31K]  vimperator
+        ├── [ 663]  .vimperatorrc
+        └── [ 26K]  colors
+            ├── [3.9K]  darkness2.vimp
+            ├── [4.3K]  seaweed.vimp
+            ├── [3.3K]  desert.vimp
+            ├── [4.2K]  myzenburn.vimp
+            ├── [1.1K]  ywgx.vimp
+            ├── [3.3K]  Mediterranean.vimp
+            └── [2.2K]  molokai.vimp
+
+ 173K used in 14 directories, 40 files
