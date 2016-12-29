@@ -42,3 +42,5 @@ fi
 # if [ -f /usr/share/nvm/init-nvm.sh ]; then
 #     source /usr/share/nvm/init-nvm.sh
 # fi
+
+GOPATH="${HOME}/code/go"
