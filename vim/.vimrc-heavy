@@ -245,7 +245,31 @@ nnoremap <Leader>gg :ProjectRootExe Ag <C-R><C-W>
 nnoremap <Leader>gf :ProjectRootExe find **/<C-R><C-W>*<CR>
 " }}}
 
-Plug 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature' " {{{
+let g:SignatureMap = {
+    \ 'Leader'             :  "m",
+    \ 'PlaceNextMark'      :  "mm",
+    \ 'ToggleMarkAtLine'   :  "m.",
+    \ 'PurgeMarksAtLine'   :  "m-",
+    \ 'DeleteMark'         :  "dm",
+    \ 'PurgeMarks'         :  "m_",
+    \ 'PurgeMarkers'       :  "m<BS>",
+    \ 'GotoNextLineAlpha'  :  "']",
+    \ 'GotoPrevLineAlpha'  :  "'[",
+    \ 'GotoNextSpotAlpha'  :  "`]",
+    \ 'GotoPrevSpotAlpha'  :  "`[",
+    \ 'GotoNextLineByPos'  :  "]'",
+    \ 'GotoPrevLineByPos'  :  "['",
+    \ 'GotoNextSpotByPos'  :  "<Leader>j",
+    \ 'GotoPrevSpotByPos'  :  "<Leader>k",
+    \ 'GotoNextMarker'     :  "]-",
+    \ 'GotoPrevMarker'     :  "[-",
+    \ 'GotoNextMarkerAny'  :  "]=",
+    \ 'GotoPrevMarkerAny'  :  "[=",
+    \ 'ListBufferMarks'    :  "m/",
+    \ 'ListBufferMarkers'  :  "m?"
+    \ }
+" }}}
 
 Plug 'Chiel92/vim-autoformat' " {{{
 let g:formatdef_elmformat = '"elm-format --upgrade --yes --stdin"'
