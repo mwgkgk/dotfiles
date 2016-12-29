@@ -190,3 +190,23 @@ let g:syntastic_cpp_cpplint_exec = 'cpplint'
 let g:syntastic_cpp_cpplint_args = '--filter=-legal/copyright'
 " let g:syntastic_html_checkers = ['w3', 'validator']
 " }}}
+Plug 'prendradjaja/vim-vertigo' " {{{
+function! VertigoWrap(direction, mode)
+    if (&rnu == 1)
+        let l:nogoingback = 1
+    else
+        let l:nogoingback = 0
+        let &rnu = 1
+    endif
+    execute 'Vertigo' . a:direction . ' ' . a:mode
+    if (l:nogoingback == 0)
+        let &rnu = 0
+    endif
+endfunction
+nnoremap <silent> gj :call VertigoWrap('Down', 'n')<CR>
+vnoremap <silent> gj :call VertigoWrap('Down', 'v')<CR>
+onoremap <silent> gj :call VertigoWrap('Down', 'o')<CR>
+nnoremap <silent> gk :call VertigoWrap('Up', 'n')<CR>
+vnoremap <silent> gk :call VertigoWrap('Up', 'v')<CR>
+onoremap <silent> gk :call VertigoWrap('Up', 'o')<CR>
+" }}}
