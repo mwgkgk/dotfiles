@@ -251,7 +251,18 @@ inoremap <C-BS> <C-W>
 " Paste + with preceding >
 inoremap <C-R>> <Esc>0C<C-R>+<Esc>I> <Esc>
 " Insert system()
-inoremap <C-R>! <C-R>=system('')<Left><Left>
+inoremap <C-R>( <C-R>=system('')<Left><Left>
+" Insert mode pseudo digraphs
+inoremap <C-c>in ∈
+inoremap <C-c>sum Σ
+inoremap <C-c>any ∀
+inoremap <C-c>lam λ
+inoremap <C-c>> ⇒
+inoremap <C-c><> ↔
+inoremap <C-c>j ↓
+inoremap <C-c>k ↑
+inoremap <C-c>h ←
+inoremap <C-c>l →
 " }}}
 " Normal-mode-related {{{
 " - Y to behave like C & D :
