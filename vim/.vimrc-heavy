@@ -194,6 +194,11 @@ Plug 'tmhedberg/matchit'
 Plug 'briandoll/change-inside-surroundings.vim' " <Leader>ci
 
 Plug 'jiangmiao/auto-pairs'
+Plug 'oblitum/rainbow' " {{{
+let g:rainbow_active = 0
+let g:rainbow_ctermfgs = ['104', '193', '179', '208', '255']
+nnoremap <Leader>tR :RainbowToggle<CR>
+" }}}
 
 Plug 'machakann/vim-patternjump' " {{{
 let g:patternjump_patterns = {
