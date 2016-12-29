@@ -191,7 +191,11 @@ let g:taboo_renamed_tab_format="%N %l%m "
 
 Plug 'tmhedberg/matchit'
 
-Plug 'briandoll/change-inside-surroundings.vim' " <Leader>ci
+Plug 'briandoll/change-inside-surroundings.vim' " {{{
+" <Leader>ci by default
+nnoremap cI :ChangeInsideSurrounding<CR>
+nnoremap cii :ChangeInsideSurrounding<CR>
+" }}}
 
 Plug 'oblitum/rainbow' " {{{
 let g:rainbow_active = 0
