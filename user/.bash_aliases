@@ -9,13 +9,12 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias pp="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias cal="cal -3m"
 alias myip="curl http://ipecho.net/plain; echo"
-alias b="bc -l <<< "
+# alias b="bc -l <<< "
 alias m="make"
 alias so="xrdb ~/.Xresources && source ~/.bashrc"
 alias so-nvm="source /usr/share/nvm/init-nvm.sh"
 alias yesorno="perl -e 'print int rand 2, \"\n\"; '"
 alias kk="pkill -fi"
-alias i="pacaur"
 
 alias df='pydf'
 alias fm="vifm"
@@ -32,7 +31,6 @@ alias vcol="v col"
 alias sv='sudo -E v'
 alias man="viman"
 alias vv='tmux split-window -h -c "#{pane_current_path}" -p 70 v'
-alias t="timer"
 alias wip="git --git-dir=.wip --work-tree=."
 alias er="elm-reactor --port 8420"
 alias er2="elm-reactor --port 8430"
