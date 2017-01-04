@@ -314,7 +314,9 @@ let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
 let g:vimshell_scrollback_limit = 65535
 " }}}
 
-Plug 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asyncrun.vim' " {{{
+nnoremap <F3> :AsyncRun 
+" }}}
 
 Plug 'arecarn/crunch.vim' " {{{
 inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a

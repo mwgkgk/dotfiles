@@ -473,7 +473,6 @@ function! s:ExecuteInShell(command)
   echo 'Shell command ' . command . ' executed.'
 endfunction
 command! -complete=shellcmd -nargs=+ Shell call s:ExecuteInShell(<q-args>)
-nnoremap <F3> :Shell 
 " }}}
 " Change & Paste: cp{motion} {{{
 nmap <silent> cp :set opfunc=ChangePaste<CR>g@
