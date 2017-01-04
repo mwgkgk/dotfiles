@@ -184,7 +184,7 @@ nnoremap <Leader># :%s /<C-R>///g<Left><Left>
 nnoremap <F1> :help 
 nnoremap [11^ :Man 
 nnoremap <C-F1> :Man 
-nnoremap <Space><C-h> :help <C-r><C-w><CR>
+nnoremap <C-W><C-h> :help <C-r><C-w><CR>
 cab vh vert help
 " }}}
 " <C-W>-related {{{
