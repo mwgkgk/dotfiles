@@ -367,8 +367,14 @@ nnoremap <Space>8 8gt
 nnoremap <Space>9 :tabl<CR>
 " Open tab:
 nnoremap <C-W>c :tabe<CR>
-" Prev tab:
-nnoremap <Space><Space> gT
+" Most recent tab / previous tab:
+if has('autocmd')
+    let g:lasttab = 2
+    nnoremap <Space><Space> :exe "tabn ".g:lasttab<CR>
+    autocmd TabLeave * let g:lasttab = tabpagenr()
+else
+    nnoremap <Space><Space> gT
+endif
 " }}}
 
 " Functions & bits
