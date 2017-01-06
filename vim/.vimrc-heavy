@@ -150,6 +150,7 @@ let g:cycle_default_groups = [
 let g:cycle_default_groups += [
             \ [['assertTrue', 'assertEqual']],
             \ [['in', 'not in']],
+            \ [['startswith', '__contains__', 'endswith']],
             \ ]
 
 "  -- CSS
