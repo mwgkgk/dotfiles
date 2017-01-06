@@ -369,7 +369,7 @@ nnoremap <Space>9 :tabl<CR>
 nnoremap <C-W>c :tabe<CR>
 " Most recent tab / previous tab:
 if has('autocmd')
-    let g:lasttab = 2
+    let g:lasttab = 1
     nnoremap <Space><Space> :exe "tabn ".g:lasttab<CR>
     autocmd TabLeave * let g:lasttab = tabpagenr()
 else
