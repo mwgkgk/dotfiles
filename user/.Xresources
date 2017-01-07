@@ -18,11 +18,13 @@ URxvt*.scrollBar: false
 ! URxvt*.background: #1b1b1b
 ! URxvt*.foreground: #75F7EF
 ! URxvt*.foreground: #E6C29E
-URxvt*.foreground: #FFAF5F
+! URxvt*.foreground: #FFAF5F
+URxvt*.foreground: #DADADA
 URxvt*.background: #1b1b1b
 ! URxvt.depth: 24
 ! URxvt.background: [15]#000000
-URxvt*.cursorColor: #F76345
+! URxvt*.cursorColor: #F76345
+URxvt*.cursorColor: #A75BC1
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
