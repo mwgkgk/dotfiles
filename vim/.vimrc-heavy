@@ -261,8 +261,8 @@ let g:SignatureMap = {
     \ 'GotoPrevSpotAlpha'  :  "`[",
     \ 'GotoNextLineByPos'  :  "]'",
     \ 'GotoPrevLineByPos'  :  "['",
-    \ 'GotoNextSpotByPos'  :  "<Leader>j",
-    \ 'GotoPrevSpotByPos'  :  "<Leader>k",
+    \ 'GotoNextSpotByPos'  :  "]`",
+    \ 'GotoPrevSpotByPos'  :  "[`",
     \ 'GotoNextMarker'     :  "]-",
     \ 'GotoPrevMarker'     :  "[-",
     \ 'GotoNextMarkerAny'  :  "]=",
@@ -387,6 +387,12 @@ call submode#enter_with('Scroll', 'n', '', ']k', '3<C-Y>')
 call submode#map(       'Scroll', 'n', '',  'k', '3<C-Y>')
 call submode#enter_with('Scroll', 'n', '', ']j', '3<C-E>')
 call submode#map(       'Scroll', 'n', '',  'j', '3<C-E>')
+
+" Submode for vim-signature:
+call submode#enter_with('Marks', 'n', 'r', 'M', '`[zz')
+call submode#map(       'Marks', 'n', 'r', 'M', '`[zz')
+call submode#enter_with('Marks', 'n', 'r', 'M', '`]zz')
+call submode#map(       'Marks', 'n', 'r', 'm', '`]zz')
 " }}}
 
 Plug 'sgur/vim-textobj-parameter'
