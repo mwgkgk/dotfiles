@@ -13,7 +13,7 @@ nnoremap \ ;
 set nobackup
 set nowritebackup
 set noswapfile
-set viminfo='0,:0,<0,@0,f0,/0
+set viminfo='1000,:0,<0,@0,f0,/0
 
 " Sessions :
 set ssop-=options
