@@ -28,7 +28,10 @@ if [ -f ~/.bash_opam ]; then
 fi
 
 if [ -f ~/.fzf.bash ]; then
+    export FZF_DEFAULT_OPTS="--reverse --inline-info -m"
+    export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
     source ~/.fzf.bash
+    bind '"\e;": " \C-e\C-u`__fzf_cd__`\e\C-e\er\C-m"'
 fi
 
 if [ -f ~/.bash_aliases ]; then
