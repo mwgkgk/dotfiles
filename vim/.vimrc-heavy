@@ -419,16 +419,15 @@ call submode#map(       'RemoteZoom', 'n', '',   'o', ':silent! VimProcBang bro 
 call submode#enter_with('RemoteZoom', 'n', '', '[zi', ':silent! VimProcBang bro zoomIn<CR>')
 call submode#map(       'RemoteZoom', 'n', '',   'i', ':silent! VimProcBang bro zoomIn<CR>')
 
-call submode#enter_with('Scroll', 'n', '', ']k', '3<C-Y>')
-call submode#map(       'Scroll', 'n', '',  'k', '3<C-Y>')
-call submode#enter_with('Scroll', 'n', '', ']j', '3<C-E>')
-call submode#map(       'Scroll', 'n', '',  'j', '3<C-E>')
+call submode#enter_with('ScrollGo', 'n', '', ';k', '3<C-Y>3k')
+call submode#map(       'ScrollGo', 'n', '',  'k', '3<C-Y>3k')
+call submode#enter_with('ScrollGo', 'n', '', ';j', '3<C-E>3j')
+call submode#map(       'ScrollGo', 'n', '',  'j', '3<C-E>3j')
 
-" Submode for vim-signature:
-call submode#enter_with('Marks', 'n', 'r', 'M', '`[zz')
-call submode#map(       'Marks', 'n', 'r', 'M', '`[zz')
-call submode#enter_with('Marks', 'n', 'r', 'M', '`]zz')
-call submode#map(       'Marks', 'n', 'r', 'm', '`]zz')
+call submode#enter_with('ScrollStay', 'n', '', ']k', '3<C-Y>')
+call submode#map(       'ScrollStay', 'n', '',  'k', '3<C-Y>')
+call submode#enter_with('ScrollStay', 'n', '', ']j', '3<C-E>')
+call submode#map(       'ScrollStay', 'n', '',  'j', '3<C-E>')
 " }}}
 
 Plug 'sgur/vim-textobj-parameter'
