@@ -122,6 +122,7 @@ Plug 'pgilad/vim-skeletons' " {{{
 let skeletons#autoRegister = 1
 nnoremap sk :CtrlP ~/.vim/skeletons/<CR><F5>
 command! SKBash :%!cat ~/.vim/skeletons/skeleton.sh
+command! SKBashF :%!cat ~/.vim/skeletons/skeleton.f.sh
 command! SKPython :%!cat ~/.vim/skeletons/skeleton.py
 " }}}
 
