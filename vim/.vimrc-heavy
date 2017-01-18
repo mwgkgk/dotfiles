@@ -334,7 +334,7 @@ if has('autocmd')
 endif
 " }}}
 Plug 'Shougo/vimshell.vim' " {{{
-nnoremap <C-W>e :VimShell<CR>
+nnoremap <Leader>E :VimShell<CR>
 nnoremap <Leader>vp :exe 'VimShell -popup' ProjectRootGuess()<CR>
 nnoremap <Leader>vP :exe 'VimShell -split' ProjectRootGuess()<CR>
 nnoremap <Leader>vb :VimShellBufferDir -popup<CR>
