@@ -206,9 +206,42 @@ nnoremap <Leader>tR :RainbowToggle<CR>
 " }}}
 
 Plug 'machakann/vim-patternjump' " {{{
+let g:patternjump_no_default_key_mappings = 1
 let g:patternjump_patterns = {
-		\ '_' : ['\<\h\k*\>'],
-		\ }
+        \ '_' : { 
+        \   'nx' : {
+        \     'tail' : ['^\s*$'],
+        \     }
+        \   },
+        \ 'markdown' : {
+        \   'nx' : {
+        \     'tail' : ['^\(#\|>\).*'],
+        \     }
+        \   },
+        \ 'vim' : {
+        \   'nx' : {
+        \     'tail' : ['^Plug.*'],
+        \     }
+        \   },
+        \ 'conf' : {
+        \   'nx' : {
+        \     'head' : ['^\s*#.*'],
+        \     }
+        \   },
+        \ 'python' : {
+        \   'nx' : {
+        \     'tail' : ['^\s*def.*'],
+        \     }
+        \   },
+        \ 'html' : {
+        \   'nx' : {
+        \     'tail' : ['^\s*<.+>'],
+        \     }
+        \   },
+        \ }
+
+nmap q <Plug>(patternjump-backward)
+nmap t <Plug>(patternjump-forward)
 " }}}
 
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
