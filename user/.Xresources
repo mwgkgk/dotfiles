@@ -32,8 +32,8 @@ URxvt*.color0: #3F3F3F
 URxvt*.color9: #98D53D
 URxvt*.tabbed.tab-bg: 9
 
-URxvt.keysym.Meta-k: perl:tabbedex:prev_tab
-URxvt.keysym.Meta-j: perl:tabbedex:next_tab
+URxvt.keysym.Meta-h: perl:tabbedex:prev_tab
+URxvt.keysym.Meta-l: perl:tabbedex:next_tab
 URxvt.keysym.Meta-c: perl:tabbedex:new_tab
 URxvt.keysym.Meta-r: perl:tabbedex:rename_tab
 
