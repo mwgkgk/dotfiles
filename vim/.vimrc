@@ -125,6 +125,7 @@ set iskeyword+=-
 
 " Omni :
 " set omnifunc=syntaxcomplete#Complete
+inoremap <C-x><C-x> <C-x><C-o>
 
 " Colors
 if filereadable(glob("~/.vimrc-colors")) 
