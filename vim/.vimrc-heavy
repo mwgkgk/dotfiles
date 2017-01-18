@@ -304,6 +304,8 @@ let g:SignatureMap = {
     \ 'ListBufferMarks'    :  "m/",
     \ 'ListBufferMarkers'  :  "m?"
     \ }
+nmap M `]
+nmap U `[
 " }}}
 
 Plug 'Chiel92/vim-autoformat' " {{{
@@ -608,6 +610,9 @@ vnoremap <silent> <Leader>b :call RangeJsBeautify()<CR>
 
 " Elm
 Plug 'lambdatoast/elm.vim'
+
+" Elixir
+Plug 'slashmili/alchemist.vim'
 
 " Local
 if filereadable(glob("~/.vimrc-heavy-local")) 
