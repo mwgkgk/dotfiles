@@ -1,9 +1,5 @@
-# This file contains snippets that are always defined. I personally
-# have snippets for signatures and often needed texts
+# Boxes:
 
-##############
-# NICE BOXES #
-##############
 global !p
 import string, vim
 
@@ -118,9 +114,8 @@ ${2:${VISUAL:Content}}
 `!p snip.rv = _get_comment_format()[0]` `!p snip.rv = foldmarker()[1]` $1 `!p snip.rv = _get_comment_format()[2]`
 endsnippet
 
-##########################
-# LOREM IPSUM GENERATORS #
-##########################
+# Lorem Ipsum generators:
+
 snippet lorem "Lorem Ipsum - 50 Words" b
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
@@ -128,33 +123,35 @@ vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
 no sea takimata sanctus est Lorem ipsum dolor sit amet.
 endsnippet
 
-# brackets
+# Words:
+
+snippet impl "impl" i
+implement
+endsnippet
+
+# Brackets:
 
 snippet ( "round braces" i
 ($1)$0
 endsnippet
 
-#########
-#  vim  #
-#########
+# Shebangs:
 
 snippet vim "vim" b
 # vim:ft=
 endsnippet
 
-# Other
-
-# snippet # "shebang" b
-# #!/usr/bin/env $0
-# endsnippet
-
-priority -1
 snippet # "shebang" b
-#!/bin/bash
+#!/usr/bin/env $1
 endsnippet
 
 snippet env "env" b
 #!/usr/bin/env $1
 endsnippet
+
+# priority -1
+# snippet # "shebang" b
+# #!/bin/bash
+# endsnippet
 
 # vim:ft=snippets:

@@ -29,13 +29,23 @@ endsnippet
 
 snippet defm "defmodule" b
 defmodule ${1:Default} do
+	def version() do
+		"0.0.1"
+	end
 	${VISUAL}$2
 end
 endsnippet
 
 snippet def "def" b
+@spec $1($2):: integer
 def ${1:double}($2) do
 	${VISUAL}$3
+end
+endsnippet
+
+snippet vers "vers" b
+def version() do
+	"${1:0.0.1}"
 end
 endsnippet
 
