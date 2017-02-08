@@ -6,8 +6,8 @@ echo "Installing..."
 # Vim
 rm ~/.vimrc
 ln -s $DIR/vim/.vimrc ~/.vimrc
-rm ~/.vimrc-heavy
-ln -s $DIR/vim/.vimrc-heavy ~/.vimrc-heavy
+rm ~/.plugs.vimrc
+ln -s $DIR/vim/.plugs.vimrc ~/.plugs.vimrc
 rm -rf ~/.vim/snippets
 ln -s $DIR/vim/usnippets ~/.vim/usnippets
 rm -rf ~/.vim/colors
