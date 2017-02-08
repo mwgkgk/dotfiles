@@ -10,3 +10,6 @@ readme:
 	echo -e "\n> Generated on `date --utc +'%A, %B %e, %Y at %T %p %Z.'`" >> $(README_TARGET)
 	git add $(README_TARGET)
 	git commit -m "Update README.mkd"
+
+push: readme
+	git push origin master
