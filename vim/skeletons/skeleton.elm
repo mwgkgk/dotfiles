@@ -1,4 +1,4 @@
-module ${1:`!v expand("%:t:r")`}
+module ${1:`!v expand("%:t:r")`} exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
