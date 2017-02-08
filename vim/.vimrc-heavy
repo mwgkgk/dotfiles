@@ -147,6 +147,7 @@ let g:cycle_default_groups = [
             \   [['Bundle', 'Plug']],
             \   [['forward', 'backward']],
             \   [['head', 'tail']],
+            \   [['ctrl', 'alt', 'shift', 'win', 'meta']],
             \ ]
 
 "  -- Python
