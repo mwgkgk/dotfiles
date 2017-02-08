@@ -623,7 +623,11 @@ vnoremap <silent> <Leader>b :call RangeJsBeautify()<CR>
 Plug 'lambdatoast/elm.vim'
 
 " Elixir
-Plug 'slashmili/alchemist.vim'
+Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' }
+
+" Haskell
+Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
+Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
 
 " Local
 if filereadable(glob("~/.vimrc-heavy-local")) 
