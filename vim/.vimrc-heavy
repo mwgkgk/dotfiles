@@ -9,6 +9,10 @@ let g:mapleader=";"
 
 " filetype off
 
+augroup plugs.vimrc
+    autocmd!
+augroup END
+
 Plug 'kien/ctrlp.vim' " {{{
 map s <NOP>
 let g:ctrlp_map = 'sf'
@@ -318,11 +322,9 @@ let g:formatdef_elmformat = '"elm-format --upgrade --yes --stdin"'
 let g:formatters_elm = ['elmformat']
 let g:formatdef_hindent = '"hindent"'
 let g:formatters_haskell = ['hindent']
-if has('autocmd')
-"     autocmd BufWrite *.elm :Autoformat
-      autocmd FileType elm,haskell nnoremap <buffer> <C-w>d :Autoformat<CR>
-      autocmd FileType markdown nnoremap <buffer> <C-w>d :Trailing<CR>
-endif
+" autocmd plugs.vimrc BufWrite *.elm :Autoformat
+autocmd plugs.vimrc FileType elm,haskell nnoremap <buffer> <C-w>d :Autoformat<CR>
+autocmd plugs.vimrc FileType markdown nnoremap <buffer> <C-w>d :Trailing<CR>
 " }}}
 
 Plug 'terryma/vim-multiple-cursors' " {{{
@@ -337,9 +339,7 @@ Plug 'Shougo/vimproc.vim', { 'do' : 'make' } " {{{
 vnoremap gX y:call vimproc#system('bro url <C-R>"')<CR>
 vnoremap gx y:call vimproc#system('firefox-default <C-R>" &')<CR>
 vnoremap gs y:call vimproc#system('firefox-default https://google.com/search?hl=en&q=<C-R>" &')<CR>
-if has('autocmd')
-    autocmd BufWrite *.elm,*.html,*.css VimProcBang refresh-dev1
-endif
+autocmd plugs.vimrc BufWrite *.elm,*.html,*.css VimProcBang refresh-dev1
 " }}}
 Plug 'Shougo/vimshell.vim' " {{{
 nnoremap <Leader>E :VimShell<CR>
@@ -452,9 +452,7 @@ let g:targets_separators = '. ; : + - ~ _ * \ |'
 Plug 'wellle/visual-split.vim'
 
 Plug 'junegunn/vim-after-object' " {{{
-if has('autocmd')
-    autocmd VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';')
-endif
+autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';')
 " }}}
 Plug 'junegunn/vader.vim'
 
@@ -604,10 +602,8 @@ Plug 'mjbrownie/delete-surround-html', { 'for' : 'htmldjango' }
 Plug 'mjbrownie/django-template-textobjects', { 'for' : 'htmldjango' }
 
 " Hylang
-Plug 'hylang/vim-hy', { 'for' : 'hy' }" {{{
-if has('autocmd')
-    autocmd FileType hy set lisp
-endif
+Plug 'hylang/vim-hy', { 'for' : 'hy' } " {{{
+autocmd plugs.vimrc FileType hy set lisp
 " }}}
 
 " Rust

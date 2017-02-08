@@ -10,6 +10,10 @@ let g:mapleader=";"
 " fix leader:
 nnoremap \ ;
 
+augroup vimrc
+    autocmd!
+augroup END
+
 " No backup
 set nobackup
 set nowritebackup
@@ -20,9 +24,7 @@ set viminfo='1000,:0,<0,@0,f0,/0
 set ssop-=options
 set ssop-=localoptions
 set ssop-=buffers
-" if has('autocmd')
-"     autocmd SessionLoadPost * tabdo exe 'windo exe "normal zz"'
-" endif
+" autocmd vimrc SessionLoadPost * tabdo exe 'windo exe "normal zz"'
 
 " Search
 set ignorecase
@@ -37,10 +39,8 @@ set scrolloff=5
 set mouse=a
 set number
 set cursorline
-if has('autocmd')
-    autocmd WinEnter * setlocal cursorline
-    autocmd WinLeave * setlocal nocursorline
-endif
+autocmd vimrc WinEnter * setlocal cursorline
+autocmd vimrc WinLeave * setlocal nocursorline
 set colorcolumn=80
 
 " Man.vim
@@ -60,9 +60,7 @@ set backspace=indent,eol,start
 
 " No bells, please!
 set noerrorbells visualbell t_vb=
-if has('autocmd')
-    autocmd GUIEnter * set visualbell t_vb=
-endif
+autocmd vimrc GUIEnter * set visualbell t_vb=
 
 " Wildmenu :
 set wildmenu
@@ -87,21 +85,17 @@ set wrap
 set linebreak
 set nocindent
 set cinoptions+=g1,h1
-if has('autocmd')
-    autocmd BufRead,BufNewFile *.marko setfiletype html
-    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-    autocmd Filetype markdown,python setlocal tw=79
-    autocmd Filetype html,htmldjango setlocal tw=0
-endif
+autocmd vimrc BufRead,BufNewFile *.marko setfiletype html
+autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd vimrc Filetype markdown,python setlocal tw=79
+autocmd vimrc Filetype html,htmldjango setlocal tw=0
 
 " Whitespace
 set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set expandtab
-if has('autocmd')
-    autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2
-endif
+autocmd vimrc Filetype cpp setlocal tabstop=2 shiftwidth=2
 
 " Show invisibles :
 set list
@@ -109,9 +103,7 @@ set listchars=tab:▸\ ,eol:¬
 
 " Make
 set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ -C\ ..  
-if has('autocmd')
-    autocmd Filetype java setlocal makeprg=javac\ %
-endif
+autocmd vimrc Filetype java setlocal makeprg=javac\ %
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
 map <F9> :make<Return>:copen<Return>
 
@@ -355,11 +347,9 @@ vnoremap <LeftRelease> "*y<LeftRelease>
 vnoremap <Leader>nr y<C-W>npk"_dd
 " }}}
 " Source {{{
-if has('autocmd')
-    autocmd FileType vim vnoremap <buffer> X y:execute @@<cr>:echo 'Sourced selection.'<cr>
-    autocmd Filetype vim nnoremap <buffer> X ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
-    autocmd FileType haskell nnoremap <buffer> X :Shell xmonad --recompile<CR>
-endif
+autocmd vimrc FileType vim vnoremap <buffer> X y:execute @@<cr>:echo 'Sourced selection.'<cr>
+autocmd vimrc Filetype vim nnoremap <buffer> X ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
+autocmd vimrc FileType haskell nnoremap <buffer> X :Shell xmonad --recompile<CR>
 " }}}
 " Tabs-related {{{
 " Switch between tabs:
@@ -375,13 +365,9 @@ nnoremap <Space>9 :tabl<CR>
 " Open tab:
 nnoremap <C-W>c :tabe<CR>
 " Most recent tab / previous tab:
-if has('autocmd')
-    let g:lasttab = 1
-    nnoremap <Space><Space> :exe "tabn ".g:lasttab<CR>
-    autocmd TabLeave * let g:lasttab = tabpagenr()
-else
-    nnoremap <Space><Space> gT
-endif
+let g:lasttab = 1
+nnoremap <Space><Space> :exe "tabn ".g:lasttab<CR>
+autocmd vimrc TabLeave * let g:lasttab = tabpagenr()
 " }}}
 
 " Functions & bits
@@ -614,10 +600,10 @@ command! Ff     execute "!firefox % &"
 command! Mklast execute "mksession! ~/.vim/sessions/last.vim"
 " - Save and source
 command! Source silent! :w | :source %
-autocmd FileType vim nnoremap <buffer> <Space>x :Source<CR>:echo 'Sourced file.'<CR>
-autocmd FileType vim nnoremap <buffer> <Space><Leader> <C-a>:Source<CR>:echo 'Sourced file.'<CR>
-autocmd FileType vim nnoremap <buffer> <Leader><Space> <C-x>:Source<CR>:echo 'Sourced file.'<CR>
-autocmd FileType vader nnoremap <buffer> <Space>x :Vader<CR>
+autocmd vimrc FileType vim nnoremap <buffer> <Space>x :Source<CR>:echo 'Sourced file.'<CR>
+autocmd vimrc FileType vim nnoremap <buffer> <Space><Leader> <C-a>:Source<CR>:echo 'Sourced file.'<CR>
+autocmd vimrc FileType vim nnoremap <buffer> <Leader><Space> <C-x>:Source<CR>:echo 'Sourced file.'<CR>
+autocmd vimrc FileType vader nnoremap <buffer> <Space>x :Vader<CR>
 " - Random
 command! RandomLine execute 'normal! '.(matchstr(system('od -vAn -N3 -tu4 /dev/urandom'), '^\_s*\zs.\{-}\ze\_s*$') % line('$')).'G'
 " }}}
