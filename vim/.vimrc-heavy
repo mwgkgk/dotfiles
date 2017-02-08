@@ -604,14 +604,14 @@ Plug 'mjbrownie/delete-surround-html', { 'for' : 'htmldjango' }
 Plug 'mjbrownie/django-template-textobjects', { 'for' : 'htmldjango' }
 
 " Hylang
-Plug 'hylang/vim-hy'" {{{
+Plug 'hylang/vim-hy', { 'for' : 'hy' }" {{{
 if has('autocmd')
     autocmd FileType hy set lisp
 endif
 " }}}
 
 " Rust
-Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 
 " JS
 Plug 'pangloss/vim-javascript'
@@ -620,7 +620,7 @@ vnoremap <silent> <Leader>b :call RangeJsBeautify()<CR>
 " }}}
 
 " Elm
-Plug 'lambdatoast/elm.vim'
+Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
 
 " Elixir
 Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' }
