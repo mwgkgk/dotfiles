@@ -327,6 +327,8 @@ nnoremap [gl :silent! VimProcBang xpdf -remote defaultServer -exec gotoPage\(<C-
 " Up / down
 nnoremap OA 3<C-Y>
 nnoremap OB 3<C-E>
+" Source .plugs.vimrc:
+nnoremap <F6> :source ~/.plugs.vimrc<CR>
 " }}}
 " Visual-mode-related {{{
 " - Visual search
