@@ -3,8 +3,9 @@
 filetype plugin indent on
 syntax on
 set encoding=utf-8
+scriptencoding utf-8
 
-let mapleader=";"
+let g:mapleader=";"
 
 " fix leader:
 nnoremap \ ;
@@ -49,7 +50,7 @@ cab man Man
 " Matching brackets :
 set showmatch
 set matchtime=2
-let loaded_matchparen=1
+let g:loaded_matchparen=1
 
 " No redraw when executing macros :
 set lazyredraw
