@@ -39,3 +39,6 @@ alias nd="nodemon --watch src/ --ext elm --exec make"
 alias tree="tree -atrhn --du --filelimit 20"
 
 alias ..='cd ..'
+alias ...='cd ...'
+alias ....='cd ....'
+alias c-='cd -'
