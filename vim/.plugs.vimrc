@@ -322,8 +322,10 @@ let g:formatdef_elmformat = '"elm-format --upgrade --yes --stdin"'
 let g:formatters_elm = ['elmformat']
 let g:formatdef_hindent = '"hindent"'
 let g:formatters_haskell = ['hindent']
+let g:formatdef_cljfmt = '"lein cljfmt check"'
+let g:formatters_clojure = ['cljfmt']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell nnoremap <buffer> <C-w>d :Autoformat<CR>
+autocmd plugs.vimrc FileType elm,haskell,clojure nnoremap <buffer> <C-w>d :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <C-w>d :Trailing<CR>
 " }}}
 
