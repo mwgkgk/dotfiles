@@ -48,3 +48,5 @@ fi
 # fi
 
 GOPATH="${HOME}/code/go"
+
+EDITOR="vim"
