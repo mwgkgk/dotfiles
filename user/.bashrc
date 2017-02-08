@@ -38,8 +38,8 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
-if [ -f ~/.bashrc-local ]; then
-    source ~/.bashrc-local
+if [ -f ~/.local.bashrc ]; then
+    source ~/.local.bashrc
 fi
 
 # Causes launch delay:
@@ -47,6 +47,6 @@ fi
 #     source /usr/share/nvm/init-nvm.sh
 # fi
 
-GOPATH="${HOME}/code/go"
+export GOPATH="${HOME}/code/go"
 
-EDITOR="vim"
+export EDITOR="vim"
