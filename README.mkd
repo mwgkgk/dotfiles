@@ -1,6 +1,7 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [ 437]  Makefile
 ├── [1.1K]  install.sh
 ├── [ 70K]  vim
 │   ├── [ 21K]  .plugs.vimrc
@@ -22,7 +23,6 @@
 │   │       ├── [  64]  html.vim
 │   │       └── [  64]  css.vim
 │   └── [ 661]  filetype.vim
-├── [ 399]  Makefile
 ├── [8.4K]  user
 │   ├── [1.2K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
@@ -60,4 +60,4 @@
  176K used in 14 directories, 41 files
 ```
 
-> Generated on Wednesday, February  8, 2017 at 12:19:38 PM UTC.
+> Generated on Wednesday, February  8, 2017 at 12:21:04 PM UTC.
