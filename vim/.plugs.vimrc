@@ -455,6 +455,9 @@ Plug 'junegunn/vim-after-object' " {{{
 autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';')
 " }}}
 Plug 'junegunn/vader.vim'
+Plug 'junegunn/vim-slash' " {{{
+noremap <plug>(slash-after) zz
+" }}}
 
 Plug 't9md/vim-choosewin' " {{{
 let g:choosewin_label_align='center'
