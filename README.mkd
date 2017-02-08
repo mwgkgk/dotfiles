@@ -1,19 +1,20 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [ 399]  Makefile
+├── [1.1K]  install.sh
 ├── [ 69K]  vim
-│   ├── [ 20K]  .vimrc-heavy
 │   ├── [ 15K]  .vimrc
-│   ├── [4.0K]  usnippets [63 entries exceeds filelimit, not opening dir]
-│   ├── [5.3K]  skeletons
+│   ├── [ 21K]  .plugs.vimrc
+│   ├── [6.9K]  .oldconfigs.vimrc
+│   ├── [5.4K]  skeletons
+│   │   ├── [  54]  skeleton.hs
+│   │   ├── [ 834]  skeleton.elm
 │   │   ├── [ 161]  skeleton.f.sh
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
-│   │   ├── [  59]  skeleton.hy
-│   │   └── [ 820]  skeleton.elm
+│   │   └── [  59]  skeleton.hy
+│   ├── [4.0K]  usnippets [64 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  colors [84 entries exceeds filelimit, not opening dir]
-│   ├── [6.9K]  .vimrc-oldconfigs
 │   ├── [8.3K]  after
 │   │   └── [4.3K]  ftplugin
 │   │       ├── [ 149]  text.vim
@@ -21,11 +22,11 @@
 │   │       ├── [  64]  html.vim
 │   │       └── [  64]  css.vim
 │   └── [ 661]  filetype.vim
-├── [1.1K]  install.sh
-├── [8.3K]  user
-│   ├── [1.6K]  .Xresources
+├── [ 399]  Makefile
+├── [8.4K]  user
+│   ├── [1.2K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
-│   ├── [1.1K]  .bash_aliases
+│   ├── [1.6K]  .Xresources
 │   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
 ├── [6.1K]  tmux
@@ -56,7 +57,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 175K used in 14 directories, 40 files
+ 176K used in 14 directories, 41 files
 ```
 
-> Generated on Wednesday, January 18, 2017 at 17:02:51 PM UTC.
+> Generated on Wednesday, February  8, 2017 at 11:23:43 AM UTC.
