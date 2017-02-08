@@ -320,6 +320,9 @@ nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 " Explorer
 nnoremap <silent> - :silent! Sex<CR>
 nnoremap <silent> _ :silent! Explore<CR>
+" Cd to bash dir and file dir
+nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
+nnoremap <Leader>cg :cd `pwd`<CR>:pwd<CR>
 " Regs
 nnoremap <C-W>" :reg<CR>
 " Go line
