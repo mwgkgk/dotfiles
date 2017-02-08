@@ -320,7 +320,8 @@ let g:formatdef_hindent = '"hindent"'
 let g:formatters_haskell = ['hindent']
 if has('autocmd')
 "     autocmd BufWrite *.elm :Autoformat
-      autocmd FileType elm nnoremap <buffer> <C-w>d :Autoformat<CR>
+      autocmd FileType elm,haskell nnoremap <buffer> <C-w>d :Autoformat<CR>
+      autocmd FileType markdown nnoremap <buffer> <C-w>d :Trailing<CR>
 endif
 " }}}
 
