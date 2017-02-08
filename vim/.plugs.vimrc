@@ -626,8 +626,8 @@ Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
 Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
 
 " Local
-if filereadable(glob("~/.vimrc-heavy-local")) 
-    source ~/.vimrc-heavy-local
+if filereadable(glob("~/.local.plugs.vimrc")) 
+    source ~/.local.plugs.vimrc
 endif
 
 " Colors
@@ -653,6 +653,5 @@ Plug 'mwgkgk/vim-kalisi'
 
 call plug#end()
 
-" Source the light vimrc
 source ~/.vimrc
 

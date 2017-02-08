@@ -121,8 +121,8 @@ set iskeyword+=-
 inoremap <C-x><C-x> <C-x><C-o>
 
 " Colors
-if filereadable(glob("~/.vimrc-colors")) 
-    source ~/.vimrc-colors
+if filereadable(glob("~/.colors.vimrc")) 
+    source ~/.colors.vimrc
 else
     silent! colorscheme desert
 endif
@@ -608,6 +608,6 @@ autocmd vimrc FileType vader nnoremap <buffer> <Space>x :Vader<CR>
 command! RandomLine execute 'normal! '.(matchstr(system('od -vAn -N3 -tu4 /dev/urandom'), '^\_s*\zs.\{-}\ze\_s*$') % line('$')).'G'
 " }}}
 
-if filereadable(glob("~/.vimrc-local")) 
-    source ~/.vimrc-local
+if filereadable(glob("~/.local.vimrc")) 
+    source ~/.local.vimrc
 endif
