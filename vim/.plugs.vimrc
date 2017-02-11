@@ -630,6 +630,10 @@ Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' }
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
 Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
 
+" Idris
+
+Plug 'idris-hackers/idris-vim', { 'for' : 'idris' }
+
 " Local
 if filereadable(glob("~/.local.plugs.vimrc")) 
     source ~/.local.plugs.vimrc
