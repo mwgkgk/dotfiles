@@ -281,9 +281,9 @@ vnoremap <Leader>p "_dP
 nnoremap ga GA
 " Zoom down:
 nmap zd zb12<C-E>
-" Ease up regs:
-nmap q "
-vmap q "
+" Ease up `:
+nmap q `
+vmap q `
 " HL
 nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 " }}}
