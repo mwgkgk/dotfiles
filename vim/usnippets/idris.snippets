@@ -1,0 +1,6 @@
+snippet /(\s+)case/ "case" ir
+`!p if match.group(1) is not None:
+    snip.rv = match.group(1)`case $1 of
+    Maybe a => a
+    Nothing => 0
+endsnippet
