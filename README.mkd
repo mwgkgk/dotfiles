@@ -5,7 +5,7 @@
 ├── [1.1K]  install.sh
 ├── [ 70K]  vim
 │   ├── [ 21K]  .plugs.vimrc
-│   ├── [4.0K]  usnippets [65 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  usnippets [66 entries exceeds filelimit, not opening dir]
 │   ├── [ 15K]  .vimrc
 │   ├── [6.9K]  .oldconfigs.vimrc
 │   ├── [5.4K]  skeletons
@@ -57,7 +57,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 176K used in 14 directories, 41 files
+ 177K used in 14 directories, 41 files
 ```
 
-> Generated on Wednesday, February  8, 2017 at 12:21:04 PM UTC.
+> Generated on Monday, February 13, 2017 at 13:15:34 PM UTC.
