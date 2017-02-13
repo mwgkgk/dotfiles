@@ -10,6 +10,13 @@ $0
 `!p snip.rv = "endsnippet"`
 endsnippet
 
+snippet snipi "Snippet definition" !
+`!p snip.rv = "snippet"` /(\s+)${1:Tab_trigger}/ "${2:$1}" ${3:ir}
+\`!p if match.group(1) is not None:
+    snip.rv = match.group(1)\`$1$0
+`!p snip.rv = "endsnippet"`
+endsnippet
+
 snippet global "Global snippet" !
 `!p snip.rv = "global"` !p
 $0
