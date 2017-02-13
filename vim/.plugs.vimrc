@@ -129,6 +129,7 @@ nnoremap sk :CtrlP ~/.vim/skeletons/<CR><F5>
 command! SKBash :%!cat ~/.vim/skeletons/skeleton.sh
 command! SKBashF :%!cat ~/.vim/skeletons/skeleton.f.sh
 command! SKPython :%!cat ~/.vim/skeletons/skeleton.py
+command! SKElm :%!cat ~/.vim/skeletons/skeleton.elm
 " }}}
 
 Plug 'bootleq/vim-cycle' " {{{
@@ -316,16 +317,16 @@ nnoremap <Leader>M M
 nmap M `]
 nmap U `[
 " }}}
-
 Plug 'Chiel92/vim-autoformat' " {{{
 let g:formatdef_elmformat = '"elm-format --upgrade --yes --stdin"'
 let g:formatters_elm = ['elmformat']
 let g:formatdef_hindent = '"hindent"'
 let g:formatters_haskell = ['hindent']
+let g:formatters_idris = ['hindent']
 let g:formatdef_cljfmt = '"lein cljfmt check"'
 let g:formatters_clojure = ['cljfmt']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,clojure nnoremap <buffer> <C-w>d :Autoformat<CR>
+autocmd plugs.vimrc FileType elm,haskell,clojure,idris nnoremap <buffer> <C-w>d :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <C-w>d :Trailing<CR>
 " }}}
 
