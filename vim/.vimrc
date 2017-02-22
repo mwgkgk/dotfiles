@@ -65,7 +65,7 @@ autocmd vimrc GUIEnter * set visualbell t_vb=
 " Wildmenu :
 set wildmenu
 set wildmode=longest,list:longest
-set wildignore=*.o,*~,*.pyc,*.jpg,*.jpeg,*.JPG,*.png,*.xcf,*.gif,*.bmp,*.pdf,*.beam
+set wildignore=*.o,*~,*.pyc,*.jpg,*.jpeg,*.JPG,*.png,*.xcf,*.gif,*.bmp,*.pdf,*.beam,*.ibc
 
 " Folding
 set foldmethod=indent
