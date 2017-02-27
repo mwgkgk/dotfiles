@@ -70,6 +70,12 @@ if ${2:[ ${1:condition} ]}; then
 fi
 endsnippet
 
+snippet ifexists "ifexists" b
+if [ -f ${1:/tmp/foo.txt} ]; then
+    ${VISUAL}$0
+fi
+endsnippet
+
 snippet until "until ... (done)"
 until ${2:[ ${1:condition} ]}; do
 	${0:#statements}
@@ -88,8 +94,8 @@ ${1:function_name} () {
 }
 endsnippet
 
-snippet ali "ali" b
-alias $1="$2"
+snippet a "alias" b
+alias $1="$1$2"
 endsnippet
 
 priority 1

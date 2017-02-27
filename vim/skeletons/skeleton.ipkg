@@ -1,0 +1,8 @@
+# vim:ft=idris
+
+package maths
+
+modules = Maths
+        , Maths.NumOps
+        , Maths.BinOps
+        , Maths.HexOps
