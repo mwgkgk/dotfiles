@@ -4,18 +4,20 @@
 ├── [ 437]  Makefile
 ├── [1.1K]  install.sh
 ├── [ 70K]  vim
-│   ├── [ 21K]  .plugs.vimrc
-│   ├── [4.0K]  usnippets [66 entries exceeds filelimit, not opening dir]
 │   ├── [ 15K]  .vimrc
-│   ├── [6.9K]  .oldconfigs.vimrc
-│   ├── [5.4K]  skeletons
+│   ├── [ 22K]  .plugs.vimrc
+│   ├── [4.0K]  colors [85 entries exceeds filelimit, not opening dir]
+│   ├── [5.6K]  skeletons
+│   │   ├── [ 116]  skeleton.ipkg
+│   │   ├── [  50]  skeleton.idr
 │   │   ├── [  54]  skeleton.hs
 │   │   ├── [ 834]  skeleton.elm
 │   │   ├── [ 161]  skeleton.f.sh
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
-│   ├── [4.0K]  colors [84 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  usnippets [66 entries exceeds filelimit, not opening dir]
+│   ├── [6.9K]  .oldconfigs.vimrc
 │   ├── [8.3K]  after
 │   │   └── [4.3K]  ftplugin
 │   │       ├── [ 149]  text.vim
@@ -23,10 +25,10 @@
 │   │       ├── [  64]  html.vim
 │   │       └── [  64]  css.vim
 │   └── [ 661]  filetype.vim
-├── [8.4K]  user
-│   ├── [1.2K]  .bash_aliases
+├── [8.5K]  user
 │   ├── [1.1K]  .bashrc
 │   ├── [1.6K]  .Xresources
+│   ├── [1.2K]  .bash_aliases
 │   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
 ├── [6.2K]  tmux
@@ -57,7 +59,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 177K used in 14 directories, 41 files
+ 177K used in 14 directories, 43 files
 ```
 
-> Generated on Monday, February 13, 2017 at 13:15:34 PM UTC.
+> Generated on Monday, February 27, 2017 at 07:22:51 AM UTC.
