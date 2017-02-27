@@ -130,7 +130,7 @@ command zip zip -r %f.zip %f
 command shellrun !! ./%f
 command make !!make
 command vimgrep vim "+vimgrep /%a/g %d/**"
-command unzip unzip %f
+command unzip unzip -d %f_ %f
 command unszip 7za x %f
 " command un7zip 7z e %f
 command ungz gunzip %f
