@@ -49,7 +49,6 @@ nnoremap <C-w>s :MkS<CR>
 " }}}
 Plug 'mattn/ctrlp-register' " {{{
 nnoremap sr :CtrlPRegister<CR>
-nnoremap <C-W>r :CtrlPRegister<CR>
 inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
@@ -365,6 +364,7 @@ let g:vimshell_scrollback_limit = 65535
 
 Plug 'skywind3000/asyncrun.vim' " {{{
 nnoremap <F3> :AsyncRun 
+nnoremap <Space>r :AsyncRun touch Makefile<CR>
 " }}}
 
 Plug 'arecarn/crunch.vim' " {{{
