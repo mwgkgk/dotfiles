@@ -249,8 +249,8 @@ let g:patternjump_patterns = {
         \   },
         \ }
 
-nmap q <Plug>(patternjump-backward)
-nmap r <Plug>(patternjump-forward)
+nmap <M-q> <Plug>(patternjump-backward)
+nmap <M-r> <Plug>(patternjump-forward)
 " }}}
 
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
