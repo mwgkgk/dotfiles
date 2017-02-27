@@ -24,6 +24,7 @@ alias rtor="rtorrent"
 alias ptp="ptpython"
 alias ptp2="ptpython2"
 alias ptp3="ptpython"
+alias idr="idris"
 
 alias ali='v ~/.bash_aliases , ~/.local.bashrc'
 alias v-empty="vim -u ~/.empty.plugs.vimrc"
