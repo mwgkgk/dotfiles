@@ -176,8 +176,6 @@ nnoremap <Leader># :%s /<C-R>///g<Left><Left>
 " }}}
 " Help-related {{{
 nnoremap <F1> :help 
-nnoremap [11^ :Man 
-nnoremap <C-F1> :Man 
 nnoremap <C-W><C-h> :help <C-r><C-w><CR>
 cab vh vert help
 " }}}
