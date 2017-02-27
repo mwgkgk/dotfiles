@@ -22,9 +22,9 @@ set noswapfile
 set viminfo='1000,:0,<0,@0,f0,/0
 
 " Sessions :
-set ssop-=options
-set ssop-=localoptions
-set ssop-=buffers
+set sessionoptions-=options
+set sessionoptions-=localoptions
+set sessionoptions-=buffers
 " autocmd vimrc SessionLoadPost * tabdo exe 'windo exe "normal zz"'
 
 " Search
