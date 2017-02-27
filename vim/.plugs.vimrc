@@ -6,6 +6,7 @@ set nocompatible
 call plug#begin('~/.vim/bundle')
 
 let g:mapleader=";"
+let g:maplocalleader=","
 
 " filetype off
 
