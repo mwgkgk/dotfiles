@@ -25,7 +25,7 @@ alias ptp="ptpython"
 alias ptp2="ptpython2"
 alias ptp3="ptpython"
 
-alias ali='v ~/.bash_aliases , ~/.bashrc-local'
+alias ali='v ~/.bash_aliases , ~/.local.bashrc'
 alias v-empty="vim -u ~/.empty.plugs.vimrc"
 alias vl="v last"
 alias vcol="v col"
