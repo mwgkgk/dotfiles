@@ -130,6 +130,7 @@ command! SKBash :%!cat ~/.vim/skeletons/skeleton.sh
 command! SKBashF :%!cat ~/.vim/skeletons/skeleton.f.sh
 command! SKPython :%!cat ~/.vim/skeletons/skeleton.py
 command! SKElm :%!cat ~/.vim/skeletons/skeleton.elm
+command! SKIdr :%!cat ~/.vim/skeletons/skeleton.idr
 " }}}
 
 Plug 'bootleq/vim-cycle' " {{{
