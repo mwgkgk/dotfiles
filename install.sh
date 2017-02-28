@@ -44,5 +44,7 @@ rm ~/.Xresources
 ln -s $DIR/user/.Xresources ~/.Xresources
 rm ~/.Xdefaults
 ln -s $DIR/user/.Xdefaults ~/.Xdefaults
+rm ~/.inputrc
+ln -s $DIR/user/.inputrc ~/.inputrc
 
 echo "Done."
