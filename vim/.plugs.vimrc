@@ -155,6 +155,7 @@ let g:cycle_default_groups = [
             \   [['forward', 'backward']],
             \   [['head', 'tail']],
             \   [['ctrl', 'alt', 'shift', 'win', 'meta']],
+            \   [['car', 'cdr']],
             \ ]
 
 "  -- Python
