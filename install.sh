@@ -46,5 +46,7 @@ rm ~/.Xdefaults
 ln -s $DIR/user/.Xdefaults ~/.Xdefaults
 rm ~/.inputrc
 ln -s $DIR/user/.inputrc ~/.inputrc
+rm ~/.zshrc
+ln -s $DIR/user/.zshrc ~/.zshrc
 
 echo "Done."
