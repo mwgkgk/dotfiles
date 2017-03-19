@@ -220,32 +220,32 @@ Plug 'machakann/vim-patternjump' " {{{
 let g:patternjump_no_default_key_mappings = 1
 let g:patternjump_patterns = {
         \ '_' : { 
-        \   'nx' : {
+        \   'nox' : {
         \     'tail' : ['^\s*$'],
         \     }
         \   },
         \ 'markdown' : {
-        \   'nx' : {
+        \   'nox' : {
         \     'tail' : ['^\(#\|>\).*'],
         \     }
         \   },
         \ 'vim' : {
-        \   'nx' : {
+        \   'nox' : {
         \     'tail' : ['^Plug.*'],
         \     }
         \   },
         \ 'conf' : {
-        \   'nx' : {
+        \   'nox' : {
         \     'head' : ['^\s*#.*'],
         \     }
         \   },
         \ 'python' : {
-        \   'nx' : {
+        \   'nox' : {
         \     'tail' : ['^\s*def.*'],
         \     }
         \   },
         \ 'html' : {
-        \   'nx' : {
+        \   'nox' : {
         \     'tail' : ['^\s*<.+>'],
         \     }
         \   },
