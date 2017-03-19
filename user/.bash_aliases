@@ -16,6 +16,7 @@ alias so-nvm="source /usr/share/nvm/init-nvm.sh"
 alias yesorno="perl -e 'print int rand 2, \"\n\"; '"
 alias kk="pkill -fi"
 
+alias g='googler --count 8'
 alias df='pydf'
 alias fm="vifm"
 alias emacs="emacs --no-window-system"
