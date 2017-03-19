@@ -18,7 +18,7 @@ alias kk="pkill -fi"
 
 alias g='googler --count 8'
 alias df='pydf'
-alias fm="vifm"
+alias fm="SHELL=/bin/bash vifm"
 alias emacs="emacs --no-window-system"
 alias feh="feh -d."
 alias rtor="rtorrent"
