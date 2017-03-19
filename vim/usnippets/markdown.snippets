@@ -50,6 +50,10 @@ snippet / *da(te)?/ "Date" rb
 # `!v system("date")`${0}
 endsnippet
 
+snippet / *yest/ "Yesterday" rb
+# `!v system('date -d yesterday +"%a, %b %d" | tr -d "\n"')`${0}
+endsnippet
+
 snippet / *tod/ "Today" rb
 # `!v system('date +"%a, %b %d" | tr -d "\n"')`${0}
 endsnippet
@@ -122,11 +126,11 @@ snippet Mas "makes a lot of sense" i
 Makes a lot of sense.
 endsnippet
 
-snippet fe "Description" b
+snippet fe "Description" i
 fair enough
 endsnippet
 
-snippet gb "Description" b
+snippet gb "Description" i
 god bless
 endsnippet
 
