@@ -210,3 +210,9 @@ nnoremap <silent> gk :call VertigoWrap('Up', 'n')<CR>
 vnoremap <silent> gk :call VertigoWrap('Up', 'v')<CR>
 onoremap <silent> gk :call VertigoWrap('Up', 'o')<CR>
 " }}}
+Plug 'maralla/completor.vim' " {{{
+let g:completor_disable_ultisnips = 1
+" imap <expr> <C-t> pumvisible() ? "\<C-n> " : "\<C-t>"
+inoremap <C-t> <C-n> 
+" }}}
+
