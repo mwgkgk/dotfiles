@@ -175,8 +175,8 @@ nnoremap <Leader>* :%s /<C-R><C-W>//g<Left><Left>
 " - Substitute last search pattern
 nnoremap <Leader># :%s /<C-R>///g<Left><Left>
 " zz:
-nnoremap n nzzzO
-nnoremap N NzzzO
+nnoremap n nzOzz
+nnoremap N NzOzz
 " }}}
 " Help-related {{{
 nnoremap <F1> :help 
