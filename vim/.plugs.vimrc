@@ -258,6 +258,7 @@ map <M-r> <Plug>(patternjump-forward)
 
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 Plug 'AndrewRadev/dsf.vim'
+Plug 'AndrewRadev/yankwin.vim'
 
 Plug 'tommcdo/vim-exchange'
 
