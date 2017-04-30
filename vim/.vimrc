@@ -285,7 +285,7 @@ vnoremap <Leader>p "_dP
 " Enter insert mode @ the end:
 nnoremap ga GA
 " Zoom down:
-nmap zd zb12<C-E>
+nnoremap zd zb9<C-E>9<C-E>
 " Ease up `:
 nmap q `
 vmap q `
