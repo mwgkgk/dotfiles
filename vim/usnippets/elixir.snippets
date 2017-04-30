@@ -1,3 +1,5 @@
+extends local.elixir
+
 global !p
 def unpack_fn(str):
 	return (''.join(x.capitalize() for x in str.split('_')).split('.')[0],
@@ -17,6 +19,12 @@ def mix_project():
 		p = dirname(p)
 endglobal
 
+snippet doc "doctest" b
+@doc ~S"""
+	iex> $0
+"""
+endsnippet
+
 snippet "\sf" "inline function" r
  &(${VISUAL}$1)
 endsnippet
@@ -27,20 +35,48 @@ do
 end
 endsnippet
 
+snippet case "case" b
+case $1 do
+	$2 ->
+		$0
+end
+endsnippet
+
+snippet cb "callback" b
+@callback ${1:hello}($2) :: ${3:String.t}
+endsnippet
+
+snippet d "def" b
+def ${1:hello}($2), do: ${3:"hello"}
+endsnippet
+
+snippet def "def" b
+@spec $1($2) :: ${3:String.t}
+def ${1:hello}(${4:$2}) do
+	${VISUAL}$0
+end
+endsnippet
+
 snippet defm "defmodule" b
 defmodule ${1:Default} do
-	def version() do
-		"0.0.1"
-	end
 	${VISUAL}$2
 end
 endsnippet
 
-snippet def "def" b
-@spec $1($2):: integer
-def ${1:double}($2) do
-	${VISUAL}$3
+snippet defp "defprotocol" b
+defprotocol ${1:Default} do
+	${VISUAL}$2
 end
+endsnippet
+
+snippet /(defimpl|defi)/ "defimpl" br
+defimpl ${1:Protocol}, for: ${2:Type} do
+	${VISUAL}$0
+end
+endsnippet
+
+snippet defs "defstruct" b
+defstruct ${1:name}: ${2:nil}
 endsnippet
 
 snippet vers "vers" b
@@ -60,6 +96,34 @@ test "${1:does something}", %{${2:values}: $2} do
 	${VISUAL}$3
 end
 endsnippet
+
+snippet ali "ali" b
+alias $1, as: $2
+endsnippet
+
+# Espec
+
+snippet cont "context" b
+context $1do
+	${VISUAL}$0
+end
+endsnippet
+
+snippet it "it multiline" b
+it "$1" do
+	${VISUAL}$0
+end
+endsnippet
+
+snippet itd "it" b
+it do: should(${0:be_ok_result()})
+endsnippet
+
+snippet should "should" b
+|> should(${0:be_ok_result()})
+endsnippet
+
+# Phoenix
 
 snippet scope "phoenix scope" b
 scope "/${1:scope}", ${2:Pweb} do

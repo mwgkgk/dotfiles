@@ -2,6 +2,7 @@
 #                          SNIPPETS for MARKDOWN                          #
 ###########################################################################
 extends local.markdown
+extends local.words.markdown
 
 ###########################
 # Sections and Paragraphs #
@@ -108,30 +109,6 @@ snippet /(# \w\w\w, \w\w\w \d\d) tom/ "date continued: tomorrow" rb
 `!p
 if match.group(1) is not None:
     snip.rv = match.group(1)`: Tomorrow
-endsnippet
-
-snippet ms "makes sense" i
-makes sense
-endsnippet
-
-snippet Ms "makes sense" i
-Makes sense.
-endsnippet
-
-snippet mas "makes a lot of sense" i
-makes a lot of sense
-endsnippet
-
-snippet Mas "makes a lot of sense" i
-Makes a lot of sense.
-endsnippet
-
-snippet fe "Description" i
-fair enough
-endsnippet
-
-snippet gb "Description" i
-god bless
 endsnippet
 
 snippet l "lessons" b
