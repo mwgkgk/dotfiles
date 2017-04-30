@@ -166,6 +166,11 @@ let g:cycle_default_groups += [
             \ [['startswith', '__contains__', 'endswith']],
             \ ]
 
+"  -- Elixir
+let g:cycle_default_groups += [
+            \ [['spec', 'callback']],
+            \ ]
+
 "  -- CSS
 let g:cycle_default_groups += [
             \   [["show", "hide"]],
