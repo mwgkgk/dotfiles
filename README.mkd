@@ -3,8 +3,8 @@
 .
 ├── [1.2K]  install.sh
 ├── [ 10K]  user
-│   ├── [1.3K]  .bash_aliases
-│   ├── [1.6K]  .zshrc
+│   ├── [1.7K]  .zshrc
+│   ├── [1.4K]  .bash_aliases
 │   ├── [1.7K]  .Xresources
 │   ├── [1.1K]  .bashrc
 │   ├── [  61]  .inputrc
@@ -12,22 +12,22 @@
 │   └── [ 305]  .Xdefaults
 ├── [ 437]  Makefile
 ├── [ 71K]  vim
-│   ├── [ 15K]  .vimrc
 │   ├── [ 22K]  .plugs.vimrc
-│   ├── [7.1K]  .oldconfigs.vimrc
+│   ├── [4.0K]  usnippets [68 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  colors [86 entries exceeds filelimit, not opening dir]
+│   ├── [7.2K]  .oldconfigs.vimrc
 │   ├── [5.7K]  skeletons
 │   │   ├── [   9]  skeleton.mkd
-│   │   ├── [ 147]  skeleton.kb.mkd
+│   │   ├── [ 147]  skeleton.kb.mkd.
+│   │   ├── [ 161]  skeleton.f.sh.
 │   │   ├── [ 116]  skeleton.ipkg
 │   │   ├── [  50]  skeleton.idr
 │   │   ├── [  54]  skeleton.hs
 │   │   ├── [ 834]  skeleton.elm
-│   │   ├── [ 161]  skeleton.f.sh
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
-│   ├── [4.0K]  colors [85 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  usnippets [66 entries exceeds filelimit, not opening dir]
+│   ├── [ 15K]  .vimrc
 │   ├── [8.3K]  after
 │   │   └── [4.3K]  ftplugin
 │   │       ├── [ 149]  text.vim
@@ -35,17 +35,17 @@
 │   │       ├── [  64]  html.vim
 │   │       └── [  64]  css.vim
 │   └── [ 661]  filetype.vim
-├── [6.2K]  tmux
-│   └── [2.2K]  .tmux.conf
+├── [6.1K]  tmux
+│   └── [2.1K]  .tmux.conf
 ├── [ 37K]  vifm
 │   ├── [9.7K]  vifmrc
 │   └── [ 23K]  colors
+│       ├── [3.2K]  GreenDay.vifm
+│       ├── [3.2K]  Black.vifm
+│       ├── [3.2K]  Day.vifm
 │       ├── [2.0K]  sunday256.vifm
 │       ├── [1.2K]  matrix.vifm
-│       ├── [3.2K]  GreenDay.vifm
 │       ├── [3.2K]  Foggy.vifm
-│       ├── [3.2K]  Day.vifm
-│       ├── [3.2K]  Black.vifm
 │       └── [3.2K]  Default.vifm
 └── [ 50K]  firefox
     ├── [ 15K]  userstyles
@@ -66,4 +66,4 @@
  180K used in 14 directories, 47 files
 ```
 
-> Generated on Sunday, March 19, 2017 at 18:59:41 PM UTC.
+> Generated on Sunday, April 30, 2017 at 18:27:52 PM UTC.
