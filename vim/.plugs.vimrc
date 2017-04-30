@@ -127,11 +127,11 @@ Plug 'pgilad/vim-skeletons' " {{{
 let skeletons#autoRegister = 1
 nnoremap sk :CtrlP ~/.vim/skeletons/<CR><F5>
 command! SKBash :%!cat ~/.vim/skeletons/skeleton.sh
-command! SKBashF :%!cat ~/.vim/skeletons/skeleton.f.sh
+command! SKBashF :%!cat ~/.vim/skeletons/skeleton.f.sh.
 command! SKPython :%!cat ~/.vim/skeletons/skeleton.py
 command! SKElm :%!cat ~/.vim/skeletons/skeleton.elm
 command! SKIdr :%!cat ~/.vim/skeletons/skeleton.idr
-command! SKKB :%!cat ~/.vim/skeletons/skeleton.kb.mkd
+command! SKKB :%!cat ~/.vim/skeletons/skeleton.kb.mkd.
 " }}}
 
 Plug 'bootleq/vim-cycle' " {{{
