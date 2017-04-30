@@ -259,6 +259,11 @@ let g:patternjump_patterns = {
 
 map <M-q> <Plug>(patternjump-backward)
 map <M-r> <Plug>(patternjump-forward)
+
+nnoremap <silent> <M-n> :<C-u>call patternjump#forward(
+    \ 'n',
+    \ [[[],['?']], []],
+    \ 0)<CR>
 " }}}
 
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
