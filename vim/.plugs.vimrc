@@ -330,8 +330,8 @@ let g:formatters_idris = ['hindent']
 let g:formatdef_cljfmt = '"lein cljfmt check"'
 let g:formatters_clojure = ['cljfmt']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,clojure,idris nnoremap <buffer> <C-w>d :Autoformat<CR>
-autocmd plugs.vimrc FileType markdown nnoremap <buffer> <C-w>d :Trailing<CR>
+autocmd plugs.vimrc FileType elm,haskell,clojure,idris nnoremap <buffer> Z :Autoformat<CR>
+autocmd plugs.vimrc FileType markdown nnoremap <buffer> Z :Trailing<CR>
 " }}}
 
 Plug 'terryma/vim-multiple-cursors' " {{{
