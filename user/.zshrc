@@ -7,6 +7,13 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 
+bindkey "\033[1~" beginning-of-line
+bindkey "\033[4~" end-of-line
+bindkey "\033[3~" delete-char
+bindkey -s "" 'fg\n'
+bindkey "â" backward-word
+bindkey "æ" forward-word
+
 disable r
 
 setopt noequals
