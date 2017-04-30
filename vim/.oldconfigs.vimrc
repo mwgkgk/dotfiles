@@ -216,3 +216,8 @@ let g:completor_disable_ultisnips = 1
 inoremap <C-t> <C-n> 
 " }}}
 
+
+" Plug 'tomtom/tcomment_vim' " {{{
+" " Comment and clone
+" nnoremap gcd yypk:TComment<CR>j
+" " }}}
