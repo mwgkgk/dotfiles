@@ -272,9 +272,8 @@ Plug 'AndrewRadev/yankwin.vim'
 
 Plug 'tommcdo/vim-exchange'
 
-Plug 'tomtom/tcomment_vim' " {{{
-" Comment and clone
-nnoremap gcd yypk:TComment<CR>j
+Plug 'tpope/vim-commentary' " {{{
+nmap gcd yypkgccj
 " }}}
 
 Plug 'arecarn/selection.vim'
