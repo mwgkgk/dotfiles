@@ -458,6 +458,8 @@ Plug 'akiyan/vim-textobj-xml-attribute'
 
 Plug 'machakann/vim-textobj-equation'
 
+Plug 'mwgkgk/vim-textobj-elixir'
+
 Plug 'wellle/targets.vim' " {{{
 let g:targets_separators = '. ; : + - ~ _ * \ |'
 " }}}
