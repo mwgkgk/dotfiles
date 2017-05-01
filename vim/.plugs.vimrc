@@ -213,7 +213,6 @@ Plug 'tmhedberg/matchit'
 Plug 'briandoll/change-inside-surroundings.vim' " {{{
 " <Leader>ci by default
 nnoremap cI :ChangeInsideSurrounding<CR>
-nnoremap cii :ChangeInsideSurrounding<CR>
 " }}}
 
 Plug 'oblitum/rainbow' " {{{
@@ -385,6 +384,13 @@ inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
 " }}}
 
 Plug 'thinca/vim-quickrun'
+Plug 'thinca/vim-textobj-between' " {{{
+let g:textobj_between_no_default_key_mappings = 1
+xmap ii <Plug>(textobj-between-i)
+omap ii <Plug>(textobj-between-i)
+xmap aa <Plug>(textobj-between-a)
+omap aa <Plug>(textobj-between-a)
+" }}}
 
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-textobj-user'
