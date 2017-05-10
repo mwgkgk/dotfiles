@@ -72,6 +72,7 @@ let g:tagbar_left = 1
 " }}}
 
 Plug 'w0rp/ale' " {{{ lint
+let g:ale_linters = {'haskell': ['stack-ghc']}
 let g:ale_sign_error = '>'
 let g:ale_sign_warning = '!'
 let g:ale_lint_on_save = 1
