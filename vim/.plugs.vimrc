@@ -170,6 +170,7 @@ let g:cycle_default_groups += [
 "  -- Elixir
 let g:cycle_default_groups += [
             \ [['spec', 'callback']],
+            \ [['if', 'unless']],
             \ ]
 
 "  -- CSS
