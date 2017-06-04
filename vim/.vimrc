@@ -340,6 +340,7 @@ nnoremap OA 3<C-Y>
 nnoremap OB 3<C-E>
 " Source .plugs.vimrc:
 nnoremap <F6> :source ~/.plugs.vimrc<CR>
+command! ReloadVimrc :source ~/.plugs.vimrc
 " }}}
 " Visual-mode-related {{{
 " - Visual search
