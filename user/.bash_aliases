@@ -39,6 +39,8 @@ alias er="elm-reactor --port 8420"
 alias er2="elm-reactor --port 8430"
 alias nd="nodemon --watch src/ --ext elm --exec make"
 alias tree="tree -atrhn --du --filelimit 20"
+alias do-thing="source ~/bin/do-thing.sh"
+alias thing="source ~/bin/thing.sh"
 
 alias ..='cd ..'
 alias ...='cd ../..'
