@@ -377,8 +377,8 @@ let g:vimshell_scrollback_limit = 65535
 " }}}
 
 Plug 'skywind3000/asyncrun.vim' " {{{
-nnoremap <F3> :AsyncRun 
-nnoremap <Space>r :AsyncRun touch Makefile<CR>
+nnoremap <F3> :AsyncRun
+nnoremap <Space>r :AsyncRun tmux send -t serverterm do-thing C-m<CR>
 " }}}
 
 Plug 'arecarn/crunch.vim' " {{{
