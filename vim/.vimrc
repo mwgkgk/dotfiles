@@ -603,6 +603,23 @@ endfunction
 command! -nargs=* -complete=file Vs call VSplit(<f-args>)
 cab vs Vs
 " }}}
+" :fsp split and name - force split {{{
+function! FSplit(...)
+    if(a:0 == 0)
+        sp
+    else
+        let i = a:0
+        while(i > 0)
+            execute 'let file = a:' . i
+            execute 'w ' . file
+            execute 'sp ' . file
+            let i = i - 1
+        endwhile
+    endif
+endfunction
+command! -nargs=* -complete=file Fsp call FSplit(<f-args>)
+cab fsp Fsp
+" }}}
 
 " Commands 
 " Commands {{{
