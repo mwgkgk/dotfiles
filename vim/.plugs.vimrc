@@ -20,7 +20,7 @@ let g:ctrlp_map = 'sf'
 " let g:ctrlp_cmd = 'CtrlPMixed'
 nnoremap se :CtrlP <C-R>=expand('%:p:h')<CR><CR>
 nnoremap ss :CtrlP .<CR>
-nnoremap sw :CtrlP ./web/<CR>
+nnoremap sw :CtrlP ./lib/<CR>
 nnoremap s<Space> :CtrlPBuffer<CR>
 " I never use this:
 " nnoremap st :CtrlPBufTagAll<CR>
