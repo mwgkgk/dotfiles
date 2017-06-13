@@ -28,7 +28,7 @@ set sessionoptions-=buffers
 " autocmd vimrc SessionLoadPost * tabdo exe 'windo exe "normal zz"'
 
 " Search
-set ignorecase
+set infercase
 set smartcase
 set hlsearch
 set incsearch
