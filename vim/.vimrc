@@ -122,6 +122,9 @@ set iskeyword+=-
 " set omnifunc=syntaxcomplete#Complete
 inoremap <C-x><C-x> <C-x><C-o>
 
+" Only highlight syntax on the first 200 columns:
+set synmaxcol=200
+
 " Colors
 if filereadable(glob("~/.colors.vimrc")) 
     source ~/.colors.vimrc
