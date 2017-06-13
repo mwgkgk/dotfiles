@@ -1,33 +1,34 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [ 437]  Makefile
 ├── [1.2K]  install.sh
-├── [ 10K]  user
-│   ├── [1.7K]  .zshrc
-│   ├── [1.4K]  .bash_aliases
+├── [ 11K]  user
 │   ├── [1.7K]  .Xresources
+│   ├── [1.5K]  .bash_aliases
+│   ├── [1.9K]  .zshrc
 │   ├── [1.1K]  .bashrc
 │   ├── [  61]  .inputrc
 │   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
-├── [ 437]  Makefile
-├── [ 71K]  vim
-│   ├── [ 22K]  .plugs.vimrc
-│   ├── [4.0K]  usnippets [68 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  colors [86 entries exceeds filelimit, not opening dir]
-│   ├── [7.2K]  .oldconfigs.vimrc
-│   ├── [5.7K]  skeletons
+├── [ 73K]  vim
+│   ├── [ 16K]  .vimrc
+│   ├── [ 23K]  .plugs.vimrc
+│   ├── [5.8K]  skeletons
+│   │   ├── [ 140]  skeleton.hs
+│   │   ├── [  54]  skeleton.plain.hs.
 │   │   ├── [   9]  skeleton.mkd
 │   │   ├── [ 147]  skeleton.kb.mkd.
 │   │   ├── [ 161]  skeleton.f.sh.
 │   │   ├── [ 116]  skeleton.ipkg
 │   │   ├── [  50]  skeleton.idr
-│   │   ├── [  54]  skeleton.hs
 │   │   ├── [ 834]  skeleton.elm
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
-│   ├── [ 15K]  .vimrc
+│   ├── [4.0K]  usnippets [68 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  colors [86 entries exceeds filelimit, not opening dir]
+│   ├── [7.2K]  .oldconfigs.vimrc
 │   ├── [8.3K]  after
 │   │   └── [4.3K]  ftplugin
 │   │       ├── [ 149]  text.vim
@@ -35,8 +36,8 @@
 │   │       ├── [  64]  html.vim
 │   │       └── [  64]  css.vim
 │   └── [ 661]  filetype.vim
-├── [6.1K]  tmux
-│   └── [2.1K]  .tmux.conf
+├── [6.5K]  tmux
+│   └── [2.5K]  .tmux.conf
 ├── [ 37K]  vifm
 │   ├── [9.7K]  vifmrc
 │   └── [ 23K]  colors
@@ -63,7 +64,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 180K used in 14 directories, 47 files
+ 182K used in 14 directories, 48 files
 ```
 
-> Generated on Sunday, April 30, 2017 at 18:27:52 PM UTC.
+> Generated on Tuesday, June 13, 2017 at 17:23:41 PM UTC.
