@@ -621,6 +621,19 @@ function! FSplit(...)
 endfunction
 command! -nargs=* -complete=file Fsp call FSplit(<f-args>)
 cab fsp Fsp
+" Spelling
+function! Spelling()
+    setlocal spell!
+    if &spell
+        set complete+=kspell
+        echo "Spell mode enabled"
+    else
+        set complete-=kspell
+        echo "Spell mode disabled"
+    endif
+endfunction
+command! Spelling call Spelling()
+nnoremap <Space><Enter> :call Spelling()<CR>
 " }}}
 
 " Commands 
