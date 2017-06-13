@@ -20,7 +20,8 @@ hi Identifier   term=underline ctermfg=LightCyan  guifg=#00ffff
 hi Ignore                      ctermfg=black      guifg=bg
 hi PreProc      term=underline ctermfg=LightBlue  guifg=Wheat
 hi Search       term=reverse                      guifg=white   guibg=Blue
-hi Special      term=bold      ctermfg=LightRed   guifg=magenta
+" hi Special      term=bold      ctermfg=LightRed   guifg=magenta
+hi Special		ctermfg=180	   ctermbg=NONE	cterm=NONE
 hi Statement    term=bold      ctermfg=Yellow     guifg=#ffff00 gui=NONE
 hi Type                        ctermfg=LightGreen guifg=grey    gui=none
 hi Error        term=reverse   ctermbg=Red    ctermfg=White guibg=Red  guifg=White
@@ -38,7 +39,8 @@ hi Question     term=standout  ctermfg=LightGreen gui=bold      guifg=Cyan
 hi SpecialKey   term=bold      ctermfg=LightBlue  guifg=Cyan
 hi StatusLine   term=reverse,bold ctermfg=122 gui=NONE      guifg=White guibg=darkblue
 hi StatusLineNC term=reverse   cterm=reverse      gui=NONE      guifg=white guibg=#333333
-hi Title        term=bold      ctermfg=LightMagenta gui=bold    guifg=Pink
+" hi Title        term=bold      ctermfg=LightMagenta gui=bold    guifg=Pink
+hi Title		ctermfg=187	ctermbg=NONE	cterm=NONE
 hi WarningMsg   term=standout  ctermfg=LightRed   guifg=Red
 hi Visual       term=reverse   cterm=reverse      gui=NONE      guifg=white guibg=darkgreen
 

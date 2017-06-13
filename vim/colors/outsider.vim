@@ -140,6 +140,10 @@ hi FoldColumn       cterm=NONE              ctermfg=245       	ctermbg=NONE
 hi IncSearch        cterm=none              ctermfg=none            ctermbg=240
 hi Search           cterm=none              ctermfg=none            ctermbg=240
 
+hi SpellBad         cterm=underline              ctermfg=none            ctermbg=none
+hi SpellCap         cterm=underline              ctermfg=none            ctermbg=none
+hi SpellRare         cterm=underline              ctermfg=none            ctermbg=none
+hi SpellLocal         cterm=underline              ctermfg=none            ctermbg=none
 
 "vim: sw=4
 
