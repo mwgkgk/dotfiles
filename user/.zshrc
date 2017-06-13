@@ -14,6 +14,8 @@ bindkey -s "" 'fg\n'
 bindkey "â" backward-word
 bindkey "æ" forward-word
 
+zstyle ':completion:*' completer _expand _complete _files _correct _approximate
+
 disable r
 
 setopt noequals
@@ -70,6 +72,9 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
 
 source ~/.bash_aliases
 source ~/.local.bashrc
