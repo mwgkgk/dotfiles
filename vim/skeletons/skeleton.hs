@@ -1,3 +1,8 @@
-#!/usr/bin/env runghc
+#!/usr/bin/env stack
+-- stack --install-ghc runghc --package turtle
 
-main = putStrLn "Hello World!"
+{-# LANGUAGE OverloadedStrings #-}
+
+import Turtle
+
+main = stdout stdin

@@ -42,6 +42,13 @@ case $1 do
 end
 endsnippet
 
+snippet cond "cond" b
+cond do
+	$1 ->
+		$0
+end
+endsnippet
+
 snippet cb "callback" b
 @callback ${1:hello}($2) :: ${3:String.t}
 endsnippet
@@ -57,13 +64,20 @@ def ${1:hello}(${4:$2}) do
 end
 endsnippet
 
+snippet defp "defp" b
+@spec $1($2) :: ${3:String.t}
+defp ${1:hello}(${4:$2}) do
+	${VISUAL}$0
+end
+endsnippet
+
 snippet defm "defmodule" b
 defmodule ${1:Default} do
 	${VISUAL}$2
 end
 endsnippet
 
-snippet defp "defprotocol" b
+snippet defpr "defprotocol" b
 defprotocol ${1:Default} do
 	${VISUAL}$2
 end
@@ -101,6 +115,10 @@ snippet ali "ali" b
 alias $1, as: $2
 endsnippet
 
+snippet map "map" i
+Enum.map(&${VISUAL}$0/1)
+endsnippet
+
 # Espec
 
 snippet cont "context" b
@@ -119,7 +137,7 @@ snippet itd "it" b
 it do: should(${0:be_ok_result()})
 endsnippet
 
-snippet should "should" b
+snippet /(sho|should)/ "should" br
 |> should(${0:be_ok_result()})
 endsnippet
 
