@@ -24,6 +24,8 @@ alias rtor="rtorrent"
 alias ptp="ptpython"
 alias ptp2="ptpython2"
 alias ptp3="ptpython"
+alias ipy="ipython --pprint"
+alias bpy="bpython"
 alias idr="idris"
 
 alias ali='v ~/.bash_aliases , ~/.local.bashrc'
@@ -34,12 +36,12 @@ alias sv='sudo -E v'
 alias man="viman"
 alias vv='tmux split-window -h -c "#{pane_current_path}" -p 70 v'
 alias wip="git --git-dir=.wip --work-tree=."
-alias er="elm-reactor --port 8420"
-alias er2="elm-reactor --port 8430"
 alias nd="nodemon --watch src/ --ext elm --exec make"
 alias tree="tree -atrhn --du --filelimit 20"
 alias do-thing="source ~/bin/do-thing.sh"
 alias thing="source ~/bin/thing.sh"
+alias thing-to-the="source ~/bin/thing-to-the.sh"
+alias the-to-thing="source ~/bin/the-to-thing.sh"
 
 alias ..='cd ..'
 alias ...='cd ../..'
