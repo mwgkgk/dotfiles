@@ -487,6 +487,13 @@ Plug 'junegunn/vim-after-object' " {{{
 autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';')
 " }}}
 Plug 'junegunn/vader.vim'
+Plug 'junegunn/fzf.vim' " {{{
+" nnoremap s<Space> :Buffers<CR>
+let g:fzf_action = {
+            \ 'ctrl-t': 'tab split',
+            \ 'space': 'split',
+            \ 'ctrl-v': 'vsplit' }
+" }}}
 
 Plug 't9md/vim-choosewin' " {{{
 let g:choosewin_label_align='center'
