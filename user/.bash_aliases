@@ -49,5 +49,6 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias c-='cd -'
+alias cc='c $_'
 
 mkcd() { mkdir -p "$@" && cd "$@"; }
