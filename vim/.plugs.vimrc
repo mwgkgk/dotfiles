@@ -401,7 +401,18 @@ Plug 'kana/vim-textobj-line' " {{{
 let g:textobj_line_no_default_key_mappings = 1
 nmap vv v<Plug>(textobj-line-i)
 " }}}
-Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-indent' " {{{
+let g:textobj_entire_no_default_key_mappings = 1
+xmap an  <Plug>(textobj-indent-a)
+omap an  <Plug>(textobj-indent-a)
+xmap in  <Plug>(textobj-indent-i)
+omap in  <Plug>(textobj-indent-i)
+xmap aN  <Plug>(textobj-indent-same-a)
+omap aN  <Plug>(textobj-indent-same-a)
+xmap iN  <Plug>(textobj-indent-same-i)
+omap iN  <Plug>(textobj-indent-same-i)
+
+" }}}
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-entire' " {{{
 let g:textobj_entire_no_default_key_mappings = 1
