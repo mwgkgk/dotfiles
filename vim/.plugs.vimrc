@@ -124,16 +124,6 @@ let g:UltiSnipsSnippetDirectories = ['usnippets']
 let g:UltiSnipsExpandTrigger = '<tab>'
 nnoremap <Leader>u :UltiSnipsEdit<CR>
 " }}}
-Plug 'pgilad/vim-skeletons' " {{{
-let skeletons#autoRegister = 1
-nnoremap sk :CtrlP ~/.vim/skeletons/<CR><F5>
-command! SKBash :%!cat ~/.vim/skeletons/skeleton.sh
-command! SKBashF :%!cat ~/.vim/skeletons/skeleton.f.sh.
-command! SKPython :%!cat ~/.vim/skeletons/skeleton.py
-command! SKElm :%!cat ~/.vim/skeletons/skeleton.elm
-command! SKIdr :%!cat ~/.vim/skeletons/skeleton.idr
-command! SKKB :%!cat ~/.vim/skeletons/skeleton.kb.mkd.
-" }}}
 
 Plug 'bootleq/vim-cycle' " {{{
 let g:cycle_no_mappings = 1
@@ -499,11 +489,16 @@ autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ',
 " }}}
 Plug 'junegunn/vader.vim'
 Plug 'junegunn/fzf.vim' " {{{
-" nnoremap s<Space> :Buffers<CR>
+let g:fzf_layout = { 'down': '~15%' }
 let g:fzf_action = {
             \ 'ctrl-t': 'tab split',
             \ 'space': 'split',
             \ 'ctrl-v': 'vsplit' }
+" nnoremap s<Space> :Buffers<CR>
+nnoremap sw :FZF ./lib/<CR>
+nnoremap ss :FZF .<CR>
+nnoremap sK :FZF ~/.vim/skeletons/<CR>
+nnoremap sk :call fzf#run({'sink':'%!cat', 'down': '~15%'})<CR>
 " }}}
 
 Plug 't9md/vim-choosewin' " {{{
