@@ -19,9 +19,6 @@ map s <NOP>
 let g:ctrlp_map = 'sf'
 " let g:ctrlp_cmd = 'CtrlPMixed'
 nnoremap se :CtrlP <C-R>=expand('%:p:h')<CR><CR>
-nnoremap ss :CtrlP .<CR>
-nnoremap sw :CtrlP ./lib/<CR>
-nnoremap s<Space> :CtrlPBuffer<CR>
 " I never use this:
 " nnoremap st :CtrlPBufTagAll<CR>
 nnoremap st :CtrlPTag<CR>
@@ -50,12 +47,6 @@ nnoremap <C-w>s :MkS<CR>
 Plug 'mattn/ctrlp-register' " {{{
 nnoremap sr :CtrlPRegister<CR>
 inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
-" }}}
-Plug 'fisadev/vim-ctrlp-cmdpalette' "{{{
-nnoremap s; :CtrlPCmdPalette<CR>
-" }}}
-Plug 'endel/ctrlp-filetype.vim' " {{{
-nnoremap <silent> <Leader>tt :CtrlPFiletype<CR>
 " }}}
 
 Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
@@ -494,11 +485,19 @@ let g:fzf_action = {
             \ 'ctrl-t': 'tab split',
             \ 'space': 'split',
             \ 'ctrl-v': 'vsplit' }
-" nnoremap s<Space> :Buffers<CR>
+nnoremap s<Space> :Buffers<CR>
 nnoremap sw :FZF ./lib/<CR>
 nnoremap ss :FZF .<CR>
 nnoremap sK :FZF ~/.vim/skeletons/<CR>
 nnoremap sk :call fzf#run({'sink':'%!cat', 'down': '~15%'})<CR>
+nnoremap sT :FZF /tmp/<CR>
+nnoremap s~ :FZF ~/<CR>
+nnoremap sF :FZF ~/<CR>
+nnoremap sv :FZF ~/.vim/<CR>
+nnoremap s" :FZF ~/.marvim/<CR>
+nnoremap s; :History:<CR>
+
+nnoremap <Leader>tt :Filetypes<CR>
 " }}}
 
 Plug 't9md/vim-choosewin' " {{{
