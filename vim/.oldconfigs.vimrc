@@ -230,3 +230,8 @@ command! SKElm :%!cat ~/.vim/skeletons/skeleton.elm
 command! SKIdr :%!cat ~/.vim/skeletons/skeleton.idr
 command! SKKB :%!cat ~/.vim/skeletons/skeleton.kb.mkd.
 " }}}
+Plug 'Rykka/clickable.vim' " {{{
+let g:clickable_browser = 'firefox-default'
+hi _clickable_file ctermbg=none ctermfg=11 cterm=underline
+hi _clickable_link ctermbg=none ctermfg=11 cterm=underline
+" }}}
