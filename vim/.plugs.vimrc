@@ -499,6 +499,7 @@ nnoremap s; :History:<CR>
 
 nnoremap <Leader>tt :Filetypes<CR>
 " }}}
+Plug 'junegunn/vim-peekaboo'
 
 Plug 't9md/vim-choosewin' " {{{
 let g:choosewin_label_align='center'
