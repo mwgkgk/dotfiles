@@ -32,6 +32,7 @@ alias ali='v ~/.bash_aliases , ~/.local.bashrc'
 alias v-empty="vim -u ~/.empty.plugs.vimrc"
 alias vl="v last"
 alias vcol="v col"
+alias dotf="v dotf"
 alias sv='sudo -E v'
 alias man="viman"
 alias vv='tmux split-window -h -c "#{pane_current_path}" -p 70 v'
