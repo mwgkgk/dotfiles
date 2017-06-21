@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "$(basename $(git rev-parse --show-toplevel))$(git log --pretty=format:" %an %ad %s" -1)" | tee -a ~/.recent-commits ~/.all-commits
