@@ -1,5 +1,14 @@
 extends local.elixir
 
+snippet deps "espec" i
+${VISUAL}
+	# Testing
+	{:espec, "~> 1.4.0", only: :test},
+	{:wallaby, "~> 0.17.0"},
+	{:flowex, "0.5.0"},$0
+
+endsnippet
+
 global !p
 def unpack_fn(str):
 	return (''.join(x.capitalize() for x in str.split('_')).split('.')[0],
@@ -180,4 +189,21 @@ endsnippet
 
 snippet http "http" b
 http: [port: {:system, "PORT"}],
+endsnippet
+
+# Flowex
+
+snippet pipe "Flowex module pipe" b
+defmodule ${1:Inspect}Pipe do
+  defstruct ${2:data}: nil$3
+
+  def init(opts), do: opts
+
+  @spec call(%{$2: String.t}, struct) :: String.t
+  def call(%{$2: $2}, _opts) do
+    IO.inspect $2
+    %{$2: $2}
+  end
+end
+
 endsnippet
