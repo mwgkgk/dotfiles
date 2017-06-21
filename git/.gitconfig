@@ -1,0 +1,12 @@
+[user]
+	name = mwgkgk
+	email = mwgkgk
+[color]
+	ui = true
+[ghq]
+    root = ~/.ghq/
+[alias]
+    upstream = log --oneline --no-merges ..origin/master
+    graph = log --graph --all --decorate --stat --date=iso
+[init]
+	templatedir = ~/.git-templates
