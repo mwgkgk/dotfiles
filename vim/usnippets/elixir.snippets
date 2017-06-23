@@ -2,8 +2,8 @@ extends local.elixir
 
 snippet deps "espec" i
 ${VISUAL}
-	# Testing
 	{:espec, "~> 1.4.0", only: :test},
+	{:true_story, "~> 0.0.1", only: :test},
 	{:wallaby, "~> 0.17.0"},
 	{:flowex, "0.5.0"},$0
 
@@ -206,4 +206,21 @@ defmodule ${1:Inspect}Pipe do
   end
 end
 
+endsnippet
+
+# true_story
+
+snippet put "put" b
+defp put_${1:something}(c) do
+	Map.put c, :$1,
+		${2:"peace among worlds"}
+end
+endsnippet
+
+snippet story "story" b
+story "${1:doing something}", c
+|> put_${2:something},
+	verify do
+		assert Map.has_key? c, :$2
+	end
 endsnippet
