@@ -6,6 +6,11 @@
 [ghq]
     root = ~/.ghq/
 [alias]
+    c = checkout
+    b = checkout -b
+    m = merge --no-ff
+    mm = !git merge master && git checkout master
+    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
     upstream = log --oneline --no-merges ..origin/master
     graph = log --graph --all --decorate --stat --date=iso
 [init]
