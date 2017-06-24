@@ -152,6 +152,7 @@ let g:cycle_default_groups += [
 let g:cycle_default_groups += [
             \ [['spec', 'callback']],
             \ [['if', 'unless']],
+            \ [['assert', 'refute']],
             \ ]
 
 "  -- CSS
