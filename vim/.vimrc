@@ -219,8 +219,6 @@ nnoremap <Leader><C-W>e :e <C-R>=expand('%:h').'/'<CR><C-D>
 nnoremap <Leader><C-W>s :sp <C-R>=expand('%:h').'/'<CR><C-D>
 " Vs
 nnoremap <Leader><C-W>v :vs <C-R>=expand('%:h').'/'<CR><C-D>
-" Unite :cclose :lclose and <C-W>z
-nnoremap <C-W>z :cclose<CR>:lclose<CR><C-W>z
 " C-W #
 nnoremap <C-W># :sp #<CR>
 " + / -
