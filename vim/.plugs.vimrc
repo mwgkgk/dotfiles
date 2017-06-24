@@ -275,6 +275,7 @@ nnoremap <F12> :ProjectRootExe :AsyncRun git-store-wip<CR>
 " - Projectroot Make
 command! Make :silent! ProjectRootExe make | redraw!
 nnoremap <Leader>dm :Make<CR>
+command! InstallHooks :silent! ProjectRootExe ln -s ~/.git-templates/hooks/* .
 " }}}
 
 Plug 'Valloric/ListToggle' " {{{
