@@ -222,7 +222,7 @@ let g:patternjump_patterns = {
         \   },
         \ 'markdown' : {
         \   'nox' : {
-        \     'tail' : ['^\(#\|>\).*'],
+        \     'tail' : ['^\(#\|>\)'],
         \     }
         \   },
         \ 'vim' : {
