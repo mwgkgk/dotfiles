@@ -16,13 +16,13 @@ augroup END
 
 Plug 'kien/ctrlp.vim' " {{{
 map s <NOP>
-let g:ctrlp_map = 'sf'
+let g:ctrlp_map = 's0'
 " let g:ctrlp_cmd = 'CtrlPMixed'
-nnoremap se :CtrlP <C-R>=expand('%:p:h')<CR><CR>
+" nnoremap se :CtrlP <C-R>=expand('%:p:h')<CR><CR>
 " I never use this:
 " nnoremap st :CtrlPBufTagAll<CR>
-nnoremap st :CtrlPTag<CR>
-nnoremap sn :CtrlPChange<CR>
+" nnoremap st :CtrlPTag<CR>
+" nnoremap sn :CtrlPChange<CR>
 let g:ctrlp_open_multiple_files = 'hj'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_follow_symlinks = 1
@@ -490,22 +490,60 @@ autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ',
 " }}}
 Plug 'junegunn/vader.vim'
 Plug 'junegunn/fzf.vim' " {{{
+let g:fzf_command_prefix = 'Fzf'
 let g:fzf_layout = { 'down': '~15%' }
 let g:fzf_action = {
             \ 'ctrl-t': 'tab split',
             \ 'space': 'split',
             \ 'ctrl-v': 'vsplit' }
-nnoremap s<Space> :Buffers<CR>
-nnoremap sw :FZF ./lib/<CR>
-nnoremap ss :FZF .<CR>
+let g:fzf_colors =
+            \ { 'fg':      ['fg', 'Normal'],
+            \ 'bg':      ['bg', 'Normal'],
+            \ 'hl':      ['fg', 'Comment'],
+            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+            \ 'hl+':     ['fg', 'Statement'],
+            \ 'info':    ['fg', 'PreProc'],
+            \ 'prompt':  ['fg', 'Conditional'],
+            \ 'pointer': ['fg', 'Exception'],
+            \ 'marker':  ['fg', 'Keyword'],
+            \ 'spinner': ['fg', 'Label'],
+            \ 'header':  ['fg', 'Comment'] }
+nnoremap s<Space> :FzfBuffers<CR>
 nnoremap sK :FZF ~/.vim/skeletons/<CR>
-nnoremap sk :call fzf#run({'sink':'%!cat', 'down': '~15%'})<CR>
-nnoremap sT :FZF /tmp/<CR>
-nnoremap s~ :FZF ~/<CR>
-nnoremap sF :FZF ~/<CR>
-nnoremap sv :FZF ~/.vim/<CR>
-nnoremap s" :FZF ~/.marvim/<CR>
-nnoremap s; :History:<CR>
+nnoremap sk :call fzf#run({'dir':'~/.vim/skeletons', 'sink':'%!cat', 'down': '~15%'})<CR>
+nnoremap st :FzfTags<CR>
+nnoremap sf :FzfGFiles<CR>
+nnoremap s; :FzfHistory:<CR>
+nnoremap s[ :FzfBCommits<CR>
+nnoremap s] :FzfCommits<CR>
+
+command! -bang -nargs=? -complete=dir FzfFilesWithPreview
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+nnoremap sw :FzfFilesWithPreview ./lib/<CR>
+nnoremap ss :FzfFilesWithPreview .<CR>
+nnoremap sT :FzfFilesWithPreview /tmp/<CR>
+nnoremap s~ :FzfFilesWithPreview ~/<CR>
+nnoremap sF :FzfFilesWithPreview ~/<CR>
+nnoremap sH :ProjectRootExe :FzfFilesWithPreview ./.git/hooks/<CR>
+nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
+nnoremap sv :FzfFilesWithPreview ~/.vim/<CR>
+nnoremap s" :FzfFilesWithPreview ~/.marvim/<CR>
+
+" --column: Show column number
+" --line-number: Show line number
+" --no-heading: Do not show file headings in results
+" --fixed-strings: Search term as a literal string
+" --ignore-case: Case insensitive search
+" --no-ignore: Do not respect .gitignore, etc...
+" --hidden: Search hidden files and folders
+" --follow: Follow symlinks
+" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+" --color: Search color options
+
+command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+nnoremap sa :Rg<Space>
 
 nnoremap <Leader>tt :Filetypes<CR>
 " }}}
