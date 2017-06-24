@@ -273,6 +273,7 @@ nnoremap <Leader>dm :Make<CR>
 Plug 'Valloric/ListToggle' " {{{
 let g:lt_quickfix_list_toggle_map = '<Space>`'
 " }}}
+Plug 'yssl/QFEnter'
 
 Plug 'ardagnir/united-front'
 
