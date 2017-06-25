@@ -714,7 +714,7 @@ autocmd plugs.vimrc FileType hy set lisp
 " }}}
 
 " LFE
-Plug 'lfe-support/vim-lfe' " {{{
+Plug 'lfe-support/vim-lfe', {'for' : 'lfe' } " {{{
 autocmd plugs.vimrc FileType lfe set lisp
 " }}}
 
