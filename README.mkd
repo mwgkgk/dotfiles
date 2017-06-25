@@ -1,24 +1,34 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [ 437]  Makefile
-├── [1.2K]  install.sh
-├── [ 11K]  user
-│   ├── [1.7K]  .Xresources
+├── [5.9K]  zsh
+│   └── [1.9K]  .zshrc
+├── [8.9K]  user
 │   ├── [1.5K]  .bash_aliases
-│   ├── [1.9K]  .zshrc
+│   ├── [1.7K]  .Xresources
 │   ├── [1.1K]  .bashrc
 │   ├── [  61]  .inputrc
 │   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
-├── [ 73K]  vim
+├── [7.0K]  conky
+│   └── [3.0K]  conky.conf
+├── [ 13K]  git
+│   ├── [ 436]  .gitconfig
+│   └── [8.1K]  .git-templates
+│       └── [4.1K]  hooks
+│           └── [ 148]  post-commit
+├── [ 437]  Makefile
+├── [1.2K]  install.sh
+├── [ 76K]  vim
+│   ├── [ 25K]  .plugs.vimrc
 │   ├── [ 16K]  .vimrc
-│   ├── [ 23K]  .plugs.vimrc
+│   ├── [4.0K]  colors [87 entries exceeds filelimit, not opening dir]
+│   ├── [7.8K]  .oldconfigs.vimrc
 │   ├── [5.8K]  skeletons
+│   │   ├── [ 147]  skeleton.kb.mkd.
 │   │   ├── [ 140]  skeleton.hs
 │   │   ├── [  54]  skeleton.plain.hs.
 │   │   ├── [   9]  skeleton.mkd
-│   │   ├── [ 147]  skeleton.kb.mkd.
 │   │   ├── [ 161]  skeleton.f.sh.
 │   │   ├── [ 116]  skeleton.ipkg
 │   │   ├── [  50]  skeleton.idr
@@ -27,8 +37,6 @@
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
 │   ├── [4.0K]  usnippets [68 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  colors [86 entries exceeds filelimit, not opening dir]
-│   ├── [7.2K]  .oldconfigs.vimrc
 │   ├── [8.3K]  after
 │   │   └── [4.3K]  ftplugin
 │   │       ├── [ 149]  text.vim
@@ -36,8 +44,8 @@
 │   │       ├── [  64]  html.vim
 │   │       └── [  64]  css.vim
 │   └── [ 661]  filetype.vim
-├── [6.5K]  tmux
-│   └── [2.5K]  .tmux.conf
+├── [6.6K]  tmux
+│   └── [2.6K]  .tmux.conf
 ├── [ 37K]  vifm
 │   ├── [9.7K]  vifmrc
 │   └── [ 23K]  colors
@@ -64,7 +72,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 182K used in 14 directories, 48 files
+ 209K used in 19 directories, 51 files
 ```
 
-> Generated on Tuesday, June 13, 2017 at 17:23:41 PM UTC.
+> Generated on Sunday, June 25, 2017 at 03:46:05 AM UTC.
