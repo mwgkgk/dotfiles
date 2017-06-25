@@ -685,6 +685,17 @@ Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown']
 " }}}
 
+" Lisp
+Plug 'guns/vim-sexp' " {{{
+" Disable mapping hooks
+let g:sexp_filetypes = ''
+function! s:vim_sexp_mappings()
+    imap <silent><buffer> (               <Plug>(sexp_insert_opening_round)
+    imap <silent><buffer> )               <Plug>(sexp_insert_closing_round)
+endfunction
+autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe call s:vim_sexp_mappings()
+" }}}
+
 " Python
 Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
 nmap ]f ]pf
