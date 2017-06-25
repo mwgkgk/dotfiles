@@ -36,7 +36,7 @@ alias vcol="v col"
 alias dotf="v dotf"
 alias sv='sudo -E v'
 alias man="viman"
-alias vv='tmux split-window -h -c "#{pane_current_path}" -p 70 v'
+# alias vv='tmux split-window -h -c "#{pane_current_path}" -p 70 v'
 alias wip="git --git-dir=.wip --work-tree=."
 alias nd="nodemon --watch src/ --ext elm --exec make"
 alias tree="tree -atrhn --du --filelimit 20"
@@ -52,5 +52,6 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias c-='cd -'
 alias cc='c $_'
+alias vv='v $_'
 
 mkcd() { mkdir -p "$@" && cd "$@"; }
