@@ -331,8 +331,11 @@ let g:formatters_haskell = ['hindent']
 let g:formatters_idris = ['hindent']
 let g:formatdef_cljfmt = '"lein cljfmt check"'
 let g:formatters_clojure = ['cljfmt']
+let g:formatdef_shfmt = '"shfmt -i 4 -p"'
+let g:formatters_sh = ['shfmt']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
 autocmd plugs.vimrc FileType elm,haskell,clojure,idris nnoremap <buffer> Z :Autoformat<CR>
+autocmd plugs.vimrc FileType sh nnoremap <buffer> Z :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> Z :Trailing<CR>
 " }}}
 
