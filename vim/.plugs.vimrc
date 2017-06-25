@@ -516,7 +516,8 @@ let g:fzf_colors =
 nnoremap s<Space> :FzfBuffers<CR>
 nnoremap sK :FZF ~/.vim/skeletons/<CR>
 nnoremap sk :call fzf#run({'dir':'~/.vim/skeletons', 'sink':'%!cat', 'down': '~15%'})<CR>
-nnoremap st :FzfTags<CR>
+nnoremap T :FzfTags<CR>
+nnoremap st :FzfFiletypes<CR>
 nnoremap sf :FzfGFiles<CR>
 nnoremap s; :FzfHistory:<CR>
 nnoremap s[ :FzfBCommits<CR>
@@ -548,8 +549,6 @@ nnoremap s" :FzfFilesWithPreview ~/.marvim/<CR>
 
 command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 nnoremap sa :Rg<Space>
-
-nnoremap <Leader>tt :Filetypes<CR>
 " }}}
 Plug 'junegunn/vim-peekaboo'
 
