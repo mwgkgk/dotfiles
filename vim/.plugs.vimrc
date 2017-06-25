@@ -700,6 +700,11 @@ Plug 'hylang/vim-hy', { 'for' : 'hy' } " {{{
 autocmd plugs.vimrc FileType hy set lisp
 " }}}
 
+" LFE
+Plug 'lfe-support/vim-lfe' " {{{
+autocmd plugs.vimrc FileType lfe set lisp
+" }}}
+
 " Rust
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 
