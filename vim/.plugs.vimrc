@@ -732,7 +732,10 @@ vnoremap <silent> <Leader>b :call RangeJsBeautify()<CR>
 Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
 
 " Elixir
-Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' }
+Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' } " {{{
+let g:alchemist_mappings_disable = 1
+nnoremap <buffer> <silent> <Leader>dd :call alchemist#exdoc()<CR>
+" }}}
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
