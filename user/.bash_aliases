@@ -54,4 +54,9 @@ alias c-='cd -'
 alias cc='c $_'
 alias vv='v $_'
 
+p() {
+    c "$@"
+    v "$_"
+}
+
 mkcd() { mkdir -p "$@" && cd "$@"; }
