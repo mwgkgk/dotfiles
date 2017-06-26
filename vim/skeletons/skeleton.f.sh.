@@ -5,9 +5,9 @@ _nfs_share () {
 }
 
 if [ $# -eq 0 ]; then
-    _nfs_share $(pwd)
+    _nfs_share "$(pwd)"
 elif [ $# -ge 1 ]; then
-    _nfs_share $@
+    _nfs_share "$@"
 else 
     exit
 fi
