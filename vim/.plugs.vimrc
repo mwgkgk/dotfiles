@@ -693,8 +693,20 @@ Plug 'guns/vim-sexp' " {{{
 " Disable mapping hooks
 let g:sexp_filetypes = ''
 function! s:vim_sexp_mappings()
-    imap <silent><buffer> (               <Plug>(sexp_insert_opening_round)
-    imap <silent><buffer> )               <Plug>(sexp_insert_closing_round)
+            imap <silent><buffer> (               <Plug>(sexp_insert_opening_round)
+            imap <silent><buffer> )               <Plug>(sexp_insert_closing_round)
+            imap <silent><buffer> [               <Plug>(sexp_insert_opening_square)
+            imap <silent><buffer> ]               <Plug>(sexp_insert_closing_square)
+            imap <silent><buffer> {               <Plug>(sexp_insert_opening_curly)
+            imap <silent><buffer> }               <Plug>(sexp_insert_closing_curly)
+            nmap <silent><buffer> <M-k>           <Plug>(sexp_swap_list_backward)
+            xmap <silent><buffer> <M-k>           <Plug>(sexp_swap_list_backward)
+            nmap <silent><buffer> <M-j>           <Plug>(sexp_swap_list_forward)
+            xmap <silent><buffer> <M-j>           <Plug>(sexp_swap_list_forward)
+            nmap <silent><buffer> <M-h>           <Plug>(sexp_swap_element_backward)
+            xmap <silent><buffer> <M-h>           <Plug>(sexp_swap_element_backward)
+            nmap <silent><buffer> <M-l>           <Plug>(sexp_swap_element_forward)
+            xmap <silent><buffer> <M-l>           <Plug>(sexp_swap_element_forward)
 endfunction
 autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe call s:vim_sexp_mappings()
 " }}}
