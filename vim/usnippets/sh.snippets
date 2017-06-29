@@ -65,8 +65,8 @@ ${1/['"`](.+)['"`]/$1/}
 endsnippet
 
 snippet if "if ... then (if)"
-if ${2:[ ${1:condition} ]}; then
-	${0:#statements}
+if ${2:[ ${1:$# -eq 0} ]}; then
+	${VISUAL}$0
 fi
 endsnippet
 
@@ -94,8 +94,16 @@ ${1:function_name} () {
 }
 endsnippet
 
+snippet base "basename $0" i
+$(basename "$0")
+endsnippet
+
 snippet a "alias" b
 alias $1="$1$2"
+endsnippet
+
+snippet nyi "nyi" b
+echo "NYI"
 endsnippet
 
 priority 1
@@ -104,7 +112,4 @@ snippet #
 `!p snip.rv = '#!/bin/' + getShell() + "\n\n" `
 endsnippet
 
-snippet nyi "nyi" b
-echo "NYI"
-endsnippet
 # vim:ft=snippets:
