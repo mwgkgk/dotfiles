@@ -50,10 +50,10 @@ inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 
 Plug 'scrooloose/nerdtree' " {{{
-nnoremap <silent> - :NERDTreeFind <CR>
-nnoremap <silent> _  :NERDTreeToggle <CR>
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeQuitOnOpen = 1
+nnoremap <silent> - :sp<CR>:e  %:p:h<CR>
+nnoremap <silent> _ :e  %:p:h<CR>
+let g:NERDTreeQuitOnOpen=1
+let g:NERDTreeShowHidden=1
 " }}}
 
 Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
