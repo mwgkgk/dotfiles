@@ -54,6 +54,7 @@ nnoremap <silent> - :sp<CR>:e  %:p:h<CR>
 nnoremap <silent> _ :e  %:p:h<CR>
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeShowHidden=1
+let g:NERDTreeMapUpdir="-"
 " }}}
 
 Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
