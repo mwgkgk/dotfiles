@@ -711,6 +711,7 @@ function! s:vim_sexp_mappings()
 endfunction
 autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe call s:vim_sexp_mappings()
 " }}}
+Plug 'bhurlow/vim-parinfer'
 
 " Python
 Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
