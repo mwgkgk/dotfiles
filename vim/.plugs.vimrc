@@ -106,6 +106,8 @@ map gk <Plug>(easymotion-k)
 map gj <Plug>(easymotion-j)
 omap gk V<Plug>(easymotion-k)
 omap gj V<Plug>(easymotion-j)
+" Bundle t" into one object
+omap c gL"
 " }}}
 
 Plug 'vim-scripts/marvim' "{{{
