@@ -107,8 +107,8 @@ map gk <Plug>(easymotion-k)
 map gj <Plug>(easymotion-j)
 omap gk V<Plug>(easymotion-k)
 omap gj V<Plug>(easymotion-j)
-" Bundle t" into one object
-omap c gL"
+" Don't use omap: many binds e.g. fugitive use c in operator-mode
+nmap dc dgL"
 " }}}
 
 Plug 'vim-scripts/marvim' "{{{
