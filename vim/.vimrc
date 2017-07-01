@@ -184,10 +184,12 @@ nnoremap n nzOzz
 nnoremap N NzOzz
 " }}}
 " Help-related {{{
-nnoremap <F1> :help 
 nnoremap <C-W><C-h> :help <C-r><C-w><CR>
 nnoremap <Leader><C-h> :help <C-r><C-w><CR>
 cab vh vert help
+" }}}
+" Refresh
+nnoremap <F1> :e!<CR>
 " }}}
 " <C-W>-related {{{
 " - No more c-w
