@@ -211,8 +211,7 @@ nnoremap cI :ChangeInsideSurrounding<CR>
 
 Plug 'oblitum/rainbow' " {{{
 let g:rainbow_active = 0
-" let g:rainbow_ctermfgs = ['104', '193', '179', '208', '255']
-let g:rainbow_ctermfgs = ['104', '146', '217', '208', '235']
+let g:rainbow_ctermfgs = ['104', '146', '217', '208', '250', '255']
 nnoremap <Leader>tR :RainbowToggle<CR>
 " }}}
 
