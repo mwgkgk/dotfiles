@@ -711,7 +711,7 @@ function! s:vim_sexp_mappings()
             nmap <silent><buffer> <M-l>           <Plug>(sexp_swap_element_forward)
             xmap <silent><buffer> <M-l>           <Plug>(sexp_swap_element_forward)
 endfunction
-autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe call s:vim_sexp_mappings()
+autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket call s:vim_sexp_mappings()
 " }}}
 Plug 'bhurlow/vim-parinfer'
 
