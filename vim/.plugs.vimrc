@@ -354,7 +354,7 @@ Plug 'Shougo/vimproc.vim', { 'do' : 'make' } " {{{
 vnoremap gX y:call vimproc#system('bro url <C-R>"')<CR>
 vnoremap gx y:call vimproc#system('firefox-default <C-R>" &')<CR>
 vnoremap gs y:call vimproc#system('firefox-default https://google.com/search?hl=en&q=<C-R>" &')<CR>
-autocmd plugs.vimrc BufWrite *.elm,*.html,*.css VimProcBang refresh-dev1
+autocmd plugs.vimrc BufWrite *.elm,*.html,*.css,*.ex,*.exs VimProcBang refresh-dev1
 " }}}
 Plug 'Shougo/vimshell.vim' " {{{
 nnoremap <Leader>E :VimShell<CR>
