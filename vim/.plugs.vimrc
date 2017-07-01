@@ -646,7 +646,7 @@ Plug 'tpope/vim-rsi'
 Plug 'cohama/agit.vim' " {{{
 " let g:agit_no_default_mappings = 1
 let g:agit_enable_auto_show_commit = 0
-nnoremap <F10> :Agit<CR>
+nnoremap <Space>A :Agit<CR>
 nnoremap <F11> :ProjectRootExe :Shell git-show-wip<CR>:se ft=git<CR><C-w>T
 " nnoremap <F11> :let b:git_dir = substitute(b:git_dir, ".git$", ".wip", "")<CR>:Agit<CR>
 " }}}
