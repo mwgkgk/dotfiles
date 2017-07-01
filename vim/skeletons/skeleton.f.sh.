@@ -1,6 +1,6 @@
 #!/bin/bash
 
-_nfs_share () {
+_nfs_share() {
     echo "hello from $1"
 }
 

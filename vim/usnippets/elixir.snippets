@@ -228,3 +228,17 @@ story "${1:doing something}", c
 		assert Map.has_key? c, :$2
 	end
 endsnippet
+
+snippet true "true" b
+defmodule ${1:Project}.Test do
+	use ExUnit.Case
+	use TrueStory
+
+	story "adding to a map", c
+	|> Map.put(:key, :value),
+		verify do
+			assert c.key == :value
+			refute c.key == :not_value
+		end
+end
+endsnippet
