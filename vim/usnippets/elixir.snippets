@@ -14,6 +14,21 @@ ${VISUAL}
 
 endsnippet
 
+# Order of definitions:
+#
+#       @moduledoc
+#       @behaviour
+#       use
+#       import
+#       alias
+#       require
+#       defstruct
+#       @type
+#       @module_attribute
+#       @callback
+#       @macrocallback
+#       @optional_callbacks
+
 global !p
 def unpack_fn(str):
 	return (''.join(x.capitalize() for x in str.split('_')).split('.')[0],
