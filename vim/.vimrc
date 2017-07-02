@@ -27,6 +27,10 @@ set sessionoptions-=localoptions
 set sessionoptions-=buffers
 " autocmd vimrc SessionLoadPost * tabdo exe 'windo exe "normal zz"'
 
+" Undo
+set undodir=~/.vim/undo
+set undofile
+
 " Search
 set ignorecase
 set smartcase
