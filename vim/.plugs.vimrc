@@ -375,7 +375,7 @@ let g:vimshell_scrollback_limit = 65535
 " }}}
 
 Plug 'skywind3000/asyncrun.vim' " {{{
-nnoremap <F3> :AsyncRun
+nnoremap <F3> :AsyncRun<Space>
 nnoremap <Space>r :AsyncRun tmux send -t serverterm C-u do-thing C-m<CR>
 nnoremap <Space><Tab> :AsyncRun tmux send -t serverterm C-c && sleep 0.1 && tmux send -t serverterm C-c <CR>
 " }}}
