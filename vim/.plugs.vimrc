@@ -264,6 +264,11 @@ Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/yankwin.vim'
 
+Plug 'szw/vim-maximizer' " {{{
+let g:maximizer_set_default_mapping = 0
+nnoremap <silent>Z :MaximizerToggle<CR>
+" }}}
+
 Plug 'tommcdo/vim-exchange'
 
 Plug 'tpope/vim-commentary' " {{{
