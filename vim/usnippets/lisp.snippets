@@ -8,3 +8,12 @@ snippet f "defun" b
 (defun ${1:name} (${2:arg})
 	(${3:print! "Unfinished: \n  (defun $1 ($2))"}))
 endsnippet
+
+snippet pr "print" b
+(print! ${1:"Peace among worlds"})
+endsnippet
+
+snippet for "for" b
+(for ${1:i} ${2:from} ${3:to} 1
+	(${4:print! i}))
+endsnippet
