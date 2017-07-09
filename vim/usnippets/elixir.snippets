@@ -7,6 +7,7 @@ ${VISUAL}
 	{:wallaby, "~> 0.17.0"},
 	{:temp, "~> 0.4", only: :test},
 	{:poison, "~> 3.1"},
+	{:apex, "~>1.0.0", only: [:test, :dev]},
 	{:csvlixir, "~> 2.0.3"},
 	{:feeder_ex, "~> 1.1.0"},
 	{:httpoison, "~> 0.11.1"},
@@ -209,6 +210,10 @@ endsnippet
 
 snippet http "http" b
 http: [port: {:system, "PORT"}],
+endsnippet
+
+snippet log "log" b
+Logger.warn "#{__ENV__.file} @ line #{__ENV__.line}: #{inspect ${1:"science"}}"
 endsnippet
 
 # Flowex
