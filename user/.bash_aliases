@@ -52,7 +52,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias c-='cd -'
 alias cc='c $_'
-alias vv='v $_'
+# alias vv='v $_'
 
 p() {
     c "$@"
