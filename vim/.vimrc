@@ -233,7 +233,7 @@ nnoremap <Space>- 10<C-W>-
 " Prev window:
 nnoremap <C-w><C-w> <C-w>p
 " Fold everything:
-nnoremap <Space>z zM
+nnoremap z<Space> zM
 " }}}
 " Insert-mode-related {{{
 " - Mouse insert made easier :
