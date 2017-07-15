@@ -734,6 +734,9 @@ autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket call s:vim_sexp_m
 " }}}
 Plug 'bhurlow/vim-parinfer'
 
+" Lua
+Plug 'tbastos/vim-lua', { 'for' : 'lua' }
+
 " Python
 Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
 nmap ]f ]pf
@@ -777,7 +780,6 @@ Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
 Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
 
 " Idris
-
 Plug 'idris-hackers/idris-vim', { 'for' : 'idris' }
 
 " Local
