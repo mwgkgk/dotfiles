@@ -112,7 +112,7 @@ nmap dc dgL"
 nmap dC dgH"a
 nmap dq dgL)a
 nmap dQ dgH(a
-nmap cd ct)
+nmap cq ct)
 " }}}
 
 Plug 'vim-scripts/marvim' "{{{
