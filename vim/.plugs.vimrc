@@ -734,6 +734,9 @@ autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket call s:vim_sexp_m
 " }}}
 Plug 'bhurlow/vim-parinfer'
 
+" Racket
+Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
+
 " Lua
 Plug 'tbastos/vim-lua', { 'for' : 'lua' }
 
