@@ -805,6 +805,7 @@ Plug 'mattsacks/vim-eddie'
 Plug 'w0ng/vim-hybrid'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'mwgkgk/vim-kalisi'
+Plug 'AlessandroYorba/Alduin'
 
 call plug#end()
 
