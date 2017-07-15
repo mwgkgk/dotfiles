@@ -6,14 +6,14 @@ snippet #! "Shebang header" b
 $0
 endsnippet
 
-snippet !fun(ction)?! "New function" br
-function ${1:new_function}(${2:args})
+snippet !f(un)?! "New function" br
+local function ${1:new_function}(${2:args})
    $0
 end
 endsnippet
 
-snippet forp "pair for loop" b
-for ${1:name},${2:val} in pairs(${3:table_name}) do
+snippet for "pair for loop" b
+for ${1:k},${2:v} in ipairs(${3:table_name}) do
    $0
 end
 endsnippet
@@ -24,13 +24,13 @@ for ${1:idx},${2:val} in ipairs(${3:table_name}) do
 end
 endsnippet
 
-snippet for "numeric for loop" b
+snippet forn "numeric for loop" b
 for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
    $0
 end
 endsnippet
 
-snippet local "local x = 1"
+snippet /(l|local)/ "local x = 1" r
 local ${1:x} = ${0:1}
 endsnippet
 
@@ -41,6 +41,33 @@ endsnippet
 snippet if "if" b
 if $1 then
 	$2
+end
+endsnippet
+
+snippet then "then" i
+then
+	$0
+end
+endsnippet
+
+snippet else "else" i
+else
+	$0
+endsnippet
+
+snippet ex "exec" b
+os.execute(${1:"$0"})
+endsnippet
+
+snippet help "help" b
+local function print_help()
+	print "Missing help."
+end
+endsnippet
+
+snippet do "do" i
+do
+	$0
 end
 endsnippet
 
