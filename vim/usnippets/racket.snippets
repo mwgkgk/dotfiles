@@ -45,3 +45,9 @@ endsnippet
 snippet r "r" b
 (require ${1:racket/system})
 endsnippet
+
+snippet m "m" b
+(define-syntax ${1:comment-out}
+	(syntax-rules ()
+		[($1 ignore instead) instead]))
+endsnippet
