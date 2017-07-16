@@ -305,6 +305,8 @@ nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") 
 " Jump by paragraph
 map <M-j> }
 map <M-k> {
+" Set mark with mouse
+nnoremap <C-LeftMouse> ma
 " }}}
 " Commandline-related {{{
 nnoremap <Leader>: :<C-P>
