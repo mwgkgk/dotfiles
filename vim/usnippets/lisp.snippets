@@ -4,12 +4,24 @@ snippet imp "import" b
 (import ${1:lua/math} (${2:random}))$0
 endsnippet
 
-snippet /(f|def)/ "defun" r
+snippet /^(\s|\()*(f|def)/ "defun" r
 (defun ${1:name} (${2:arg})
 	(${3:print! "Unfinished: \n  (defun $1 ($2))"}))
 endsnippet
 
-snippet define "define" b
+snippet /^(\s)*if/ "if" b
+(if (${1:something?})
+	${2:a}
+	${3:b})
+endsnippet
+
+snippet if "if" i
+(if (> 0 (# arg))
+	(print! "Unexpected arguments.")
+	(print! "Unexpected absence of arguments."))
+endsnippet
+
+snippet d "define" b
 (define ${1:name}
 	${2:"value"})
 endsnippet

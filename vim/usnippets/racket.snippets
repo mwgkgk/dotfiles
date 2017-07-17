@@ -38,8 +38,13 @@ snippet (cond "cond" i
 endsnippet
 
 snippet let "let" b
-(let ([x1 e1])
-	())
+(let ([${1:x1 e1}])
+		($2))
+endsnippet
+
+snippet (let "let" i
+(let ([${1:x1 e1}])
+	($2)
 endsnippet
 
 snippet r "r" b
@@ -48,6 +53,7 @@ endsnippet
 
 snippet m "m" b
 (define-syntax ${1:comment-out}
-	(syntax-rules ()
-		[($1 ignore instead) instead]))
+	(syntax-rules ($2)
+		[($3) 
+		($4)]))
 endsnippet
