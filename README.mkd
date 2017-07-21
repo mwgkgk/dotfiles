@@ -1,12 +1,14 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [8.0K]  emacs
+│   └── [4.0K]  init.el
 ├── [4.8K]  repl
 │   └── [ 857]  .iex.exs
-├── [8.9K]  user
+├── [9.0K]  user
 │   ├── [1.6K]  .bash_aliases
-│   ├── [1.7K]  .Xresources
 │   ├── [1.1K]  .bashrc
+│   ├── [1.7K]  .Xresources
 │   ├── [  61]  .inputrc
 │   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
@@ -21,13 +23,21 @@
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
 ├── [1.2K]  install.sh
-├── [ 77K]  vim
-│   ├── [ 27K]  .plugs.vimrc
-│   ├── [ 16K]  .vimrc
-│   ├── [4.0K]  usnippets [69 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  colors [87 entries exceeds filelimit, not opening dir]
-│   ├── [7.8K]  .oldconfigs.vimrc
-│   ├── [5.9K]  skeletons
+├── [118K]  vim
+│   ├── [ 30K]  .plugs.vimrc
+│   ├── [7.9K]  .oldconfigs.vimrc
+│   ├── [ 45K]  after
+│   │   ├── [ 37K]  syntax
+│   │   │   └── [ 33K]  racket.vim
+│   │   └── [4.3K]  ftplugin
+│   │       ├── [ 149]  text.vim
+│   │       ├── [  64]  java.vim
+│   │       ├── [  64]  html.vim
+│   │       └── [  64]  css.vim
+│   ├── [6.2K]  skeletons
+│   │   ├── [ 104]  skeleton.gotask.yml
+│   │   ├── [  23]  skeleton.urn.lisp
+│   │   ├── [ 133]  skeleton.rkt
 │   │   ├── [ 164]  skeleton.f.sh.
 │   │   ├── [ 209]  skeleton.kb.mkd.
 │   │   ├── [ 140]  skeleton.hs
@@ -39,12 +49,9 @@
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
-│   ├── [8.3K]  after
-│   │   └── [4.3K]  ftplugin
-│   │       ├── [ 149]  text.vim
-│   │       ├── [  64]  java.vim
-│   │       ├── [  64]  html.vim
-│   │       └── [  64]  css.vim
+│   ├── [ 16K]  .vimrc
+│   ├── [4.0K]  usnippets [70 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  colors [87 entries exceeds filelimit, not opening dir]
 │   └── [ 661]  filetype.vim
 ├── [6.6K]  tmux
 │   └── [2.6K]  .tmux.conf
@@ -74,7 +81,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 216K used in 20 directories, 52 files
+ 265K used in 22 directories, 57 files
 ```
 
-> Generated on Sunday, July  2, 2017 at 08:27:56 AM UTC.
+> Generated on Friday, July 21, 2017 at 15:47:14 PM UTC.
