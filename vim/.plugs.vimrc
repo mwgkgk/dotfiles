@@ -213,10 +213,8 @@ Plug 'briandoll/change-inside-surroundings.vim' " {{{
 nnoremap cI :ChangeInsideSurrounding<CR>
 " }}}
 
-Plug 'oblitum/rainbow' " {{{
-let g:rainbow_active = 0
-let g:rainbow_ctermfgs = ['104', '146', '217', '208', '250', '255']
-nnoremap <Leader>tR :RainbowToggle<CR>
+Plug 'luochen1990/rainbow' " {{{
+let g:rainbow_active = 1
 " }}}
 
 Plug 'machakann/vim-patternjump' " {{{
