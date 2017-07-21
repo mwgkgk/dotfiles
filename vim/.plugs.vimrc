@@ -697,7 +697,7 @@ nnoremap <F2> :SplitVifm<CR>
 
 " Many languages
 Plug 'sheerun/vim-polyglot' " {{{
-let g:polyglot_disabled = ['markdown']
+let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
 " Lisp
