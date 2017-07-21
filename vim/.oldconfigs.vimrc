@@ -235,3 +235,9 @@ let g:clickable_browser = 'firefox-default'
 hi _clickable_file ctermbg=none ctermfg=11 cterm=underline
 hi _clickable_link ctermbg=none ctermfg=11 cterm=underline
 " }}}
+
+Plug 'oblitum/rainbow' " {{{
+let g:rainbow_active = 0
+let g:rainbow_ctermfgs = ['104', '146', '217', '208', '250', '255']
+nnoremap <Leader>tR :RainbowToggle<CR>
+" }}}
