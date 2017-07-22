@@ -53,6 +53,7 @@ ZSH_HIGHLIGHT_STYLES[alias]='fg=226'
 ZSH_HIGHLIGHT_STYLES[function]='fg=170'
 ZSH_HIGHLIGHT_STYLES[path]='fg=179'
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=80,bold'
+ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=230,bold'
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=243'
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
