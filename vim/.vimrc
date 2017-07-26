@@ -99,9 +99,9 @@ autocmd vimrc Filetype html,htmldjango setlocal tw=0
 autocmd vimrc BufNewFile,BufRead *.r2,*.r3,*.rbl,*.reb,*.red setfiletype rebol
 
 " Whitespace
-set tabstop=4
+set tabstop=2
 set softtabstop=0
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 autocmd vimrc Filetype cpp setlocal tabstop=2 shiftwidth=2
 
