@@ -96,6 +96,7 @@ autocmd vimrc BufRead,BufNewFile *.marko setfiletype html
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd vimrc Filetype markdown,python setlocal tw=79
 autocmd vimrc Filetype html,htmldjango setlocal tw=0
+autocmd vimrc BufNewFile,BufRead *.r2,*.r3,*.rbl,*.reb,*.red setfiletype rebol
 
 " Whitespace
 set tabstop=4
