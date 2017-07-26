@@ -1,59 +1,9 @@
-snippet f "f" b
-(define (${1:fname-and-args})
-	($0))
-endsnippet
+extends scheme
 
-snippet l "l" b
-lambda ()
-endsnippet
-
-snippet d "d" b
-(define ${1:var} ${2:"val"})
-endsnippet
+priority 1
 
 snippet if "if" i
 (if (> 0 (vector-length (current-command-line-arguments)))
 	(displayln "Unexpected arguments.")
 	(displayln "Unexpected absence of arguments."))
-endsnippet
-
-snippet /^\s*p/ "p" r
-(displayln "${1:Observing behavior.}")
-endsnippet
-
-snippet (p "(p" b
-(displayln "${1:Observing behavior.}"
-endsnippet
-
-snippet /^\s*cond/ "cond2" r
-(cond
-	[(> 0 (vector-length (current-command-line-arguments) ()]
-	[#t ()])
-endsnippet
-
-snippet (cond "cond" i
-(cond
-	[(> 0 (vector-length (current-command-line-arguments) ()]
-	[#t ()]
-endsnippet
-
-snippet let "let" b
-(let ([${1:x1 e1}])
-		($2))
-endsnippet
-
-snippet (let "let" i
-(let ([${1:x1 e1}])
-	($2)
-endsnippet
-
-snippet r "r" b
-(require ${1:racket/system})
-endsnippet
-
-snippet m "m" b
-(define-syntax ${1:comment-out}
-	(syntax-rules ($2)
-		[($3) 
-		($4)]))
 endsnippet
