@@ -142,6 +142,7 @@ command unxz tar -xvJf %f
 command umount udiskie-umount %f
 command getphotos gphoto2 --get-all-files
 command mkcd :mkdir %a | :cd %a
+command C :mkdir %a | :cd %a
 
 " The file type is for the default programs to be used with
 " a file extension.
