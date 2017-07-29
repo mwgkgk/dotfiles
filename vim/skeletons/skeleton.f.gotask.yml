@@ -1,0 +1,15 @@
+# https://github.com/go-task/task
+
+build-and-run:
+  cmds:
+    - idris {{.SRC}} -o {{.OUT}}
+  sources:
+    - "{{.SRC}}"
+  generates:
+    - "{{.OUT}}"
+
+hello:
+  desc: Build & Run Example
+  cmds:
+    - task: build-and-run
+      vars: {SRC: "src/Hello.idr", OUT: "target/hello"}
