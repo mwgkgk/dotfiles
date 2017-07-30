@@ -11,7 +11,14 @@ main = putStrLn "Hello"
 endsnippet
 
 snippet f "f" b
+${4:total}
 ${0:${1:fname}} : ${2:List a} -> ${3:List a}
+endsnippet
+
+snippet ff "ff" b
+${5:total}
+${0:${1:fname}} : ${2:List a} -> ${3:List a}
+$1 $4 = ${6:?$1_rhs}
 endsnippet
 
 snippet i "i" b
