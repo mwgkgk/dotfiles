@@ -1,6 +1,11 @@
-snippet f "f" b
+snippet /^\s*f/ "f" r
 (define (${1:fname-and-args})
 	($0))
+endsnippet
+
+snippet (f "(p" i
+(define (${1:fname-and-args})
+	($0)
 endsnippet
 
 snippet l "l" b
