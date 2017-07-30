@@ -1,12 +1,13 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [   8]  .gitignore
 ├── [8.0K]  emacs
 │   └── [4.0K]  init.el
 ├── [4.8K]  repl
 │   └── [ 857]  .iex.exs
 ├── [9.0K]  user
-│   ├── [1.6K]  .bash_aliases
+│   ├── [1.7K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
 │   ├── [1.7K]  .Xresources
 │   ├── [  61]  .inputrc
@@ -23,21 +24,15 @@
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
 ├── [1.2K]  install.sh
-├── [118K]  vim
-│   ├── [ 30K]  .plugs.vimrc
-│   ├── [7.9K]  .oldconfigs.vimrc
-│   ├── [ 45K]  after
-│   │   ├── [ 37K]  syntax
-│   │   │   └── [ 33K]  racket.vim
-│   │   └── [4.3K]  ftplugin
-│   │       ├── [ 149]  text.vim
-│   │       ├── [  64]  java.vim
-│   │       ├── [  64]  html.vim
-│   │       └── [  64]  css.vim
-│   ├── [6.2K]  skeletons
+├── [123K]  vim
+│   ├── [ 16K]  .vimrc
+│   ├── [ 33K]  .plugs.vimrc
+│   ├── [7.2K]  skeletons
+│   │   ├── [ 133]  skeleton.racket.rkt
+│   │   ├── [ 275]  skeleton.f.gotask.yml
+│   │   ├── [ 739]  skeleton.guile.scm
 │   │   ├── [ 104]  skeleton.gotask.yml
 │   │   ├── [  23]  skeleton.urn.lisp
-│   │   ├── [ 133]  skeleton.rkt
 │   │   ├── [ 164]  skeleton.f.sh.
 │   │   ├── [ 209]  skeleton.kb.mkd.
 │   │   ├── [ 140]  skeleton.hs
@@ -49,8 +44,17 @@
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
-│   ├── [ 16K]  .vimrc
-│   ├── [4.0K]  usnippets [70 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  usnippets [71 entries exceeds filelimit, not opening dir]
+│   ├── [7.9K]  .oldconfigs.vimrc
+│   ├── [ 46K]  after
+│   │   ├── [ 37K]  syntax
+│   │   │   ├── [ 200]  scheme.vim
+│   │   │   └── [ 33K]  racket.vim
+│   │   └── [4.3K]  ftplugin
+│   │       ├── [ 149]  text.vim
+│   │       ├── [  64]  java.vim
+│   │       ├── [  64]  html.vim
+│   │       └── [  64]  css.vim
 │   ├── [4.0K]  colors [87 entries exceeds filelimit, not opening dir]
 │   └── [ 661]  filetype.vim
 ├── [6.6K]  tmux
@@ -81,7 +85,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 265K used in 22 directories, 57 files
+ 269K used in 22 directories, 61 files
 ```
 
-> Generated on Friday, July 21, 2017 at 15:47:14 PM UTC.
+> Generated on Sunday, July 30, 2017 at 09:50:37 AM UTC.
