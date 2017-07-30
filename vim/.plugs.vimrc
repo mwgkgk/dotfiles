@@ -255,7 +255,11 @@ let g:patternjump_patterns = {
 map <M-q> <Plug>(patternjump-backward)
 map <M-r> <Plug>(patternjump-forward)
 
-nnoremap <silent> <M-n> :<C-u>call patternjump#forward(
+nnoremap <silent> <M-l> :<C-u>call patternjump#forward(
+    \ 'n',
+    \ [[[],['?']], []],
+    \ 0)<CR>
+nnoremap <silent> <M-h> :<C-u>call patternjump#backward(
     \ 'n',
     \ [[[],['?']], []],
     \ 0)<CR>
