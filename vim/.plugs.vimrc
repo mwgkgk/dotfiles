@@ -290,6 +290,7 @@ command! InstallHooks :silent! ProjectRootExe ln -s ~/.git-templates/hooks/* .
 
 Plug 'Valloric/ListToggle' " {{{
 let g:lt_quickfix_list_toggle_map = '<Space>`'
+let g:lt_location_list_toggle_map = '<Space>~'
 " }}}
 Plug 'yssl/QFEnter'
 
@@ -391,7 +392,9 @@ Plug 'arecarn/crunch.vim' " {{{
 inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
 " }}}
 
-Plug 'thinca/vim-quickrun'
+Plug 'thinca/vim-quickrun' " {{{
+nnoremap <Leader>l :QuickRun<CR>
+" }}}
 Plug 'thinca/vim-textobj-between' " {{{
 let g:textobj_between_no_default_key_mappings = 1
 xmap ii <Plug>(textobj-between-i)
