@@ -160,6 +160,9 @@ endif
 set statusline=\ %{exists('*WinLabel')?WinLabel():''}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %=\ %{expand('#:t')}\ %P
 set laststatus=2 " Show even in last window
 
+" Paste/Nopaste
+set pastetoggle=<Leader>tp
+
 " Mappings
 " Unmappings {{{
 " - No ex-mode for now
