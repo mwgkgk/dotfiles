@@ -18,6 +18,7 @@ alias kk="pkill -fi"
 
 # alias g='googler --count 5'
 alias g='git'
+alias gp="git pull"
 alias df='pydf'
 alias emacs="emacs --no-window-system"
 alias feh="feh -d."
