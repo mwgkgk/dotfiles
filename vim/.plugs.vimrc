@@ -655,6 +655,7 @@ nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " :Glog --Sfindme -- %
 command! Gcurrent :exe "Gcommit -v -q %:p"
 nnoremap <Leader>gc :Gcurrent<CR>
+nnoremap <Leader>h :Gcurrent<CR>
 command! Gcached :Gvsplit! diff --staged
 " }}}
 Plug 'tpope/vim-rsi'
