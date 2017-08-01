@@ -13,6 +13,7 @@ bindkey "\033[3~" delete-char
 bindkey -s "" 'fg\n'
 bindkey "â" backward-word
 bindkey "æ" forward-word
+bindkey "ä" kill-word
 
 zstyle ':completion:*' completer _expand _complete _files _correct _approximate
 
