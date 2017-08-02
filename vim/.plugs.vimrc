@@ -56,6 +56,7 @@ let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMapUpdir="-"
 " }}}
+Plug 'travisjeffery/vim-auto-mkdir'
 
 Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
 nnoremap <F5> :UndotreeToggle<CR>
