@@ -673,6 +673,9 @@ Plug 'tpope/vim-surround' " {{{
 " Wrapping in braces:
 imap <C-c><C-c> <Esc>hysiw)ea
 nmap <C-c><C-c> <Esc>ysiw)
+" Quotes
+imap <C-c>c <Esc>hysiw"ea
+nmap <C-c>c <Esc>ysiw"
 " }}}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
