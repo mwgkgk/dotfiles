@@ -1,8 +1,9 @@
-# vim:ft=idris
+package project
 
-package maths
+sourcedir = src
 
-modules = Maths
-        , Maths.NumOps
-        , Maths.BinOps
-        , Maths.HexOps
+modules = Main
+        , Project
+        , Project.Test.Integration
+
+tests = src.Project.Test.Integration.test

@@ -1,7 +1,6 @@
 # https://github.com/go-task/task
 
-build:
-    desc: Build World
-    cmds:
-        - ...
-    deps: [...]
+r:
+  desc: Run Repl
+  cmds:
+    - racket --repl src/main.rkt

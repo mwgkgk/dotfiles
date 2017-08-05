@@ -1,3 +1,7 @@
+snippet m "module" b
+module ${0:Main}
+endsnippet
+
 snippet /(\s+)case/ "case" ir
 `!p if match.group(1) is not None:
     snip.rv = match.group(1)`case $1 of
@@ -30,4 +34,8 @@ let
 	${1:x}
 in
 	${VISUAL}${3:y}
+endsnippet
+
+snippet v "v" i
+Vect ${1:n} ${2:a}
 endsnippet
