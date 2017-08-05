@@ -312,6 +312,8 @@ map <M-j> }
 map <M-k> {
 " Set mark with mouse
 nnoremap <C-LeftMouse> ma
+" Undo tabspace
+nnoremap <Tab><Space> u
 " }}}
 " Commandline-related {{{
 nnoremap <Leader>: :<C-P>
