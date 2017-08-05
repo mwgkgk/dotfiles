@@ -13,8 +13,8 @@
 │   ├── [  61]  .inputrc
 │   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
-├── [5.9K]  zsh
-│   └── [1.9K]  .zshrc
+├── [6.0K]  zsh
+│   └── [2.0K]  .zshrc
 ├── [7.0K]  conky
 │   └── [3.0K]  conky.conf
 ├── [ 13K]  git
@@ -24,26 +24,28 @@
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
 ├── [1.2K]  install.sh
-├── [123K]  vim
-│   ├── [ 16K]  .vimrc
-│   ├── [ 33K]  .plugs.vimrc
-│   ├── [7.2K]  skeletons
+├── [126K]  vim
+│   ├── [ 36K]  .plugs.vimrc
+│   ├── [7.3K]  skeletons
+│   │   ├── [ 145]  skeleton.ipkg
+│   │   ├── [  96]  skeleton.gotask.yml
+│   │   ├── [  53]  skeleton.tcl
+│   │   ├── [  61]  skeleton.guile.scm
+│   │   ├── [ 739]  skeleton.getopt.guile.scm
 │   │   ├── [ 133]  skeleton.racket.rkt
 │   │   ├── [ 275]  skeleton.f.gotask.yml
-│   │   ├── [ 739]  skeleton.guile.scm
-│   │   ├── [ 104]  skeleton.gotask.yml
 │   │   ├── [  23]  skeleton.urn.lisp
 │   │   ├── [ 164]  skeleton.f.sh.
 │   │   ├── [ 209]  skeleton.kb.mkd.
 │   │   ├── [ 140]  skeleton.hs
 │   │   ├── [  54]  skeleton.plain.hs.
 │   │   ├── [   9]  skeleton.mkd
-│   │   ├── [ 116]  skeleton.ipkg
 │   │   ├── [  50]  skeleton.idr
 │   │   ├── [ 834]  skeleton.elm
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
+│   ├── [ 16K]  .vimrc
 │   ├── [4.0K]  usnippets [71 entries exceeds filelimit, not opening dir]
 │   ├── [7.9K]  .oldconfigs.vimrc
 │   ├── [ 46K]  after
@@ -85,7 +87,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 269K used in 22 directories, 61 files
+ 272K used in 22 directories, 63 files
 ```
 
-> Generated on Sunday, July 30, 2017 at 09:50:37 AM UTC.
+> Generated on Saturday, August  5, 2017 at 07:35:21 AM UTC.
