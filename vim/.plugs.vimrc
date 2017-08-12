@@ -333,6 +333,9 @@ nnoremap <F12> :ProjectRootExe :AsyncRun git-store-wip<CR>
 command! Make :silent! ProjectRootExe make | redraw!
 nnoremap <Leader>dm :Make<CR>
 command! InstallHooks :silent! ProjectRootExe ln -s ~/.git-templates/hooks/* .
+" - Quaketerm
+command! QuakeTerm :ProjectRootExe :AsyncRun add_to_quaketerm "r %:."
+nnoremap <Leader><LocalLeader> :QuakeTerm<CR>
 " }}}
 
 Plug 'Valloric/ListToggle' " {{{
@@ -712,9 +715,6 @@ let g:agit_enable_auto_show_commit = 0
 nnoremap <Space>A :Agit<CR>
 nnoremap <F11> :ProjectRootExe :Shell git-show-wip<CR>:se ft=git<CR><C-w>T
 " nnoremap <F11> :let b:git_dir = substitute(b:git_dir, ".git$", ".wip", "")<CR>:Agit<CR>
-" - Quaketerm
-command! QuakeTerm :ProjectRootExe :AsyncRun add_to_quaketerm "r %:."
-nnoremap <Leader><LocalLeader> :QuakeTerm<CR>
 " }}}
 
 Plug 'mwgkgk/CamelCaseMotion' " {{{
