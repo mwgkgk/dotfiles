@@ -1,4 +1,8 @@
 #! /bin/env tclsh
 
+package require Tk
+
 set greeting hello
-puts $greeting
+
+label .hello -text $greeting
+pack .hello
