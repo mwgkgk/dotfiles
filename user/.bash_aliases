@@ -29,6 +29,7 @@ alias ptp3="ptpython"
 alias ipy="ipython --pprint"
 alias bpy="bpython"
 alias idr="idris"
+alias rkt="racket"
 
 alias ali='v ~/.bash_aliases , ~/.local.bashrc'
 alias v-empty="vim -u ~/.empty.plugs.vimrc"
