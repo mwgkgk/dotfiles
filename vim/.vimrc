@@ -314,6 +314,8 @@ map <M-j> }
 map <M-k> {
 " Set mark with mouse
 nnoremap <C-LeftMouse> ma
+" Rightmouse
+nnoremap <RightMouse> <LeftMouse>
 " Undo tabspace
 nnoremap <Tab><Space> u
 " }}}
