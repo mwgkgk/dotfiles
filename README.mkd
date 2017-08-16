@@ -25,11 +25,12 @@
 ├── [ 437]  Makefile
 ├── [1.2K]  install.sh
 ├── [126K]  vim
+│   ├── [ 16K]  .vimrc
 │   ├── [ 36K]  .plugs.vimrc
 │   ├── [7.3K]  skeletons
+│   │   ├── [ 100]  skeleton.tcl
 │   │   ├── [ 145]  skeleton.ipkg
 │   │   ├── [  96]  skeleton.gotask.yml
-│   │   ├── [  53]  skeleton.tcl
 │   │   ├── [  61]  skeleton.guile.scm
 │   │   ├── [ 739]  skeleton.getopt.guile.scm
 │   │   ├── [ 133]  skeleton.racket.rkt
@@ -45,7 +46,6 @@
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
-│   ├── [ 16K]  .vimrc
 │   ├── [4.0K]  usnippets [71 entries exceeds filelimit, not opening dir]
 │   ├── [7.9K]  .oldconfigs.vimrc
 │   ├── [ 46K]  after
@@ -90,4 +90,4 @@
  272K used in 22 directories, 63 files
 ```
 
-> Generated on Saturday, August  5, 2017 at 07:35:21 AM UTC.
+> Generated on Wednesday, August 16, 2017 at 07:23:30 AM UTC.
