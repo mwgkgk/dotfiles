@@ -670,6 +670,8 @@ autocmd vimrc FileType vim nnoremap <buffer> <Space>x :Source<CR>:echo 'Sourced 
 autocmd vimrc FileType vader nnoremap <buffer> <Space>x :Vader<CR>
 " - Random
 command! RandomLine execute 'normal! '.(matchstr(system('od -vAn -N3 -tu4 /dev/urandom'), '^\_s*\zs.\{-}\ze\_s*$') % line('$')).'G'
+" - Saveas
+cab ww saveas
 " }}}
 
 if filereadable(glob("~/.local.vimrc")) 
