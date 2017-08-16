@@ -246,7 +246,7 @@ nnoremap <MiddleMouse> a<MiddleMouse><Esc>
 inoremap <MiddleMouse> <MiddleMouse><Esc>
 vnoremap <MiddleMouse> c<MiddleMouse><Esc>
 " - Keyboard insert
-inoremap  <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>
+inoremap  <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
 " - Insert-mode surround PREVIOUS word with backticks:
 imap <C-g><C-b> <Esc>bysw`Ea
 " - Insert-mode uppercase prev word:
