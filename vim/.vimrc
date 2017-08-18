@@ -316,6 +316,7 @@ map <M-k> {
 nnoremap <C-LeftMouse> ma
 " Rightmouse
 nmap <RightMouse> <LeftMouse><RightMouse>
+imap <RightMouse> <Esc><RightMouse>
 " Undo tabspace
 nnoremap <Tab><Space> u
 " }}}
