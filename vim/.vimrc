@@ -251,13 +251,13 @@ inoremap  <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
 imap <C-g><C-b> <Esc>bysw`Ea
 " - Insert-mode uppercase prev word:
 imap <C-g><C-u> <Esc>bgUwgi
-" - Insert-mode emacs maps:
-" inoremap <C-a> <Esc>I
-" inoremap <C-e> <Esc>A
-" - Improve default i_CTRL-k i_CTRL-j
+" - F1 for digraphs
 inoremap <F1> <C-k>
+" - Kill line on i_CTRL-k
 inoremap <C-k> <C-O>D
-inoremap <C-j> <Esc>jA
+" - Move up/down to the end of the line on M-k / M-j in insert
+inoremap <M-j> <Esc>jA
+inoremap <M-k> <Esc>kA
 " insert word of the line above (C-Y improved)
 imap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
 " - Insert mode paste default:
