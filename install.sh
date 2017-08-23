@@ -48,5 +48,7 @@ rm ~/.inputrc
 ln -s $DIR/user/.inputrc ~/.inputrc
 rm ~/.zshrc
 ln -s $DIR/user/.zshrc ~/.zshrc
+rm ~/.xinitrc
+ln -s $DIR/user/.xinitrc ~/.xinitrc
 
 echo "Done."
