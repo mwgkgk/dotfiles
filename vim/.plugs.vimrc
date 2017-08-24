@@ -851,7 +851,7 @@ function! s:vim_sexp_mappings()
             imap <silent><buffer> {               <Plug>(sexp_insert_opening_curly)
             imap <silent><buffer> }               <Plug>(sexp_insert_closing_curly)
 endfunction
-autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket call s:vim_sexp_mappings()
+autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux call s:vim_sexp_mappings()
 " }}}
 Plug 'bhurlow/vim-parinfer'
 
