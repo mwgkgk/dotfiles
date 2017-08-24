@@ -903,6 +903,9 @@ Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
 " Idris
 Plug 'idris-hackers/idris-vim', { 'for' : 'idris' }
 
+" Lux
+Plug 'mwgkgk/lux-vim', { 'for' : 'lux' }
+
 " Local
 if filereadable(glob("~/.local.plugs.vimrc")) 
     source ~/.local.plugs.vimrc
