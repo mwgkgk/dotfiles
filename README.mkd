@@ -1,18 +1,20 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [   8]  .gitignore
-├── [8.0K]  emacs
-│   └── [4.0K]  init.el
-├── [4.8K]  repl
-│   └── [ 857]  .iex.exs
-├── [9.0K]  user
+├── [1.2K]  install.sh
+├── [ 11K]  user
 │   ├── [1.7K]  .bash_aliases
+│   ├── [1.5K]  .xinitrc
 │   ├── [1.1K]  .bashrc
 │   ├── [1.7K]  .Xresources
 │   ├── [  61]  .inputrc
 │   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
+├── [   8]  .gitignore
+├── [8.0K]  emacs
+│   └── [4.0K]  init.el
+├── [4.8K]  repl
+│   └── [ 857]  .iex.exs
 ├── [6.0K]  zsh
 │   └── [2.0K]  .zshrc
 ├── [7.0K]  conky
@@ -23,11 +25,11 @@
 │       └── [4.1K]  hooks
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
-├── [1.2K]  install.sh
 ├── [126K]  vim
-│   ├── [ 16K]  .vimrc
 │   ├── [ 36K]  .plugs.vimrc
-│   ├── [7.3K]  skeletons
+│   ├── [ 16K]  .vimrc
+│   ├── [7.5K]  skeletons
+│   │   ├── [ 159]  skeleton.lux
 │   │   ├── [ 100]  skeleton.tcl
 │   │   ├── [ 145]  skeleton.ipkg
 │   │   ├── [  96]  skeleton.gotask.yml
@@ -87,7 +89,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 272K used in 22 directories, 63 files
+ 274K used in 22 directories, 65 files
 ```
 
-> Generated on Wednesday, August 16, 2017 at 07:23:30 AM UTC.
+> Generated on Thursday, August 24, 2017 at 13:10:28 PM UTC.
