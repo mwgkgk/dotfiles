@@ -109,10 +109,10 @@ map gj <Plug>(easymotion-j)
 omap gk V<Plug>(easymotion-k)
 omap gj V<Plug>(easymotion-j)
 " Don't use omap: many binds e.g. fugitive use c in operator-mode
-nmap dc dgL"
-nmap dC dgH"a
-nmap dq dgL)a
-nmap dQ dgH(a
+nmap dq dgL"
+nmap dQ dgH"a
+nmap dc dgL)a
+nmap dC dgH(a
 nmap cq ct)
 " }}}
 
