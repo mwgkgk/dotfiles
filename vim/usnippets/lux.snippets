@@ -1,0 +1,23 @@
+snippet /^\s*f/ "f" r
+(def: ${1:fname}
+	(-> ${2:Text} ${3:Text})
+	(lambda [${4:x}]
+		($0))
+endsnippet
+
+snippet (f "(p" i
+(define (${1:fname-and-args})
+	($0)
+endsnippet
+
+snippet let "let" b
+(let
+	[${1:x1 e1}]
+	($2))
+endsnippet
+
+snippet (let "let" i
+(let [${1:x1 e1}]
+	($2)
+endsnippet
+
