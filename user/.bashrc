@@ -47,6 +47,4 @@ fi
 #     source /usr/share/nvm/init-nvm.sh
 # fi
 
-export GOPATH="${HOME}/code/go"
-
-export EDITOR="vim"
+export GOPATH="${HOME}/go"
