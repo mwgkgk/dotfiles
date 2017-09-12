@@ -2,6 +2,8 @@
 
 PATH="${PATH}:${HOME}/bin:/usr/local/bin"
 
+export GOPATH="${HOME}/go"
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
