@@ -246,6 +246,7 @@ inoremap . .<C-g>u
 inoremap , ,<C-g>u
 inoremap ? ?<C-g>u
 inoremap ! !<C-g>u
+inoremap <C-w> <C-g>u<C-w>
 " - Mouse insert made easier :
 nnoremap <MiddleMouse> a<MiddleMouse><Esc>
 inoremap <MiddleMouse> <MiddleMouse><Esc>
