@@ -241,6 +241,11 @@ nnoremap <C-w><C-w> <C-w>p
 nnoremap z<Space> zM
 " }}}
 " Insert-mode-related {{{
+" - Smaller undo chunks:
+inoremap . .<C-g>u
+inoremap , ,<C-g>u
+inoremap ? ?<C-g>u
+inoremap ! !<C-g>u
 " - Mouse insert made easier :
 nnoremap <MiddleMouse> a<MiddleMouse><Esc>
 inoremap <MiddleMouse> <MiddleMouse><Esc>
