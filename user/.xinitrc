@@ -33,8 +33,8 @@ pulseaudio --start &
 # xrandr --output DVI-I-2 --auto
 # xrandr --output DVI-I-3 --auto --primary --left-of DVI-I-2
 
-xrandr --output DVI-I-2 --auto
-xrandr --output HDMI-0 --auto --primary --right-of DVI-I-2
+# xrandr --output DVI-I-2 --auto
+# xrandr --output HDMI-0 --auto --primary --right-of DVI-I-2
 
 while true ; do
   date_local=$(date +" %a, %b %d %R" | xargs)
