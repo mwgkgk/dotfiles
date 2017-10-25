@@ -1,5 +1,6 @@
 augroup filetypedetect
     au! BufRead,BufNewFile *.txt setfiletype text
+    au! BufRead,BufNewFile *.min setfiletype min
 augroup END
 
 augroup filetypedetect
