@@ -1,12 +1,15 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [9.0K]  conky
+│   ├── [1.9K]  conky.conf
+│   └── [3.0K]  conky-dual.conf
 ├── [1.2K]  install.sh
 ├── [ 11K]  user
-│   ├── [1.7K]  .bash_aliases
 │   ├── [1.5K]  .xinitrc
-│   ├── [1.1K]  .bashrc
+│   ├── [1.8K]  .bash_aliases
 │   ├── [1.7K]  .Xresources
+│   ├── [1.1K]  .bashrc
 │   ├── [  61]  .inputrc
 │   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
@@ -17,23 +20,24 @@
 │   └── [ 857]  .iex.exs
 ├── [6.0K]  zsh
 │   └── [2.0K]  .zshrc
-├── [7.0K]  conky
-│   └── [3.0K]  conky.conf
 ├── [ 13K]  git
 │   ├── [ 436]  .gitconfig
 │   └── [8.1K]  .git-templates
 │       └── [4.1K]  hooks
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
-├── [126K]  vim
+├── [130K]  vim
+│   ├── [4.0K]  colors [88 entries exceeds filelimit, not opening dir]
+│   ├── [ 710]  filetype.vim
 │   ├── [ 36K]  .plugs.vimrc
-│   ├── [ 16K]  .vimrc
+│   ├── [ 17K]  .vimrc
+│   ├── [4.0K]  usnippets [72 entries exceeds filelimit, not opening dir]
 │   ├── [7.5K]  skeletons
+│   │   ├── [ 100]  skeleton.guile.scm
 │   │   ├── [ 159]  skeleton.lux
 │   │   ├── [ 100]  skeleton.tcl
 │   │   ├── [ 145]  skeleton.ipkg
 │   │   ├── [  96]  skeleton.gotask.yml
-│   │   ├── [  61]  skeleton.guile.scm
 │   │   ├── [ 739]  skeleton.getopt.guile.scm
 │   │   ├── [ 133]  skeleton.racket.rkt
 │   │   ├── [ 275]  skeleton.f.gotask.yml
@@ -48,19 +52,17 @@
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
-│   ├── [4.0K]  usnippets [71 entries exceeds filelimit, not opening dir]
 │   ├── [7.9K]  .oldconfigs.vimrc
-│   ├── [ 46K]  after
-│   │   ├── [ 37K]  syntax
-│   │   │   ├── [ 200]  scheme.vim
-│   │   │   └── [ 33K]  racket.vim
-│   │   └── [4.3K]  ftplugin
-│   │       ├── [ 149]  text.vim
-│   │       ├── [  64]  java.vim
-│   │       ├── [  64]  html.vim
-│   │       └── [  64]  css.vim
-│   ├── [4.0K]  colors [87 entries exceeds filelimit, not opening dir]
-│   └── [ 661]  filetype.vim
+│   └── [ 49K]  after
+│       ├── [ 41K]  syntax
+│       │   ├── [3.9K]  min.vim
+│       │   ├── [ 200]  scheme.vim
+│       │   └── [ 33K]  racket.vim
+│       └── [4.3K]  ftplugin
+│           ├── [ 149]  text.vim
+│           ├── [  64]  java.vim
+│           ├── [  64]  html.vim
+│           └── [  64]  css.vim
 ├── [6.6K]  tmux
 │   └── [2.6K]  .tmux.conf
 ├── [ 37K]  vifm
@@ -89,7 +91,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 274K used in 22 directories, 65 files
+ 280K used in 22 directories, 67 files
 ```
 
-> Generated on Thursday, August 24, 2017 at 13:10:28 PM UTC.
+> Generated on Wednesday, October 25, 2017 at 18:20:56 PM UTC.
