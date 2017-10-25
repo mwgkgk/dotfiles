@@ -931,6 +931,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'mwgkgk/vim-kalisi'
 Plug 'AlessandroYorba/Alduin'
+Plug 'google/vim-colorscheme-primary'
 
 call plug#end()
 
