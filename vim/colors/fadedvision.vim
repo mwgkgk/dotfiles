@@ -33,6 +33,7 @@ hi Error        guifg=#000000 guibg=#00d000 gui=none ctermfg=176 ctermbg=010 cte
 hi ErrorMsg     guifg=#000000 guibg=#00ff00 gui=bold ctermfg=176 ctermbg=010 cterm=none
 hi FoldColumn   guifg=#00b900 guibg=#000300 gui=none ctermfg=046 ctermbg=016 cterm=none
 hi Folded       guifg=#00bf00 guibg=#001200 gui=none ctermfg=243 ctermbg=235 cterm=none
+hi Conceal      guifg=#00bf00 guibg=#001200 gui=none ctermfg=243 ctermbg=235 cterm=none
 hi Identifier   guifg=#50d930 guibg=#000000 gui=none ctermfg=118 ctermbg=none cterm=none
 hi IncSearch    gui=reverse cterm=reverse
 hi LineNr       guifg=#007900 guibg=#000600 gui=none ctermfg=237 ctermbg=016 cterm=none
