@@ -73,3 +73,5 @@ hi! link markdownH3 markdownH1
 hi! link markdownH4 markdownH1
 hi! link markdownH5 markdownH1
 hi! link markdownH6 markdownH1
+
+hi yamlKey cterm=bold
