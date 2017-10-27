@@ -691,10 +691,9 @@ nmap <C-c>c <Esc>ysiw"
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive' " {{{
-nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>G :Gstatus<CR>
 nnoremap <Leader>D :Gdiff<CR>
-nnoremap <Leader>C :Gcommit<CR>
+nnoremap <Leader>C :Gcurrent<CR>
 nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " Also, grep commit text in all or current file:
 " :Glog --grep=query --
@@ -703,8 +702,6 @@ nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " :Glog --Sfindme --
 " :Glog --Sfindme -- %
 command! Gcurrent :exe "Gcommit -v -q %:p"
-nnoremap <Leader>gc :Gcurrent<CR>
-nnoremap <Leader>h :Gcurrent<CR>
 command! Gcached :Gvsplit! diff --staged
 " }}}
 Plug 'tpope/vim-rsi'
@@ -891,14 +888,14 @@ vnoremap <silent> <Leader>b :call RangeJsBeautify()<CR>
 Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
 
 " Elixir
-Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' } " {{{
-let g:alchemist_mappings_disable = 1
-nnoremap <buffer> <silent> <Leader>dd :call alchemist#exdoc()<CR>
+" Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' } " {{{
+" let g:alchemist_mappings_disable = 1
+" nnoremap <buffer> <silent> <Leader>dd :call alchemist#exdoc()<CR>
 " }}}
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
-Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
+" Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
 
 " Idris
 Plug 'idris-hackers/idris-vim', { 'for' : 'idris' }
