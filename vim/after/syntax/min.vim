@@ -11,8 +11,7 @@ endif
 setl iskeyword=@,36-39,+,-,/,*,.,:,~,!,48-57,60-65,94-95,192-255 
 setl iskeyword+=^
 
-syntax keyword          minDefaultSymbol ! != $ & ' * + # - % ^ -> . .. / : < <= == => =~ > >= @ ROOT aes all? and any? append apply args ask atime bind bool boolean? call call! capitalize case cd chmod choose clear-stack cleave column-print concat confirm cons cp cpu crypto ctime datetime ddel debug decode define defined? delete dget dhas? dkeys dictionary? dip dir? dirname div dpick dprint dprint! dset dsort dup dvalues encode env? error eval even? exists? exit expect fappend fatal find file? filename filter first flatten float float? foreach fperms fread from-json format-error fs fsize fstats ftype fwrite get gets get-env get-stack hardlink harvest hidden? id if import in? indent indexof info insert int integer? interpolate interval io join keep last length linrec load load-symbol logic loglevel loglevel? lowercase ls ls-r map map-reduce match md5 mkdir mod module module-symbols module-sigils mtime mv newline nip not notice now num number? odd? opts os over partition password pick pop popd pred prepend print print! prompt publish puts puts! put-env q quotation? quote quote-bind quote-define random raise reduce regex reject remove remove-symbol repeat replace rest reverse rm rmdir run save-symbol scope scope? seal search seq set set-stack sha1 sha224 sha256 sha384 sha512 shorten sigils sip size sleep slice sort source split spread stack startup stored-symbols str string string? strip succ sum swap swons symbols symlink symlink? sys system take tap tap! tformat time timeinfo times timestamp titleize to-json to-timestamp try dequote uppercase unzip version warn when which while with xor zip 
-
+syntax keyword          minDefaultSymbol ! != $ & ' * + # - % ^ -> . .. / : < <= == => =~ > >= @ -inf ROOT acos aes all? and any? append apply args asin ask atan atime bind bool boolean? call call! capitalize case cd ceil chmod choose clear-stack cleave column-print concat confirm cons cos cosh cp cpu crypto ctime d2r datetime ddel debug decode define defined? delete dget dhas? dkeys dictionary? dip dir? dirname div dpick dprint dprint! dset dsort dup dvalues e encode env? error eval even? exists? exit expect fappend fatal find file? filename filter first flatten float float? floor foreach fperms fread from-json format-error fs fsize fstats ftype fwrite get gets get-env get-stack hardlink harvest hidden? id if import in? indent indexof inf info insert int integer? interpolate interval io join keep last length linrec ln load load-symbol log2 log10 logic loglevel loglevel? lowercase ls ls-r map map-reduce match math md5 mkdir mod module module-symbols module-sigils mtime mv nan newline nip not notice now num number? odd? opts os over partition password pi pick pop popd pow pred prepend print print! prompt publish puts puts! put-env q quotation? quote quote-bind quote-define r2d random raise reduce regex reject remove remove-symbol repeat replace rest reverse rm rmdir round run save-symbol scope scope? seal search seq set set-stack sha1 sha224 sha256 sha384 sha512 shorten sigils sin sinh sip size sleep slice sort source split spread sqrt stack startup stored-symbols str string string? strip succ sum swap swons symbols symlink symlink? sys system take tan tanh tap tap! tau tformat time timeinfo times timestamp titleize to-json to-timestamp try trunc dequote uppercase unzip version warn when which while with xor zip 
 
 syntax match            minDefaultSigil       ;\<[:@'~!?$%&$=<>#^*#+/]; contained
 syntax match            minSpecialSymbols     ;[:@'~!?$%&$=<>#^*#+/]; contained
@@ -35,13 +34,14 @@ syntax match            minSymbol             ;[a-zA-Z._][a-zA-Z0-9/!?+*._-]*;
 
 syntax match            minParen              ;(\|); 
 
+syntax match            minSharpBang          /\%^#!.*/
 
 
 " Highlighting
 hi default link         minComment            Comment
 hi default link         minCommentTodo        Todo
 hi default link         minString             String
-hi default link         minSigilSymbol        Constant
+hi default link         minSigilSymbol        String
 hi default link         minNumber             Number
 hi default link         minBoolean            Boolean
 hi default link         minDefaultSymbol      Statement
@@ -54,5 +54,6 @@ hi default link         minQuotedSymbol       Special
 hi default link         minBoundSymbol        Special
 hi default link         minQuotedBoundSymbol  Special
 hi default link         minParen              Special
+hi default link         minSharpBang          Preproc
 
 let b:current_syntax = "min"
