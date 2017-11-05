@@ -8,6 +8,7 @@
 [alias]
     c = checkout
     b = checkout -b
+    bb = branch
     m = merge --no-ff
     mm = !git merge master && git checkout master
     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
