@@ -49,8 +49,8 @@ URxvt.keysym.Meta-F4: perl:tabbedex:rename_tab
 ! URxvt*boldFont: xft:Fixed:size=11:weight=Bold:antialias=false
 ! URxvt.letterSpace: 0
 
-URxvt*font: xft:Monospace:size=8:antialias=true
-URxvt*boldFont: xft:Monospace:size=8:weight=Bold:antialias=true
+URxvt*font: xft:Monospace:size=7:antialias=true
+URxvt*boldFont: xft:Monospace:size=7:weight=Bold:antialias=true
 URxvt.letterSpace: -1
 
 ! URxvt*font: xft:Anka/Coder Narrow:size=10:antialias=true
