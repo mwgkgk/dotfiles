@@ -679,6 +679,10 @@ let g:EasyOperator_line_do_mapping = 0
 nmap gy <Plug>(easyoperator-line-yank)
 nmap gd <Plug>(easyoperator-line-delete)
 " }}}
+Plug 'haya14busa/vim-edgemotion' " {{{
+map <Leader>j <Plug>(edgemotion-j)
+map <Leader>k <Plug>(edgemotion-k)
+" }}}
 
 Plug 'tpope/vim-surround' " {{{
 " Wrapping in braces:
