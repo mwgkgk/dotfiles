@@ -229,7 +229,7 @@ if &background=='light'
 
     hi TabLine		cterm=underline
     hi TabLineFill	cterm=underline
-    /* hi CursorLine	cterm=underline */
+    " hi CursorLine	cterm=underline
 
     " For reversed stuffs, clear the reversed prop and set the bold prop again
     " hi IncSearch	cterm=bold
