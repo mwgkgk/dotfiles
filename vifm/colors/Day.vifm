@@ -61,8 +61,8 @@
 " highlight ErrorMsg cterm=none ctermfg=red ctermbg=black
 " highlight Border cterm=none ctermfg=black ctermbg=white
 
-highlight Win cterm=none ctermfg=white ctermbg=234
-highlight Directory cterm=bold ctermfg=white ctermbg=234
+highlight Win cterm=none ctermfg=255 ctermbg=234
+highlight Directory cterm=bold ctermfg=255 ctermbg=234
 highlight Link cterm=bold ctermfg=yellow ctermbg=234
 highlight BrokenLink cterm=bold ctermfg=red ctermbg=234
 highlight Socket cterm=bold ctermfg=magenta ctermbg=234
@@ -71,10 +71,10 @@ highlight Fifo cterm=bold ctermfg=cyan ctermbg=234
 highlight Executable cterm=bold ctermfg=green ctermbg=234
 highlight Selected cterm=bold ctermfg=magenta ctermbg=234
 highlight CurrLine cterm=bold ctermfg=Black ctermbg=Yellow
-highlight TopLine cterm=none ctermfg=white ctermbg=black
-highlight TopLineSel cterm=bold ctermfg=white ctermbg=black
-highlight StatusLine cterm=bold ctermfg=white ctermbg=black
-highlight WildMenu cterm=underline,reverse ctermfg=white ctermbg=234
-highlight CmdLine cterm=none ctermfg=white ctermbg=234
+highlight TopLine cterm=none ctermfg=255 ctermbg=black
+highlight TopLineSel cterm=bold ctermfg=255 ctermbg=black
+highlight StatusLine cterm=bold ctermfg=255 ctermbg=black
+highlight WildMenu cterm=underline,reverse ctermfg=255 ctermbg=234
+highlight CmdLine cterm=none ctermfg=255 ctermbg=234
 highlight ErrorMsg cterm=none ctermfg=red ctermbg=234
 highlight Border cterm=none ctermfg=black ctermbg=black
