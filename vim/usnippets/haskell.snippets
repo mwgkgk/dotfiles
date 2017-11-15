@@ -18,7 +18,7 @@ snippet => "Type constraint"
 (${1:Class} ${2:Type var}) => ${3:$2}
 endsnippet
 
-snippet def "Function definition"
+snippet f "Function definition"
 ${1:name} :: ${2:Type} -> ${3:Type}
 endsnippet
 
@@ -64,4 +64,17 @@ endsnippet
 
 snippet p "p" b
 putStrLn ("${1:Hello}")
+endsnippet
+
+snippet main "main" b
+main :: IO ()
+main = do
+	args <- getArgs
+	putStrLn ("Hello, " ++ args !! 0)
+endsnippet
+
+snippet desc "desc" b
+describe "${1:Char Parser}" $ do
+	it "${2:matches a character with leading whitespace}" $ do
+		${3:readExpr " $"} \`shouldBe\` ${4:"Found value"}
 endsnippet
