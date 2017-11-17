@@ -1,7 +1,5 @@
 # vim: ft=sh
 
-export SHELL=/bin/zsh
-
 # No bell:
 xset -b
 xset -dpms
