@@ -1,13 +1,16 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [4.9K]  repl
+│   ├── [  85]  .minrc
+│   └── [ 857]  .iex.exs
 ├── [ 17K]  fish
-│   ├── [  82]  fishfile
+│   ├── [ 110]  fishfile
+│   ├── [4.0K]  aliases [26 entries exceeds filelimit, not opening dir]
 │   ├── [4.2K]  tools
-│   │   └── [ 156]  dt.fish
-│   ├── [4.0K]  aliases [25 entries exceeds filelimit, not opening dir]
+│   │   └── [ 197]  do-thing.fish
 │   └── [4.5K]  config
-│       └── [ 545]  fish_prompt.fish
+│       └── [ 546]  fish_prompt.fish
 ├── [ 13K]  alacritty
 │   └── [8.8K]  alacritty.yml
 ├── [9.0K]  conky
@@ -15,8 +18,8 @@
 │   └── [3.0K]  conky-dual.conf
 ├── [1.2K]  install.sh
 ├── [ 11K]  user
-│   ├── [1.5K]  .xinitrc
 │   ├── [1.7K]  .Xresources
+│   ├── [1.5K]  .xinitrc
 │   ├── [1.8K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
 │   ├── [  61]  .inputrc
@@ -25,8 +28,6 @@
 ├── [   8]  .gitignore
 ├── [8.0K]  emacs
 │   └── [4.0K]  init.el
-├── [4.8K]  repl
-│   └── [ 857]  .iex.exs
 ├── [6.0K]  zsh
 │   └── [2.0K]  .zshrc
 ├── [ 13K]  git
@@ -36,9 +37,9 @@
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
 ├── [130K]  vim
-│   ├── [4.0K]  usnippets [73 entries exceeds filelimit, not opening dir]
-│   ├── [ 17K]  .vimrc
+│   ├── [4.0K]  usnippets [74 entries exceeds filelimit, not opening dir]
 │   ├── [ 36K]  .plugs.vimrc
+│   ├── [ 17K]  .vimrc
 │   ├── [4.0K]  colors [88 entries exceeds filelimit, not opening dir]
 │   ├── [ 710]  filetype.vim
 │   ├── [7.5K]  skeletons
@@ -101,7 +102,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 313K used in 27 directories, 72 files
+ 313K used in 27 directories, 73 files
 ```
 
-> Generated on Wednesday, November 15, 2017 at 19:35:38 PM UTC.
+> Generated on Wednesday, November 22, 2017 at 07:05:05 AM UTC.
