@@ -933,6 +933,8 @@ Plug 'jonathanfilip/vim-lucius'
 Plug 'mwgkgk/vim-kalisi'
 Plug 'AlessandroYorba/Alduin'
 Plug 'google/vim-colorscheme-primary'
+Plug 'AlessandroYorba/Arcadia'
+Plug 'mwgkgk/SerialExperimentsLain'
 
 call plug#end()
 
