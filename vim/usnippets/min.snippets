@@ -1,0 +1,24 @@
+snippet if "if" i
+($1)
+(${2:${VISUAL}})
+($3)
+if
+endsnippet
+
+snippet case "case" b
+${1:${VISUAL}} (
+	(("help" in?) ("help in $1" puts!))
+	((true) ("something wrong with the $1" puts!))
+) case
+endsnippet
+
+snippet f "f" b
+( $0
+) :${1:name}
+endsnippet
+
+snippet while "while" b
+(${1:predicate?})
+( ${VISUAL}
+) while
+endsnippet
