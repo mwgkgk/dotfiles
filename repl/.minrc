@@ -1,4 +1,7 @@
+"|mi> " :prompt
+
 'clear-stack :kk
+'clear-stack :cc
 (get-stack puts!) :pp
 ('debug loglevel) :dd
 ('notice loglevel) :ddd
