@@ -37,39 +37,40 @@ pulseaudio --start &
 while true ; do
   date_local=$(date +" %a, %b %d %R" | xargs)
   # date_est=$(TZ=US/Eastern date +" %a, %b %d %R" | xargs)
-  date_pst=$(TZ=US/Pacific date +" %a, %b %d %R" | xargs)
+  # date_pst=$(TZ=US/Pacific date +" %a, %b %d %R" | xargs)
 
-  quake=""
-  if [ -f ~/.quakehidden ]; then
-    quake=": "
-  fi
+  # quake=""
+  # if [ -f ~/.quakehidden ]; then
+  #   quake=": "
+  # fi
 
-  mes=""
-  if [ -f ~/.xrootmes ]; then
-    mes="$(cat ~/.xrootmes) "
-  fi
+  # mes=""
+  # if [ -f ~/.xrootmes ]; then
+  #   mes="$(cat ~/.xrootmes) "
+  # fi
 
-  commits=""
-  if [ -f ~/.recent-commits ]; then
-    commits="$(wc -l < ~/.recent-commits) "
-  fi
+  # commits=""
+  # if [ -f ~/.recent-commits ]; then
+  #   commits="$(wc -l < ~/.recent-commits) "
+  # fi
 
-  mes_more=""
-  if [ -f ~/.xrootmes-more ]; then
-    mes_more="$(cat ~/.xrootmes-more) "
-  fi
+  # mes_more=""
+  # if [ -f ~/.xrootmes-more ]; then
+  #   mes_more="$(cat ~/.xrootmes-more) "
+  # fi
 
-  mood=""
-  if [ -f ~/.mood ]; then
-    mood="[$(cat ~/.mood)] "
-  fi
+  # mood=""
+  # if [ -f ~/.mood ]; then
+  #   mood="[$(cat ~/.mood)] "
+  # fi
 
   # pomo=""
   # if [ -f ~/.pomotimer ]; then
   #   pomo="$(head -n 1 ~/.pomotimer) "
   # fi
 
-  xsetroot -name "$mood$mes_more$mes$commits$quake$date_pst  $date_local"
+  # xsetroot -name "$mood$mes_more$mes$commits$quake$date_pst  $date_local"
+  xsetroot -name "$date_local"
   sleep 1
 done &
 
