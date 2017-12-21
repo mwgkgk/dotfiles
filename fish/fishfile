@@ -1,5 +1,6 @@
 ~/code/dotfiles/fish/aliases
 ~/code/dotfiles/fish/config
 ~/code/dotfiles/fish/tools
+fisherman/fnm
 fisherman/fzf
 fisherman/z
