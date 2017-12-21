@@ -1,45 +1,20 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [4.9K]  repl
-│   ├── [  85]  .minrc
-│   └── [ 857]  .iex.exs
-├── [ 17K]  fish
-│   ├── [ 110]  fishfile
-│   ├── [4.0K]  aliases [26 entries exceeds filelimit, not opening dir]
-│   ├── [4.2K]  tools
-│   │   └── [ 197]  do-thing.fish
-│   └── [4.5K]  config
-│       └── [ 546]  fish_prompt.fish
-├── [ 13K]  alacritty
-│   └── [8.8K]  alacritty.yml
-├── [9.0K]  conky
-│   ├── [1.9K]  conky.conf
-│   └── [3.0K]  conky-dual.conf
-├── [1.2K]  install.sh
-├── [ 11K]  user
-│   ├── [1.7K]  .Xresources
-│   ├── [1.5K]  .xinitrc
-│   ├── [1.8K]  .bash_aliases
-│   ├── [1.1K]  .bashrc
-│   ├── [  61]  .inputrc
-│   ├── [ 170]  .bash_profile
-│   └── [ 305]  .Xdefaults
-├── [   8]  .gitignore
-├── [8.0K]  emacs
-│   └── [4.0K]  init.el
-├── [6.0K]  zsh
-│   └── [2.0K]  .zshrc
-├── [ 13K]  git
-│   ├── [ 452]  .gitconfig
-│   └── [8.1K]  .git-templates
-│       └── [4.1K]  hooks
-│           └── [ 148]  post-commit
-├── [ 437]  Makefile
 ├── [130K]  vim
-│   ├── [4.0K]  usnippets [74 entries exceeds filelimit, not opening dir]
-│   ├── [ 36K]  .plugs.vimrc
 │   ├── [ 17K]  .vimrc
+│   ├── [ 36K]  .plugs.vimrc
+│   ├── [ 50K]  after
+│   │   ├── [4.3K]  ftplugin
+│   │   │   ├── [ 149]  text.vim
+│   │   │   ├── [  64]  java.vim
+│   │   │   ├── [  64]  html.vim
+│   │   │   └── [  64]  css.vim
+│   │   └── [ 41K]  syntax
+│   │       ├── [4.1K]  min.vim
+│   │       ├── [ 200]  scheme.vim
+│   │       └── [ 33K]  racket.vim
+│   ├── [4.0K]  usnippets [75 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  colors [88 entries exceeds filelimit, not opening dir]
 │   ├── [ 710]  filetype.vim
 │   ├── [7.5K]  skeletons
@@ -62,17 +37,42 @@
 │   │   ├── [ 174]  skeleton.sh
 │   │   ├── [ 144]  skeleton.py
 │   │   └── [  59]  skeleton.hy
-│   ├── [7.9K]  .oldconfigs.vimrc
-│   └── [ 50K]  after
-│       ├── [ 41K]  syntax
-│       │   ├── [4.1K]  min.vim
-│       │   ├── [ 200]  scheme.vim
-│       │   └── [ 33K]  racket.vim
-│       └── [4.3K]  ftplugin
-│           ├── [ 149]  text.vim
-│           ├── [  64]  java.vim
-│           ├── [  64]  html.vim
-│           └── [  64]  css.vim
+│   └── [7.9K]  .oldconfigs.vimrc
+├── [5.0K]  repl
+│   ├── [ 119]  .minrc
+│   └── [ 857]  .iex.exs
+├── [ 17K]  fish
+│   ├── [ 124]  fishfile
+│   ├── [4.0K]  aliases [27 entries exceeds filelimit, not opening dir]
+│   ├── [4.2K]  tools
+│   │   └── [ 214]  do-thing.fish
+│   └── [4.5K]  config
+│       └── [ 546]  fish_prompt.fish
+├── [ 13K]  alacritty
+│   └── [8.8K]  alacritty.yml
+├── [9.8K]  conky
+│   ├── [2.7K]  conky.conf
+│   └── [3.0K]  conky-dual.conf
+├── [1.2K]  install.sh
+├── [ 11K]  user
+│   ├── [1.5K]  .xinitrc
+│   ├── [1.7K]  .Xresources
+│   ├── [1.8K]  .bash_aliases
+│   ├── [1.1K]  .bashrc
+│   ├── [  61]  .inputrc
+│   ├── [ 170]  .bash_profile
+│   └── [ 305]  .Xdefaults
+├── [   8]  .gitignore
+├── [8.0K]  emacs
+│   └── [4.0K]  init.el
+├── [6.0K]  zsh
+│   └── [2.0K]  .zshrc
+├── [ 13K]  git
+│   ├── [ 452]  .gitconfig
+│   └── [8.1K]  .git-templates
+│       └── [4.1K]  hooks
+│           └── [ 148]  post-commit
+├── [ 437]  Makefile
 ├── [7.7K]  tmux
 │   └── [3.7K]  .tmux.conf
 ├── [ 38K]  vifm
@@ -102,7 +102,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 313K used in 27 directories, 73 files
+ 314K used in 27 directories, 73 files
 ```
 
-> Generated on Wednesday, November 22, 2017 at 07:05:05 AM UTC.
+> Generated on Thursday, December 21, 2017 at 15:38:16 PM UTC.
