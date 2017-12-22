@@ -389,6 +389,9 @@ nnoremap <silent> <Space>y :let @+=@"<CR>:echo 'Yanked ' .
 vnoremap <LeftRelease> "*y<LeftRelease>
 " Narrowregion-like:
 vnoremap <Leader>nr y<C-W>npk"_dd
+" Keep selected text selected when fixing indentation:
+vnoremap < <gv
+vnoremap > >gv
 " }}}
 " Source {{{
 autocmd vimrc FileType vim vnoremap <buffer> X y:execute @@<cr>:echo 'Sourced selection.'<cr>
