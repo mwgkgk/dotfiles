@@ -91,6 +91,7 @@ set wrap
 set linebreak
 set nocindent
 set cinoptions+=g1,h1
+set formatoptions+=j
 set breakindent
 autocmd vimrc BufRead,BufNewFile *.marko setfiletype html
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
