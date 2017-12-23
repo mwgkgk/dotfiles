@@ -111,9 +111,10 @@ omap gj V<Plug>(easymotion-j)
 " Don't use omap: many binds e.g. fugitive use c in operator-mode
 nmap dq dgL"
 nmap dQ dgH"a
+nmap cq ct"
+nmap cQ cT"
 nmap dc dgL)a
 nmap dC dgH(a
-nmap cq ct)
 " }}}
 
 Plug 'vim-scripts/marvim' "{{{
