@@ -91,7 +91,6 @@ set wrap
 set linebreak
 set nocindent
 set cinoptions+=g1,h1
-set formatoptions+=j
 set breakindent
 autocmd vimrc BufRead,BufNewFile *.marko setfiletype html
 autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -291,6 +290,7 @@ inoremap <C-c>j ↓
 inoremap <C-c>k ↑
 inoremap <C-c>h ←
 inoremap <C-c>l →
+inoremap <C-c>nn ñ
 " }}}
 " Normal-mode-related {{{
 " - Y to behave like C & D :
