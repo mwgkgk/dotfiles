@@ -1,0 +1,5 @@
+super + F12
+	pkill -USR1 -x sxhkd
+
+control + ~c
+	ctrl-c
