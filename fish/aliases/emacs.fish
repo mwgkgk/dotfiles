@@ -1,3 +1,3 @@
 function emacs
-  emacs --no-window-system $argv
+  /usr/bin/emacs --no-window-system $argv
 end
