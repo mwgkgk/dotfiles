@@ -3,3 +3,6 @@ super + F12
 
 control + ~c
 	ctrl-c
+
+alt + ~w
+	alt-w
