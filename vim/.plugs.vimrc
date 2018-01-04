@@ -760,7 +760,7 @@ let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
 " Sxhkd
-Plug 'kovetskiy/sxhkd-vim'
+Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 
 " Lisp
 Plug 'guns/vim-sexp' " {{{
@@ -910,6 +910,9 @@ Plug 'idris-hackers/idris-vim', { 'for' : 'idris' }
 
 " Lux
 Plug 'mwgkgk/lux-vim', { 'for' : 'lux' }
+
+" ATS
+Plug 'vmchale/ats-vim', { 'for' : 'ats' }
 
 " Local
 if filereadable(glob("~/.local.plugs.vimrc")) 
