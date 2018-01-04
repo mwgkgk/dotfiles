@@ -326,6 +326,8 @@ nmap <RightMouse> <LeftMouse><RightMouse>
 imap <RightMouse> <Esc><RightMouse>
 " Undo tabspace
 nnoremap <Tab><Space> u
+" Repeat macro with alt-y
+nnoremap <M-y> @@
 " }}}
 " Commandline-related {{{
 nnoremap <Leader>: :<C-P>
