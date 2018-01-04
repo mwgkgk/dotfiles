@@ -759,6 +759,9 @@ Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
+" Sxhkd
+Plug 'kovetskiy/sxhkd-vim'
+
 " Lisp
 Plug 'guns/vim-sexp' " {{{
 " Disable mapping hooks
