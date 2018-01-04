@@ -38,7 +38,7 @@ pulseaudio --start &
 sxhkd &
 
 while true ; do
-  date_local=$(date +"%R")
+  date_local=$(date +"%R %a, %b %d")
   # date_est=$(TZ=US/Eastern date +" %a, %b %d %R" | xargs)
   # date_pst=$(TZ=US/Pacific date +" %a, %b %d %R" | xargs)
 
