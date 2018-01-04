@@ -34,6 +34,9 @@ pulseaudio --start &
 # xrandr --output DVI-I-2 --auto
 # xrandr --output HDMI-0 --auto --primary --right-of DVI-I-2
 
+# Simple X Hotkey Daemon
+sxhkd &
+
 while true ; do
   date_local=$(date +"%R")
   # date_est=$(TZ=US/Eastern date +" %a, %b %d %R" | xargs)
