@@ -1,9 +1,11 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [130K]  vim
-│   ├── [ 17K]  .vimrc
+├── [4.1K]  sxhkd
+│   └── [  73]  sxhkdrc
+├── [131K]  vim
 │   ├── [ 36K]  .plugs.vimrc
+│   ├── [ 17K]  .vimrc
 │   ├── [ 50K]  after
 │   │   ├── [4.3K]  ftplugin
 │   │   │   ├── [ 149]  text.vim
@@ -50,12 +52,12 @@
 │       └── [ 546]  fish_prompt.fish
 ├── [ 13K]  alacritty
 │   └── [8.8K]  alacritty.yml
-├── [9.8K]  conky
+├── [9.7K]  conky
 │   ├── [2.7K]  conky.conf
 │   └── [3.0K]  conky-dual.conf
 ├── [1.2K]  install.sh
 ├── [ 11K]  user
-│   ├── [1.5K]  .xinitrc
+│   ├── [1.6K]  .xinitrc
 │   ├── [1.7K]  .Xresources
 │   ├── [1.8K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
@@ -102,7 +104,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 314K used in 27 directories, 73 files
+ 318K used in 28 directories, 74 files
 ```
 
-> Generated on Thursday, December 21, 2017 at 15:38:16 PM UTC.
+> Generated on Thursday, January  4, 2018 at 04:21:29 AM UTC.
