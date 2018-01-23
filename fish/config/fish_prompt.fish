@@ -16,7 +16,7 @@ function fish_prompt --description 'Write out the prompt'
 
     echo -n -s "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd)
 
-    # Line end if we're over half screen in length
+    # Line end if we're over half screen in width
     # Hardcode 16 to avoid recalculating
     if test (string length (prompt_pwd)) -gt (math (tput cols) / 2 - 16)
       printf "\e[K\n"
