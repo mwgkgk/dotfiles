@@ -14,5 +14,13 @@ function fish_prompt --description 'Write out the prompt'
             set suffix ' '
     end
 
-    echo -n -s "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd) (set_color normal) "$suffix"
+    echo -n -s "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd)
+
+    # Line end if we're over half screen in length
+    # Hardcode 16 to avoid recalculating
+    if test (string length (prompt_pwd)) -gt (math (tput cols) / 2 - 16)
+      printf "\e[K\n"
+    end
+
+    echo -n -s (set_color normal) "$suffix"
 end
