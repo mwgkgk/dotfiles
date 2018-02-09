@@ -28,7 +28,8 @@ URxvt*.background: #1b1b1b
 ! URxvt.background: [15]#000000
 ! URxvt*.cursorColor: #F76345
 ! URxvt*.cursorColor: #A75BC1
-URxvt*.cursorColor: #A08E6B
+! URxvt*.cursorColor: #A08E6B
+URxvt*.cursorColor: #995834
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
