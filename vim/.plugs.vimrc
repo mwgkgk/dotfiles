@@ -539,6 +539,7 @@ call submode#enter_with('ScrollStay', 'n', '', ']j', '3<C-E>')
 " call submode#enter_with('ScrollStay', 'n', '', ';j', '3<C-E>')
 call submode#map(       'ScrollStay', 'n', '',  'j', '3<C-E>')
 " }}}
+Plug 'kana/vim-niceblock'
 
 Plug 'sgur/vim-textobj-parameter'
 
