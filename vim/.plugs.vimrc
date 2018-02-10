@@ -757,6 +757,9 @@ cab fm SplitVifm
 nnoremap <F2> :SplitVifm<CR>
 " }}}
 
+Plug 'mattn/webapi-vim'
+Plug '7kfpun/finance.vim'
+
 " Many languages
 Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
