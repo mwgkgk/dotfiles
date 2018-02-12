@@ -181,7 +181,7 @@ nnoremap ] <nop>
 " Search-related {{{
 " nnoremap / /\v
 nnoremap <C-W>/ /<C-R>/
-" - Search peculiarities:
+" - Jump prev/next not leaving search command mode:
 cnoremap <C-N> <CR>/<C-P>
 cnoremap <C-O> <CR>NN/<C-P>
 " - Subsitute word under cursor
