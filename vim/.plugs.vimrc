@@ -622,18 +622,6 @@ nnoremap sa :Rg<Space>
 " }}}
 Plug 'junegunn/vim-peekaboo'
 
-Plug 't9md/vim-choosewin' " {{{
-let g:choosewin_label_align='center'
-let g:choosewin_label='ADFJKLGHQWERUIO'
-let g:choosewin_blink_on_land = 0
-let g:choosewin_statusline_replace = 0
-let g:choosewin_overlay_enable = 0
-nmap <Space>f <Plug>(choosewin)
-function! WinLabel()
-    let n = winnr() - 1
-    return g:choosewin_label[n]
-endfunction
-" }}}
 Plug 't9md/vim-textmanip' " {{{
 xmap <C-j> <Plug>(textmanip-move-down)
 xmap <C-k> <Plug>(textmanip-move-up)

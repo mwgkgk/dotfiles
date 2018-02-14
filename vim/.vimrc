@@ -157,7 +157,7 @@ endif
 
 " Statusline
 " the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-set statusline=\ %{exists('*WinLabel')?WinLabel():''}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %=\ %{expand('#:t')}\ %P
+set statusline=\ %{winnr()}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %=\ %{expand('#:t')}\ %P
 set laststatus=2 " Show even in last window
 
 " Paste/Nopaste
@@ -220,9 +220,9 @@ noremap <silent>  <C-W>gl :call WindowMove("l")<CR>
 " Close all
 nnoremap <C-W>Q :qa<CR>
 " Write
-nnoremap <C-W>w :w<CR>
+nnoremap <Space>w :w<CR>
 " Write & close
-nnoremap <C-W>W :wq<CR>
+nnoremap <Space>W :wq<CR>
 " Edit
 nnoremap <C-W>e :e <C-R>=expand('%:h').'/'<CR><C-D>
 nnoremap <Leader><C-W>e :e <C-R>=expand('%:h').'/'<CR><C-D>
@@ -239,6 +239,38 @@ nnoremap <Space>- 10<C-W>-
 nnoremap <C-w><C-w> <C-w>p
 " Fold everything:
 nnoremap z<Space> zM
+" Go to window by winnr()
+nnoremap <C-w>1 1<C-w>w
+nnoremap <C-w>2 2<C-w>w
+nnoremap <C-w>3 3<C-w>w
+nnoremap <C-w>4 4<C-w>w
+nnoremap <C-w>5 5<C-w>w
+nnoremap <C-w>6 6<C-w>w
+nnoremap <C-w>7 7<C-w>w
+nnoremap <C-w>8 8<C-w>w
+nnoremap <C-w>9 9<C-w>w
+
+nnoremap <C-w>010 10<C-w>w
+nnoremap <C-w>011 11<C-w>w
+nnoremap <C-w>012 12<C-w>w
+nnoremap <C-w>013 13<C-w>w
+nnoremap <C-w>014 14<C-w>w
+nnoremap <C-w>015 15<C-w>w
+nnoremap <C-w>016 16<C-w>w
+nnoremap <C-w>017 17<C-w>w
+nnoremap <C-w>018 18<C-w>w
+nnoremap <C-w>019 19<C-w>w
+
+nnoremap <C-w>020 20<C-w>w
+nnoremap <C-w>021 21<C-w>w
+nnoremap <C-w>022 22<C-w>w
+nnoremap <C-w>023 23<C-w>w
+nnoremap <C-w>024 24<C-w>w
+nnoremap <C-w>025 25<C-w>w
+nnoremap <C-w>026 26<C-w>w
+nnoremap <C-w>027 27<C-w>w
+nnoremap <C-w>028 28<C-w>w
+nnoremap <C-w>029 29<C-w>w
 " }}}
 " Insert-mode-related {{{
 " - Smaller undo chunks:

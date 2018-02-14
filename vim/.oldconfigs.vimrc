@@ -241,3 +241,15 @@ let g:rainbow_active = 0
 let g:rainbow_ctermfgs = ['104', '146', '217', '208', '250', '255']
 nnoremap <Leader>tR :RainbowToggle<CR>
 " }}}
+Plug 't9md/vim-choosewin' " {{{
+let g:choosewin_label_align='center'
+let g:choosewin_label='ADFJKLGHQWERUIO'
+let g:choosewin_blink_on_land = 0
+let g:choosewin_statusline_replace = 0
+let g:choosewin_overlay_enable = 0
+nmap <Space>f <Plug>(choosewin)
+function! WinLabel()
+    let n = winnr() - 1
+    return g:choosewin_label[n]
+endfunction
+" }}}
