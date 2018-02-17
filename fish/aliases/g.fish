@@ -1,3 +1,3 @@
 function g
-	git  $argv;
+	gold  $argv;
 end
