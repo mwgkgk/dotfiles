@@ -253,3 +253,13 @@ function! WinLabel()
     return g:choosewin_label[n]
 endfunction
 " }}}
+
+Plug 'mattn/webapi-vim'
+Plug '7kfpun/finance.vim' " {{{
+let g:finance_watchlist = ['AAPL', 'FB', 'AMZN', 'GOOG', 'BIDU']
+let g:finance_format = '{1. symbol}:	{2. price}	({3. volume})'
+let g:exchange_currencies = ['BTC', 'USD']
+nnoremap <F7> :Exchange<CR>
+nnoremap [15;2~ :Exchange ETH USD<CR>
+nnoremap [18;5~ :Finance<CR>
+" }}}
