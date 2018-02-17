@@ -386,6 +386,8 @@ let g:SignatureMap = {
 nnoremap <Leader>M M
 nmap M `]
 nmap U `[
+hi link SignatureMarkText Normal
+hi link SignatureMarkerText Normal
 " }}}
 Plug 'Chiel92/vim-autoformat' " {{{
 let g:formatdef_elmformat = '"elm-format --upgrade --yes --stdin"'
