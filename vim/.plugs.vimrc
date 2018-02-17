@@ -620,7 +620,12 @@ nnoremap s" :FzfFilesWithPreview ~/.marvim/<CR>
 command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 nnoremap sa :Rg<Space>
 " }}}
-Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/vim-peekaboo' " {{{
+let g:peekaboo_delay = 0
+let g:peekaboo_compact = 1
+let g:peekaboo_ins_prefix = "<C-q>" " Meaning, <C-q><C-r> for peekaboo ins mode
+let g:peekaboo_window = "vertical botright 80new"
+" }}}
 
 Plug 't9md/vim-textmanip' " {{{
 xmap <C-j> <Plug>(textmanip-move-down)
