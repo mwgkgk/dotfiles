@@ -418,7 +418,7 @@ nnoremap <Leader>v ^v$h
 vnoremap <C-Y> "+y
 vnoremap <Space>y "+y
 " - Propagate "" to "+ :
-nnoremap <silent> <Space>y :let @+=@"<CR>:echo 'Yanked ' .
+nnoremap <silent> <Leader>y :let @+=@"<CR>:echo 'Yanked ' .
             \ Pluralize('line', len(split(@+, '\n'))) . ' to +.'<CR>
 " - Yank to ":
 vnoremap <LeftRelease> "*y<LeftRelease>
