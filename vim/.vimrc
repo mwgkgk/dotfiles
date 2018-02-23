@@ -49,6 +49,9 @@ autocmd vimrc WinEnter * setlocal cursorline
 autocmd vimrc WinLeave * setlocal nocursorline
 set colorcolumn=80
 
+" Wrap h l normal
+set whichwrap+=h,l
+
 " Man.vim
 runtime! ftplugin/man.vim
 cab man Man
