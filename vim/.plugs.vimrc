@@ -403,10 +403,13 @@ let g:formatdef_cljfmt = '"lein cljfmt check"'
 let g:formatters_clojure = ['cljfmt']
 let g:formatdef_shfmt = '"shfmt -i 4 -p"'
 let g:formatters_sh = ['shfmt']
+let g:formatdef_rustfmt = '"rstfmt"'
+let g:formatters_rust = ['rustfmt']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,clojure,idris nnoremap <buffer> <Leader>z :Autoformat<CR>
-autocmd plugs.vimrc FileType sh nnoremap <buffer> <Leader>z :Autoformat<CR>
-autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Leader>z :Trailing<CR>
+autocmd plugs.vimrc FileType elm,haskell,clojure,idris nnoremap <buffer> <Space>f :Autoformat<CR>
+autocmd plugs.vimrc FileType sh nnoremap <buffer> <Space>f :Autoformat<CR>
+autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
+autocmd plugs.vimrc FileType rust nnoremap <buffer> <Space>f :Autoformat<CR>
 " }}}
 
 Plug 'terryma/vim-multiple-cursors' " {{{
