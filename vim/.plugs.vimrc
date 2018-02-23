@@ -109,14 +109,18 @@ map gj <Plug>(easymotion-j)
 omap gk V<Plug>(easymotion-k)
 omap gj V<Plug>(easymotion-j)
 " Don't use omap: many binds e.g. fugitive use c in operator-mode
-nmap dq dt"
-nmap dQ dT"
-nmap yq yt"
-nmap yQ yT"
-nmap cq ct"
-nmap cQ cT"
-nmap dc dgL)a
-nmap dC dgH(a
+nmap dq dgL"<Space><Esc>
+nmap dQ dgH"<Space><Esc>
+nmap yq ygL"<Space><Esc>
+nmap yQ ygH"<Space><Esc>
+nmap cq cgL"
+nmap cQ cgH"
+nmap dr dgL)<Space><Esc>
+nmap dR dgH(<Space><Esc>
+nmap yr ygL)<Space><Esc>
+nmap yR ygH(<Space><Esc>
+nmap cr cgL)
+nmap cR cgH(
 " }}}
 
 Plug 'vim-scripts/marvim' "{{{
