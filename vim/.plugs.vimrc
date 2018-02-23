@@ -632,7 +632,7 @@ nnoremap sa :Rg<Space>
 command! FzfGitModified call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --modified'}))
 nnoremap sF :FzfGitModified<CR>
 
-command! FzfDotfiles call fzf#run(fzf#wrap({'source': 'find ~/code/dotfiles/ -type f && find ~/ -maxdepth 1 -type f -name ".*"', 'sink':  'edit'}))
+command! FzfDotfiles call fzf#run(fzf#wrap({'source': 'find ~/code/dotfiles/ -type f && find ~/ -maxdepth 1 -type f -name ".*"'}))
 nnoremap sd :FzfDotfiles<CR>
 " }}}
 Plug 'junegunn/vim-peekaboo' " {{{
