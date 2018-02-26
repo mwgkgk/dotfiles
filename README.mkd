@@ -1,12 +1,22 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [ 39K]  fish
+│   ├── [ 184]  fishfile
+│   ├── [4.0K]  aliases [29 entries exceeds filelimit, not opening dir]
+│   ├── [ 22K]  completions
+│   │   └── [ 18K]  rustup.fish
+│   ├── [5.2K]  config
+│   │   ├── [ 477]  fish_user_key_bindings.fish
+│   │   └── [ 757]  fish_prompt.fish
+│   └── [4.2K]  tools
+│       └── [ 214]  do-thing.fish
 ├── [4.1K]  sxhkd
 │   └── [ 102]  sxhkdrc
-├── [132K]  vim
-│   ├── [ 17K]  .vimrc
-│   ├── [ 36K]  .plugs.vimrc
-│   ├── [8.3K]  .oldconfigs.vimrc
+├── [133K]  vim
+│   ├── [ 37K]  .plugs.vimrc
+│   ├── [ 18K]  .vimrc
+│   ├── [8.6K]  .oldconfigs.vimrc
 │   ├── [4.0K]  colors [90 entries exceeds filelimit, not opening dir]
 │   ├── [ 50K]  after
 │   │   ├── [4.3K]  ftplugin
@@ -43,14 +53,6 @@
 ├── [5.0K]  repl
 │   ├── [ 119]  .minrc
 │   └── [ 857]  .iex.exs
-├── [ 17K]  fish
-│   ├── [ 124]  fishfile
-│   ├── [5.1K]  config
-│   │   ├── [ 757]  fish_prompt.fish
-│   │   └── [ 406]  fish_user_key_bindings.fish
-│   ├── [4.0K]  aliases [27 entries exceeds filelimit, not opening dir]
-│   └── [4.2K]  tools
-│       └── [ 214]  do-thing.fish
 ├── [ 13K]  alacritty
 │   └── [8.8K]  alacritty.yml
 ├── [9.7K]  conky
@@ -58,7 +60,7 @@
 │   └── [3.0K]  conky-dual.conf
 ├── [1.2K]  install.sh
 ├── [ 11K]  user
-│   ├── [1.7K]  .Xresources
+│   ├── [1.8K]  .Xresources
 │   ├── [1.6K]  .xinitrc
 │   ├── [1.8K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
@@ -76,8 +78,8 @@
 │       └── [4.1K]  hooks
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
-├── [7.8K]  tmux
-│   └── [3.8K]  .tmux.conf
+├── [7.9K]  tmux
+│   └── [3.9K]  .tmux.conf
 ├── [ 38K]  vifm
 │   ├── [9.9K]  vifmrc
 │   └── [ 24K]  colors
@@ -105,7 +107,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 320K used in 28 directories, 75 files
+ 344K used in 29 directories, 76 files
 ```
 
-> Generated on Wednesday, February 14, 2018 at 15:49:13 PM UTC.
+> Generated on Monday, February 26, 2018 at 08:59:29 AM UTC.
