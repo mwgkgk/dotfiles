@@ -61,8 +61,8 @@ function fish_user_key_bindings
   bind \cg bind_fg
   bind \ew bind_ew
   bind \eo bind_eo
-  bind \eh bind_eh
-  bind \el bind_el
-  bind \ek bind_ek
-  bind \ej bind_ej
+  bind è bind_eh
+  bind ì bind_el
+  bind ë bind_ek
+  bind ê bind_ej
 end
