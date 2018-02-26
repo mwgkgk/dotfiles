@@ -319,6 +319,26 @@ Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/yankwin.vim'
 
+Plug 'vim-scripts/ingo-library'
+Plug 'vim-scripts/JumpToLastOccurrence' " {{{
+nnoremap <LocalLeader>f f
+onoremap <LocalLeader>f f
+nmap f <Plug>JumpToLastOccurrence_f
+omap f <Plug>JumpToLastOccurrence_f
+nnoremap <LocalLeader>F F
+onoremap <LocalLeader>F F
+nmap F <Plug>JumpToLastOccurrence_F
+omap F <Plug>JumpToLastOccurrence_F
+nnoremap <LocalLeader>t t
+onoremap <LocalLeader>t t
+nmap t <Plug>JumpToLastOccurrence_t
+omap t <Plug>JumpToLastOccurrence_t
+nnoremap <LocalLeader>T T
+onoremap <LocalLeader>T T
+nmap T <Plug>JumpToLastOccurrence_T
+omap T <Plug>JumpToLastOccurrence_T
+" }}}
+
 Plug 'szw/vim-maximizer' " {{{
 let g:maximizer_set_default_mapping = 0
 nnoremap <silent>Z :MaximizerToggle<CR>
@@ -595,7 +615,7 @@ nnoremap s<Space> :FzfBuffers<CR>
 
 nnoremap sK :FZF ~/.vim/skeletons/<CR>
 nnoremap sk :call fzf#run({'dir':'~/.vim/skeletons', 'sink':'%!cat', 'down': '~15%'})<CR>
-nnoremap T :FzfTags<CR>
+nnoremap sz :FzfTags<CR>
 nnoremap st :FzfFiletypes<CR>
 nnoremap sf :FzfGFiles<CR>
 nnoremap s; :FzfHistory:<CR>
