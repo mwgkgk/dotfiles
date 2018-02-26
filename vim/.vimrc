@@ -145,6 +145,8 @@ endif
 " Fix markdown
 hi clear markdownError
 hi link markdownError Normal
+hi clear markdownCode
+hi link markdownCode Normal
 hi clear markdownCodeBlock
 hi link markdownCodeBlock Normal
 hi clear markdownItalic
