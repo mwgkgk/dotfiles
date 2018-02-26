@@ -17,7 +17,13 @@ function bind_dollar
   end
 end
 
+function bind_fg
+  fg
+  commandline -f repaint
+end
+
 function fish_user_key_bindings
   bind ! bind_bang
   bind '$' bind_dollar
+  bind \cg bind_fg
 end
