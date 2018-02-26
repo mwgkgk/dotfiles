@@ -143,7 +143,11 @@ else
 endif
 
 " Fix markdown
+hi clear markdownError
 hi link markdownError Normal
+hi clear markdownCodeBlock
+hi link markdownCodeBlock Normal
+hi clear markdownItalic
 hi link markdownItalic Normal
 
 " GUI tweaks
