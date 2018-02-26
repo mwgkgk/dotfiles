@@ -405,11 +405,11 @@ let g:formatdef_shfmt = '"shfmt -i 4 -p"'
 let g:formatters_sh = ['shfmt']
 let g:formatdef_rustfmt = '"rstfmt"'
 let g:formatters_rust = ['rustfmt']
+let g:formatdef_ocamlformat = '"ocamlformat"'
+let g:formatters_ocaml = ['ocamlformat']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,clojure,idris nnoremap <buffer> <Space>f :Autoformat<CR>
-autocmd plugs.vimrc FileType sh nnoremap <buffer> <Space>f :Autoformat<CR>
+autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh nnoremap <buffer> <Space>f :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
-autocmd plugs.vimrc FileType rust nnoremap <buffer> <Space>f :Autoformat<CR>
 " }}}
 
 Plug 'terryma/vim-multiple-cursors' " {{{
