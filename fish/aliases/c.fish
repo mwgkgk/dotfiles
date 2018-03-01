@@ -10,5 +10,4 @@ function c --description 'alias c cd'
       cd $matching_dirs[1]
     end
   end
-  ls
 end
