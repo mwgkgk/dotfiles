@@ -23,7 +23,10 @@ function bind_fg
 end
 
 function bind_ew
-  cd (vifm --choose-dir - .)
+  set -l where_to (fd -t d "" ~ | fzf +m --height 15 --reverse)
+  if test -n "$where_to"
+    cd $where_to
+  end
   commandline -f repaint
 end
 
@@ -38,8 +41,10 @@ function bind_eh
 end
 
 function bind_el
-  # We'll change this to fzf
-  ls -1
+  set -l where_to (fd -t d | fzf +m --height 15 --reverse)
+  if test -n "$where_to"
+    cd $where_to
+  end
   commandline -f repaint
 end
 
