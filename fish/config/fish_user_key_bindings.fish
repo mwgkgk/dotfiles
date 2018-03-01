@@ -69,6 +69,12 @@ function bind_ed
   commandline -f repaint
 end
 
+function bind_ev
+  fd -t f --hidden | fzf +m --height 15 --reverse | read -l result
+  and v $result
+  commandline -f repaint
+end
+
 function fish_user_key_bindings
   bind ! bind_bang
   bind '$' bind_dollar
@@ -81,4 +87,5 @@ function fish_user_key_bindings
   bind ê bind_ej
   bind \cr bind_cr
   bind \ed bind_ed
+  bind \ev bind_ev
 end
