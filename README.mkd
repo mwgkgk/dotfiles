@@ -1,14 +1,14 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [ 39K]  fish
-│   ├── [ 184]  fishfile
+├── [ 41K]  fish
+│   ├── [ 170]  fishfile
 │   ├── [4.0K]  aliases [29 entries exceeds filelimit, not opening dir]
 │   ├── [ 22K]  completions
 │   │   └── [ 18K]  rustup.fish
-│   ├── [5.2K]  config
-│   │   ├── [ 477]  fish_user_key_bindings.fish
-│   │   └── [ 757]  fish_prompt.fish
+│   ├── [6.7K]  config
+│   │   ├── [1.8K]  fish_user_key_bindings.fish
+│   │   └── [ 861]  fish_prompt.fish
 │   └── [4.2K]  tools
 │       └── [ 214]  do-thing.fish
 ├── [4.1K]  sxhkd
@@ -78,8 +78,8 @@
 │       └── [4.1K]  hooks
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
-├── [7.9K]  tmux
-│   └── [3.9K]  .tmux.conf
+├── [8.1K]  tmux
+│   └── [4.1K]  .tmux.conf
 ├── [ 38K]  vifm
 │   ├── [9.9K]  vifmrc
 │   └── [ 24K]  colors
@@ -107,7 +107,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 344K used in 29 directories, 76 files
+ 345K used in 29 directories, 76 files
 ```
 
-> Generated on Monday, February 26, 2018 at 08:59:29 AM UTC.
+> Generated on Thursday, March  1, 2018 at 13:45:49 PM UTC.
