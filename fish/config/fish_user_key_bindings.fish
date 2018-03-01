@@ -60,6 +60,13 @@ function bind_ek
   commandline -f repaint
 end
 
+function bind_cr
+  set -l cmdline (commandline)
+  history -z | fzf +m --height 15 --reverse --toggle-sort=ctrl-r --read0 --tiebreak=index -q "$cmdline" | perl -pe 'chomp if eof' | read -lz result
+  and commandline -- $result
+  commandline -f repaint
+end
+
 function fish_user_key_bindings
   bind ! bind_bang
   bind '$' bind_dollar
@@ -70,4 +77,5 @@ function fish_user_key_bindings
   bind ì bind_el
   bind ë bind_ek
   bind ê bind_ej
+  bind \cr bind_cr
 end
