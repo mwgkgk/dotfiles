@@ -23,10 +23,8 @@ function bind_fg
 end
 
 function bind_ew
-  set -l where_to (fd -t d "" ~ | fzf +m --height 15 --reverse)
-  if test -n "$where_to"
-    cd $where_to
-  end
+  fd -t d "" ~ | fzf +m --height 15 --reverse | read -l result
+  and cd $result
   commandline -f repaint
 end
 
@@ -41,10 +39,8 @@ function bind_eh
 end
 
 function bind_el
-  set -l where_to (fd -t d | fzf +m --height 15 --reverse)
-  if test -n "$where_to"
-    cd $where_to
-  end
+  fd -t d | fzf +m --height 15 --reverse | read -l result
+  and cd $result
   commandline -f repaint
 end
 
@@ -67,6 +63,12 @@ function bind_cr
   commandline -f repaint
 end
 
+function bind_ed
+  find-dots | fzf +m --height 15 --reverse | read -l result
+  and v $result
+  commandline -f repaint
+end
+
 function fish_user_key_bindings
   bind ! bind_bang
   bind '$' bind_dollar
@@ -78,4 +80,5 @@ function fish_user_key_bindings
   bind ë bind_ek
   bind ê bind_ej
   bind \cr bind_cr
+  bind \ed bind_ed
 end
