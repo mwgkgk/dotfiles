@@ -99,7 +99,7 @@ map gl <Plug>(easymotion-f)
 map gh <Plug>(easymotion-F)
 map gL <Plug>(easymotion-t)
 map gH <Plug>(easymotion-T)
-nmap t <Plug>(easymotion-sn)
+nmap gt <Plug>(easymotion-sn)
 
 nnoremap j gj
 nnoremap k gk
