@@ -27,7 +27,17 @@ function bind_co
   commandline -f repaint
 end
 
-# hjkl navigation:
+function bind_ef
+  set -l cmdline (commandline)
+  if test -z "$cmdline"
+    fm .
+    commandline -f repaint
+  else
+    commandline -f forward-word
+  end
+end
+
+# HJKL-navigation:
 
 function bind_eh
   cd ..
@@ -93,8 +103,10 @@ function fish_user_key_bindings
   bind \cg bind_fg
   # C-o to jump back
   bind \co bind_co
+  # M-f to open fm . or forward-word
+  bind \ef bind_ef
 
-  # hjkl navigation:
+  # HJKL-navigation:
   bind è bind_eh
   # bind ì bind_el
   bind ê bind_ej
