@@ -44,6 +44,13 @@ function bind_eh
   commandline -f repaint
 end
 
+function bind_el
+  set -l pwd_basename (basename $PWD)
+  find ./ -mindepth 1 -maxdepth 1 -type d | env LC_ALL=C sort | tail -n 1 | read -l result
+  and cd $result
+  commandline -f repaint
+end
+
 function bind_ej
   set -l pwd_basename (basename $PWD)
   cd (find ../ -mindepth 1 -maxdepth 1 -type d | env LC_ALL=C sort | grep -A1 -F /$pwd_basename | tail -n 1)
@@ -108,7 +115,7 @@ function fish_user_key_bindings
 
   # HJKL-navigation:
   bind è bind_eh
-  # bind ì bind_el
+  bind ì bind_el
   bind ê bind_ej
   bind ë bind_ek
 
