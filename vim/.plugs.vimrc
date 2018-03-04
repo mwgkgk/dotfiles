@@ -768,6 +768,8 @@ cab fm SplitVifm
 nnoremap <F2> :SplitVifm<CR>
 " }}}
 
+Plug 'vim-utils/vim-man'
+
 " Many languages
 Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
