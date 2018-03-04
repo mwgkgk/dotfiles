@@ -46,13 +46,13 @@ end
 
 function bind_ej
   set -l pwd_basename (basename $PWD)
-  cd (find ../ -mindepth 1 -maxdepth 1 -type d | sort | grep -A1 -F $pwd_basename | tail -n 1)
+  cd (find ../ -mindepth 1 -maxdepth 1 -type d | env LC_ALL=C sort | grep -A1 -F /$pwd_basename | tail -n 1)
   commandline -f repaint
 end
 
 function bind_ek
   set -l pwd_basename (basename $PWD)
-  cd (find ../ -mindepth 1 -maxdepth 1 -type d | sort | grep -B1 -F $pwd_basename | head -n 1)
+  cd (find ../ -mindepth 1 -maxdepth 1 -type d | env LC_ALL=C sort | grep -B1 -F /$pwd_basename | head -n 1)
   commandline -f repaint
 end
 
