@@ -22,16 +22,12 @@ function bind_fg
   commandline -f repaint
 end
 
-function bind_ew
-  fd -t d "" ~ | fzf +m --height 15 --reverse | read -l result
-  and cd $result
-  commandline -f repaint
-end
-
-function bind_eo
+function bind_co
   cd -
   commandline -f repaint
 end
+
+# hjkl navigation:
 
 function bind_eh
   cd ..
@@ -50,22 +46,11 @@ function bind_ek
   commandline -f repaint
 end
 
-function bind_cr
-  set -l cmdline (commandline)
-  history -z | fzf +m --height 15 --reverse --toggle-sort=ctrl-r --read0 --tiebreak=index -q "$cmdline" | perl -pe 'chomp if eof' | read -lz result
-  and commandline -- $result
-  commandline -f repaint
-end
+# Fzf misc:
 
-function bind_ed
-  find-dots | fzf +m --height 15 --reverse | read -l result
-  and v $result
-  commandline -f repaint
-end
-
-function bind_ev
-  fd -t f --hidden | fzf +m --height 15 --reverse | read -l result
-  and v $result
+function bind_ew
+  fd -t d "" ~ | fzf +m --height 15 --reverse | read -l result
+  and cd $result
   commandline -f repaint
 end
 
@@ -75,18 +60,54 @@ function bind_ec
   commandline -f repaint
 end
 
+function bind_cr
+  set -l cmdline (commandline)
+  history -z | fzf +m --height 15 --reverse --toggle-sort=ctrl-r --read0 --tiebreak=index -q "$cmdline" | perl -pe 'chomp if eof' | read -lz result
+  and commandline -- $result
+  commandline -f repaint
+end
+
+function bind_ed
+  set -l cmdline (commandline)
+  if test -z "$cmdline"
+    find-dots | fzf +m --height 15 --reverse | read -l result
+    and v $result
+    commandline -f repaint
+  else
+    commandline -f kill-word
+  end
+end
+
+function bind_ev
+  fd -t f --hidden | fzf +m --height 15 --reverse | read -l result
+  and v $result
+  commandline -f repaint
+end
+
 function fish_user_key_bindings
+  # Emulate bash: !!, !$
   bind ! bind_bang
   bind '$' bind_dollar
+
+  # C-g to fg
   bind \cg bind_fg
-  bind \ew bind_ew
-  bind \eo bind_eo
+  # C-o to jump back
+  bind \co bind_co
+
+  # hjkl navigation:
   bind è bind_eh
   # bind ì bind_el
-  bind ë bind_ek
   bind ê bind_ej
-  bind \cr bind_cr
-  bind \ed bind_ed
-  bind \ev bind_ev
+  bind ë bind_ek
+
+  # M-w to fzf-cd from ~
+  bind \ew bind_ew
+  # M-c to fzf-cd from .
   bind \ec bind_ec
+  # C-r to fzf-history
+  bind \cr bind_cr
+  # M-d to fzf through dotfiles, or kill-word
+  bind \ed bind_ed
+  # M-v to fzf-vim .
+  bind \ev bind_ev
 end
