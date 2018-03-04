@@ -309,7 +309,8 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Sample mappings
 
-nmap S :shell<cr>
+" nmap S :shell<cr>
+nmap S :!fish<cr>
 nmap s :sort<cr>
 nmap w :view<cr>
 nmap o :!gvim --remote-tab-silent %f<cr>
