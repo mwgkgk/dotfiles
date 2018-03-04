@@ -143,8 +143,8 @@ command umount udiskie-umount %f
 command getphotos gphoto2 --get-all-files
 command mkcd :mkdir %a | :cd %a
 command C :mkdir %a | :cd %a
-command mkdatedir !mkdir E.$(date -I).%a
-command mktimedir !mkdir E.$(date +'%%Y-%%m-%%d.%%H-%%M').%a
+command mkdatedir !mkdatedir %a
+command mktimedir !mktimedir %a
 command FF !firefox-default %f &
 
 " The file type is for the default programs to be used with
