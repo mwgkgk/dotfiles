@@ -6,14 +6,35 @@
 │   ├── [4.0K]  aliases [29 entries exceeds filelimit, not opening dir]
 │   ├── [ 22K]  completions
 │   │   └── [ 18K]  rustup.fish
-│   ├── [6.7K]  config
-│   │   ├── [1.8K]  fish_user_key_bindings.fish
+│   ├── [7.5K]  config
+│   │   ├── [2.6K]  fish_user_key_bindings.fish
 │   │   └── [ 861]  fish_prompt.fish
 │   └── [4.2K]  tools
 │       └── [ 214]  do-thing.fish
 ├── [4.1K]  sxhkd
 │   └── [ 102]  sxhkdrc
 ├── [133K]  vim
+│   ├── [7.5K]  skeletons
+│   │   ├── [  14]  skeleton.dash
+│   │   ├── [ 100]  skeleton.guile.scm
+│   │   ├── [ 159]  skeleton.lux
+│   │   ├── [ 100]  skeleton.tcl
+│   │   ├── [ 145]  skeleton.ipkg
+│   │   ├── [  96]  skeleton.gotask.yml
+│   │   ├── [ 739]  skeleton.getopt.guile.scm
+│   │   ├── [ 133]  skeleton.racket.rkt
+│   │   ├── [ 275]  skeleton.f.gotask.yml
+│   │   ├── [  23]  skeleton.urn.lisp
+│   │   ├── [ 164]  skeleton.f.sh.
+│   │   ├── [ 209]  skeleton.kb.mkd.
+│   │   ├── [ 140]  skeleton.hs
+│   │   ├── [  54]  skeleton.plain.hs.
+│   │   ├── [   9]  skeleton.mkd
+│   │   ├── [  50]  skeleton.idr
+│   │   ├── [ 834]  skeleton.elm
+│   │   ├── [ 174]  skeleton.sh
+│   │   ├── [ 144]  skeleton.py
+│   │   └── [  59]  skeleton.hy
 │   ├── [ 37K]  .plugs.vimrc
 │   ├── [ 18K]  .vimrc
 │   ├── [8.6K]  .oldconfigs.vimrc
@@ -29,27 +50,7 @@
 │   │       ├── [ 200]  scheme.vim
 │   │       └── [ 33K]  racket.vim
 │   ├── [4.0K]  usnippets [75 entries exceeds filelimit, not opening dir]
-│   ├── [ 710]  filetype.vim
-│   └── [7.5K]  skeletons
-│       ├── [ 100]  skeleton.guile.scm
-│       ├── [ 159]  skeleton.lux
-│       ├── [ 100]  skeleton.tcl
-│       ├── [ 145]  skeleton.ipkg
-│       ├── [  96]  skeleton.gotask.yml
-│       ├── [ 739]  skeleton.getopt.guile.scm
-│       ├── [ 133]  skeleton.racket.rkt
-│       ├── [ 275]  skeleton.f.gotask.yml
-│       ├── [  23]  skeleton.urn.lisp
-│       ├── [ 164]  skeleton.f.sh.
-│       ├── [ 209]  skeleton.kb.mkd.
-│       ├── [ 140]  skeleton.hs
-│       ├── [  54]  skeleton.plain.hs.
-│       ├── [   9]  skeleton.mkd
-│       ├── [  50]  skeleton.idr
-│       ├── [ 834]  skeleton.elm
-│       ├── [ 174]  skeleton.sh
-│       ├── [ 144]  skeleton.py
-│       └── [  59]  skeleton.hy
+│   └── [ 710]  filetype.vim
 ├── [5.0K]  repl
 │   ├── [ 119]  .minrc
 │   └── [ 857]  .iex.exs
@@ -81,7 +82,7 @@
 ├── [8.1K]  tmux
 │   └── [4.1K]  .tmux.conf
 ├── [ 38K]  vifm
-│   ├── [9.9K]  vifmrc
+│   ├── [9.8K]  vifmrc
 │   └── [ 24K]  colors
 │       ├── [3.2K]  Day.vifm
 │       ├── [1.5K]  snowwhite.vifm
@@ -107,7 +108,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 345K used in 29 directories, 76 files
+ 345K used in 29 directories, 77 files
 ```
 
-> Generated on Thursday, March  1, 2018 at 13:45:49 PM UTC.
+> Generated on Sunday, March  4, 2018 at 13:32:53 PM UTC.
