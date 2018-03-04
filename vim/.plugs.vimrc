@@ -322,6 +322,8 @@ Plug 'AndrewRadev/yankwin.vim'
 Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/JumpToLastOccurrence'
 
+Plug 'rhysd/clever-f.vim'
+
 Plug 'szw/vim-maximizer' " {{{
 let g:maximizer_set_default_mapping = 0
 nnoremap <silent>Z :MaximizerToggle<CR>
