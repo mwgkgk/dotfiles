@@ -93,7 +93,7 @@ function bind_ed
   set -l cmdline (commandline)
   if test -z "$cmdline"
     find-dots | fzf +m --height 15 --reverse | read -l result
-    and v $result
+    and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
   else
     commandline -f kill-word
@@ -102,7 +102,7 @@ end
 
 function bind_ev
   fd -t f --hidden | fzf +m --height 15 --reverse | read -l result
-  and v $result
+  and commandline -- "v $result" ;and commandline -f execute
   commandline -f repaint
 end
 
