@@ -770,7 +770,9 @@ cab fm SplitVifm
 nnoremap <F2> :SplitVifm<CR>
 " }}}
 
-Plug 'vim-utils/vim-man'
+Plug 'vim-utils/vim-man' " {{{
+cab man Man
+" }}}
 
 " Many languages
 Plug 'sheerun/vim-polyglot' " {{{
