@@ -348,6 +348,8 @@ command! InstallHooks :silent! ProjectRootExe ln -s ~/.git-templates/hooks/* .
 " - Quaketerm
 command! QuakeTerm :ProjectRootExe :AsyncRun add_to_quaketerm "r %:."
 nnoremap <Leader><LocalLeader> :QuakeTerm<CR>
+" Deps
+autocmd plugs.vimrc FileType rust nnoremap <Del> :ProjectRootExe :tabe Cargo.toml<CR>G
 " }}}
 
 Plug 'Valloric/ListToggle' " {{{
