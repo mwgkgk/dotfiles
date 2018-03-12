@@ -63,6 +63,11 @@ function bind_ek
   commandline -f repaint
 end
 
+function bind_eo
+  echo ;and ls
+  commandline -f repaint
+end
+
 # Fzf misc:
 
 function bind_ew
@@ -113,11 +118,14 @@ function fish_user_key_bindings
   # M-f to open fm . or forward-word
   bind \ef bind_ef
 
-  # HJKL-navigation:
+  # M- HJKL-navigation:
   bind è bind_eh
   bind ì bind_el
   bind ê bind_ej
   bind ë bind_ek
+
+  # M-o to ls
+  bind \eo bind_eo
 
   # M-w to fzf-cd from ~
   bind \ew bind_ew
