@@ -150,6 +150,7 @@ noremap <silent> <Plug>CycleFallbackPrev <C-X>
 let g:cycle_default_groups = [
             \   [['true', 'false']],
             \   [['and', 'or']],
+            \   [['+', '-']],
             \   [['{:}', '[:]', '(:)'], 'sub_pairs'],
             \   [['  ', '. ', '..', '.:', '::']],
             \   [['today', 'tonight', 'tomorrow']],
