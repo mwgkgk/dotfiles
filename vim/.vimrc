@@ -97,6 +97,7 @@ autocmd vimrc Filetype markdown,python setlocal tw=79
 autocmd vimrc Filetype html,htmldjango setlocal tw=0
 autocmd vimrc BufNewFile,BufRead *.r2,*.r3,*.rbl,*.reb,*.red setfiletype rebol
 autocmd vimrc BufNewFile,BufRead *.ipkg setfiletype idris
+autocmd vimrc Filetype ocaml setlocal commentstring=(*%s*)
 
 " Whitespace
 set tabstop=2
