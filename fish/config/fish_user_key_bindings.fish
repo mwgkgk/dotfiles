@@ -68,6 +68,11 @@ function bind_eo
   commandline -f repaint
 end
 
+function bind_ei
+  echo ;and git status
+  commandline -f repaint
+end
+
 # Fzf misc:
 
 function bind_ew
@@ -126,6 +131,8 @@ function fish_user_key_bindings
 
   # M-o to ls
   bind \eo bind_eo
+  # M-i to git status
+  bind \ei bind_ei
 
   # M-w to fzf-cd from ~
   bind \ew bind_ew
