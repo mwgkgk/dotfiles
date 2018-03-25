@@ -1,9 +1,9 @@
-snippet i "i" b
-use ${1:std::io};
+snippet u "use" b
+use ${1:std::${2:io}};
 endsnippet
 
 snippet /(\s+)p/ "println" ir
-`!p snip.rv = match.group(1)`println!("$1");$0
+`!p snip.rv = match.group(1)`println!("$2{}", ${1:var});$0
 endsnippet
 
 snippet .ex "expect" i
@@ -25,4 +25,16 @@ endsnippet
 snippet Ok "Ok" b
 Ok(num) => num,
 Err(_) => continue,
+endsnippet
+
+snippet mod "mod" b
+mod ${1:network} {
+	$0
+}
+endsnippet
+
+snippet f "f" b
+fn ${1:connect}($2) {
+	$0
+}
 endsnippet

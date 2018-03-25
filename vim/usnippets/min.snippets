@@ -22,3 +22,11 @@ snippet while "while" b
 ( ${VISUAL}
 ) while
 endsnippet
+
+# Transform to lowercase, don't capture the colon. If whitespace exists,
+# replace it with a single dash. Translate "Testing" -> "test", if present at
+# the start of the string.
+snippet t "test" b
+( "${1:name}" :testcase
+) :${1/(^Testing)?([a-zA-Z0-9]*):?(\s*)/(?1:test)\L$2\E(?3:-)/g}
+endsnippet
