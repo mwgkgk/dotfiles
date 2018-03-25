@@ -81,7 +81,7 @@ function bind_ew
   commandline -f repaint
 end
 
-function bind_ec
+function bind_ee
   fd -t d | fzf +m --height 15 --reverse | read -l result
   and cd $result
   commandline -f repaint
@@ -137,11 +137,14 @@ function fish_user_key_bindings
   # M-w to fzf-cd from ~
   bind \ew bind_ew
   # M-c to fzf-cd from .
-  bind \ec bind_ec
+  bind \ee bind_ee
   # C-r to fzf-history
   bind \cr bind_cr
   # M-d to fzf through dotfiles, or kill-word
   bind \ed bind_ed
   # M-v to fzf-vim .
   bind \ev bind_ev
+
+  # Move \ee to \ec
+  bind \ec edit_command_buffer
 end
