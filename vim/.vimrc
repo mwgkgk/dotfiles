@@ -127,7 +127,10 @@ set iskeyword+=-
 
 " Omni :
 " set omnifunc=syntaxcomplete#Complete
-inoremap <C-x><C-x> <C-x><C-o>
+
+inoremap <M-w> <C-x><C-o>
+inoremap <M-q> <C-p>
+inoremap <M-e> <C-n>
 
 " Only highlight syntax on the first 200 columns:
 set synmaxcol=200
