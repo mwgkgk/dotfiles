@@ -908,6 +908,9 @@ autocmd plugs.vimrc FileType lfe set lisp
 
 " Rust
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
+Plug 'racer-rust/vim-racer', { 'for' : 'rust' } " {{{
+let g:racer_experimental_completer = 1
+" }}}
 
 " JS
 Plug 'pangloss/vim-javascript'
