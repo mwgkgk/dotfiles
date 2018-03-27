@@ -152,7 +152,7 @@ if &background=='light'
   if &t_Co==256
     " 256color light terminal support here
 
-    hi Normal		ctermfg=16	ctermbg=254	cterm=NONE
+    hi Normal		ctermfg=235	ctermbg=254	cterm=NONE
     " Comment/Uncomment the following line to disable/enable transparency
     "hi Normal		ctermfg=16	ctermbg=NONE	cterm=NONE
     hi Search		ctermfg=NONE	ctermbg=231	cterm=NONE
