@@ -710,6 +710,16 @@ endfunction
 command! Spelling call Spelling()
 nnoremap <Space><Enter> :call Spelling()<CR>
 " }}}
+" Vsplit tag {{{
+function! FollowTag()
+  if !exists("w:tagbrowse")
+    vsplit
+    let w:tagbrowse=1
+  endif
+  execute "tag " . expand("<cword>")
+endfunction
+nnoremap <Leader>} :call FollowTag()<CR>
+" }}}
 
 " Commands 
 " Commands {{{
