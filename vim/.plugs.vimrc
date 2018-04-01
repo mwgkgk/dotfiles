@@ -353,6 +353,9 @@ command! QuakeTerm :ProjectRootExe :AsyncRun add_to_quaketerm "r %:."
 nnoremap <Leader><LocalLeader> :QuakeTerm<CR>
 " Deps
 autocmd plugs.vimrc FileType rust nnoremap <Del> :ProjectRootExe :tabe Cargo.toml<CR>G
+" Tags
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
+autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
 " }}}
 
 Plug 'Valloric/ListToggle' " {{{
