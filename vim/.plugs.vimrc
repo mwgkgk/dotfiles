@@ -76,6 +76,7 @@ let g:ale_linters = {'haskell': ['stack-ghc']}
 let g:ale_sign_error = '>'
 let g:ale_sign_warning = '!'
 let g:ale_lint_on_save = 1
+let g:ale_set_highlights = 0
 nmap <silent> <Leader>S <Plug>(ale_previous_wrap)
 nmap <silent> <Leader>s <Plug>(ale_next_wrap)
 " }}}
