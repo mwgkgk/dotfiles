@@ -69,6 +69,19 @@ nnoremap <silent> <F4> :TagbarOpen fjc<CR>
 let g:tagbar_singleclick = 1
 let g:tagbar_foldlevel = 1
 let g:tagbar_left = 1
+let g:tagbar_type_rust = {
+      \ 'ctagstype' : 'rust',
+      \ 'kinds' : [
+      \'T:types,type definitions',
+      \'f:functions,function definitions',
+      \'g:enum,enumeration names',
+      \'s:structure names',
+      \'m:modules,module names',
+      \'c:consts,static constants',
+      \'t:traits',
+      \'i:impls,trait implementations',
+      \]
+      \}
 " }}}
 
 Plug 'w0rp/ale' " {{{ lint
