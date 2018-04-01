@@ -17,7 +17,7 @@ hi Identifier   cterm=none ctermfg=231
 hi Ignore                      ctermfg=black
 hi PreProc      term=underline ctermfg=176
 hi Search       cterm=none ctermbg=121
-hi Special      cterm=none      ctermfg=136
+hi Special      cterm=none      ctermfg=110
 hi Statement    cterm=none      ctermfg=187
 hi Type                        ctermfg=195
 hi Error        term=reverse   ctermbg=Red    ctermfg=White
