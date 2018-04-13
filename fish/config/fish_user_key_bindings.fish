@@ -18,7 +18,8 @@ function bind_dollar
 end
 
 function bind_fg
-  fg
+  commandline -f kill-whole-line
+  echo ;and fg
   commandline -f repaint
 end
 
@@ -111,6 +112,16 @@ function bind_ev
   commandline -f repaint
 end
 
+function bind_enter
+  set -l cmdline (commandline)
+  if test -z (string trim "$cmdline")
+    echo ;and fg
+    commandline -f repaint
+  else
+    commandline -f execute
+  end
+end
+
 function fish_user_key_bindings
   # Emulate bash: !!, !$
   bind ! bind_bang
@@ -147,4 +158,7 @@ function fish_user_key_bindings
 
   # Move \ee to \ec
   bind \ec edit_command_buffer
+
+  # Special CR
+  bind \r bind_enter
 end
