@@ -663,10 +663,9 @@ nnoremap sd :FzfDotfiles<CR>
 nnoremap <M-d> :FzfDotfiles<CR>
 " }}}
 Plug 'junegunn/vim-peekaboo' " {{{
-let g:peekaboo_delay = 0
+let g:peekaboo_delay = 400
 let g:peekaboo_compact = 1
 let g:peekaboo_ins_prefix = "<C-q>" " Meaning, <C-q><C-r> for peekaboo ins mode
-let g:peekaboo_window = "vertical botright 80new"
 " }}}
 
 Plug 't9md/vim-textmanip' " {{{
