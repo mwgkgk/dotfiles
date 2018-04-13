@@ -161,4 +161,5 @@ function fish_user_key_bindings
 
   # Special CR
   bind \r bind_enter
+  bind \n bind_enter
 end
