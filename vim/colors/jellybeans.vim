@@ -315,9 +315,9 @@ if version >= 700
   call s:X("CursorColumn","","1c1c1c","","",s:termBlack)
   call s:X("MatchParen","ffffff","80a090","bold","","DarkCyan")
 
-  call s:X("TabLine","000000","b0b8c0","italic","",s:termBlack)
+  call s:X("TabLine","000000","3a3a3a","italic","",s:termBlack)
   call s:X("TabLineFill","9098a0","","","",s:termBlack)
-  call s:X("TabLineSel","000000","f0f0f0","italic,bold",s:termBlack,"White")
+  call s:X("TabLineSel","000000","5a5a5a","italic,bold",s:termBlack,"White")
 
   " Auto-completion
   call s:X("Pmenu","ffffff","606060","","White",s:termBlack)
@@ -332,7 +332,7 @@ call s:X("CursorLineNr","ccc5c4","","none","White","")
 call s:X("Comment","888888","","italic","Grey","")
 call s:X("Todo","c7c7c7","","bold","White",s:termBlack)
 
-call s:X("StatusLine","000000","dddddd","italic","","White")
+call s:X("StatusLine","FFFFFF","5A5A5A","italic","","White")
 call s:X("StatusLineNC","ffffff","403c41","italic","White","Black")
 call s:X("VertSplit","777777","403c41","",s:termBlack,s:termBlack)
 call s:X("WildMenu","f0a0c0","302028","","Magenta","")
