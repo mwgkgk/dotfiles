@@ -152,7 +152,7 @@ function fish_user_key_bindings
   # C-r to fzf-history
   bind \cr bind_cr
   # M-d to fzf through dotfiles, or kill-word
-  bind \ed bind_ed
+  bind ä bind_ed
   # M-v to fzf-vim .
   bind \ev bind_ev
 
