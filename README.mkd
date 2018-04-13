@@ -1,26 +1,31 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [6.3K]  ctags
+│   └── [2.3K]  .ctags
+├── [4.0K]  fmt
+│   └── [  38]  .rustfmt.toml
 ├── [5.0K]  repl
 │   ├── [  48]  .lambda-term-inputrc
 │   ├── [ 119]  .minrc
 │   └── [ 857]  .iex.exs
 ├── [ 42K]  fish
 │   ├── [ 170]  fishfile
-│   ├── [4.0K]  aliases [29 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  aliases [31 entries exceeds filelimit, not opening dir]
 │   ├── [ 22K]  completions
 │   │   └── [ 18K]  rustup.fish
-│   ├── [7.8K]  config
-│   │   ├── [2.9K]  fish_user_key_bindings.fish
+│   ├── [8.1K]  config
+│   │   ├── [3.2K]  fish_user_key_bindings.fish
 │   │   └── [ 861]  fish_prompt.fish
 │   └── [4.2K]  tools
 │       └── [ 214]  do-thing.fish
 ├── [4.1K]  sxhkd
 │   └── [ 139]  sxhkdrc
 ├── [130K]  vim
-│   ├── [4.0K]  skeletons [21 entries exceeds filelimit, not opening dir]
-│   ├── [ 37K]  .plugs.vimrc
+│   ├── [ 38K]  .plugs.vimrc
 │   ├── [ 18K]  .vimrc
+│   ├── [4.0K]  usnippets [76 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  skeletons [22 entries exceeds filelimit, not opening dir]
 │   ├── [8.6K]  .oldconfigs.vimrc
 │   ├── [4.0K]  colors [90 entries exceeds filelimit, not opening dir]
 │   ├── [ 50K]  after
@@ -33,7 +38,6 @@
 │   │       ├── [4.1K]  min.vim
 │   │       ├── [ 200]  scheme.vim
 │   │       └── [ 33K]  racket.vim
-│   ├── [4.0K]  usnippets [75 entries exceeds filelimit, not opening dir]
 │   └── [ 710]  filetype.vim
 ├── [ 13K]  alacritty
 │   └── [8.8K]  alacritty.yml
@@ -60,8 +64,8 @@
 │       └── [4.1K]  hooks
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
-├── [8.2K]  tmux
-│   └── [4.2K]  .tmux.conf
+├── [8.8K]  tmux
+│   └── [4.8K]  .tmux.conf
 ├── [ 38K]  vifm
 │   ├── [9.9K]  vifmrc
 │   └── [ 24K]  colors
@@ -89,7 +93,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 343K used in 29 directories, 58 files
+ 355K used in 31 directories, 60 files
 ```
 
-> Generated on Sunday, March 25, 2018 at 03:46:52 AM UTC.
+> Generated on Friday, April 13, 2018 at 17:02:01 PM UTC.
