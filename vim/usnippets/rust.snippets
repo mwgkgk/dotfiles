@@ -1,9 +1,13 @@
 snippet u "use" b
-use ${1:std::${2:io}};
+use ${2:std::${1:env}};
 endsnippet
 
 snippet /(\s+)p/ "println" ir
-`!p snip.rv = match.group(1)`println!("$2{}", ${1:var});$0
+`!p snip.rv = match.group(1)`println!(${3:"$2{}", ${1:args}});$0
+endsnippet
+
+snippet /(\s+)d/ "debug println" ir
+`!p snip.rv = match.group(1)`println!("$2{${3::?}}", ${1:args});$0
 endsnippet
 
 snippet .ex "expect" i
@@ -12,13 +16,27 @@ endsnippet
 
 snippet loop "loop" b
 loop {
-    ${VISUAL}$0
+	${VISUAL}$0
 }
+endsnippet
+
+snippet match "match" i
+match ${1:${VISUAL}} {
+	Some(${2:arg}) => $2,
+	None => return Err("${3:$2 absent from $1}"),
+}
+endsnippet
+
+snippet .une "unwrap or else" i
+.unwrap_or_else(|err| {
+	eprintln!("Failed$1: {}", err);
+	process::exit(1);
+});
 endsnippet
 
 snippet { "{" i
 {
-	$0
+	${VISUAL}$0
 }
 endsnippet
 
@@ -29,12 +47,108 @@ endsnippet
 
 snippet mod "mod" b
 mod ${1:network} {
-	$0
+	${VISUAL}$0
 }
 endsnippet
 
 snippet f "f" b
-fn ${1:connect}($2) {
+pub fn ${1:parse_config}(${2:args: &[String]}) ${3:-> ${4:&str}$5} {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet (l "lambda" i
+(|x| x$1)
+endsnippet
+
+snippet le "let" b
+let ${1:query} = ${2:&args[${3:1}]};
+endsnippet
+
+snippet s "struct" b
+pub struct ${1:Config} {
+	${2:query}: ${3:String},$0
+}
+endsnippet
+
+snippet /impl|i/ "impl" rb
+impl ${1:Config} {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet m "methods" b
+pub fn ${1:run}(&self$2)$3 {
 	$0
 }
+endsnippet
+
+snippet tr "trait" b
+pub trait ${1:Draw} {
+	fn ${1/\w+/\L$0\E/}(&self);
+}
+endsnippet
+
+snippet if "if" b
+if ${1:args.len() < 3} {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet }e "else" b
+} else {
+	$0
+}
+endsnippet
+
+snippet for "for" b
+for ${1:line} in ${2:contents.lines()} {
+	$0
+}
+endsnippet
+
+snippet r "r" b
+return ${1:Err("${2:not enough arguments}")};
+endsnippet
+
+snippet ex "process.exit" b
+process::exit(1);
+endsnippet
+
+snippet ve "Vec" i
+Vec<${VISUAL}$1>
+endsnippet
+
+snippet bo "Box" i
+Box<${VISUAL}$1>
+endsnippet
+
+snippet res "Result" i
+Result<${VISUAL}$1, io::Error>
+endsnippet
+
+# Tests
+
+snippet test "test module" b
+#[cfg(test)]
+mod test {
+	use super::*;
+
+	$0
+}
+endsnippet
+
+snippet t "t" b
+#[test]
+fn ${1:one_result}() {
+	$0
+}
+endsnippet
+
+snippet as "assert!" b
+assert!(${1:x}, "${2:$1 wasn't true}");
+endsnippet
+
+snippet ae "assert_eq!" b
+assert_eq!(${1:left}, ${2:right});
 endsnippet

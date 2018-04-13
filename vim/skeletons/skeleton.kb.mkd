@@ -1,4 +1,6 @@
-<!-- vim: foldmethod=marker foldlevel=0 -->
+{{{
+vim: foldmethod=marker foldlevel=0 
+}}}
 
 # #############
 # Story Queue #
@@ -7,10 +9,9 @@
 {{{
 }}}
 
-# ###########
-# R&D / E&A #
-# ###########
-
+# ##########
+# Research #
+# ##########
 
 # #####
 # Dev #

@@ -1,0 +1,24 @@
+( "Testing equality" :testcase
+  (2 1 ==) test
+) :test-equality
+
+( "Equality tests" (
+    test-equality
+)) =equality-tests
+
+( ; Change dir for imports to work
+  args first :fname
+  (fname filename file?) (fname dirname cd) unless
+
+  ; Test lib
+  "../deps/test.min/src/test" load
+
+  ; Deps
+  ; "../deps/ok.min/src/ok" load
+  ; Test subjects
+  ; "../src/equality" load
+
+  (args (equality-tests)) run-groups-or-args
+) :parse-args
+
+parse-args
