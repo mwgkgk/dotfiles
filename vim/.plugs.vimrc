@@ -660,7 +660,6 @@ nnoremap sF :FzfGitModified<CR>
 
 command! FzfDotfiles call fzf#run(fzf#wrap({'source': 'find-dots'}))
 nnoremap sd :FzfDotfiles<CR>
-nnoremap <M-d> :FzfDotfiles<CR>
 " }}}
 Plug 'junegunn/vim-peekaboo' " {{{
 let g:peekaboo_delay = 400
