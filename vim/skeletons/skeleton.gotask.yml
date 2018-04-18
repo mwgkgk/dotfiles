@@ -1,6 +1,17 @@
 # https://github.com/go-task/task
 
-r:
-  desc: Run Repl
+b:
+  desc: Cargo Build
   cmds:
-    - racket --repl src/main.rkt
+    - cargo build
+
+t:
+  desc: Cargo Test
+  cmds:
+    - cargo test --  --nocapture
+
+i:
+  desc: Cargo Build Release & Install
+  cmds:
+    - cargo build --release
+    # - cp -i ./target/release/exec ~/bin/
