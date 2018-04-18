@@ -112,6 +112,12 @@ function bind_ev
   commandline -f repaint
 end
 
+function bind_er
+  warlock --siblings | fzf +m --height 15 --reverse | read -l result
+  and cd $result
+  commandline -f repaint
+end
+
 function bind_enter
   set -l cmdline (commandline)
   if test -z (string trim "$cmdline")
@@ -147,14 +153,16 @@ function fish_user_key_bindings
 
   # M-w to fzf-cd from ~
   bind \ew bind_ew
-  # M-c to fzf-cd from .
-  bind \ee bind_ee
+  # M-e to fzf-cd from .
+  bind å bind_ee
   # C-r to fzf-history
   bind \cr bind_cr
   # M-d to fzf through dotfiles, or kill-word
   bind ä bind_ed
   # M-v to fzf-vim .
   bind \ev bind_ev
+  # M-r to fzf through siblings
+  bind ò bind_er
 
   # Move \ee to \ec
   bind \ec edit_command_buffer
