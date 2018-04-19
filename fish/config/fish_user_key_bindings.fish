@@ -152,7 +152,7 @@ function fish_user_key_bindings
   bind \ei bind_ei
 
   # M-w to fzf-cd from ~
-  bind \ew bind_ew
+  bind ÷ bind_ew
   # M-e to fzf-cd from .
   bind å bind_ee
   # C-r to fzf-history
