@@ -365,6 +365,9 @@ nmap <M-j> }
 omap <M-j> }
 nmap <M-k> {
 omap <M-k> {
+" Jump to diffs
+nnoremap <expr> <Leader>j &diff ? ']c' : ']]'
+nnoremap <expr> <Leader>k &diff ? '[c' : '[['
 " Set mark with mouse
 nnoremap <C-LeftMouse> ma
 " Rightmouse
