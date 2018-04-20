@@ -434,8 +434,10 @@ let g:formatdef_rustfmt = '"rustfmt --unstable-features"'
 let g:formatters_rust = ['rustfmt']
 let g:formatdef_ocamlformat = '"ocamlformat"'
 let g:formatters_ocaml = ['ocamlformat']
+let g:formatdef_perltidy = '"perltidy -ce -pt=2"'
+let g:formatters_perl = ['perltidy']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh nnoremap <buffer> <Space>f :Autoformat<CR>
+autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl nnoremap <buffer> <Space>f :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
 " }}}
 
