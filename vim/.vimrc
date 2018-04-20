@@ -8,8 +8,8 @@ scriptencoding utf-8
 let g:mapleader=";"
 let g:maplocalleader=","
 
-" fix leader:
-nnoremap \ ;
+" - Regs on \
+map \ "
 
 augroup vimrc
     autocmd!
