@@ -897,6 +897,13 @@ function! s:vim_sexp_mappings()
             imap <silent><buffer> {               <Plug>(sexp_insert_opening_curly)
             imap <silent><buffer> }               <Plug>(sexp_insert_closing_curly)
 endfunction
+
+" Out-of-lisp mappings:
+nnoremap <M-S-l> f)xea)<Esc>
+nnoremap <M-S-h> F(xbi(<Esc>
+nnoremap <M-S-k> f)a<BackSpace><Esc>gea)<Esc>
+nnoremap <M-S-j> F(xwi(<Esc>
+
 autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux call s:vim_sexp_mappings()
 " }}}
 Plug 'bhurlow/vim-parinfer'
