@@ -734,7 +734,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive' " {{{
 nnoremap <Leader>G :Gstatus<CR>
-nnoremap <Leader>D :Gdiff<CR>
+nnoremap <Leader>D :Gvdiff<CR>
 nnoremap <Leader>C :Gcurrent<CR>
 nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " Also, grep commit text in all or current file:
