@@ -356,7 +356,6 @@ Plug 'arecarn/selection.vim'
 Plug 'dbakker/vim-projectroot' " {{{
 nnoremap <Leader>ep :echo ProjectRootGuess()<CR>
 nnoremap <Leader>dt :ProjectRootExe !ctags -R<CR>
-nnoremap <F12> :ProjectRootExe :AsyncRun git-store-wip<CR>
 " - Projectroot Make
 command! Make :silent! ProjectRootExe make | redraw!
 nnoremap <Leader>dm :Make<CR>
@@ -366,6 +365,8 @@ command! QuakeTerm :ProjectRootExe :AsyncRun add_to_quaketerm "r %:."
 nnoremap <Leader><LocalLeader> :QuakeTerm<CR>
 " Deps
 autocmd plugs.vimrc FileType rust nnoremap <Del> :ProjectRootExe :tabe Cargo.toml<CR>G
+" Taskfile
+nnoremap <F12> :ProjectRootExe :tabe Taskfile.yml<CR>
 " Tags
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
 autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
@@ -751,8 +752,6 @@ Plug 'cohama/agit.vim' " {{{
 " let g:agit_no_default_mappings = 1
 let g:agit_enable_auto_show_commit = 0
 nnoremap <Space>A :Agit<CR>
-nnoremap <F11> :ProjectRootExe :Shell git-show-wip<CR>:se ft=git<CR><C-w>T
-" nnoremap <F11> :let b:git_dir = substitute(b:git_dir, ".git$", ".wip", "")<CR>:Agit<CR>
 " }}}
 
 Plug 'mwgkgk/CamelCaseMotion' " {{{
