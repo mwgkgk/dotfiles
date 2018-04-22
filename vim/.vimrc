@@ -128,10 +128,6 @@ set iskeyword+=-
 " Omni :
 " set omnifunc=syntaxcomplete#Complete
 
-inoremap <M-w> <C-x><C-o>
-inoremap <M-q> <C-p>
-inoremap <M-e> <C-n>
-
 " Only highlight syntax on the first 200 columns:
 set synmaxcol=200
 
@@ -317,6 +313,7 @@ inoremap <C-R><Space> <Esc><C-O>:reg<CR>
 " Easier completion:
 " inoremap <C-f> <C-x><C-f> " Conflicts with tpope/vim-rsi
 inoremap <C-l> <C-x><C-l>
+inoremap <M-w> <C-x><C-o>
 " kill-word for gvim:
 inoremap <C-BS> <C-W>
 " Paste + with preceding >
