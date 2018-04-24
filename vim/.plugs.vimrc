@@ -720,8 +720,8 @@ nmap gy <Plug>(easyoperator-line-yank)
 nmap gd <Plug>(easyoperator-line-delete)
 " }}}
 Plug 'haya14busa/vim-edgemotion' " {{{
-map <Leader>w <Plug>(edgemotion-j)
-map <Leader>W <Plug>(edgemotion-k)
+map <M-S-j> <Plug>(edgemotion-j)
+map <M-S-k> <Plug>(edgemotion-k)
 " }}}
 
 Plug 'tpope/vim-surround' " {{{
