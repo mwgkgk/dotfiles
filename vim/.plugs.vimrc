@@ -956,6 +956,9 @@ Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
 " Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
 
+" Dhall
+Plug 'vmchale/dhall-vim', { 'for' : 'dhall' }
+
 " Idris
 Plug 'idris-hackers/idris-vim', { 'for' : 'idris' }
 
