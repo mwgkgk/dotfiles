@@ -426,6 +426,8 @@ let g:formatters_elm = ['elmformat']
 let g:formatdef_hindent = '"hindent"'
 let g:formatters_haskell = ['hindent']
 let g:formatters_idris = ['hindent']
+let g:formatdef_dhallformat = '"dhall-format"'
+let g:formatters_dhall = ['dhallformat']
 let g:formatdef_cljfmt = '"lein cljfmt check"'
 let g:formatters_clojure = ['cljfmt']
 let g:formatdef_shfmt = '"shfmt -i 4 -p"'
@@ -436,8 +438,12 @@ let g:formatdef_ocamlformat = '"ocamlformat"'
 let g:formatters_ocaml = ['ocamlformat']
 let g:formatdef_perltidy = '"perltidy -ce -pt=2"'
 let g:formatters_perl = ['perltidy']
+let g:formatdef_perl6tidy = '"perl6-tidy --indent-style=tab"'
+let g:formatters_perl6 = ['perl6tidy']
+let g:formatdef_dfmt = '"dfmt"'
+let g:formatters_d = ['dfmt']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl nnoremap <buffer> <Space>f :Autoformat<CR>
+autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl,perl6,dhall,d nnoremap <buffer> <Space>f :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
 " }}}
 
