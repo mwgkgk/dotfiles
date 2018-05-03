@@ -105,6 +105,7 @@ set softtabstop=0
 set shiftwidth=2
 set expandtab
 autocmd vimrc Filetype cpp setlocal tabstop=2 shiftwidth=2
+autocmd vimrc Filetype d setlocal tabstop=4 shiftwidth=4
 
 " Show invisibles :
 set list
