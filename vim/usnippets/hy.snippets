@@ -1,17 +1,14 @@
-snippet # "#" b
-#!/usr/bin/env hy3
+snippet v "v" b
+(setv$1
 endsnippet
 
-snippet v "Description" b
-(setv $1)
-endsnippet
-
-snippet setv "Description" b
-(setv $1)
+snippet setv "v" b
+(setv$1
 endsnippet
 
 snippet f "defn" b
-(defn $1 [$2]$3)
+(defn $1 [$2]
+	$3)
 endsnippet
 
 snippet defn "defn" b
@@ -26,7 +23,8 @@ snippet defc "defclass" b
 endsnippet
 
 snippet main "main" b
-(defmain [&rest args] (start))
+(defmain [&rest args] 
+	${VISUAL}$0)
 endsnippet
 
 snippet for "for" b
@@ -34,5 +32,25 @@ snippet for "for" b
 endsnippet
 
 snippet if "if" b
-(if ($1) ${VISUAL}$2)
+(if ($1)
+	${VISUAL}$2)
+endsnippet
+
+snippet /imp|i/ "i" br
+(import [${1:time} [${2:sleep}]])
+endsnippet
+
+snippet p "p" b
+(print
+endsnippet
+
+snippet do "do" b
+(do
+	${VISUAL}$0
+endsnippet
+
+priority 1
+
+snippet # "#" b
+#!/usr/bin/env hy3
 endsnippet

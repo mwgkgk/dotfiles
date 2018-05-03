@@ -1,9 +1,13 @@
-snippet u "use" b
+snippet /use|u/ "use" br
 use ${2:std::${1:env}};
 endsnippet
 
+snippet e "e" b
+extern crate ${1:walkdir};
+endsnippet
+
 snippet /(\s+)p/ "println" ir
-`!p snip.rv = match.group(1)`println!(${3:"$2{}", ${1:args}});$0
+`!p snip.rv = match.group(1)`println!(${4:"$2{}$3", ${1:args}});$0
 endsnippet
 
 snippet /(\s+)d/ "debug println" ir
@@ -34,10 +38,18 @@ snippet .une "unwrap or else" i
 });
 endsnippet
 
+snippet /\.un|\.u/ ".unwrap" r
+.unwrap()
+endsnippet
+
 snippet { "{" i
 {
 	${VISUAL}$0
 }
+endsnippet
+
+snippet fm "format" i
+format!(${VISUAL}, ${1:contents})
 endsnippet
 
 snippet Ok "Ok" b
@@ -51,7 +63,13 @@ mod ${1:network} {
 }
 endsnippet
 
-snippet f "f" b
+snippet f "fn" b
+fn ${1:parse_config}(${2:args: &[String]}) ${3:-> ${4:&str}$5} {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet pf "pub fn" b
 pub fn ${1:parse_config}(${2:args: &[String]}) ${3:-> ${4:&str}$5} {
 	${VISUAL}$0
 }
@@ -65,9 +83,32 @@ snippet le "let" b
 let ${1:query} = ${2:&args[${3:1}]};
 endsnippet
 
+snippet lm "let mut" b
+let mut ${1:file} = ${2:File::open("${3:hello.html}").unwrap()};
+endsnippet
+
+snippet ifl "if let" b
+if let Some(${1:thread}) = ${3:${2:worker.thread}.take()} {
+	${4:thread.join().unwrap()};
+}
+endsnippet
+
 snippet s "struct" b
+struct ${1:Config} {
+	${2:query}: ${3:String},$0
+}
+endsnippet
+
+snippet ps "pub struct" b
 pub struct ${1:Config} {
 	${2:query}: ${3:String},$0
+}
+endsnippet
+
+snippet enum "enum" b
+enum ${1:Message} {
+	NewJob(Job),
+	Terminate,
 }
 endsnippet
 
@@ -77,9 +118,15 @@ impl ${1:Config} {
 }
 endsnippet
 
-snippet m "methods" b
+snippet m "method" b
 pub fn ${1:run}(&self$2)$3 {
 	$0
+}
+endsnippet
+
+snippet new "new" b
+pub fn new(${1:id: i32}) -> ${2:Worker} {
+	$2$0
 }
 endsnippet
 
@@ -115,7 +162,7 @@ snippet ex "process.exit" b
 process::exit(1);
 endsnippet
 
-snippet ve "Vec" i
+snippet /vec|ve/ "Vec" ir
 Vec<${VISUAL}$1>
 endsnippet
 
@@ -125,6 +172,10 @@ endsnippet
 
 snippet res "Result" i
 Result<${VISUAL}$1, io::Error>
+endsnippet
+
+snippet opt "Option" i
+Option<${VISUAL}$1>
 endsnippet
 
 # Tests

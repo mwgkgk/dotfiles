@@ -17,7 +17,7 @@ snippet f "f" b
 ) :${1:name}
 endsnippet
 
-snippet /=?par/ "params" ir
+snippet /=?param|par/ "params" ir
 =params
 	params 0 get :${1:work-dir}
 	params 1 get :${2:nau-branch}
@@ -43,7 +43,7 @@ snippet unless "unless" b
 endsnippet
 
 snippet % "%" i
-(${1:io-redir}) => %$0
+(${1:${VISUAL}}) => %$0
 endsnippet
 
 # ok.min

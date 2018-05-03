@@ -102,19 +102,15 @@ endsnippet
 # Branches
 
 snippet if "if .. (if)"
-if(${1:/*condition*/})
-{
+if (${1:/*condition*/}) {
     ${VISUAL}${0:/*code*/}
 }
 endsnippet
 
 snippet ife "if .. else (ife)" b
-if(${1:/*condition*/})
-{
+if (${1:/*condition*/}) {
     ${2:/*code*/}
-}
-else
-{
+} else {
     ${3:/*else*/}
 }
 endsnippet
@@ -244,9 +240,8 @@ endsnippet
 
 # Functions (generic)
 
-snippet fun "function definition (fun)"
-${1:void} ${2:/*function name*/}(${3:/*args*/}) ${4:@safe pure nothrow}
-{
+snippet f "function definition (fun)"
+${1:void} ${2:/*function name*/}(${3:/*args*/}) ${4:@safe pure nothrow} {
     ${VISUAL}${5:/*code*/}
 }
 endsnippet
@@ -276,9 +271,10 @@ endsnippet
 # Functions (concrete)
 
 snippet main "Main" b
-void main(string[] args)
-{
-    ${VISUAL}${0: /*code*/}
+void main(string[] args) @safe {
+	args = args[1 .. $];
+
+	${VISUAL}${0: /*code*/}
 }
 endsnippet
 

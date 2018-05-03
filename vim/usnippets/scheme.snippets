@@ -21,9 +21,9 @@ snippet d "d" b
 endsnippet
 
 snippet if "if" i
-(if ($1)
+if ($1)
 	${2:x}
-	${3:y})
+	${3:y}
 endsnippet
 
 snippet /^\s*p/ "p" r
@@ -57,8 +57,8 @@ snippet (let "let" i
 	($2)
 endsnippet
 
-snippet r "r" b
-(require ${1:racket/system})
+snippet /req|r/ "chicken-scheme require-extension" br
+(require-extension ${1:shell})
 endsnippet
 
 snippet m "m" b
@@ -72,3 +72,8 @@ snippet form "format" i
 format ${1:#f} "${2}" $0
 endsnippet
 
+snippet main "main" b
+(define (main args)
+	$0
+	0)
+endsnippet
