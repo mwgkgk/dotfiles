@@ -1,3 +1,3 @@
 function feh
-  feh -d. $argv
+  /usr/bin/feh -d. $argv
 end
