@@ -76,7 +76,7 @@ end
 
 # Fzf misc:
 
-function bind_ew
+function bind_fzf_cd_from_home
   fd -t d "" ~ | fzf +m --height 15 --reverse | read -l result
   and cd $result
   commandline -f repaint
@@ -106,8 +106,8 @@ function bind_ed
   end
 end
 
-function bind_ev
-  fd -t f --hidden | fzf +m --height 15 --reverse | read -l result
+function bind_fzf_vim
+  fd -t f --hidden -E .git/ | fzf +m --height 15 --reverse | read -l result
   and commandline -- "v $result" ;and commandline -f execute
   commandline -f repaint
 end
@@ -151,16 +151,16 @@ function fish_user_key_bindings
   # M-i to git status
   bind \ei bind_ei
 
-  # M-w to fzf-cd from ~
-  bind ÷ bind_ew
+  # M-~ to fzf-cd from ~
+  bind à bind_fzf_cd_from_home
   # M-e to fzf-cd from .
   bind å bind_ee
   # C-r to fzf-history
   bind \cr bind_cr
   # M-d to fzf through dotfiles, or kill-word
   bind ä bind_ed
-  # M-v to fzf-vim .
-  bind \ev bind_ev
+  # M-w to fzf-vim .
+  bind ÷ bind_fzf_vim
   # M-r to fzf through siblings
   bind ò bind_er
 
