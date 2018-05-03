@@ -6,37 +6,38 @@
 ├── [4.0K]  fmt
 │   └── [  38]  .rustfmt.toml
 ├── [5.0K]  repl
+│   ├── [ 859]  .iex.exs
 │   ├── [  48]  .lambda-term-inputrc
-│   ├── [ 119]  .minrc
-│   └── [ 857]  .iex.exs
+│   └── [ 119]  .minrc
 ├── [ 42K]  fish
 │   ├── [ 170]  fishfile
 │   ├── [4.0K]  aliases [31 entries exceeds filelimit, not opening dir]
 │   ├── [ 22K]  completions
 │   │   └── [ 18K]  rustup.fish
-│   ├── [8.1K]  config
-│   │   ├── [3.2K]  fish_user_key_bindings.fish
+│   ├── [8.3K]  config
+│   │   ├── [3.4K]  fish_user_key_bindings.fish
 │   │   └── [ 861]  fish_prompt.fish
 │   └── [4.2K]  tools
-│       └── [ 214]  do-thing.fish
+│       └── [ 250]  do-thing.fish
 ├── [4.1K]  sxhkd
 │   └── [ 139]  sxhkdrc
-├── [130K]  vim
+├── [131K]  vim
 │   ├── [ 38K]  .plugs.vimrc
+│   ├── [4.0K]  skeletons [26 entries exceeds filelimit, not opening dir]
 │   ├── [ 18K]  .vimrc
-│   ├── [4.0K]  usnippets [76 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  skeletons [22 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  usnippets [77 entries exceeds filelimit, not opening dir]
 │   ├── [8.6K]  .oldconfigs.vimrc
 │   ├── [4.0K]  colors [90 entries exceeds filelimit, not opening dir]
 │   ├── [ 50K]  after
-│   │   ├── [4.3K]  ftplugin
+│   │   ├── [4.4K]  ftplugin
+│   │   │   ├── [  19]  scheme.vim
 │   │   │   ├── [ 149]  text.vim
 │   │   │   ├── [  64]  java.vim
 │   │   │   ├── [  64]  html.vim
 │   │   │   └── [  64]  css.vim
 │   │   └── [ 41K]  syntax
+│   │       ├── [ 275]  scheme.vim
 │   │       ├── [4.1K]  min.vim
-│   │       ├── [ 200]  scheme.vim
 │   │       └── [ 33K]  racket.vim
 │   └── [ 710]  filetype.vim
 ├── [ 13K]  alacritty
@@ -93,7 +94,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 355K used in 31 directories, 60 files
+ 356K used in 31 directories, 61 files
 ```
 
-> Generated on Friday, April 13, 2018 at 17:02:01 PM UTC.
+> Generated on Thursday, May  3, 2018 at 07:06:55 AM UTC.
