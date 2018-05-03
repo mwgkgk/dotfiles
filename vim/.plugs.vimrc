@@ -440,7 +440,7 @@ let g:formatdef_perltidy = '"perltidy -ce -pt=2"'
 let g:formatters_perl = ['perltidy']
 let g:formatdef_perl6tidy = '"perl6-tidy --indent-style=tab"'
 let g:formatters_perl6 = ['perl6tidy']
-let g:formatdef_dfmt = '"dfmt"'
+let g:formatdef_dfmt = '"dfmt --brace_style=otbs"'
 let g:formatters_d = ['dfmt']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
 autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl,perl6,dhall,d nnoremap <buffer> <Space>f :Autoformat<CR>
