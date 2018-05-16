@@ -436,7 +436,7 @@ let g:formatdef_rustfmt = '"rustfmt --unstable-features"'
 let g:formatters_rust = ['rustfmt']
 let g:formatdef_ocamlformat = '"ocamlformat"'
 let g:formatters_ocaml = ['ocamlformat']
-let g:formatdef_perltidy = '"perltidy -ce -pt=2"'
+let g:formatdef_perltidy = '"perltidy -ce -pt=2 -nasc"'
 let g:formatters_perl = ['perltidy']
 let g:formatdef_perl6tidy = '"perl6-tidy --indent-style=tab"'
 let g:formatters_perl6 = ['perl6tidy']
