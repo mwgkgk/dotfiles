@@ -496,8 +496,6 @@ inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
 " }}}
 
 Plug 'thinca/vim-quickrun' " {{{
-nnoremap <Leader>l :QuickRun<CR>
-" }}}
 Plug 'thinca/vim-textobj-between' " {{{
 let g:textobj_between_no_default_key_mappings = 1
 xmap ii <Plug>(textobj-between-i)
