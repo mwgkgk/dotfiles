@@ -31,9 +31,11 @@ ${1:expression} if ${2:condition};
 
 endsnippet
 
-snippet sub "Function (sub)"
+snippet f "Function (sub)"
 sub ${1:function_name} {
-	${2:# body...}
+	my (${2:$a}) = @_;
+
+	${3:...}
 }
 
 endsnippet
@@ -135,6 +137,10 @@ endsnippet
 
 snippet p "p"
 print "$1";
+endsnippet
+
+snippet s "s" b
+say "$1";
 endsnippet
 
 # vim:ft=snippets:

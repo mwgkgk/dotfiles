@@ -31,7 +31,7 @@ match ${1:${VISUAL}} {
 }
 endsnippet
 
-snippet .une "unwrap or else" i
+snippet /\.une|\.uoe|\.ue/ "unwrap or else" r
 .unwrap_or_else(|err| {
 	eprintln!("Failed$1: {}", err);
 	process::exit(1);
@@ -76,7 +76,7 @@ pub fn ${1:parse_config}(${2:args: &[String]}) ${3:-> ${4:&str}$5} {
 endsnippet
 
 snippet (l "lambda" i
-(|x| x$1)
+(|x| x$1
 endsnippet
 
 snippet le "let" b
