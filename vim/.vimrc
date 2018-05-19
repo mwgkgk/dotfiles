@@ -106,6 +106,7 @@ set shiftwidth=2
 set expandtab
 autocmd vimrc Filetype cpp setlocal tabstop=2 shiftwidth=2
 autocmd vimrc Filetype d setlocal tabstop=4 shiftwidth=4
+autocmd vimrc Filetype perl setlocal tabstop=4 shiftwidth=4 foldmethod=marker foldlevel=0
 
 " Show invisibles :
 set list
