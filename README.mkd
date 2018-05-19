@@ -1,6 +1,9 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [8.9K]  emacs
+│   ├── [ 861]  init.el
+│   └── [4.0K]  init.el.old
 ├── [6.3K]  ctags
 │   └── [2.3K]  .ctags
 ├── [4.0K]  fmt
@@ -11,26 +14,26 @@
 │   └── [ 119]  .minrc
 ├── [ 42K]  fish
 │   ├── [ 170]  fishfile
+│   ├── [8.3K]  config
+│   │   ├── [  34]  fish_title.fish
+│   │   ├── [3.4K]  fish_user_key_bindings.fish
+│   │   └── [ 861]  fish_prompt.fish
 │   ├── [4.0K]  aliases [31 entries exceeds filelimit, not opening dir]
 │   ├── [ 22K]  completions
 │   │   └── [ 18K]  rustup.fish
-│   ├── [8.3K]  config
-│   │   ├── [3.4K]  fish_user_key_bindings.fish
-│   │   └── [ 861]  fish_prompt.fish
 │   └── [4.2K]  tools
 │       └── [ 250]  do-thing.fish
 ├── [4.1K]  sxhkd
 │   └── [ 139]  sxhkdrc
-├── [131K]  vim
+├── [132K]  vim
 │   ├── [ 38K]  .plugs.vimrc
-│   ├── [4.0K]  skeletons [26 entries exceeds filelimit, not opening dir]
 │   ├── [ 18K]  .vimrc
+│   ├── [4.0K]  colors [91 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  skeletons [27 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  usnippets [77 entries exceeds filelimit, not opening dir]
 │   ├── [8.6K]  .oldconfigs.vimrc
-│   ├── [4.0K]  colors [90 entries exceeds filelimit, not opening dir]
 │   ├── [ 50K]  after
-│   │   ├── [4.4K]  ftplugin
-│   │   │   ├── [  19]  scheme.vim
+│   │   ├── [4.3K]  ftplugin
 │   │   │   ├── [ 149]  text.vim
 │   │   │   ├── [  64]  java.vim
 │   │   │   ├── [  64]  html.vim
@@ -47,16 +50,14 @@
 │   └── [3.0K]  conky-dual.conf
 ├── [1.2K]  install.sh
 ├── [ 11K]  user
-│   ├── [1.8K]  .Xresources
 │   ├── [1.6K]  .xinitrc
+│   ├── [1.8K]  .Xresources
 │   ├── [1.8K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
 │   ├── [  61]  .inputrc
 │   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
 ├── [   8]  .gitignore
-├── [8.0K]  emacs
-│   └── [4.0K]  init.el
 ├── [6.0K]  zsh
 │   └── [2.0K]  .zshrc
 ├── [ 13K]  git
@@ -65,8 +66,8 @@
 │       └── [4.1K]  hooks
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
-├── [8.8K]  tmux
-│   └── [4.8K]  .tmux.conf
+├── [9.0K]  tmux
+│   └── [5.0K]  .tmux.conf
 ├── [ 38K]  vifm
 │   ├── [9.9K]  vifmrc
 │   └── [ 24K]  colors
@@ -94,7 +95,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 356K used in 31 directories, 61 files
+ 357K used in 31 directories, 62 files
 ```
 
-> Generated on Thursday, May  3, 2018 at 07:06:55 AM UTC.
+> Generated on Saturday, May 19, 2018 at 10:20:56 AM UTC.
