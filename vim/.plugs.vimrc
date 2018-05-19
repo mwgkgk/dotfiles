@@ -447,6 +447,12 @@ autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl,perl6,
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
 " }}}
 
+Plug 'nathanaelkane/vim-indent-guides', { 'for' : ['nim'] }
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=232
+" }}}
+
 Plug 'terryma/vim-multiple-cursors' " {{{
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key = '<C-l>'
