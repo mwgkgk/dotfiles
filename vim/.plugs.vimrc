@@ -810,6 +810,9 @@ Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
+" Perl
+Plug 'hotchpotch/perldoc-vim', { 'for' : 'perl' }
+
 " Sxhkd
 Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 
