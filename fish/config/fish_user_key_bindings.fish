@@ -17,10 +17,9 @@ function bind_dollar
   end
 end
 
-function bind_fg
-  commandline -f kill-whole-line
-  echo ;and fg
-  commandline -f repaint
+function bind_eg
+  commandline -r "rlwrap reply"
+  commandline -f execute
 end
 
 function bind_co
@@ -133,8 +132,9 @@ function fish_user_key_bindings
   bind ! bind_bang
   bind '$' bind_dollar
 
-  # C-g to fg
-  bind \cg bind_fg
+  # C-g to repl
+  bind \cg bind_eg
+
   # C-o to jump back
   bind \co bind_co
   # M-f to open fm . or forward-word
