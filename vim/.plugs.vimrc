@@ -85,7 +85,11 @@ let g:tagbar_type_rust = {
 " }}}
 
 Plug 'w0rp/ale' " {{{ lint
-let g:ale_linters = {'haskell': ['stack-ghc'], 'perl': ['perl', 'perlcritic']}
+let g:ale_linters = {
+      \ 'haskell': ['stack-ghc'],
+      \ 'perl'   : ['perl', 'perlcritic'],
+      \ 'rust'   : ['cargo'],
+      \ }
 let g:ale_sign_error = '>'
 let g:ale_sign_warning = '!'
 let g:ale_lint_on_save = 1
@@ -495,7 +499,7 @@ Plug 'arecarn/crunch.vim' " {{{
 inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
 " }}}
 
-Plug 'thinca/vim-quickrun' " {{{
+Plug 'thinca/vim-quickrun'
 Plug 'thinca/vim-textobj-between' " {{{
 let g:textobj_between_no_default_key_mappings = 1
 xmap ii <Plug>(textobj-between-i)
