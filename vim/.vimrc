@@ -126,6 +126,8 @@ set complete=.,b,u,]
 set completeopt=menu
 set pumheight=5
 set iskeyword+=-
+autocmd vimrc InsertEnter * set noignorecase
+autocmd vimrc InsertLeave * set ignorecase
 
 " Omni :
 " set omnifunc=syntaxcomplete#Complete
