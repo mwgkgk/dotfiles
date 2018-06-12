@@ -117,6 +117,13 @@ my $${1:var} = do { local $/ = undef; open my $fh, '<', ${2:$file}; <$fh> };
 
 endsnippet
 
+snippet file "file" b
+open my $fh, '+<', $gitignore
+	or die "Can't open file: $_";
+
+close $fh or die "Couldn't close file : $_";
+endsnippet
+
 snippet unless "unless"
 unless ($1) {
 	${2:# body...}

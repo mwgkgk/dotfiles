@@ -49,7 +49,7 @@ snippet { "{" i
 endsnippet
 
 snippet fm "format" i
-format!(${VISUAL}, ${1:contents})
+format!(${VISUAL}$2, ${1:contents})
 endsnippet
 
 snippet Ok "Ok" b
@@ -65,13 +65,13 @@ endsnippet
 
 snippet f "fn" b
 fn ${1:parse_config}(${2:args: &[String]}) ${3:-> ${4:&str}$5} {
-	${VISUAL}$0
+	${VISUAL}${0:unimplemented!()}
 }
 endsnippet
 
 snippet pf "pub fn" b
 pub fn ${1:parse_config}(${2:args: &[String]}) ${3:-> ${4:&str}$5} {
-	${VISUAL}$0
+	${VISUAL}${0:unimplemented!()}
 }
 endsnippet
 
@@ -120,7 +120,7 @@ endsnippet
 
 snippet m "method" b
 pub fn ${1:run}(&self$2)$3 {
-	$0
+	${0:unimplemented!()}
 }
 endsnippet
 
@@ -138,19 +138,19 @@ endsnippet
 
 snippet if "if" b
 if ${1:args.len() < 3} {
-	${VISUAL}$0
+	${VISUAL}${0:unimplemented!()}
 }
 endsnippet
 
 snippet }e "else" b
 } else {
-	$0
+	${0:unimplemented!()}
 }
 endsnippet
 
 snippet for "for" b
 for ${1:line} in ${2:contents.lines()} {
-	$0
+	${0:unimplemented!()}
 }
 endsnippet
 

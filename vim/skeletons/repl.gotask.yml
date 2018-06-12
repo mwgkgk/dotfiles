@@ -1,0 +1,6 @@
+# https://github.com/go-task/task
+
+r:
+  desc: Repl
+  cmds:
+    - swipl src/main.pl
