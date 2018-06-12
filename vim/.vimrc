@@ -465,6 +465,9 @@ let g:lasttab = 1
 nnoremap <Space><Space> :exe "tabn ".g:lasttab<CR>
 autocmd vimrc TabLeave * let g:lasttab = tabpagenr()
 " }}}
+" Terminal {{{
+tmap <Esc> <C-w>N
+" }}}
 
 " Functions & bits
 " Toggle-related functions and mappings {{{
