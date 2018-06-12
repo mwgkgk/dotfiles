@@ -208,9 +208,6 @@ nnoremap <C-W><C-h> :help <C-r><C-w><CR>
 nnoremap <Leader><C-h> :help <C-r><C-w><CR>
 cab vh vert help
 " }}}
-" Refresh
-nnoremap <F1> :e!<CR>
-" }}}
 " <C-W>-related {{{
 " - No more c-w
 nmap <Space> <C-W>
@@ -424,6 +421,8 @@ nnoremap OB 3<C-E>
 " Source .plugs.vimrc:
 nnoremap <F6> :source ~/.plugs.vimrc<CR>
 command! ReloadVimrc :source ~/.plugs.vimrc
+" Refresh
+nnoremap <F1> :e!<CR>
 " }}}
 " Visual-mode-related {{{
 " - Visual search
