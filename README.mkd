@@ -1,6 +1,18 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
+├── [ 42K]  fish
+│   ├── [ 170]  fishfile
+│   ├── [  47]  config.fish
+│   ├── [8.3K]  config
+│   │   ├── [3.4K]  fish_user_key_bindings.fish
+│   │   ├── [  34]  fish_title.fish
+│   │   └── [ 861]  fish_prompt.fish
+│   ├── [4.0K]  aliases [31 entries exceeds filelimit, not opening dir]
+│   ├── [ 22K]  completions
+│   │   └── [ 18K]  rustup.fish
+│   └── [4.2K]  tools
+│       └── [ 250]  do-thing.fish
 ├── [8.9K]  emacs
 │   ├── [ 861]  init.el
 │   └── [4.0K]  init.el.old
@@ -9,27 +21,16 @@
 ├── [4.0K]  fmt
 │   └── [  38]  .rustfmt.toml
 ├── [5.0K]  repl
-│   ├── [ 859]  .iex.exs
+│   ├── [ 857]  .iex.exs
 │   ├── [  48]  .lambda-term-inputrc
 │   └── [ 119]  .minrc
-├── [ 42K]  fish
-│   ├── [ 170]  fishfile
-│   ├── [8.3K]  config
-│   │   ├── [  34]  fish_title.fish
-│   │   ├── [3.4K]  fish_user_key_bindings.fish
-│   │   └── [ 861]  fish_prompt.fish
-│   ├── [4.0K]  aliases [31 entries exceeds filelimit, not opening dir]
-│   ├── [ 22K]  completions
-│   │   └── [ 18K]  rustup.fish
-│   └── [4.2K]  tools
-│       └── [ 250]  do-thing.fish
 ├── [4.1K]  sxhkd
 │   └── [ 139]  sxhkdrc
 ├── [132K]  vim
-│   ├── [ 38K]  .plugs.vimrc
+│   ├── [4.0K]  colors [89 entries exceeds filelimit, not opening dir]
 │   ├── [ 18K]  .vimrc
-│   ├── [4.0K]  colors [91 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  skeletons [27 entries exceeds filelimit, not opening dir]
+│   ├── [ 38K]  .plugs.vimrc
+│   ├── [4.0K]  skeletons [28 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  usnippets [77 entries exceeds filelimit, not opening dir]
 │   ├── [8.6K]  .oldconfigs.vimrc
 │   ├── [ 50K]  after
@@ -50,8 +51,8 @@
 │   └── [3.0K]  conky-dual.conf
 ├── [1.2K]  install.sh
 ├── [ 11K]  user
+│   ├── [2.2K]  .Xresources
 │   ├── [1.6K]  .xinitrc
-│   ├── [1.8K]  .Xresources
 │   ├── [1.8K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
 │   ├── [  61]  .inputrc
@@ -95,7 +96,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 357K used in 31 directories, 62 files
+ 358K used in 31 directories, 63 files
 ```
 
-> Generated on Saturday, May 19, 2018 at 10:20:56 AM UTC.
+> Generated on Wednesday, June 13, 2018 at 00:11:15 AM UTC.
