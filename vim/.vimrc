@@ -78,6 +78,7 @@ set foldlevel=99
 
 " Buffers
 set switchbuf=useopen,usetab
+set noequalalways
 
 " Splits :
 set splitright
