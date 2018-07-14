@@ -378,6 +378,9 @@ imap <RightMouse> <Esc><RightMouse>
 nnoremap <Tab><Space> u
 " Repeat macro with alt-y
 nnoremap <M-y> @@
+" Open term
+nnoremap <Leader><Space>n :term ++rows=10<CR>
+nnoremap <Leader><Space>N :above term ++rows=10<CR>
 " }}}
 " Commandline-related {{{
 nnoremap <Leader>: :<C-P>
