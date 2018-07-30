@@ -683,6 +683,9 @@ let g:peekaboo_delay = 400
 let g:peekaboo_compact = 1
 let g:peekaboo_ins_prefix = "<C-q>" " Meaning, <C-q><C-r> for peekaboo ins mode
 " }}}
+Plug 'junegunn/gv.vim' " {{{
+nnoremap <Space>A :GV<CR>
+" }}}
 
 Plug 't9md/vim-textmanip' " {{{
 xmap <C-j> <Plug>(textmanip-move-down)
@@ -763,12 +766,6 @@ command! Gcurrent :exe "Gcommit -v -q %:p"
 command! Gcached :Gvsplit! diff --staged
 " }}}
 Plug 'tpope/vim-rsi'
-
-Plug 'cohama/agit.vim' " {{{
-" let g:agit_no_default_mappings = 1
-let g:agit_enable_auto_show_commit = 0
-nnoremap <Space>A :Agit<CR>
-" }}}
 
 Plug 'mwgkgk/CamelCaseMotion' " {{{
 
