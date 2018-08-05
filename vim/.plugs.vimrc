@@ -449,6 +449,7 @@ let g:formatters_d = ['dfmt']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
 autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl,perl6,dhall,d nnoremap <buffer> <Space>f :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
+autocmd plugs.vimrc FileType scheme nnoremap <buffer> <Space>f :Trailing<CR>gg=G<C-O><C-O><CR>
 " }}}
 
 Plug 'terryma/vim-multiple-cursors' " {{{
