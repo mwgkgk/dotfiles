@@ -3,12 +3,12 @@
 .
 ├── [ 42K]  fish
 │   ├── [ 170]  fishfile
+│   ├── [4.0K]  aliases [32 entries exceeds filelimit, not opening dir]
 │   ├── [  47]  config.fish
 │   ├── [8.3K]  config
 │   │   ├── [3.4K]  fish_user_key_bindings.fish
 │   │   ├── [  34]  fish_title.fish
 │   │   └── [ 861]  fish_prompt.fish
-│   ├── [4.0K]  aliases [31 entries exceeds filelimit, not opening dir]
 │   ├── [ 22K]  completions
 │   │   └── [ 18K]  rustup.fish
 │   └── [4.2K]  tools
@@ -25,24 +25,23 @@
 │   ├── [  48]  .lambda-term-inputrc
 │   └── [ 119]  .minrc
 ├── [4.1K]  sxhkd
-│   └── [ 139]  sxhkdrc
-├── [132K]  vim
+│   └── [ 143]  sxhkdrc
+├── [100K]  vim
+│   ├── [ 39K]  .plugs.vimrc
+│   ├── [ 19K]  .vimrc
+│   ├── [9.0K]  .oldconfigs.vimrc
 │   ├── [4.0K]  colors [89 entries exceeds filelimit, not opening dir]
-│   ├── [ 18K]  .vimrc
-│   ├── [ 38K]  .plugs.vimrc
 │   ├── [4.0K]  skeletons [28 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  usnippets [77 entries exceeds filelimit, not opening dir]
-│   ├── [8.6K]  .oldconfigs.vimrc
-│   ├── [ 50K]  after
-│   │   ├── [4.3K]  ftplugin
-│   │   │   ├── [ 149]  text.vim
-│   │   │   ├── [  64]  java.vim
-│   │   │   ├── [  64]  html.vim
-│   │   │   └── [  64]  css.vim
-│   │   └── [ 41K]  syntax
-│   │       ├── [ 275]  scheme.vim
-│   │       ├── [4.1K]  min.vim
-│   │       └── [ 33K]  racket.vim
+│   ├── [ 17K]  after
+│   │   ├── [8.4K]  syntax
+│   │   │   ├── [ 275]  scheme.vim
+│   │   │   └── [4.1K]  min.vim
+│   │   └── [4.3K]  ftplugin
+│   │       ├── [ 149]  text.vim
+│   │       ├── [  64]  java.vim
+│   │       ├── [  64]  html.vim
+│   │       └── [  64]  css.vim
 │   └── [ 710]  filetype.vim
 ├── [ 13K]  alacritty
 │   └── [8.8K]  alacritty.yml
@@ -96,7 +95,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 358K used in 31 directories, 63 files
+ 327K used in 31 directories, 62 files
 ```
 
-> Generated on Wednesday, June 13, 2018 at 00:11:15 AM UTC.
+> Generated on Sunday, August  5, 2018 at 01:08:02 AM UTC.
