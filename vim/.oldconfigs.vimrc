@@ -263,3 +263,16 @@ nnoremap <F7> :Exchange<CR>
 nnoremap [15;2~ :Exchange ETH USD<CR>
 nnoremap [18;5~ :Finance<CR>
 " }}}
+
+Plug 'cohama/agit.vim' " {{{
+" let g:agit_no_default_mappings = 1
+let g:agit_enable_auto_show_commit = 0
+nnoremap <Space>A :Agit<CR>
+" }}}
+
+Plug 'nathanaelkane/vim-indent-guides', { 'for' : ['nim'] }
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+" This should only be in nim
+" autocmd plugs.vimrc VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=232
+" }}}
