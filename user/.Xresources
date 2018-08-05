@@ -54,17 +54,17 @@ URxvt.keysym.Meta-F4: perl:tabbedex:rename_tab
 /* URxvt*boldFont: xft:Monospace:size=8:weight=Bold:antialias=true */
 /* URxvt.letterSpace: -1 */
 
-/* URxvt*font: xft:Iosevka:size=9:antialias=true */
-/* URxvt*boldFont: xft:Iosevka:size=9:weight=Bold:antialias=true */
-/* URxvt.letterSpace: -1 */
+URxvt*font: xft:Iosevka SS04:size=9:antialias=true
+URxvt*boldFont: xft:Iosevka SS04:size=9:weight=Bold:antialias=true
+URxvt.letterSpace: -1
 
 /* URxvt*font: xft:Anka/Coder Narrow:size=9:antialias=true */
 /* URxvt*boldFont: xft:Anka/Coder Narrow:size=9:weight=Bold:antialias=true */
 /* URxvt.letterSpace: -1 */
 
-URxvt*font: xft:Hack:size=6:antialias=true
-URxvt*boldFont: xft:Hack:size=6:weight=Bold:antialias=true
-URxvt.letterSpace: -1
+/* URxvt*font: xft:Hack:size=6:antialias=true */
+/* URxvt*boldFont: xft:Hack:size=6:weight=Bold:antialias=true */
+/* URxvt.letterSpace: -1 */
 
 /* URxvt*font: xft:Scientifica:size=10:antialias=true */
 /* URxvt*boldFont: xft:Scientifica:size=10:weight=Bold:antialias=true */
