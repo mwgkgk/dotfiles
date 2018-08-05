@@ -1,5 +1,4 @@
 #!/usr/bin/env racket
-
 #lang racket/base
 
 (module+ main)

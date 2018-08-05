@@ -183,6 +183,8 @@ endsnippet
 snippet test "test module" b
 #[cfg(test)]
 mod test {
+	extern crate spectral;
+	use self::spectral::prelude::*;
 	use super::*;
 
 	$0
@@ -191,7 +193,7 @@ endsnippet
 
 snippet t "t" b
 #[test]
-fn ${1:one_result}() {
+fn ${1:simplest_case}() {
 	$0
 }
 endsnippet
