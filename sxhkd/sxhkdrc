@@ -10,6 +10,6 @@ control + F12
 control + ~c
 	ctrl-c
 
-alt + ~w
+control + ~e
 	alt-w
 
