@@ -364,12 +364,12 @@ nnoremap ze zt6<C-y>6<C-y>
 " HL
 nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 " Jump to diffs
-nmap <expr> <M-j> &diff ? ']c' : '}'
-nmap <expr> <M-k> &diff ? '[c' : '{'
-omap <expr> <M-j> &diff ? ']c' : '}'
-omap <expr> <M-k> &diff ? '[c' : '{'
-vmap <expr> <M-j> &diff ? ']c' : '}'
-vmap <expr> <M-k> &diff ? '[c' : '{'
+nnoremap <expr> <M-j> &diff ? ']c' : '}'
+nnoremap <expr> <M-k> &diff ? '[c' : '{'
+onoremap <expr> <M-j> &diff ? ']c' : '}'
+onoremap <expr> <M-k> &diff ? '[c' : '{'
+vnoremap <expr> <M-j> &diff ? ']c' : '}'
+vnoremap <expr> <M-k> &diff ? '[c' : '{'
 " Set mark with mouse
 nnoremap <C-LeftMouse> ma
 " Rightmouse
