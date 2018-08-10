@@ -2,9 +2,9 @@
 ```
 .
 ├── [ 42K]  fish
+│   ├── [  85]  config.fish
 │   ├── [ 170]  fishfile
 │   ├── [4.0K]  aliases [32 entries exceeds filelimit, not opening dir]
-│   ├── [  47]  config.fish
 │   ├── [8.3K]  config
 │   │   ├── [3.4K]  fish_user_key_bindings.fish
 │   │   ├── [  34]  fish_title.fish
@@ -27,12 +27,12 @@
 ├── [4.1K]  sxhkd
 │   └── [ 143]  sxhkdrc
 ├── [100K]  vim
-│   ├── [ 39K]  .plugs.vimrc
 │   ├── [ 19K]  .vimrc
+│   ├── [ 39K]  .plugs.vimrc
+│   ├── [4.0K]  usnippets [78 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  skeletons [29 entries exceeds filelimit, not opening dir]
 │   ├── [9.0K]  .oldconfigs.vimrc
 │   ├── [4.0K]  colors [89 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  skeletons [28 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  usnippets [77 entries exceeds filelimit, not opening dir]
 │   ├── [ 17K]  after
 │   │   ├── [8.4K]  syntax
 │   │   │   ├── [ 275]  scheme.vim
@@ -50,12 +50,12 @@
 │   └── [3.0K]  conky-dual.conf
 ├── [1.2K]  install.sh
 ├── [ 11K]  user
+│   ├── [ 170]  .bash_profile
 │   ├── [2.2K]  .Xresources
 │   ├── [1.6K]  .xinitrc
 │   ├── [1.8K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
 │   ├── [  61]  .inputrc
-│   ├── [ 170]  .bash_profile
 │   └── [ 305]  .Xdefaults
 ├── [   8]  .gitignore
 ├── [6.0K]  zsh
@@ -98,4 +98,4 @@
  327K used in 31 directories, 62 files
 ```
 
-> Generated on Sunday, August  5, 2018 at 01:08:02 AM UTC.
+> Generated on Friday, August 10, 2018 at 15:02:14 PM UTC.
