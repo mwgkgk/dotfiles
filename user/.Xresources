@@ -35,6 +35,8 @@ URxvt*.cursorColor: #995834
 ! URxvt*.tabbed.tab-bg: 5
 URxvt*.color0: #3F3F3F
 URxvt*.color9: #98D53D
+URxvt*.color12: #8775E8
+URxvt*.color4:  #3465A4
 URxvt*.tabbed.tab-bg: 9
 
 URxvt.keysym.Meta-F1: perl:tabbedex:prev_tab
