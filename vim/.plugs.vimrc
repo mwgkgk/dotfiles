@@ -601,6 +601,9 @@ vnoremap gxx <Plug>(openbrowser-open)
 nnoremap gxs <Plug>(openbrowser-search)
 vnoremap gxs <Plug>(openbrowser-search)
 " }}}
+Plug 'tyru/open-browser-github.vim' " {{{
+nnoremap gxg :OpenGithubProject <C-r>"<CR>
+" }}}
 Plug 'sgur/vim-textobj-parameter'
 
 Plug 'akiyan/vim-textobj-xml-attribute'
