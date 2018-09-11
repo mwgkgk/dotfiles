@@ -338,6 +338,7 @@ inoremap <silent> <M-h> <Esc>:<C-u>call patternjump#backward(
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/yankwin.vim'
+Plug 'AndrewRadev/exercism.vim'
 
 Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/JumpToLastOccurrence'
