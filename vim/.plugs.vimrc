@@ -342,6 +342,8 @@ Plug 'AndrewRadev/yankwin.vim'
 Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/JumpToLastOccurrence'
 
+Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
+
 Plug 'rhysd/clever-f.vim'
 
 Plug 'szw/vim-maximizer' " {{{
