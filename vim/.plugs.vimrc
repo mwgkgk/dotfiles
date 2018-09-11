@@ -676,9 +676,8 @@ command! FzfDotfiles call fzf#run(fzf#wrap({'source': 'find-dots'}))
 nnoremap sd :FzfDotfiles<CR>
 " }}}
 Plug 'junegunn/vim-peekaboo' " {{{
-let g:peekaboo_delay = 400
+let g:peekaboo_delay = 200
 let g:peekaboo_compact = 1
-let g:peekaboo_ins_prefix = "<C-q>" " Meaning, <C-q><C-r> for peekaboo ins mode
 " }}}
 Plug 'junegunn/gv.vim' " {{{
 nnoremap <Space>A :GV<CR>
