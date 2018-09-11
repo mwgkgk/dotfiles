@@ -448,8 +448,10 @@ let g:formatdef_perl6tidy = '"perl6-tidy --indent-style=tab"'
 let g:formatters_perl6 = ['perl6tidy']
 let g:formatdef_dfmt = '"dfmt --brace_style=otbs"'
 let g:formatters_d = ['dfmt']
+let g:formatdef_jsfmt = '"jsfmt"'
+let g:formatters_js = ['jsfmt']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl,perl6,dhall,d nnoremap <buffer> <Space>f :Autoformat<CR>
+autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl,perl6,dhall,d,javascript nnoremap <buffer> <Space>f :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
 autocmd plugs.vimrc FileType scheme nnoremap <buffer> <Space>f :Trailing<CR>gg=G<C-O><C-O><CR>
 " }}}
