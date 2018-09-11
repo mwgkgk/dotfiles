@@ -595,6 +595,12 @@ call submode#map(       'ScrollStay', 'n', '',  'j', '3<C-E>')
 " }}}
 Plug 'kana/vim-niceblock'
 
+Plug 'tyru/open-browser.vim' " {{{
+nnoremap gxx <Plug>(openbrowser-open)
+vnoremap gxx <Plug>(openbrowser-open)
+nnoremap gxs <Plug>(openbrowser-search)
+vnoremap gxs <Plug>(openbrowser-search)
+" }}}
 Plug 'sgur/vim-textobj-parameter'
 
 Plug 'akiyan/vim-textobj-xml-attribute'
