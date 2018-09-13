@@ -603,6 +603,7 @@ vmap gxs <Plug>(openbrowser-search)
 " }}}
 Plug 'tyru/open-browser-github.vim' " {{{
 nnoremap gxg :OpenGithubProject <C-r>"<CR>
+vnoremap gxg y:OpenGithubProject <C-r>"<CR>
 " }}}
 
 Plug 'sgur/vim-operator-openbrowser'" {{{
