@@ -596,10 +596,10 @@ call submode#map(       'ScrollStay', 'n', '',  'j', '3<C-E>')
 Plug 'kana/vim-niceblock'
 
 Plug 'tyru/open-browser.vim' " {{{
-nnoremap gxx <Plug>(openbrowser-open)
-vnoremap gxx <Plug>(openbrowser-open)
-nnoremap gxs <Plug>(openbrowser-search)
-vnoremap gxs <Plug>(openbrowser-search)
+nmap gxx <Plug>(openbrowser-open)
+vmap gxx <Plug>(openbrowser-open)
+nmap gxs <Plug>(openbrowser-search)
+vmap gxs <Plug>(openbrowser-search)
 " }}}
 Plug 'tyru/open-browser-github.vim' " {{{
 nnoremap gxg :OpenGithubProject <C-r>"<CR>
