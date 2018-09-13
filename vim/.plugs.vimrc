@@ -421,7 +421,7 @@ let g:SignatureMap = {
     \ 'ListBufferMarks'    :  "m/",
     \ 'ListBufferMarkers'  :  "m?"
     \ }
-nnoremap <Leader>M M
+nnoremap <LocalLeader>M M
 nmap M `]
 nmap U `[
 hi link SignatureMarkText Normal
