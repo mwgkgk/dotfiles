@@ -345,7 +345,7 @@ Plug 'vim-scripts/JumpToLastOccurrence'
 
 Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
 
-Plug 'deris/vim-shot-f'
+Plug 'unblevable/quick-scope'
 
 Plug 'szw/vim-maximizer' " {{{
 let g:maximizer_set_default_mapping = 0
