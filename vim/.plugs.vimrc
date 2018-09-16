@@ -141,9 +141,10 @@ nmap cr cgL)
 nmap cR cgH(
 " }}}
 
-Plug 'vim-scripts/marvim' "{{{
+Plug 'RogerioDosSantos/marvim' "{{{
 let marvim_find_key='<Leader>m'
 let marvim_store_key = '<Leader>"'
+let marvim_load_key = '<Leader>M'
 let marvim_register = 'q' " Default
 let marvim_prefix = 0
 " }}}
