@@ -341,7 +341,7 @@ Plug 'AndrewRadev/yankwin.vim'
 Plug 'AndrewRadev/exercism.vim'
 
 Plug 'vim-scripts/ingo-library'
-Plug 'vim-scripts/JumpToLastOccurrence'
+Plug 'vim-scripts/JumpToLastOccurrence' " ,f ,F ,t ,T
 
 Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
 
