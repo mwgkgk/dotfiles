@@ -458,6 +458,7 @@ autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
 autocmd plugs.vimrc FileType scheme nnoremap <buffer> <Space>f :Trailing<CR>gg=G<C-O><C-O><CR>
 " }}}
 
+Plug 'myusuf3/numbers.vim/'
 Plug 'terryma/vim-multiple-cursors' " {{{
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key = '<C-l>'
