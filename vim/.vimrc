@@ -338,8 +338,8 @@ inoremap <C-c>nn ñ
 " Normal-mode-related {{{
 " - Y to behave like C & D :
 map Y y$
-" - 1 for ^:
-nnoremap 1 ^
+" - q for ^:
+nnoremap q ^
 " - Add newlines before and after :
 " nnoremap [<Space> O<Esc>j
 nnoremap ]<Space> o<Esc>k
