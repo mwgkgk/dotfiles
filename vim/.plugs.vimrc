@@ -589,10 +589,10 @@ call submode#map(       'RemoteZoom', 'n', '',   'o', ':silent! VimProcBang bro 
 call submode#enter_with('RemoteZoom', 'n', '', '[zi', ':silent! VimProcBang bro zoomIn<CR>')
 call submode#map(       'RemoteZoom', 'n', '',   'i', ':silent! VimProcBang bro zoomIn<CR>')
 
-call submode#enter_with('ScrollGo', 'n', '', ';k', '6<C-Y>4k')
-call submode#map(       'ScrollGo', 'n', '',  'k', '6<C-Y>4k')
-call submode#enter_with('ScrollGo', 'n', '', ';j', '6<C-E>4j')
-call submode#map(       'ScrollGo', 'n', '',  'j', '6<C-E>4j')
+call submode#enter_with('ScrollGo', 'n', '', ';k', '6<C-Y>6k')
+call submode#map(       'ScrollGo', 'n', '',  'k', '6<C-Y>6k')
+call submode#enter_with('ScrollGo', 'n', '', ';j', '6<C-E>6j')
+call submode#map(       'ScrollGo', 'n', '',  'j', '6<C-E>6j')
 
 call submode#enter_with('ScrollStay', 'n', '', ']k', '3<C-Y>')
 " call submode#enter_with('ScrollStay', 'n', '', ';k', '3<C-Y>')
