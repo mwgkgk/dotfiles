@@ -329,6 +329,9 @@ Plug 'vim-scripts/JumpToLastOccurrence' " ,f ,F ,t ,T
 
 Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
 
+Plug 'gcmt/wildfire.vim' " {{{
+nmap <Leader><Enter> <Plug>(wildfire-quick-select)
+" }}}
 
 Plug 'szw/vim-maximizer' " {{{
 let g:maximizer_set_default_mapping = 0
