@@ -317,23 +317,6 @@ let g:patternjump_patterns = {
 
 map <M-q> <Plug>(patternjump-backward)
 map <M-r> <Plug>(patternjump-forward)
-
-nnoremap <silent> <M-l> :<C-u>call patternjump#forward(
-    \ 'n',
-    \ [[[],['?']], []],
-    \ 0)<CR>
-inoremap <silent> <M-l> <Esc>:<C-u>call patternjump#forward(
-    \ 'n',
-    \ [[[],['?']], []],
-    \ 0)<CR>
-nnoremap <silent> <M-h> :<C-u>call patternjump#backward(
-    \ 'n',
-    \ [[[],['?']], []],
-    \ 0)<CR>
-inoremap <silent> <M-h> <Esc>:<C-u>call patternjump#backward(
-    \ 'n',
-    \ [[[],['?']], []],
-    \ 0)<CR>
 " }}}
 
 Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
@@ -752,8 +735,11 @@ nmap gy <Plug>(easyoperator-line-yank)
 nmap gd <Plug>(easyoperator-line-delete)
 " }}}
 Plug 'haya14busa/vim-edgemotion' " {{{
-map <Leader>j <Plug>(edgemotion-j)
-map <Leader>k <Plug>(edgemotion-k)
+map <M-j> <Plug>(edgemotion-j)
+map <M-k> <Plug>(edgemotion-k)
+" Poor man's horizontal edgemotion
+map <M-h> B
+map <M-l> E
 " }}}
 
 Plug 'tpope/vim-surround' " {{{
