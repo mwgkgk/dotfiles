@@ -343,12 +343,6 @@ Plug 'AndrewRadev/exercism.vim'
 
 Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/JumpToLastOccurrence' " ,f ,F ,t ,T
-Plug 'vim-scripts/CountJump'
-Plug 'vim-scripts/JumpToVerticalOccurrence' " [V{char}, [v, [|, [!
-" {{{
-nmap <Leader>F ]V
-nmap <Leader>f [V
-" }}}
 
 Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
 
