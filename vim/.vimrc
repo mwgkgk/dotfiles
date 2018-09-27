@@ -44,9 +44,9 @@ set ruler
 set scrolloff=5
 set mouse=a
 set number
-set cursorline cursorcolumn
-autocmd vimrc WinEnter * setlocal cursorline cursorcolumn
-autocmd vimrc WinLeave * setlocal nocursorline cursorcolumn
+set cursorline
+autocmd vimrc WinEnter * setlocal cursorline
+autocmd vimrc WinLeave * setlocal nocursorline
 set colorcolumn=80
 
 " Wrap h l normal
