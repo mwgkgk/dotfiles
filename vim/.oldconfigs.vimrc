@@ -276,3 +276,26 @@ let g:indent_guides_auto_colors = 0
 " This should only be in nim
 " autocmd plugs.vimrc VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=232
 " }}}
+
+nnoremap <silent> <M-l> :<C-u>call patternjump#forward(
+    \ 'n',
+    \ [[[],['?']], []],
+    \ 0)<CR>
+inoremap <silent> <M-l> <Esc>:<C-u>call patternjump#forward(
+    \ 'n',
+    \ [[[],['?']], []],
+    \ 0)<CR>
+nnoremap <silent> <M-h> :<C-u>call patternjump#backward(
+    \ 'n',
+    \ [[[],['?']], []],
+    \ 0)<CR>
+inoremap <silent> <M-h> <Esc>:<C-u>call patternjump#backward(
+    \ 'n',
+    \ [[[],['?']], []],
+    \ 0)<CR>
+
+Plug 'vim-scripts/JumpToVerticalOccurrence' " [V{char}, [v, [|, [!
+" {{{
+nmap <Leader>f ]V
+nmap <Leader>F [V
+" }}}
