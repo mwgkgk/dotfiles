@@ -379,8 +379,7 @@ nnoremap <Leader><Space>N :above term ++rows=10<CR>
 nnoremap <M-;> ;
 " }}}
 " Commandline-related {{{
-nnoremap <Leader>: :<C-P>
-nnoremap <Leader><Leader> :<C-P>
+nnoremap <Space>: :<C-P>
 " - Directory of the current file :
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 " - Prev command with a bang:
