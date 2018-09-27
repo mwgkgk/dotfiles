@@ -741,7 +741,7 @@ nnoremap <Leader>} :call FollowTag()<CR>
 command! Chr    execute "!chromium --incognito % &"
 command! Ff     execute "!firefox % &"
 " - Mksession to .vim/sessions/last.vim:
-command! Mklast execute "mksession! ~/.vim/sessions/last.vim"
+command! Mklast execute "mksession! ~/.vim/sessions/last"
 " - Save and source
 command! Source silent! :w | :source %
 autocmd vimrc FileType vim nnoremap <buffer> <Space>x :Source<CR>:echo 'Sourced file.'<CR>
