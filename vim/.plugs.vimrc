@@ -614,7 +614,7 @@ Plug 'mwgkgk/vim-textobj-elixir'
 Plug 'wellle/targets.vim' " {{{
 let g:targets_separators = '. ; : + - ~ _ * \ |'
 " }}}
-Plug 'wellle/visual-split.vim'
+Plug 'wellle/visual-split.vim' " :VSSplit, :VSResize
 
 Plug 'junegunn/vim-after-object' " {{{
 autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';', ',', '.')
