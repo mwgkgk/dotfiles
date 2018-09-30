@@ -430,8 +430,6 @@ nnoremap <F1> :e!<CR>
 vnoremap * y/<C-R>"<CR>
 " - select last paste visually
 nnoremap <expr> vp '`[' . strpart(getregtype(), 0, 1) . '`]'
-" - Select line without identation and EOL
-nnoremap <Leader>v ^v$h
 " - Yank to +:
 vnoremap <C-Y> "+y
 vnoremap <Space>y "+y
