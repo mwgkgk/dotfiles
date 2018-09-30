@@ -197,9 +197,10 @@ nnoremap <C-W>/ /<C-R>/
 cnoremap <C-N> <CR>/<C-P>
 cnoremap <C-O> <CR>NN/<C-P>
 " - Subsitute word under cursor
-nnoremap <Leader>* :%s /<C-R><C-W>//g<Left><Left>
+nnoremap <LocalLeader># :%s /<C-R><C-W>//g<Left><Left>
+nnoremap <LocalLeader>* :%s /<C-R><C-W>//g<Left><Left>
 " - Substitute last search pattern
-nnoremap <Leader># :%s /<C-R>///g<Left><Left>
+nnoremap <LocalLeader>/ :%s /<C-R>///g<Left><Left>
 " zz:
 nnoremap n nzOzz
 nnoremap N NzOzz
