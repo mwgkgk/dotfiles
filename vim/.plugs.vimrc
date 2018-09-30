@@ -582,6 +582,13 @@ call submode#map(       'ScrollStay', 'n', '',  'j', '3<C-E>')
 " }}}
 Plug 'kana/vim-niceblock'
 
+Plug 'thinca/vim-visualstar'
+Plug 'tyru/operator-star.vim' " {{{
+nmap <Leader>*  <Plug>(operator-*)
+nmap <Leader>g* <Plug>(operator-g*)
+nmap <Leader>#  <Plug>(operator-#)
+nmap <Leader>g# <Plug>(operator-g#)
+" }}}
 Plug 'tyru/open-browser.vim' " {{{
 nmap gxx <Plug>(openbrowser-open)
 vmap gxx <Plug>(openbrowser-open)

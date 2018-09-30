@@ -426,8 +426,6 @@ command! ReloadVimrc :source ~/.plugs.vimrc
 nnoremap <F1> :e!<CR>
 " }}}
 " Visual-mode-related {{{
-" - Visual search
-vnoremap * y/<C-R>"<CR>
 " - select last paste visually
 nnoremap <expr> vp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " - Yank to +:
