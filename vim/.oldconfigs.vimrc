@@ -299,3 +299,7 @@ Plug 'vim-scripts/JumpToVerticalOccurrence' " [V{char}, [v, [|, [!
 nmap <Leader>f ]V
 nmap <Leader>F [V
 " }}}
+Plug 'Yilin-Yang/vim-markbar', { 'branch': 'mvc' } " {{{
+map m<Space> <Plug>ToggleMarkbar
+let g:markbar_delete_mark_mapping='<Del>'
+" }}}
