@@ -1,3 +1,4 @@
 function g
-	gold  $argv;
+	# gold  $argv;
+	golddown  $argv;
 end
