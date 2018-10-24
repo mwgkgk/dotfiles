@@ -191,6 +191,8 @@ nnoremap ] <nop>
 " Search-related {{{
 " Very magic
 nnoremap / /\v
+" Default
+nnoremap <Leader>/ /
 " Previous on <Space>/
 nnoremap <C-W>/ /<C-R>/
 " - Jump prev/next not leaving search command mode:
