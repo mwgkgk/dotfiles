@@ -170,8 +170,10 @@ function fish_user_key_bindings
   # M-c to cat
   bind \ec bind_ec
 
-  # M-~ to fzf-cd from ~
+  # M-w to fzf-cd from ~
   bind à bind_fzf_cd_from_home
+  # M-~ to also fzf-cd from ~
+  bind ÷ bind_fzf_cd_from_home
   # M-e to fzf-cd from .
   bind å bind_ee
   # C-r to fzf-history
@@ -180,8 +182,8 @@ function fish_user_key_bindings
   bind ä bind_ed
   # M-S-d to fzf through dotfiles in ~/, or kill-word
   bind Ä bind_esd
-  # M-w to fzf-vim .
-  bind ÷ bind_fzf_vim
+  # M-v to fzf-vim .
+  bind \ev bind_fzf_vim
   # M-r to fzf through siblings
   bind ò bind_er
 
