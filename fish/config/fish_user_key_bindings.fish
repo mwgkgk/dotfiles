@@ -103,7 +103,18 @@ end
 function bind_ed
   set -l cmdline (commandline)
   if test -z "$cmdline"
-    find-dots | fzf +m --height 15 --reverse | read -l result
+    fd --type file --hidden --exclude .git "" ~/code/dotfiles/ | fzf +m --height 15 --reverse | read -l result
+    and commandline -- "v $result" ;and commandline -f execute
+    commandline -f repaint
+  else
+    commandline -f kill-word
+  end
+end
+
+function bind_esd
+  set -l cmdline (commandline)
+  if test -z "$cmdline"
+    fd --type file --hidden -d 1 ".*" ~ | fzf +m --height 15 --reverse | read -l result
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
   else
@@ -165,8 +176,10 @@ function fish_user_key_bindings
   bind å bind_ee
   # C-r to fzf-history
   bind \cr bind_cr
-  # M-d to fzf through dotfiles, or kill-word
+  # M-d to fzf through dotfile folder, or kill-word
   bind ä bind_ed
+  # M-d to fzf through dotfiles in ~/, or kill-word
+  bind Ä bind_esd
   # M-w to fzf-vim .
   bind ÷ bind_fzf_vim
   # M-r to fzf through siblings
