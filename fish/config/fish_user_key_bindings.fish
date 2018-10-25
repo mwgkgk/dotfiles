@@ -178,7 +178,7 @@ function fish_user_key_bindings
   bind \cr bind_cr
   # M-d to fzf through dotfile folder, or kill-word
   bind ä bind_ed
-  # M-d to fzf through dotfiles in ~/, or kill-word
+  # M-S-d to fzf through dotfiles in ~/, or kill-word
   bind Ä bind_esd
   # M-w to fzf-vim .
   bind ÷ bind_fzf_vim
