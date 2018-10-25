@@ -30,7 +30,7 @@ end
 function bind_ef
   set -l cmdline (commandline)
   if test -z "$cmdline"
-    fm .
+    tmux new-window -n (prompt_pwd) fm .
     commandline -f repaint
   else
     commandline -f forward-word
@@ -154,7 +154,7 @@ function fish_user_key_bindings
 
   # C-o to jump back
   bind \co bind_co
-  # M-f to open fm . or forward-word
+  # M-f to tmux new-window fm . or forward-word
   bind \ef bind_ef
 
   # M- HJKL-navigation:
