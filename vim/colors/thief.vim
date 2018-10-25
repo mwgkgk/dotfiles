@@ -15,7 +15,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = 'hashishin'
+let g:colors_name = 'thief'
 
 hi Comment      guifg=#008220 guibg=#000000 gui=none ctermfg=244 ctermbg=none cterm=none
 hi Constant     guifg=#1fc700 guibg=#001c00 gui=none ctermfg=229 ctermbg=none cterm=none
