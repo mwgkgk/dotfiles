@@ -164,8 +164,8 @@ function fish_user_key_bindings
   # M-r to fzf through siblings
   bind ò bind_er
 
-  # Move \ee to \ec
-  bind \ec edit_command_buffer
+  # Move \ee to \ex
+  bind \ex edit_command_buffer
 
   # Special CR
   bind \r bind_enter
