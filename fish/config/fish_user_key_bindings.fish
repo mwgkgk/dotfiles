@@ -64,7 +64,7 @@ function bind_ek
 end
 
 function bind_eo
-  echo ;and ls
+  echo ;and exa -a --group-directories-first
   commandline -f repaint
 end
 
@@ -78,6 +78,16 @@ end
 function bind_ec
   fd -t f --hidden -E .git/ | fzf +m --height 15 --reverse | read -l result
   and commandline -- "bat $result" ;and commandline -f execute
+  commandline -f repaint
+end
+
+function bind_ep
+  echo ;and exa -lh --git-ignore --sort modified --reverse --group-directories-first --time-style long-iso --binary --color=always | less -FR
+  commandline -f repaint
+end
+
+function bind_esp
+  echo ;and exa -lh --git-ignore --sort modified --reverse --group-directories-first --tree --level 2 --time-style long-iso --binary --color=always | less -FR
   commandline -f repaint
 end
 
@@ -169,6 +179,10 @@ function fish_user_key_bindings
   bind \ei bind_ei
   # M-c to cat
   bind \ec bind_ec
+  # M-p to exa -l --sort modified
+  bind ð bind_ep
+  # M-S-p to exa -l --sort modified --tree
+  bind Ð bind_esp
 
   # M-w to fzf-cd from ~
   bind à bind_fzf_cd_from_home
