@@ -75,6 +75,12 @@ end
 
 # Fzf misc:
 
+function bind_ec
+  fd -t f --hidden -E .git/ | fzf +m --height 15 --reverse | read -l result
+  and commandline -- "bat $result" ;and commandline -f execute
+  commandline -f repaint
+end
+
 function bind_fzf_cd_from_home
   fd -t d "" ~ | fzf +m --height 15 --reverse | read -l result
   and cd $result
@@ -150,6 +156,8 @@ function fish_user_key_bindings
   bind \eo bind_eo
   # M-i to git status
   bind \ei bind_ei
+  # M-c to cat
+  bind \ec bind_ec
 
   # M-~ to fzf-cd from ~
   bind à bind_fzf_cd_from_home
