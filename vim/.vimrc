@@ -385,6 +385,7 @@ nnoremap <M-t> hxp
 " }}}
 " Commandline-related {{{
 nnoremap <Space>: :<C-P>
+nnoremap <Leader>: :<C-P>
 " - Directory of the current file :
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 " - Prev command with a bang:
