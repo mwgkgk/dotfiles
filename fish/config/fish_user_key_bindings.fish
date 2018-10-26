@@ -28,6 +28,16 @@ function bind_tab
   end
 end
 
+function bind_enter
+  set -l cmdline (commandline)
+  if test -z (string trim "$cmdline")
+    echo ;and fg
+    commandline -f repaint
+  else
+    commandline -f execute
+  end
+end
+
 function bind_eg
   commandline -r "rlwrap reply"
   commandline -f execute
@@ -150,16 +160,6 @@ function bind_er
   commandline -f repaint
 end
 
-function bind_enter
-  set -l cmdline (commandline)
-  if test -z (string trim "$cmdline")
-    echo ;and fg
-    commandline -f repaint
-  else
-    commandline -f execute
-  end
-end
-
 function fish_user_key_bindings
   # Emulate bash: !!, !$
   bind ! bind_bang
@@ -167,6 +167,10 @@ function fish_user_key_bindings
 
   # Special tab
   bind \t bind_tab
+
+  # Special CR
+  bind \r bind_enter
+  bind \n bind_enter
 
   # C-g to repl
   bind \cg bind_eg
@@ -210,8 +214,4 @@ function fish_user_key_bindings
 
   # Move \ee to \ex
   bind \ex edit_command_buffer
-
-  # Special CR
-  bind \r bind_enter
-  bind \n bind_enter
 end
