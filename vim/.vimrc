@@ -189,12 +189,12 @@ nnoremap [ <nop>
 nnoremap ] <nop>
 " }}}
 " Search-related {{{
-" Very magic
-nnoremap / /\v
-" Default
-nnoremap <Leader>/ /
-" Previous on <Space>/
-nnoremap <C-W>/ /<C-R>/
+" Magic
+nnoremap / /\m
+" Very nomagic
+nnoremap <Space>/ /\V
+" Previous on <Leader>/
+nnoremap <Leader>/ /<C-R>/
 " - Jump prev/next not leaving search command mode:
 cnoremap <C-N> <CR>/<C-P>
 cnoremap <C-O> <CR>NN/<C-P>
@@ -384,7 +384,7 @@ nnoremap <M-;> ;
 nnoremap <M-t> hxp
 " }}}
 " Commandline-related {{{
-nnoremap <Space>: :<C-P>
+" Previous on <Leader>:
 nnoremap <Leader>: :<C-P>
 " - Directory of the current file :
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
