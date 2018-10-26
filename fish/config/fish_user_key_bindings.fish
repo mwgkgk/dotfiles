@@ -175,14 +175,12 @@ function fish_user_key_bindings
 
   # M-o to ls
   bind \eo bind_eo
+  # M-S-o to exa -l --sort modified --tree
+  bind Ï bind_eso
   # M-i to git status
   bind \ei bind_ei
   # M-c to cat
   bind \ec bind_ec
-  # M-p to exa -l --sort modified
-  bind ð bind_ep
-  # M-S-p to exa -l --sort modified --tree
-  bind Ð bind_esp
 
   # M-w to fzf-cd from ~
   bind à bind_fzf_cd_from_home
