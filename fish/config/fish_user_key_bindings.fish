@@ -81,12 +81,7 @@ function bind_ec
   commandline -f repaint
 end
 
-function bind_ep
-  echo ;and exa -l --git-ignore --sort modified --reverse --group-directories-first --time-style long-iso --binary --color=always | less -FR
-  commandline -f repaint
-end
-
-function bind_esp
+function bind_eso
   echo ;and exa -l --git-ignore --sort modified --reverse --group-directories-first --tree --level 2 --time-style long-iso --binary --color=always | less -FR
   commandline -f repaint
 end
