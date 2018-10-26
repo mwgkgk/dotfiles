@@ -17,6 +17,17 @@ function bind_dollar
   end
 end
 
+function bind_tab
+  set -l cmdline (commandline)
+  if test -z "$cmdline"
+    commandline -i "d "
+  else if test "$cmdline" = "d "
+    commandline -f execute
+  else
+    commandline -f complete
+  end
+end
+
 function bind_eg
   commandline -r "rlwrap reply"
   commandline -f execute
@@ -153,6 +164,9 @@ function fish_user_key_bindings
   # Emulate bash: !!, !$
   bind ! bind_bang
   bind '$' bind_dollar
+
+  # Special tab
+  bind \t bind_tab
 
   # C-g to repl
   bind \cg bind_eg
