@@ -178,7 +178,7 @@ function fish_user_key_bindings
   # C-o to jump back
   bind \co bind_co
   # M-f to tmux new-window fm . or forward-word
-  bind \ef bind_ef
+  bind æ bind_ef
 
   # M- HJKL-navigation:
   bind è bind_eh

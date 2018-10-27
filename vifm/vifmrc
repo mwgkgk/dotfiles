@@ -316,7 +316,7 @@ nmap w :view<cr>
 nmap o :!gvim --remote-tab-silent %f<cr>
 nmap O :!gvim %f<cr>
 
-nmap f :!tmux new-window -n %d fm .<CR>
+nmap æ :!tmux new-window -n $(fish -c prompt_pwd)/ fm .<CR>
 
 " Open file in the background using its default program
 nmap gb :file &<cr>l
