@@ -368,6 +368,9 @@ nmap K <tab>
 nmap <Space>h <Tab>
 nmap <Space>l <Tab>
 
+" Backspace to go up dir
+nmap  h
+
 nmap U :undolist<cr>
 nmap <Space>s :sync<CR><Tab>
 
