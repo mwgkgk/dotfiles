@@ -1,13 +1,13 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [ 42K]  fish
-│   ├── [  85]  config.fish
-│   ├── [ 170]  fishfile
-│   ├── [4.0K]  aliases [32 entries exceeds filelimit, not opening dir]
-│   ├── [8.3K]  config
-│   │   ├── [3.4K]  fish_user_key_bindings.fish
-│   │   ├── [  34]  fish_title.fish
+├── [ 44K]  fish
+│   ├── [ 171]  fishfile
+│   ├── [4.0K]  aliases [34 entries exceeds filelimit, not opening dir]
+│   ├── [ 188]  config.fish
+│   ├── [9.8K]  config
+│   │   ├── [ 223]  fish_title.fish
+│   │   ├── [4.7K]  fish_user_key_bindings.fish
 │   │   └── [ 861]  fish_prompt.fish
 │   ├── [ 22K]  completions
 │   │   └── [ 18K]  rustup.fish
@@ -25,14 +25,14 @@
 │   ├── [  48]  .lambda-term-inputrc
 │   └── [ 119]  .minrc
 ├── [4.1K]  sxhkd
-│   └── [ 143]  sxhkdrc
-├── [100K]  vim
-│   ├── [ 19K]  .vimrc
-│   ├── [ 39K]  .plugs.vimrc
-│   ├── [4.0K]  usnippets [78 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  skeletons [29 entries exceeds filelimit, not opening dir]
-│   ├── [9.0K]  .oldconfigs.vimrc
-│   ├── [4.0K]  colors [89 entries exceeds filelimit, not opening dir]
+│   └── [ 139]  sxhkdrc
+├── [102K]  vim
+│   ├── [ 40K]  .plugs.vimrc
+│   ├── [ 18K]  .vimrc
+│   ├── [4.0K]  colors [90 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  skeletons [30 entries exceeds filelimit, not opening dir]
+│   ├── [9.6K]  .oldconfigs.vimrc
+│   ├── [4.0K]  usnippets [75 entries exceeds filelimit, not opening dir]
 │   ├── [ 17K]  after
 │   │   ├── [8.4K]  syntax
 │   │   │   ├── [ 275]  scheme.vim
@@ -50,8 +50,8 @@
 │   └── [3.0K]  conky-dual.conf
 ├── [1.2K]  install.sh
 ├── [ 11K]  user
+│   ├── [2.3K]  .Xresources
 │   ├── [ 170]  .bash_profile
-│   ├── [2.2K]  .Xresources
 │   ├── [1.6K]  .xinitrc
 │   ├── [1.8K]  .bash_aliases
 │   ├── [1.1K]  .bashrc
@@ -66,10 +66,10 @@
 │       └── [4.1K]  hooks
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
-├── [9.0K]  tmux
-│   └── [5.0K]  .tmux.conf
+├── [8.9K]  tmux
+│   └── [4.9K]  .tmux.conf
 ├── [ 38K]  vifm
-│   ├── [9.9K]  vifmrc
+│   ├── [ 10K]  vifmrc
 │   └── [ 24K]  colors
 │       ├── [3.2K]  Day.vifm
 │       ├── [1.5K]  snowwhite.vifm
@@ -95,7 +95,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 327K used in 31 directories, 62 files
+ 329K used in 31 directories, 62 files
 ```
 
-> Generated on Friday, August 10, 2018 at 15:02:14 PM UTC.
+> Generated on Saturday, October 27, 2018 at 09:21:02 AM UTC.
