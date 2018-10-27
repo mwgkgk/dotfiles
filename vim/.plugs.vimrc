@@ -961,6 +961,9 @@ Plug 'racer-rust/vim-racer', { 'for' : 'rust' } " {{{
 let g:racer_experimental_completer = 1
 " }}}
 
+" Ion
+Plug 'vmchale/ion-vim', { 'for' : 'ion' }
+
 " JS
 Plug 'pangloss/vim-javascript'
 Plug 'maksimr/vim-jsbeautify' " {{{
