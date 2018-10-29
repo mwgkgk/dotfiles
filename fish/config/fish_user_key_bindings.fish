@@ -146,7 +146,7 @@ end
 function bind_esd
   set -l cmdline (commandline)
   if test -z "$cmdline"
-    fd --type file --hidden -d 1 ".*" ~ | fzf +m --height 15 --reverse | read -l result
+    fd --type file --hidden --follow -d 1 ".*" ~ | fzf +m --height 15 --reverse | read -l result
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
   else
