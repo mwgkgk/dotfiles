@@ -368,6 +368,13 @@ nmap K <tab>
 nmap <Space>h <Tab>
 nmap <Space>l <Tab>
 
+" M-j M-k to go prev-next like shell
+command! UpSibling :execute 'cd' system('prev-sibling-dir')
+command! DownSibling :execute 'cd' system('next-sibling-dir')
+
+nmap ë :UpSibling<CR>
+nmap ê :DownSibling<CR>
+
 " Backspace to go up dir
 nmap  h
 
