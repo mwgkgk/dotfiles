@@ -147,6 +147,8 @@ command mkdatedir !mkdatedir %a
 command mktimedir !mktimedir %a
 command FF !firefox-default %f &
 
+command Ren :screen | :execute "!tmux rename-window `fish -c prompt_pwd`/" | :screen
+
 " The file type is for the default programs to be used with
 " a file extension.
 " :filetype pattern1,pattern2 defaultprogram,program2
