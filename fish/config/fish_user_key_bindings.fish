@@ -125,6 +125,12 @@ function bind_ee
   commandline -f repaint
 end
 
+function bind_er
+  warlock --siblings | fzf +m --height 15 --reverse | read -l result
+  and cd $result
+  commandline -f repaint
+end
+
 function bind_cr
   set -l cmdline (commandline)
   history -z | fzf +m --height 15 --reverse --toggle-sort=ctrl-r --read0 --tiebreak=index -q "$cmdline" | perl -pe 'chomp if eof' | read -lz result
@@ -171,12 +177,6 @@ function bind_fzf_vim
   commandline -f repaint
 end
 
-function bind_er
-  warlock --siblings | fzf +m --height 15 --reverse | read -l result
-  and cd $result
-  commandline -f repaint
-end
-
 function fish_user_key_bindings
   # Emulate bash: !!, !$
   bind ! bind_bang
@@ -218,8 +218,12 @@ function fish_user_key_bindings
   bind ÷ bind_fzf_cd_from_shop
   # M-e to fzf-cd from .
   bind å bind_ee
+  # M-r to fzf through siblings
+  bind ò bind_er
+
   # C-r to fzf-history
   bind \cr bind_cr
+
   # M-d to fzf through dotfile folder, or kill-word
   bind ä bind_ed
   # M-S-d to fzf through dotfiles in ~/, or kill-word
@@ -228,8 +232,6 @@ function fish_user_key_bindings
   bind \eb bind_eb
   # M-v to fzf-vim .
   bind \ev bind_fzf_vim
-  # M-r to fzf through siblings
-  bind ò bind_er
 
   # Move \ee to \ex
   bind \ex edit_command_buffer
