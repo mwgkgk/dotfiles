@@ -39,7 +39,7 @@ function bind_enter
 end
 
 function bind_eg
-  commandline -r "rlwrap reply"
+  commandline -r "guile"
   commandline -f execute
 end
 
