@@ -138,6 +138,12 @@ function bind_cr
   commandline -f repaint
 end
 
+function bind_fzf_vim
+  fd -t f --hidden -E .git/ | fzf +m --height 15 --reverse | read -l result
+  and commandline -- "v $result" ;and commandline -f execute
+  commandline -f repaint
+end
+
 function bind_ed
   set -l cmdline (commandline)
   if test -z "$cmdline"
@@ -169,12 +175,6 @@ function bind_eb
   else
     commandline -f kill-word
   end
-end
-
-function bind_fzf_vim
-  fd -t f --hidden -E .git/ | fzf +m --height 15 --reverse | read -l result
-  and commandline -- "v $result" ;and commandline -f execute
-  commandline -f repaint
 end
 
 function fish_user_key_bindings
@@ -224,14 +224,14 @@ function fish_user_key_bindings
   # C-r to fzf-history
   bind \cr bind_cr
 
+  # M-v to fzf-vim .
+  bind \ev bind_fzf_vim
   # M-d to fzf through dotfile folder, or kill-word
   bind ä bind_ed
   # M-S-d to fzf through dotfiles in ~/, or kill-word
   bind Ä bind_esd
   # M-b to fzf-vim ~/bin
   bind \eb bind_eb
-  # M-v to fzf-vim .
-  bind \ev bind_fzf_vim
 
   # Move \ee to \ex
   bind \ex edit_command_buffer
