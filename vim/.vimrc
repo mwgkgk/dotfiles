@@ -497,6 +497,15 @@ function! HardWrapToggle()
     echo &textwidth
 endfunc
 nnoremap <Leader>tw :call HardWrapToggle()<CR>
+
+function! DiffToggle()
+    if(&diff)
+      diffoff
+    else
+      diffthis
+    endif
+endfunc
+nnoremap <silent> <Leader>td :call DiffToggle()<CR>
 " }}}
 " From suckless.vim: WindowMove {{{
 function! WindowMove(direction)
