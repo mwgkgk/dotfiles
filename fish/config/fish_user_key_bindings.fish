@@ -154,6 +154,17 @@ function bind_esd
   end
 end
 
+function bind_eb
+  set -l cmdline (commandline)
+  if test -z "$cmdline"
+    fd --type file --hidden --exclude .git "" ~/bin/ | fzf +m --height 15 --reverse | read -l result
+    and commandline -- "v $result" ;and commandline -f execute
+    commandline -f repaint
+  else
+    commandline -f kill-word
+  end
+end
+
 function bind_fzf_vim
   fd -t f --hidden -E .git/ | fzf +m --height 15 --reverse | read -l result
   and commandline -- "v $result" ;and commandline -f execute
@@ -213,6 +224,8 @@ function fish_user_key_bindings
   bind ä bind_ed
   # M-S-d to fzf through dotfiles in ~/, or kill-word
   bind Ä bind_esd
+  # M-b to fzf-vim ~/bin
+  bind \eb bind_eb
   # M-v to fzf-vim .
   bind \ev bind_fzf_vim
   # M-r to fzf through siblings
