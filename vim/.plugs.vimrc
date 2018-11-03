@@ -967,6 +967,9 @@ Plug 'maksimr/vim-jsbeautify' " {{{
 vnoremap <silent> <Leader>b :call RangeJsBeautify()<CR>
 " }}}
 
+" TS
+Plug 'ianks/vim-tsx'
+
 " Elm
 Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
 
