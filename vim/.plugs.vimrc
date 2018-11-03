@@ -620,7 +620,7 @@ autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ',
 Plug 'junegunn/vader.vim'
 Plug 'junegunn/fzf.vim' " {{{
 let g:fzf_command_prefix = 'Fzf'
-let g:fzf_layout = { 'down': '~15%' }
+let g:fzf_layout = { 'down': '~30%' }
 let g:fzf_action = {
             \ 'ctrl-t': 'tab split',
             \ 'space': 'split',
