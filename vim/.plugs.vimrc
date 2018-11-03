@@ -158,7 +158,6 @@ nnoremap <Leader>u :UltiSnipsEdit<CR>
 
 Plug 'bootleq/vim-cycle' " {{{
 let g:cycle_no_mappings = 1
-nmap <silent> <M-w> <Plug>CycleNext
 nmap <silent> <C-A> <Plug>CycleNext
 nmap <silent> <C-X> <Plug>CyclePrev
 vmap <silent> <C-A> <Plug>CycleNext
