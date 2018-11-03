@@ -63,7 +63,7 @@ set noiec
 
 " Selected color scheme
 
-colorscheme Day
+colorscheme Hell
 
 " The FUSE_HOME directory will be used as a root dir for all FUSE mounts.
 " Unless it exists with write/exec permissions set, vifm will attempt to
