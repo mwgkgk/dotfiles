@@ -1,0 +1,16 @@
+# https://github.com/go-task/task
+
+b:
+  desc: npm run build
+  cmds:
+    - npm run build
+
+t:
+  desc: npm run test
+  cmds:
+    - npm run test
+
+r:
+  desc: npm run start
+  cmds:
+    - BROWSER=none npm run start
