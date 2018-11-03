@@ -383,7 +383,7 @@ nmap  h
 nmap U :undolist<cr>
 nmap <Space>s :sync<CR><Tab>
 
-nmap <f2> cw
+nmap <f2> :q<cr>
 nmap _ h
 nmap - h
 nmap <Space>q :q<cr>

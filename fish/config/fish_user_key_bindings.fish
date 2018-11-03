@@ -48,14 +48,10 @@ function bind_co
   commandline -f repaint
 end
 
-function bind_ef
-  set -l cmdline (commandline)
-  if test -z "$cmdline"
-    tmux new-window -n (prompt_pwd) fm .
-    commandline -f repaint
-  else
-    commandline -f forward-word
-  end
+function bind_f2
+  fm --choose-dir - | read -l result
+  and cd $result
+  commandline -f repaint
 end
 
 # HJKL-navigation:
@@ -188,6 +184,17 @@ function bind_eg
   end
 end
 
+function bind_ef
+  set -l cmdline (commandline)
+  if test -z "$cmdline"
+    fd --type file --hidden --exclude .git "" ~/shop/ | fzf +m --height 15 --reverse | read -l result
+    and commandline -- "v $result" ;and commandline -f execute
+    commandline -f repaint
+  else
+    commandline -f forward-word
+  end
+end
+
 function fish_user_key_bindings
   # Emulate bash: !!, !$
   bind ! bind_bang
@@ -205,8 +212,8 @@ function fish_user_key_bindings
 
   # C-o to jump back
   bind \co bind_co
-  # M-f to tmux new-window fm . or forward-word
-  bind æ bind_ef
+  # F2 to fm .
+  bind -k f2 bind_f2
 
   # M- HJKL-navigation:
   bind è bind_eh
@@ -245,6 +252,8 @@ function fish_user_key_bindings
   bind \eb bind_eb
   # M-g to fzf-vim ~/org
   bind ç bind_eg
+  # M-f to fzf-vim ~/shop or forward-word
+  bind æ bind_ef
 
   # Move \ee to \ex
   bind \ex edit_command_buffer
