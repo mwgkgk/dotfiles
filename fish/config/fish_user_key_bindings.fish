@@ -143,7 +143,7 @@ end
 function bind_ed
   set -l cmdline (commandline)
   if test -z "$cmdline"
-    fd --type file --hidden --exclude .git "" ~/code/dotfiles/ | fzf +m --height 15 --reverse | read -l result
+    fd --type file --hidden --follow --exclude .git "" ~/code/dotfiles/ | fzf +m --height 15 --reverse | read -l result
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
   else
@@ -162,6 +162,12 @@ function bind_esd
   end
 end
 
+function bind_ev
+  fd --type file --hidden --follow --exclude .git "" ~/.vim/ | fzf +m --height 15 --reverse | read -l result
+  and commandline -- "v $result" ;and commandline -f execute
+  commandline -f repaint
+end
+
 function bind_eb
   set -l cmdline (commandline)
   if test -z "$cmdline"
@@ -174,14 +180,9 @@ function bind_eb
 end
 
 function bind_eg
-  set -l cmdline (commandline)
-  if test -z "$cmdline"
-    fd --type file --hidden --exclude .git "" ~/org/ | fzf +m --height 15 --reverse | read -l result
-    and commandline -- "v $result" ;and commandline -f execute
-    commandline -f repaint
-  else
-    commandline -f kill-word
-  end
+  fd --type file --hidden --exclude .git "" ~/org/ | fzf +m --height 15 --reverse | read -l result
+  and commandline -- "v $result" ;and commandline -f execute
+  commandline -f repaint
 end
 
 function bind_ef
@@ -242,13 +243,15 @@ function fish_user_key_bindings
   # C-r to fzf-history
   bind \cr bind_cr
 
-  # M-v to fzf-vim .
-  bind \ev bind_fzf_vim
+  # M-a to fzf-vim .
+  bind á bind_fzf_vim
   # M-d to fzf through dotfile folder, or kill-word
   bind ä bind_ed
   # M-S-d to fzf through dotfiles in ~/, or kill-word
   bind Ä bind_esd
-  # M-b to fzf-vim ~/bin
+  # M-v to fzf-vim ~/.vim
+  bind \ev bind_ev
+  # M-b to fzf-vim ~/bin or backward-word
   bind \eb bind_eb
   # M-g to fzf-vim ~/org
   bind ç bind_eg
