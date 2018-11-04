@@ -169,7 +169,7 @@ function bind_eb
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
   else
-    commandline -f kill-word
+    commandline -f backward-word
   end
 end
 
