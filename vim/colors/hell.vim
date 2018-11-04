@@ -17,7 +17,7 @@ endif
 
 let g:colors_name = 'hell'
 
-hi Comment      guifg=#008220 guibg=#000000 gui=none ctermfg=244 ctermbg=none cterm=none
+hi Comment      guifg=#008220 guibg=#000000 gui=none ctermfg=59 ctermbg=none cterm=none
 hi Constant     guifg=#1fc700 guibg=#001c00 gui=none ctermfg=131 ctermbg=none cterm=none
 hi Cursor       guifg=#00ff00 gui=bold,reverse ctermfg=179 ctermbg=none cterm=bold,reverse
 hi CursorColumn guifg=#000000 guibg=#00cc00 gui=none ctermfg=none ctermbg=235 cterm=none
