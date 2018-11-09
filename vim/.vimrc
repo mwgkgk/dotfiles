@@ -366,11 +366,11 @@ nnoremap zd zb9<C-E>9<C-E>
 nnoremap ze zt6<C-y>6<C-y>
 " HL
 nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
-" Set mark with mouse
-nnoremap <C-LeftMouse> ma
 " Rightmouse
 nmap <RightMouse> <LeftMouse><RightMouse>
 imap <RightMouse> <Esc><RightMouse>
+" Clear Search with mouse
+nnoremap <C-LeftMouse> :let @/=""<CR>
 " Undo tabspace
 nnoremap <Tab><Space> u
 " Repeat macro with alt-y
