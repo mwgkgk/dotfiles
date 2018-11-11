@@ -50,7 +50,7 @@ let s:colors256 = [
     \ ["NonText",       "NONE", "238",  "225"   ],
     \ ["SpecialKey",    "NONE", "9",    "NONE"  ],
     \ ["Title",         "BOLD", "75",   "NONE"  ],
-    \ ["Visual",        "NONE", "NONE", "220"   ],
+    \ ["Visual",        "NONE", "NONE", "193"   ],
     \ ["Comment",       "NONE", "109",  "NONE"   ],
     \ ["Costant",       "NONE", "58",   "NONE"  ],
     \ ["String",        "NONE", "160",  "NONE"  ],
