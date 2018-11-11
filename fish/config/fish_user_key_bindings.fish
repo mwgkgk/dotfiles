@@ -250,7 +250,7 @@ function fish_user_key_bindings
   # M-S-d to fzf through dotfiles in ~/, or kill-word
   bind Ä bind_esd
   # M-v to fzf-vim ~/.vim
-  bind \ev bind_ev
+  bind ö bind_ev
   # M-b to fzf-vim ~/bin or backward-word
   bind \eb bind_eb
   # M-g to fzf-vim ~/org
