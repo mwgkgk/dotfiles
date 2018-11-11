@@ -2,6 +2,6 @@
 ~/code/dotfiles/fish/completions
 ~/code/dotfiles/fish/config
 ~/code/dotfiles/fish/tools
-fisherman/fnm
+jorgebucaran/fnm
 jethrokuan/z
 jichu4n/fish-command-timer
