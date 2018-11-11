@@ -94,7 +94,7 @@ end
 
 function bind_ec
   fd -t f --hidden -E .git/ | fzf +m --height 15 --reverse | read -l result
-  and commandline -- "bat $result" ;and commandline -f execute
+  and bat $result
   commandline -f repaint
 end
 
