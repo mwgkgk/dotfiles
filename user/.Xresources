@@ -24,14 +24,17 @@ URxvt*.meta8: true
 ! URxvt*.foreground: #FFAF5F
 ! URxvt*.foreground: #DADADA
 ! URxvt*.foreground: #DFA04A
-URxvt*.foreground: #CF423F
-URxvt*.background: #1b1b1b
+! URxvt*.foreground: #CF423F
+! URxvt*.foreground: #CF423F
+URxvt*.foreground: #FFD7FF
+! URxvt*.background: #1b1b1b
+URxvt*.background: #2E2E2E
 ! URxvt.depth: 24
 ! URxvt.background: [15]#000000
 ! URxvt*.cursorColor: #F76345
-! URxvt*.cursorColor: #A75BC1
+URxvt*.cursorColor: #A75BC1
 ! URxvt*.cursorColor: #A08E6B
-URxvt*.cursorColor: #995834
+! URxvt*.cursorColor: #995834
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
@@ -58,17 +61,17 @@ URxvt.keysym.Meta-F4: perl:tabbedex:rename_tab
 /* URxvt*boldFont: xft:Monospace:size=8:weight=Bold:antialias=true */
 /* URxvt.letterSpace: -1 */
 
-URxvt*font: xft:Iosevka SS04:size=9:antialias=true
-URxvt*boldFont: xft:Iosevka SS04:size=9:weight=Bold:antialias=true
-URxvt.letterSpace: -1
+/* URxvt*font: xft:Iosevka SS04:size=9:antialias=true */
+/* URxvt*boldFont: xft:Iosevka SS04:size=9:weight=Bold:antialias=true */
+/* URxvt.letterSpace: -1 */
 
 /* URxvt*font: xft:Anka/Coder Narrow:size=9:antialias=true */
 /* URxvt*boldFont: xft:Anka/Coder Narrow:size=9:weight=Bold:antialias=true */
 /* URxvt.letterSpace: -1 */
 
-/* URxvt*font: xft:Hack:size=6:antialias=true */
-/* URxvt*boldFont: xft:Hack:size=6:weight=Bold:antialias=true */
-/* URxvt.letterSpace: -1 */
+URxvt*font: xft:Hack:size=6:antialias=true
+URxvt*boldFont: xft:Hack:size=6:weight=Bold:antialias=true
+URxvt.letterSpace: -1
 
 /* URxvt*font: xft:Scientifica:size=10:antialias=true */
 /* URxvt*boldFont: xft:Scientifica:size=10:weight=Bold:antialias=true */
