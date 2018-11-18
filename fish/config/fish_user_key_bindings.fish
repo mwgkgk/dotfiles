@@ -93,7 +93,7 @@ end
 # Fzf misc:
 
 function bind_ec
-  fd -t f --hidden -E .git/ | fzf +m --height 15 --reverse | read -l result
+  fd -t f --hidden --follow -E .git/ | fzf +m --height 15 --reverse | read -l result
   and bat $result
   commandline -f repaint
 end
@@ -104,19 +104,19 @@ function bind_eso
 end
 
 function bind_fzf_cd_from_home
-  fd -t d "" ~ | fzf +m --height 15 --reverse | read -l result
+  fd -t d --follow "" ~ | fzf +m --height 15 --reverse | read -l result
   and cd $result
   commandline -f repaint
 end
 
 function bind_fzf_cd_from_shop
-  fd -t d "" ~/shop | fzf +m --height 15 --reverse | read -l result
+  fd -t d --follow "" ~/shop | fzf +m --height 15 --reverse | read -l result
   and cd $result
   commandline -f repaint
 end
 
 function bind_ee
-  fd -t d | fzf +m --height 15 --reverse | read -l result
+  fd -t d --follow | fzf +m --height 15 --reverse | read -l result
   and cd $result
   commandline -f repaint
 end
@@ -135,7 +135,7 @@ function bind_cr
 end
 
 function bind_fzf_vim
-  fd -t f --hidden -E .git/ | fzf +m --height 15 --reverse | read -l result
+  fd -t f --hidden --follow -E .git/ | fzf +m --height 15 --reverse | read -l result
   and commandline -- "v $result" ;and commandline -f execute
   commandline -f repaint
 end
@@ -171,7 +171,7 @@ end
 function bind_eb
   set -l cmdline (commandline)
   if test -z "$cmdline"
-    fd --type file --hidden --exclude .git "" ~/bin/ | fzf +m --height 15 --reverse | read -l result
+    fd --type file --follow --exclude .git "" ~/bin/ | fzf +m --height 15 --reverse | read -l result
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
   else
@@ -180,7 +180,7 @@ function bind_eb
 end
 
 function bind_eg
-  fd --type file --hidden --exclude .git "" ~/org/ | fzf +m --height 15 --reverse | read -l result
+  fd --type file --hidden --follow --exclude .git "" ~/org/ | fzf +m --height 15 --reverse | read -l result
   and commandline -- "v $result" ;and commandline -f execute
   commandline -f repaint
 end
@@ -188,7 +188,7 @@ end
 function bind_ef
   set -l cmdline (commandline)
   if test -z "$cmdline"
-    fd --type file --hidden --exclude .git "" ~/shop/ | fzf +m --height 15 --reverse | read -l result
+    fd --type file --hidden --follow --exclude .git "" ~/shop/ | fzf +m --height 15 --reverse | read -l result
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
   else
