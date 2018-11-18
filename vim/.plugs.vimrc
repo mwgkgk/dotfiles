@@ -101,43 +101,35 @@ Plug 'Lokaltog/vim-easymotion' " {{{
 " let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*():;"<>.,/?[]{}ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 " let g:EasyMotion_keys = 'asdkghlqwertyuiopbvnmcASDFGHJKLQWERTYUIOP1234fj'
 let g:EasyMotion_keys = 'asdkghlqwertyuiopbvnmc1234fj'
-let g:EasyMotion_leader_key = '<Leader><Enter>'
+let g:EasyMotion_leader_key = '\'
 let g:EasyMotion_startofline = 0
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_enter_jump_first = 1
 let g:EasyMotion_space_jump_first = 1
 let g:EasyMotion_do_special_mapping = 1
 let g:EasyMotion_add_search_history = 0
-" map <Enter>r <Plug>(easymotion-repeat)
-" map gw <Plug>(easymotion-bd-w)
-" map gl <Plug>(easymotion-lineforward)
-" map gh <Plug>(easymotion-linebackward)
-map gl <Plug>(easymotion-f)
-map gh <Plug>(easymotion-F)
-map gL <Plug>(easymotion-t)
-map gH <Plug>(easymotion-T)
-nmap <Leader>l <Plug>(easymotion-sn)
-
-nnoremap j gj
-nnoremap k gk
-
-map gk <Plug>(easymotion-k)
-map gj <Plug>(easymotion-j)
-omap gk V<Plug>(easymotion-k)
-omap gj V<Plug>(easymotion-j)
+map \r <Plug>(easymotion-repeat)
+map \h <Plug>(easymotion-prev)
+map \l <Plug>(easymotion-next)
+" nmap <Leader>l <Plug>(easymotion-s)
+" nmap \l <Plug>(easymotion-s2)
+" nmap \l <Plug>(easymotion-overwin-line)
+" <Plug>(easymotion-jumptoanywhere) |
+" onoremap \k V<Plug>(easymotion-k)
+" onoremap \j V<Plug>(easymotion-j)
 " Don't use omap: many binds e.g. fugitive use c in operator-mode
-nmap dq dgL"<Space><Esc>
-nmap dQ dgH"<Space><Esc>
-nmap yq ygL"<Space><Esc>
-nmap yQ ygH"<Space><Esc>
-nmap cq cgL"
-nmap cQ cgH"
-nmap dr dgL)<Space><Esc>
-nmap dR dgH(<Space><Esc>
-nmap yr ygL)<Space><Esc>
-nmap yR ygH(<Space><Esc>
-nmap cr cgL)
-nmap cR cgH(
+nmap dq d\t"<Space><Esc>
+nmap dQ d\T"<Space><Esc>
+nmap yq y\t"<Space><Esc>
+nmap yQ y\T"<Space><Esc>
+nmap cq c\t"<Space>
+nmap cQ c\T"<Space>
+nmap dr d\t)<Space><Esc>
+nmap dR d\T(<Space><Esc>
+nmap yr y\t)<Space><Esc>
+nmap yR y\T(<Space><Esc>
+nmap cr c\t)<Space>
+nmap cR c\T(<Space>
 " }}}
 
 Plug 'RogerioDosSantos/marvim' "{{{
