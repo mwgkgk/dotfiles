@@ -1023,6 +1023,7 @@ Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
 nmap ]f ]pf
 nmap [f [pf
 " }}}
+Plug 'fisadev/vim-isort', { 'for' : 'python' }
 
 " Django
 Plug 'mjbrownie/delete-surround-html', { 'for' : 'htmldjango' }
