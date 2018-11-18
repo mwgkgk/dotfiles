@@ -1,6 +1,6 @@
 set -x PATH ~/bin ~/.cargo/bin ~/.local/bin $PATH
 
-set -x fish_color_cwd FF86E8
+set -x fish_color_cwd B1D06E
 set -x fish_command_timer_color A7A6DE
 
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
