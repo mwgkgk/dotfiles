@@ -833,6 +833,7 @@ if (index(split( system( "ps -o command= -p " . getpid())), '-c') == -1)
         \ 'branch': 'next',
         \ 'do': 'bash install.sh',
         \ } " {{{
+  let g:LanguageClient_autoStart = 0
   let g:LanguageClient_loadSettings = 1
   let g:LanguageClient_settingsPath = $HOME . '/.vim/settings.json'
   let g:LanguageClient_serverCommands = {
