@@ -5,3 +5,39 @@ function ${1:function_name}({$2}: ${1/\w+\s*/\u$0/}) {
 	);
 }
 endsnippet
+
+snippet st "styled" b
+const Styled${1:Board} = styled.div\`
+	$0
+\`;
+endsnippet
+
+snippet com "component" b
+export interface ${1:Component}Props {
+  size?: number;
+}
+
+function $1({ size = 4 }: $1Props) {
+	return (
+		$0
+	);
+}
+endsnippet
+
+snippet coms "styled-component" b
+export interface ${1:Component}Props {
+  ${2:size?: number;}
+}
+
+const Styled$1 = styled.div\`
+	$3
+\`;
+
+function $1({ size = 4 }: $1Props) {
+	return (
+		<Styled$1>
+			$0
+		</Styled$1>
+	);
+}
+endsnippet
