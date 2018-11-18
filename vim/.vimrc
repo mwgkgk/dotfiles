@@ -191,8 +191,8 @@ nnoremap ] <nop>
 " Search-related {{{
 " Magic
 nnoremap / /\m
-" Very nomagic
-nnoremap <Space>/ /\V
+" Vimgrep
+nnoremap <Space>/ :vimgrep // %<Left><Left><Left>
 " Previous on <Leader>/
 nnoremap <Leader>/ /<C-R>/
 " - Jump prev/next not leaving search command mode:
