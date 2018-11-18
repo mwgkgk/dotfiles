@@ -348,7 +348,6 @@ nnoremap q ^
 nnoremap ]<Space> o<Esc>k
 " - Join up
 nnoremap K -J
-nnoremap gK -gJ
 " - Kill till EoL from normal
 nnoremap <Leader><C-k> d$
 " - Swap parameters:
