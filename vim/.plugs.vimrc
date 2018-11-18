@@ -1020,8 +1020,8 @@ Plug 'tbastos/vim-lua', { 'for' : 'lua' }
 
 " Python
 Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
-nmap ]f ]pf
-nmap [f [pf
+map ]f ]pf
+map [f [pf
 " }}}
 Plug 'fisadev/vim-isort', { 'for' : 'python' }
 
