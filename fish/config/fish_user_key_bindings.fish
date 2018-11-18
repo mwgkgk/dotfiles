@@ -196,6 +196,14 @@ function bind_ef
   end
 end
 
+function fzf-select -d 'fzf commandline job and print unescaped selection back to commandline'
+  set -l cmd (commandline -j)
+  [ "$cmd" ]; or return
+  eval $cmd | fzf -m --tiebreak=index --select-1 --exit-0 | string join ' ' | read -l result
+  [ "$result" ]; and commandline -j -- $result
+  commandline -f repaint
+end
+
 function fish_user_key_bindings
   # Emulate bash: !!, !$
   bind ! bind_bang
@@ -242,6 +250,10 @@ function fish_user_key_bindings
 
   # C-r to fzf-history
   bind \cr bind_cr
+  # C-t to add files
+  bind \ct __fzf_find_file
+  # M-t to fzf-select
+  bind ô fzf-select
 
   # M-a to fzf-vim .
   bind á bind_fzf_vim
