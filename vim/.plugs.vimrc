@@ -321,6 +321,9 @@ Plug 'AndrewRadev/splitjoin.vim' " gS, gJ
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/yankwin.vim'
 Plug 'AndrewRadev/exercism.vim'
+Plug 'AndrewRadev/whitespaste.vim'
+
+Plug 'sickill/vim-pasta'
 
 Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/JumpToLastOccurrence' " ,f ,F ,t ,T
