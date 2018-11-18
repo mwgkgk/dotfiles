@@ -123,6 +123,7 @@ mark h ~/
 " %D the other window directory name.
 " %m run the command in a menu window
 
+command R :restart
 command df df -h %m 2> /dev/null
 command rm rm %f
 command diff vim -d %f %F
