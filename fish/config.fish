@@ -1,4 +1,4 @@
-set -x PATH ~/bin ~/.cargo/bin $PATH
+set -x PATH ~/bin ~/.cargo/bin ~/.local/bin $PATH
 
 set -x fish_color_cwd FF86E8
 set -x fish_command_timer_color A7A6DE
