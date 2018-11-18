@@ -611,6 +611,25 @@ Plug 'machakann/vim-textobj-equation'
 
 Plug 'mwgkgk/vim-textobj-elixir'
 
+Plug 'fcpg/vim-shore'
+
+Plug 'jeetsukumaran/vim-indentwise' " {{{
+map gH <Plug>(IndentWisePreviousLesserIndent)
+map gh <Plug>(IndentWiseNextLesserIndent)
+
+map gL <Plug>(IndentWisePreviousGreaterIndent)
+map gl <Plug>(IndentWiseNextGreaterIndent)
+
+map gk <Plug>(IndentWisePreviousEqualIndent)
+map gj <Plug>(IndentWiseNextEqualIndent)
+
+map gI <Plug>(IndentWisePreviousAbsoluteIndent)
+map gi <Plug>(IndentWiseNextAbsoluteIndent)
+
+map gK <Plug>(IndentWiseBlockScopeBoundaryBegin)
+map gJ <Plug>(IndentWiseBlockScopeBoundaryEnd)
+" }}}
+
 Plug 'wellle/targets.vim' " {{{
 let g:targets_separators = '. ; : + - ~ _ * \ |'
 " }}}
