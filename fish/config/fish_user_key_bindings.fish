@@ -264,7 +264,7 @@ function fish_user_key_bindings
   # M-v to fzf-vim ~/.vim
   bind ö bind_ev
   # M-b to fzf-vim ~/bin or backward-word
-  bind \eb bind_eb
+  bind â bind_eb
   # M-g to fzf-vim ~/org
   bind ç bind_eg
   # M-f to fzf-vim ~/shop or forward-word
