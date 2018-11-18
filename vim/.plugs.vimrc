@@ -336,8 +336,6 @@ Plug 'tpope/vim-commentary' " {{{
 nmap gcd yypkgccj
 " }}}
 
-Plug 'arecarn/selection.vim'
-
 Plug 'dbakker/vim-projectroot' " {{{
 nnoremap <Leader>ep :echo ProjectRootGuess()<CR>
 nnoremap <Leader>dt :ProjectRootExe !ctags -R<CR>
@@ -474,6 +472,7 @@ nnoremap <Space>r :AsyncRun tmux send -t serverterm C-u do-thing C-m<CR>
 nnoremap <Space><Tab> :AsyncRun tmux send -t serverterm C-c && sleep 0.1 && tmux send -t serverterm C-c <CR>
 " }}}
 
+Plug 'arecarn/selection.vim'
 Plug 'arecarn/crunch.vim' " {{{
 inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
 " }}}
