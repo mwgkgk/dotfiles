@@ -320,6 +320,8 @@ inoremap <M-w> <C-x><C-o>
 inoremap <C-BS> <C-W>
 " Paste + with preceding >
 inoremap <C-R>> <Esc>0C<C-R>+<Esc>I> <Esc>
+" Disable Comments-newline on Mod-Enter
+inoremap  <Esc>:setlocal formatoptions-=cro<CR>a<CR><Esc>:setlocal formatoptions+=cro<CR>a
 " Insert system()
 inoremap <C-R>( <C-R>=system('')<Left><Left>
 " Insert mode pseudo digraphs
