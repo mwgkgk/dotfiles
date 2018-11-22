@@ -3,9 +3,9 @@
 .
 ├── [ 46K]  fish
 │   ├── [ 189]  fishfile
+│   ├── [4.0K]  aliases [44 entries exceeds filelimit, not opening dir]
 │   ├── [ 375]  config.fish
-│   ├── [4.0K]  aliases [34 entries exceeds filelimit, not opening dir]
-│   ├── [ 11K]  config
+│   ├── [ 12K]  config
 │   │   ├── [6.4K]  fish_user_key_bindings.fish
 │   │   ├── [ 223]  fish_title.fish
 │   │   └── [ 861]  fish_prompt.fish
@@ -26,12 +26,12 @@
 │   └── [ 119]  .minrc
 ├── [4.1K]  sxhkd
 │   └── [ 139]  sxhkdrc
-├── [103K]  vim
-│   ├── [4.0K]  skeletons [32 entries exceeds filelimit, not opening dir]
-│   ├── [ 42K]  .plugs.vimrc
-│   ├── [ 18K]  .vimrc
+├── [104K]  vim
+│   ├── [ 19K]  .vimrc
+│   ├── [ 43K]  .plugs.vimrc
+│   ├── [4.0K]  usnippets [78 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  skeletons [31 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  colors [91 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  usnippets [76 entries exceeds filelimit, not opening dir]
 │   ├── [9.6K]  .oldconfigs.vimrc
 │   ├── [ 17K]  after
 │   │   ├── [8.4K]  syntax
@@ -96,7 +96,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 337K used in 31 directories, 63 files
+ 338K used in 31 directories, 63 files
 ```
 
-> Generated on Sunday, November 18, 2018 at 06:19:54 AM UTC.
+> Generated on Thursday, November 22, 2018 at 11:17:22 AM UTC.
