@@ -42,7 +42,7 @@ let g:ctrlp_switch_buffer = 'E'
 Plug 'pielgrzym/ctrlp-sessions' " {{{
 nnoremap sS :CtrlPSessions<CR>
 let g:ctrlp_session_dir = '.vim/sessions'
-nnoremap <C-w>S :MkS<CR>
+nnoremap <C-w>s :MkS<CR>
 " }}}
 Plug 'mattn/ctrlp-register' " {{{
 nnoremap sr :CtrlPRegister<CR>
@@ -790,7 +790,7 @@ command! Gall :silent exe "Git add ." | :silent exe "Gcommit -v -q -a"
 
 " Requires :MkS
 command! InkUndelve :silent exe "MkS" | :silent exe "Gall"
-nnoremap <C-w>s :InkUndelve<CR>
+nnoremap <C-w>S :InkUndelve<CR>
 
 " nnoremap <Leader><Leader> :Gtabedit @<CR>
 
