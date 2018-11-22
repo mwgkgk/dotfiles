@@ -783,7 +783,19 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive' " {{{
 nnoremap <Leader>G :Gstatus<CR>
 nnoremap <Leader>D :Gvdiff<CR>
+
+command! Gcurrent :exe "Gcommit -v -q %:p"
 nnoremap <Leader>C :Gcurrent<CR>
+
+command! Gall :silent exe "Git add ." | :silent exe "Gcommit -v -q -a"
+" nnoremap <Leader><Leader> :Gall<CR>
+
+" Requires :MkS
+command! InkUndelve :silent exe "MkS" | :silent exe "Gall"
+nnoremap <C-w>s :InkUndelve<CR>
+
+" nnoremap <Leader><Leader> :Gtabedit @<CR>
+
 nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " Also, grep commit text in all or current file:
 " :Glog --grep=query --
@@ -791,8 +803,6 @@ nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " Find text added by commit:
 " :Glog --Sfindme --
 " :Glog --Sfindme -- %
-command! Gcurrent :exe "Gcommit -v -q %:p"
-command! Gcached :Gvsplit! diff --staged
 " }}}
 Plug 'tpope/vim-rsi'
 
