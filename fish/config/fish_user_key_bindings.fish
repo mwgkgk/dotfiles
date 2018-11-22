@@ -39,7 +39,7 @@ function bind_enter
 end
 
 function bind_cg
-  commandline -r "guile"
+  commandline -r "rlwrap pil /usr/lib/picolisp/lib.l /usr/lib/picolisp/ext.l"
   commandline -f execute
 end
 
