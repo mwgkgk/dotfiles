@@ -997,12 +997,16 @@ function! s:vim_sexp_mappings()
   xmap <silent><buffer> <M-l>           <Plug>(sexp_swap_element_forward)
   nmap <silent><buffer> <M-S-j>         <Plug>(sexp_emit_head_element)
   xmap <silent><buffer> <M-S-j>         <Plug>(sexp_emit_head_element)
+  imap <silent><buffer> <M-S-j>         <Esc><Plug>(sexp_emit_head_element)a
   nmap <silent><buffer> <M-S-k>         <Plug>(sexp_emit_tail_element)
   xmap <silent><buffer> <M-S-k>         <Plug>(sexp_emit_tail_element)
+  imap <silent><buffer> <M-S-k>         <Esc><Plug>(sexp_emit_tail_element)a
   nmap <silent><buffer> <M-S-h>         <Plug>(sexp_capture_prev_element)
   xmap <silent><buffer> <M-S-h>         <Plug>(sexp_capture_prev_element)
+  imap <silent><buffer> <M-S-h>         <Esc><Plug>(sexp_capture_prev_element)a
   nmap <silent><buffer> <M-S-l>         <Plug>(sexp_capture_next_element)
   xmap <silent><buffer> <M-S-l>         <Plug>(sexp_capture_next_element)
+  imap <silent><buffer> <M-S-l>         <Esc><Plug>(sexp_capture_next_element)a
   imap <silent><buffer> <BS>            <Plug>(sexp_insert_backspace)
   imap <silent><buffer> "               <Plug>(sexp_insert_double_quote)
   imap <silent><buffer> (               <Plug>(sexp_insert_opening_round)
