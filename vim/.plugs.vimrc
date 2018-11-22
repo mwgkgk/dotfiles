@@ -356,8 +356,8 @@ autocmd plugs.vimrc FileType rust nnoremap <Del> :ProjectRootExe :tabe Cargo.tom
 " Taskfile
 nnoremap <F12> :ProjectRootExe :tabe Taskfile.yml<CR>
 " Tags
-autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
-autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&"
+autocmd plugs.vimrc BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
+autocmd plugs.vimrc BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&"
 " }}}
 
 Plug 'Valloric/ListToggle' " {{{
