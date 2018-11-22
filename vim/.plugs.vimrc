@@ -452,7 +452,6 @@ Plug 'Shougo/vimproc.vim', { 'do' : 'make' } " {{{
 vnoremap gX y:call vimproc#system('bro url <C-R>"')<CR>
 vnoremap gx y:call vimproc#system('firefox-default <C-R>" &')<CR>
 vnoremap gs y:call vimproc#system('firefox-default https://google.com/search?hl=en&q=<C-R>" &')<CR>
-" autocmd plugs.vimrc BufWrite *.elm,*.html,*.css,*.ex,*.exs VimProcBang refresh-dev1
 " }}}
 Plug 'Shougo/vimshell.vim' " {{{
 nnoremap <Leader>E :VimShell<CR>
@@ -476,6 +475,8 @@ Plug 'skywind3000/asyncrun.vim' " {{{
 nnoremap <F3> :AsyncRun<Space>
 nnoremap <Space>r :AsyncRun tmux send -t serverterm C-u do-thing C-m<CR>
 nnoremap <Space><Tab> :AsyncRun tmux send -t serverterm C-c && sleep 0.1 && tmux send -t serverterm C-c <CR>
+" Refresh dev1 browser
+" autocmd plugs.vimrc BufWrite *.elm,*.html,*.css,*.ex,*.exs,*.tsx silent! AsyncRun refresh-dev1
 " }}}
 
 Plug 'arecarn/selection.vim'
