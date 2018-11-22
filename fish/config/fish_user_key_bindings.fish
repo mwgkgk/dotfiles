@@ -49,7 +49,7 @@ function bind_co
 end
 
 function bind_f2
-  fm --choose-dir - | read -l result
+  fm . --choose-dir - | read -l result
   and cd $result
   commandline -f repaint
 end
