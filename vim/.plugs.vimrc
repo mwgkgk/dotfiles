@@ -42,7 +42,7 @@ let g:ctrlp_switch_buffer = 'E'
 Plug 'pielgrzym/ctrlp-sessions' " {{{
 nnoremap sS :CtrlPSessions<CR>
 let g:ctrlp_session_dir = '.vim/sessions'
-nnoremap <C-w>s :MkS<CR>
+" nnoremap <C-w>s :MkS<CR>
 " }}}
 Plug 'mattn/ctrlp-register' " {{{
 nnoremap sr :CtrlPRegister<CR>
