@@ -1023,7 +1023,7 @@ nnoremap <M-S-h> F(xbi(<Esc>
 nnoremap <M-S-k> f)a<BackSpace><Esc>gea)<Esc>
 nnoremap <M-S-j> F(xwi(<Esc>
 
-autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux call s:vim_sexp_mappings()
+autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv call s:vim_sexp_mappings()
 " }}}
 Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
 
