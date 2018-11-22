@@ -211,6 +211,11 @@ let g:cycle_default_groups += [
             \   [['div', 'form', 'p'], 'sub_tag'],
             \   [['class', 'id', 'style']],
             \ ]
+
+"  -- Jiv
+let g:cycle_default_groups += [
+            \   [['=', 'is', 'name']],
+            \ ]
 " }}}
 
 Plug 'c9s/bufexplorer' "{{{
