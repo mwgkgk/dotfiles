@@ -42,7 +42,7 @@ let g:ctrlp_switch_buffer = 'E'
 Plug 'pielgrzym/ctrlp-sessions' " {{{
 nnoremap sS :CtrlPSessions<CR>
 let g:ctrlp_session_dir = '.vim/sessions'
-" nnoremap <C-w>s :MkS<CR>
+nnoremap <C-w>S :MkS<CR>
 " }}}
 Plug 'mattn/ctrlp-register' " {{{
 nnoremap sr :CtrlPRegister<CR>
@@ -218,9 +218,7 @@ let g:cycle_default_groups += [
             \ ]
 " }}}
 
-Plug 'c9s/bufexplorer' "{{{
-nnoremap <C-W>S :BufExplorerHorizontalSplit<CR>
-" }}}
+Plug 'c9s/bufexplorer'
 
 Plug 'gcmt/taboo.vim' " {{{
 set sessionoptions+=tabpages,globals
