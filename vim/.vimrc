@@ -16,7 +16,7 @@ augroup END
 set nobackup
 set nowritebackup
 set noswapfile
-set viminfo='1000,:0,<0,@0,f0,/0
+set viminfo='1000,:0,<0,@0,f1,/0
 
 " Sessions :
 set sessionoptions-=options
