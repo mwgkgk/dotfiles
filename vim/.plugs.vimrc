@@ -6,7 +6,7 @@ set nocompatible
 call plug#begin('~/.vim/bundle')
 
 let g:mapleader=";"
-let g:maplocalleader=","
+let g:maplocalleader="'"
 
 " filetype off
 
@@ -320,7 +320,10 @@ Plug 'AndrewRadev/whitespaste.vim'
 Plug 'sickill/vim-pasta'
 
 Plug 'vim-scripts/ingo-library'
-Plug 'vim-scripts/JumpToLastOccurrence' " ,f ,F ,t ,T
+Plug 'vim-scripts/JumpToLastOccurrence' " {{{
+" Default used to be: ,f ,F ,t ,T
+let g:JumpToLastOccurrence_Leader = '<Leader>l'
+" }}}
 
 Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
 

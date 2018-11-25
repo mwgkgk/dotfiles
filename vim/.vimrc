@@ -6,7 +6,7 @@ set encoding=utf-8
 scriptencoding utf-8
 
 let g:mapleader=";"
-let g:maplocalleader=","
+let g:maplocalleader="'"
 
 augroup vimrc
     autocmd!
@@ -377,7 +377,8 @@ nnoremap <M-y> @@
 nnoremap <Leader><Space>n :term ++rows=10<CR>
 nnoremap <Leader><Space>N :above term ++rows=10<CR>
 " repeat f/F (";" is leader)
-nnoremap <M-;> ;
+" nnoremap <M-;> ;
+nnoremap , ;
 " }}}
 " Commandline-related {{{
 " Previous on <Leader>:
