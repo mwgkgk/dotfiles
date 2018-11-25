@@ -1044,6 +1044,8 @@ nnoremap <M-S-j> F(xwi(<Esc>
 
 autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv call s:vim_sexp_mappings()
 " }}}
+
+" Racket
 Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
 
 " Lua
