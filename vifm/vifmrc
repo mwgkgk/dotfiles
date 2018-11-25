@@ -147,8 +147,13 @@ command C :mkdir %a | :cd %a
 command mkdatedir !mkdatedir %a
 command mktimedir !mktimedir %a
 command FF !firefox-default %f &
-command git :execute 'cd' system('git rev-parse --git-dir')
+command cdgit :execute 'cd' system('git rev-parse --git-dir')
 command Ren :screen | :execute "!tmux rename-window `fish -c prompt_pwd`/" | :screen
+
+command Gcommit !git commit -qva
+command Gadd :!git add .
+
+nmap ;; :Gadd<CR>:Gcommit<CR>
 
 " The file type is for the default programs to be used with
 " a file extension.
