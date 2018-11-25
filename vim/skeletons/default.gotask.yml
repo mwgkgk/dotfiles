@@ -1,0 +1,10 @@
+# https://github.com/go-task/task
+
+i:
+  desc: Build & Install
+  dir: ./dwm-c/
+  cmds:
+    - make
+
+default:
+  deps: [i]
