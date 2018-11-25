@@ -786,7 +786,12 @@ command! Gcurrent :exe "Gcommit -v -q %:p"
 nnoremap <Leader>C :Gcurrent<CR>
 
 command! Gall :silent exe "Git add ." | :silent exe "Gcommit -v -q -a"
-" nnoremap <Leader><Leader> :Gall<CR>
+nnoremap <Leader><Leader> :Gall<CR>
+
+" Heil Hydra
+nnoremap <Leader>hh :Gcommit -v<CR>
+
+command! Gallprepop :silent exe "Git add ." | :silent exe "Gcommit -v -q -a -e -m" . @"
 
 " Requires :MkS
 command! InkUndelve :silent exe "MkS" | :silent exe "Gall"
