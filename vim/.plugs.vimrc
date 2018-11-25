@@ -773,11 +773,15 @@ map <M-l> E
 
 Plug 'tpope/vim-surround' " {{{
 " Wrapping in braces:
-imap <C-c><C-c> <Esc>hysiw)ea
-nmap <C-c><C-c> <Esc>ysiw)
+imap <C-c><C-c> <Esc>hysiW)ea
+nmap <C-c><C-c> <Esc>ysiW)ea
 " Quotes
-imap <C-c>c <Esc>hysiw"ea
-nmap <C-c>c <Esc>ysiw"
+imap <C-c>c <Esc>hysiW"ea
+nmap <C-c>c <Esc>ysiW"ea
+" Squares
+"   Haha jebaited:
+" imap <LocalLeader><LocalLeader> <Esc>hysiW]ea
+nmap <LocalLeader><LocalLeader> <Esc>ysiW]ea
 " }}}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
