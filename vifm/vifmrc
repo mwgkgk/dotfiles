@@ -389,6 +389,10 @@ nmap  h
 nmap U :undolist<cr>
 nmap <Space>s :sync<CR><Tab>
 
+" LocalLeader binds
+" TODO mkdir & move target under cursor there
+nmap ,i :mkdir<Space>
+
 " Tabs
 set tabscope=pane
 
