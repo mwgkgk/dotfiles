@@ -798,7 +798,11 @@ nnoremap <Leader><Leader> :Gall<CR>
 " Heil Hydra
 nnoremap <Leader>hh :Gcommit -v<CR>
 
-command! Gallprepop :silent exe "Git add ." | :silent exe "Gcommit -v -q -a -e -m" . @"
+command! GAllPrepop :silent exe "Git add ." | :silent exe "Gcommit -v -q -a -e -m" . @"
+
+" Git reset:
+command! GReset :ProjectRootExe :AsyncRun git reset
+nnoremap <Leader>hr :GReset<CR>:e!<CR>za
 
 " Requires :MkS
 command! InkUndelve :silent exe "MkS" | :silent exe "Gall"
