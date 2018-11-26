@@ -179,6 +179,17 @@ function bind_eb
   end
 end
 
+function bind_esb
+  set -l cmdline (commandline)
+  if test -z "$cmdline"
+    fd --type file --follow --exclude .git "" ~/shop/grimoire | fzf +m --height 15 --reverse | read -l result
+    and commandline -- "v $result" ;and commandline -f execute
+    commandline -f repaint
+  else
+    commandline -f backward-word
+  end
+end
+
 function bind_eg
   fd --type file --hidden --follow --exclude .git "" ~/org/ | fzf +m --height 15 --reverse | read -l result
   and commandline -- "v $result" ;and commandline -f execute
@@ -265,6 +276,8 @@ function fish_user_key_bindings
   bind ö bind_ev
   # M-b to fzf-vim ~/bin or backward-word
   bind â bind_eb
+  # M-S-b to fzf-vim ~/bin or backward-word
+  bind Â bind_esb
   # M-g to fzf-vim ~/org
   bind ç bind_eg
   # M-f to fzf-vim ~/shop or forward-word
