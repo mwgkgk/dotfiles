@@ -115,6 +115,12 @@ function bind_fzf_cd_from_shop
   commandline -f repaint
 end
 
+function bind_fzf_cd_from_ink
+  fd -t d --follow "" ~/ink | fzf +m --height 15 --reverse | read -l result
+  and cd $result
+  commandline -f repaint
+end
+
 function bind_ee
   fd -t d --follow | fzf +m --height 15 --reverse | read -l result
   and cd $result
@@ -254,6 +260,8 @@ function fish_user_key_bindings
   bind à bind_fzf_cd_from_home
   # M-w to fzf-cd from ~/shop/
   bind ÷ bind_fzf_cd_from_shop
+  # M-w to fzf-cd from ~/ink/
+  bind ó bind_fzf_cd_from_ink
   # M-e to fzf-cd from .
   bind å bind_ee
   # M-r to fzf through siblings
