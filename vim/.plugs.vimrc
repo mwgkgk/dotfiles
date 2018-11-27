@@ -717,18 +717,22 @@ nnoremap <Space>A :GV<CR>
 Plug 't9md/vim-textmanip' " {{{
 xmap <C-j> <Plug>(textmanip-move-down)
 xmap <C-k> <Plug>(textmanip-move-up)
-" xmap <C-h> <Plug>(textmanip-move-left)
-" xmap <C-l> <Plug>(textmanip-move-right)
-nmap <C-k><C-k> V<Plug>(textmanip-move-up)
-nmap <C-j><C-j> V<Plug>(textmanip-move-down)
+xmap <C-h> <Plug>(textmanip-move-left)
+xmap <C-l> <Plug>(textmanip-move-right)
+nmap <C-k> V<Plug>(textmanip-move-up)
+nmap <C-j> V<Plug>(textmanip-move-down)
+nmap <C-h> V<Plug>(textmanip-move-left)
+nmap <C-l> V<Plug>(textmanip-move-right)
 
 nmap g<C-k> <Plug>(textmanip-duplicate-up)
 nmap g<C-j> <Plug>(textmanip-duplicate-down)
 xmap g<C-k> <Plug>(textmanip-duplicate-up)
 xmap g<C-j> <Plug>(textmanip-duplicate-down)
 
-xmap [<Space> <Plug>(textmanip-blank-above)
-xmap ]<Space> <Plug>(textmanip-blank-below)
+nmap <C-M-k> <Plug>(textmanip-blank-above)
+nmap <C-M-j> <Plug>(textmanip-blank-below)
+xmap <C-M-k> <Plug>(textmanip-blank-above)
+xmap <C-M-j> <Plug>(textmanip-blank-below)
 " }}}
 Plug 't9md/vim-quickhl' " {{{
 nmap <Space>m <Plug>(quickhl-manual-this)
