@@ -364,6 +364,8 @@ nnoremap zd zb9<C-E>9<C-E>
 nnoremap ze zt6<C-y>6<C-y>
 " HL
 nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+" Echo :pwd
+nnoremap <Leader>ed :pwd<CR>
 " Rightmouse
 nmap <RightMouse> <LeftMouse><RightMouse>
 imap <RightMouse> <Esc><RightMouse>
