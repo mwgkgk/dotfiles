@@ -360,6 +360,11 @@ nnoremap <F12> :ProjectRootExe :tabe Taskfile.yml<CR>
 autocmd plugs.vimrc BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
 autocmd plugs.vimrc BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&"
 " }}}
+Plug 'airblade/vim-rooter' " {{{
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
+let g:rooter_use_lcd = 1
+" }}}
 
 Plug 'Valloric/ListToggle' " {{{
 let g:lt_quickfix_list_toggle_map = '<Space>`'
