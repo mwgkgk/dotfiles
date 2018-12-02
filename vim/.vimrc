@@ -505,6 +505,27 @@ function! DiffToggle()
     endif
 endfunc
 nnoremap <silent> <Leader>td :call DiffToggle()<CR>
+
+" Toggle formatoptions -cro:
+function! CommentsToggle()
+    if(&formatoptions =~ ".*c.*")
+      setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    else
+      setlocal formatoptions+=c formatoptions+=r formatoptions+=o
+    endif
+endfunc
+inoremap  <Esc>:call CommentsToggle()<CR>A<CR>
+nnoremap  :call CommentsToggle()<CR>
+
+function! ToggleVerbose()
+    if(&verbose == 0)
+        set verbose=1
+    else
+        set verbose=0
+    endif
+    echo &verbose
+endfunc
+nnoremap <Leader>tv :call ToggleVerbose()<CR>
 " }}}
 " From suckless.vim: WindowMove {{{
 function! WindowMove(direction)
