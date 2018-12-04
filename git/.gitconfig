@@ -6,6 +6,8 @@
 [ghq]
     root = ~/.ghq/
 [alias]
+    l = log
+    r = reset
     c = checkout
     b = checkout -b
     bb = branch
