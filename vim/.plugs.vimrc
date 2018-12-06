@@ -324,7 +324,13 @@ map <M-r> <Plug>(patternjump-forward)
 " }}}
 
 Plug 'AndrewRadev/dsf.vim'
-Plug 'AndrewRadev/yankwin.vim'
+Plug 'AndrewRadev/yankwin.vim' " {{{
+let g:yankwin_default_yank_mappings = 0
+nnoremap <c-w>gy  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 0})<cr>
+nnoremap <c-w>y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 0})<cr>
+nnoremap <c-w>gY  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 1})<cr>
+nnoremap <c-w>Y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 1})<cr>
+" }}}
 Plug 'AndrewRadev/exercism.vim'
 Plug 'AndrewRadev/whitespaste.vim'
 
