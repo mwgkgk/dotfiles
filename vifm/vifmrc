@@ -418,4 +418,4 @@ nmap <Space>Q :q<cr>
 nmap q :q<cr>
 nmap <Space> <nop>
 
-source ~/.vifmrc-local
+source ~/.local.vifmrc
