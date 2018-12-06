@@ -953,6 +953,7 @@ if (index(split( system( "ps -o command= -p " . getpid())), '-c') == -1)
         \ 'javascript.jsx': ['javascript-typescript-stdio'],
         \ 'typescript': ['typescript-language-server', '--stdio'],
         \ 'typescript.tsx': ['typescript-language-server', '--stdio'],
+        \ 'ocaml': ['ocaml-language-server', '--stdio'],
         \ }
   " \ 'javascript': ['typescript-language-server', '--stdio'],
   " \ 'javascript.jsx': ['typescript-language-server', '--stdio'],
