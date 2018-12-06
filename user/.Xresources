@@ -6,7 +6,7 @@
 ! URxvt*.transparent:  false
 ! URxvt*.inheritPixmap: false
 
-URxvt.perl-ext-common: default,tabbedex
+URxvt.perl-ext-common: default,tabbedex,-searchable-scrollback
 URxvt.tabbed.autohide: yes
 URxvt.tabbed.title: false
 
