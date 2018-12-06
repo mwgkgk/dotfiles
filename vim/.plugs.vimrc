@@ -696,7 +696,7 @@ nnoremap s: :FzfHistory:<CR>
 nnoremap s/ :FzfHistory/<CR>
 nnoremap s[ :FzfBCommits<CR>
 nnoremap s] :FzfCommits<CR>
-nnoremap sl :FzfBLines<CR>
+nnoremap S :FzfBLines<CR>
 
 command! -bang -nargs=? -complete=dir FzfFilesWithPreview
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
