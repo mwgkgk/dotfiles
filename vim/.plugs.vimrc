@@ -739,6 +739,14 @@ Plug 'junegunn/gv.vim' " {{{
 nnoremap <Space>A :GV<CR>
 " }}}
 
+Plug 'chauncey-garrett/vim-tasklist' " {{{
+" Mnemonic: Toggle tasklist
+nmap <leader>tt <Plug>TaskList
+let g:tlTokenList = ['FIXME', 'TODO', 'XXX']
+let g:tlRememberPosition = 1
+let g:tlWindowPosition = 0
+" }}}
+
 Plug 't9md/vim-textmanip' " {{{
 xmap <C-j> <Plug>(textmanip-move-down)
 xmap <C-k> <Plug>(textmanip-move-up)
