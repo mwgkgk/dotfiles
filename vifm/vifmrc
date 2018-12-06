@@ -150,9 +150,13 @@ command cdgit :execute 'cd' system('git rev-parse --git-dir')
 command Ren :screen | :execute "!tmux rename-window `fish -c prompt_pwd`/" | :screen
 
 command Gcommit !git commit -qva
-command Gadd :!git add .
+command Gadd :!git add %f
 
-nmap ;; :Gadd<CR>:Gcommit<CR>
+nnoremap ;hs :Gadd<CR>
+nnoremap ;hh :Gcommit<CR>
+
+command Gall :!git-add-commit %f
+nmap ;; :Gall<CR>
 
 " The file type is for the default programs to be used with
 " a file extension.
