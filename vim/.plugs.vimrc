@@ -1161,6 +1161,14 @@ Plug 'lfe-support/vim-lfe', {'for' : 'lfe' } " {{{
 autocmd plugs.vimrc FileType lfe set lisp
 " }}}
 
+" OCaml
+Plug 'rgrinberg/vim-ocaml'
+" Merlin {{{
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+command! OpamHelptags :execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"
+" }}}
+
 " Rust
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
 Plug 'racer-rust/vim-racer', { 'for' : 'rust' } " {{{
