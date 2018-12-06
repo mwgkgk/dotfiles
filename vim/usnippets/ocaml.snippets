@@ -29,6 +29,16 @@ match ${1:x} with
 | None -> ${4:()}
 endsnippet
 
+snippet f "f" b
+let ${1:f} ${2:()} =
+	$0
+;;
+endsnippet
+
+snippet p "p" i
+print_string ${2:"${1:NYI}"}
+endsnippet
+
 snippet fun "anonymous function"
 (fun ${1:x} -> ${2:x})
 endsnippet

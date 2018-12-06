@@ -63,6 +63,12 @@ mod ${1:network} {
 }
 endsnippet
 
+snippet main "main" b
+fn main() {
+	${VISUAL}${0:println!("Hello, world!");}
+}
+endsnippet
+
 snippet f "fn" b
 fn ${1:parse_config}(${2:args: &[String]}) ${3:-> ${4:&str}$5} {
 	${VISUAL}${0:unimplemented!()}
