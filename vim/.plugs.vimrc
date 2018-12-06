@@ -826,20 +826,25 @@ nmap <LocalLeader><LocalLeader> <Esc>ysiw]a
 " }}}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-fugitive' " {{{
 nnoremap <Leader>G :Gstatus<CR>
 nnoremap <Leader>D :Gvdiff<CR>
 
-command! Gcurrent :exe "Gcommit -v -q %:p"
-nnoremap <Leader>C :Gcurrent<CR>
+command! GCurrent :exe "Gcommit -v -q %:p"
+nnoremap <Leader>C :GCurrent<CR>
 
-command! Gall :silent exe "Git add ." | :silent exe "Gcommit -v -q -a"
-nnoremap <Leader><Leader> :Gall<CR>
+" With preview
+command! GAllPreview :silent exe "Git add ." | :silent exe "Gcommit -v -q -a"
+nnoremap <Leader>ha :GAllPreview<CR>
+
+" Quick version: (LeaderLeader too busy atm)
+" command! GAll :silent exe "Git add ." | :silent exe "Gcommit -q -a"
+" nnoremap <Leader><Leader> :GAll<CR>
 
 " Heil Hydra
-nnoremap <Leader>hh :Gcommit -v<CR>
-
-command! GAllPrepop :silent exe "Git add ." | :silent exe "Gcommit -v -q -a -e -m" . @"
+nnoremap <Leader>hh :Gcommit<CR>
+nnoremap <Leader>hc :Gcommit -v<CR>
 
 " Git reset:
 command! GReset :ProjectRootExe :AsyncRun git reset
@@ -859,7 +864,38 @@ nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " :Glog --Sfindme --
 " :Glog --Sfindme -- %
 " }}}
-Plug 'tpope/vim-rsi'
+
+Plug 'airblade/vim-gitgutter' " {{{
+nnoremap <Leader>tg :GitGutterToggle<CR>
+
+" Instead of this,
+" nmap <Leader>k <Plug>GitGutterPrevHunk
+" nmap <Leader>j <Plug>GitGutterNextHunk
+nmap <Leader>hk <Plug>GitGutterPrevHunk
+nmap <Leader>hj <Plug>GitGutterNextHunk
+
+" This. (requires kana/vim-submode)
+" call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', '<Plug>GitGutterPrevHunk')
+" call submode#map(       'GitGutterPrevNext', 'n', '',  'k', '<Plug>GitGutterPrevHunk')
+" call submode#enter_with('GitGutterPrevNext', 'n', '', ';j', '<Plug>GitGutterNextHunk')
+" call submode#map(       'GitGutterPrevNext', 'n', '',  'j', '<Plug>GitGutterNextHunk')
+
+" Neither of these work. Something's up with submode.
+" call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', ':GitGutterPrevHunk')
+" call submode#map(       'GitGutterPrevNext', 'n', '',  'k', ':GitGutterPrevHunk')
+" call submode#enter_with('GitGutterPrevNext', 'n', '', ';j', ':GitGutterNextHunk')
+" call submode#map(       'GitGutterPrevNext', 'n', '',  'j', ':GitGutterNextHunk')
+
+" More symmetry:
+nmap <Leader>hp <Plug>GitGutterStageHunk
+nmap <Leader>hs <Plug>GitGutterStageHunk
+
+" LeaderLeader to stage hunk and commit: (requires vim-fugitive)
+autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> yy<Plug>GitGutterStageHunk:Gcommit<CR>p
+autocmd plugs.vimrc FileType jiv nmap <buffer> <Leader><Leader> yaf<Plug>GitGutterStageHunk:Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p
+
+autocmd plugs.vimrc FileType * nmap <buffer> <Leader>l <Plug>GitGutterStageHunk:Gcommit<CR>p
+" }}}
 
 Plug 'mwgkgk/CamelCaseMotion' " {{{
 
