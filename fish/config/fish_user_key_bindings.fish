@@ -20,9 +20,9 @@ end
 function bind_tab
   set -l cmdline (commandline)
   if test -z "$cmdline"
-    commandline -i "d "
-  else if test "$cmdline" = "d "
-    commandline -f execute
+    commandline -i "googler "
+  # else if test "$cmdline" = "d "
+  #   commandline -f execute
   else
     commandline -f complete
   end
@@ -92,8 +92,9 @@ end
 
 # Fzf misc:
 
-function bind_ec
-  fd -t f --hidden --follow -E .git/ | fzf +m --height 15 --reverse | read -l result
+function bind_bat
+  # fd -t f --hidden --follow -E .git/ | fzf +m --height 15 --reverse | read -l result
+  fd -t f --hidden --follow | fzf +m --reverse --preview="bat {} --color=always" | read -l result
   and bat $result
   commandline -f repaint
 end
@@ -115,13 +116,19 @@ function bind_fzf_cd_from_shop
   commandline -f repaint
 end
 
+function bind_fzf_cd_from_cases
+  fd -t d --follow "" ~/shop/cases | fzf +m --height 15 --reverse | read -l result
+  and cd $result
+  commandline -f repaint
+end
+
 function bind_fzf_cd_from_ink
   fd -t d --follow "" ~/ink | fzf +m --height 15 --reverse | read -l result
   and cd $result
   commandline -f repaint
 end
 
-function bind_ee
+function bind_fzf_cd_from_here
   fd -t d --follow | fzf +m --height 15 --reverse | read -l result
   and cd $result
   commandline -f repaint
@@ -141,7 +148,7 @@ function bind_cr
 end
 
 function bind_fzf_vim
-  fd -t f --hidden --follow -E .git/ | fzf +m --height 15 --reverse | read -l result
+  fd -t f --hidden --follow | fzf +m --height 15 --reverse | read -l result
   and commandline -- "v $result" ;and commandline -f execute
   commandline -f repaint
 end
@@ -188,7 +195,7 @@ end
 function bind_esb
   set -l cmdline (commandline)
   if test -z "$cmdline"
-    fd --type file --follow --exclude .git "" ~/shop/grimoire | fzf +m --height 15 --reverse | read -l result
+    fd --type file --follow --exclude .git "" ~/shop/grim | fzf +m --height 15 --reverse | read -l result
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
   else
@@ -202,7 +209,13 @@ function bind_eg
   commandline -f repaint
 end
 
-function bind_ef
+function bind_fzf_vim_from_ark
+  fd --type file --hidden --follow --exclude .git "" ~/ink/ark/ | fzf +m --height 15 --reverse | read -l result
+  and commandline -- "v $result" ;and commandline -f execute
+  commandline -f repaint
+end
+
+function bind_fzf_vim_from_shop
   set -l cmdline (commandline)
   if test -z "$cmdline"
     fd --type file --hidden --follow --exclude .git "" ~/shop/ | fzf +m --height 15 --reverse | read -l result
@@ -253,17 +266,19 @@ function fish_user_key_bindings
   bind Ï bind_eso
   # M-i to git status
   bind \ei bind_ei
-  # M-c to cat
-  bind \ec bind_ec
+  # M-f to bat
+  bind æ bind_bat
 
   # M-~ to also fzf-cd from ~
   bind à bind_fzf_cd_from_home
-  # M-w to fzf-cd from ~/shop/
-  bind ÷ bind_fzf_cd_from_shop
-  # M-w to fzf-cd from ~/ink/
-  bind ó bind_fzf_cd_from_ink
+  # M-s to fzf-cd from ~/shop/
+  bind ó bind_fzf_cd_from_shop
+  # M-c to fzf-cd from ~/shop/cases/
+  bind ã bind_fzf_cd_from_cases
+  # M-x to fzf-cd from ~/ink/
+  bind ø bind_fzf_cd_from_ink
   # M-e to fzf-cd from .
-  bind å bind_ee
+  bind ÷ bind_fzf_cd_from_here
   # M-r to fzf through siblings
   bind ò bind_er
 
@@ -274,8 +289,8 @@ function fish_user_key_bindings
   # M-t to fzf-select
   bind ô fzf-select
 
-  # M-a to fzf-vim .
-  bind á bind_fzf_vim
+  # M-e to fzf-vim .
+  bind å bind_fzf_vim
   # M-d to fzf through dotfile folder, or kill-word
   bind ä bind_ed
   # M-S-d to fzf through dotfiles in ~/, or kill-word
@@ -288,8 +303,10 @@ function fish_user_key_bindings
   bind Â bind_esb
   # M-g to fzf-vim ~/org
   bind ç bind_eg
-  # M-f to fzf-vim ~/shop or forward-word
-  bind æ bind_ef
+  # M-a to fzf-vim ~/ink/ark/
+  bind á bind_fzf_vim_from_ark
+  # M-S-s to fzf-vim ~/shop or forward-word
+  bind Ó bind_fzf_vim_from_shop
 
   # Move \ee to \ex
   bind \ex edit_command_buffer
