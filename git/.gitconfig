@@ -8,7 +8,9 @@
 [alias]
     l = log
     r = reset
-    c = checkout
+    c = commit -v
+    p = push -u origin --all
+    o = checkout
     b = checkout -b
     bb = branch
     m = merge --no-ff
