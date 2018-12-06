@@ -693,6 +693,7 @@ nnoremap sz :FzfTags<CR>
 nnoremap st :FzfFiletypes<CR>
 nnoremap sf :FzfGFiles<CR>
 nnoremap s: :FzfHistory:<CR>
+nnoremap s; :FzfHistory:<CR>
 nnoremap s/ :FzfHistory/<CR>
 nnoremap s[ :FzfBCommits<CR>
 nnoremap s] :FzfCommits<CR>
