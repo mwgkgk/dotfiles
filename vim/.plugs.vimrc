@@ -338,8 +338,7 @@ Plug 'sickill/vim-pasta'
 
 Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/JumpToLastOccurrence' " {{{
-" Default used to be: ,f ,F ,t ,T
-let g:JumpToLastOccurrence_Leader = '<Leader>l'
+" ,f ,F ,t ,T
 " }}}
 
 Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
