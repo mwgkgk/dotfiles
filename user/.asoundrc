@@ -1,0 +1,87 @@
+# vim:set ft=alsaconf:
+
+# Use PulseAudio by default
+# pcm.!default {
+#   type pulse
+#   fallback "sysdefault"
+#   hint {
+#     show on
+#     description "Default ALSA Output (currently PulseAudio Sound Server)"
+#   }
+# }
+# ctl.!default {
+#   type pulse
+#   fallback "sysdefault"
+# }
+
+# Trying to fix longtime sound problems, currently affecting steam games that
+# have no sound presumably because default pcm device is 0.
+# Relevant output of `aplay -l`:
+# ```
+# card 0: PCH [HDA Intel PCH], device 0: ALC892 Analog [ALC892 Analog]
+#   Subdevices: 1/1
+#   Subdevice #0: subdevice #0
+# card 0: PCH [HDA Intel PCH], device 1: ALC892 Digital [ALC892 Digital]
+#   Subdevices: 1/1
+#   Subdevice #0: subdevice #0
+# ```
+
+# Following doesn't work:
+# defaults.ctl.card 1;
+# defaults.pcm.card 1;
+
+# Trying more expanded variant:
+# Getting relevant card names:
+# `aplay -l | awk -F \: '/,/{print $2}' | awk '{print $1}' | uniq`
+# Results:
+# ```
+# PCH
+# NVidia
+# ```
+# pcm.!default {
+#   type hw
+#   card PCH
+# }
+
+# ctl.!default {
+#   type hw
+#   card PCH
+# }
+
+# Numbered approach:
+# pcm.!default {
+#   type hw
+#   card 1
+# }
+# ctl.!default {
+#   type hw
+#   card 1
+# }
+
+# So far, neither works
+
+
+# Sun Nov 25 06:37:39 UTC 2018
+
+# "Some games are using alsa instead of pulse, Morty, so, when we get to
+# customs, you have to put this snippet of code waaaay up inside your butt."
+
+# See https://steamcommunity.com/app/221410/discussions/0/618458030650103916/
+
+# ctl.dmixer {
+#   type pulse
+# }
+# pcm.pulse {
+#   type pulse
+# }
+# ctl.pulse {
+#   type pulse
+# }
+# pcm.!default {
+#   type pulse
+# }
+# ctl.!default {
+#   type pulse
+# }
+
+# Results: VLC has sound, using alsa default output. Steam, Firefox don't.
