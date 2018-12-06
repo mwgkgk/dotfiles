@@ -702,7 +702,6 @@ nnoremap S :FzfBLines<CR>
 command! -bang -nargs=? -complete=dir FzfFilesWithPreview
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
-nnoremap <M-a> :FzfFilesWithPreview .<CR>
 nnoremap ss :FzfFilesWithPreview .<CR>
 
 nnoremap sw :FzfFilesWithPreview ./lib/<CR>
