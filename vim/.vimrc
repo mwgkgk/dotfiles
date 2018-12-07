@@ -98,11 +98,11 @@ autocmd vimrc BufNewFile,BufRead *.ipkg setfiletype idris
 autocmd vimrc Filetype ocaml setlocal commentstring=(*%s*)
 
 " Whitespace
-set tabstop=2
+set tabstop=4
 set softtabstop=0
-set shiftwidth=2
+set shiftwidth=4
 set expandtab
-autocmd vimrc Filetype cpp setlocal tabstop=2 shiftwidth=2
+autocmd vimrc Filetype cpp setlocal tabstop=4 shiftwidth=4
 autocmd vimrc Filetype d setlocal tabstop=4 shiftwidth=4
 autocmd vimrc Filetype perl setlocal tabstop=4 shiftwidth=4 foldmethod=marker foldlevel=0
 
