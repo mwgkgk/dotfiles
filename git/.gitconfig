@@ -1,22 +1,25 @@
 [user]
-	name = mwgkgk
-	email = mwgkgk
+  name = mwgkgk
+  email = mwgkgk
 [color]
-	ui = true
+  ui = true
 [ghq]
-    root = ~/.ghq/
+  root = ~/.ghq/
 [alias]
-    l = log
-    r = reset
-    c = commit -v
-    p = push -u origin --all
-    o = checkout
-    b = checkout -b
-    bb = branch
-    m = merge --no-ff
-    mm = !git merge master && git checkout master
-    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-    upstream = log --oneline --no-merges ..origin/master
-    graph = log --graph --all --decorate --stat --date=iso
+  l = log
+  r = reset
+  rollhard = reset --hard HEAD~1
+  rollback = reset HEAD~1
+  rollsoft = reset --soft HEAD~1
+  c = commit -v
+  p = push -u origin --all
+  o = checkout
+  b = checkout -b
+  bb = branch
+  m = merge --no-ff
+  mm = !git merge master && git checkout master
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  upstream = log --oneline --no-merges ..origin/master
+  graph = log --graph --all --decorate --stat --date=iso
 [init]
-	templatedir = ~/.git-templates
+  templatedir = ~/.git-templates
