@@ -11,6 +11,7 @@
   rollhard = reset --hard HEAD~1
   rollback = reset HEAD~1
   rollsoft = reset --soft HEAD~1
+  rollmess = commit --amend
   c = commit -v
   p = push -u origin --all
   o = checkout
