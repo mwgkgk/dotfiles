@@ -380,11 +380,10 @@ nmap <Space>h <Tab>
 nmap <Space>l <Tab>
 
 " M-j M-k to go prev-next like shell
-command! UpSibling :execute 'cd' system('prev-sibling-dir')
-command! DownSibling :execute 'cd' system('next-sibling-dir')
-
-nmap ë :UpSibling<CR>
-nmap ê :DownSibling<CR>
+nmap ë :siblprev<CR>
+nmap ê :siblnext<CR>
+nmap è :cd ..<CR>
+" TODO M-l to cd to last child
 
 " Backspace to go up dir
 nmap  h
