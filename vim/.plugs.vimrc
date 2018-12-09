@@ -239,7 +239,7 @@ Plug 'briandoll/change-inside-surroundings.vim' " {{{
 nnoremap cI :ChangeInsideSurrounding<CR>
 " }}}
 
-Plug 'luochen1990/rainbow' " {{{
+Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 let g:rainbow_conf = {
 \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
@@ -282,7 +282,6 @@ let g:rainbow_conf = {
 " Clear the highlighting conflict:
 " See https://github.com/luochen1990/rainbow/issues/95
 let g:sh_no_error = 1
-" }}}
 
 Plug 'machakann/vim-patternjump' " {{{
 let g:patternjump_no_default_key_mappings = 1
