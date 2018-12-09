@@ -226,6 +226,13 @@ function bind_fzf_vim_from_shop
   end
 end
 
+function bind_fzf_vim_from_ink
+  set -l cmdline (commandline)
+  fd --type file --hidden --follow --exclude .git "" ~/ink/ | fzf +m --height 15 --reverse | read -l result
+  and commandline -- "v $result" ;and commandline -f execute
+  commandline -f repaint
+end
+
 function fzf-select -d 'fzf commandline job and print unescaped selection back to commandline'
   set -l cmd (commandline -j)
   [ "$cmd" ]; or return
@@ -307,6 +314,8 @@ function fish_user_key_bindings
   bind á bind_fzf_vim_from_ark
   # M-S-s to fzf-vim ~/shop or forward-word
   bind Ó bind_fzf_vim_from_shop
+  # M-S-x to fzf-vim ~/ink
+  bind Ø bind_fzf_vim_from_ink
 
   # Move \ee to \ex
   bind \ex edit_command_buffer
