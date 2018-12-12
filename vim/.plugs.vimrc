@@ -447,7 +447,7 @@ let g:formatdef_shfmt = '"shfmt -i 4 -p"'
 let g:formatters_sh = ['shfmt']
 let g:formatdef_rustfmt = '"rustfmt --unstable-features"'
 let g:formatters_rust = ['rustfmt']
-let g:formatdef_ocamlformat = '"ocamlformat - --profile=compact --name ".expand("%")'
+let g:formatdef_ocamlformat = '"ocamlformat - --profile=default --name ".expand("%")'
 let g:formatters_ocaml = ['ocamlformat']
 let g:formatdef_perltidy = '"perltidy -ce -pt=2 -nasc"'
 let g:formatters_perl = ['perltidy']
