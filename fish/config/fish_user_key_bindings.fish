@@ -94,7 +94,7 @@ end
 
 function bind_bat
   # fd -t f --hidden --follow -E .git/ | fzf +m --height 15 --reverse | read -l result
-  fd -t f --hidden --follow | fzf +m --reverse --preview="bat {} --color=always" | read -l result
+  fd -t f --hidden --follow | fzf +m --reverse --tac --preview="bat {} --color=always" | read -l result
   and bat $result
   commandline -f repaint
 end
@@ -148,7 +148,7 @@ function bind_cr
 end
 
 function bind_fzf_vim
-  fd -t f --hidden --follow | fzf +m --height 15 --reverse | read -l result
+  fd -t f --hidden --follow | fzf +m --height 15 --reverse --tac | read -l result
   and commandline -- "v $result" ;and commandline -f execute
   commandline -f repaint
 end
