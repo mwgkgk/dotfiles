@@ -284,7 +284,7 @@ function fish_user_key_bindings
   bind ã bind_fzf_cd_from_cases
   # M-x to fzf-cd from ~/ink/
   bind ø bind_fzf_cd_from_ink
-  # M-e to fzf-cd from .
+  # M-w to fzf-cd from .
   bind ÷ bind_fzf_cd_from_here
   # M-r to fzf through siblings
   bind ò bind_er
