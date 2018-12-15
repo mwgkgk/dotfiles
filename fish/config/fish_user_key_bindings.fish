@@ -80,13 +80,23 @@ function bind_ek
     commandline -f repaint
 end
 
-function bind_eo
+function bind_ls_here
     echo ;and exa -a --group-directories-first
     commandline -f repaint
 end
 
-function bind_ei
+function bind_ls_tree_here
+    echo ;and exa -l --git-ignore --sort modified --reverse --group-directories-first --tree --level 2 --time-style long-iso --binary --color=always | less -FR
+    commandline -f repaint
+end
+
+function bind_git_status
     echo ;and git status
+    commandline -f repaint
+end
+
+function bind_ls_heap
+    echo ;and exa -l --group-directories-first --tree --time-style long-iso --color=always ~/heap | less -FR
     commandline -f repaint
 end
 
@@ -101,11 +111,6 @@ function bind_bat
   else
       commandline -f forward-word
   end
-end
-
-function bind_eso
-    echo ;and exa -l --git-ignore --sort modified --reverse --group-directories-first --tree --level 2 --time-style long-iso --binary --color=always | less -FR
-    commandline -f repaint
 end
 
 function bind_fzf_cd_from_home
@@ -267,11 +272,13 @@ function fish_user_key_bindings
     bind ë bind_ek
 
     # M-o to ls
-    bind \eo bind_eo
+    bind \eo bind_ls_here
     # M-S-o to exa -l --sort modified --tree
-    bind Ï bind_eso
+    bind Ï bind_ls_tree_here
     # M-i to git status
-    bind \ei bind_ei
+    bind \ei bind_git_status
+    # M-u to ls ~/heap
+    bind õ bind_ls_heap
     # M-f to bat
     bind æ bind_bat
 
