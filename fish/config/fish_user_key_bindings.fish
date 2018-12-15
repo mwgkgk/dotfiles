@@ -93,10 +93,14 @@ end
 # Fzf misc:
 
 function bind_bat
-  # fd -t f --hidden --follow -E .git/ | fzf +m --height 15 --reverse | read -l result
-  fd -t f --hidden --follow | fzf +m --reverse --tac --preview="bat {} --color=always" | read -l result
-  and bat $result
-  commandline -f repaint
+  set -l cmdline (commandline)
+  if test -z "$cmdline"
+    fd -t f --hidden --follow | fzf +m --reverse --tac --preview="bat {} --color=always" | read -l result
+    and bat $result
+    commandline -f repaint
+  else
+    commandline -f forward-word
+  end
 end
 
 function bind_eso
@@ -216,14 +220,9 @@ function bind_fzf_vim_from_ark
 end
 
 function bind_fzf_vim_from_shop
-  set -l cmdline (commandline)
-  if test -z "$cmdline"
     fd --type file --hidden --follow --exclude .git "" ~/shop/ | fzf +m --height 15 --reverse | read -l result
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
-  else
-    commandline -f forward-word
-  end
 end
 
 function bind_fzf_vim_from_ink
