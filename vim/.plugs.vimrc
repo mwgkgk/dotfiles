@@ -664,7 +664,7 @@ let g:targets_separators = '. ; : + - ~ _ * \ |'
 Plug 'wellle/visual-split.vim' " :VSSplit, :VSResize
 
 Plug 'junegunn/vim-after-object' " {{{
-autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';', ',', '.', ')', ']', '}')
+autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';', ',', '.' )
 " }}}
 Plug 'junegunn/vader.vim'
 Plug 'junegunn/fzf.vim' " {{{
