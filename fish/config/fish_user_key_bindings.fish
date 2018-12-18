@@ -86,7 +86,7 @@ function bind_ls_here
 end
 
 function bind_ls_tree_here
-    echo ;and exa -l --git-ignore --sort modified --reverse --group-directories-first --tree --level 2 --time-style long-iso --binary --color=always | less -FR
+    echo ;and exa -l --git-ignore --sort modified --reverse --group-directories-first --tree --level 3 --time-style long-iso --binary --color=always | less -FR
     commandline -f repaint
 end
 
