@@ -121,13 +121,15 @@ map \l <Plug>(easymotion-next)
 " <Plug>(easymotion-jumptoanywhere) |
 " onoremap \k V<Plug>(easymotion-k)
 " onoremap \j V<Plug>(easymotion-j)
+
 " Don't use omap: many binds e.g. fugitive use c in operator-mode
-nmap dq d\t"<Space><Esc>
-nmap dQ d\T"<Space><Esc>
-nmap yq y\t"<Space><Esc>
-nmap yQ y\T"<Space><Esc>
-nmap cq c\t"<Space>
-nmap cQ c\T"<Space>
+nmap d' d\t"<Space><Esc>
+nmap d" d\T"<Space><Esc>
+nmap y' y\t"<Space><Esc>
+nmap y" y\T"<Space><Esc>
+nmap c' c\t"<Space>
+nmap c" c\T"<Space>
+
 nmap dr d\t)<Space><Esc>
 nmap dR d\T(<Space><Esc>
 nmap yr y\t)<Space><Esc>
