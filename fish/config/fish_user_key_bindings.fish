@@ -85,8 +85,8 @@ function bind_ls_here
     commandline -f repaint
 end
 
-function bind_ls_tree_here
-    echo ;and exa -l --git-ignore --sort modified --reverse --group-directories-first --tree --level 3 --time-style long-iso --binary --color=always | less -FR
+function bind_lstree_here
+    echo ;and lstree .
     commandline -f repaint
 end
 
@@ -100,8 +100,23 @@ function bind_git_diff
     commandline -f repaint
 end
 
-function bind_ls_heap
-    echo ;and exa -l --group-directories-first --tree --time-style long-iso --color=always ~/heap | less -FR
+function bind_raise
+    echo ;and raise
+    commandline -f repaint
+end
+
+function bind_suh
+    echo ;and suh
+    commandline -f repaint
+end
+
+function bind_suh_v
+    echo ;and suh -v
+    commandline -f repaint
+end
+
+function bind_suck
+    echo ;and suck
     commandline -f repaint
 end
 
@@ -279,13 +294,22 @@ function fish_user_key_bindings
     # M-o to ls
     bind \eo bind_ls_here
     # M-S-o to exa -l --sort modified --tree
-    bind Ï bind_ls_tree_here
+    bind Ï bind_lstree_here
+
     # M-i to git status
     bind \ei bind_git_status
     # M-S-i to git diff
     bind É bind_git_diff
-    # M-u to ls ~/heap
-    bind õ bind_ls_heap
+    # C-M-i to raise
+    bind  bind_raise
+
+    # M-u to suh
+    bind õ bind_suh
+    # M-S-u to suh -v
+    bind Õ bind_suh_v
+    # C-M-u to suck
+    bind  bind_suck
+
     # M-f to bat
     bind æ bind_bat
 
