@@ -101,8 +101,8 @@ function bind_git_diff
 end
 
 function bind_raise
-    echo ;and raise
-    commandline -f repaint
+    commandline -r "raise"
+    commandline -f execute
 end
 
 function bind_suh
@@ -116,8 +116,8 @@ function bind_suh_v
 end
 
 function bind_suck
-    echo ;and suck
-    commandline -f repaint
+    commandline -r "suck"
+    commandline -f execute
 end
 
 # Fzf misc:
