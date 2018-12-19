@@ -172,12 +172,6 @@ set pastetoggle=<Leader>tp
 
 " Mappings
 " Unmappings {{{
-" - No ex-mode for now
-" nnoremap Q <nop>
-" - No accidental macro recording
-" nnoremap <Leader>q q
-nnoremap Q q
-nnoremap q <nop>
 " - No K in visual
 vnoremap K <nop>
 " - No join in visual
@@ -338,8 +332,8 @@ inoremap <C-c>nn ñ
 " Normal-mode-related {{{
 " - Y to behave like C & D :
 map Y y$
-" - q for ^:
-nnoremap q ^
+" - Q for ^:
+nnoremap Q ^
 " - Add newlines before and after :
 " nnoremap [<Space> O<Esc>j
 nnoremap ]<Space> o<Esc>k
