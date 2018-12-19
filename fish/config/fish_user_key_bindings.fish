@@ -95,6 +95,11 @@ function bind_git_status
     commandline -f repaint
 end
 
+function bind_git_diff
+    echo ;and git diff
+    commandline -f repaint
+end
+
 function bind_ls_heap
     echo ;and exa -l --group-directories-first --tree --time-style long-iso --color=always ~/heap | less -FR
     commandline -f repaint
@@ -277,6 +282,8 @@ function fish_user_key_bindings
     bind Ï bind_ls_tree_here
     # M-i to git status
     bind \ei bind_git_status
+    # M-S-i to git diff
+    bind É bind_git_diff
     # M-u to ls ~/heap
     bind õ bind_ls_heap
     # M-f to bat
