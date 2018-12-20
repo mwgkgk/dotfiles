@@ -176,8 +176,8 @@ function bind_cr
     commandline -f repaint
 end
 
-function bind_fzf_vim
-    fd -t f --hidden --follow | fzf +m --height 15 --reverse --tac | read -l result
+function bind_v_here
+    v-here | read -l result
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
 end
@@ -334,7 +334,7 @@ function fish_user_key_bindings
     bind ô fzf-select
 
     # M-e to fzf-vim .
-    bind å bind_fzf_vim
+    bind å bind_v_here
     # M-d to fzf through dotfile folder, or kill-word
     bind ä bind_ed
     # M-S-d to fzf through dotfiles in ~/, or kill-word
