@@ -177,7 +177,7 @@ function bind_cr
 end
 
 function bind_v_here
-    v-here | read -l result
+    fz-here | read -l result
     and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
 end
