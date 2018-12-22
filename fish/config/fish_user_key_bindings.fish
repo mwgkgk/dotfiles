@@ -176,6 +176,28 @@ function bind_cr
     commandline -f repaint
 end
 
+function bind_fz_here
+    set -l cmdline (commandline)
+
+    begin
+        fz-here | while read -l s;
+        set results $results $s; end
+    end
+
+    if test -z "$results"
+        commandline -f repaint
+        return
+    else
+        commandline -t ""
+    end
+
+    for result in $results
+        commandline -it -- (string escape $result)
+        commandline -it -- " "
+    end
+    commandline -f repaint
+end
+
 function bind_v_here
     fz-here | read -l result
     and commandline -- "v $result" ;and commandline -f execute
