@@ -353,7 +353,7 @@ function fish_user_key_bindings
     # C-r to fzf-history
     bind \cr bind_cr
     # C-t to add files
-    bind \ct __fzf_find_file
+    bind \ct bind_fz_here
     # M-t to fzf-select
     bind ô fzf-select
 
