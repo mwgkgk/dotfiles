@@ -11,32 +11,33 @@
 │   ├── [  61]  .inputrc
 │   └── [ 305]  .Xdefaults
 ├── [113K]  vim
-│   ├── [ 46K]  .plugs.vimrc
+│   ├── [ 47K]  .plugs.vimrc
 │   ├── [ 19K]  .vimrc
-│   ├── [4.0K]  usnippets [78 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  usnippets [79 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  skeletons [33 entries exceeds filelimit, not opening dir]
 │   ├── [4.2K]  ftdetect
 │   │   └── [ 177]  dash.vim
 │   ├── [ 710]  filetype.vim
-│   ├── [4.0K]  skeletons [32 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  colors [91 entries exceeds filelimit, not opening dir]
 │   ├── [9.6K]  .oldconfigs.vimrc
 │   └── [ 17K]  after
-│       ├── [8.4K]  syntax
-│       │   ├── [ 275]  scheme.vim
-│       │   └── [4.1K]  min.vim
-│       └── [4.3K]  ftplugin
-│           ├── [ 149]  text.vim
-│           ├── [  64]  java.vim
-│           ├── [  64]  html.vim
-│           └── [  64]  css.vim
-├── [ 47K]  fish
-│   ├── [4.0K]  aliases [44 entries exceeds filelimit, not opening dir]
+│       ├── [4.4K]  ftplugin
+│       │   ├── [  64]  nim.vim
+│       │   ├── [ 149]  text.vim
+│       │   ├── [  64]  java.vim
+│       │   ├── [  64]  html.vim
+│       │   └── [  64]  css.vim
+│       └── [8.4K]  syntax
+│           ├── [ 275]  scheme.vim
+│           └── [4.1K]  min.vim
+├── [ 49K]  fish
 │   ├── [ 189]  fishfile
-│   ├── [ 375]  config.fish
-│   ├── [ 13K]  config
-│   │   ├── [7.7K]  fish_user_key_bindings.fish
-│   │   ├── [ 261]  fish_title.fish
-│   │   └── [ 861]  fish_prompt.fish
+│   ├── [ 389]  config.fish
+│   ├── [4.0K]  aliases [47 entries exceeds filelimit, not opening dir]
+│   ├── [ 14K]  config
+│   │   ├── [9.1K]  fish_user_key_bindings.fish
+│   │   ├── [ 880]  fish_prompt.fish
+│   │   └── [ 261]  fish_title.fish
 │   ├── [ 22K]  completions
 │   │   └── [ 18K]  rustup.fish
 │   └── [4.2K]  tools
@@ -49,13 +50,13 @@
 ├── [4.0K]  fmt
 │   └── [  38]  .rustfmt.toml
 ├── [5.0K]  repl
-│   ├── [ 857]  .iex.exs
+│   ├── [ 859]  .iex.exs
 │   ├── [  48]  .lambda-term-inputrc
 │   └── [ 119]  .minrc
 ├── [4.1K]  sxhkd
 │   └── [ 139]  sxhkdrc
 ├── [ 13K]  alacritty
-│   └── [8.8K]  alacritty.yml
+│   └── [9.2K]  alacritty.yml
 ├── [9.7K]  conky
 │   ├── [2.7K]  conky.conf
 │   └── [3.0K]  conky-dual.conf
@@ -64,13 +65,13 @@
 ├── [6.0K]  zsh
 │   └── [2.0K]  .zshrc
 ├── [ 13K]  git
-│   ├── [ 525]  .gitconfig
+│   ├── [ 693]  .gitconfig
 │   └── [8.1K]  .git-templates
 │       └── [4.1K]  hooks
 │           └── [ 148]  post-commit
 ├── [ 437]  Makefile
-├── [9.0K]  tmux
-│   └── [5.0K]  .tmux.conf
+├── [9.1K]  tmux
+│   └── [5.1K]  .tmux.conf
 ├── [ 43K]  vifm
 │   ├── [ 11K]  vifmrc
 │   └── [ 28K]  colors
@@ -99,7 +100,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 350K used in 32 directories, 65 files
+ 353K used in 32 directories, 66 files
 ```
 
-> Generated on Thursday, December  6, 2018 at 13:11:03 PM UTC.
+> Generated on Sunday, December 23, 2018 at 01:33:18 AM UTC.
