@@ -206,6 +206,12 @@ function bind_v_here
     commandline -f repaint
 end
 
+function bind_v_git_changes
+    fz-git-changes | read -l result
+    and commandline -- "v $result" ;and commandline -f execute
+    commandline -f repaint
+end
+
 function bind_ed
     set -l cmdline (commandline)
     if test -z "$cmdline"
@@ -357,8 +363,11 @@ function fish_user_key_bindings
     # M-t to fzf-select
     bind ô fzf-select
 
-    # M-e to fzf-vim .
+    # M-e to v $(fz-here)
     bind å bind_v_here
+    # M-S-e to v $(fz-git-changes)
+    bind Å bind_v_git_changes
+
     # M-d to fzf through dotfile folder, or kill-word
     bind ä bind_ed
     # M-S-d to fzf through dotfiles in ~/, or kill-word
