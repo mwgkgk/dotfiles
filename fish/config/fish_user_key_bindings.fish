@@ -122,12 +122,14 @@ end
 
 # Fzf misc:
 
-function bind_bat
+function bind_bat_here
     set -l cmdline (commandline)
     if test -z "$cmdline"
-        fd -t f --hidden --follow | fzf +m --reverse --tac --preview="bat {} --color=always" | read -l result
-        and bat $result
-        commandline -f repaint
+        fz-preview-here | read -l result
+        if test -n (string trim "$result")
+            commandline -r "Bat $result"
+            commandline -f execute
+        end
   else
       commandline -f forward-word
   end
@@ -333,7 +335,7 @@ function fish_user_key_bindings
     bind  bind_suck
 
     # M-f to bat
-    bind æ bind_bat
+    bind æ bind_bat_here
 
     # M-~ to also fzf-cd from ~
     bind à bind_fzf_cd_from_home
