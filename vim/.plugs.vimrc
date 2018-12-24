@@ -727,6 +727,7 @@ nnoremap sk :call fzf#run({'dir':'~/.vim/skeletons', 'sink':'%!cat', 'down': '~1
 nnoremap sz :FzfTags<CR>
 nnoremap st :FzfFiletypes<CR>
 nnoremap sf :FzfGFiles<CR>
+nnoremap Å :FzfGitModified<CR>
 nnoremap s: :FzfHistory:<CR>
 nnoremap s; :FzfHistory:<CR>
 nnoremap s/ :FzfHistory/<CR>
