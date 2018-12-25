@@ -417,6 +417,8 @@ nnoremap <F6> :source ~/.plugs.vimrc<CR>
 command! ReloadVimrc :source ~/.plugs.vimrc
 " Refresh
 nnoremap <F1> :e!<CR>
+" Run cmd
+nnoremap <M-!> :!
 " }}}
 " Visual-mode-related {{{
 " - select last paste visually
