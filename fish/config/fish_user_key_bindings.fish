@@ -200,6 +200,28 @@ function bind_fz_here
     commandline -f repaint
 end
 
+function bind_fz_git_changes
+    set -l cmdline (commandline)
+
+    begin
+        fz-git-changes | while read -l s;
+        set results $results $s; end
+    end
+
+    if test -z "$results"
+        commandline -f repaint
+        return
+    else
+        commandline -t ""
+    end
+
+    for result in $results
+        commandline -it -- (string escape $result)
+        commandline -it -- " "
+    end
+    commandline -f repaint
+end
+
 function bind_v_here
     fz-here | read -l result
     and commandline -- "v $result" ;and commandline -f execute
@@ -287,14 +309,6 @@ function bind_fzf_vim_from_ink
     commandline -f repaint
 end
 
-function fzf-select -d 'fzf commandline job and print unescaped selection back to commandline'
-    set -l cmd (commandline -j)
-    [ "$cmd" ]; or return
-    eval $cmd | fzf -m --tiebreak=index --select-1 --exit-0 | string join ' ' | read -l result
-    [ "$result" ]; and commandline -j -- $result
-    commandline -f repaint
-end
-
 function fish_user_key_bindings
     # Emulate bash: !!, !$
     bind ! bind_bang
@@ -358,10 +372,10 @@ function fish_user_key_bindings
 
     # C-r to fzf-history
     bind \cr bind_cr
-    # C-t to add files
+    # C-t to append fz-here to commandline
     bind \ct bind_fz_here
-    # M-t to fzf-select
-    bind ô fzf-select
+    # M-t to append fz-git-changes to commandline
+    bind ô bind_fz_git_changes
 
     # M-e to v $(fz-here)
     bind å bind_v_here
