@@ -135,6 +135,19 @@ function bind_bat_here
   end
 end
 
+function bind_bat_git_changes
+    set -l cmdline (commandline)
+    if test -z "$cmdline"
+        fz-preview-git-changes | read -l result
+        if test -n (string trim "$result")
+            commandline -r "Bat $result"
+            commandline -f execute
+        end
+  else
+      commandline -f forward-word
+  end
+end
+
 function bind_fzf_cd_from_home
     fd -t d --follow "" ~ | fzf +m --height 15 --reverse | read -l result
     and cd $result
@@ -354,8 +367,10 @@ function fish_user_key_bindings
     # C-M-u to suck
     bind  bind_suck
 
-    # M-f to bat
+    # M-f to Bat
     bind æ bind_bat_here
+    # M-S-f to Bat $(fz-preview-git-changes )
+    bind Æ bind_bat_git_changes
 
     # M-~ to also fzf-cd from ~
     bind à bind_fzf_cd_from_home
