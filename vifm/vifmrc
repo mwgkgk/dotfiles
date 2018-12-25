@@ -385,6 +385,14 @@ nmap ê :siblnext<CR>
 nmap è :cd ..<CR>
 " TODO M-l to cd to last child
 
+command FzSibl : let $fzfreturn = term('fz-siblings 2>/dev/tty')
+              \| if $fzfreturn != ''
+              \|     cd $fzfreturn
+              \| endif
+
+" M-r
+nmap ò :FzSibl<CR>
+
 " Backspace to go up dir
 nmap  h
 
