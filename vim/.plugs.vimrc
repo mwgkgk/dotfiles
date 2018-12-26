@@ -1271,5 +1271,10 @@ Plug 'mwgkgk/SerialExperimentsLain'
 
 call plug#end()
 
-source ~/.vimrc
+" Colors
+if filereadable(glob("~/.colors.vimrc")) 
+    source ~/.colors.vimrc
+else
+    silent! colorscheme desert
+endif
 
