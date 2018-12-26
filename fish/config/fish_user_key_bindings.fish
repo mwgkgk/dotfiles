@@ -148,32 +148,32 @@ function bind_bat_git_changes
   end
 end
 
-function bind_fzf_cd_from_home
-    fd -t d --follow "" ~ | fzf +m --height 15 --reverse | read -l result
+function bind_fdz_dir_home
+    fdz-dir ~ | read -l result
     and cd $result
     commandline -f repaint
 end
 
-function bind_fzf_cd_from_shop
-    fd -t d --follow "" ~/shop | fzf +m --height 15 --reverse | read -l result
+function bind_fdz_dir_shop
+    fdz-dir ~/shop | read -l result
     and cd $result
     commandline -f repaint
 end
 
-function bind_fzf_cd_from_cases
-    fd -t d --follow "" ~/shop/cases | fzf +m --height 15 --reverse | read -l result
+function bind_fdz_dir_cases
+    fdz-dir ~/shop/cases | read -l result
     and cd $result
     commandline -f repaint
 end
 
-function bind_fzf_cd_from_ink
-    fd -t d --follow "" ~/ink | fzf +m --height 15 --reverse | read -l result
+function bind_fdz_dir_ink
+    fdz-dir ~/ink | read -l result
     and cd $result
     commandline -f repaint
 end
 
-function bind_fzf_cd_from_here
-    fd -t d --follow | fzf +m --height 15 --reverse | read -l result
+function bind_fdz_dir_here
+    fdz-dir . | read -l result
     and cd $result
     commandline -f repaint
 end
@@ -290,35 +290,34 @@ function bind_esb
     set -l cmdline (commandline)
     if test -z "$cmdline"
         fd --type file --follow --exclude .git "" ~/shop/grim | fzf +m --height 15 --reverse | read -l result
-        and commandline -- "v $result" ;and commandline -f execute
+        and commandline -- "Vim $result" ;and commandline -f execute
         commandline -f repaint
   else
       commandline -f backward-word
   end
 end
 
-function bind_eg
-    fd --type file --hidden --follow --exclude .git "" ~/org/ | fzf +m --height 15 --reverse | read -l result
-    and commandline -- "v $result" ;and commandline -f execute
+function bind_fdz_guns
+    fdz-guns | read -l result
+    and commandline -- "Vim $result" ;and commandline -f execute
     commandline -f repaint
 end
 
-function bind_fzf_vim_from_ark
-    fd --type file --hidden --follow --exclude .git "" ~/ink/ark/ | fzf +m --height 15 --reverse | read -l result
-    and commandline -- "v $result" ;and commandline -f execute
+function bind_fdz_vim_ark
+    fdz-file ~/ink/ark/ | read -l result
+    and commandline -- "Vim $result" ;and commandline -f execute
     commandline -f repaint
 end
 
-function bind_fzf_vim_from_shop
-    fd --type file --hidden --follow --exclude .git "" ~/shop/ | fzf +m --height 15 --reverse | read -l result
-    and commandline -- "v $result" ;and commandline -f execute
+function bind_fdz_vim_shop
+    fdz-file ~/shop/ | read -l result
+    and commandline -- "Vim $result" ;and commandline -f execute
     commandline -f repaint
 end
 
-function bind_fzf_vim_from_ink
-    set -l cmdline (commandline)
-    fd --type file --hidden --follow --exclude .git "" ~/ink/ | fzf +m --height 15 --reverse | read -l result
-    and commandline -- "v $result" ;and commandline -f execute
+function bind_fdz_vim_ink
+    fdz-file ~/ink/ | read -l result
+    and commandline -- "Vim $result" ;and commandline -f execute
     commandline -f repaint
 end
 
@@ -367,21 +366,22 @@ function fish_user_key_bindings
     # C-M-u to suck
     bind  bind_suck
 
-    # M-f to Bat
+    # M-f to Bat or forward-word
     bind æ bind_bat_here
     # M-S-f to Bat $(fz-preview-git-changes )
     bind Æ bind_bat_git_changes
 
-    # M-~ to also fzf-cd from ~
-    bind à bind_fzf_cd_from_home
-    # M-s to fzf-cd from ~/shop/
-    bind ó bind_fzf_cd_from_shop
-    # M-c to fzf-cd from ~/shop/cases/
-    bind ã bind_fzf_cd_from_cases
-    # M-x to fzf-cd from ~/ink/
-    bind ø bind_fzf_cd_from_ink
-    # M-w to fzf-cd from .
-    bind ÷ bind_fzf_cd_from_here
+    # M-~ to fdz-dir ~
+    bind à bind_fdz_dir_home
+    # M-s to fdz-dir ~/shop/
+    bind ó bind_fdz_dir_shop
+    # M-c to fdz-dir ~/shop/cases/
+    bind ã bind_fdz_dir_cases
+    # M-x to fdz-dir ~/ink/
+    bind ø bind_fdz_dir_ink
+    # M-w to fdz-dir .
+    bind ÷ bind_fdz_dir_here
+
     # M-r to fzf through siblings
     bind ò bind_er
 
@@ -407,14 +407,14 @@ function fish_user_key_bindings
     bind â bind_eb
     # M-S-b to fzf-vim ~/bin or backward-word
     bind Â bind_esb
-    # M-g to fzf-vim ~/org
-    bind ç bind_eg
-    # M-a to fzf-vim ~/ink/ark/
-    bind á bind_fzf_vim_from_ark
-    # M-S-s to fzf-vim ~/shop or forward-word
-    bind Ó bind_fzf_vim_from_shop
-    # M-S-x to fzf-vim ~/ink
-    bind Ø bind_fzf_vim_from_ink
+    # M-g
+    bind ç bind_fdz_guns
+    # M-a
+    bind á bind_fdz_vim_ark
+    # M-S-s
+    bind Ó bind_fdz_vim_shop
+    # M-S-x
+    bind Ø bind_fdz_vim_ink
 
     # Move \ee to \ex
     bind \ex edit_command_buffer
