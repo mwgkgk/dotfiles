@@ -1271,9 +1271,6 @@ Plug 'mwgkgk/SerialExperimentsLain'
 
 call plug#end()
 
-" Colors
-if filereadable(glob("~/.colors.vimrc")) 
-    source ~/.colors.vimrc
-endif
+runtime .colors.vimrc
 
 source ~/.vimrc
