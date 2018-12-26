@@ -1274,7 +1274,5 @@ call plug#end()
 " Colors
 if filereadable(glob("~/.colors.vimrc")) 
     source ~/.colors.vimrc
-else
-    silent! colorscheme desert
 endif
 
