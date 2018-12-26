@@ -1276,3 +1276,4 @@ if filereadable(glob("~/.colors.vimrc"))
     source ~/.colors.vimrc
 endif
 
+source ~/.vimrc
