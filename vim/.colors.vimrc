@@ -130,7 +130,7 @@ function! s:chi_colo(chi)
     elseif a:chi ==# 'motor'
         return s:static_colo
     elseif a:chi ==# 'doc'
-        return 'gruvbox-light'
+        return 'murphy_mod'
     elseif a:chi ==# 'zepp'
         return 'alduin'
     else
