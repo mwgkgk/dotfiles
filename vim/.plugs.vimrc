@@ -763,7 +763,7 @@ nnoremap sH :FzfFilesWithPreview ~/help/<CR>
 " --color: Search color options
 
 command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
-nnoremap sa :Rg<Space>
+nnoremap sa :Rg<CR>
 
 command! FzfGitModified call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --modified'}))
 nnoremap sF :FzfGitModified<CR>
