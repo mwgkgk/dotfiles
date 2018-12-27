@@ -749,6 +749,7 @@ nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
 nnoremap <M-v> :FzfFilesWithPreview ~/.vim/<CR>
 nnoremap sv :FzfFilesWithPreview ~/.vim/<CR>
 nnoremap s" :FzfFilesWithPreview ~/.marvim/<CR>
+nnoremap sH :FzfFilesWithPreview ~/help/<CR>
 
 " --column: Show column number
 " --line-number: Show line number
