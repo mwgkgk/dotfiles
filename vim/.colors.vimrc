@@ -132,7 +132,7 @@ function! s:chi_colo(chi)
     elseif a:chi ==# 'doc'
         return 'gruvbox-light'
     elseif a:chi ==# 'zepp'
-        return s:static_colo
+        return 'alduin'
     else
         " Unrecognized non-empty $CHI
         return 'desert'
