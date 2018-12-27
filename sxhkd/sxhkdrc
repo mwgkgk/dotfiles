@@ -8,8 +8,8 @@ control + F12
   tmux-kill-detached
 
 control + ~c
-	ctrl-c
+	browser-doubleyank
 
 alt + ~c
-	alt-w
+	browser-unbookmark
 
