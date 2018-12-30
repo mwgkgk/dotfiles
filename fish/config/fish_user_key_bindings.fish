@@ -356,7 +356,7 @@ function fish_user_key_bindings
     # F2 to fm .
     bind -k f2 bind_f2
 
-    # M- HJKL-navigation:
+    # M-h M-l M-j M-k HJKL-navigation:
     bind è bind_eh
     bind ì bind_el
     bind ê bind_ej
