@@ -38,6 +38,13 @@ function bind_enter
   end
 end
 
+function bind_alt_enter
+    set -l cmdline (commandline)
+    echo
+    eval "$cmdline"
+    commandline -f repaint
+end
+
 function bind_cg
     commandline -r "rlwrap dash"
     commandline -f execute
@@ -347,6 +354,9 @@ function fish_user_key_bindings
     # Special CR
     bind \r bind_enter
     bind \n bind_enter
+
+    # M-CR
+    bind  bind_alt_enter
 
     # C-g to repl
     bind \cg bind_cg
