@@ -120,6 +120,21 @@ function bind_suck
     commandline -f execute
 end
 
+function bind_git_log
+    echo ;and git log -n 5
+    commandline -f repaint
+end
+
+function bind_git_shortlog
+    echo ;and git shortlog -e
+    commandline -f repaint
+end
+
+function bind_slap
+    commandline -r "slap"
+    commandline -f execute
+end
+
 # Fzf misc:
 
 function bind_bat_here
@@ -365,6 +380,13 @@ function fish_user_key_bindings
     bind Õ bind_suh_v
     # C-M-u to suck
     bind  bind_suck
+
+    # M-y to git log -n <smallnumber>
+    bind ù bind_git_log
+    # M-S-y to git shortlog
+    bind Ù bind_git_shortlog
+    # C-M-y to slap
+    bind  bind_slap
 
     # M-f to Bat or forward-word
     bind æ bind_bat_here
