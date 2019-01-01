@@ -550,6 +550,7 @@ omap ii <Plug>(textobj-between-i)
 xmap aa <Plug>(textobj-between-a)
 omap aa <Plug>(textobj-between-a)
 " }}}
+Plug 'thinca/vim-prettyprint'
 
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-textobj-user'
