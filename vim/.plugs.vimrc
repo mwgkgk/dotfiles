@@ -857,10 +857,6 @@ nmap <C-c><C-c> <Esc>ysiW)a
 " Quotes
 imap <C-c>q <Esc>hysiW"ea
 nmap <C-c>q <Esc>ysiW"a
-" Squares
-"   Haha jebaited: (Can't do insert mode with this)
-" imap <LocalLeader><LocalLeader> <Esc>hysiW]ea
-nmap <LocalLeader><LocalLeader> <Esc>ysiw]a
 " }}}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
