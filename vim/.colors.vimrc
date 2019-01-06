@@ -6,50 +6,10 @@ augroup .colors
     autocmd!
 augroup END
 
-" flex {{{
-function! s:flex_colo()
-    let hr = str2nr(strftime('%H'))
-    if hr < 15 && hr > 3
-        " return 'hybrid-light'
-
-        " return 'lucius-light'
-
-        " return 'seoul256-light'
-
-        " return 'disciple'
-        " return 'peaksea_mod'
-        return 'Tomorrow'
-
-        " return 'gruvbox'
-        " return 'sunday256'
-        " return 'mayansmokemod'
-        " return 'kalisi'
-        " return 'hybrid-light'
-    else
-        " return 'mustangmod'
-        " return 'kalisi-dark'
-
-        return 'Tomorrow-Night'
-        " return 'lucius'
-        " return 'devbox-dark-256-lighter'
-        " return 'hybrid'
-        " return 'typofree'
-        " return 'bubblegum'
-        " return 'apprentice'
-        " return 'gruvbox-dark'
-
-        " return 'seoul256'
-        " return 'zenburn'
-        " return 'last256'
-        " return 'outsider'
-        " return 'fadedvision'
-    endif
-endfunction
-" }}}
-
 " static {{{
 " let s:static_colo = 'industry'
-let s:static_colo = '256-jungle'
+" let s:static_colo = '256-jungle'
+let s:static_colo = 'tactical'
 " let s:static_colo = 'mayansmokemod'
 " let s:static_colo = 'badwolf'
 " let s:static_colo = 'devbox-dark-256'
@@ -115,6 +75,47 @@ let s:static_colo = '256-jungle'
 " let s:static_colo = 'gruvbox-dark'
 " }}}
 
+" flex {{{
+function! s:flex_colo()
+    let hr = str2nr(strftime('%H'))
+    if hr < 15 && hr > 3
+        " return 'hybrid-light'
+
+        " return 'lucius-light'
+
+        " return 'seoul256-light'
+
+        " return 'disciple'
+        " return 'peaksea_mod'
+        return 'Tomorrow'
+
+        " return 'gruvbox'
+        " return 'sunday256'
+        " return 'mayansmokemod'
+        " return 'kalisi'
+        " return 'hybrid-light'
+    else
+        " return 'mustangmod'
+        " return 'kalisi-dark'
+
+        return 'Tomorrow-Night'
+        " return 'lucius'
+        " return 'devbox-dark-256-lighter'
+        " return 'hybrid'
+        " return 'typofree'
+        " return 'bubblegum'
+        " return 'apprentice'
+        " return 'gruvbox-dark'
+
+        " return 'seoul256'
+        " return 'zenburn'
+        " return 'last256'
+        " return 'outsider'
+        " return 'fadedvision'
+    endif
+endfunction
+" }}}
+
 " chi {{{
 function! s:chi_colo(chi)
     if a:chi ==# 'technodrome'
@@ -124,15 +125,15 @@ function! s:chi_colo(chi)
     elseif a:chi ==# 'smuggler'
         return 'hell'
     elseif a:chi ==# 'ark'
-        return s:static_colo
+        return 'thief'
     elseif a:chi ==# 'fox'
-        return s:static_colo
+        return 'thief'
     elseif a:chi ==# 'motor'
         return s:static_colo
     elseif a:chi ==# 'doc'
-        return 'murphy_mod'
+        return s:static_colo
     elseif a:chi ==# 'zepp'
-        return 'alduin'
+        return 'thief'
     else
         " Unrecognized non-empty $CHI
         return 'desert'
