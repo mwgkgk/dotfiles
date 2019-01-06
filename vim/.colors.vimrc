@@ -124,7 +124,7 @@ function! s:chi_colo(chi)
         return 'blue'
     elseif a:chi ==# 'smuggler'
         return 'hell'
-    elseif a:chi ==# 'ark'
+    elseif a:chi ==# 'thief'
         return 'thief'
     elseif a:chi ==# 'fox'
         return 'thief'
