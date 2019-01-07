@@ -90,7 +90,6 @@ set nocindent
 set cinoptions+=g1,h1
 set breakindent
 autocmd vimrc BufRead,BufNewFile *.marko setfiletype html
-autocmd vimrc FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd vimrc Filetype markdown,python setlocal tw=79
 autocmd vimrc Filetype html,htmldjango setlocal tw=0
 autocmd vimrc BufNewFile,BufRead *.r2,*.r3,*.rbl,*.reb,*.red setfiletype rebol
@@ -490,17 +489,6 @@ function! DiffToggle()
     endif
 endfunc
 nnoremap <silent> <Leader>td :call DiffToggle()<CR>
-
-" Toggle formatoptions -cro:
-function! CommentsToggle()
-    if(&formatoptions =~ ".*c.*")
-      setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-    else
-      setlocal formatoptions+=c formatoptions+=r formatoptions+=o
-    endif
-endfunc
-inoremap  <Esc>:call CommentsToggle()<CR>A<CR>
-nnoremap  :call CommentsToggle()<CR>
 
 function! ToggleVerbose()
     if(&verbose == 0)
