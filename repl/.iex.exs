@@ -11,7 +11,7 @@ IEx.configure colors: [enabled: true]
 
 # alias IEx.Helpers.recompile r
 
-import Pouch
+# import Pouch
 IO.puts ~S"""
        .       ______    .      
          _____/      \____     .
