@@ -155,8 +155,10 @@ command Gadd :!git add %f
 nnoremap ;hs :Gadd<CR>
 nnoremap ;hh :Gcommit<CR>
 
-command Gall :!git-add-commit %f
-nmap ;; :Gall<CR>
+" command Gall :!git-add-commit %f
+nmap ;; :!slap %f<CR>
+
+nmap ;G :!slap<CR>
 
 " The file type is for the default programs to be used with
 " a file extension.
