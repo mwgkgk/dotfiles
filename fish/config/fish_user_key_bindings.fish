@@ -45,9 +45,12 @@ function bind_alt_enter
     commandline -f repaint
 end
 
-function bind_cg
-    commandline -r "rlwrap dash"
-    commandline -f execute
+function bind_select_repl
+    select-repl | read -l result
+    if test -n "$result"
+        commandline -r "$result"
+        commandline -f execute
+    end
 end
 
 function bind_co
@@ -358,8 +361,8 @@ function fish_user_key_bindings
     # M-CR
     bind  bind_alt_enter
 
-    # C-g to repl
-    bind \cg bind_cg
+    # C-g to select-repl
+    bind \cg bind_select_repl
 
     # C-o to jump back
     bind \co bind_co
