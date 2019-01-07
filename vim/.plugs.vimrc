@@ -167,7 +167,7 @@ let g:cycle_default_groups = [
             \   [['true', 'false']],
             \   [['and', 'or']],
             \   [['+', '-']],
-            \   [['{:}', '[:]', '(:)'], 'sub_pairs'],
+            \   [['{:}', '[:]', '(:)', '":"'], 'sub_pairs'],
             \   [['  ', '. ', '..', '.:', '::']],
             \   [['today', 'tonight', 'tomorrow']],
             \   [['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']],
