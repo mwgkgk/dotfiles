@@ -1,3 +1,3 @@
 function hack
-  g hack
+  g hack $argv
 end

@@ -1,3 +1,3 @@
 function augs
-  g augs
+  g augs $argv
 end
