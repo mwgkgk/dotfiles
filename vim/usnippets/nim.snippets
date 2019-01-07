@@ -1,0 +1,63 @@
+snippet i "i" b
+import ${1:os}
+endsnippet
+
+snippet f "f" b
+proc ${1:parseArgs}(${4:${2:args}: ${3:varargs[String]}}) =
+	${VISUAL}$0
+endsnippet
+
+snippet ff "f" b
+func ${1:parseArgs}(${4:${2:args}: ${3:varargs[String]}}) =
+	${VISUAL}$0
+endsnippet
+
+snippet p "p" b
+echo ${0:"${VISUAL}$1"}
+endsnippet
+
+snippet e "e" b
+stderr.writeLine ${0:"${VISUAL}$1"}
+endsnippet
+
+snippet if "if" b
+if ${2:${1:name} == ""}:
+	${VISUAL}$0
+endsnippet
+
+snippet ife "ife" b
+if ${2:${1:name} == ""}:
+	${VISUAL}$3
+else:
+	$0
+endsnippet
+
+snippet el "el" b
+else:
+	${VISUAL}$0
+endsnippet
+
+snippet eli "eli" b
+elif ${2:${1:name} == ""}:
+	${VISUAL}$0
+endsnippet
+
+snippet case "case" b
+case ${1:name}
+of ${2:""}:
+	$3
+else:
+	$0
+endsnippet
+
+snippet try "try" b
+try:
+	$1
+except ${1:OSError}:
+	$0
+endsnippet
+
+snippet ifm "ifm" b
+when isMainModule:
+	${1:main()}
+endsnippet

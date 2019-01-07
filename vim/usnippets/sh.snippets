@@ -41,9 +41,18 @@ case ${1:word} in
 esac
 endsnippet
 
-snippet elif "elif .. (elif)"
-elif ${2:[ ${1:condition} ]}; then
-	${0:#statements}
+snippet in "in" i
+in
+	*${1:word}* )
+		$0;;
+esac
+endsnippet
+
+snippet ) ")" b
+$1)
+	${0:echo "Branch under construction: $1" >&2
+	exit 1}
+	;;
 endsnippet
 
 snippet fori "for ... done (for)"
@@ -65,15 +74,31 @@ ${1/['"`](.+)['"`]/$1/}
 endsnippet
 
 snippet if "if ... then (if)"
-if ${2:[ ${1:$# -eq 0} ]}; then
-	${VISUAL}$0
+if ${2:test ${1:$# -eq 0}}; then
+	${VISUAL}${0:echo "Branch not implemented: $2" >&2; exit 1}
 fi
+endsnippet
+
+snippet then "then" i
+then
+	$0
+fi
+endsnippet
+
+snippet else "else" b
+else
+	$0
 endsnippet
 
 snippet ifexists "ifexists" b
 if [ -f ${1:/tmp/foo.txt} ]; then
     ${VISUAL}$0
 fi
+endsnippet
+
+snippet elif "elif .. (elif)"
+elif ${2:test ${1:$# -eq 1}}; then
+	${0:echo "Branch not implemented: $2" >&2; exit 1}
 endsnippet
 
 snippet until "until ... (done)"
@@ -83,14 +108,21 @@ done
 endsnippet
 
 snippet while "while ... (done)"
-while ${2:[ ${1:condition} ]}; do
-	${0:#statements}
+while ${2:read -r ${1:line}}; do
+	${0:echo "$$1"}
 done
 endsnippet
 
+snippet read "read" b
+read -r -p "${1:Init as} (default=${2:mwgkgk}): " ${3:user}
+test -z "$$3" && $3="$2"
+endsnippet
+
 snippet f "function" b
-${1:function_name} () {
-	${VISUAL}$2
+${1:function_name}() {
+	${2:# TODO Implement $1()
+	echo "Function under construction: $1"
+	exit 1}
 }
 endsnippet
 
@@ -102,8 +134,59 @@ snippet a "alias" b
 alias $1="$1$2"
 endsnippet
 
-snippet nyi "nyi" b
-echo "NYI"
+snippet e "e" b
+echo "${1:Stdout!}"
+endsnippet
+
+snippet p "p" b
+echo "${2:Stderr: $1!}" ${3:>&2}
+endsnippet
+
+snippet uc "uc" b
+echo "${2:Under construction: $1}" >&2
+exit 1
+endsnippet
+
+snippet err "err" b
+echo "${1:Unrecognized ${2:args}: $${3:*}}" >&2
+endsnippet
+
+snippet erre "err" b
+echo "${1:Unrecognized ${2:args}: $${3:*}}" >&2
+exit 1
+endsnippet
+
+snippet { "{" i
+{
+	$0
+}
+endsnippet
+
+snippet /nul[l]?/ "null" ir
+>/dev/null 2>&1
+endsnippet
+
+# Shellcheck
+
+snippet dis "shellcheck disable" b
+# shellcheck disable=SC${1:2086}
+endsnippet
+
+# Shebangs
+
+snippet #!/bin/dash "#!/bin/dash" b
+#!/bin/dash
+
+set -o errexit
+set -o nounset
+endsnippet
+
+snippet #!/bin/bash "#!/bin/bash" b
+#!/bin/bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
 endsnippet
 
 priority 1
