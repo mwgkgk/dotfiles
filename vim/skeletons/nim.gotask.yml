@@ -1,0 +1,11 @@
+# https://github.com/go-task/task
+
+r:
+  desc: Nim Compile & Run
+  cmds:
+    - nim c -r
+
+b:
+  desc: Nim Compile Release
+  cmds:
+    - nim c -d:release
