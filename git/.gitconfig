@@ -17,8 +17,9 @@
     c = commit -v
     p = push -u origin --all
     o = checkout
-    b = checkout -b
-    bb = branch
+    oo = checkout master
+    bb = checkout -b
+    b = branch
     m = merge --no-ff
     mm = !git merge master && git checkout master
     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
