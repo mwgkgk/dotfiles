@@ -191,8 +191,8 @@ function bind_fdz_dir_cases
     commandline -f repaint
 end
 
-function bind_fdz_ink
-    fdz-ink | read -l result
+function bind_fdz_dir_ink
+    fdz-dir ~/ink | read -l result
     and cd $result
     commandline -f repaint
 end
@@ -341,7 +341,7 @@ function bind_fdz_vim_shop
 end
 
 function bind_fdz_vim_ink
-    fdz-file ~/ink/ | read -l result
+    fdz-ink | read -l result
     and commandline -- "Vim $result" ;and commandline -f execute
     commandline -f repaint
 end
@@ -412,8 +412,8 @@ function fish_user_key_bindings
     bind ó bind_fdz_dir_shop
     # M-c to fdz-dir ~/shop/cases/
     bind ã bind_fdz_dir_cases
-    # M-x to fdz-ink
-    bind ø bind_fdz_ink
+    # M-x to fdz-dir ~/shop/ink/
+    bind ø bind_fdz_dir_ink
     # M-w to fdz-dir .
     bind ÷ bind_fdz_dir_here
 
