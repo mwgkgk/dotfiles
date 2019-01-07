@@ -362,6 +362,7 @@ nnoremap <Leader><Space>n :term ++rows=10<CR>
 nnoremap <Leader><Space>N :above term ++rows=10<CR>
 " repeat f/F (";" is leader)
 nnoremap <M-;> ;
+vnoremap <M-;> ;
 " nnoremap , ;
 " }}}
 " Commandline-related {{{
