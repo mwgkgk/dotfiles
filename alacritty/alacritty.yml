@@ -16,29 +16,29 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: Iosevka SS04
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: Iosevka SS04
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: Iosevka SS04
     # Style can be specified to pick a specific face.
     # style: Italic
 
   # Point size of the font
-  size: 7.0
+  size: 8.0
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: -0.5
-    y: 0.5
+    x: 0
+    y: 0
 
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
@@ -163,15 +163,22 @@ visual_bell:
 key_bindings:
   # - { key: V,        mods: Command, action: Paste                        }
   # - { key: C,        mods: Command, action: Copy                         }
+  - { key: Z,        mods: Alt,     chars: "ú"                           }
   - { key: X,        mods: Alt,     chars: "ø"                           }
   - { key: C,        mods: Alt,     chars: "ã"                           }
-  - { key: F,        mods: Alt,     chars: "æ"                           }
+  - { key: V,        mods: Alt,     chars: "ö"                           }
   - { key: B,        mods: Alt,     chars: "â"                           }
+  - { key: N,        mods: Alt,     chars: "î"                           }
+  - { key: M,        mods: Alt,     chars: "í"                           }
+  - { key: A,        mods: Alt,     chars: "á"                           }
+  - { key: S,        mods: Alt,     chars: "ó"                           }
+  - { key: D,        mods: Alt,     chars: "ä"                           }
+  - { key: F,        mods: Alt,     chars: "æ"                           }
+  - { key: G,        mods: Alt,     chars: "ç"                           }
   - { key: K,        mods: Alt,     chars: "ë"                           }
   - { key: J,        mods: Alt,     chars: "ê"                           }
   - { key: Q,        mods: Alt,     chars: "ñ"                           }
   - { key: R,        mods: Alt,     chars: "ò"                           }
-  - { key: N,        mods: Alt,     chars: "î"                           }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
   - { key: Home,                    chars: "\x1b[1~",  mode: AppCursor   }
   - { key: End,                     chars: "\x1b[F",   mode: ~AppCursor  }
