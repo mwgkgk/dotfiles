@@ -27,7 +27,7 @@ hi ModeMsg      term=bold      cterm=bold
 hi MoreMsg      term=bold      ctermfg=LightGreen
 hi NonText      term=bold      ctermfg=238
 hi Question     term=standout  ctermfg=LightGreen
-hi SpecialKey   term=bold      ctermfg=LightBlue
+hi SpecialKey   term=bold      ctermfg=238
 hi Title        cterm=bold      ctermfg=137
 hi WarningMsg   term=standout  ctermfg=LightRed
 hi Visual       term=reverse   cterm=reverse
