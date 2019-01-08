@@ -38,11 +38,16 @@ function bind_enter
   end
 end
 
-function bind_alt_enter
+function bind_run_keep
     set -l cmdline (commandline)
     echo
     eval "$cmdline"
     commandline -f repaint
+end
+
+function bind_rerun
+    commandline -t $history[1]
+    commandline -f execute
 end
 
 function bind_select_repl
@@ -359,7 +364,10 @@ function fish_user_key_bindings
     bind \n bind_enter
 
     # M-CR
-    bind  bind_alt_enter
+    bind  bind_run_keep
+
+    # M-;
+    bind » bind_rerun
 
     # C-g to select-repl
     bind \cg bind_select_repl
