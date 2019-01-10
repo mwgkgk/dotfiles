@@ -341,6 +341,7 @@ nmap yd :!yankpath %d<CR>
 " Yank current file path into the clipboard
 " nmap yf :!echo %c:p | xclip %i<cr>
 nmap yf :!yankpath %c:p<CR>
+nmap <Space>y :!yankpath %c:p<CR>
 
 " Yank root
 nmap yr :!yankpath %c:r <CR>
