@@ -55,6 +55,8 @@ function bind_select_repl
     if test -n "$result"
         commandline -r "$result"
         commandline -f execute
+    else
+        commandline -f repaint
     end
 end
 
