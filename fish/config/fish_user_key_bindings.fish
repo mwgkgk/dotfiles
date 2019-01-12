@@ -152,6 +152,11 @@ function bind_slap
     commandline -f execute
 end
 
+function bind_git_remote
+    echo ;and git remote -v
+    commandline -f repaint
+end
+
 # Fzf misc:
 
 function bind_bat_here
@@ -410,6 +415,9 @@ function fish_user_key_bindings
     bind Ù bind_git_shortlog
     # C-M-y to slap
     bind  bind_slap
+
+    # M-m to git remote -v
+    bind í bind_git_remote
 
     # M-f to Bat or forward-word
     bind æ bind_bat_here
