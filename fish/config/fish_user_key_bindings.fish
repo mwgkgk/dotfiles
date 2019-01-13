@@ -156,6 +156,11 @@ function bind_git_remote
     commandline -f repaint
 end
 
+function bind_raise_rem
+    commandline -r "raise rem"
+    commandline -f execute
+end
+
 # Fzf misc:
 
 function bind_bat_here
@@ -417,6 +422,8 @@ function fish_user_key_bindings
 
     # M-m to git remote -v
     bind í bind_git_remote
+    # M-S-m to raise rem
+    bind Í bind_raise_rem
 
     # M-f to Bat or forward-word
     bind æ bind_bat_here
