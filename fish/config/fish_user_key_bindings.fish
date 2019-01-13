@@ -47,7 +47,6 @@ end
 
 function bind_rerun
     commandline -t $history[1]
-    commandline -f execute
 end
 
 function bind_select_repl
