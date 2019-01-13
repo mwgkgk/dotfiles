@@ -340,8 +340,8 @@ function bind_fdz_guns
     commandline -f repaint
 end
 
-function bind_fdz_vim_thief
-    fdz-file ~/ink/thief
+function bind_fdz_vim_ark
+    fdz-file ~/ink/ark
     and commandline -- "Vim $result" ;and commandline -f execute
     commandline -f repaint
 end
@@ -463,7 +463,7 @@ function fish_user_key_bindings
     # M-g
     bind ç bind_fdz_guns
     # M-a
-    bind á bind_fdz_vim_thief
+    bind á bind_fdz_vim_ark
     # M-S-s
     bind Ó bind_fdz_vim_shop
     # M-S-x
