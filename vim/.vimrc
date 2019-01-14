@@ -322,7 +322,7 @@ inoremap <C-c>nn ñ
 " - Y to behave like C & D :
 map Y y$
 " - Q for ^:
-nnoremap Q ^
+map Q ^
 " - Add newlines before and after :
 " nnoremap [<Space> O<Esc>j
 nnoremap ]<Space> o<Esc>k
