@@ -1,5 +1,7 @@
 set -x PATH ~/bin ~/.local/bin ~/.cargo/bin $PATH
 
+umask 0007
+
 set -x fish_color_cwd B1D06E
 set -x fish_command_timer_color A7A6DE
 
