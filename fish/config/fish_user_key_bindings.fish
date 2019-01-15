@@ -430,14 +430,18 @@ function fish_user_key_bindings
     # M-S-f to Bat $(fz-preview-git-changes )
     bind Æ bind_bat_git_changes
 
+    # M-S-~ to fdz-dir ~
+    bind þ bind_fdz_dir_home
     # M-~ to fdz-dir ~
     bind à bind_fdz_dir_home
-    # M-s to fdz-dir ~/shop/
-    bind ó bind_fdz_dir_shop
-    # M-c to fdz-dir ~/shop/cases/
-    bind ã bind_fdz_dir_cases
-    # M-x to fdz-dir ~/shop/ink/
-    bind ø bind_fdz_dir_ink
+    # M-S-s to fdz-dir ~/shop/
+    bind Ó bind_fdz_dir_shop
+    # M-S-c to fdz-dir ~/shop/cases/
+    bind Ã bind_fdz_dir_cases
+    # M-S-x to fdz-dir ~/shop/ink/
+    bind Ø bind_fdz_dir_ink
+    # M-S-w to fdz-dir .
+    bind × bind_fdz_dir_here
     # M-w to fdz-dir .
     bind ÷ bind_fdz_dir_here
 
@@ -470,10 +474,10 @@ function fish_user_key_bindings
     bind ç bind_fdz_guns
     # M-a
     bind á bind_fdz_vim_ark
-    # M-S-s
-    bind Ó bind_fdz_vim_shop
+    # M-s
+    bind ó bind_fdz_vim_shop
     # M-S-x
-    bind Ø bind_fdz_vim_ink
+    bind ø bind_fdz_vim_ink
 
     # Move \ee to \ex
     bind \ex edit_command_buffer
