@@ -10,8 +10,10 @@
     r = reset
     rollhard = reset --hard HEAD~1
     rollback = reset HEAD~1
+    back = reset HEAD~1
     rollsoft = reset --soft HEAD~1
     mes = commit --amend
+    m = commit --amend
     hs = commit -av
     d = diff
     c = commit -v
