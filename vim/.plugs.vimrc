@@ -400,9 +400,6 @@ nnoremap <Leader>dt :ProjectRootExe !ctags -R<CR>
 command! Make :silent! ProjectRootExe make | redraw!
 nnoremap <Leader>dm :Make<CR>
 command! InstallHooks :silent! ProjectRootExe ln -s ~/.git-templates/hooks/* .
-" - Quaketerm
-" command! QuakeTerm :ProjectRootExe :AsyncRun add_to_quaketerm "r %:."
-" nnoremap <Leader><LocalLeader> :QuakeTerm<CR>
 " Deps
 autocmd plugs.vimrc FileType rust nnoremap <F12> :ProjectRootExe :sp Cargo.toml<CR>G
 " Taskfile
