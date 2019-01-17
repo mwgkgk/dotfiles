@@ -366,9 +366,6 @@ Plug 'AndrewRadev/whitespaste.vim'
 
 Plug 'sickill/vim-pasta'
 
-" Plug 'inkarkat/vim-SyntaxRange' " {{{
-" autocmd plugs.vimrc FileType nlang call SyntaxRange#Include('@begin=c@', '@end=c@', 'c', 'NonText')
-" }}}
 Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/JumpToLastOccurrence' " {{{
 " ,f ,F ,t ,T
@@ -376,10 +373,8 @@ Plug 'vim-scripts/JumpToLastOccurrence' " {{{
 
 Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
 
-" TODO Rebind, add wildfire-water (reverse direction), change objects to full
-" forms instead of inside-forms
-" Plug 'gcmt/wildfire.vim' " {{{
-" nmap <Leader><Enter> <Plug>(wildfire-quick-select)
+Plug 'gcmt/wildfire.vim' " {{{
+nmap <Leader><Enter> <Plug>(wildfire-quick-select)
 " }}}
 
 Plug 'szw/vim-maximizer' " {{{
@@ -476,7 +471,7 @@ let g:formatdef_dhallformat = '"dhall-format"'
 let g:formatters_dhall = ['dhallformat']
 let g:formatdef_cljfmt = '"lein cljfmt check"'
 let g:formatters_clojure = ['cljfmt']
-let g:formatdef_shfmt = '"shfmt -i 4 -p -bn -s"'
+let g:formatdef_shfmt = '"shfmt -i 4 -p"'
 let g:formatters_sh = ['shfmt']
 let g:formatdef_rustfmt = '"rustfmt --unstable-features"'
 let g:formatters_rust = ['rustfmt']
@@ -492,7 +487,7 @@ let g:formatdef_jsfmt = '"jsfmt"'
 let g:formatters_js = ['jsfmt']
 let g:formatters_python = ['black']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl,perl6,dhall,d,javascript,python,go nnoremap <buffer> <Space>f :Autoformat<CR>
+autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl,perl6,dhall,d,javascript,python nnoremap <buffer> <Space>f :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
 autocmd plugs.vimrc FileType scheme nnoremap <buffer> <Space>f :Trailing<CR>gg=G<C-O><C-O><CR>
 " }}}
@@ -682,7 +677,7 @@ map gl <Plug>(IndentWiseNextGreaterIndent)
 nnoremap <Leader>j gj
 nnoremap <Leader>k gk
 
-map gk <Plug>(IndentWisePreviousEqualIndent)
+map gk <Plug>(IndentWisePreviousEqualIndent) map gk <Plug>(IndentWisePreviousEqualIndent) map gk <Plug>(IndentWisePreviousEqualIndent) map gk <Plug>(IndentWisePreviousEqualIndent) map gk <Plug>(IndentWisePreviousEqualIndent)
 map gj <Plug>(IndentWiseNextEqualIndent)
 
 map gI <Plug>(IndentWisePreviousAbsoluteIndent)
@@ -692,8 +687,8 @@ map gK <Plug>(IndentWiseBlockScopeBoundaryBegin)
 map gJ <Plug>(IndentWiseBlockScopeBoundaryEnd)
 " }}}
 
-" Plug 'wellle/targets.vim' " {{{
-" let g:targets_separators = '. ; : + - ~ _ * \ |'
+Plug 'wellle/targets.vim' " {{{
+let g:targets_separators = '. ; : + - ~ _ * \ |'
 " }}}
 Plug 'wellle/visual-split.vim' " :VSSplit, :VSResize
 
@@ -854,12 +849,8 @@ map <M-l> E
 
 Plug 'tpope/vim-surround' " {{{
 " Wrapping in braces:
-imap <C-c><C-c> <Esc>hysiw)ea
-nmap <C-c><C-c> <Esc>ysiw)
-" Two words
-nmap <C-c>l ys3iw)
-" Not working
-" nmap <C-c>h ys2b)
+imap <C-c><C-c> <Esc>hysiW)ea
+nmap <C-c><C-c> <Esc>ysiW)a
 " Quotes
 imap <C-c>q <Esc>hysiW"ea
 nmap <C-c>q <Esc>ysiW"a
@@ -871,14 +862,8 @@ Plug 'tpope/vim-fugitive' " {{{
 nnoremap <Leader>G :Gstatus<CR>
 nnoremap <Leader>D :Gvdiff<CR>
 
-command! GCurrent :exe "Gcommit -q %:p"
+command! GCurrent :exe "Gcommit -v -q %:p"
 nnoremap <Leader>C :GCurrent<CR>
-
-command! GCurrentT :exe "Gcommit -v -q %:p"
-nnoremap <Leader>hC :GCurrent<CR>
-
-" Slap date:
-nmap <Leader>hd :Gcurrent<CR>i<C-r>=system('date --utc <bar> tr -d "\n"')<CR><Esc>
 
 " With preview
 command! GAllPreview :silent exe "Git add ." | :silent exe "Gcommit -v -q -a"
@@ -889,7 +874,7 @@ nnoremap <Leader>ha :GAllPreview<CR>
 " nnoremap <Leader><Leader> :GAll<CR>
 
 " Heil Hydra
-nnoremap <Leader>hh :Gcommit -v<CR>
+nnoremap <Leader>hh :Gcommit<CR>
 nnoremap <Leader>hc :Gcommit -v<CR>
 
 " Git reset:
@@ -909,10 +894,6 @@ nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " Find text added by commit:
 " :Glog --Sfindme --
 " :Glog --Sfindme -- %
-
-" These don't require fugitive:
-command! Mes :!git mes
-command! Back :!git rollback
 " }}}
 
 Plug 'airblade/vim-gitgutter' " {{{
@@ -923,9 +904,6 @@ nnoremap <Leader>tg :GitGutterToggle<CR>
 " nmap <Leader>j <Plug>GitGutterNextHunk
 nmap <Leader>hk <Plug>GitGutterPrevHunk
 nmap <Leader>hj <Plug>GitGutterNextHunk
-
-nmap <Tab>k <Plug>GitGutterPrevHunk
-nmap <Tab>j <Plug>GitGutterNextHunk
 
 " This. (requires kana/vim-submode)
 " call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', '<Plug>GitGutterPrevHunk')
@@ -994,7 +972,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ } " {{{
-let g:LanguageClient_autoStart = 0
+let g:LanguageClient_autoStart = 1
 let g:LanguageClient_loadSettings = 1
 let g:LanguageClient_settingsPath = $HOME . '/.vim/settings.json'
 let g:LanguageClient_serverCommands = {
@@ -1113,37 +1091,37 @@ function! s:vim_sexp_mappings()
   nmap <silent><buffer> =-              <Plug>(sexp_indent_top)
   imap <silent><buffer> <M-\>           <C-O><Plug>(sexp_indent_top)
   nmap <silent><buffer> <M-\>           <Plug>(sexp_indent_top)
-  nmap <silent><buffer> <C-c>i          <Plug>(sexp_round_head_wrap_list)
-  xmap <silent><buffer> <C-c>i          <Plug>(sexp_round_head_wrap_list)
-  nmap <silent><buffer> <C-c>I          <Plug>(sexp_round_tail_wrap_list)
-  xmap <silent><buffer> <C-c>I          <Plug>(sexp_round_tail_wrap_list)
-  nmap <silent><buffer> <C-c>[          <Plug>(sexp_square_head_wrap_list)
-  xmap <silent><buffer> <C-c>[          <Plug>(sexp_square_head_wrap_list)
-  nmap <silent><buffer> <C-c>]          <Plug>(sexp_square_tail_wrap_list)
-  xmap <silent><buffer> <C-c>]          <Plug>(sexp_square_tail_wrap_list)
-  nmap <silent><buffer> <C-c>{          <Plug>(sexp_curly_head_wrap_list)
-  xmap <silent><buffer> <C-c>{          <Plug>(sexp_curly_head_wrap_list)
-  nmap <silent><buffer> <C-c>}          <Plug>(sexp_curly_tail_wrap_list)
-  xmap <silent><buffer> <C-c>}          <Plug>(sexp_curly_tail_wrap_list)
-  nmap <silent><buffer> <C-c>w          <Plug>(sexp_round_head_wrap_element)
-  xmap <silent><buffer> <C-c>w          <Plug>(sexp_round_head_wrap_element)
-  nmap <silent><buffer> <C-c>W          <Plug>(sexp_round_tail_wrap_element)
-  xmap <silent><buffer> <C-c>W          <Plug>(sexp_round_tail_wrap_element)
-  nmap <silent><buffer> <C-c>e[         <Plug>(sexp_square_head_wrap_element)
-  xmap <silent><buffer> <C-c>e[         <Plug>(sexp_square_head_wrap_element)
-  nmap <silent><buffer> <C-c>e]         <Plug>(sexp_square_tail_wrap_element)
-  xmap <silent><buffer> <C-c>e]         <Plug>(sexp_square_tail_wrap_element)
-  nmap <silent><buffer> <C-c>e{         <Plug>(sexp_curly_head_wrap_element)
-  xmap <silent><buffer> <C-c>e{         <Plug>(sexp_curly_head_wrap_element)
-  nmap <silent><buffer> <C-c>e}         <Plug>(sexp_curly_tail_wrap_element)
-  xmap <silent><buffer> <C-c>e}         <Plug>(sexp_curly_tail_wrap_element)
-  nmap <silent><buffer> <C-c>h          <Plug>(sexp_insert_at_list_head)
-  nmap <silent><buffer> <C-c>l          <Plug>(sexp_insert_at_list_tail)
-  nmap <silent><buffer> <C-c>@          <Plug>(sexp_splice_list)
-  nmap <silent><buffer> <C-c>o          <Plug>(sexp_raise_list)
-  xmap <silent><buffer> <C-c>o          <Plug>(sexp_raise_list)
-  nmap <silent><buffer> <C-c>O          <Plug>(sexp_raise_element)
-  xmap <silent><buffer> <C-c>O          <Plug>(sexp_raise_element)
+  nmap <silent><buffer> <LocalLeader>i  <Plug>(sexp_round_head_wrap_list)
+  xmap <silent><buffer> <LocalLeader>i  <Plug>(sexp_round_head_wrap_list)
+  nmap <silent><buffer> <LocalLeader>I  <Plug>(sexp_round_tail_wrap_list)
+  xmap <silent><buffer> <LocalLeader>I  <Plug>(sexp_round_tail_wrap_list)
+  nmap <silent><buffer> <LocalLeader>[  <Plug>(sexp_square_head_wrap_list)
+  xmap <silent><buffer> <LocalLeader>[  <Plug>(sexp_square_head_wrap_list)
+  nmap <silent><buffer> <LocalLeader>]  <Plug>(sexp_square_tail_wrap_list)
+  xmap <silent><buffer> <LocalLeader>]  <Plug>(sexp_square_tail_wrap_list)
+  nmap <silent><buffer> <LocalLeader>{  <Plug>(sexp_curly_head_wrap_list)
+  xmap <silent><buffer> <LocalLeader>{  <Plug>(sexp_curly_head_wrap_list)
+  nmap <silent><buffer> <LocalLeader>}  <Plug>(sexp_curly_tail_wrap_list)
+  xmap <silent><buffer> <LocalLeader>}  <Plug>(sexp_curly_tail_wrap_list)
+  nmap <silent><buffer> <LocalLeader>w  <Plug>(sexp_round_head_wrap_element)
+  xmap <silent><buffer> <LocalLeader>w  <Plug>(sexp_round_head_wrap_element)
+  nmap <silent><buffer> <LocalLeader>W  <Plug>(sexp_round_tail_wrap_element)
+  xmap <silent><buffer> <LocalLeader>W  <Plug>(sexp_round_tail_wrap_element)
+  nmap <silent><buffer> <LocalLeader>e[ <Plug>(sexp_square_head_wrap_element)
+  xmap <silent><buffer> <LocalLeader>e[ <Plug>(sexp_square_head_wrap_element)
+  nmap <silent><buffer> <LocalLeader>e] <Plug>(sexp_square_tail_wrap_element)
+  xmap <silent><buffer> <LocalLeader>e] <Plug>(sexp_square_tail_wrap_element)
+  nmap <silent><buffer> <LocalLeader>e{ <Plug>(sexp_curly_head_wrap_element)
+  xmap <silent><buffer> <LocalLeader>e{ <Plug>(sexp_curly_head_wrap_element)
+  nmap <silent><buffer> <LocalLeader>e} <Plug>(sexp_curly_tail_wrap_element)
+  xmap <silent><buffer> <LocalLeader>e} <Plug>(sexp_curly_tail_wrap_element)
+  nmap <silent><buffer> <LocalLeader>h  <Plug>(sexp_insert_at_list_head)
+  nmap <silent><buffer> <LocalLeader>l  <Plug>(sexp_insert_at_list_tail)
+  nmap <silent><buffer> <LocalLeader>@  <Plug>(sexp_splice_list)
+  nmap <silent><buffer> <LocalLeader>o  <Plug>(sexp_raise_list)
+  xmap <silent><buffer> <LocalLeader>o  <Plug>(sexp_raise_list)
+  nmap <silent><buffer> <LocalLeader>O  <Plug>(sexp_raise_element)
+  xmap <silent><buffer> <LocalLeader>O  <Plug>(sexp_raise_element)
   nmap <silent><buffer> <M-k>           <Plug>(sexp_swap_list_backward)
   xmap <silent><buffer> <M-k>           <Plug>(sexp_swap_list_backward)
   nmap <silent><buffer> <M-j>           <Plug>(sexp_swap_list_forward)
@@ -1182,16 +1160,6 @@ nnoremap <M-S-j> F(xwi(<Esc>
 
 autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nlang call s:vim_sexp_mappings()
 " }}}
-Plug 'l04m33/vlime', { 'rtp' : 'vim/' } " {{{
-" autocmd plugs.vimrc FileType lisp <silent> <buffer> <LocalLeader>gi :call vlime#plugin#InteractionMode()<CR>
-" TODO <LocalLeader><LocalLeader> for <LocalLeader>st
-" let g:vlime_enable_autodoc = v:true
-let g:vlime_window_settings = {
-        \ 'repl': {
-            \ 'size': 17,
-        \ },
-    \ }
-" }}}
 
 " Racket
 Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
@@ -1221,7 +1189,7 @@ autocmd plugs.vimrc FileType lfe set lisp
 " }}}
 
 " OCaml
-" Plug 'rgrinberg/vim-ocaml'
+Plug 'rgrinberg/vim-ocaml'
 " Merlin {{{
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
@@ -1236,12 +1204,6 @@ let g:racer_experimental_completer = 1
 
 " Ion
 Plug 'vmchale/ion-vim', { 'for' : 'ion' }
-
-" Zig
-Plug 'ziglang/zig.vim', { 'for' : 'zig' } " {{{
-" let g:zig_fmt_autosave = 1
-" let g:zig_fmt_command = ['zig2', 'fmt', '--color', 'off']
-" }}}
 
 " JS
 Plug 'pangloss/vim-javascript'
@@ -1304,7 +1266,6 @@ Plug 'AlessandroYorba/Alduin'
 Plug 'google/vim-colorscheme-primary'
 Plug 'AlessandroYorba/Arcadia'
 Plug 'mwgkgk/SerialExperimentsLain'
-Plug 'fcpg/vim-orbital'
 
 call plug#end()
 
