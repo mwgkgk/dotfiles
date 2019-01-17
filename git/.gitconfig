@@ -27,3 +27,5 @@
     graph = log --graph --all --decorate --stat --date=iso
 [init]
     templatedir = ~/.git-templates
+[core]
+    fileMode = false
