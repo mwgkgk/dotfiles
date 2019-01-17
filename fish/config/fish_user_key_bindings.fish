@@ -327,15 +327,15 @@ function bind_eb
   end
 end
 
-function bind_esb
+function bind_royals
     set -l cmdline (commandline)
     if test -z "$cmdline"
-        fd --type file --follow --exclude .git "" ~/shop/grim | fzf +m --height 15 --reverse | read -l result
-        and commandline -- "Vim $result" ;and commandline -f execute
+        fdz-royals | read -l result
+        and commandline -- "sudo su - $result" ;and commandline -f execute
         commandline -f repaint
-  else
-      commandline -f backward-word
-  end
+    else
+        commandline -f backward-char
+    end
 end
 
 function bind_fdz_guns
@@ -464,8 +464,8 @@ function fish_user_key_bindings
     bind ö bind_ev
     # M-b to fzf-vim ~/bin or backward-word
     bind â bind_eb
-    # M-S-b to fzf-vim ~/bin or backward-word
-    bind Â bind_esb
+    # C-b to become royal
+    bind \cb bind_royals
     # M-g
     bind ç bind_fdz_guns
     # M-a
