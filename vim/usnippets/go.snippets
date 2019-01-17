@@ -3,9 +3,9 @@
 # when to abbriviate and when not?
 # b doesn't work here, because it ignores whitespace
 # optional local name?
-snippet /^import/ "Import declaration" r
+snippet i "Import declaration" b
 import (
-	"${1:package}"
+	"${1:net/http}"
 )
 endsnippet
 
@@ -79,7 +79,7 @@ func (${1:receiver} ${2:type}) ${3:name}(${4:params})${5/(.+)/ /}${5:type} {
 }
 endsnippet
 
-snippet func "Function" b
+snippet f "Function" b
 func ${1:name}(${2:params})${3/(.+)/ /}${3:type} {
 	${0:${VISUAL}}
 }

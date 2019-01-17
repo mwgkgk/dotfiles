@@ -113,6 +113,12 @@ while ${2:read -r ${1:line}}; do
 done
 endsnippet
 
+snippet do "do" i
+do
+	$0
+done
+endsnippet
+
 snippet read "read" b
 read -r -p "${1:Init as} (default=${2:mwgkgk}): " ${3:user}
 test -z "$$3" && $3="$2"

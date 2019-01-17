@@ -6,7 +6,7 @@ endsnippet
 
 snippet /^(\s|\()*(f|def)/ "defun" r
 (defun ${1:name} (${2:arg})
-	(${3:print! "Unfinished: \n  (defun $1 ($2))"}))
+	(${3:format t "Under construction: (defun $1 ($2))"}))
 endsnippet
 
 snippet /^(\s)*if/ "if" b
