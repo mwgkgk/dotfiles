@@ -235,6 +235,10 @@ end
 function bind_fz_here
     set -l cmdline (commandline)
 
+    if test -z "$cmdline"
+        return
+    end
+
     begin
         fz-here | while read -l s;
         set results $results $s; end
