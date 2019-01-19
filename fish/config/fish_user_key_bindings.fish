@@ -349,7 +349,7 @@ function bind_fdz_guns
 end
 
 function bind_fdz_vim_ark
-    fdz-file ~/ink/ark
+    fdz-file ~/ink/ark | read -l result
     and commandline -- "Vim $result" ;and commandline -f execute
     commandline -f repaint
 end
