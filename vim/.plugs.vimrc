@@ -878,7 +878,7 @@ command! GCurrentT :exe "Gcommit -v -q %:p"
 nnoremap <Leader>hC :GCurrent<CR>
 
 " Slap date:
-nmap <Leader>hd :Gcurrent<CR>i<C-r>=system('date --utc <bar> tr -d "\n"')<CR><Esc>
+nmap <Leader>hd :GCurrent<CR>i<C-r>=system('date --utc <bar> tr -d "\n"')<CR><Esc>
 
 " With preview
 command! GAllPreview :silent exe "Git add ." | :silent exe "Gcommit -v -q -a"
