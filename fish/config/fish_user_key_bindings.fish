@@ -213,6 +213,12 @@ function bind_fdz_dir_ink
     commandline -f repaint
 end
 
+function bind_fdz_dir_ghq
+    fdz-dir ~/.ghq | read -l result
+    and cd $result
+    commandline -f repaint
+end
+
 function bind_fdz_dir_here
     fdz-dir . | read -l result
     and cd $result
@@ -442,6 +448,8 @@ function fish_user_key_bindings
     bind ã bind_fdz_dir_cases
     # M-x to fdz-dir ~/shop/ink/
     bind ø bind_fdz_dir_ink
+    # M-q to fdz-dir ~/.ghq/
+    bind ñ bind_fdz_dir_ghq
     # M-w to fdz-dir .
     bind ÷ bind_fdz_dir_here
 
