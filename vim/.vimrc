@@ -418,7 +418,7 @@ nnoremap <M-!> :!
 nnoremap <expr> vp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " - Yank to +:
 vnoremap <C-Y> "+y
-vnoremap <Space>y "+y
+vnoremap <Leader>y "+y
 " - Propagate "" to "+ :
 nnoremap <silent> <Leader>y :let @+=@"<CR>:echo 'Yanked ' .
             \ Pluralize('line', len(split(@+, '\n'))) . ' to +.'<CR>
