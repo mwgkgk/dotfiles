@@ -897,10 +897,6 @@ nnoremap <Leader>hc :Gcommit -v<CR>
 command! GReset :ProjectRootExe :AsyncRun git reset
 nnoremap <Leader>hr :GReset<CR>:e!<CR>za
 
-" Requires :MkS
-command! InkUndelve :silent exe "MkS" | :silent exe "Gall"
-nnoremap <C-w>S :InkUndelve<CR>
-
 " nnoremap <Leader><Leader> :Gtabedit @<CR>
 
 nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
