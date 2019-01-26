@@ -1305,6 +1305,7 @@ Plug 'google/vim-colorscheme-primary'
 Plug 'AlessandroYorba/Arcadia'
 Plug 'mwgkgk/SerialExperimentsLain'
 Plug 'fcpg/vim-orbital'
+Plug 'junegunn/seoul256.vim'
 
 call plug#end()
 
