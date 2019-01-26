@@ -879,11 +879,14 @@ command! GCurrentT :exe "Gcommit -v -q %:p"
 nnoremap <Leader>hC :GCurrent<CR>
 
 " Slap date:
-nmap <Leader>hd :GCurrent<CR>i<C-r>=system('date --utc <bar> tr -d "\n"')<CR><Esc>
+nnoremap <Leader>hd :GCurrent<CR>i<C-r>=system('date --utc <bar> tr -d "\n"')<CR><Esc>
+
+" Add
+nnoremap <Leader>ha :let @"=expand("%")<CR>:!git add %<CR>:GCurrent<CR>iAdd <C-r>"<Esc>
 
 " With preview
 command! GAllPreview :silent exe "Git add ." | :silent exe "Gcommit -v -q -a"
-nnoremap <Leader>ha :GAllPreview<CR>
+nnoremap <Leader>hA :GAllPreview<CR>
 
 " Quick version: (LeaderLeader too busy atm)
 " command! GAll :silent exe "Git add ." | :silent exe "Gcommit -q -a"
