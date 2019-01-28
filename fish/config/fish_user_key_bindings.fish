@@ -20,7 +20,7 @@ end
 function bind_tab
     set -l cmdline (commandline)
     if test -z "$cmdline"
-        commandline -i "googler "
+        commandline -i "goog "
         # else if test "$cmdline" = "d "
         #   commandline -f execute
   else
