@@ -1,0 +1,7 @@
+snippet "(\()?f" "f" r
+(defn ${1:fname}
+	[$2]
+	$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
