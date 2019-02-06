@@ -1,35 +1,30 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [ 13K]  git
-│   ├── [ 793]  .gitconfig
-│   └── [8.1K]  .git-templates
-│       └── [4.1K]  hooks
-│           └── [ 148]  post-commit
-├── [ 13K]  user
-│   ├── [1.6K]  .xinitrc
-│   ├── [2.6K]  .Xresources
-│   ├── [1.7K]  .asoundrc
-│   ├── [ 170]  .bash_profile
-│   ├── [1.8K]  .bash_aliases
-│   ├── [1.1K]  .bashrc
-│   ├── [  61]  .inputrc
-│   └── [ 305]  .Xdefaults
-├── [118K]  vim
-│   ├── [ 48K]  .plugs.vimrc
+├── [ 12K]  emacs
+│   ├── [4.3K]  init.el
+│   └── [4.0K]  init.el.old
+├── [4.8K]  git
+│   └── [ 793]  .gitconfig
+├── [123K]  vim
 │   ├── [ 18K]  .vimrc
+│   ├── [ 48K]  .plugs.vimrc
+│   ├── [4.4K]  plugin
+│   │   └── [ 450]  golf.vim
+│   ├── [4.0K]  usnippets [78 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  .colors.vimrc
 │   ├── [4.4K]  ftdetect
 │   │   ├── [ 193]  lisp.vim
 │   │   └── [ 177]  dash.vim
 │   ├── [4.0K]  skeletons [34 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  colors [92 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  usnippets [77 entries exceeds filelimit, not opening dir]
 │   ├── [ 710]  filetype.vim
 │   ├── [9.6K]  .oldconfigs.vimrc
 │   └── [ 17K]  after
-│       ├── [4.4K]  ftplugin
+│       ├── [4.5K]  ftplugin
+│       │   ├── [  28]  conf.vim
 │       │   ├── [  26]  vim.vim
+│       │   ├── [  26]  tcl.vim
 │       │   ├── [  26]  fish.vim
 │       │   ├── [  64]  nim.vim
 │       │   ├── [ 149]  text.vim
@@ -39,11 +34,20 @@
 │       └── [8.4K]  syntax
 │           ├── [ 275]  scheme.vim
 │           └── [4.1K]  min.vim
+├── [ 13K]  user
+│   ├── [2.6K]  .Xresources
+│   ├── [1.6K]  .xinitrc
+│   ├── [1.7K]  .asoundrc
+│   ├── [ 170]  .bash_profile
+│   ├── [1.8K]  .bash_aliases
+│   ├── [1.1K]  .bashrc
+│   ├── [  61]  .inputrc
+│   └── [ 305]  .Xdefaults
 ├── [ 50K]  fish
-│   ├── [4.0K]  aliases [46 entries exceeds filelimit, not opening dir]
 │   ├── [ 189]  fishfile
+│   ├── [4.0K]  aliases [46 entries exceeds filelimit, not opening dir]
 │   ├── [ 387]  config.fish
-│   ├── [ 15K]  config
+│   ├── [ 16K]  config
 │   │   ├── [ 10K]  fish_user_key_bindings.fish
 │   │   ├── [ 880]  fish_prompt.fish
 │   │   └── [ 261]  fish_title.fish
@@ -51,9 +55,6 @@
 │   │   └── [ 18K]  rustup.fish
 │   └── [4.2K]  tools
 │       └── [ 250]  do-thing.fish
-├── [8.9K]  emacs
-│   ├── [ 861]  init.el
-│   └── [4.0K]  init.el.old
 ├── [6.3K]  ctags
 │   └── [2.3K]  .ctags
 ├── [4.0K]  fmt
@@ -104,7 +105,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 359K used in 32 directories, 70 files
+ 359K used in 31 directories, 72 files
 ```
 
-> Generated on Thursday, January 17, 2019 at 14:05:28 PM UTC.
+> Generated on Wednesday, February  6, 2019 at 13:01:28 PM UTC.
