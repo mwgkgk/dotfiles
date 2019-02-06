@@ -18,11 +18,11 @@ augroup END
 " let s:static_colo = 'grind'
 " let s:static_colo = 'murphy_mod'
 " let s:static_colo = 'devbox-dark-256-lighter'
-" let s:static_colo = 'zenburn'
+let s:static_colo = 'zenburn'
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
 
-let s:static_colo = 'gentooish'
+" let s:static_colo = 'gentooish'
 
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
@@ -136,7 +136,7 @@ function! s:chi_colo(chi)
     elseif a:chi ==# 'doc'
         return s:static_colo
     elseif a:chi ==# 'zepp'
-        return 'thief'
+        return 'outsider'
     else
         " Unrecognized non-empty $CHI
         return 'desert'
