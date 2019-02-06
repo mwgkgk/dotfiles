@@ -361,6 +361,11 @@ nnoremap <c-w>gy  :call yankwin#Yank({'path_type': 'relative', 'with_line_number
 nnoremap <c-w>y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 0})<cr>
 nnoremap <c-w>gY  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 1})<cr>
 nnoremap <c-w>Y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 1})<cr>
+let g:yankwin_default_delete_mappings = 0
+nnoremap <c-w>gd  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 0})<cr>
+nnoremap <c-w>d :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 0})<cr>
+nnoremap <c-w>gD  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 1})<cr>
+nnoremap <c-w>D :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 1})<cr>
 " }}}
 Plug 'AndrewRadev/exercism.vim'
 Plug 'AndrewRadev/whitespaste.vim'
