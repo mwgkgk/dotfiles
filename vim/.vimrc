@@ -323,6 +323,10 @@ inoremap <C-c>nn ñ
 map Y y$
 " - Q for ^:
 map Q ^
+" - <Leader>Q for macros:
+nnoremap <Leader>Q q
+" - q for %:
+map q %
 " - Add newlines before and after :
 " nnoremap [<Space> O<Esc>j
 nnoremap ]<Space> o<Esc>k
