@@ -783,7 +783,7 @@ Plug 'junegunn/gv.vim' " {{{
 nnoremap <Space>A :GV<CR>
 " }}}
 
-Plug 'chauncey-garrett/vim-tasklist' " {{{
+Plug 'chauncey-garrett/vim-tasklist', { 'on' : '<Plug>TaskList' } " {{{
 " Mnemonic: Toggle tasklist
 nmap <leader>tt <Plug>TaskList
 let g:tlTokenList = ['FIXME', 'TODO', 'XXX']
