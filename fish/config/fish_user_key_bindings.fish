@@ -405,12 +405,12 @@ function fish_user_key_bindings
     bind ë bind_ek
 
     # M-o to ls
-    bind \eo bind_ls_here
+    bind ï bind_ls_here
     # M-S-o to exa -l --sort modified --tree
     bind Ï bind_lstree_here
 
     # M-i to git status
-    bind \ei bind_git_status
+    bind é bind_git_status
     # M-S-i to git diff
     bind É bind_git_diff
     # C-M-i to raise
