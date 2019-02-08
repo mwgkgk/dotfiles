@@ -1224,11 +1224,11 @@ autocmd plugs.vimrc FileType lfe set lisp
 " }}}
 
 " OCaml
-" Plug 'rgrinberg/vim-ocaml'
+" Plug 'rgrinberg/vim-ocaml', { 'for': 'ocaml' }
 " Merlin {{{
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
-command! OpamHelptags :execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"
+autocmd plugs.vimrc FileType ocaml command! OpamHelptags :execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"
 " }}}
 
 " Rust
