@@ -1185,7 +1185,7 @@ nnoremap <M-S-j> F(xwi(<Esc>
 
 autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nlang call s:vim_sexp_mappings()
 " }}}
-Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for':'lisp' } " {{{
+Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' } " {{{
 " autocmd plugs.vimrc FileType lisp <silent> <buffer> <LocalLeader>gi :call vlime#plugin#InteractionMode()<CR>
 " TODO <LocalLeader><LocalLeader> for <LocalLeader>st
 " let g:vlime_enable_autodoc = v:true
