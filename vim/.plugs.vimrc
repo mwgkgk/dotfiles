@@ -674,8 +674,6 @@ Plug 'akiyan/vim-textobj-xml-attribute'
 
 Plug 'machakann/vim-textobj-equation'
 
-Plug 'mwgkgk/vim-textobj-elixir'
-
 Plug 'fcpg/vim-shore'
 
 Plug 'jeetsukumaran/vim-indentwise' " {{{
@@ -1265,6 +1263,7 @@ Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
 " let g:alchemist_mappings_disable = 1
 " nnoremap <buffer> <silent> <Leader>dd :call alchemist#exdoc()<CR>
 " }}}
+Plug 'mwgkgk/vim-textobj-elixir'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
