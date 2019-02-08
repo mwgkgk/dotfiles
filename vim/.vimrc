@@ -417,7 +417,12 @@ nnoremap <F1> :e!<CR>
 " Run cmd
 nnoremap <M-!> :!
 " :ls
-nnoremap <M-o> :ls<CR>
+nnoremap <M-o> :ls<CR>:b<Space>
+" :bn :bp
+nnoremap <Leader>P :bp<CR>
+nnoremap <Leader>N :bn<CR>
+" :bd
+nnoremap <Leader>q :bd<CR>
 " }}}
 " Visual-mode-related {{{
 " - select last paste visually
