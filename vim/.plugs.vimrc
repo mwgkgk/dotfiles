@@ -235,37 +235,6 @@ let g:taboo_tab_format="%N %f%m "
 let g:taboo_renamed_tab_format="%N %l%m "
 " }}}
 
-Plug 'andymass/vim-matchup' " {{{
-let g:matchup_surround_enabled = 1
-
-nnoremap <Leader>Q q
-
-nmap q <plug>(matchup-%)
-" nmap gq <plug>(matchup-g%)
-nmap gQ <plug>(matchup-[%)
-nmap gq <plug>(matchup-]%)
-nmap <Leader>q <plug>(matchup-z%)
-
-nmap dsq <plug>(matchup-ds%)
-nmap csq <plug>(matchup-cs%)
-
-omap q <plug>(matchup-o_)<plug>(matchup-%)
-" omap gq <plug>(matchup-o_)<plug>(matchup-g%)
-omap aq <plug>(matchup-o_)<plug>(matchup-a%)
-omap iq <plug>(matchup-o_)<plug>(matchup-i%)
-omap gQ <plug>(matchup-o_)<plug>(matchup-[%)
-omap gq <plug>(matchup-o_)<plug>(matchup-]%)
-omap <Leader>q <plug>(matchup-o_)<plug>(matchup-z%)
-
-xmap q <plug>(matchup-%)
-" xmap gq <plug>(matchup-g%)
-xmap gQ <plug>(matchup-[%)
-xmap gq <plug>(matchup-]%)
-xmap <Leader>q <plug>(matchup-z%)
-xmap iq <plug>(matchup-i%)
-xmap aq <plug>(matchup-a%)
-" }}}
-
 Plug 'briandoll/change-inside-surroundings.vim' " {{{
 " <Leader>ci by default
 nnoremap cI :ChangeInsideSurrounding<CR>
