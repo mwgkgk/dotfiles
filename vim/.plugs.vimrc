@@ -965,6 +965,12 @@ cab man Man
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
+    \ 'for': [
+    \   'rust',
+    \   'javascript', 'javascript.jsx',
+    \   'typescript', 'typescript.jsx',
+    \   'ocaml',
+    \ ]
     \ } " {{{
 let g:LanguageClient_autoStart = 0
 let g:LanguageClient_loadSettings = 1
