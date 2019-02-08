@@ -896,8 +896,8 @@ nnoremap <Leader>tg :GitGutterToggle<CR>
 nmap <Leader>hk <Plug>GitGutterPrevHunk
 nmap <Leader>hj <Plug>GitGutterNextHunk
 
-nmap <Tab>k <Plug>GitGutterPrevHunk
-nmap <Tab>j <Plug>GitGutterNextHunk
+nmap <M-p> <Plug>GitGutterPrevHunk
+nmap <M-n> <Plug>GitGutterNextHunk
 
 " This. (requires kana/vim-submode)
 " call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', '<Plug>GitGutterPrevHunk')
