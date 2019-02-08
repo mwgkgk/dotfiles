@@ -1247,13 +1247,13 @@ Plug 'ziglang/zig.vim', { 'for' : 'zig' } " {{{
 " }}}
 
 " JS
-Plug 'pangloss/vim-javascript'
-Plug 'maksimr/vim-jsbeautify' " {{{
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'maksimr/vim-jsbeautify', { 'for': ['javascript', 'javascript.jsx', 'html'] } " {{{
 vnoremap <silent> <Leader>b :call RangeJsBeautify()<CR>
 " }}}
 
 " TS
-Plug 'ianks/vim-tsx'
+Plug 'ianks/vim-tsx', { 'for' : 'typescript.tsx' }
 
 " Elm
 Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
