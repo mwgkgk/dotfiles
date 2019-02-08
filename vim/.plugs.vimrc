@@ -989,7 +989,7 @@ cab fm SplitVifm
 nnoremap <F2> :SplitVifm<CR>
 " }}}
 
-Plug 'vim-utils/vim-man' " {{{
+Plug 'vim-utils/vim-man', { 'on' : 'Man' } " {{{
 cab man Man
 " }}}
 
