@@ -423,6 +423,8 @@ nnoremap <Leader>P :bp<CR>
 nnoremap <Leader>N :bn<CR>
 " :bd
 nnoremap <Leader>q :bd<CR>
+" :jumps
+nnoremap <M-O> :ju<CR>
 " }}}
 " Visual-mode-related {{{
 " - select last paste visually
