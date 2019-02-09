@@ -615,6 +615,12 @@ call submode#enter_with('ScrollStay', 'n', '', ']j', '3<C-E>')
 call submode#map(       'ScrollStay', 'n', '',  'j', '3<C-E>')
 " }}}
 Plug 'kana/vim-niceblock'
+Plug 'kana/vim-exjumplist' " {{{
+nmap <C-M-t> <Plug>(exjumplist-go-last)
+nmap <C-M-o> <Plug>(exjumplist-go-first)
+nmap <M-)> <Plug>(exjumplist-next-buffer)
+nmap <M-(> <Plug>(exjumplist-previous-buffer)
+" }}}
 
 Plug 'thinca/vim-visualstar'
 Plug 'tyru/operator-star.vim' " {{{
