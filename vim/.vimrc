@@ -211,7 +211,7 @@ function! NewWindow(win_cmd)
     exec 'set ft=' . l:prev_ft
 endfunction
 nnoremap <silent> <C-W>n :call NewWindow("new")<CR>
-nnoremap <silent> <C-W>N :call NewWindow("vnew)<CR>
+nnoremap <silent> <C-W>N :call NewWindow("vnew")<CR>
 " - Move window:
 noremap <silent>  <C-W>gh :call WindowMove("h")<CR>
 noremap <silent>  <C-W>gl :call WindowMove("l")<CR>
