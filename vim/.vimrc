@@ -205,8 +205,13 @@ nnoremap <C-W>gk <C-W>k<C-W>_
 " nnoremap <C-W>gl <C-W>l<C-W>_
 " nnoremap <C-W>gh <C-W>h<C-W>_
 " - Keep ft for new windows
-nnoremap <C-W>n :let g:prev_ft = &ft<CR>:new<CR>:exec 'set ft=' . g:prev_ft<CR>
-nnoremap <C-W>N :let g:prev_ft = &ft<CR>:vnew<CR>:exec 'set ft=' . g:prev_ft<CR>
+function! NewWindow(win_cmd)
+    let l:prev_ft = &filetype
+    exec a:win_cmd
+    exec 'set ft=' . l:prev_ft
+endfunction
+nnoremap <silent> <C-W>n :call NewWindow("new")<CR>
+nnoremap <silent> <C-W>N :call NewWindow("vnew)<CR>
 " - Move window:
 noremap <silent>  <C-W>gh :call WindowMove("h")<CR>
 noremap <silent>  <C-W>gl :call WindowMove("l")<CR>
