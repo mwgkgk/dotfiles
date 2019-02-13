@@ -204,8 +204,9 @@ nnoremap <C-W>gj <C-W>j<C-W>_
 nnoremap <C-W>gk <C-W>k<C-W>_
 " nnoremap <C-W>gl <C-W>l<C-W>_
 " nnoremap <C-W>gh <C-W>h<C-W>_
-" - New vertical window
-nnoremap <C-W>N :vnew<CR>
+" - Keep ft for new windows
+nnoremap <C-W>n :let g:prev_ft = &ft<CR>:new<CR>:exec 'set ft=' . g:prev_ft<CR>
+nnoremap <C-W>N :let g:prev_ft = &ft<CR>:vnew<CR>:exec 'set ft=' . g:prev_ft<CR>
 " - Move window:
 noremap <silent>  <C-W>gh :call WindowMove("h")<CR>
 noremap <silent>  <C-W>gl :call WindowMove("l")<CR>
