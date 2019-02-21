@@ -1175,6 +1175,35 @@ let g:vlime_window_settings = {
             \ 'size': 17,
         \ },
     \ }
+augroup lisp.plugs.vimrc
+    autocmd!
+    autocmd FileType lisp nnoremap <silent> <buffer> X :call vlime#plugin#SendToREPL(vlime#ui#CurExprOrAtom())<cr>
+augroup END
+" }}}
+
+" Clojure
+Plug 'tpope/vim-fireplace', { 'for' : 'clojure' } " {{{
+let g:fireplace_no_maps = 1
+augroup clojure.plugs.vimrc
+    autocmd!
+    autocmd FileType clojure nmap <silent> <buffer> <C-g> <Plug>FireplaceK
+    " TODO <Leader><C-g> to :OpenBrowserSearch -clojuredocs
+    " TODO setup g:openbrowser_search_engines: goog, clojuredocs
+
+    autocmd FileType clojure map <silent> <buffer> X <Plug>FireplaceCountPrint
+    autocmd FileType clojure map <silent> <buffer> <Leader>x <Plug>FireplacePrint
+    autocmd FileType clojure nnoremap <silent> <buffer> <Space>x :Require<CR>
+
+    autocmd FileType clojure map <silent> <buffer> <Leader>X ya(:-1put<CR><C-o><Plug>FireplaceCountFilter:Commentary<CR>:s/^; /; => /<CR>
+
+    " TODO get :Last result, or eval result, into a new buffer for inspection
+
+    " TODO tidy up into a function
+    autocmd FileType clojure nnoremap <LocalLeader>rr :Connect localhost:<C-r>=readfile(".nrepl-port")<CR><BS><Space><C-r>=expand('%:p:h')<CR><CR>
+
+    autocmd FileType clojure map <C-]> <Plug>FireplaceDjump
+    autocmd FileType clojure map <C-w><C-]> <Plug>FireplaceDsplit
+augroup END
 " }}}
 
 " Racket
