@@ -125,7 +125,7 @@ function! s:chi_colo(chi)
     if a:chi ==# 'technodrome'
         return s:static_colo
     elseif a:chi ==# 'ship'
-        return 'deepblue'
+        return s:static_colo
     elseif a:chi ==# 'smuggler'
         return 'hell'
     elseif a:chi ==# 'thief'
