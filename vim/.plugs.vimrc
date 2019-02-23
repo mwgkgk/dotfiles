@@ -1195,11 +1195,12 @@ augroup clojure.plugs.vimrc
     autocmd FileType clojure nnoremap <silent> <buffer> <Space>x :Require<CR>
 
     autocmd FileType clojure map <silent> <buffer> <Leader>X ya(:-1put<CR><C-o><Plug>FireplaceCountFilter:Commentary<CR>:s/^; /; => /<CR>
+    " )
 
-    " TODO get :Last result, or eval result, into a new buffer for inspection
+    autocmd FileType clojure nnoremap <LocalLeader>rr :silent! chi-send motor "lein repl"<CR>
 
     " TODO tidy up into a function
-    autocmd FileType clojure nnoremap <LocalLeader>rr :Connect localhost:<C-r>=readfile(".nrepl-port")<CR><BS><Space><C-r>=expand('%:p:h')<CR><CR>
+    autocmd FileType clojure nnoremap <LocalLeader>cc :Connect localhost:<C-r>=readfile(".nrepl-port")<CR><BS><Space><C-r>=expand('%:p:h')<CR><CR>
 
     autocmd FileType clojure map <C-]> <Plug>FireplaceDjump
     autocmd FileType clojure map <C-w><C-]> <Plug>FireplaceDsplit
