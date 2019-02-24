@@ -976,6 +976,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \   'javascript', 'javascript.jsx',
     \   'typescript', 'typescript.jsx',
     \   'ocaml',
+    \   'clojure',
     \ ]
     \ } " {{{
 let g:LanguageClient_autoStart = 0
@@ -988,6 +989,7 @@ let g:LanguageClient_serverCommands = {
     \ 'typescript': ['typescript-language-server', '--stdio'],
     \ 'typescript.tsx': ['typescript-language-server', '--stdio'],
     \ 'ocaml': ['ocaml-language-server', '--stdio'],
+    \ 'clojure': ['bash', '-c', 'clojure-lsp'],
     \ }
 " \ 'javascript': ['typescript-language-server', '--stdio'],
 " \ 'javascript.jsx': ['typescript-language-server', '--stdio'],
