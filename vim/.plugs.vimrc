@@ -519,7 +519,9 @@ Plug 'arecarn/crunch.vim' " {{{
 inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
 " }}}
 
-Plug 'thinca/vim-quickrun'
+Plug 'thinca/vim-quickrun' " {{{
+nmap <Leader>rr <Plug>(quickrun)
+" }}}
 Plug 'thinca/vim-textobj-between' " {{{
 let g:textobj_between_no_default_key_mappings = 1
 xmap ii <Plug>(textobj-between-i)
