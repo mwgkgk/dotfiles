@@ -110,7 +110,7 @@ let g:EasyMotion_space_jump_first = 1
 let g:EasyMotion_do_special_mapping = 1
 let g:EasyMotion_add_search_history = 0
 
-map \\ <Plug>(easymotion-f)
+map \\ <Plug>(easymotion-s)
 map \f <Plug>(easymotion-f)
 
 map \r <Plug>(easymotion-repeat)
