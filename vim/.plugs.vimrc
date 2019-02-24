@@ -1206,6 +1206,7 @@ augroup clojure.plugs.vimrc
     autocmd FileType clojure map <C-w><C-]> <Plug>FireplaceDsplit
 augroup END
 " }}}
+Plug 'venantius/vim-cljfmt'
 
 " Racket
 Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
