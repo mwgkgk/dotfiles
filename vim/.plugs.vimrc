@@ -449,8 +449,6 @@ let g:formatters_haskell = ['hindent']
 let g:formatters_idris = ['hindent']
 let g:formatdef_dhallformat = '"dhall-format"'
 let g:formatters_dhall = ['dhallformat']
-let g:formatdef_cljfmt = '"lein cljfmt check"'
-let g:formatters_clojure = ['cljfmt']
 let g:formatdef_shfmt = '"shfmt -i 4 -p -bn -s"'
 let g:formatters_sh = ['shfmt']
 let g:formatdef_rustfmt = '"rustfmt --unstable-features"'
@@ -467,7 +465,7 @@ let g:formatdef_jsfmt = '"jsfmt"'
 let g:formatters_js = ['jsfmt']
 let g:formatters_python = ['black']
 " autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,clojure,idris,rust,ocaml,sh,perl,perl6,dhall,d,javascript,python,go nnoremap <buffer> <Space>f :Autoformat<CR>
+autocmd plugs.vimrc FileType elm,haskell,idris,rust,ocaml,sh,perl,perl6,dhall,d,javascript,python,go,c nnoremap <buffer> <Space>f :Autoformat<CR>
 autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
 autocmd plugs.vimrc FileType scheme nnoremap <buffer> <Space>f :Trailing<CR>gg=G<C-O><C-O><CR>
 " }}}
@@ -1215,7 +1213,7 @@ augroup clojure.plugs.vimrc
     autocmd FileType clojure map <C-w><C-]> <Plug>FireplaceDsplit
 augroup END
 " }}}
-Plug 'venantius/vim-cljfmt' " {{{
+Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' } " {{{
 autocmd plugs.vimrc FileType clojure nnoremap <buffer> <Space>f :Cljfmt<CR>
 " }}}
 
