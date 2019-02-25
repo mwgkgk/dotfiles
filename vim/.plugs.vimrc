@@ -1192,17 +1192,17 @@ let g:fireplace_no_maps = 1
 augroup clojure.plugs.vimrc
     autocmd!
     autocmd FileType clojure nmap <silent> <buffer> <C-g> <Plug>FireplaceK
-    " TODO <Leader><C-g> to :OpenBrowserSearch -clojuredocs
-    " TODO setup g:openbrowser_search_engines: goog, clojuredocs
+    autocmd FileType clojure nnoremap <silent> <buffer> <Leader><C-g> :call openbrowser#search('<C-r><C-w>', 'clojuredocs')<CR>
 
     autocmd FileType clojure map <silent> <buffer> X <Plug>FireplaceCountPrint
-    autocmd FileType clojure map <silent> <buffer> <Leader>x <Plug>FireplacePrint
+    autocmd FileType clojure nnoremap <silent> <buffer> <Leader>x :Eval<CR>
     autocmd FileType clojure nnoremap <silent> <buffer> <Space>x :Require<CR>
 
-    autocmd FileType clojure map <silent> <buffer> <Leader>X ya(:-1put<CR><C-o><Plug>FireplaceCountFilter:Commentary<CR>:s/^; /; => /<CR>
+    " TODO tidy up into a function, restore search reg
+    autocmd FileType clojure map <silent> <buffer> <Leader>X ya(:-1put<CR><C-o><Plug>FireplaceCountFilter:Commentary<CR>:s/^; /; => /<CR>:let @/=''<CR>
     " )
 
-    autocmd FileType clojure nnoremap <LocalLeader>rr :silent! chi-send motor "lein repl"<CR>
+    autocmd FileType clojure nnoremap <LocalLeader>rr :silent !chi-send motor "lein repl"<CR>:redraw!<CR>
 
     " TODO tidy up into a function
     autocmd FileType clojure nnoremap <LocalLeader>cc :Connect localhost:<C-r>=readfile(".nrepl-port")<CR><BS><Space><C-r>=expand('%:p:h')<CR><CR>
