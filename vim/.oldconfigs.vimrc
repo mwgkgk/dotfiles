@@ -331,3 +331,7 @@ xmap <Leader>q <plug>(matchup-z%)
 xmap iq <plug>(matchup-i%)
 xmap aq <plug>(matchup-a%)
 " }}}
+" Seems to require vim-dispatch and vim-projectionist? Commands not available
+" Plug 'tpope/vim-salve', { 'for' : 'clojure' } " {{{
+" let g:salve_auto_start_repl = 1
+" }}}
