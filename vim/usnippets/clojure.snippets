@@ -1,6 +1,27 @@
-snippet "(\()?f" "f" r
+snippet / *d(a)?(te)?/ "Date" rb
+;; `date --utc` ;;
+
+${0}
+endsnippet
+
+snippet "^(\()?f" "f" r
 (defn ${1:fname}
 	[$2]
+	$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?if" "if" r
+(if ${2:(${1:?})}
+	$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?let" "let" r
+(let
+	[$1]
 	$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
