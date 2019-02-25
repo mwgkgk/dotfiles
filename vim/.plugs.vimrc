@@ -636,6 +636,10 @@ nmap gxx <Plug>(openbrowser-open)
 vmap gxx <Plug>(openbrowser-open)
 nmap gxs <Plug>(openbrowser-search)
 vmap gxs <Plug>(openbrowser-search)
+
+let g:openbrowser_search_engines = {
+            \  'clojuredocs': 'https://clojuredocs.org/search?q={query}'
+            \}
 " }}}
 Plug 'tyru/open-browser-github.vim' " {{{
 nnoremap gxg :OpenGithubProject <C-r>"<CR>
