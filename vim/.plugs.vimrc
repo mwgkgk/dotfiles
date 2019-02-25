@@ -503,6 +503,22 @@ let g:vimshell_prompt_expr =
 let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
 let g:vimshell_scrollback_limit = 65535
 " }}}
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif " {{{
+let g:deoplete#enable_at_startup = 0
+nnoremap <Space><Leader> :call deoplete#toggle()<CR>
+
+" autocmd plugs.vimrc FileType markdown,jiv call deoplete#disable()
+" inoremap <M-j> <C-n>
+" inoremap <M-k> <C-p>
+
+" inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" }}}
 
 Plug 'skywind3000/asyncrun.vim' " {{{
 nnoremap <F3> :AsyncRun<Space>
