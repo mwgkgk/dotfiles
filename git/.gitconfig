@@ -27,7 +27,5 @@
     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
     upstream = log --oneline --no-merges ..origin/master
     graph = log --graph --all --decorate --stat --date=iso
-[init]
-    templatedir = ~/.git-templates
 [core]
     fileMode = false
