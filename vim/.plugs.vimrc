@@ -777,6 +777,7 @@ let g:peekaboo_compact = 1
 " }}}
 Plug 'junegunn/gv.vim' " {{{
 nnoremap <Space>A :GV<CR>
+nnoremap <Space>gA :GV!<CR>
 " }}}
 
 Plug 'chauncey-garrett/vim-tasklist', { 'on' : '<Plug>TaskList' } " {{{
