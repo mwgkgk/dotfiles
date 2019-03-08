@@ -1213,8 +1213,10 @@ augroup clojure.plugs.vimrc
     autocmd FileType clojure nmap <silent> <buffer> <C-g> <Plug>FireplaceK
     autocmd FileType clojure nnoremap <silent> <buffer> <Leader><C-g> :call openbrowser#search('<C-r><C-w>', 'clojuredocs')<CR>
 
-    autocmd FileType clojure map <silent> <buffer> X <Plug>FireplaceCountPrint
-    autocmd FileType clojure nnoremap <silent> <buffer> <Leader>x :Eval<CR>
+    " Use vim-sexp mappings to keep cursor position (see :help sexp-mappings)
+    autocmd FileType clojure nmap <silent> <buffer> X <Plug>FireplacePrint<Plug>(sexp_outer_list)``
+    autocmd FileType clojure nmap <silent> <buffer> <Leader>x <Plug>FireplacePrint<Plug>(sexp_outer_top_list)``
+
     autocmd FileType clojure nnoremap <silent> <buffer> <Space>x :Require<CR>
 
     " TODO tidy up into a function, restore search reg
