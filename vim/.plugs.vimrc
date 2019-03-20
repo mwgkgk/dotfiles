@@ -680,6 +680,8 @@ map gl <Plug>(IndentWiseNextGreaterIndent)
 
 nnoremap <Leader>j gj
 nnoremap <Leader>k gk
+vnoremap <Leader>j gj
+vnoremap <Leader>k gk
 
 map gk <Plug>(IndentWisePreviousEqualIndent)
 map gj <Plug>(IndentWiseNextEqualIndent)
