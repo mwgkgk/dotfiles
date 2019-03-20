@@ -1185,12 +1185,13 @@ function! s:vim_sexp_mappings()
 endfunction
 
 " Out-of-lisp mappings:
-nnoremap <M-S-l> f)xea)<Esc>
-nnoremap <M-S-h> F(xbi(<Esc>
-nnoremap <M-S-k> f)a<BackSpace><Esc>gea)<Esc>
-nnoremap <M-S-j> F(xwi(<Esc>
+" nnoremap <M-S-l> f)xea)<Esc>
+" nnoremap <M-S-h> F(xbi(<Esc>
+" nnoremap <M-S-k> f)a<BackSpace><Esc>gea)<Esc>
+" nnoremap <M-S-j> F(xwi(<Esc>
 
-autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nlang call s:vim_sexp_mappings()
+" autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nlang,markdown call s:vim_sexp_mappings()
+autocmd plugs.vimrc FileType * call s:vim_sexp_mappings()
 " }}}
 Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' } " {{{
 " autocmd plugs.vimrc FileType lisp <silent> <buffer> <LocalLeader>gi :call vlime#plugin#InteractionMode()<CR>
