@@ -1192,6 +1192,9 @@ endfunction
 
 " autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nlang,markdown call s:vim_sexp_mappings()
 autocmd plugs.vimrc FileType * call s:vim_sexp_mappings()
+
+" TODO: This doesn't work
+" autocmd plugs.vimrc FileType mkd umap =-
 " }}}
 Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' } " {{{
 " autocmd plugs.vimrc FileType lisp <silent> <buffer> <LocalLeader>gi :call vlime#plugin#InteractionMode()<CR>
