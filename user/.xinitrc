@@ -73,7 +73,7 @@ while true ; do
   # fi
 
   # xsetroot -name "$mood$mes_more$mes$commits$quake$date_pst  $date_local"
-  xsetroot -name "$date_local"
+  xsetroot -name "meditate! $date_local"
   sleep 1
 done &
 
