@@ -805,10 +805,10 @@ nmap g<C-j> <Plug>(textmanip-duplicate-down)
 xmap g<C-k> <Plug>(textmanip-duplicate-up)
 xmap g<C-j> <Plug>(textmanip-duplicate-down)
 
-nmap <C-M-k> <Plug>(textmanip-blank-above)
-nmap <C-M-j> <Plug>(textmanip-blank-below)
-xmap <C-M-k> <Plug>(textmanip-blank-above)
-xmap <C-M-j> <Plug>(textmanip-blank-below)
+nmap <Leader><M-k> <Plug>(textmanip-blank-above)
+nmap <Leader><M-j> <Plug>(textmanip-blank-below)
+xmap <Leader><M-k> <Plug>(textmanip-blank-above)
+xmap <Leader><M-j> <Plug>(textmanip-blank-below)
 " }}}
 Plug 't9md/vim-quickhl' " {{{
 nmap <Space>m <Plug>(quickhl-manual-this)
@@ -848,11 +848,11 @@ nmap gy <Plug>(easyoperator-line-yank)
 nmap gd <Plug>(easyoperator-line-delete)
 " }}}
 Plug 'haya14busa/vim-edgemotion' " {{{
-map <M-j> <Plug>(edgemotion-j)
-map <M-k> <Plug>(edgemotion-k)
+map <C-M-j> <Plug>(edgemotion-j)
+map <C-M-k> <Plug>(edgemotion-k)
 " Poor man's horizontal edgemotion
-map <M-h> B
-map <M-l> E
+map <C-M-h> B
+map <C-M-l> E
 " }}}
 
 Plug 'tpope/vim-surround' " {{{
