@@ -9,7 +9,7 @@ augroup END
 " static {{{
 " let s:static_colo = 'industry'
 " let s:static_colo = '256-jungle'
-" let s:static_colo = 'tactical'
+let s:static_colo = 'tactical'
 " let s:static_colo = 'mayansmokemod'
 " let s:static_colo = 'badwolf'
 " let s:static_colo = 'devbox-dark-256'
@@ -23,7 +23,8 @@ augroup END
 " let s:static_colo = 'haze'
 
 " let s:static_colo = 'gentooish'
-let s:static_colo = 'xoria256'
+" let s:static_colo = 'xoria256'
+" let s:static_colo = 'peaksea_mod'
 
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
@@ -139,7 +140,7 @@ function! s:chi_colo(chi)
     elseif a:chi ==# 'doc'
         return s:static_colo
     elseif a:chi ==# 'zepp'
-        return 'outsider'
+        return s:static_colo
     else
         " Unrecognized non-empty $CHI
         return 'desert'
@@ -169,7 +170,7 @@ if has('gui_running')
     " set guifont=Liberation\ Mono\ 22
     " set guifont=Liberation\ Mono\ 8
     " set guifont=Monospace\ 10
-    set guifont=Iosevka\ SS04\ 9
+    set guifont=Iosevka\ SS04\ 13
     " }}}
 else
     set t_Co=256
