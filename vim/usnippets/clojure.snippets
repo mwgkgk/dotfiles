@@ -10,6 +10,18 @@ snippet "^(\()?f" "f" r
 	$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
+
+;; {{{
+#_(do
+	${VISUAL}$0)
+;; }}}
+endsnippet
+
+snippet ba "basement" b
+;; {{{
+#_(do
+	${VISUAL}$0)
+;; }}}
 endsnippet
 
 snippet "(\()?if" "if" r
