@@ -745,7 +745,7 @@ command! -bang -nargs=? -complete=dir FzfFilesWithPreview
 
 nnoremap ss :FzfFilesWithPreview .<CR>
 
-nnoremap sw :FzfFilesWithPreview ./lib/<CR>
+nnoremap sw :FzfFilesWithPreview ../<CR>
 nnoremap sT :FzfFilesWithPreview /tmp/<CR>
 nnoremap s~ :FzfFilesWithPreview ~/<CR>
 nnoremap sF :FzfFilesWithPreview ~/<CR>
