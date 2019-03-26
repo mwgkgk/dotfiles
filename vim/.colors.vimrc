@@ -20,7 +20,7 @@ augroup END
 " let s:static_colo = 'devbox-dark-256-lighter'
 " let s:static_colo = 'zenburn'
 " let s:static_colo = 'devbox-dark-256'
-let s:static_colo = 'haze'
+" let s:static_colo = 'haze'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
@@ -29,7 +29,7 @@ let s:static_colo = 'haze'
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'hell'
-" let s:static_colo = 'thief'
+let s:static_colo = 'thief'
 
 " let s:static_colo = 'Tomorrow'
 
