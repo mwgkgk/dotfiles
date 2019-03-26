@@ -1240,6 +1240,7 @@ augroup END
 " }}}
 Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' } " {{{
 autocmd plugs.vimrc FileType clojure nnoremap <buffer> <Space>f :Cljfmt<CR>
+autocmd plugs.vimrc BufWritePost *.clj,*.cljs normal! zv
 " }}}
 
 " Racket
