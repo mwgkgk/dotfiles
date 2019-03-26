@@ -848,11 +848,11 @@ nmap gy <Plug>(easyoperator-line-yank)
 nmap gd <Plug>(easyoperator-line-delete)
 " }}}
 Plug 'haya14busa/vim-edgemotion' " {{{
-map <C-M-j> <Plug>(edgemotion-j)
-map <C-M-k> <Plug>(edgemotion-k)
+map <M-j> <Plug>(edgemotion-j)
+map <M-k> <Plug>(edgemotion-k)
 " Poor man's horizontal edgemotion
-map <C-M-h> B
-map <C-M-l> E
+map <M-h> B
+map <M-l> E
 " }}}
 
 Plug 'tpope/vim-surround' " {{{
@@ -1154,14 +1154,14 @@ function! s:vim_sexp_mappings()
   xmap <silent><buffer> <C-c>o          <Plug>(sexp_raise_list)
   nmap <silent><buffer> <C-c>O          <Plug>(sexp_raise_element)
   xmap <silent><buffer> <C-c>O          <Plug>(sexp_raise_element)
-  nmap <silent><buffer> <M-k>           <Plug>(sexp_swap_list_backward)
-  xmap <silent><buffer> <M-k>           <Plug>(sexp_swap_list_backward)
-  nmap <silent><buffer> <M-j>           <Plug>(sexp_swap_list_forward)
-  xmap <silent><buffer> <M-j>           <Plug>(sexp_swap_list_forward)
-  nmap <silent><buffer> <M-h>           <Plug>(sexp_swap_element_backward)
-  xmap <silent><buffer> <M-h>           <Plug>(sexp_swap_element_backward)
-  nmap <silent><buffer> <M-l>           <Plug>(sexp_swap_element_forward)
-  xmap <silent><buffer> <M-l>           <Plug>(sexp_swap_element_forward)
+  nmap <silent><buffer> <C-M-k>           <Plug>(sexp_swap_list_backward)
+  xmap <silent><buffer> <C-M-k>           <Plug>(sexp_swap_list_backward)
+  nmap <silent><buffer> <C-M-j>           <Plug>(sexp_swap_list_forward)
+  xmap <silent><buffer> <C-M-j>           <Plug>(sexp_swap_list_forward)
+  nmap <silent><buffer> <C-M-h>           <Plug>(sexp_swap_element_backward)
+  xmap <silent><buffer> <C-M-h>           <Plug>(sexp_swap_element_backward)
+  nmap <silent><buffer> <C-M-l>           <Plug>(sexp_swap_element_forward)
+  xmap <silent><buffer> <C-M-l>           <Plug>(sexp_swap_element_forward)
   nmap <silent><buffer> <M-S-j>         <Plug>(sexp_emit_head_element)
   xmap <silent><buffer> <M-S-j>         <Plug>(sexp_emit_head_element)
   imap <silent><buffer> <M-S-j>         <Esc><Plug>(sexp_emit_head_element)a
