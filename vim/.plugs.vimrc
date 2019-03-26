@@ -1190,8 +1190,8 @@ endfunction
 " nnoremap <M-S-k> f)a<BackSpace><Esc>gea)<Esc>
 " nnoremap <M-S-j> F(xwi(<Esc>
 
-" autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nlang,markdown call s:vim_sexp_mappings()
-autocmd plugs.vimrc FileType * call s:vim_sexp_mappings()
+" TODO: rename markdown mj? or have both.
+autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nlang,markdown call s:vim_sexp_mappings()
 
 " TODO: This doesn't work
 " autocmd plugs.vimrc FileType mkd umap =-
