@@ -26,3 +26,9 @@ snippet "(\()?let" "let" r
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
+
+snippet "(\()?p" "println" r
+(println ${0:"$1"}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
