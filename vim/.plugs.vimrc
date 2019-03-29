@@ -323,6 +323,9 @@ map <M-q> <Plug>(patternjump-backward)
 map <M-r> <Plug>(patternjump-forward)
 " }}}
 
+Plug 'andymass/vim-matchup' " {{{
+" }}}
+
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/yankwin.vim' " {{{
 let g:yankwin_default_yank_mappings = 0
@@ -1359,6 +1362,13 @@ Plug 'fcpg/vim-orbital'
 Plug 'junegunn/seoul256.vim'
 
 call plug#end()
+
+source ~/.vim/bundle/vim-matchup/autoload/matchup/custom.vim
+
+call matchup#custom#define_motion('nox', '%',
+      \ 'matchup#custom#example_motion', { 'down': 1 })
+call matchup#custom#define_motion('nox', 'g%',
+      \ 'matchup#custom#example_motion', { 'down': 0 })
 
 runtime .colors.vimrc
 
