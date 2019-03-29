@@ -104,4 +104,8 @@ snippet setl "setl" b
 setlocal 
 endsnippet
 
+snippet dd "dd" i
+`!v system('date +"%Y-%m-%d" | tr -d "\n"')`: ${0}
+endsnippet
+
 # vim:ft=snippets:
