@@ -865,6 +865,7 @@ map <M-h> B
 map <M-l> E
 " }}}
 
+Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-surround' " {{{
 " Wrapping in braces:
 imap <C-c><C-c> <Esc>hysiw)ea
