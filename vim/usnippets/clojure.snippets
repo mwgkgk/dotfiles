@@ -7,7 +7,7 @@ endsnippet
 snippet "^(\()?f" "f" r
 (defn ${1:fname}
 	[$2]
-	$0`!p
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 
@@ -20,7 +20,7 @@ endsnippet
 snippet ba "basement" b
 ;; {{{
 #_(do
-		${VISUAL}$0)
+		${VISUAL}${0:nil})
 ;; }}}
 endsnippet
 
@@ -34,7 +34,7 @@ endsnippet
 snippet "(\()?let" "let" r
 (let
 	[$1]
-	$0`!p
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
