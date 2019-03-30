@@ -10,8 +10,8 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
-(set-face-attribute 'default nil :font "Iosevka SS04" :height 90)
-;; (set-face-attribute 'default nil :font "scientifica")
+;; (set-face-attribute 'default nil :font "Iosevka SS04" :height 79)
+(set-face-attribute 'default nil :font "scientifica")
 
 (load-theme 'wombat t)
 
