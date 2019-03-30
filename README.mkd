@@ -1,9 +1,19 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [127K]  vim
+├── [ 12K]  emacs
+│   ├── [4.3K]  init.el
+│   └── [4.0K]  init.el.old
+├── [5.2K]  repl
+│   ├── [ 211]  profiles.clj
+│   ├── [ 859]  .iex.exs
+│   ├── [  48]  .lambda-term-inputrc
+│   └── [ 119]  .minrc
+├── [128K]  vim
+│   ├── [ 52K]  .plugs.vimrc
+│   ├── [4.2K]  .colors.vimrc
+│   ├── [4.0K]  skeletons [35 entries exceeds filelimit, not opening dir]
 │   ├── [ 19K]  .vimrc
-│   ├── [ 50K]  .plugs.vimrc
 │   ├── [ 11K]  .oldconfigs.vimrc
 │   ├── [4.8K]  plugin
 │   │   ├── [ 362]  files_by_date.vim
@@ -24,13 +34,11 @@
 │   │   └── [8.4K]  syntax
 │   │       ├── [ 275]  scheme.vim
 │   │       └── [4.1K]  min.vim
-│   ├── [4.1K]  .colors.vimrc
 │   ├── [4.0K]  usnippets [79 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  colors [93 entries exceeds filelimit, not opening dir]
 │   ├── [4.4K]  ftdetect
 │   │   ├── [ 193]  lisp.vim
 │   │   └── [ 177]  dash.vim
-│   ├── [4.0K]  skeletons [34 entries exceeds filelimit, not opening dir]
 │   └── [ 710]  filetype.vim
 ├── [ 43K]  vifm
 │   ├── [ 11K]  vifmrc
@@ -45,8 +53,8 @@
 │       ├── [3.2K]  Foggy.vifm
 │       └── [3.2K]  Default.vifm
 ├── [ 13K]  user
-│   ├── [2.6K]  .Xresources
 │   ├── [1.6K]  .xinitrc
+│   ├── [2.6K]  .Xresources
 │   ├── [1.7K]  .asoundrc
 │   ├── [ 170]  .bash_profile
 │   ├── [1.8K]  .bash_aliases
@@ -57,31 +65,25 @@
 │   └── [5.2K]  .tmux.conf
 ├── [4.2K]  sxhkd
 │   └── [ 164]  sxhkdrc
-├── [4.8K]  git
-│   └── [ 793]  .gitconfig
-├── [ 12K]  emacs
-│   ├── [4.3K]  init.el
-│   └── [4.0K]  init.el.old
+├── [4.7K]  git
+│   └── [ 751]  .gitconfig
 ├── [ 50K]  fish
 │   ├── [ 189]  fishfile
+│   ├── [4.3K]  tools
+│   │   ├── [  43]  heap.fish
+│   │   └── [ 250]  do-thing.fish
+│   ├── [4.0K]  aliases [47 entries exceeds filelimit, not opening dir]
 │   ├── [ 16K]  config
 │   │   ├── [ 10K]  fish_user_key_bindings.fish
 │   │   ├── [ 880]  fish_prompt.fish
 │   │   └── [ 261]  fish_title.fish
-│   ├── [4.0K]  aliases [46 entries exceeds filelimit, not opening dir]
 │   ├── [ 387]  config.fish
-│   ├── [ 22K]  completions
-│   │   └── [ 18K]  rustup.fish
-│   └── [4.2K]  tools
-│       └── [ 250]  do-thing.fish
+│   └── [ 22K]  completions
+│       └── [ 18K]  rustup.fish
 ├── [6.3K]  ctags
 │   └── [2.3K]  .ctags
 ├── [4.0K]  fmt
 │   └── [  38]  .rustfmt.toml
-├── [5.0K]  repl
-│   ├── [ 859]  .iex.exs
-│   ├── [  48]  .lambda-term-inputrc
-│   └── [ 119]  .minrc
 ├── [ 13K]  alacritty
 │   └── [9.2K]  alacritty.yml
 ├── [9.7K]  conky
@@ -108,7 +110,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 363K used in 31 directories, 75 files
+ 365K used in 31 directories, 77 files
 ```
 
-> Generated on Monday, February 25, 2019 at 13:41:36 PM UTC.
+> Generated on Saturday, March 30, 2019 at 01:12:22 AM UTC.
