@@ -919,6 +919,7 @@ nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 command! Mes :!git mes
 command! Back :!git rollback
 " }}}
+Plug 'tpope/vim-scriptease'
 
 Plug 'airblade/vim-gitgutter' " {{{
 nnoremap <Leader>tg :GitGutterToggle<CR>
