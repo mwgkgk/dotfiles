@@ -1234,6 +1234,9 @@ augroup clojure.plugs.vimrc
     " Use vim-sexp mappings to keep cursor position (see :help sexp-mappings)
     autocmd FileType clojure nmap <silent> <buffer> X <Plug>FireplacePrint<Plug>(sexp_outer_list)``
     autocmd FileType clojure nmap <silent> <buffer> <Leader>x <Plug>FireplacePrint<Plug>(sexp_outer_top_list)``
+    autocmd FileType clojure nmap <silent> <buffer> <LocalLeader>x <Plug>FireplacePrint<Plug>(sexp_inner_element)``
+
+    autocmd FileType clojure nnoremap <silent> <buffer> <LocalLeader>i :Eval (st/instrument)<CR>
 
     autocmd FileType clojure nnoremap <silent> <buffer> <Space>x :Require<CR>
 
