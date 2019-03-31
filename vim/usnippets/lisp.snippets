@@ -5,17 +5,16 @@ snippet imp "import" b
 endsnippet
 
 snippet /^(\s|\()*(f|def)/ "defun" r
-(defun ${1:name} (${2:arg})
-	(${3:format t "Under construction: (defun $1 ($2))"}))
+(defun ${1:name} ($2})
+	${0:nil})
 endsnippet
 
 snippet /^(\s)*if/ "if" b
-(if (${1:something?})
-	${2:a}
-	${3:b})
+(if ($1)
+	${0:nil})
 endsnippet
 
-snippet if "if" i
+snippet if# "if" i
 (if (> 0 (# arg))
 	(print! "Unexpected arguments.")
 	(print! "Unexpected absence of arguments."))
