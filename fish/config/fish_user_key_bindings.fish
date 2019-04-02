@@ -17,6 +17,22 @@ function bind_dollar
   end
 end
 
+function bind_space
+    set -l cmdline (commandline)
+    if test "$cmdline" = "v"
+        commandline -i ' '
+        fdz-vim-sessions | read -l result
+        if test -n "$result"
+            commandline -i "$result"
+            commandline -f execute
+        else
+            commandline -f repaint
+        end
+  else
+      commandline -i ' '
+  end
+end
+
 function bind_tab
     set -l cmdline (commandline)
     if test -z "$cmdline"
@@ -376,6 +392,9 @@ function fish_user_key_bindings
     # Emulate bash: !!, !$
     bind ! bind_bang
     bind '$' bind_dollar
+
+    # Special space
+    bind ' ' bind_space
 
     # Special tab
     bind \t bind_tab
