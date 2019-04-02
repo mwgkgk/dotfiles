@@ -21,7 +21,7 @@ function bind_space
     set -l cmdline (commandline)
     if test "$cmdline" = "v"
         commandline -i ' '
-        fdz-vim-sessions | read -l result
+        fdz-v | read -l result
         if test -n "$result"
             commandline -i "$result"
             commandline -f execute
