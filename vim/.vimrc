@@ -111,6 +111,8 @@ set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ -C\ ..
 autocmd vimrc Filetype java setlocal makeprg=javac\ %
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
 map <F9> :make<Return>:copen<Return>
+" Shift-F9 to !make
+map [18;2~ :!make<CR>
 
 " Making vim look for tags in parent directories :
 set tags=./tags;~
