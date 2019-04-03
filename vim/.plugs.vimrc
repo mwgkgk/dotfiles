@@ -788,8 +788,10 @@ let g:peekaboo_delay = 200
 let g:peekaboo_compact = 1
 " }}}
 Plug 'junegunn/gv.vim' " {{{
-nnoremap <Space>A :GV<CR>
-nnoremap <Space>gA :GV!<CR>
+" HH: Log in file
+nnoremap <Leader>hh :GV!<CR>
+" HL: Big log
+nnoremap <Leader>hl :GV<CR>
 " }}}
 
 Plug 'chauncey-garrett/vim-tasklist', { 'on' : '<Plug>TaskList' } " {{{
@@ -905,8 +907,6 @@ nnoremap <Leader>hA :GAllPreview<CR>
 " command! GAll :silent exe "Git add ." | :silent exe "Gcommit -q -a"
 " nnoremap <Leader><Leader> :GAll<CR>
 
-" Heil Hydra
-nnoremap <Leader>hh :Gcommit -v<CR>
 nnoremap <Leader>hc :Gcommit -v<CR>
 
 " Git reset:
