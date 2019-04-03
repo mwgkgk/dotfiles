@@ -153,6 +153,8 @@
 
 (use-package slime)
 
+;; Elisp
+
 ;; Navigate emacs sources
 (use-package elisp-slime-nav
   :init
@@ -160,6 +162,8 @@
     (add-hook hook 'turn-on-elisp-slime-nav-mode))
 
   (setq source-directory "~/.ghq/github.com/emacs-mirror/emacs"))
+
+;; Clojure
 
 (use-package cider)
 
