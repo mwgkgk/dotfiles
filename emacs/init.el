@@ -125,6 +125,11 @@
   (define-key evil-window-map (kbd "Q") 'evil-quit-all)
   (define-key evil-window-map (kbd "N") 'evil-window-vnew)
 
+  ;; Comfy eval
+  (add-hook 'emacs-lisp-mode-hook
+            '(lambda ()
+               (define-key evil-normal-state-map (kbd "X") 'eval-defun)))
+
   ;; TODO normal-mode s is non-prefix
   ;; (define-key evil-normal-state-map (kbd "s SPC") 'switch-to-buffer)
 
