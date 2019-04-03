@@ -957,11 +957,17 @@ nmap <M-n> <Plug>GitGutterNextHunk
 nmap <Leader>hp <Plug>GitGutterStageHunk
 nmap <Leader>hs <Plug>GitGutterStageHunk
 
-" LeaderLeader to stage hunk and commit: (requires vim-fugitive)
-autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> yy<Plug>GitGutterStageHunk:Gcommit<CR>p
-autocmd plugs.vimrc FileType jiv nmap <buffer> <Leader><Leader> yaf<Plug>GitGutterStageHunk:Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p
+" Git-back
+nnoremap <Leader>gb :!git back<CR>
 
-autocmd plugs.vimrc FileType * nmap <buffer> <Leader>l <Plug>GitGutterStageHunk:Gcommit<CR>p
+" Git-mes
+nnoremap <Leader>gm :!git mes<CR>
+
+" LeaderLeader to stage hunk and commit: (requires vim-fugitive)
+autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> yy<Plug>GitGutterStageHunk:Gcommit<CR>p:wq<CR>
+autocmd plugs.vimrc FileType jiv nmap <buffer> <Leader><Leader> yaf<Plug>GitGutterStageHunk:Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR>
+
+autocmd plugs.vimrc FileType * nmap <buffer> <Leader>l <Plug>GitGutterStageHunk:Gcommit<CR>p:wq<CR>
 " }}}
 
 Plug 'mwgkgk/CamelCaseMotion' " {{{
