@@ -13,5 +13,11 @@ control + ~c
 alt + ~c
 	browser-unbookmark
 
-super + F2
+super + space
 	firefox-ulm
+
+super + F1
+	ship
+
+alt + F2
+	main-dmenu
