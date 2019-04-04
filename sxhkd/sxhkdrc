@@ -13,3 +13,5 @@ control + ~c
 alt + ~c
 	browser-unbookmark
 
+super + F2
+	firefox-ulm
