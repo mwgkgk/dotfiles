@@ -421,7 +421,7 @@ nnoremap <Leader>cg :cd `pwd`<CR>:pwd<CR>
 " Regs
 nnoremap <C-W>" :reg<CR>
 " Go line
-nnoremap <Leader>gl :<C-R><C-W><CR>
+nnoremap <Leader>@ :<C-R><C-W><CR>
 " Alt file
 nnoremap <C-W>a <C-^>
 " Xpdf gotoPage
