@@ -1,31 +1,31 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [ 12K]  emacs
-│   ├── [4.3K]  init.el
+├── [ 13K]  emacs
+│   ├── [4.7K]  init.el
 │   └── [4.0K]  init.el.old
 ├── [5.2K]  repl
 │   ├── [ 211]  profiles.clj
 │   ├── [ 859]  .iex.exs
 │   ├── [  48]  .lambda-term-inputrc
 │   └── [ 119]  .minrc
-├── [128K]  vim
+├── [129K]  vim
+│   ├── [ 19K]  .vimrc
 │   ├── [ 52K]  .plugs.vimrc
 │   ├── [4.2K]  .colors.vimrc
 │   ├── [4.0K]  skeletons [35 entries exceeds filelimit, not opening dir]
-│   ├── [ 19K]  .vimrc
 │   ├── [ 11K]  .oldconfigs.vimrc
 │   ├── [4.8K]  plugin
 │   │   ├── [ 362]  files_by_date.vim
 │   │   └── [ 450]  golf.vim
 │   ├── [ 17K]  after
 │   │   ├── [4.6K]  ftplugin
+│   │   │   ├── [  26]  fish.vim
 │   │   │   ├── [  64]  c.vim
 │   │   │   ├── [  69]  clojure.vim
 │   │   │   ├── [  28]  conf.vim
 │   │   │   ├── [  26]  vim.vim
 │   │   │   ├── [  26]  tcl.vim
-│   │   │   ├── [  26]  fish.vim
 │   │   │   ├── [  64]  nim.vim
 │   │   │   ├── [ 149]  text.vim
 │   │   │   ├── [  64]  java.vim
@@ -61,10 +61,10 @@
 │   ├── [1.1K]  .bashrc
 │   ├── [  61]  .inputrc
 │   └── [ 305]  .Xdefaults
-├── [9.2K]  tmux
-│   └── [5.2K]  .tmux.conf
-├── [4.2K]  sxhkd
-│   └── [ 164]  sxhkdrc
+├── [9.3K]  tmux
+│   └── [5.3K]  .tmux.conf
+├── [4.3K]  sxhkd
+│   └── [ 340]  sxhkdrc
 ├── [4.7K]  git
 │   └── [ 751]  .gitconfig
 ├── [ 50K]  fish
@@ -74,7 +74,7 @@
 │   │   └── [ 250]  do-thing.fish
 │   ├── [4.0K]  aliases [47 entries exceeds filelimit, not opening dir]
 │   ├── [ 16K]  config
-│   │   ├── [ 10K]  fish_user_key_bindings.fish
+│   │   ├── [ 11K]  fish_user_key_bindings.fish
 │   │   ├── [ 880]  fish_prompt.fish
 │   │   └── [ 261]  fish_title.fish
 │   ├── [ 387]  config.fish
@@ -110,7 +110,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 365K used in 31 directories, 77 files
+ 367K used in 31 directories, 77 files
 ```
 
-> Generated on Saturday, March 30, 2019 at 01:12:22 AM UTC.
+> Generated on Friday, April  5, 2019 at 05:48:45 AM UTC.
