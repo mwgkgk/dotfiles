@@ -30,5 +30,8 @@ alt + F2
 
 # Windows:
 
-super + Grave
+super + grave
+	punt
+
+super + shift + grave
 	punt-all
