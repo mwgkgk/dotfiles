@@ -241,7 +241,7 @@ nnoremap <C-W># :sp #<CR>
 nnoremap <Space>+ 10<C-W>+
 nnoremap <Space>- 10<C-W>-
 " Prev window:
-nnoremap <C-w><C-w> <C-w>p
+nnoremap <C-w><C-w> <C-w><Space>
 " Fold everything:
 nnoremap z<Space> zM
 " Go to window by winnr()
@@ -374,6 +374,7 @@ nnoremap <Tab><Space> u
 " Repeat macro with alt-y
 nnoremap <M-y> @@
 " Open term
+nnoremap <Leader><Space><Space> :term<CR><C-w>p<C-w>q<C-w><Space>
 nnoremap <Leader><Space>n :term ++rows=10<CR>
 nnoremap <Leader><Space>N :above term ++rows=10<CR>
 nnoremap <Leader><Space>s :term<CR>
