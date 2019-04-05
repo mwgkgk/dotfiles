@@ -6,8 +6,7 @@ set -x fish_color_cwd B1D06E
 set -x fish_command_timer_color A7A6DE
 
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
-set -x FZF_DEFAULT_OPTS " --bind 'ctrl-a:select-all+accept,tab:print-query'"\
-                        " --history=~/.fzf_history"
+set -x FZF_DEFAULT_OPTS " --bind 'ctrl-a:select-all+accept,tab:print-query'"
 
 # eval (perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 
