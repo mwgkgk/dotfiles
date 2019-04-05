@@ -112,6 +112,13 @@ function bind_ek
     commandline -f repaint
 end
 
+function bind_cd_lastcmd
+    set -l cmdline (commandline)
+    commandline -r "cd "
+    commandline -f history-token-search-backward
+    commandline -f execute
+end
+
 function bind_ls_here
     echo ;and exa -a --group-directories-first
     commandline -f repaint
@@ -422,6 +429,9 @@ function fish_user_key_bindings
     bind ì bind_el
     bind ê bind_ej
     bind ë bind_ek
+
+    # M-S-l to cd !$
+    bind Ì bind_cd_lastcmd
 
     # M-o to ls
     bind ï bind_ls_here
