@@ -915,7 +915,8 @@ nnoremap <Leader>hr :GReset<CR>:e!<CR>za
 
 " nnoremap <Leader><Leader> :Gtabedit @<CR>
 
-nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
+" Using :GV, :GV! instead
+" nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " Also, grep commit text in all or current file:
 " :Glog --grep=query --
 " :Glog --grep=query -- %
