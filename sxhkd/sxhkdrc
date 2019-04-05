@@ -24,3 +24,8 @@ super + F2
 
 alt + F2
 	main-dmenu
+
+# Windows:
+
+super + Grave
+	punt-all
