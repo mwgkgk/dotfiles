@@ -19,5 +19,8 @@ super + space
 super + F1
 	ship
 
+super + F2
+	tower
+
 alt + F2
 	main-dmenu
