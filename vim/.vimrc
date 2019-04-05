@@ -371,6 +371,13 @@ nnoremap <M-y> @@
 " Open term
 nnoremap <Leader><Space>n :term ++rows=10<CR>
 nnoremap <Leader><Space>N :above term ++rows=10<CR>
+nnoremap <Leader><Space>s :term<CR>
+nnoremap <Leader><Space>S :above term<CR>
+nnoremap <Leader><Space>v :vert term<CR>
+" Neither works:
+" nnoremap <Leader><Space>V :vert term<CR><C-w><C-w><C-w>x<C-w><C-w>
+" nnoremap <Leader><Space>V :botright term
+
 " repeat f/F (";" is leader)
 nnoremap <M-;> ;
 vnoremap <M-;> ;
