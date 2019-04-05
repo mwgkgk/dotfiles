@@ -22,6 +22,9 @@ super + F1
 super + F2
 	tower
 
+super + 2
+	technodrome
+
 alt + F2
 	main-dmenu
 
