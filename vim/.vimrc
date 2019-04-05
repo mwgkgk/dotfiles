@@ -106,13 +106,18 @@ set expandtab
 set list
 set listchars=tab:▸\ ,eol:¬
 
+
 " Make
-set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ -C\ ..  
-autocmd vimrc Filetype java setlocal makeprg=javac\ %
+
+" TODO Needs more work. Breaks on not being able to create tmp file?
+set makeprg=test\ -f\ Makefile\ &&\ make\ \\\|\\\|\ make\ -C\ ..  
+
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
 map <F9> :make<Return>:copen<Return>
-" Shift-F9 to !make
+" Shift-F9 to !make (TODO remove when makeprg works with dwm)
 map [18;2~ :!make<CR>
+
+autocmd vimrc Filetype java setlocal makeprg=javac\ %
 
 " Making vim look for tags in parent directories :
 set tags=./tags;~
