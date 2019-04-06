@@ -907,7 +907,8 @@ nnoremap <Leader>hA :GAllPreview<CR>
 " command! GAll :silent exe "Git add ." | :silent exe "Gcommit -q -a"
 " nnoremap <Leader><Leader> :GAll<CR>
 
-nnoremap <Leader>hc :Gcommit -v<CR>
+nnoremap <Leader>hv :Gcommit -v<CR>
+nmap <Leader>hc <Plug>GitGutterStageHunk:Gcommit -v<CR>
 
 " Git reset:
 command! GReset :ProjectRootExe :AsyncRun git reset
