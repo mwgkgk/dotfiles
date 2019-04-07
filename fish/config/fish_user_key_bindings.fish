@@ -402,7 +402,7 @@ function fish_user_key_bindings
     bind '$' bind_dollar
 
     # Special space
-    bind ' ' bind_space
+    # bind ' ' bind_space
 
     # Special tab
     bind \t bind_tab
