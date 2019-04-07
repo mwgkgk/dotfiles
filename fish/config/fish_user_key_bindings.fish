@@ -17,21 +17,22 @@ function bind_dollar
   end
 end
 
-function bind_space
-    set -l cmdline (commandline)
-    if test "$cmdline" = "v"
-        commandline -i ' '
-        fdz-v | read -l result
-        if test -n "$result"
-            commandline -i "$result"
-            commandline -f execute
-        else
-            commandline -f repaint
-        end
-  else
-      commandline -i ' '
-  end
-end
+# TODO Fzf not fast enough for bind_space. fzy? homegrown fuzzy-line-suggest?
+# function bind_space
+#     set -l cmdline (commandline)
+#     if test "$cmdline" = "v"
+#         commandline -i ' '
+#         fdz-v | read -l result
+#         if test -n "$result"
+#             commandline -i "$result"
+#             commandline -f execute
+#         else
+#             commandline -f repaint
+#         end
+#   else
+#       commandline -i ' '
+#   end
+# end
 
 function bind_tab
     set -l cmdline (commandline)
