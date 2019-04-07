@@ -109,6 +109,13 @@
   :config
   (ac-config-default))
 
+(electric-pair-mode 1)
+; Doesn't work
+; (setq electric-pair-pairs
+;       '(
+;         (?\" . ?\")
+;         (?\{ . ?\})
+;         (?\[ . ?]})))
 
 ;;; Evil
 
