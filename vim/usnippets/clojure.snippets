@@ -44,3 +44,9 @@ snippet "(\()?p" "println" r
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
+
+snippet "(\()?e" "Error" r
+(errexit "${VISUAL}$0"`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
