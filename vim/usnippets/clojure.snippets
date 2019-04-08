@@ -46,7 +46,7 @@ if match.group(1) is None:
 endsnippet
 
 snippet "(\()?e" "Error" r
-(errexit ${VISUAL}${0:(usage)}`!p
+(errexit ${VISUAL}${1:(${0:usage})}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
