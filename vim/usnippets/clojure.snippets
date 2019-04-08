@@ -50,3 +50,9 @@ snippet "(\()?e" "Error" r
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
+
+snippet "(\()?:?req" "req" r
+(:require ${0:[${3:${1:clojure.string} :as ${2:str}}]}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
