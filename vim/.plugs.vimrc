@@ -872,13 +872,19 @@ Plug 'tpope/vim-surround' " {{{
 " Wrapping in braces:
 imap <C-c><C-c> <Esc>hysiw)ea
 nmap <C-c><C-c> <Esc>ysiw)
+imap <C-c>) <Esc>hysiw)ea
+nmap <C-c>) <Esc>ysiw)
 " Two words
 nmap <C-c>l ys3iw)
 " Not working
 " nmap <C-c>h ys2b)
 " Quotes
-imap <C-c>q <Esc>hysiW"ea
-nmap <C-c>q <Esc>ysiW"a
+imap <C-c>" <Esc>hysiW"ea
+nmap <C-c>" <Esc>ysiW"a
+imap <C-c>' <Esc>hysiW'ea
+nmap <C-c>' <Esc>ysiW'a
+imap <C-c>] <Esc>hysiW'ea
+nmap <C-c>] <Esc>ysiW'a
 " }}}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
