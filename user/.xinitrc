@@ -11,6 +11,9 @@ xset s off
 # Light gray background for a sec, fix:
 hsetroot -solid "#1D1D1D"
 
+# Additional keymap changes. See also: /etc/X11/xorg.conf.d/layouts.conf
+xmodmap ~/.Xmodmap
+
 # Udiskie for auto mounting:
 udiskie &
 
