@@ -880,11 +880,11 @@ nmap <C-c>l ys3iw)
 " nmap <C-c>h ys2b)
 " Quotes
 imap <C-c>" <Esc>hysiW"ea
-nmap <C-c>" <Esc>ysiW"a
+nmap <C-c>" <Esc>ysiW"
 imap <C-c>' <Esc>hysiW'ea
-nmap <C-c>' <Esc>ysiW'a
+nmap <C-c>' <Esc>ysiW'
 imap <C-c>] <Esc>hysiW'ea
-nmap <C-c>] <Esc>ysiW'a
+nmap <C-c>] <Esc>ysiW'
 " }}}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
