@@ -902,6 +902,14 @@ nnoremap <Leader>C :GCurrentT<CR>
 " Slap date:
 nnoremap <Leader>hd :GCurrent<CR>i<C-r>=system('date --utc <bar> tr -d "\n"')<CR><Esc>
 
+" TODO Add and close: function GAddCommit
+" function! GAddCommit()
+"     let l:fname = expand('%')
+"     !git add %
+"     :GCurrent
+"     append('iAdd ' . l:fname)
+" endfunction
+
 " Add
 nnoremap <Leader>ha :let @"=expand("%")<CR>:!git add %<CR>:GCurrent<CR>iAdd <C-r>"<Esc>
 
