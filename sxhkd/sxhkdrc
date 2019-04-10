@@ -23,12 +23,12 @@ super + g
 
 # Restart
 
-control + F12
+alt + F12
 	pkill -USR1 -x sxhkd
 
 # TODO change bind alt + F12 to something better
 
-alt + F12
+control + F12
   tmux-kill-detached
 
 # Firefox shadowstep tricks
