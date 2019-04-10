@@ -1,23 +1,4 @@
-super + F12
-	pkill -USR1 -x sxhkd
-
-ctrl + F12
-	midterm Vim ~/code/dotfiles/sxhkd/sxhkdrc
-
-alt + F12
-  urxvt -e mx upd
-
-control + F12
-  tmux-kill-detached
-
-control + ~c
-	browser-doubleyank
-
-alt + ~c
-	browser-unbookmark
-
-super + space
-	firefox-ulm
+# Cityzens
 
 super + F1
 	ship
@@ -28,10 +9,39 @@ super + F2
 super + F4
 	basso
 
+super + F12
+	midterm Vim ~/code/dotfiles/sxhkd/sxhkdrc
+
+super + F11
+	midterm upd
+
+super + space
+	firefox-ulm
+
+# Restart
+
+control + F12
+	pkill -USR1 -x sxhkd
+
+# TODO change bind alt + F12 to something better
+
+alt + F12
+  tmux-kill-detached
+
+# Firefox shadowstep tricks
+
+control + ~c
+	browser-doubleyank
+
+alt + ~c
+	browser-unbookmark
+
+# dmenu
+
 alt + F2
 	main-dmenu
 
-# Windows:
+# Throwing Windows Around:
 
 super + grave
 	punt
