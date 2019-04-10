@@ -128,6 +128,10 @@ ${1:function_name}() {
 	${2:# TODO Implement $1()
 	echo >&2 "Function under construction: $1"; exit 1}
 }
+
+: <<'BASEMENT'
+${4:$1$3}
+'BASEMENT'
 endsnippet
 
 snippet base "basename $0" i
@@ -194,6 +198,12 @@ snippet #!/bin/bash "#!/bin/bash" b
 set -o errexit
 set -o nounset
 set -o pipefail
+endsnippet
+
+snippet ba "add-basement" b
+: <<'BASEMENT'
+$0
+'BASEMENT'
 endsnippet
 
 priority 1
