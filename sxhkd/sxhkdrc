@@ -23,9 +23,8 @@ super + g
 
 # Restart
 
-# TODO say-do "Reestart sx h k d" pkill -USR1 -x sxhkd
 alt + F12
-	run-aloud pkill -USR1 -x sxhkd
+	say-do "Restart sxhkd" pkill -USR1 -x sxhkd
 
 # TODO change bind alt + F12 to something better
 
