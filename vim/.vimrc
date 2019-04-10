@@ -113,9 +113,9 @@ set listchars=tab:▸\ ,eol:¬
 set makeprg=test\ -f\ Makefile\ &&\ make\ \\\|\\\|\ make\ -C\ ..  
 
 set errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
-map <F9> :make<Return>:copen<Return>
-" Shift-F9 to !make (TODO remove when makeprg works with dwm)
-map [18;2~ :!make<CR>
+" Shift-F9 to make (TODO remove when makeprg works with dwm)
+map [18;2~ :make<Return>:copen<Return>
+map <F9> :!make<CR>
 
 autocmd vimrc Filetype java setlocal makeprg=javac\ %
 
