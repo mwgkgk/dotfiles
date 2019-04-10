@@ -139,6 +139,8 @@ function! s:chi_colo(chi)
         return s:static_colo
     elseif a:chi ==# 'doc'
         return s:static_colo
+    elseif a:chi ==# 'gums'
+        return 'nuclear'
     elseif a:chi ==# 'zepp'
         return s:static_colo
     else
