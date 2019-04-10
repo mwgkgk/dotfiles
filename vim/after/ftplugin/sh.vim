@@ -5,3 +5,4 @@
 
 nnoremap <buffer> X :.w !bash<CR>
 nnoremap <buffer> <Leader>x :.w !bash<CR>
+nnoremap <buffer> <M-x> :exec ':term ' . getline('.')<CR>
