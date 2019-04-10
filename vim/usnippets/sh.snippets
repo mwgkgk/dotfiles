@@ -211,7 +211,7 @@ BASEMENT
 endsnippet
 
 snippet us "usage" b
-echo >&2 "usage: \$0 <arg>"; exit 1
+echo >&2 "usage: \$0 ${2:<${1:arg}>}"; exit 1
 endsnippet
 
 priority 1
