@@ -25,6 +25,9 @@ super + F1
 super + F2
 	tower
 
+super + F3
+	basso
+
 alt + F2
 	main-dmenu
 
