@@ -160,7 +160,16 @@ endif
 
 " Statusline
 " the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-set statusline=\ %{winnr()}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %=\ %{expand('#:t')}\ %P
+" TODO Spelling endevour (interwebs are down)
+function! ExecutableFlagCurrentFile()
+    if executable(expand('%'))
+        return ' x'
+    else
+        return ''
+    endif
+endfunction
+
+set statusline=\ %{winnr()}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m%{ExecutableFlagCurrentFile()}\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %=\ %{expand('#:t')}\ %P
 set laststatus=2 " Show even in last window
 
 " Paste/Nopaste
