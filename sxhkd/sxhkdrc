@@ -18,6 +18,9 @@ super + F11
 super + space
 	firefox-ulm
 
+super + g
+	gums
+
 # Restart
 
 control + F12
