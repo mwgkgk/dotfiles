@@ -29,7 +29,7 @@ alt + F12
 # TODO change bind alt + F12 to something better
 
 control + F12
-  tmux-kill-detached
+	run-aloud tmux-kill-detached
 
 # Firefox shadowstep tricks
 
