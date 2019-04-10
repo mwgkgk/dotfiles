@@ -1,6 +1,9 @@
 super + F12
 	pkill -USR1 -x sxhkd
 
+ctrl + F12
+	midterm Vim ~/code/dotfiles/sxhkd/sxhkdrc
+
 alt + F12
   urxvt -e mx upd
 
