@@ -50,8 +50,7 @@ endsnippet
 
 snippet ) ")" b
 $1)
-	${0:echo "Branch under construction: $1" >&2
-	exit 1}
+	${0:echo >&2 "Branch under construction: $1"; exit 1}
 	;;
 endsnippet
 
@@ -75,7 +74,7 @@ endsnippet
 
 snippet if "if ... then (if)"
 if ${3:test ${1:$# -eq ${2:0}}}; then
-	${VISUAL}${0:echo "Branch not implemented: $3" >&2; exit 1}
+	${VISUAL}${0:echo >&2 "Branch not implemented: $3"; exit 1}
 fi
 endsnippet
 
@@ -98,7 +97,7 @@ endsnippet
 
 snippet elif "elif .. (elif)"
 elif ${2:test ${1:$# -eq 1}}; then
-	${0:echo "Branch not implemented: $2" >&2; exit 1}
+	${0:echo >&2 "Branch not implemented: $2"; exit 1}
 endsnippet
 
 snippet until "until ... (done)"
@@ -127,8 +126,7 @@ endsnippet
 snippet f "function" b
 ${1:function_name}() {
 	${2:# TODO Implement $1()
-	echo "Function under construction: $1"
-	exit 1}
+	echo >&2 "Function under construction: $1"; exit 1}
 }
 endsnippet
 
@@ -145,21 +143,20 @@ echo "${1:Stdout!}"
 endsnippet
 
 snippet p "p" b
-echo "${2:Stderr: $1!}" ${3:>&2}
+echo ${3:>&2} "${2:Stderr: $1!}"
 endsnippet
 
 snippet uc "uc" b
-echo "${2:Under construction: $1}" >&2
+echo >&2 "${2:Under construction: $1}"
 exit 1
 endsnippet
 
 snippet err "err" b
-echo "${1:Unrecognized ${2:args}: $${3:*}}" >&2
+echo >&2 "${1:Unrecognized ${2:args}: $${3:*}}"
 endsnippet
 
 snippet erre "err" b
-echo "${1:Unrecognized ${2:args}: $${3:*}}" >&2
-exit 1
+echo >&2 "${1:Unrecognized ${2:args}: $${3:*}}"; exit 1
 endsnippet
 
 snippet { "{" i
