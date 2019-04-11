@@ -12,7 +12,8 @@ xset s off
 hsetroot -solid "#1D1D1D"
 
 # Additional keymap changes. See also: /etc/X11/xorg.conf.d/layouts.conf
-xmodmap ~/.Xmodmap
+# UPD 2019-04-11 Moved to /etc/X11/xorg.conf.d/layouts.conf
+# xmodmap ~/.Xmodmap
 
 # Udiskie for auto mounting:
 udiskie &
