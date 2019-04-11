@@ -13,7 +13,8 @@ hsetroot -solid "#1D1D1D"
 
 # Additional keymap changes. See also: /etc/X11/xorg.conf.d/layouts.conf
 # UPD 2019-04-11 Moved to /etc/X11/xorg.conf.d/layouts.conf
-# xmodmap ~/.Xmodmap
+# UPD 2019-04-12 Leave only caps remap, so that it works under wine
+xmodmap ~/.Xmodmap
 
 # Udiskie for auto mounting:
 udiskie &
