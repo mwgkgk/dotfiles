@@ -9,6 +9,9 @@ super + F2
 super + F4
 	basso
 
+super + F8
+	midterm gotop
+
 super + F12
 	midterm Vim ~/code/dotfiles/sxhkd/sxhkdrc
 
