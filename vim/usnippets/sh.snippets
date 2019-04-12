@@ -150,8 +150,11 @@ snippet a "alias" b
 alias $1="$1$2"
 endsnippet
 
-snippet e "e" b
-echo "${1:Stdout!}"
+# Half works
+snippet /(^(\s*)e)|echo/ "e" r
+`!p
+if match.group(2) is not None:
+    snip.rv = match.group(2)`echo "${1:Stdout!}"
 endsnippet
 
 snippet p "p" b
