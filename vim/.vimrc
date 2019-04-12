@@ -392,6 +392,9 @@ nnoremap <Leader><Space>v :vert term<CR>
 " Neither works:
 " nnoremap <Leader><Space>V :vert term<CR><C-w><C-w><C-w>x<C-w><C-w>
 " nnoremap <Leader><Space>V :botright term
+" TODO Term c-w
+" tunmap <C-w>N
+" tnoremap <Esc><Esc> <C-w>N
 
 " repeat f/F (";" is leader)
 nnoremap <M-;> ;
