@@ -48,9 +48,9 @@ in
 esac
 endsnippet
 
-snippet ) ")" b
-$1)
-	${0:echo >&2 "Branch under construction: $1"; exit 1}
+snippet ) ")" i
+${VISUAL})
+	${0:echo >&2 "Branch under construction: ${1:${VISUAL}}"; exit 1}
 	;;
 endsnippet
 
@@ -90,8 +90,8 @@ else
 endsnippet
 
 snippet ife "ifexists" b
-if [ -f ${1:/tmp/foo.txt} ]; then
-    ${VISUAL}$0
+if test -f ${1:/tmp/${2:foo}.txt}; then
+    ${VISUAL}$2
 fi
 endsnippet
 
