@@ -36,7 +36,7 @@ control + F12
 
 # Firefox shadowstep tricks
 
-control + ~c
+control + ~x
 	browser-doubleyank
 
 alt + ~c
