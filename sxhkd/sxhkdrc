@@ -18,11 +18,17 @@ super + F12
 super + F11
 	midterm upd
 
-super + space
-	firefox-ulm
-
 super + g
 	gums
+
+super + space
+	technodrome
+
+super + Return
+	firefox-ulm
+
+super + shift + Return
+	zepp
 
 # Restart
 
@@ -36,7 +42,7 @@ control + F12
 
 # Firefox shadowstep tricks
 
-control + ~x
+control + ~c
 	browser-doubleyank
 
 alt + ~c
