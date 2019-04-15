@@ -26,6 +26,7 @@ sh ~/.fehbg &
 #xcompmgr -c -f -r 10 -D 2 &
 
 # conky -c ~/.config/conky/conky.conf &
+conky -c ~/.config/conky/conky-birds.conf &
 
 # Pulse:
 # start-pulseaudio-x11
