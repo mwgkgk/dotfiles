@@ -1097,6 +1097,7 @@ cab man Man
 Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
+Plug 'rhysd/reply.vim'
 
 " Go
 Plug 'fatih/vim-go', { 'for' : 'go' }
