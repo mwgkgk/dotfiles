@@ -17,6 +17,19 @@ if match.group(1) is None:
 ;; }}}
 endsnippet
 
+snippet "^(\()?sf" "fn-spec" r
+(defn-spec ${1:fname} ${2:integer?}
+	[${3:a integer?}]
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+
+;; {{{
+#_(do
+		($1)${VISUAL})
+;; }}}
+endsnippet
+
 snippet ba "basement" b
 ;; {{{
 #_(do
