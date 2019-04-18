@@ -25,10 +25,10 @@ super + m
 	zepp
 
 super + space
-	technodrome
+	firefox-ulm
 
 super + Return
-	firefox-ulm
+	technodrome
 
 # Restart
 
