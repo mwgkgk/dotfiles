@@ -21,14 +21,14 @@ super + F11
 super + g
 	gums
 
-super + m
-	zepp
+super + 2
+	technodrome
 
 super + space
 	firefox-ulm
 
 super + Return
-	technodrome
+	zepp
 
 # Restart
 
