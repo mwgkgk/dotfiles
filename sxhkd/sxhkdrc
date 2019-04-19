@@ -30,6 +30,11 @@ super + space
 super + Return
 	zepp
 
+# Paste
+
+super + ctrl + v
+	firefox-dmenu-from-clipboard
+
 # Restart
 
 alt + F12
