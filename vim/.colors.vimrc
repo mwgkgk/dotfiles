@@ -143,6 +143,8 @@ function! s:chi_colo(chi)
         return 'nuclear'
     elseif a:chi ==# 'zepp'
         return s:static_colo
+    elseif a:chi ==# 'temple'
+        return 'orbital'
     else
         " Unrecognized non-empty $CHI
         return 'desert'
