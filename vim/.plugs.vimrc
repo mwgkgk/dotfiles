@@ -900,7 +900,7 @@ command! GCurrentT :exe "Gcommit -v -q %:p"
 nnoremap <Leader>C :GCurrentT<CR>
 
 " Slap date:
-nnoremap <Leader>hd :GCurrent<CR>i<C-r>=system('date --utc <bar> tr -d "\n"')<CR><Esc>
+nnoremap <Leader>hd :GCurrent<CR>i<C-r>=system('date-utc <bar> tr -d "\n"')<CR><Esc>
 
 " TODO Add and close: function GAddCommit
 " function! GAddCommit()
