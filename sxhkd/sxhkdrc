@@ -21,11 +21,14 @@ super + F11
 super + g
 	gums
 
+super + o
+	firefox-ulm
+
 super + Tab
 	technodrome
 
 super + space
-	firefox-ulm
+	temple
 
 super + Return
 	zepp
