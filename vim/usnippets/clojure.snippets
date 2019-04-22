@@ -69,3 +69,8 @@ snippet "(\()?:?req" "req" r
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
+
+snippet ns "ns" b
+(ns $1
+	$0)
+endsnippet
