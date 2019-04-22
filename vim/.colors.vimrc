@@ -29,7 +29,7 @@ augroup END
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'hell'
-let s:static_colo = 'thief'
+" let s:static_colo = 'thief'
 
 " let s:static_colo = 'Tomorrow'
 
@@ -47,7 +47,7 @@ let s:static_colo = 'thief'
 " let s:static_colo = 'github'
 " let s:static_colo = 'pink'
 
-" let s:static_colo = 'orbital'
+let s:static_colo = 'orbital'
 
 " let s:static_colo = 'kalisi-dark'
 
@@ -140,11 +140,11 @@ function! s:chi_colo(chi)
     elseif a:chi ==# 'doc'
         return s:static_colo
     elseif a:chi ==# 'gums'
-        return 'nuclear'
+        return s:static_colo
     elseif a:chi ==# 'zepp'
         return s:static_colo
     elseif a:chi ==# 'temple'
-        return 'orbital'
+        return s:static_colo
     else
         " Unrecognized non-empty $CHI
         return 'desert'
