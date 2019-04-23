@@ -65,7 +65,13 @@ if match.group(1) is None:
 endsnippet
 
 snippet "(\()?:?req" "req" r
-(:require ${0:[${3:${1:clojure.string} :as ${2:str}}]}`!p
+(:require ${0:[${4:${1:clojure.core.match} ${3::refer [${2:match}]}}]}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?m" "match" r
+(match ${0:${VISUAL}$1}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
