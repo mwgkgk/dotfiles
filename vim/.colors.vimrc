@@ -47,7 +47,7 @@ augroup END
 " let s:static_colo = 'github'
 " let s:static_colo = 'pink'
 
-let s:static_colo = 'orbital'
+" let s:static_colo = 'orbital'
 
 " let s:static_colo = 'kalisi-dark'
 
@@ -57,7 +57,7 @@ let s:static_colo = 'orbital'
 " let s:static_colo = 'sunday256'
 " let s:static_colo = 'ivan'
 
-" let s:static_colo = 'mwgkgk'
+let s:static_colo = 'mwgkgk'
 
 " let s:static_colo = 'seoul256-light'
 
