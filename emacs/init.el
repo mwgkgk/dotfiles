@@ -168,8 +168,16 @@
   (define-key evil-normal-state-map (kbd "q") 'evil-jump-item))
 
 
+;;; Snippets
+
+
+(use-package yasnippet
+  :init
+  (yas-global-mode 1))
+
 
 ;;; Parens
+
 
 (use-package paredit
   :init
