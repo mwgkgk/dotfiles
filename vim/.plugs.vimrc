@@ -978,12 +978,11 @@ nmap <Leader>hs <Plug>GitGutterStageHunk
 nnoremap <Leader>gb :!git back<CR>
 
 " Git-mes
-nnoremap <Leader>gm :!git mes<CR>
 nnoremap <Leader>gr :!git mes<CR>
 
 " Git-last-message
-nmap <silent> <Leader>gl :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>
-nmap <silent> <Leader>gL :echo "<C-r>=system('git log -1')<CR>"<CR>
+nmap <silent> <Leader>gm :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>
+nmap <silent> <Leader>gl :echo "<C-r>=system('git log -1')<CR>"<CR>
 
 " LeaderLeader to stage hunk and commit: (requires vim-fugitive)
 autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>GitGutterStageHunk:Gcommit<CR>p:wq<CR><Space>
