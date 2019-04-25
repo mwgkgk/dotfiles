@@ -49,8 +49,8 @@ esac
 endsnippet
 
 snippet ) ")" i
-${VISUAL})
-	${0:echo >&2 "Branch under construction: ${1:${VISUAL}}"; exit 1}
+${1:${VISUAL}})
+	${0:echo >&2 "Branch under construction: $1"; exit 1}
 	;;
 endsnippet
 
