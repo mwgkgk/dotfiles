@@ -790,7 +790,7 @@ let g:peekaboo_compact = 1
 " }}}
 Plug 'junegunn/gv.vim' " {{{
 " HH: Log in file
-nnoremap <Leader>hh :GV!<CR>
+nnoremap <Leader>gL :GV!<CR>
 " HL: Big log
 nnoremap <Leader>hl :GV<CR>
 " }}}
