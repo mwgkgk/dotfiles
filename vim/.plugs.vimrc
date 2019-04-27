@@ -974,6 +974,9 @@ nmap <M-n> <Plug>GitGutterNextHunk
 nmap <Leader>hp <Plug>GitGutterStageHunk
 nmap <Leader>hs <Plug>GitGutterStageHunk
 
+" Stage and verbose commit:
+nmap <Leader>hh <Plug>GitGutterStageHunk:GCurrentT<CR>
+
 " Git-back
 nnoremap <Leader>gb :!git back<CR>
 
