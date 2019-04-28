@@ -15,7 +15,7 @@
 ;; (set-face-attribute 'default nil :font "Anka/Coder" :height 89)
 ;; (set-face-attribute 'default nil :font "scientifica")
 
-(load-theme 'tsdh-light t)
+(load-theme 'tango-dark t)
 
 ;; TODO add nlinum-relative and hook to evil mode switch
 ;; (global-display-line-numbers-mode)
