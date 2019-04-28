@@ -208,6 +208,8 @@
 
   (setq source-directory "~/.ghq/github.com/emacs-mirror/emacs"))
 
+(global-set-key (kbd "C-h C-f") 'find-function)
+
 ;; Clojure
 
 (use-package cider)
