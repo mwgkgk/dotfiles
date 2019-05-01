@@ -132,7 +132,7 @@ function! s:chi_colo(chi)
     elseif a:chi ==# 'smuggler'
         return 'hell'
     elseif a:chi ==# 'druid'
-        return 'druid'
+        return 'fadedvision'
     elseif a:chi ==# 'fox'
         return 'thief'
     elseif a:chi ==# 'motor'
