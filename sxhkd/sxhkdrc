@@ -27,6 +27,9 @@ super + g
 super + o
 	firefox-ulm
 
+super + shift + o
+	girl
+
 super + Tab
 	technodrome
 
