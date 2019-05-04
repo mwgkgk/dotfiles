@@ -1,7 +1,6 @@
-
-
+;;; ---------
 ;;; Interface
-
+;;; ---------
 
 ;; Setting this section early in the file is intentional, to have
 ;; interface modifications applied early.
@@ -23,9 +22,9 @@
 (setq inhibit-startup-message t
       inhibit-splash-screen t)
 
-
+;;; ---------
 ;;; Packaging
-
+;;; ---------
 
 ;; Bootstrap the package manager, straight.el.
 (defvar bootstrap-version)
@@ -42,33 +41,23 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-
 ;; Package `use-package' provides a handy macro by the same name which
 ;; is essentially a wrapper around `with-eval-after-load' with a lot
 ;; of handy syntactic sugar and useful features.
 (straight-use-package 'use-package)
-
 
 ;; When configuring a feature with `use-package', also tell
 ;; straight.el to install a package of the same name, unless otherwise
 ;; specified using the `:straight' keyword.
 (setq straight-use-package-by-default t)
 
-
 ;; Tell `use-package' to always load features lazily unless told
 ;; otherwise. If `:demand' is present, the loading is eager.
 (setq use-package-always-defer t)
 
-
-;;; Colors
-
-
-;; (use-package green-is-the-new-black-theme
-;;   :init
-;;   (load-theme 'green-is-the-new-black t))
-
+;;; ----
 ;;; Fuzz
-
+;;; ----
 
 ;; Package `ivy' provides a user interface for choosing from a list of
 ;; options by typing a query to narrow the list, and then selecting
@@ -81,7 +70,6 @@
   (setq ivy-re-builders-alist
 	'((t . ivy--regex-fuzzy))))
 
-
 ;; Package `prescient' is a library for intelligent sorting and
 ;; filtering in various contexts.
 (use-package prescient
@@ -89,7 +77,6 @@
 
   ;; Remember usage statistics across Emacs sessions
   (prescient-persist-mode 1))
-
 
 ;; Package `ivy-prescient' provides intelligent sorting and filtering
 ;; for candidates in Ivy menus.
@@ -101,9 +88,9 @@
   ;; Use `prescient' for Ivy menus.
   (ivy-prescient-mode 1))
 
-
+;;; ----------
 ;;; Completion
-
+;;; ----------
 
 (use-package company
   :defer 3
@@ -121,9 +108,9 @@
              :config
              (company-prescient-mode +1))
 
-
+;;; ---------
 ;;; Auto-pair
-
+;;; ---------
 
 (electric-pair-mode 1)
 ; Doesn't work
@@ -133,8 +120,9 @@
 ;         (?\{ . ?\})
 ;         (?\[ . ?]})))
 
+;;; ----
 ;;; Evil
-
+;;; ----
 
 (use-package evil
   :init
@@ -167,21 +155,21 @@
 
   (define-key evil-normal-state-map (kbd "q") 'evil-jump-item))
 
-
+;;; --------
 ;;; Snippets
-
+;;; --------
 
 (use-package yasnippet
   :init
   (yas-global-mode 1))
 
-
+;;; ------
 ;;; Parens
-
+;;; ------
 
 (use-package paredit
   :init
-  
+
   (use-package paredit-everywhere
     :init
     (add-hook 'prog-mode-hook 'paredit-everywhere-mode)))
@@ -192,13 +180,15 @@
 ;; (straight-use-package 'lispyville)
 ;; (add-hook 'lispy-mode-hook #'lispyville-mode)
 
-
+;;; ---------
 ;;; Languages
-
+;;; ---------
 
 (use-package slime)
 
+;; -----
 ;; Elisp
+;; -----
 
 ;; Navigate emacs sources
 (use-package elisp-slime-nav
@@ -210,13 +200,15 @@
 
 (global-set-key (kbd "C-h C-f") 'find-function)
 
+;; -------
 ;; Clojure
+;; -------
 
 (use-package cider)
 
-
+;;; --------
 ;;; Behavior
-
+;;; --------
 
 (setq vc-follow-symlinks t)
 
@@ -237,7 +229,8 @@
 (setq recentf-max-menu-items 25)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
-
-;; Server
+;;; ------
+;;; Server
+;;; ------
 
 (server-start)
