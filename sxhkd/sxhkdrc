@@ -28,7 +28,7 @@ super + o
 	firefox-ulm
 
 super + shift + o
-	girl
+	firefox-default
 
 super + Tab
 	technodrome
