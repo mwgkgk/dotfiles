@@ -160,7 +160,6 @@ endif
 
 " Statusline
 " the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
-" TODO Spelling endevour (interwebs are down)
 function! ExecutableFlagCurrentFile()
     if executable(expand('%'))
         return ' x'
