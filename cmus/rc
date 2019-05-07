@@ -1,7 +1,7 @@
 cd ~/music/
 view library
 
-colorscheme gruvbox-light
+colorscheme gruvbox-alt
 set lib_sort=filename
 
 bind -f common q :q
