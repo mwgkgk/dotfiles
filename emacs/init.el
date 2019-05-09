@@ -9,12 +9,13 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
-(set-face-attribute 'default nil :font "Iosevka SS04" :height 79)
-;; (set-face-attribute 'default nil :font "Anka/Coder Narrow" :height 89)
+;; (set-face-attribute 'default nil :font "Iosevka SS04" :height 79)
+(set-face-attribute 'default nil :font "Hack" :height 59)
 ;; (set-face-attribute 'default nil :font "Anka/Coder" :height 89)
 ;; (set-face-attribute 'default nil :font "scientifica")
 
-(load-theme 'tango-dark t)
+;; (load-theme 'tango-dark t)
+(load-theme 'dichromacy t)
 
 ;; TODO add nlinum-relative and hook to evil mode switch
 ;; (global-display-line-numbers-mode)
