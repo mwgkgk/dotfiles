@@ -36,6 +36,9 @@ super + Tab
 super + space
 	temple
 
+super + BackSpace
+	rogue
+
 super + Return
 	zepp
 
