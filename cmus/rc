@@ -1,5 +1,4 @@
 cd ~/music/
-view library
 
 colorscheme gruvbox-alt
 set lib_sort=filename
