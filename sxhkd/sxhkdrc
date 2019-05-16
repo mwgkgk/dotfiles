@@ -10,19 +10,22 @@ super + F4
 	basso
 
 super + F5
-	midterm gotop
+	girl gotop
 
 super + F8
-	midterm alsamixer -c 0
+	girl alsamixer -c 0
 
 super + F12
-	midterm Vim ~/code/dotfiles/sxhkd/sxhkdrc
+	girl Vim ~/code/dotfiles/sxhkd/sxhkdrc
 
 super + F11
-	midterm upd
+	girl upd
 
 super + g
 	gums
+
+super + t
+	temple
 
 super + o
 	firefox-ulm
@@ -30,11 +33,11 @@ super + o
 super + shift + o
 	firefox-default
 
+super + space
+	girl
+
 super + Tab
 	technodrome
-
-super + t
-	temple
 
 super + BackSpace
 	rogue
