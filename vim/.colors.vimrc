@@ -128,6 +128,8 @@ function! s:chi_colo(chi)
         return s:static_colo
     elseif a:chi ==# 'ship'
         return s:static_colo
+    elseif a:chi ==# 'girl'
+        return 'deepblue'
     elseif a:chi ==# 'silk'
         return s:static_colo
     elseif a:chi ==# 'smuggler'
