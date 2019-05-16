@@ -24,6 +24,9 @@ super + F11
 super + g
 	gums
 
+super + c
+	cmums
+
 super + t
 	temple
 
