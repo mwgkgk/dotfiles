@@ -33,6 +33,9 @@ conky -c ~/.config/conky/conky-birds.conf &
 pulseaudio --start &
 #set statusbar
 
+# Unmute mixer when loading from tty1:
+alsa-unmute &
+
 # Monitors:
 # xrandr --output DVI-I-2 --auto
 # xrandr --output DVI-I-3 --auto --primary --left-of DVI-I-2
