@@ -30,11 +30,8 @@ conky -c ~/.config/conky/conky-birds.conf &
 
 # Pulse:
 # start-pulseaudio-x11
-pulseaudio --start &
+pulseaudio --start && alsa-unmute &
 #set statusbar
-
-# Unmute mixer when loading from tty1:
-alsa-unmute &
 
 # Monitors:
 # xrandr --output DVI-I-2 --auto
