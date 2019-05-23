@@ -77,6 +77,15 @@ if match.group(1) is None:
 endsnippet
 
 snippet ns "ns" b
-(ns $1
+(ns $1.`!p
+snip.rv = snip.basename`
 	$0)
+endsnippet
+
+snippet leg "league" b
+(def league
+	{:name "${1:`!p
+snip.rv = snip.basename`}"
+	$0
+	})
 endsnippet
