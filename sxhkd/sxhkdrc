@@ -33,7 +33,7 @@ super + t
 super + o
 	firefox-ulm
 
-super + shift + o
+super + z
 	firefox-default
 
 super + space
