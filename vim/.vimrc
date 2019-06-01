@@ -72,6 +72,7 @@ set wildignore=*.o,*~,*.pyc,*.jpg,*.jpeg,*.JPG,*.png,*.xcf,*.gif,*.bmp,*.pdf,*.b
 " Folding
 set foldmethod=indent
 set foldlevel=99
+set foldcolumn=1
 
 " Buffers
 set switchbuf=useopen,usetab
