@@ -1,25 +1,20 @@
 `tree -atrhn --du --filelimit 20 -I '.git|README.mkd' -o README.mkd`
 ```
 .
-├── [ 13K]  emacs
-│   ├── [4.7K]  init.el
-│   └── [4.0K]  init.el.old
-├── [5.2K]  repl
-│   ├── [ 211]  profiles.clj
-│   ├── [ 859]  .iex.exs
-│   ├── [  48]  .lambda-term-inputrc
-│   └── [ 119]  .minrc
-├── [129K]  vim
+├── [130K]  vim
 │   ├── [ 19K]  .vimrc
-│   ├── [ 52K]  .plugs.vimrc
-│   ├── [4.2K]  .colors.vimrc
-│   ├── [4.0K]  skeletons [35 entries exceeds filelimit, not opening dir]
+│   ├── [ 53K]  .plugs.vimrc
+│   ├── [4.4K]  .colors.vimrc
+│   ├── [4.0K]  colors [95 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  skeletons [37 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  usnippets [80 entries exceeds filelimit, not opening dir]
 │   ├── [ 11K]  .oldconfigs.vimrc
 │   ├── [4.8K]  plugin
 │   │   ├── [ 362]  files_by_date.vim
 │   │   └── [ 450]  golf.vim
 │   ├── [ 17K]  after
-│   │   ├── [4.6K]  ftplugin
+│   │   ├── [5.1K]  ftplugin
+│   │   │   ├── [ 451]  sh.vim
 │   │   │   ├── [  26]  fish.vim
 │   │   │   ├── [  64]  c.vim
 │   │   │   ├── [  69]  clojure.vim
@@ -34,12 +29,37 @@
 │   │   └── [8.4K]  syntax
 │   │       ├── [ 275]  scheme.vim
 │   │       └── [4.1K]  min.vim
-│   ├── [4.0K]  usnippets [79 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  colors [93 entries exceeds filelimit, not opening dir]
 │   ├── [4.4K]  ftdetect
 │   │   ├── [ 193]  lisp.vim
 │   │   └── [ 177]  dash.vim
 │   └── [ 710]  filetype.vim
+├── [ 12K]  conky
+│   ├── [1.9K]  conky-birds.conf
+│   ├── [2.7K]  conky.conf
+│   └── [3.0K]  conky-dual.conf
+├── [ 14K]  emacs
+│   ├── [5.5K]  init.el
+│   └── [4.0K]  init.el.old
+├── [4.3K]  cmus
+│   └── [ 262]  rc
+├── [ 14K]  user
+│   ├── [1.8K]  .xinitrc
+│   ├── [1.2K]  .bashrc
+│   ├── [ 125]  .Xmodmap
+│   ├── [2.6K]  .Xresources
+│   ├── [ 458]  layouts.conf
+│   ├── [1.7K]  .asoundrc
+│   ├── [ 170]  .bash_profile
+│   ├── [1.8K]  .bash_aliases
+│   ├── [  61]  .inputrc
+│   └── [ 305]  .Xdefaults
+├── [4.8K]  sxhkd
+│   └── [ 826]  sxhkdrc
+├── [5.2K]  repl
+│   ├── [ 211]  profiles.clj
+│   ├── [ 859]  .iex.exs
+│   ├── [  48]  .lambda-term-inputrc
+│   └── [ 119]  .minrc
 ├── [ 43K]  vifm
 │   ├── [ 11K]  vifmrc
 │   └── [ 28K]  colors
@@ -52,32 +72,22 @@
 │       ├── [1.2K]  matrix.vifm
 │       ├── [3.2K]  Foggy.vifm
 │       └── [3.2K]  Default.vifm
-├── [ 13K]  user
-│   ├── [1.6K]  .xinitrc
-│   ├── [2.6K]  .Xresources
-│   ├── [1.7K]  .asoundrc
-│   ├── [ 170]  .bash_profile
-│   ├── [1.8K]  .bash_aliases
-│   ├── [1.1K]  .bashrc
-│   ├── [  61]  .inputrc
-│   └── [ 305]  .Xdefaults
-├── [9.3K]  tmux
-│   └── [5.3K]  .tmux.conf
-├── [4.3K]  sxhkd
-│   └── [ 340]  sxhkdrc
+├── [9.2K]  tmux
+│   └── [5.2K]  .tmux.conf
 ├── [4.7K]  git
 │   └── [ 751]  .gitconfig
-├── [ 50K]  fish
+├── [ 51K]  fish
 │   ├── [ 189]  fishfile
 │   ├── [4.3K]  tools
+│   │   ├── [  32]  shop.fish
 │   │   ├── [  43]  heap.fish
 │   │   └── [ 250]  do-thing.fish
+│   ├── [ 436]  config.fish
 │   ├── [4.0K]  aliases [47 entries exceeds filelimit, not opening dir]
 │   ├── [ 16K]  config
 │   │   ├── [ 11K]  fish_user_key_bindings.fish
 │   │   ├── [ 880]  fish_prompt.fish
 │   │   └── [ 261]  fish_title.fish
-│   ├── [ 387]  config.fish
 │   └── [ 22K]  completions
 │       └── [ 18K]  rustup.fish
 ├── [6.3K]  ctags
@@ -86,9 +96,6 @@
 │   └── [  38]  .rustfmt.toml
 ├── [ 13K]  alacritty
 │   └── [9.2K]  alacritty.yml
-├── [9.7K]  conky
-│   ├── [2.7K]  conky.conf
-│   └── [3.0K]  conky-dual.conf
 ├── [1.2K]  install.sh
 ├── [   8]  .gitignore
 ├── [6.0K]  zsh
@@ -110,7 +117,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 367K used in 31 directories, 77 files
+ 377K used in 32 directories, 83 files
 ```
 
-> Generated on Friday, April  5, 2019 at 05:48:45 AM UTC.
+> Generated on Thursday, June  6, 2019 at 02:10:34 AM UTC.
