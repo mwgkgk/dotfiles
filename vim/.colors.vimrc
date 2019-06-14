@@ -28,7 +28,7 @@ augroup END
 
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
-" let s:static_colo = 'hell'
+let s:static_colo = 'hell'
 " let s:static_colo = 'thief'
 " let s:static_colo = 'hangar-lab'
 
@@ -59,7 +59,7 @@ augroup END
 " let s:static_colo = 'ivan'
 
 " let s:static_colo = 'mwgkgk'
-let s:static_colo = 'moot'
+" let s:static_colo = 'moot'
 
 " let s:static_colo = 'seoul256-light'
 
