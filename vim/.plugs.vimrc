@@ -970,9 +970,8 @@ nmap <M-n> <Plug>GitGutterNextHunk
 " call submode#enter_with('GitGutterPrevNext', 'n', '', ';j', ':GitGutterNextHunk')
 " call submode#map(       'GitGutterPrevNext', 'n', '',  'j', ':GitGutterNextHunk')
 
-" More symmetry:
+" Hunk put:
 nmap <Leader>hp <Plug>GitGutterStageHunk
-nmap <Leader>hs <Plug>GitGutterStageHunk
 
 " Stage and verbose commit:
 nmap <Leader>hh <Plug>GitGutterStageHunk:GCurrentT<CR>
@@ -987,8 +986,11 @@ nnoremap <Leader>gr :!git mes<CR>
 nmap <silent> <Leader>gm :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>
 nmap <silent> <Leader>gl :echo "<C-r>=system('git log -1')<CR>"<CR>
 
-" Amend noedit
+" Git slurp: for staged hunks
 nnoremap <Leader>gs :!git commit --amend --no-edit<CR>
+
+" Hunk slurp: Stage hunk and amend noedit
+nmap <Leader>hs <Plug>GitGutterStageHunk:!git commit --amend --no-edit<CR>
 
 " LeaderLeader to stage hunk and commit: (requires vim-fugitive)
 autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>GitGutterStageHunk:Gcommit<CR>p:wq<CR><Space>
