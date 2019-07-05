@@ -21,6 +21,9 @@ super + F12
 super + F11
 	girl upd
 
+super + f
+	smuggler
+
 super + g
 	gums
 
@@ -30,16 +33,22 @@ super + c
 super + t
 	temple
 
+super + shift + i
+	fox
+
 super + o
 	firefox-ulm
 
 super + z
 	firefox-default
 
-super + space
+super + backslash
 	girl
 
-super + Tab
+super + semicolon
+	silk
+
+super + space
 	technodrome
 
 super + BackSpace
@@ -47,6 +56,15 @@ super + BackSpace
 
 super + Return
 	zepp
+
+super + Delete
+	doc
+
+super + Insert
+	motor
+
+alt + shift + Return
+	druid
 
 # Paste
 
