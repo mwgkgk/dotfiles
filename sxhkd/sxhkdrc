@@ -73,7 +73,7 @@ alt + ~c
 
 # dmenu
 
-alt + F2
+super + equal
 	main-dmenu
 
 # Throwing Windows Around:
