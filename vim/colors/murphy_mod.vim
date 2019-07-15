@@ -19,13 +19,13 @@ hi Constant     term=underline ctermfg=118 guifg=White   gui=NONE
 hi Identifier   term=underline ctermfg=LightCyan  guifg=#00ffff
 hi Ignore                      ctermfg=black      guifg=bg
 hi PreProc      term=underline ctermfg=LightBlue  guifg=Wheat
-hi Search       term=reverse                      guifg=white   guibg=Blue
+hi Search       term=reverse   ctermbg=11         guifg=white   guibg=Blue
 " hi Special      term=bold      ctermfg=LightRed   guifg=magenta
 hi Special		ctermfg=180	   ctermbg=NONE	cterm=NONE
-hi Statement    term=bold      ctermfg=Yellow     guifg=#ffff00 gui=NONE
+hi Statement    term=bold      ctermfg=181     guifg=#ffff00 gui=NONE
 hi Type                        ctermfg=LightGreen guifg=grey    gui=none
 hi Error        term=reverse   ctermbg=Red    ctermfg=White guibg=Red  guifg=White
-hi Todo         term=standout  ctermbg=Yellow ctermfg=Black guifg=Blue guibg=Yellow
+hi Todo         term=standout  ctermbg=181 ctermfg=Black guifg=Blue guibg=Yellow
 " From the source:
 hi Cursor                                         guifg=Orchid  guibg=fg
 hi Directory    term=bold      ctermfg=LightCyan  guifg=Cyan
