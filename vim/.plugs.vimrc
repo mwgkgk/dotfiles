@@ -1256,6 +1256,7 @@ let g:vlime_window_settings = {
 augroup lisp.plugs.vimrc
     autocmd!
     autocmd FileType lisp nnoremap <silent> <buffer> X :call vlime#plugin#SendToREPL(vlime#ui#CurExprOrAtom())<cr>
+    autocmd FileType lisp nnoremap <silent> <buffer> <C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui#CurAtom())<cr>
 augroup END
 " }}}
 
