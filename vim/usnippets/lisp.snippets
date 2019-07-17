@@ -4,9 +4,11 @@ snippet imp "import" b
 (import ${1:lua/math} (${2:random}))$0
 endsnippet
 
-snippet /^(\s|\()*(f|def)/ "defun" r
+snippet "^(\()?f" "f" r
 (defun ${1:name} ($2)
-	${0:nil})
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 snippet /^(\s)*if/ "if" b
