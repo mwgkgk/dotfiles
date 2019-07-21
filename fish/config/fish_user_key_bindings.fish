@@ -472,12 +472,12 @@ function fish_user_key_bindings
 
     # M-~ to fdz-dir ~
     bind à bind_fdz_dir_home
-    # M-s to fdz-dir ~/shop/
-    bind ó bind_fdz_dir_shop
+    # M-S-s to fdz-dir ~/shop/
+    bind Ó bind_fdz_dir_shop
     # M-c to fdz-dir ~/shop/cases/
     bind ã bind_fdz_dir_cases
-    # M-x to fdz-dir ~/shop/ink/
-    bind ø bind_fdz_dir_ink
+    # M-S-x to fdz-dir ~/shop/ink/
+    bind Ø bind_fdz_dir_ink
     # M-q to fdz-dir ~/.ghq/
     bind ñ bind_fdz_dir_ghq
     # M-w to fdz-dir .
@@ -512,10 +512,10 @@ function fish_user_key_bindings
     bind ç bind_fdz_guns
     # M-a
     bind á bind_fdz_vim_ark
-    # M-S-s
-    bind Ó bind_fdz_vim_shop
-    # M-S-x
-    bind Ø bind_fdz_vim_ink
+    # M-s
+    bind ó bind_fdz_vim_shop
+    # M-x
+    bind ø bind_fdz_vim_ink
 
     # Move \ee to \ex
     bind \ex edit_command_buffer
