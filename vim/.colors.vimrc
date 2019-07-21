@@ -16,7 +16,7 @@ augroup END
 " let s:static_colo = 'fisa'
 
 " let s:static_colo = 'grind'
-let s:static_colo = 'murphy_mod'
+" let s:static_colo = 'murphy_mod'
 " let s:static_colo = 'devbox-dark-256-lighter'
 " let s:static_colo = 'zenburn'
 " let s:static_colo = 'devbox-dark-256'
@@ -80,7 +80,7 @@ let s:static_colo = 'murphy_mod'
 
 " let s:static_colo = 'morning'
 
-" let s:static_colo = 'gruvbox-dark'
+let s:static_colo = 'gruvbox-dark'
 " }}}
 
 " flex {{{
