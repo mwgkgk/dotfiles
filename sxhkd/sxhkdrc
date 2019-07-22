@@ -92,7 +92,7 @@ alt + ~c
 # dmenu
 
 super + equal
-	main-dmenu
+	run-menu
 
 # Throwing Windows Around:
 
