@@ -1248,6 +1248,7 @@ Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' } " {{{
 " autocmd plugs.vimrc FileType lisp <silent> <buffer> <LocalLeader>gi :call vlime#plugin#InteractionMode()<CR>
 " TODO <LocalLeader><LocalLeader> for <LocalLeader>st
 " let g:vlime_enable_autodoc = v:true
+let g:vlime_cl_impl = "ccl"
 let g:vlime_window_settings = {
         \ 'repl': {
             \ 'size': 17,
