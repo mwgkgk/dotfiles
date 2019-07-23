@@ -43,13 +43,13 @@ augroup END
 " let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
-let s:static_colo = 'alduin'
+" let s:static_colo = 'alduin'
 
 " let s:static_colo = 'apples'
 " let s:static_colo = 'github'
 " let s:static_colo = 'pink'
 
-" let s:static_colo = 'orbital'
+let s:static_colo = 'orbital'
 
 " let s:static_colo = 'kalisi-dark'
 
