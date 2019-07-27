@@ -91,7 +91,7 @@ alt + ~c
 
 # dmenu
 
-super + equal
+super + minus
 	run-menu
 
 # Throwing Windows Around:
