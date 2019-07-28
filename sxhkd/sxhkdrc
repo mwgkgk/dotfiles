@@ -15,11 +15,11 @@ super + F5
 super + F8
 	girl alsamixer -c 0
 
+super + F9
+	girl upd
+
 super + F12
 	girl Vim ~/code/dotfiles/sxhkd/sxhkdrc
-
-super + F11
-	girl upd
 
 super + f
 	smuggler
