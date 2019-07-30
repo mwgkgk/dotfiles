@@ -9,8 +9,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet /^(\s)*if/ "if" b
-(if ($1)
+snippet /^(\s)*if/ "if" br
+`!p
+if match.group(1) is None:
+	snip.rv = ""
+else:
+	snip.rv = match.group(1) + " "`(if ($1)
 	${0:nil})
 endsnippet
 
