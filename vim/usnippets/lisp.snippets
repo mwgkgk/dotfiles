@@ -9,6 +9,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet ba "basement" b
+#+nil
+(progn
+	$0)
+endsnippet
+
 snippet /^(\s)*if/ "if" br
 `!p
 if match.group(1) is None:
