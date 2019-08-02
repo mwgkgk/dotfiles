@@ -249,7 +249,7 @@ nnoremap <C-W># :sp #<CR>
 nnoremap <Space>+ 10<C-W>+
 nnoremap <Space>- 10<C-W>-
 " Prev window:
-nnoremap <C-w><C-w> <C-w><Space>
+nmap <C-w><C-w> <C-w>p
 " Fold everything:
 nnoremap z<Space> zM
 " Go to window by winnr()

@@ -329,15 +329,21 @@ Plug 'andymass/vim-matchup' " {{{
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/yankwin.vim' " {{{
 let g:yankwin_default_yank_mappings = 0
-nnoremap <c-w>gy  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 0})<cr>
-nnoremap <c-w>y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 0})<cr>
-nnoremap <c-w>gY  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 1})<cr>
-nnoremap <c-w>Y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 1})<cr>
+nnoremap <Space>gy  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 0})<cr>
+nnoremap <Space>y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 0})<cr>
+nnoremap <Space>gY  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 1})<cr>
+nnoremap <Space>Y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 1})<cr>
 let g:yankwin_default_delete_mappings = 0
-nnoremap <c-w>gd  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 0})<cr>
-nnoremap <c-w>d :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 0})<cr>
-nnoremap <c-w>gD  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 1})<cr>
-nnoremap <c-w>D :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 1})<cr>
+nnoremap <Space>gd  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 0})<cr>
+nnoremap <Space>d :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 0})<cr>
+nnoremap <Space>gD  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 1})<cr>
+nnoremap <Space>D :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 1})<cr>
+let g:yankwin_default_paste_mappings = 0
+nnoremap <Space><c-p> :call yankwin#Paste({'edit_command': 'edit'})<cr>
+nnoremap <Space>p     :call yankwin#Paste({'edit_command': 'rightbelow split'})<cr>
+nnoremap <Space>P     :call yankwin#Paste({'edit_command': 'leftabove split'})<cr>
+nnoremap <Space>gp    :call yankwin#Paste({'edit_command': 'tab split'})<cr>
+nnoremap <Space>gP    :call yankwin#Paste({'edit_command': (tabpagenr() - 1).'tab split'})<cr>
 " }}}
 Plug 'AndrewRadev/exercism.vim'
 Plug 'AndrewRadev/whitespaste.vim'
