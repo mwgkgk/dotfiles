@@ -4,7 +4,7 @@ endsnippet
 
 snippet "^(\()?f" "f" r
 (defun ${1:name} ($2)
-	${0:nil}`!p
+	${3:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
