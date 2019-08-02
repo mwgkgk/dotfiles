@@ -491,8 +491,8 @@ let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3
 " }}}
 Plug 'terryma/vim-multiple-cursors' " {{{
 let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key = '<C-l>'
-let g:multi_cursor_prev_key = '<C-h>'
+let g:multi_cursor_next_key = 'L'
+let g:multi_cursor_prev_key = 'H'
 let g:multi_cursor_skip_key = '<C-x>'
 let g:multi_cursor_quit_key = '<Esc>'
 " }}}
@@ -810,24 +810,24 @@ let g:tlWindowPosition = 0
 " }}}
 
 Plug 't9md/vim-textmanip' " {{{
-xmap <C-j> <Plug>(textmanip-move-down)
-xmap <C-k> <Plug>(textmanip-move-up)
-xmap <C-h> <Plug>(textmanip-move-left)
-xmap <C-l> <Plug>(textmanip-move-right)
-nmap <C-k> V<Plug>(textmanip-move-up)
-nmap <C-j> V<Plug>(textmanip-move-down)
-nmap <C-h> V<Plug>(textmanip-move-left)
-nmap <C-l> V<Plug>(textmanip-move-right)
+xmap <C-M-j> <Plug>(textmanip-move-down)
+xmap <C-M-k> <Plug>(textmanip-move-up)
+xmap <C-M-h> <Plug>(textmanip-move-left)
+xmap <C-M-l> <Plug>(textmanip-move-right)
+nmap <C-M-k> V<Plug>(textmanip-move-up)
+nmap <C-M-j> V<Plug>(textmanip-move-down)
+nmap <C-M-h> V<Plug>(textmanip-move-left)
+nmap <C-M-l> V<Plug>(textmanip-move-right)
 
-nmap g<C-k> <Plug>(textmanip-duplicate-up)
-nmap g<C-j> <Plug>(textmanip-duplicate-down)
-xmap g<C-k> <Plug>(textmanip-duplicate-up)
-xmap g<C-j> <Plug>(textmanip-duplicate-down)
+nmap g<C-M-k> <Plug>(textmanip-duplicate-up)
+nmap g<C-M-j> <Plug>(textmanip-duplicate-down)
+xmap g<C-M-k> <Plug>(textmanip-duplicate-up)
+xmap g<C-M-j> <Plug>(textmanip-duplicate-down)
 
-nmap <Leader><M-k> <Plug>(textmanip-blank-above)
-nmap <Leader><M-j> <Plug>(textmanip-blank-below)
-xmap <Leader><M-k> <Plug>(textmanip-blank-above)
-xmap <Leader><M-j> <Plug>(textmanip-blank-below)
+nmap <Leader><C-M-k> <Plug>(textmanip-blank-above)
+nmap <Leader><C-M-j> <Plug>(textmanip-blank-below)
+xmap <Leader><C-M-k> <Plug>(textmanip-blank-above)
+xmap <Leader><C-M-j> <Plug>(textmanip-blank-below)
 " }}}
 Plug 't9md/vim-quickhl' " {{{
 nmap <Space>m <Plug>(quickhl-manual-this)
@@ -1208,14 +1208,14 @@ function! s:vim_sexp_mappings()
   xmap <silent><buffer> <C-c>o          <Plug>(sexp_raise_list)
   nmap <silent><buffer> <C-c>O          <Plug>(sexp_raise_element)
   xmap <silent><buffer> <C-c>O          <Plug>(sexp_raise_element)
-  nmap <silent><buffer> <C-M-k>           <Plug>(sexp_swap_list_backward)
-  xmap <silent><buffer> <C-M-k>           <Plug>(sexp_swap_list_backward)
-  nmap <silent><buffer> <C-M-j>           <Plug>(sexp_swap_list_forward)
-  xmap <silent><buffer> <C-M-j>           <Plug>(sexp_swap_list_forward)
-  nmap <silent><buffer> <C-M-h>           <Plug>(sexp_swap_element_backward)
-  xmap <silent><buffer> <C-M-h>           <Plug>(sexp_swap_element_backward)
-  nmap <silent><buffer> <C-M-l>           <Plug>(sexp_swap_element_forward)
-  xmap <silent><buffer> <C-M-l>           <Plug>(sexp_swap_element_forward)
+  nmap <silent><buffer> <C-k>           <Plug>(sexp_swap_list_backward)
+  xmap <silent><buffer> <C-k>           <Plug>(sexp_swap_list_backward)
+  nmap <silent><buffer> <C-j>           <Plug>(sexp_swap_list_forward)
+  xmap <silent><buffer> <C-j>           <Plug>(sexp_swap_list_forward)
+  nmap <silent><buffer> <C-h>           <Plug>(sexp_swap_element_backward)
+  xmap <silent><buffer> <C-h>           <Plug>(sexp_swap_element_backward)
+  nmap <silent><buffer> <C-l>           <Plug>(sexp_swap_element_forward)
+  xmap <silent><buffer> <C-l>           <Plug>(sexp_swap_element_forward)
   nmap <silent><buffer> <M-S-j>         <Plug>(sexp_emit_head_element)
   xmap <silent><buffer> <M-S-j>         <Plug>(sexp_emit_head_element)
   imap <silent><buffer> <M-S-j>         <Esc><Plug>(sexp_emit_head_element)a
