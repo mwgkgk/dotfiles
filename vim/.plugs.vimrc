@@ -1259,6 +1259,10 @@ let g:vlime_window_settings = {
         \ 'repl': {
             \ 'size': 17,
         \ },
+        \ 'sldb': {
+            \ 'pos' : 'aboveleft',
+            \ 'size': 20,
+        \ },
     \ }
 augroup lisp.plugs.vimrc
     autocmd!
