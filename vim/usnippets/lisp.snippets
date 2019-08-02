@@ -50,6 +50,20 @@ snippet cond "cond" i
 	 (print! "hey"")
 endsnippet
 
+snippet let "let" b
+(let
+	(($1))
+	$2)
+endsnippet
+
+snippet flet "flet" b
+(flet
+	(($1))
+	$2)
+endsnippet
+
+# Date
+
 snippet / *d(a)?(te)?/ "Date" rb
 ;; `date-utc` ;;
 
