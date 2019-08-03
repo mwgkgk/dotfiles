@@ -62,8 +62,10 @@ snippet flet "flet" b
 	$2)
 endsnippet
 
-snippet e "equal" i
-equal 
+snippet "(\()?e" "equal" r
+(equal $1`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 # Date
