@@ -36,7 +36,7 @@ augroup END
 " let s:static_colo = 'Tomorrow'
 
 " let s:static_colo = 'hybrid-dark'
-" let s:static_colo = 'typofree'
+let s:static_colo = 'typofree'
 " let s:static_colo = 'badwolf'
 
 " let s:static_colo = 'redmustang'
@@ -50,7 +50,7 @@ augroup END
 " let s:static_colo = 'pink'
 
 " let s:static_colo = 'orbital'
-let s:static_colo = 'sceaduhelm'
+" let s:static_colo = 'sceaduhelm'
 
 " let s:static_colo = 'kalisi-dark'
 
