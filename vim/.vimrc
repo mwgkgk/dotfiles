@@ -305,10 +305,10 @@ imap <C-g><C-b> <Esc>bysw`Ea
 imap <C-g><C-u> <Esc>bgUwgi
 " - F1 for digraphs
 inoremap <F1> <C-k>
-" - Kill line on C-M-k instead of C-k like readline, for lisp reasons.
-inoremap <C-M-k> <C-O>D
-" - C-k to join up
-inoremap <C-k> <Esc>-J
+" - Kill line on C-k like readline
+inoremap <C-k> <C-O>D
+" - C-M-k to join up
+inoremap <C-M-k> <Esc>-J
 " - C-j to open brackets
 imap <C-j> (
 " - Move up/down to the end of the line on M-k / M-j in insert
