@@ -36,7 +36,7 @@ augroup END
 " let s:static_colo = 'Tomorrow'
 
 " let s:static_colo = 'hybrid-dark'
-let s:static_colo = 'typofree'
+" let s:static_colo = 'typofree'
 " let s:static_colo = 'badwolf'
 
 " let s:static_colo = 'redmustang'
@@ -67,7 +67,7 @@ let s:static_colo = 'typofree'
 
 " let s:static_colo = 'solarized-light'
 
-" let s:static_colo = 'SerialExperimentsLain'
+let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
 " let s:static_colo = 'nighted'
 
