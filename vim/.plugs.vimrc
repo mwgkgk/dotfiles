@@ -987,7 +987,7 @@ nnoremap <Leader>gr :!git mes<CR>
 
 " Git-last-message
 nmap <silent> <Leader>gm :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>
-nmap <silent> <Leader>gl :echo "<C-r>=system('git log -1')<CR>"<CR>
+nmap <silent> <Leader>gM :echo "<C-r>=system('git log -1')<CR>"<CR>
 
 " Git slurp: for staged hunks
 nnoremap <Leader>gs :!git commit --amend --no-edit<CR>
