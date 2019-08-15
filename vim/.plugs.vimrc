@@ -791,12 +791,6 @@ Plug 'junegunn/vim-peekaboo' " {{{
 let g:peekaboo_delay = 200
 let g:peekaboo_compact = 1
 " }}}
-Plug 'junegunn/gv.vim' " {{{
-" HH: Log in file
-nnoremap <Leader>gL :GV!<CR>
-" HL: Big log
-nnoremap <Leader>hl :GV<CR>
-" }}}
 
 Plug 'chauncey-garrett/vim-tasklist', { 'on' : '<Plug>TaskList' } " {{{
 " Mnemonic: Toggle tasklist
@@ -934,7 +928,7 @@ nnoremap <Leader>hr :GReset<CR>:e!<CR>za
 
 " nnoremap <Leader><Leader> :Gtabedit @<CR>
 
-" Using :GV, :GV! instead
+" Using vim-flog instead:
 " nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
 " Also, grep commit text in all or current file:
 " :Glog --grep=query --
@@ -1000,6 +994,13 @@ autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>GitG
 autocmd plugs.vimrc FileType jiv nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>GitGutterStageHunk:Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
 
 autocmd plugs.vimrc FileType * nmap <buffer> <Leader>l <Plug>GitGutterStageHunk:Gcommit<CR>p:wq<CR><Space>
+" }}}
+
+Plug 'rbong/vim-flog' " {{{
+" Big log
+nnoremap <Leader>gl :Flog -all<CR>
+" Log in file
+nnoremap <Leader>gL :Flog -all -path=<C-R>=expand('%:h').'/'<CR><CR>
 " }}}
 
 Plug 'mwgkgk/CamelCaseMotion' " {{{
