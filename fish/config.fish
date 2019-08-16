@@ -2,8 +2,8 @@ set -x PATH ~/bin ~/.local/bin ~/.cargo/bin $PATH
 
 umask 0007
 
-set -x fish_color_cwd B1D06E
-set -x fish_command_timer_color A7A6DE
+set -x fish_color_cwd D87CEE
+set -x fish_command_timer_color 94B1AF
 
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
 set -x FZF_DEFAULT_OPTS " --bind 'ctrl-a:select-all+accept,tab:print-query'"

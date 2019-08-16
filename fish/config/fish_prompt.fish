@@ -14,7 +14,7 @@ function fish_prompt --description 'Write out the prompt'
             set suffix ' '
     end
 
-    echo -n -s (set_color EBDA4C) "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd)
+    echo -n -s (set_color 56D5CB) "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd)
 
     set -l job_count (jobs -c | wc -l)
     if test $job_count -ne 0
