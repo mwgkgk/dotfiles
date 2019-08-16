@@ -21,7 +21,8 @@ URxvt*.meta8: true
 ! URxvt*.background: #1b1b1b
 ! URxvt*.foreground: #75F7EF
 ! URxvt*.foreground: #E6C29E
-URxvt*.foreground: #FFAF5F
+! URxvt*.foreground: #FFAF5F
+URxvt*.foreground: #49B4CC
 ! URxvt*.foreground: #DADADA
 ! URxvt*.foreground: #DFA04A
 ! URxvt*.foreground: #CF423F
