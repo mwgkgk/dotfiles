@@ -1000,7 +1000,7 @@ Plug 'rbong/vim-flog' " {{{
 " Big log
 nnoremap <Leader>gl :Flog -all<CR>
 " Log in file
-nnoremap <Leader>gL :Flog -all -path=<C-R>=expand('%:h').'/'<CR><CR>
+nnoremap <Leader>gL :Flog -all -path=<C-R>=expand('%').'/'<CR><CR>
 " }}}
 
 Plug 'mwgkgk/CamelCaseMotion' " {{{
