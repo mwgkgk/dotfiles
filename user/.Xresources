@@ -22,14 +22,16 @@ URxvt*.meta8: true
 ! URxvt*.foreground: #75F7EF
 ! URxvt*.foreground: #E6C29E
 ! URxvt*.foreground: #FFAF5F
-URxvt*.foreground: #49B4CC
+! URxvt*.foreground: #49B4CC
+URxvt*.foreground: #F5A754
 ! URxvt*.foreground: #DADADA
 ! URxvt*.foreground: #DFA04A
 ! URxvt*.foreground: #CF423F
 ! URxvt*.foreground: #FFD7FF
 ! URxvt*.background: #1b1b1b
 ! URxvt*.background: #2E2E2E
-URxvt*.background: #1D1200
+! URxvt*.background: #1D1200
+URxvt*.background: #2B2117
 ! URxvt.depth: 24
 ! URxvt.background: [15]#000000
 ! URxvt*.cursorColor: #F76345
