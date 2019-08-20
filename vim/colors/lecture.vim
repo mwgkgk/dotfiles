@@ -17,13 +17,13 @@ endif
 
 let g:colors_name = 'lecture'
 
-hi Comment      guifg=#008220 guibg=#000000 gui=none ctermfg=59 ctermbg=none cterm=none
+hi Comment      guifg=#008220 guibg=#000000 gui=none ctermfg=95 ctermbg=none cterm=none
 hi Constant     guifg=#1fc700 guibg=#001c00 gui=none ctermfg=222 ctermbg=none cterm=none
 hi Cursor       guifg=#00ff00 gui=bold,reverse ctermfg=179 ctermbg=none cterm=bold,reverse
 hi CursorColumn guifg=#000000 guibg=#00cc00 gui=none ctermfg=none ctermbg=237 cterm=none
 hi CursorIM     guifg=#00ff00 guibg=#000000 gui=bold ctermfg=208 ctermbg=none cterm=bold
 hi CursorLine   guifg=#000000 guibg=#00cc00 gui=none ctermfg=none ctermbg=237 cterm=none
-hi CursorLineNr guifg=#000000 guibg=#00cc00 gui=none ctermfg=none ctermbg=237 cterm=none
+hi CursorLineNr guifg=#000000 guibg=#00cc00 gui=none ctermfg=137 ctermbg=237 cterm=none
 hi DiffAdd      guifg=#00bf00 guibg=#002200 gui=none ctermfg=234 ctermbg=120 cterm=none
 hi DiffChange   guifg=#00a900 guibg=#002200 gui=none ctermfg=none ctermbg=240 cterm=none
 hi DiffDelete   guifg=#000000 guibg=#005500 gui=none ctermfg=234 ctermbg=124 cterm=none
@@ -36,7 +36,7 @@ hi Folded       guifg=#00bf00 guibg=#001200 gui=none ctermfg=243 ctermbg=237 cte
 hi Conceal      guifg=#00bf00 guibg=#001200 gui=none ctermfg=243 ctermbg=237 cterm=none
 hi Identifier   guifg=#50d930 guibg=#000000 gui=none ctermfg=137 ctermbg=none cterm=none
 hi IncSearch    gui=reverse cterm=reverse
-hi LineNr       guifg=#007900 guibg=#000600 gui=none ctermfg=136 ctermbg=237 cterm=none
+hi LineNr       guifg=#007900 guibg=#000600 gui=none ctermfg=242 ctermbg=237 cterm=none
 hi MatchParen   guifg=#304300 guibg=#00fe00 gui=none ctermfg=179 ctermbg=180 cterm=bold
 hi ModeMsg      guifg=#00ea00 guibg=#000900 gui=none ctermfg=137 ctermbg=none cterm=none
 hi MoreMsg      guifg=#00e700 guibg=#001000 gui=bold ctermfg=137 ctermbg=none cterm=bold
