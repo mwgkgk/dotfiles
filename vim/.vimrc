@@ -180,8 +180,8 @@ set pastetoggle=<Leader>tp
 vnoremap K <nop>
 " - No join in visual
 vnoremap J <nop>
-nnoremap [ <nop>
-nnoremap ] <nop>
+" nnoremap [ <nop>
+" nnoremap ] <nop>
 " }}}
 " Search-related {{{
 " Magic
@@ -776,6 +776,7 @@ function! Spelling()
 endfunction
 command! Spelling call Spelling()
 nnoremap <Space><Enter> :call Spelling()<CR>
+inoremap <C-g><C-l> <C-g>u<Esc>[s1z=`]a<C-g>u
 " }}}
 " Vsplit tag {{{
 function! FollowTag()
