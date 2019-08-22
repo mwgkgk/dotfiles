@@ -776,6 +776,7 @@ function! Spelling()
 endfunction
 command! Spelling call Spelling()
 nnoremap <Space><Enter> :call Spelling()<CR>
+inoremap <C-g><Space> <Esc>:call Spelling()<CR>a
 inoremap <C-g><C-l> <C-g>u<Esc>[s1z=`]a<C-g>u
 " }}}
 " Vsplit tag {{{
