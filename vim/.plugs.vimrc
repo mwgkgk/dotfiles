@@ -124,12 +124,12 @@ map \l <Plug>(easymotion-next)
 " onoremap \j V<Plug>(easymotion-j)
 
 " Don't use omap: many binds e.g. fugitive use c in operator-mode
-nmap d' d\t"<Space><Esc>
-nmap d" d\T"<Space><Esc>
-nmap y' y\t"<Space><Esc>
-nmap y" y\T"<Space><Esc>
-nmap c' c\t"<Space>
-nmap c" c\T"<Space>
+nmap d" d\t"<Space><Esc>
+nmap d' d\T"<Space><Esc>
+nmap y" y\t"<Space><Esc>
+nmap y' y\T"<Space><Esc>
+nmap c" c\t"<Space>
+nmap c' c\T"<Space>
 
 nmap dr d\t)<Space><Esc>
 nmap dR d\T(<Space><Esc>
