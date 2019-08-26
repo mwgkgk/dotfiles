@@ -63,7 +63,7 @@ super + Delete
 super + Insert
 	motor
 
-alt + shift + Return
+super + apostrophe
 	druid
 
 # Paste
