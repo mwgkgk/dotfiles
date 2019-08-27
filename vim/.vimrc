@@ -485,8 +485,8 @@ vnoremap <LeftRelease> "*y<LeftRelease>
 vnoremap <Leader>nr y<C-W>npk"_dd
 " }}}
 " Source {{{
-autocmd vimrc FileType vim vnoremap <buffer> X y:execute @@<cr>:echo 'Sourced selection.'<cr>
-autocmd vimrc Filetype vim nnoremap <buffer> X ^vg_y:execute @@<cr>:echo 'Sourced line.'<cr>
+autocmd vimrc FileType vim vnoremap <buffer> X y:execute @@<cr>
+autocmd vimrc Filetype vim nnoremap <buffer> X ^vg_y:execute @@<cr>
 autocmd vimrc FileType haskell nnoremap <buffer> X :Shell xmonad --recompile<CR>
 " }}}
 " Tabs-related {{{
