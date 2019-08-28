@@ -1,1 +1,1 @@
-setlocal formatoptions-=o
+setlocal formatoptions-=or
