@@ -309,6 +309,8 @@ inoremap <F1> <C-k>
 inoremap <C-k> <C-O>D
 " - C-M-k to join up
 inoremap <C-M-k> <Esc>-J
+" - C-j to slide down
+inoremap <C-j> <CR><Esc>kA
 " - C-h to open brackets
 imap <C-h> (
 " - Move up/down to the end of the line on M-k / M-j in insert
