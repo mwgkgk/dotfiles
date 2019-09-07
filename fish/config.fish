@@ -1,4 +1,4 @@
-set -x PATH ~/bin ~/.local/bin ~/.cargo/bin $PATH
+set -x PATH ~/bin ~/.local/bin ~/.cargo/bin ~/.node_modules/bin $PATH
 
 umask 0007
 
@@ -13,3 +13,6 @@ set -x FZF_DEFAULT_OPTS " --bind 'ctrl-a:select-all+accept,tab:print-query'"
 
 # OPAM configuration
 source /home/mitnick/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+# NPM
+set -x npm_config_prefix ~/.node_modules
