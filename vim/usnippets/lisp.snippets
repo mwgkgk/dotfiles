@@ -68,6 +68,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?fmt" "format" r
+(format nil "$1"`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # Date
 
 snippet / *d(a)?(te)?/ "Date" rb
