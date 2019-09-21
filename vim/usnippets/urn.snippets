@@ -1,0 +1,23 @@
+snippet imp "import" b
+(import ${1:lua/math} (${2:random}))$0
+endsnippet
+
+snippet for "for" b
+(for ${1:i} ${2:from} ${3:to} 1
+	(${4:print! i}))
+endsnippet
+
+snippet pr "print" b
+(print! ${1:"Peace among worlds"})
+endsnippet
+
+snippet d "define" b
+(define ${1:name}
+	${2:"value"})
+endsnippet
+
+snippet if# "if" i
+(if (> 0 (# arg))
+	(print! "Unexpected arguments.")
+	(print! "Unexpected absence of arguments."))
+endsnippet
