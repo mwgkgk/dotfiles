@@ -10,6 +10,14 @@ $4
 `!p snip.rv = "endsnippet"`
 endsnippet
 
+snippet fl "Lisp snippet" b
+`!p snip.rv = "snippet"` "(\()?${1:trigger}" "${2:$1}" r
+($1 $3\`!p
+if match.group(1) is None:
+	snip.rv = ")"\`
+`!p snip.rv = "endsnippet"`
+endsnippet
+
 snippet snipi "Snippet definition" !
 `!p snip.rv = "snippet"` /(\s+)${1:Tab_trigger}/ "${2:$1}" ${3:ir}
 \`!p if match.group(1) is not None:
