@@ -1,5 +1,9 @@
-snippet req "req" b
-(require ${1:"asdf"})$0
+# TODO: handle the beginning-of-line whitespace and brackets as match group
+
+snippet "^(\()?rq" "require" r
+(require ${1:"asdf"}`!p
+if match.group(1) is None:
+	snip.rv = ")"`$2
 endsnippet
 
 snippet "^(\()?f" "f" r
@@ -12,57 +16,40 @@ endsnippet
 snippet ba "basement" b
 #+nil
 (progn
-	$0)
+	${VISUAL}$0)
 endsnippet
 
-snippet /^(\s)*if/ "if" br
-`!p
-if match.group(1) is None:
-	snip.rv = ""
-else:
-	snip.rv = match.group(1) + " "`(if ($1)
-	${0:nil})
-endsnippet
-
-snippet if# "if" i
-(if (> 0 (# arg))
-	(print! "Unexpected arguments.")
-	(print! "Unexpected absence of arguments."))
-endsnippet
-
-snippet d "define" b
-(define ${1:name}
-	${2:"value"})
-endsnippet
-
-snippet pr "print" b
-(print! ${1:"Peace among worlds"})
-endsnippet
-
-snippet for "for" b
-(for ${1:i} ${2:from} ${3:to} 1
-	(${4:print! i}))
-endsnippet
-
-snippet cond "cond" i
+snippet "(\()?cond" "cond" r
 (cond
-	((= x 2)
-	 (print! "hey"")
+	((${1:equal x y}) $2)$3`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
-snippet let "let" b
+snippet cc "cond clause" i
+((${1:equal x y}) $2)$3
+endsnippet
+
+snippet "(\()?le" "let" r
 (let
-	(($1))
-	$2)
+	((${1:x} ${3:($2)})$4)`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
-snippet flet "flet" b
+snippet "(\()?flet" "flet" r
 (flet
-	(($1))
-	$2)
+	((${1:x} ($2)
+		$3))`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?e" "equal" r
+snippet lc "let clause" i
+(${1:x} ($2))$3
+endsnippet
+
+snippet "(\()?eq" "equal" r
 (equal $1`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -74,16 +61,26 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Date
+snippet "(\()?lo" "loop" r
+(loop
+	$1`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet for "Loop for" b
+:for ${1:x} ${2::across} ${3:str}
+endsnippet
+
+snippet col "Loop collect" b
+:collect $1
+endsnippet
+
+snippet fin "Loop finally" b
+:finally (return ${2:($1)})
+endsnippet
 
 snippet / *d(a)?(te)?/ "Date" rb
 ;;; `date-utc` ;;;
 ${0}
-endsnippet
-
-
-# Urn
-
-snippet imp "import" b
-(import ${1:lua/math} (${2:random}))$0
 endsnippet
