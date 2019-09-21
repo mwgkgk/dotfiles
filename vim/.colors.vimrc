@@ -9,7 +9,7 @@ augroup END
 " static {{{
 " let s:static_colo = 'industry'
 " let s:static_colo = '256-jungle'
-" let s:static_colo = 'tactical'
+let s:static_colo = 'tactical'
 " let s:static_colo = 'mayansmokemod'
 " let s:static_colo = 'badwolf'
 " let s:static_colo = 'devbox-dark-256'
@@ -27,7 +27,7 @@ augroup END
 " let s:static_colo = 'peaksea_mod'
 
 " let s:static_colo = 'nuclear'
-let s:static_colo = 'fadedvision'
+" let s:static_colo = 'fadedvision'
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
 " let s:static_colo = 'belf'
