@@ -1271,6 +1271,9 @@ augroup lisp.plugs.vimrc
     autocmd FileType lisp nnoremap <silent> <buffer> <LocalLeader>x :call vlime#plugin#SendToREPL(vlime#ui#CurAtom())<cr>
 
     autocmd FileType lisp nnoremap <silent> <buffer> <C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui#CurAtom())<cr>
+
+    " TODO Rebind OpenFrameSource from S to <C-]>
+    " autocmd FileType vlime_sldb nnoremap <silent> <buffer> <C-]> :call vlime#ui#sldb#OpenFrameSource()<cr> 
 augroup END
 " }}}
 
