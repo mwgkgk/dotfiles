@@ -30,14 +30,14 @@ snippet cc "cond clause" i
 ((${1:equal x y}) $2)$3
 endsnippet
 
-snippet "(\()?le" "let" r
+snippet "(\()?let" "let" r
 (let
 	((${1:x} ${3:($2)})$4)`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?flet" "flet" r
+snippet "(\()?fle" "flet" r
 (flet
 	((${1:x} ($2)
 		$3))`!p
