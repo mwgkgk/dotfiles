@@ -32,7 +32,7 @@ endsnippet
 
 snippet "(\()?let" "let" r
 (let
-	((${1:x} ${3:($2)})$4)`!p
+	((${1:x} ${3:($2)})$4)$5`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -40,7 +40,7 @@ endsnippet
 snippet "(\()?fle" "flet" r
 (flet
 	((${1:x} ($2)
-		$3))`!p
+		$3)$4)$5`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
