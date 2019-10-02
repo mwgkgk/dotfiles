@@ -56,7 +56,7 @@ if match.group(1) is None:
 endsnippet
 
 snippet "(\()?fmt" "format" r
-(format nil "$1"`!p
+(format ${3:nil} "$1"$2`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
