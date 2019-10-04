@@ -768,7 +768,8 @@ function! FSplit(...)
 endfunction
 command! -nargs=* -complete=file Fsp call FSplit(<f-args>)
 cab fsp Fsp
-" Spelling
+" }}}
+" Spelling {{{
 function! Spelling()
     setlocal spell!
     if &spell
