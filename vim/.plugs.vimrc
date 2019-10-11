@@ -88,6 +88,7 @@ let g:ale_linters = {
       \ 'haskell': ['stack-ghc'],
       \ 'perl'   : ['perl', 'perlcritic'],
       \ 'rust'   : ['cargo'],
+      \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
       \ }
 let g:ale_tcl_nagelfar_executable = 'nagelfar'
 let g:ale_sign_error = '>'
@@ -1109,7 +1110,12 @@ cab man Man
 Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
-Plug 'rhysd/reply.vim'
+Plug 'rhysd/reply.vim' " {{{
+autocmd FileType elixir nnoremap <silent> <buffer> X :ReplSend<cr>
+autocmd FileType elixir vnoremap <silent> <buffer> X :ReplSend<cr>
+
+autocmd FileType elixir nnoremap <LocalLeader>rr :Repl<cr>
+" }}}
 
 " Go
 Plug 'fatih/vim-go', { 'for' : 'go' }
@@ -1408,9 +1414,9 @@ Plug 'ianks/vim-tsx', { 'for' : 'typescript.tsx' }
 Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
 
 " Elixir
-" Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' } " {{{
-" let g:alchemist_mappings_disable = 1
-" nnoremap <buffer> <silent> <Leader>dd :call alchemist#exdoc()<CR>
+Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' } " {{{
+let g:alchemist_mappings_disable = 1
+nnoremap <buffer> <silent> <C-g> :call alchemist#exdoc()<CR>
 " }}}
 Plug 'mwgkgk/vim-textobj-elixir', { 'for' : 'elixir' }
 
