@@ -921,7 +921,7 @@ nnoremap <Leader>hA :GAllPreview<CR>
 " nnoremap <Leader><Leader> :GAll<CR>
 
 nnoremap <Leader>hv :Gcommit -v<CR>
-nmap <Leader>hc <Plug>GitGutterStageHunk:Gcommit -v<CR>
+nmap <Leader>hc <Plug>(GitGutterStageHunk):Gcommit -v<CR>
 
 " Git reset:
 command! GReset :ProjectRootExe :AsyncRun git reset
@@ -948,8 +948,8 @@ Plug 'airblade/vim-gitgutter' " {{{
 nnoremap <Leader>tg :GitGutterToggle<CR>
 
 " Instead of this,
-" nmap <Leader>k <Plug>GitGutterPrevHunk
-" nmap <Leader>j <Plug>GitGutterNextHunk
+" nmap <Leader>k <Plug>(GitGutterPrevHunk)
+" nmap <Leader>j <Plug>(GitGutterNextHunk)
 nmap <Leader>hk <Plug>(GitGutterPrevHunk)
 nmap <Leader>hj <Plug>(GitGutterNextHunk)
 
@@ -957,10 +957,10 @@ nmap <M-p> <Plug>(GitGutterPrevHunk)
 nmap <M-n> <Plug>(GitGutterNextHunk)
 
 " This. (requires kana/vim-submode)
-" call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', '<Plug>GitGutterPrevHunk')
-" call submode#map(       'GitGutterPrevNext', 'n', '',  'k', '<Plug>GitGutterPrevHunk')
-" call submode#enter_with('GitGutterPrevNext', 'n', '', ';j', '<Plug>GitGutterNextHunk')
-" call submode#map(       'GitGutterPrevNext', 'n', '',  'j', '<Plug>GitGutterNextHunk')
+" call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', '<Plug>(GitGutterPrevHunk)')
+" call submode#map(       'GitGutterPrevNext', 'n', '',  'k', '<Plug>(GitGutterPrevHunk)')
+" call submode#enter_with('GitGutterPrevNext', 'n', '', ';j', '<Plug>(GitGutterNextHunk)')
+" call submode#map(       'GitGutterPrevNext', 'n', '',  'j', '<Plug>(GitGutterNextHunk)')
 
 " Neither of these work. Something's up with submode.
 " call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', ':GitGutterPrevHunk')
@@ -969,10 +969,10 @@ nmap <M-n> <Plug>(GitGutterNextHunk)
 " call submode#map(       'GitGutterPrevNext', 'n', '',  'j', ':GitGutterNextHunk')
 
 " Hunk put:
-nmap <Leader>hp <Plug>GitGutterStageHunk
+nmap <Leader>hp <Plug>(GitGutterStageHunk)
 
 " Stage and verbose commit:
-nmap <Leader>hh <Plug>GitGutterStageHunk:GCurrentT<CR>
+nmap <Leader>hh <Plug>(GitGutterStageHunk):GCurrentT<CR>
 
 " Git-back
 nnoremap <Leader>gb :!git back<CR>
@@ -988,13 +988,13 @@ nmap <silent> <Leader>gM :echo "<C-r>=system('git log -1')<CR>"<CR>
 nnoremap <Leader>gs :!git commit --amend --no-edit<CR>
 
 " Hunk slurp: Stage hunk and amend noedit
-nmap <Leader>hs <Plug>GitGutterStageHunk:!git commit --amend --no-edit<CR>
+nmap <Leader>hs <Plug>(GitGutterStageHunk):!git commit --amend --no-edit<CR>
 
 " LeaderLeader to stage hunk and commit: (requires vim-fugitive)
-autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>GitGutterStageHunk:Gcommit<CR>p:wq<CR><Space>
-autocmd plugs.vimrc FileType jiv nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>GitGutterStageHunk:Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
+autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
+autocmd plugs.vimrc FileType jiv nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>(GitGutterStageHunk):Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
 
-autocmd plugs.vimrc FileType * nmap <buffer> <Leader>l <Plug>GitGutterStageHunk:Gcommit<CR>p:wq<CR><Space>
+autocmd plugs.vimrc FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
 " }}}
 
 Plug 'rbong/vim-flog' " {{{
