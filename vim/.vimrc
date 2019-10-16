@@ -408,7 +408,7 @@ nnoremap <Leader><Space>v :vert term<CR>
 " tnoremap <Esc><Esc> <C-w>N
 
 " I also like to live dangerously:
-set termwinkey=<Space>
+" set termwinkey=<Space>
 
 " repeat f/F (";" is leader)
 nnoremap <M-;> ;
