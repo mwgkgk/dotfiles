@@ -1118,7 +1118,7 @@ autocmd FileType elixir nnoremap <LocalLeader>rr :Repl<cr>
 " }}}
 
 " Go
-Plug 'fatih/vim-go', { 'for' : 'go' }
+" Plug 'fatih/vim-go', { 'for' : 'go' }
 
 " Perl
 Plug 'hotchpotch/perldoc-vim', { 'for' : 'perl' }
