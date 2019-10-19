@@ -35,6 +35,7 @@ augroup END
 " let s:static_colo = 'hangar-lab'
 
 " let s:static_colo = 'Tomorrow'
+let s:static_colo = 'primary'
 
 " let s:static_colo = 'hybrid-dark'
 " let s:static_colo = 'typofree'
@@ -65,7 +66,7 @@ augroup END
 " let s:static_colo = 'moot'
 
 " let s:static_colo = 'seoul256-light'
-let s:static_colo = 'seoul256'
+" let s:static_colo = 'seoul256'
 
 " let s:static_colo = 'solarized-light'
 
