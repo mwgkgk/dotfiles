@@ -35,7 +35,7 @@ augroup END
 " let s:static_colo = 'hangar-lab'
 
 " let s:static_colo = 'Tomorrow'
-let s:static_colo = 'primary'
+" let s:static_colo = 'primary'
 
 " let s:static_colo = 'hybrid-dark'
 " let s:static_colo = 'typofree'
@@ -84,7 +84,7 @@ let s:static_colo = 'primary'
 
 " let s:static_colo = 'morning'
 
-" let s:static_colo = 'gruvbox-dark'
+let s:static_colo = 'gruvbox-dark'
 " }}}
 
 " flex {{{
