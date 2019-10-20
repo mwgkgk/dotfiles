@@ -6,6 +6,11 @@ if match.group(1) is None:
 	snip.rv = ")"`$2
 endsnippet
 
+snippet defp "defp" b
+(defparameter *$1*
+	$2)
+endsnippet
+
 snippet "^(\()?f" "f" r
 (defun ${1:name} ($2)
 	${3:nil}`!p
