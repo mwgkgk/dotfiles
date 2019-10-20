@@ -1111,10 +1111,10 @@ Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 Plug 'rhysd/reply.vim' " {{{
-autocmd FileType elixir nnoremap <silent> <buffer> X :ReplSend<cr>
-autocmd FileType elixir vnoremap <silent> <buffer> X :ReplSend<cr>
+autocmd FileType elixir,ocaml nnoremap <silent> <buffer> X :ReplSend<cr>
+autocmd FileType elixir,ocaml vnoremap <silent> <buffer> X :ReplSend<cr>
 
-autocmd FileType elixir nnoremap <LocalLeader>rr :Repl<cr>
+autocmd FileType elixir,ocaml nnoremap <LocalLeader>rr :Repl<cr>
 " }}}
 
 " Go
