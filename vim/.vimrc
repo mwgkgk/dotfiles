@@ -490,8 +490,11 @@ vnoremap <LeftRelease> "*y<LeftRelease>
 vnoremap <Leader>nr y<C-W>npk"_dd
 " }}}
 " Source {{{
-autocmd vimrc FileType vim vnoremap <buffer> X y:execute @@<cr>
 autocmd vimrc Filetype vim nnoremap <buffer> X ^vg_y:execute @@<cr>
+autocmd vimrc FileType vim vnoremap <buffer> X y:execute @@<cr>
+autocmd vimrc Filetype vim nnoremap <buffer> <Leader>X ^vg_yA<C-r>=execute(@@)<CR><Esc>I"<Space><Esc>
+autocmd vimrc FileType vim vnoremap <buffer> <Leader>X y`>A<C-r>=execute(@@)<CR><Esc>I"<Space><Esc>
+
 autocmd vimrc FileType haskell nnoremap <buffer> X :Shell xmonad --recompile<CR>
 " }}}
 " Tabs-related {{{
