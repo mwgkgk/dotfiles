@@ -1,1 +1,1 @@
-setlocal formatoptions-=or
+setlocal formatoptions=cqlj
