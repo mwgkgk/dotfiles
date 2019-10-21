@@ -26,7 +26,7 @@ sh ~/.fehbg &
 #xcompmgr -c -f -r 10 -D 2 &
 
 # conky -c ~/.config/conky/conky.conf &
-conky -c ~/.config/conky/conky-birds.conf &
+# conky -c ~/.config/conky/conky-birds.conf &
 
 # Pulse:
 # start-pulseaudio-x11
@@ -43,8 +43,8 @@ pulseaudio --start && alsa-unmute &
 # Simple X Hotkey Daemon
 sxhkd &
 
-while true ; do
-  date_local=$(date +"%R %a, %b %d")
+# while true ; do
+#   date_local=$(date +"%R %a, %b %d")
   # date_est=$(TZ=US/Eastern date +" %a, %b %d %R" | xargs)
   # date_pst=$(TZ=US/Pacific date +" %a, %b %d %R" | xargs)
 
@@ -79,9 +79,11 @@ while true ; do
   # fi
 
   # xsetroot -name "$mood$mes_more$mes$commits$quake$date_pst  $date_local"
-  xsetroot -name "$date_local"
-  sleep 1
-done &
+  # xsetroot -name "$date_local"
+  # sleep 1
+# done &
+
+xsetroot -name "λ"
 
 while true; do
   # Log stderror to a file 
