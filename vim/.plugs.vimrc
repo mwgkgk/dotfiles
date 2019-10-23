@@ -378,28 +378,6 @@ Plug 'tpope/vim-commentary' " {{{
 nmap gcd yypkgccj
 " }}}
 
-" Plug 'dbakker/vim-projectroot' " {{{
-" let g:rootmarkers = ['.projectroot','LICENRSE','.git',
-"             \        '.hg','.svn','.bzr','_darcs','build.xml']
-" nnoremap <Leader>ep :echo ProjectRootGuess()<CR>
-" nnoremap <Leader>dt :ProjectRootExe !ctags -R<CR>
-" " - Projectroot Make
-" command! Make :silent! ProjectRootExe make | redraw!
-" nnoremap <Leader>dm :Make<CR>
-" command! InstallHooks :silent! ProjectRootExe ln -s ~/.git-templates/hooks/* .
-" " Deps
-" autocmd plugs.vimrc FileType rust nnoremap <F12> :ProjectRootExe :sp Cargo.toml<CR>G
-" " Taskfile
-" nnoremap <F11> :ProjectRootExe :sp Taskfile.yml<CR>
-" " Tags
-" autocmd plugs.vimrc BufRead *.rs :setlocal tags=./rusty-tags.vi;/,$RUST_SRC_PATH/rusty-tags.vi
-" autocmd plugs.vimrc BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&"
-" " }}}
-" Plug 'airblade/vim-rooter' " {{{
-" let g:rooter_silent_chdir = 1
-" let g:rooter_resolve_links = 1
-" let g:rooter_use_lcd = 1
-" " }}}
 Plug 'dylanaraps/root.vim' " {{{
 let g:root#patterns = ['src','.git','.bzr','hg','_darcs','.svn']
 let g:root#auto = 1
