@@ -63,7 +63,8 @@ augroup END
 " let s:static_colo = 'ivan'
 
 " let s:static_colo = 'mwgkgk'
-" let s:static_colo = 'moot'
+let s:static_colo = 'moot'
+" let s:static_colo = 'blue'
 
 " let s:static_colo = 'seoul256-light'
 " let s:static_colo = 'seoul256'
@@ -84,7 +85,7 @@ augroup END
 
 " let s:static_colo = 'morning'
 
-let s:static_colo = 'gruvbox-dark'
+" let s:static_colo = 'gruvbox-dark'
 " }}}
 
 " flex {{{
