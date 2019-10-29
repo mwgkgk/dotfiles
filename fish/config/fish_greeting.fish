@@ -1,3 +1,5 @@
 function fish_greeting
-    servus
+    if not test $CHI = "rogue"
+        servus
+    end
 end
