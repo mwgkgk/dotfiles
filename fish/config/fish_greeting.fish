@@ -1,5 +1,7 @@
 function fish_greeting
-    if not test "$CHI" = "rogue"
+    if test -z "$VIM_SERVERNAME" &&
+        not test -z "$CHI" &&
+        not test "$CHI" = "rogue"
         servus
     end
 end
