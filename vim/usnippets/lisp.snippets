@@ -8,7 +8,7 @@ endsnippet
 
 snippet defp "defp" b
 (defparameter *$1*
-	$2)
+	${2:nil})
 endsnippet
 
 snippet "^(\()?f" "f" r
@@ -21,12 +21,12 @@ endsnippet
 snippet ba "basement" b
 #+nil
 (progn
-	${VISUAL}$0)
+	${VISUAL}${1:nil})
 endsnippet
 
 snippet "(\()?cond" "cond" r
 (cond
-	((${1:equal x y}) $2)$3`!p
+	((${1:equal x y}) ${2:nil})$3`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -37,7 +37,8 @@ endsnippet
 
 snippet "(\()?let" "let" r
 (let
-	((${1:x} ${3:($2)})$4)$5`!p
+	((${1:x} ${3:($2)})$4)
+	${5:$1}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -45,7 +46,8 @@ endsnippet
 snippet "(\()?fle" "flet" r
 (flet
 	((${1:x} ($2)
-		$3)$4)$5`!p
+		${3:nil})$4)
+	${5:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -68,7 +70,7 @@ endsnippet
 
 snippet "(\()?lo" "loop" r
 (loop
-	$1`!p
+	${2::for }$1`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
