@@ -4,4 +4,4 @@
   nil)
 
 (defun main ()
-  (mn *posix-argv*))
+  (mn (cdr *posix-argv*)))
