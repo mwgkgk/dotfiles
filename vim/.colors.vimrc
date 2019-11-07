@@ -18,7 +18,7 @@ augroup END
 " let s:static_colo = 'grind'
 " let s:static_colo = 'murphy_mod'
 " let s:static_colo = 'devbox-dark-256-lighter'
-" let s:static_colo = 'zenburn'
+let s:static_colo = 'zenburn'
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
 
@@ -63,7 +63,7 @@ augroup END
 " let s:static_colo = 'ivan'
 
 " let s:static_colo = 'mwgkgk'
-let s:static_colo = 'moot'
+" let s:static_colo = 'moot'
 " let s:static_colo = 'blue'
 
 " let s:static_colo = 'seoul256-light'
