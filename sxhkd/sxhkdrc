@@ -68,8 +68,8 @@ super + apostrophe
 
 # Paste
 
-super + ctrl + v
-	firefox-dmenu-from-clipboard
+# super + ctrl + v
+# 	firefox-dmenu-from-clipboard
 
 # Restart
 
