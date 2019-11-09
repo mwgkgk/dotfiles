@@ -966,6 +966,7 @@ nmap <silent> <Leader>gM :echo "<C-r>=system('git log -1')<CR>"<CR>
 nnoremap <Leader>gs :!git commit --amend --no-edit<CR>
 
 " Hunk slurp: Stage hunk and amend noedit
+" TODO cancel out if we're not at least 1 commit ahead of upstream
 nmap <Leader>hs <Plug>(GitGutterStageHunk):!git commit --amend --no-edit<CR>
 
 " LeaderLeader to stage hunk and commit: (requires vim-fugitive)
