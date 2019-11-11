@@ -147,7 +147,9 @@ command mkdatedir !mkdatedir %a
 command mktimedir !mktimedir %a
 command FF !firefox-default %f &
 command cdgit :execute 'cd' system('git rev-parse --git-dir')
-command Ren :screen | :execute "!tmux rename-window `fish -c prompt_pwd`/" | :screen
+
+" This conflicts with fish auto-rename on cd
+" command Ren :screen | :execute "!tmux rename-window `fish -c prompt_pwd`/" | :screen
 
 command mmt sudo mount %f ~/mnt
 command dmt sudo umount ~/mnt
