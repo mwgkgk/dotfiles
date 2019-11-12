@@ -324,6 +324,9 @@ imap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+
 imap <C-R><C-R> <C-R>"
 imap <C-R><C-t> <C-R>*
 imap <C-R><C-e> <C-R>+
+cmap <C-R><C-R> <C-R>"
+cmap <C-R><C-t> <C-R>*
+cmap <C-R><C-e> <C-R>+
 " - Insert show regs:
 inoremap <C-R><Space> <Esc><C-O>:reg<CR>
 " Easier completion:
