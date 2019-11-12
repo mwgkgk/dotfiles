@@ -11,10 +11,8 @@ snippet "^(\()?f" "f" r
 if match.group(1) is None:
 	snip.rv = ")"`
 
-;; {{{
 #_(do
 		($1)${VISUAL})
-;; }}}
 endsnippet
 
 snippet "^(\()?sf" "fn-spec" r
@@ -24,17 +22,13 @@ snippet "^(\()?sf" "fn-spec" r
 if match.group(1) is None:
 	snip.rv = ")"`
 
-;; {{{
 #_(do
 		($1)${VISUAL})
-;; }}}
 endsnippet
 
 snippet ba "basement" b
-;; {{{
 #_(do
 		${VISUAL}${0:nil})
-;; }}}
 endsnippet
 
 snippet "(\()?if" "if" r
