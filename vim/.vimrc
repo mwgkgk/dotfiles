@@ -385,7 +385,9 @@ nnoremap ze zt6<C-y>6<C-y>
 " HL
 nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 " Echo foldlevel:
-nnoremap <Leader>ei :echo foldlevel(".")<CR>
+nnoremap <Leader>ef :echo foldlevel(".")<CR>
+" Echo indent:
+nnoremap <Leader>ei :echo indent(".")<CR>
 " Echo :pwd
 nnoremap <Leader>ed :pwd<CR>
 " Rightmouse
