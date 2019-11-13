@@ -60,7 +60,7 @@ super + Return
 super + Delete
 	doc
 
-super + Insert
+super + End
 	motor
 
 super + apostrophe
