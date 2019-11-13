@@ -58,7 +58,7 @@ super + Return
 	zepp
 
 super + Delete
-	doc
+	humvee
 
 super + End
 	motor

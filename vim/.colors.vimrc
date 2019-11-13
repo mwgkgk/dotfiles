@@ -147,7 +147,7 @@ function! s:chi_colo(chi)
         return 'thief'
     elseif a:chi ==# 'motor'
         return s:static_colo
-    elseif a:chi ==# 'doc'
+    elseif a:chi ==# 'humvee'
         return s:static_colo
     elseif a:chi ==# 'gums'
         return s:static_colo
