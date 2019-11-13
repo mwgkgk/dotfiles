@@ -51,6 +51,8 @@ function bind_enter
         echo ;and fg
         commandline -f repaint
   else
+      qwerty --detect-layout "$cmdline" | read -l result
+      commandline -r "$result"
       commandline -f execute
   end
 end
