@@ -971,7 +971,7 @@ nmap <Leader>hs <Plug>(GitGutterStageHunk):!git commit --amend --no-edit<CR>
 
 " LeaderLeader to stage hunk and commit: (requires vim-fugitive)
 autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
-autocmd plugs.vimrc FileType jiv nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>(GitGutterStageHunk):Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
+autocmd plugs.vimrc FileType jiv,lisp,clojure nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>(GitGutterStageHunk):Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
 
 autocmd plugs.vimrc FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
 " }}}
