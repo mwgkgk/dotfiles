@@ -295,6 +295,9 @@ nnoremap <C-c><C-c> :w<CR>
 " By default, <C-c> requires confirmation. Mapping to <Esc> would require
 " changing cpoptions - see :help c_<Esc>. This is weird but works:
 cnoremap <C-c> <C-c>
+" Default <C-c> breaks smartcase until the next time <Esc> is pressed in
+" insert-mode.
+inoremap <C-c> <Esc>
 " }}}
 " Insert-mode-related {{{
 " - Insert mode undo and exit:
