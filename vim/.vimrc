@@ -289,7 +289,8 @@ nnoremap <C-w>028 28<C-w>w
 nnoremap <C-w>029 29<C-w>w
 " }}}
 " <C-c>-related {{{
-inoremap <C-c><C-c> <Esc>:w<CR>
+" To prevent message from immediately disappearing, use redraw:
+inoremap <C-c><C-c> <Esc>:redraw <Bar> w<CR>
 nnoremap <C-c><C-c> :w<CR>
 " }}}
 " Insert-mode-related {{{
