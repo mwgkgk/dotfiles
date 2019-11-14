@@ -297,6 +297,8 @@ nnoremap <C-c><C-c> :w<CR>
 cnoremap <C-c> <C-c>
 " }}}
 " Insert-mode-related {{{
+" - Insert mode undo and exit:
+inoremap <C-u> <Esc>u
 " - Smaller undo chunks:
 inoremap . .<C-g>u
 inoremap , ,<C-g>u
