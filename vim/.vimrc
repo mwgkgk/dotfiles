@@ -288,6 +288,10 @@ nnoremap <C-w>027 27<C-w>w
 nnoremap <C-w>028 28<C-w>w
 nnoremap <C-w>029 29<C-w>w
 " }}}
+" <C-c>-related {{{
+inoremap <C-c><C-c> <Esc>:w<CR>
+nnoremap <C-c><C-c> :w<CR>
+" }}}
 " Insert-mode-related {{{
 " - Smaller undo chunks:
 inoremap . .<C-g>u
