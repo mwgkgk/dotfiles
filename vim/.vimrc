@@ -483,7 +483,7 @@ nnoremap OB 3<C-E>
 nnoremap <F6> :source ~/.plugs.vimrc<CR>
 command! ReloadVimrc :source ~/.plugs.vimrc
 " Refresh
-nnoremap <F1> :e!<CR>zazz
+nnoremap <F1> :e!<CR>zOzz
 " Run cmd
 nnoremap <M-!> :!
 " :ls
