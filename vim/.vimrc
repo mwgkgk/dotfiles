@@ -40,7 +40,7 @@ set wrapscan
 set ruler
 set scrolloff=5
 set mouse=a
-" set number
+set number
 set cursorline
 autocmd vimrc WinEnter * setlocal cursorline
 autocmd vimrc WinLeave * setlocal nocursorline
