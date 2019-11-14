@@ -292,6 +292,9 @@ nnoremap <C-w>029 29<C-w>w
 " To prevent message from immediately disappearing, use redraw:
 " inoremap <C-c><C-c> <Esc>:redraw <Bar> w<CR>
 nnoremap <C-c><C-c> :w<CR>
+" By default, <C-c> requires confirmation. Mapping to <Esc> would require
+" changing cpoptions - see :help c_<Esc>. This is weird but works:
+cnoremap <C-c> <C-c>
 " }}}
 " Insert-mode-related {{{
 " - Smaller undo chunks:
