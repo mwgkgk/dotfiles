@@ -239,12 +239,11 @@ nnoremap <Space>w :w<CR>
 " Write & close
 nnoremap <Space>W :wq<CR>
 " Edit
-nnoremap <C-W>e :e <C-R>=expand('%:h').'/'<CR><C-D>
-nnoremap <Leader><C-W>e :e <C-R>=expand('%:h').'/'<CR><C-D>
+nnoremap <Space>e :e <C-R>=expand('%:h').'/'<CR><C-D>
 " Sp
-nnoremap <Leader><C-W>s :sp <C-R>=expand('%:h').'/'<CR><C-D>
+nnoremap <C-W>e :sp <C-R>=expand('%:h').'/'<CR><C-D>
 " Vs
-nnoremap <Leader><C-W>v :vs <C-R>=expand('%:h').'/'<CR><C-D>
+nnoremap <C-W>E :vs <C-R>=expand('%:h').'/'<CR><C-D>
 " C-W #
 nnoremap <C-W># :sp #<CR>
 " + / -
