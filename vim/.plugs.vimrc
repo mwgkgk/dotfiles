@@ -847,20 +847,20 @@ map <M-l> E
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-surround' " {{{
 " Wrapping in braces:
-imap <C-c><C-c> <Esc>hysiw)ea
+" imap <C-c><C-c> <Esc>hysiw)ea
 nmap <C-c><C-c> <Esc>ysiw)
-imap <C-c>) <Esc>hysiw)ea
+" imap <C-c>) <Esc>hysiw)ea
 nmap <C-c>) <Esc>ysiw)
 " Two words
 nmap <C-c>l ys3iw)
 " Not working
 " nmap <C-c>h ys2b)
 " Quotes
-imap <C-c>" <Esc>hysiW"ea
+" imap <C-c>" <Esc>hysiW"ea
 nmap <C-c>" <Esc>ysiW"
-imap <C-c>' <Esc>hysiW'ea
+" imap <C-c>' <Esc>hysiW'ea
 nmap <C-c>' <Esc>ysiW'
-imap <C-c>] <Esc>hysiW'ea
+" imap <C-c>] <Esc>hysiW'ea
 nmap <C-c>] <Esc>ysiW'
 " }}}
 Plug 'tpope/vim-repeat'
