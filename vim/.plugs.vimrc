@@ -678,8 +678,8 @@ vnoremap <Leader>k gk
 map gk <Plug>(IndentWisePreviousEqualIndent)
 map gj <Plug>(IndentWiseNextEqualIndent)
 
-map gI <Plug>(IndentWisePreviousAbsoluteIndent)
-map gi <Plug>(IndentWiseNextAbsoluteIndent)
+map g[ <Plug>(IndentWisePreviousAbsoluteIndent)
+map g] <Plug>(IndentWiseNextAbsoluteIndent)
 
 map gK <Plug>(IndentWiseBlockScopeBoundaryBegin)
 map gJ <Plug>(IndentWiseBlockScopeBoundaryEnd)
