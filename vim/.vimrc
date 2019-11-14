@@ -213,8 +213,7 @@ cab vh vert help
 " - No more c-w
 nmap <Space> <C-W>
 vmap <Space> <C-W>
-" - Secure <C-W>o:
-nnoremap <C-W>O <C-W>o
+" - Disable <C-W>o, use :only instead.
 nnoremap <C-w>o <nop>
 " - Switch & maximise window:
 nnoremap <C-W>gj <C-W>j<C-W>_
