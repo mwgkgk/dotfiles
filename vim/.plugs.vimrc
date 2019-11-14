@@ -848,7 +848,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-surround' " {{{
 " Wrapping in braces:
 " imap <C-c><C-c> <Esc>hysiw)ea
-" nmap <C-c><C-c> <Esc>ysiw)
+nmap <C-c><C-c> <Esc>ysiw)
 " imap <C-c>) <Esc>hysiw)ea
 nmap <C-c>) <Esc>ysiw)
 " Two words
