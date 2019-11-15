@@ -42,7 +42,7 @@ augroup END
 " let s:static_colo = 'badwolf'
 
 " let s:static_colo = 'redmustang'
-" let s:static_colo = 'mustangmod'
+let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
 " let s:static_colo = 'alduin'
@@ -76,7 +76,7 @@ augroup END
 " let s:static_colo = 'nighted'
 
 " let s:static_colo = 'jellybeans'
-let s:static_colo = 'ufo'
+" let s:static_colo = 'ufo'
 
 " let s:static_colo = 'lucius-light'
 
