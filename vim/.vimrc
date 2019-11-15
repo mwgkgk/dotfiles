@@ -297,6 +297,9 @@ cnoremap <C-c> <C-c>
 " Default <C-c> breaks smartcase until the next time <Esc> is pressed in
 " insert-mode.
 inoremap <C-c> <Esc>
+" Learning mode: disable <Esc>
+inoremap <Esc> <Nop>
+cnoremap <Esc> <Nop>
 " }}}
 " Insert-mode-related {{{
 " - Insert mode undo and exit:
