@@ -298,8 +298,8 @@ cnoremap <C-c> <C-c>
 " insert-mode.
 inoremap <C-c> <Esc>
 " Learning mode: disable <Esc>
-inoremap <Esc> <Nop>
-cnoremap <Esc> <Nop>
+" inoremap <Esc> <Nop>
+" cnoremap <Esc> <Nop>
 " }}}
 " Insert-mode-related {{{
 " - Smaller undo chunks:
