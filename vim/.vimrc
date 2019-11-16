@@ -186,8 +186,6 @@ vnoremap J <nop>
 " nnoremap ] <nop>
 " }}}
 " Search-related {{{
-" Magic
-nnoremap / /\m
 " Vimgrep
 nnoremap <Space>/ :vimgrep // %<Left><Left><Left>
 " Previous on <Leader>/
