@@ -18,6 +18,7 @@ snippet /\s/ "/\s/" r
  ($1)
 endsnippet
 
-snippet /^$/ "^$" r
-($1)
+# This here snippet requires this here workaround to work:
+snippet /^/ "^$" r
+($1)`!v snippet_helpers#0a()`
 endsnippet
