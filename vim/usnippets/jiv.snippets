@@ -18,9 +18,9 @@ snippet /\s/ "/\s/" r
  ($1)
 endsnippet
 
-# This here snippet requires this here workaround to work:
+# More info in autoload/helpers.vim
 snippet /^/ "^$" r
-($0)`!v snippet_helpers#0a()`
+($0)`!v helpers#0a()`
 endsnippet
 
 snippet . "." i
