@@ -186,8 +186,8 @@ vnoremap J <nop>
 " nnoremap ] <nop>
 " }}}
 " Search-related {{{
-" Vimgrep
-nnoremap <Space>/ :vimgrep // %<Left><Left><Left>
+" Vimgrep last search and open quickfix:
+nnoremap <Space>/ :silent! vimgrep // %<CR>:copen<CR>
 " Previous on <Leader>/
 nnoremap <Leader>/ /<C-R>/
 " - Jump prev/next not leaving search command mode:
