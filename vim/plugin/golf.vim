@@ -7,6 +7,3 @@
 " https://stackoverflow.com/questions/1953056/in-vim-how-to-write-a-partial-line-to-a-file
 
 command! -range GolfChars <line1>,<line2>s/\S/\S/gn | let @/="" | normal ``
-
-nnoremap <Leader>gg :GolfChars<CR>
-vnoremap <Leader>gg :GolfChars<CR>
