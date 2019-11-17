@@ -305,10 +305,14 @@ inoremap <C-r> <C-g>u<C-r>
 nnoremap <MiddleMouse> a<MiddleMouse><Esc>
 inoremap <MiddleMouse> <MiddleMouse><Esc>
 vnoremap <MiddleMouse> c<MiddleMouse><Esc>
-" - Insert-mode surround PREVIOUS word with backticks:
-imap <C-g><C-b> <Esc>bysw`Ea
-" - Insert-mode uppercase prev word:
-imap <C-g><C-u> <Esc>bgUwgi
+" Insert-mode uppercase previous word:
+imap <C-g>U <C-c>bgUwgi
+" Insert-mode lowercase prev word:
+imap <C-g>u <C-c>bguwgi
+" Insert-mode toggle case prev word:
+imap <C-g><C-u> <C-c>bg~wgi
+" Insert-mode surround previous word with backticks:
+imap <C-g>` <C-c>bysw`Ea
 " - F1 for digraphs
 inoremap <F1> <C-k>
 " - Kill line on C-k like readline
