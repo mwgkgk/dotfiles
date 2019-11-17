@@ -190,9 +190,9 @@ vnoremap J <nop>
 nnoremap <Space>/ :silent! vimgrep // %<CR>:copen<CR>
 " Previous on <Leader>/
 nnoremap <Leader>/ /<C-R>/
-" - Jump prev/next not leaving search command mode:
-cnoremap <C-N> <CR>/<C-P>
-cnoremap <C-O> <CR>NN/<C-P>
+" - Jump to prev/next match without leaving search command mode:
+cnoremap <C-o> <CR>NN/<C-P>
+cnoremap <C-t> <CR>/<C-P>
 " - Subsitute word under cursor
 nnoremap <LocalLeader># :%s /<C-R><C-W>//g<Left><Left>
 nnoremap <LocalLeader>* :%s /<C-R><C-W>//g<Left><Left>
