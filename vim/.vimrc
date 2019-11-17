@@ -203,8 +203,8 @@ nnoremap n nzOzz
 nnoremap N NzOzz
 " }}}
 " Help-related {{{
-nnoremap <C-W><C-h> :help <C-r><C-w><CR>
-nnoremap <Leader><C-h> :help <C-r><C-w><CR>
+" Help on word under cursor:
+nnoremap g<C-]> :help <C-r><C-w><CR>
 cab vh vert help
 " }}}
 " <C-W>-related {{{
