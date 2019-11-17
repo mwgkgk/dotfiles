@@ -117,8 +117,8 @@ nnoremap <C-w>029 29<C-w>w
 "
 
 " Fold/unfold everything:
-nnoremap z<Space> zM
-nnoremap <Space>z zR
+nnoremap <Space>z zM
+nnoremap z<Space> zR
 
 
 "

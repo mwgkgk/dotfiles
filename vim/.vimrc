@@ -244,9 +244,9 @@ nnoremap <Space>- 10<C-W>-
 " Prev window:
 nmap <C-w><C-w> <C-w>p
 " Fold everything:
-nnoremap z<Space> zM
+nnoremap <Space>z zM
 " Unfold everything:
-nnoremap <Space>z zR
+nnoremap z<Space> zR
 " Go to window by winnr()
 nnoremap <C-w>1 1<C-w>w
 nnoremap <C-w>2 2<C-w>w
