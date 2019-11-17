@@ -219,16 +219,11 @@ nnoremap <C-W>gk <C-W>k<C-W>_
 " nnoremap <C-W>gl <C-W>l<C-W>_
 " nnoremap <C-W>gh <C-W>h<C-W>_
 " - Keep ft for new windows
-function! NewWindow(win_cmd)
-    let l:prev_ft = &filetype
-    exec a:win_cmd
-    exec 'set ft=' . l:prev_ft
-endfunction
-nnoremap <silent> <C-W>n :call NewWindow("new")<CR>
-nnoremap <silent> <C-W>N :call NewWindow("vnew")<CR>
-" - Move window:
-noremap <silent>  <C-W>gh :call WindowMove("h")<CR>
-noremap <silent>  <C-W>gl :call WindowMove("l")<CR>
+nnoremap <silent> <C-W>n :call windows#new("new")<CR>
+nnoremap <silent> <C-W>N :call windows#new("vnew")<CR>
+" - Move window between rows:
+noremap <silent>  <C-W>gh :call windows#move("h")<CR>
+noremap <silent>  <C-W>gl :call windows#move("l")<CR>
 " Close all
 nnoremap <C-W>Q :qa<CR>
 " Write
@@ -582,50 +577,6 @@ function! ToggleVerbose()
     echo &verbose
 endfunc
 nnoremap <Leader>tv :call ToggleVerbose()<CR>
-" }}}
-" From suckless.vim: WindowMove {{{
-function! WindowMove(direction)
-  let winnr = winnr()
-  let bufnr = bufnr("%")
-
-  if a:direction == "j"        " move window to the previous row
-    wincmd j
-    if winnr() != winnr
-      "exe "normal <C-W><C-X>"
-      wincmd k
-      wincmd x
-      wincmd j
-    endif
-
-  elseif a:direction == "k"    " move window to the next row
-    wincmd k
-    if winnr() != winnr
-      wincmd x
-    endif
-
-  elseif "hl" =~ a:direction   " move window to the previous/next column
-    exe "wincmd " . a:direction
-    let newwinnr = winnr()
-    if newwinnr == winnr
-      " move window to a new column
-      exe "wincmd " . toupper(a:direction)
-    else
-      " move window to an existing column
-      wincmd p
-      wincmd c
-      " if t:windowMode == "S"
-      "   res " maximize window height
-      " endif
-      exe newwinnr . "wincmd w"
-      wincmd n
-      " if t:windowMode == "S"
-      "   res " maximize window height
-      " endif
-      exe "b" . bufnr
-    endif
-
-  endif
-endfunction
 " }}}
 " :Date {{{
 function! GetDate(...)
