@@ -233,9 +233,9 @@ nnoremap <Space>W :wq<CR>
 " Edit
 nnoremap <Space>e :e <C-R>=expand('%:h').'/'<CR><C-D>
 " Sp
-nnoremap <C-W>e :sp <C-R>=expand('%:h').'/'<CR><C-D>
+nnoremap <Space>E :sp <C-R>=expand('%:h').'/'<CR><C-D>
 " Vs
-nnoremap <C-W>E :vs <C-R>=expand('%:h').'/'<CR><C-D>
+nnoremap <Space>V :vs <C-R>=expand('%:h').'/'<CR><C-D>
 " C-W #
 nnoremap <C-W># :sp #<CR>
 " + / -
