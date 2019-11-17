@@ -313,8 +313,8 @@ imap <C-g>u <C-c>bguwgi
 imap <C-g><C-u> <C-c>bg~wgi
 " Insert-mode surround previous word with backticks:
 imap <C-g>` <C-c>bysw`Ea
-" - F1 for digraphs
-inoremap <F1> <C-k>
+" - C-t for digraphs
+inoremap <C-t> <C-k>
 " - Kill line on C-k like readline
 inoremap <C-k> <C-O>D
 " - C-M-k to join up
