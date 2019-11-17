@@ -317,8 +317,10 @@ imap <C-g>` <C-c>bysw`Ea
 inoremap <C-t> <C-k>
 " - Kill line on C-k like readline
 inoremap <C-k> <C-O>D
+" - C-M-j to join down
+inoremap <C-M-j> <Esc>Jgi
 " - C-M-k to join up
-inoremap <C-M-k> <Esc>-J
+inoremap <C-M-k> <Esc>-Jgi
 " - C-j to slide down
 inoremap <C-j> <CR><Esc>kA
 " - Move up/down to the end of the line on M-k / M-j in insert
