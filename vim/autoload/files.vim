@@ -1,12 +1,9 @@
-function! files_by_date#prev()
+function! files#prev_by_date()
     let l:fname = system('prev-by-date ' . expand('%'))
     execute 'edit ' . l:fname
 endfunction
 
-function! files_by_date#next()
+function! files#next_by_date()
     let l:fname = system('next-by-date ' . expand('%'))
     execute 'edit ' . l:fname
 endfunction
-
-nnoremap <Leader>dp :call files_by_date#prev()<CR>
-nnoremap <Leader>dn :call files_by_date#next()<CR>
