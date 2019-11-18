@@ -240,17 +240,17 @@ nnoremap <MiddleMouse> a<MiddleMouse><Esc>
 inoremap <MiddleMouse> <MiddleMouse><Esc>
 vnoremap <MiddleMouse> c<MiddleMouse><Esc>
 
-" Enable Paste mode for one paste:
-inoremap <C-r><C-w> <Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>'[=']
-inoremap <C-r><C-r> <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
-inoremap <C-r><C-e> <Esc>:set paste<CR>i<C-r>+<Esc>:set nopaste<CR>'[=']
+" Insert mode easy paste:
+inoremap <C-r><C-w> <C-r>"
+inoremap <C-r><C-r> <C-r>*
+inoremap <C-r><C-e> <C-r>+
 
-" Insert mode normal paste:
-inoremap <C-r>w <C-r>"
-inoremap <C-r>r <C-r>*
-inoremap <C-r>e <C-r>+
-
-" Command mode normal paste:
+" Command mode easy paste:
 cnoremap <C-r><C-w> <C-r>j
 cnoremap <C-r><C-r> <C-r>*
 cnoremap <C-r><C-e> <C-r>+
+
+" Enable Paste mode for one paste:
+inoremap <C-r>w <Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>'[=']
+inoremap <C-r>r <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
+inoremap <C-r>e <Esc>:set paste<CR>i<C-r>+<Esc>:set nopaste<CR>'[=']

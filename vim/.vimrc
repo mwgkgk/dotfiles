@@ -328,18 +328,18 @@ inoremap <M-j> <Esc>jA
 inoremap <M-k> <Esc>kA
 " insert word of the line above (C-Y improved)
 imap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
-" Enable Paste mode for one paste:
-inoremap <C-r><C-w> <Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>'[=']
-inoremap <C-r><C-r> <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
-inoremap <C-r><C-e> <Esc>:set paste<CR>i<C-r>+<Esc>:set nopaste<CR>'[=']
-" Insert mode normal paste:
-inoremap <C-r>w <C-r>"
-inoremap <C-r>r <C-r>*
-inoremap <C-r>e <C-r>+
-" Command mode normal paste:
+" Insert mode easy paste:
+inoremap <C-r><C-w> <C-r>"
+inoremap <C-r><C-r> <C-r>*
+inoremap <C-r><C-e> <C-r>+
+" Command mode easy paste:
 cnoremap <C-r><C-w> <C-r>j
 cnoremap <C-r><C-r> <C-r>*
 cnoremap <C-r><C-e> <C-r>+
+" Enable Paste mode for one paste:
+inoremap <C-r>w <Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>'[=']
+inoremap <C-r>r <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
+inoremap <C-r>e <Esc>:set paste<CR>i<C-r>+<Esc>:set nopaste<CR>'[=']
 " - Insert show regs:
 inoremap <C-R><Space> <Esc><C-O>:reg<CR>
 " Easier completion:
