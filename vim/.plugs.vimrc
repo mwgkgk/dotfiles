@@ -772,6 +772,7 @@ nnoremap sF :FzfGitModified<CR>
 Plug 'junegunn/vim-peekaboo' " {{{
 let g:peekaboo_delay = 200
 let g:peekaboo_compact = 1
+let g:peekaboo_window = 'bo 30new'
 " }}}
 
 Plug 'chauncey-garrett/vim-tasklist', { 'on' : '<Plug>TaskList' } " {{{
