@@ -35,13 +35,13 @@ nnoremap <Space>w :w<CR>
 nnoremap <Space>W :wq<CR>
 
 " Edit file under same directory as the buffer:
-nnoremap <Space>e :e <C-R>=expand('%:h').'/'<CR><C-D>
+nnoremap <Space>e :e <C-r>=expand('%:h').'/'<CR><C-d>
 
 " Split file under same directory as the buffer:
-nnoremap <Space>E :sp <C-R>=expand('%:h').'/'<CR><C-D>
+nnoremap <Space>E :sp <C-r>=expand('%:h').'/'<CR><C-d>
 
 " VertSplit file under same directory as the buffer:
-nnoremap <Space>V :vs <C-R>=expand('%:h').'/'<CR><C-D>
+nnoremap <Space>V :vs <C-r>=expand('%:h').'/'<CR><C-d>
 
 " Prev/next by modified date:
 nnoremap <Leader>dp :call files#prev_by_date()<CR>
@@ -60,22 +60,22 @@ nnoremap <silent> <Space>n :call windows#new("new")<CR>
 nnoremap <silent> <Space>N :call windows#new("vnew")<CR>
 
 " Switch & maximize window:
-nnoremap <Space>gj <C-W>j<C-W>_
-nnoremap <Space>gk <C-W>k<C-W>_
+nnoremap <Space>gj <C-w>j<C-w>_
+nnoremap <Space>gk <C-w>k<C-w>_
 
 " Move window between columns:
-nnoremap <silent> <C-W>gh :call windows#move("h")<CR>
-nnoremap <silent> <C-W>gl :call windows#move("l")<CR>
+nnoremap <silent> <C-w>gh :call windows#move("h")<CR>
+nnoremap <silent> <C-w>gl :call windows#move("l")<CR>
 
 " Split alt file:
 nnoremap <Space># :sp #<CR>
 
-" Disable <C-W>o, use :only instead.
+" Disable <C-w>o, use :only instead.
 nnoremap <C-w>o <Nop>
 
 " Change height:
-nnoremap <Space>+ 10<C-W>+
-nnoremap <Space>- 10<C-W>-
+nnoremap <Space>+ 10<C-w>+
+nnoremap <Space>- 10<C-w>-
 
 " Go to window by winnr()
 nnoremap <C-w>1 1<C-w>w
@@ -138,21 +138,21 @@ nnoremap n nzOzz
 nnoremap N NzOzz
 
 " Edit previous search:
-nnoremap <Leader>/ /<C-R>/
+nnoremap <Leader>/ /<C-r>/
 
 " Vimgrep last search and open quickfix:
 nnoremap <Space>/ :silent! vimgrep // %<CR>:copen<CR>
 
 " Jump to prev/next match without leaving search command mode:
-cnoremap <C-o> <CR>NN/<C-P>
-cnoremap <C-t> <CR>/<C-P>
+cnoremap <C-o> <CR>NN/<C-p>
+cnoremap <C-t> <CR>/<C-p>
 
 " Subsitute word under cursor:
-nnoremap <LocalLeader># :%s /<C-R><C-W>//g<Left><Left>
-nnoremap <LocalLeader>* :%s /<C-R><C-W>//g<Left><Left>
+nnoremap <LocalLeader># :%s /<C-r><C-w>//g<Left><Left>
+nnoremap <LocalLeader>* :%s /<C-r><C-w>//g<Left><Left>
 
 " Substitute last search pattern:
-nnoremap <LocalLeader>/ :%s /<C-R>///g<Left><Left>
+nnoremap <LocalLeader>/ :%s /<C-r>///g<Left><Left>
 
 
 "
@@ -179,6 +179,49 @@ vnoremap <Leader>gg :GolfChars<CR>
 " Insert mode
 "
 
+" C-t for digraphs
+inoremap <C-t> <C-k>
+
+" Kill line on C-k like readline
+inoremap <C-k> <C-o>D
+
+" C-M-k to join up
+inoremap <C-M-k> <Esc>-Jgi
+" C-M-j to join down
+inoremap <C-M-j> <Esc>Jgi
+
+" C-j to slide down
+inoremap <C-j> <CR><Esc>kA
+
+" - Move up/down to the end of the line
+inoremap <M-j> <Esc>jA
+inoremap <M-k> <Esc>kA
+
+" Insert word from the line above (C-y improved)
+inoremap <expr> <C-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
+
+" Complete line
+inoremap <C-l> <C-x><C-l>
+" Omni complete
+inoremap <M-w> <C-x><C-o>
+
+" Insert-mode uppercase previous word:
+imap <C-g>U <C-c>bgUwgi
+" Insert-mode lowercase prev word:
+imap <C-g>u <C-c>bguwgi
+" Insert-mode toggle case prev word:
+imap <C-g><C-u> <C-c>bg~wgi
+" Insert-mode surround previous word with backticks:
+imap <C-g>` <C-c>bysw`Ea
+
+" Notepad-like backwards kill-word (only gvim).
+" See trivia:
+" https://devblogs.microsoft.com/oldnewthing/20071011-00/?p=24823
+inoremap <C-BS> <C-w>
+
+" Insert system()
+inoremap <C-r>( <C-r>=system('')<Left><Left>
+
 " Smaller undo chunks:
 inoremap . .<C-g>u
 inoremap , ,<C-g>u
@@ -187,7 +230,27 @@ inoremap ! !<C-g>u
 inoremap <C-w> <C-g>u<C-w>
 inoremap <C-r> <C-g>u<C-r>
 
+
+"
+" Registers
+"
+
 " Mouse insert made easier:
 nnoremap <MiddleMouse> a<MiddleMouse><Esc>
 inoremap <MiddleMouse> <MiddleMouse><Esc>
 vnoremap <MiddleMouse> c<MiddleMouse><Esc>
+
+" Enable Paste mode for one paste:
+inoremap <C-r><C-w> <Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>'[=']
+inoremap <C-r><C-r> <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
+inoremap <C-r><C-e> <Esc>:set paste<CR>i<C-r>+<Esc>:set nopaste<CR>'[=']
+
+" Insert mode normal paste:
+inoremap <C-r>w <C-r>"
+inoremap <C-r>r <C-r>*
+inoremap <C-r>e <C-r>+
+
+" Command mode normal paste:
+cnoremap <C-r><C-w> <C-r>j
+cnoremap <C-r><C-r> <C-r>*
+cnoremap <C-r><C-e> <C-r>+
