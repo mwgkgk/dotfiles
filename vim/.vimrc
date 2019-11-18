@@ -348,8 +348,6 @@ inoremap <C-l> <C-x><C-l>
 inoremap <M-w> <C-x><C-o>
 " kill-word for gvim:
 inoremap <C-BS> <C-W>
-" Paste + with preceding >
-inoremap <C-R>> <Esc>0C<C-R>+<Esc>I> <Esc>
 " Insert system()
 inoremap <C-R>( <C-R>=system('')<Left><Left>
 " Insert mode pseudo digraphs
