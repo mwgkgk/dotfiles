@@ -70,6 +70,7 @@ augroup END
 " let s:static_colo = 'seoul256'
 
 " let s:static_colo = 'solarized-light'
+let s:static_colo = 'gruvbox-light'
 
 " let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
@@ -79,7 +80,7 @@ augroup END
 " let s:static_colo = 'ufo'
 
 " let s:static_colo = 'lucius-light'
-let s:static_colo = 'hybrid-light'
+" let s:static_colo = 'hybrid-light'
 
 " let s:static_colo = 'lucius-dark'
 " let s:static_colo = 'luciusmod'
