@@ -434,6 +434,9 @@ vnoremap <M-;> ;
 " Prev/next by modified date:
 nnoremap <Leader>dp :call files#prev_by_date()<CR>
 nnoremap <Leader>dn :call files#next_by_date()<CR>
+" First/last by modified date:
+nnoremap <Leader>dP :call files#first_by_date()<CR>
+nnoremap <Leader>dN :call files#last_by_date()<CR>
 " }}}
 " Commandline-related {{{
 " Previous on <Leader>:
