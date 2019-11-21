@@ -430,6 +430,10 @@ nnoremap <Leader><Space>v :vert term<CR>
 nnoremap <M-;> ;
 vnoremap <M-;> ;
 " nnoremap , ;
+
+" Prev/next by modified date:
+nnoremap <Leader>dp :call files#prev_by_date()<CR>
+nnoremap <Leader>dn :call files#next_by_date()<CR>
 " }}}
 " Commandline-related {{{
 " Previous on <Leader>:
