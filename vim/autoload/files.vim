@@ -53,18 +53,21 @@ function! files#filepath_from_date(root, filename, date)
                 \ a:filename
 endfunction
 
-function! files#todays_file(root, filename, skeleton)
+function! files#todays_file(root, filename, ...)
     let l:fname = files#filepath_from_date(a:root, a:filename, localtime())
 
     execute 'edit' . l:fname
 
     silent! execute '!mkdir -p %:h'
 
-    if !filereadable(l:fname)
-        execute '%!cat ' . a:skeleton
+    " a:1 is the optional file template
+    if a:0 >= 1
+        if !filereadable(l:fname)
+            execute '%!cat ' . a:1
 
-        write
-        edit
+            write
+            edit
+        endif
     endif
 
     $
