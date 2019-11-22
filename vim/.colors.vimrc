@@ -22,7 +22,7 @@ augroup END
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
 
-" let s:static_colo = 'gentooish'
+let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
 " let s:static_colo = 'peaksea_mod'
 
@@ -70,7 +70,7 @@ augroup END
 " let s:static_colo = 'seoul256'
 
 " let s:static_colo = 'solarized-light'
-let s:static_colo = 'gruvbox-light'
+" let s:static_colo = 'gruvbox-light'
 
 " let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
