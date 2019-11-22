@@ -43,3 +43,29 @@ function! files#last_by_date()
         execute 'edit ' . l:fname
     endif
 endfunction
+
+function! files#filepath_from_date(root, filename, date)
+    let l:year = strftime('%Y', a:date)
+    let l:month = tolower(strftime('%b', a:date))
+    let l:day = strftime('%d', a:date)
+
+    return expand(a:root) . l:year . '/' . l:month . '/' . l:day . '/' .
+                \ a:filename
+endfunction
+
+function! files#todays_file(root, filename, skeleton)
+    let l:fname = files#filepath_from_date(a:root, a:filename, localtime())
+
+    execute 'edit' . l:fname
+
+    silent! execute '!mkdir -p %:h'
+
+    if !filereadable(l:fname)
+        execute '%!cat ' . a:skeleton
+
+        write
+        edit
+    endif
+
+    $
+endfunction
