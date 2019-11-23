@@ -369,9 +369,9 @@ nnoremap <Leader>Q q
 " - q for %:
 map q %
 " - Insert-mode C-q for %:
-inoremap <C-q> <Esc>%a
+" inoremap <C-q> <Esc>%a
 " Noremap-mod C-q for %:
-map <C-q> %
+" map <C-q> %
 " - Add newlines before and after :
 " nnoremap [<Space> O<Esc>j
 nnoremap ]<Space> o<Esc>k
