@@ -977,6 +977,7 @@ nmap <Leader>hs <Plug>(GitGutterStageHunk):!git commit --amend --no-edit<CR>
 autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
 autocmd plugs.vimrc FileType jiv,lisp,clojure nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>(GitGutterStageHunk):Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
 
+" Stage hunk & commit with message from the unnamed register
 autocmd plugs.vimrc FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
 " }}}
 
