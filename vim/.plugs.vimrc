@@ -558,10 +558,10 @@ omap iN  <Plug>(textobj-indent-same-i)
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-entire' " {{{
 let g:textobj_entire_no_default_key_mappings = 1
-xmap iF <Plug>(textobj-entire-i)
-omap iF <Plug>(textobj-entire-i)
-xmap aF <Plug>(textobj-entire-a)
-omap aF <Plug>(textobj-entire-a)
+xmap iA <Plug>(textobj-entire-i)
+omap iA <Plug>(textobj-entire-i)
+xmap aA <Plug>(textobj-entire-a)
+omap aA <Plug>(textobj-entire-a)
 " }}}
 Plug 'kana/vim-submode', {'on' : [] } " {{{
 let g:submode_timeoutlen = 700
