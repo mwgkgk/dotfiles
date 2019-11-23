@@ -382,7 +382,7 @@ nnoremap <Leader><C-k> d$
 " - Swap parameters:
 " nnoremap <Leader>s, "qdt,dwt)p"qp
 " - Indent everything:
-nnoremap =A gg=G``
+" nnoremap =A gg=G``
 " Improved pastes:
 nnoremap <Leader>p "_ddP
 vnoremap <Leader>p "_dP

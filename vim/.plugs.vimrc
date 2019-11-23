@@ -562,6 +562,8 @@ xmap iA <Plug>(textobj-entire-i)
 omap iA <Plug>(textobj-entire-i)
 xmap aA <Plug>(textobj-entire-a)
 omap aA <Plug>(textobj-entire-a)
+xmap A <Plug>(textobj-entire-a)
+omap A <Plug>(textobj-entire-a)
 " }}}
 Plug 'kana/vim-submode', {'on' : [] } " {{{
 let g:submode_timeoutlen = 700
