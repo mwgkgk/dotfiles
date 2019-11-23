@@ -44,21 +44,23 @@ function! files#last_by_date()
     endif
 endfunction
 
-function! files#filepath_from_date(root, filename, date)
-    let l:year = strftime('%Y', a:date)
-    let l:month = tolower(strftime('%b', a:date))
-    let l:day = strftime('%d', a:date)
+function! files#filepath_from_date(root, filename, date) abort
+    let l:utc_date = date#seconds_to_utc(a:date)
+
+    let l:year = strftime('%Y', l:utc_date)
+    let l:month = tolower(strftime('%b', l:utc_date))
+    let l:day = strftime('%d', l:utc_date)
 
     return expand(a:root) . l:year . '/' . l:month . '/' . l:day . '/' .
                 \ a:filename
 endfunction
 
-function! files#todays_file(root, filename, ...)
+function! files#todays_file(root, filename, ...) abort
     let l:fname = files#filepath_from_date(a:root, a:filename, localtime())
 
-    execute 'edit' . l:fname
+    call system('mkdir -p ' . fnamemodify(l:fname, ':p:h'))
 
-    silent! execute '!mkdir -p %:h'
+    execute 'edit' . l:fname
 
     " a:1 is the optional file template
     if a:0 >= 1
