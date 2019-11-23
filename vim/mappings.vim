@@ -47,6 +47,9 @@ nnoremap <Space>V :vs <C-r>=expand('%:h').'/'<CR><C-d>
 nnoremap <Leader>dp :call files#prev_by_date()<CR>
 nnoremap <Leader>dn :call files#next_by_date()<CR>
 
+" First/last by modified date:
+nnoremap <Leader>dP :call files#first_by_date()<CR>
+nnoremap <Leader>dN :call files#last_by_date()<CR>
 
 "
 " Windows
@@ -113,13 +116,17 @@ nnoremap <C-w>029 29<C-w>w
 
 
 "
-" Folds
+" Folds / Zoom
 "
 
 " Fold/unfold everything:
 nnoremap <Space>z zM
 nnoremap z<Space> zR
 
+" Zoom up:
+nnoremap ze zt6<C-y>6<C-y>
+" Zoom down:
+nnoremap zd zb9<C-E>9<C-E>
 
 "
 " Help
@@ -168,6 +175,37 @@ vnoremap J <nop>
 "
 " Normal mode
 "
+
+" Y to behave like C & D :
+map Y y$
+
+" Q for ^:
+map Q ^
+
+" <Leader>Q for macros:
+nnoremap <Leader>Q q
+
+" q for %:
+map q %
+
+" - Join up
+nnoremap K -J
+
+" - Kill till EoL from normal
+nnoremap <Leader><C-k> d$
+
+" Add newlines before and after:
+nnoremap ,k O<Esc>j
+nnoremap ,j o<Esc>k
+
+" Enter insert mode @ the end:
+nnoremap ga GA
+
+" 1-handed undo:
+nnoremap <Tab><Space> u
+
+" Repeat macro:
+nnoremap <M-y> @@
 
 " Count non-whitespace chars:
 " See plugin/golf.vim
@@ -235,11 +273,6 @@ inoremap <C-r> <C-g>u<C-r>
 " Registers
 "
 
-" Mouse insert made easier:
-nnoremap <MiddleMouse> a<MiddleMouse><Esc>
-inoremap <MiddleMouse> <MiddleMouse><Esc>
-vnoremap <MiddleMouse> c<MiddleMouse><Esc>
-
 " Insert mode easy paste:
 inoremap <C-r><C-w> <C-r>"
 inoremap <C-r><C-r> <C-r>*
@@ -254,3 +287,64 @@ cnoremap <C-r><C-e> <C-r>+
 inoremap <C-r>w <Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>'[=']
 inoremap <C-r>r <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
 inoremap <C-r>e <Esc>:set paste<CR>i<C-r>+<Esc>:set nopaste<CR>'[=']
+
+" Paste replacing:
+nnoremap <Leader>p "_ddP
+vnoremap <Leader>p "_dP
+
+
+"
+" Mouse
+"
+
+" Mouse insert made easier:
+nnoremap <MiddleMouse> a<MiddleMouse><Esc>
+inoremap <MiddleMouse> <MiddleMouse><Esc>
+vnoremap <MiddleMouse> c<MiddleMouse><Esc>
+
+" Consistent Right Mouse :
+nmap <RightMouse> <LeftMouse><RightMouse>
+imap <RightMouse> <Esc><RightMouse>
+
+" Clear Search with mouse
+nnoremap <C-LeftMouse> :let @/=""<CR>
+
+
+"
+" Echo
+"
+
+" Echo highlight:
+nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+
+" Echo foldlevel:
+nnoremap <Leader>ef :echo foldlevel(".")<CR>
+
+" Echo indent:
+nnoremap <Leader>ei :echo indent(".")<CR>
+
+" Echo :pwd
+nnoremap <Leader>ed :pwd<CR>
+
+
+"
+" Terminal
+"
+
+" Replace current window with term:
+nnoremap <Leader><Space><Space> :term<CR><C-w>p<C-w>q<C-w><Space>
+
+" New tab:
+nnoremap <Leader><Space>c :tab term<CR>
+
+" TODO: make consistent with tmux, all of the following:
+" https://vi.stackexchange.com/questions/14061/how-can-i-open-a-split-at-whose-height-is-a-percentage-of-the-main-window
+
+nnoremap <Leader><Space>b :term<CR>
+
+nnoremap <Leader><Space>N :above term<CR>
+
+nnoremap <Leader><Space>v :vert term<CR>
+
+nnoremap <Leader><Space>s :term ++rows=15<CR>
+nnoremap <Leader><Space>S :above term ++rows=15<CR>

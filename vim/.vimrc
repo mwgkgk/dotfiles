@@ -372,9 +372,9 @@ map q %
 " inoremap <C-q> <Esc>%a
 " Noremap-mod C-q for %:
 " map <C-q> %
-" - Add newlines before and after :
-" nnoremap [<Space> O<Esc>j
-nnoremap ]<Space> o<Esc>k
+" - Add newlines before and after:
+nnoremap ,k O<Esc>j
+nnoremap ,j o<Esc>k
 " - Join up
 nnoremap K -J
 " - Kill till EoL from normal
@@ -411,10 +411,10 @@ nnoremap <Tab><Space> u
 nnoremap <M-y> @@
 " Open term
 nnoremap <Leader><Space><Space> :term<CR><C-w>p<C-w>q<C-w><Space>
-nnoremap <Leader><Space>n :term ++rows=10<CR>
-nnoremap <Leader><Space>N :above term ++rows=10<CR>
-nnoremap <Leader><Space>s :term<CR>
-nnoremap <Leader><Space>S :above term<CR>
+nnoremap <Leader><Space>n :term<CR>
+nnoremap <Leader><Space>N :above term<CR>
+nnoremap <Leader><Space>s :term ++rows=10<CR>
+nnoremap <Leader><Space>S :above term ++rows=10<CR>
 nnoremap <Leader><Space>v :vert term<CR>
 " Neither works:
 " nnoremap <Leader><Space>V :vert term<CR><C-w><C-w><C-w>x<C-w><C-w>
