@@ -991,27 +991,9 @@ nnoremap <Leader>gL :Flog -all -path=<C-R>=expand('%')<CR><CR>
 " }}}
 
 Plug 'mwgkgk/CamelCaseMotion' " {{{
-
-let g:CamelCaseMotion_dont_use_default_mappings = 1
-
-omap <silent> <C-f> <Plug>CamelCaseMotion_iw
-xmap <silent> <C-f> <Plug>CamelCaseMotion_iw
-map <silent> <C-f> <Plug>CamelCaseMotion_w
-
-omap <silent> <C-b> <Plug>CamelCaseMotion_ib
-xmap <silent> <C-b> <Plug>CamelCaseMotion_ib
-map <silent> <C-b> <Plug>CamelCaseMotion_b
-
-" Prior to rebinding c-e, we want C-Y to function as a reading scroll.
-nnoremap <C-y> 3<C-e>3j
-
-omap <silent> <C-e> <Plug>CamelCaseMotion_ie
-xmap <silent> <C-e> <Plug>CamelCaseMotion_ie
-map <silent> <C-e> <Plug>CamelCaseMotion_e
-
+" Default mappings: ,w ,b ,e   i,w i,b i,e
 " kill-small-word insert mode:
-imap <C-g><C-w> <Esc><C-b>cw
-
+imap <C-g><C-w> <Esc>,bcw
 " }}}
 Plug 'mwgkgk/vim-operator-append' " {{{
 map <Leader>a <Plug>(operator-append)
