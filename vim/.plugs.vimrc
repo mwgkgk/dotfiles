@@ -430,7 +430,7 @@ let g:SignatureMap = {
     \ 'ListBufferMarks'    :  "m/",
     \ 'ListBufferMarkers'  :  "m?"
     \ }
-nnoremap gm M
+" M replacement can be found in mappings.vim
 nmap M `]
 nmap U `[
 hi link SignatureMarkText Normal
@@ -466,6 +466,7 @@ autocmd plugs.vimrc FileType scheme nnoremap <buffer> <Space>f :Trailing<CR>gg=G
 " }}}
 
 Plug 'terryma/vim-multiple-cursors' " {{{
+" H & L replacements can be found in mappings.vim
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key = 'L'
 let g:multi_cursor_prev_key = 'H'

@@ -410,6 +410,18 @@ nnoremap ga GA
 nnoremap zd zb9<C-E>9<C-E>
 " Zoom up:
 nnoremap ze zt6<C-y>6<C-y>
+
+" C-f as a reading scroll:
+nnoremap <C-f> 6<C-e>6j
+
+" C-e as C-u:
+nnoremap <C-e> <C-u>
+
+" Replacements for H, M, L:
+nnoremap ,h H
+nnoremap ,m M
+nnoremap ,l L
+
 " HL
 nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 " Echo foldlevel:

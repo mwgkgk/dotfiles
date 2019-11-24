@@ -51,6 +51,7 @@ nnoremap <Leader>dn :call files#next_by_date()<CR>
 nnoremap <Leader>dP :call files#first_by_date()<CR>
 nnoremap <Leader>dN :call files#last_by_date()<CR>
 
+
 "
 " Windows
 "
@@ -126,7 +127,6 @@ nnoremap <C-w>028 28<C-w>w
 nnoremap <C-w>029 29<C-w>w
 
 
-
 "
 " Folds / Zoom
 "
@@ -140,6 +140,16 @@ nnoremap ze zt6<C-y>6<C-y>
 " Zoom down:
 nnoremap zd zb9<C-E>9<C-E>
 
+" C-f as a reading scroll:
+nnoremap <C-f> 6<C-e>6j
+
+" C-e as C-u:
+nnoremap <C-e> <C-u>
+
+" Replacements for H, M, L:
+nnoremap ,h H
+nnoremap ,m M
+nnoremap ,l L
 "
 " Help
 "
