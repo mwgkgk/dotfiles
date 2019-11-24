@@ -22,9 +22,10 @@ augroup END
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
 
-let s:static_colo = 'gentooish'
+" let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
 " let s:static_colo = 'peaksea_mod'
+let s:static_colo = 'flatlandia'
 
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
