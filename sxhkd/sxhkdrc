@@ -39,7 +39,7 @@ super + shift + i
 super + o
 	firefox-ulm
 
-super + z
+super + 0
 	firefox-default
 
 super + backslash
