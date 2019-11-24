@@ -228,12 +228,12 @@ nnoremap <silent> <Space>gn :call windows#new("above new")<CR>
 nnoremap <silent> <Space>gN :call windows#new("above vnew")<CR>
 
 " New 33% split:
-nnoremap <silent> <Space>s :call windows#new_small_horizontal()<CR>
-nnoremap <silent> <Space>S :call windows#new_small_vertical()<CR>
+nnoremap <silent> <Space>v :call windows#new_small_horizontal()<CR>
+nnoremap <silent> <Space>V :call windows#new_small_vertical()<CR>
 
 " New 33% split above/to the left:
-nnoremap <silent> <Space>gs :call windows#new_small_above_horizontal()<CR>
-nnoremap <silent> <Space>gS :call windows#new_small_above_vertical()<CR>
+nnoremap <silent> <Space>gv :call windows#new_small_above_horizontal()<CR>
+nnoremap <silent> <Space>gV :call windows#new_small_above_vertical()<CR>
 
 " - Move window between rows:
 noremap <silent>  <C-W>gh :call windows#move("h")<CR>
@@ -244,12 +244,16 @@ nnoremap <C-W>Q :qa<CR>
 nnoremap <Space>w :w<CR>
 " Write & close
 nnoremap <Space>W :wq<CR>
-" Edit
-nnoremap <Space>e :e <C-R>=expand('%:h').'/'<CR><C-D>
-" Sp
-nnoremap <Space>E :sp <C-R>=expand('%:h').'/'<CR><C-D>
-" Vs
-nnoremap <Space>V :vs <C-R>=expand('%:h').'/'<CR><C-D>
+
+" Edit file under same directory as the buffer:
+nnoremap <Space>ge :e <C-r>=expand('%:h').'/'<CR><C-d>
+
+" Split file under same directory as the buffer:
+nnoremap <Space>e :sp <C-r>=expand('%:h').'/'<CR><C-d>
+
+" VertSplit file under same directory as the buffer:
+nnoremap <Space>E :vs <C-r>=expand('%:h').'/'<CR><C-d>
+
 " C-W #
 nnoremap <C-W># :sp #<CR>
 " + / -
@@ -455,12 +459,12 @@ nnoremap <silent> <Leader><Space>gn :above term<CR>
 nnoremap <silent> <Leader><Space>gN :above vert term<CR>
 
 " New 33% terminal window:
-nnoremap <silent> <Leader><Space>s :exec 'term ++rows=' . winheight(0)/4<CR>
-nnoremap <silent> <Leader><Space>S :exec 'vert term ++cols=' . winwidth(0)/4<CR>
+nnoremap <silent> <Leader><Space>v :exec 'term ++rows=' . winheight(0)/4<CR>
+nnoremap <silent> <Leader><Space>V :exec 'vert term ++cols=' . winwidth(0)/4<CR>
 
 " New 33% terminal above/to the left:
-nnoremap <silent> <Leader><Space>gs :exec 'above term ++rows=' . winheight(0)/4<CR>
-nnoremap <silent> <Leader><Space>gS :exec 'above vert term ++cols=' . winwidth(0)/4<CR>
+nnoremap <silent> <Leader><Space>gv :exec 'above term ++rows=' . winheight(0)/4<CR>
+nnoremap <silent> <Leader><Space>gV :exec 'above vert term ++cols=' . winwidth(0)/4<CR>
 
 " Neither works:
 " nnoremap <Leader><Space>V :vert term<CR><C-w><C-w><C-w>x<C-w><C-w>
