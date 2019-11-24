@@ -218,9 +218,23 @@ nnoremap <C-W>gj <C-W>j<C-W>_
 nnoremap <C-W>gk <C-W>k<C-W>_
 " nnoremap <C-W>gl <C-W>l<C-W>_
 " nnoremap <C-W>gh <C-W>h<C-W>_
-" - Keep ft for new windows
-nnoremap <silent> <C-W>n :call windows#new("new")<CR>
-nnoremap <silent> <C-W>N :call windows#new("vnew")<CR>
+
+" Keep filetype for new windows:
+nnoremap <silent> <Space>n :call windows#new("new")<CR>
+nnoremap <silent> <Space>N :call windows#new("vnew")<CR>
+
+" New window above/to the left:
+nnoremap <silent> <Space>gn :call windows#new("above new")<CR>
+nnoremap <silent> <Space>gN :call windows#new("above vnew")<CR>
+
+" New 33% split:
+nnoremap <silent> <Space>s :call windows#new_small_horizontal()<CR>
+nnoremap <silent> <Space>S :call windows#new_small_vertical()<CR>
+
+" New 33% split above/to the left:
+nnoremap <silent> <Space>gs :call windows#new_small_above_horizontal()<CR>
+nnoremap <silent> <Space>gS :call windows#new_small_above_vertical()<CR>
+
 " - Move window between rows:
 noremap <silent>  <C-W>gh :call windows#move("h")<CR>
 noremap <silent>  <C-W>gl :call windows#move("l")<CR>
@@ -409,13 +423,29 @@ nnoremap <C-LeftMouse> :let @/=""<CR>
 nnoremap <Tab><Space> u
 " Repeat macro with alt-y
 nnoremap <M-y> @@
-" Open term
-nnoremap <Leader><Space><Space> :term<CR><C-w>p<C-w>q<C-w><Space>
-nnoremap <Leader><Space>n :term<CR>
-nnoremap <Leader><Space>N :above term<CR>
-nnoremap <Leader><Space>s :term ++rows=10<CR>
-nnoremap <Leader><Space>S :above term ++rows=10<CR>
-nnoremap <Leader><Space>v :vert term<CR>
+
+" Replace current window with term:
+nnoremap <silent> <Leader><Space><Space> :term ++curwin<CR>
+
+" New tab:
+nnoremap <silent> <Leader><Space>c :tab term<CR>
+
+" New 50% terminal window:
+nnoremap <silent> <Leader><Space>n :term<CR>
+nnoremap <silent> <Leader><Space>N :vert term<CR>
+
+" New 50% terminal window above / to the left:
+nnoremap <silent> <Leader><Space>gn :above term<CR>
+nnoremap <silent> <Leader><Space>gN :above vert term<CR>
+
+" New 33% terminal window:
+nnoremap <silent> <Leader><Space>s :exec 'term ++rows=' . winheight(0)/4<CR>
+nnoremap <silent> <Leader><Space>S :exec 'vert term ++cols=' . winwidth(0)/4<CR>
+
+" New 33% terminal above/to the left:
+nnoremap <silent> <Leader><Space>gs :exec 'above term ++rows=' . winheight(0)/4<CR>
+nnoremap <silent> <Leader><Space>gS :exec 'above vert term ++cols=' . winwidth(0)/4<CR>
+
 " Neither works:
 " nnoremap <Leader><Space>V :vert term<CR><C-w><C-w><C-w>x<C-w><C-w>
 " nnoremap <Leader><Space>V :botright term

@@ -5,6 +5,22 @@ function! windows#new(win_cmd)
     exec 'set ft=' . l:prev_ft
 endfunction
 
+function! windows#new_small_horizontal()
+    call windows#new(winheight(0)/4 . 'new')
+endfunction
+
+function! windows#new_small_vertical()
+    call windows#new(winwidth(0)/4 . 'vnew')
+endfunction
+
+function! windows#new_small_above_horizontal()
+    call windows#new('above ' . winheight(0)/4 . 'new')
+endfunction
+
+function! windows#new_small_above_vertical()
+    call windows#new('above ' . winwidth(0)/4 . 'vnew')
+endfunction
+
 " From suckless.vim:
 function! windows#move(direction)
     let winnr = winnr()

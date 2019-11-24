@@ -62,6 +62,18 @@ nnoremap <C-w><C-w> <C-w>p
 nnoremap <silent> <Space>n :call windows#new("new")<CR>
 nnoremap <silent> <Space>N :call windows#new("vnew")<CR>
 
+" New window above/to the left:
+nnoremap <silent> <Space>gn :call windows#new("above new")<CR>
+nnoremap <silent> <Space>gN :call windows#new("above vnew")<CR>
+
+" New 33% split:
+nnoremap <silent> <Space>s :call windows#new_small_horizontal()<CR>
+nnoremap <silent> <Space>S :call windows#new_small_vertical()<CR>
+
+" New 33% split above/to the left:
+nnoremap <silent> <Space>gs :call windows#new_small_above_horizontal()<CR>
+nnoremap <silent> <Space>gS :call windows#new_small_above_vertical()<CR>
+
 " Switch & maximize window:
 nnoremap <Space>gj <C-w>j<C-w>_
 nnoremap <Space>gk <C-w>k<C-w>_
@@ -332,19 +344,23 @@ nnoremap <Leader>ed :pwd<CR>
 "
 
 " Replace current window with term:
-nnoremap <Leader><Space><Space> :term<CR><C-w>p<C-w>q<C-w><Space>
+nnoremap <silent> <Leader><Space><Space> :term ++curwin<CR>
 
 " New tab:
-nnoremap <Leader><Space>c :tab term<CR>
+nnoremap <silent> <Leader><Space>c :tab term<CR>
 
-" TODO: make consistent with tmux, all of the following:
-" https://vi.stackexchange.com/questions/14061/how-can-i-open-a-split-at-whose-height-is-a-percentage-of-the-main-window
+" New 50% terminal window:
+nnoremap <silent> <Leader><Space>n :term<CR>
+nnoremap <silent> <Leader><Space>N :vert term<CR>
 
-nnoremap <Leader><Space>b :term<CR>
+" New 50% terminal window above / to the left:
+nnoremap <silent> <Leader><Space>gn :above term<CR>
+nnoremap <silent> <Leader><Space>gN :above vert term<CR>
 
-nnoremap <Leader><Space>N :above term<CR>
+" New 33% terminal window:
+nnoremap <silent> <Leader><Space>s :exec 'term ++rows=' . winheight(0)/4<CR>
+nnoremap <silent> <Leader><Space>S :exec 'vert term ++cols=' . winwidth(0)/4<CR>
 
-nnoremap <Leader><Space>v :vert term<CR>
-
-nnoremap <Leader><Space>s :term ++rows=15<CR>
-nnoremap <Leader><Space>S :above term ++rows=15<CR>
+" New 33% terminal above/to the left:
+nnoremap <silent> <Leader><Space>gs :exec 'above term ++rows=' . winheight(0)/4<CR>
+nnoremap <silent> <Leader><Space>gS :exec 'above vert term ++cols=' . winwidth(0)/4<CR>
