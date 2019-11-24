@@ -433,8 +433,10 @@ let g:SignatureMap = {
 " M replacement can be found in mappings.vim
 nmap M `]
 nmap U `[
-hi link SignatureMarkText Normal
-hi link SignatureMarkerText Normal
+
+hi link SignatureMarkText SignColumn
+hi link SignatureMarkerText SignColumn
+
 " }}}
 Plug 'Chiel92/vim-autoformat' " {{{
 let g:formatdef_elmformat = '"elm-format --upgrade --yes --stdin"'
@@ -930,6 +932,12 @@ command! Back :!git rollback
 Plug 'tpope/vim-scriptease'
 
 Plug 'airblade/vim-gitgutter' " {{{
+
+hi link GitGutterAdd SignColumn
+hi link GitGutterChange SignColumn
+hi link GitGutterDelete SignColumn
+hi link GitGutterChangeDelete SignColumn
+
 nnoremap <Leader>tg :GitGutterToggle<CR>
 
 " Instead of this,
