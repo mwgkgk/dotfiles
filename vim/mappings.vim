@@ -200,11 +200,14 @@ nnoremap <Leader>Q q
 " q for %:
 map q %
 
-" - Join up
+" Join up
 nnoremap K -J
 
-" - Kill till EoL from normal
+" Kill till EoL from normal
 nnoremap <Leader><C-k> d$
+
+" Restore single-quote functionality
+nnoremap <Leader>` '
 
 " Add newlines before and after:
 nnoremap ,k O<Esc>j
@@ -243,7 +246,7 @@ inoremap <C-M-j> <Esc>Jgi
 " C-j to slide down
 inoremap <C-j> <CR><Esc>kA
 
-" - Move up/down to the end of the line
+" Move up/down to the end of the line
 inoremap <M-j> <Esc>jA
 inoremap <M-k> <Esc>kA
 

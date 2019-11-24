@@ -393,6 +393,10 @@ nnoremap ,j o<Esc>k
 nnoremap K -J
 " - Kill till EoL from normal
 nnoremap <Leader><C-k> d$
+
+" Restore single-quote functionality
+nnoremap <Leader>` '
+
 " - Swap parameters:
 " nnoremap <Leader>s, "qdt,dwt)p"qp
 " - Indent everything:
