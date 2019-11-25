@@ -939,6 +939,8 @@ hi link GitGutterChangeDelete SignColumn
 
 nnoremap <Leader>tg :GitGutterToggle<CR>
 
+nnoremap <silent> <Leader>hg :GitGutterPreviewHunk<CR>
+
 " Instead of this,
 " nmap <Leader>k <Plug>(GitGutterPrevHunk)
 " nmap <Leader>j <Plug>(GitGutterNextHunk)
