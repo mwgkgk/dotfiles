@@ -50,8 +50,8 @@ inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 
 Plug 'scrooloose/nerdtree' " {{{
-nnoremap <silent> _ :e  %:p:h<CR>
-nnoremap <silent> <Leader>_ :sp<CR>:e  %:p:h<CR>
+nnoremap <silent> <Leader>_ :e  %:p:h<CR>
+nnoremap <silent> _ :sp<CR>:e  %:p:h<CR>
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMapUpdir="_"
