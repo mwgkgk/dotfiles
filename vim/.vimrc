@@ -170,7 +170,7 @@ function! ExecutableFlagCurrentFile()
     endif
 endfunction
 
-set statusline=\ %{winnr()}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m%{ExecutableFlagCurrentFile()}\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %=\ %{expand('#:t')}\ %P
+set statusline=\ %{winnr()}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m%{ExecutableFlagCurrentFile()}\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %{bufnr()}\ %=\ %{expand('#:t')}\ %P
 set laststatus=2 " Show even in last window
 
 " Paste/Nopaste
