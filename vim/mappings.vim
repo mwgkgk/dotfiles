@@ -34,6 +34,13 @@ nnoremap <Space>w :w<CR>
 " Write & close:
 nnoremap <Space>W :wq<CR>
 
+" Edit alternate file:
+nnoremap <Space>a <C-^>
+
+" Next/prev buffer
+nnoremap <Space>> :ne<CR>
+nnoremap <Space>< :prev<CR>
+
 " Edit file under same directory as the buffer:
 nnoremap <Space>ge :e <C-r>=expand('%:h').'/'<CR><C-d>
 
@@ -80,8 +87,8 @@ nnoremap <Space>gj <C-w>j<C-w>_
 nnoremap <Space>gk <C-w>k<C-w>_
 
 " Move window between columns:
-nnoremap <silent> <C-w>gh :call windows#move("h")<CR>
-nnoremap <silent> <C-w>gl :call windows#move("l")<CR>
+nnoremap <silent> <Space>gh :call windows#move("h")<CR>
+nnoremap <silent> <Space>gl :call windows#move("l")<CR>
 
 " Split alt file:
 nnoremap <Space># :sp #<CR>
@@ -150,12 +157,22 @@ nnoremap <C-e> <C-u>
 nnoremap ,h H
 nnoremap ,m M
 nnoremap ,l L
+
+
 "
 " Help
 "
 
 " Help on word under cursor:
 nnoremap g<C-]> :help <C-r><C-w><CR>
+
+
+"
+" Navigation
+"
+
+" Go to line number under cursor:
+nnoremap <Leader>@ :<C-R><C-W><CR>
 
 
 "
@@ -168,6 +185,9 @@ nnoremap N NzOzz
 
 " Edit previous search:
 nnoremap <Leader>/ /<C-r>/
+
+" Clear search pattern:
+nnoremap <Leader>n :let @/=""<CR>
 
 " Vimgrep last search and open quickfix:
 nnoremap <Space>/ :silent! vimgrep // %<CR>:copen<CR>
@@ -219,6 +239,10 @@ nnoremap <Leader><C-k> d$
 " Restore single-quote functionality
 nnoremap <Leader>` '
 
+" Repeat f/F (";" is leader)
+nnoremap <M-;> ;
+vnoremap <M-;> ;
+
 " Add newlines before and after:
 nnoremap ,k O<Esc>j
 nnoremap ,j o<Esc>k
@@ -237,6 +261,38 @@ nnoremap <M-y> @@
 nnoremap <Leader>gg :GolfChars<CR>
 vnoremap <Leader>gg :GolfChars<CR>
 
+
+"
+" Command mode
+"
+
+" Edit previous command:
+nnoremap <Leader>: :<C-p>
+
+" Directory of the current file:
+cnoremap %% <C-r>=expand('%:h').'/'<CR>
+
+" Prev command with a bang:
+cmap $$ <C-r>=histget("cmd", -1)<CR><C-a><M-f>!
+
+" Args of a previous command
+cnoremap !$ <C-f>k0f y$G<C-c><End><C-r>"
+
+
+"
+" Quickfix
+"
+
+" Next/prev quickfix item:
+nnoremap <C-n> :cn<CR>
+nnoremap <C-p> :cp<CR>
+
+
+"
+" Preview Window
+"
+
+nnoremap <silent> zd :pclose<CR>
 
 "
 " Insert mode
@@ -298,6 +354,9 @@ inoremap <C-r> <C-g>u<C-r>
 " Registers
 "
 
+" Detailed register status
+nnoremap <Space>" :reg<CR>
+
 " Insert mode easy paste:
 inoremap <C-r><C-w> <C-r>"
 inoremap <C-r><C-r> <C-r>*
@@ -349,7 +408,18 @@ nnoremap <Leader>ef :echo foldlevel(".")<CR>
 nnoremap <Leader>ei :echo indent(".")<CR>
 
 " Echo :pwd
-nnoremap <Leader>ed :pwd<CR>
+nnoremap <Leader>ep :pwd<CR>
+
+
+"
+" Toggle
+"
+
+" Toggle scrollbind:
+nnoremap <Leader>tb :windo set scrollbind!<CR>
+
+" Toggle scrolloff mode:
+nnoremap <Leader>tz :let &scrolloff=999-&scrolloff<CR>
 
 
 "
@@ -377,3 +447,20 @@ nnoremap <silent> <Leader><Space>V :exec 'vert term ++cols=' . winwidth(0)/4<CR>
 " New 33% terminal above/to the left:
 nnoremap <silent> <Leader><Space>gv :exec 'above term ++rows=' . winheight(0)/4<CR>
 nnoremap <silent> <Leader><Space>gV :exec 'above vert term ++cols=' . winwidth(0)/4<CR>
+
+
+"
+" Current Directory
+"
+
+" Cd to previous dir:
+nnoremap <Leader>cdp :cd -<CR>:pwd<CR>
+
+" Cd to current buffer's dirname:
+nnoremap <Leader>cdf :cd %:p:h<CR>:pwd<CR>
+
+" Cd to toplevel git dir:
+nnoremap <Leader>cdt :silent execute 'cd' system('git rev-parse --show-toplevel')<CR>:pwd<CR>
+
+" Cd to .git dir:
+nnoremap <Leader>cdg :silent execute 'cd' system('git rev-parse --git-dir')<CR>:pwd<CR>

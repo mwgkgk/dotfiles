@@ -433,7 +433,7 @@ nnoremap <Leader>ef :echo foldlevel(".")<CR>
 " Echo indent:
 nnoremap <Leader>ei :echo indent(".")<CR>
 " Echo :pwd
-nnoremap <Leader>ed :pwd<CR>
+nnoremap <Leader>ep :pwd<CR>
 " Rightmouse
 nmap <RightMouse> <LeftMouse><RightMouse>
 imap <RightMouse> <Esc><RightMouse>
@@ -494,8 +494,8 @@ nnoremap <Leader>: :<C-P>
 " - Directory of the current file :
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 " - Prev command with a bang:
-"   Does work in all cases except when it's the first command.
-cnoremap $$ <C-F>kk$ea!<Esc><C-C><End>
+" Prev command with a bang:
+cmap $$ <C-r>=histget("cmd", -1)<CR><C-a><M-f>!
 " - Args of a previous command
 cnoremap !$ <C-F>k0f y$G<C-C><End><C-R>"
 " }}}
@@ -507,26 +507,36 @@ nnoremap <C-n> :cn<CR>
 nnoremap <C-p> :cp<CR>
 nnoremap <C-w>> :ne<CR>
 nnoremap <C-w>< :prev<CR>
+" Hide preview window:
+nnoremap <silent> zd :pclose<CR>
 " Toggle scrollbind:
 nnoremap <Leader>tb :windo set scrollbind!<CR>
 " Toggle scrolloff mode:
-nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
+nnoremap <Leader>tz :let &scrolloff=999-&scrolloff<CR>
 " Explorer
 " nnoremap <silent> - :silent! Sex<CR>
 " nnoremap <silent> _ :silent! Explore<CR>
 " let g:netrw_liststyle = 3
-" Cd to bash dir and file dir
-nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
-nnoremap <Leader>cg :cd `pwd`<CR>:pwd<CR>
+" Cd to previous dir:
+nnoremap <Leader>cdp :cd -<CR>:pwd<CR>
+
+" Cd to current buffer's dirname:
+nnoremap <Leader>cdf :cd %:p:h<CR>:pwd<CR>
+
+" Cd to toplevel git dir:
+nnoremap <Leader>cdt :silent execute 'cd' system('git rev-parse --show-toplevel')<CR>:pwd<CR>
+
+" Cd to .git dir:
+nnoremap <Leader>cdg :silent execute 'cd' system('git rev-parse --git-dir')<CR>:pwd<CR>
 " Regs
 nnoremap <C-W>" :reg<CR>
 " Go line
 nnoremap <Leader>@ :<C-R><C-W><CR>
 " Alt file
-nnoremap <C-W>a <C-^>
+nnoremap <Space>a <C-^>
 " Xpdf gotoPage
 nnoremap [gl :silent! VimProcBang xpdf -remote defaultServer -exec gotoPage\(<C-R><C-W>\)<CR>
-" Up / down
+" Up / down arrows
 nnoremap OA 3<C-Y>
 nnoremap OB 3<C-E>
 " Source .plugs.vimrc:
@@ -537,7 +547,7 @@ nnoremap <F1> :e!<CR>zOzz
 " Run cmd
 nnoremap <M-!> :!
 " :ls
-nnoremap <M-o> :ls<CR>:b<Space>
+nnoremap <Space>A :ls<CR>:b<Space>
 " :bn :bp
 nnoremap <Leader>P :bp<CR>
 nnoremap <Leader>N :bn<CR>
