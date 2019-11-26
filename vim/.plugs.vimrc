@@ -528,7 +528,7 @@ nnoremap <Space><Tab> :AsyncRun tmux send -t motor C-c && sleep 0.1 && tmux send
 
 Plug 'arecarn/selection.vim'
 Plug 'arecarn/crunch.vim' " {{{
-inoremap <C-g><C-g> <Esc>vB:Crunch<CR>a
+inoremap <C-g>= <Esc>vB:Crunch<CR>a
 " }}}
 
 Plug 'thinca/vim-quickrun' " {{{
