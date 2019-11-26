@@ -480,6 +480,9 @@ Plug 'Shougo/vimproc.vim', { 'do' : 'make' } " {{{
 vnoremap gX y:call vimproc#system('bro url <C-R>"')<CR>
 vnoremap gx y:call vimproc#system('firefox-default <C-R>" &')<CR>
 vnoremap gs y:call vimproc#system('firefox-default https://google.com/search?hl=en&q=<C-R>" &')<CR>
+
+" Xpdf gotoPage
+nnoremap [gl :silent! VimProcBang xpdf -remote xpdfserv 'gotoPage\(<C-R><C-W>\)'<CR>
 " }}}
 Plug 'Shougo/vimshell.vim' " {{{
 nnoremap <Leader>E :VimShell<CR>
