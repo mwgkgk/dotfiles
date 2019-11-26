@@ -629,10 +629,10 @@ call submode#map(       'ScrollStay', 'n', '',  'j', '3<C-E>')
 " }}}
 Plug 'kana/vim-niceblock'
 Plug 'kana/vim-exjumplist' " {{{
-nmap <C-M-t> <Plug>(exjumplist-go-last)
 nmap <C-M-o> <Plug>(exjumplist-go-first)
-nmap <M-)> <Plug>(exjumplist-next-buffer)
-nmap <M-(> <Plug>(exjumplist-previous-buffer)
+nmap <C-M-t> <Plug>(exjumplist-go-last)
+nmap <M-p> <Plug>(exjumplist-previous-buffer)
+nmap <M-n> <Plug>(exjumplist-next-buffer)
 " }}}
 
 Plug 'thinca/vim-visualstar'
