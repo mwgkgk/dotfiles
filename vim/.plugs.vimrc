@@ -724,11 +724,12 @@ let g:fzf_buffers_jump = 1
 nnoremap s<Space> :FzfBuffers<CR>
 
 nnoremap s<F1> :FzfHelptags<CR>
-nnoremap sm :FzfMarks<CR>
 nnoremap s<Tab> :FzfSnippets<CR>
 nnoremap sK :FZF ~/.vim/skeletons/<CR>
 nnoremap sk :call fzf#run({'dir':'~/.vim/skeletons', 'sink':'%!cat', 'down': '~15%'})<CR>
 nnoremap sz :FzfTags<CR>
+nnoremap sm :FzfMarks<CR>
+nnoremap sM :FzfMaps<CR>
 nnoremap st :FzfFiletypes<CR>
 nnoremap sf :FzfGFiles<CR>
 nnoremap s' :FzfHistory<CR>
