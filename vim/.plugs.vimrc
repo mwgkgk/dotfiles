@@ -386,7 +386,7 @@ let g:root#echo = 0
 
 Plug 'Valloric/ListToggle' " {{{
 let g:lt_quickfix_list_toggle_map = '<Space>`'
-let g:lt_location_list_toggle_map = '<Space>~'
+let g:lt_location_list_toggle_map = "<Space>'"
 " }}}
 Plug 'yssl/QFEnter'
 Plug 'fcpg/vim-kickfix'" {{{

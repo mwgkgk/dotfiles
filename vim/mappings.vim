@@ -456,7 +456,7 @@ inoremap <C-r> <C-g>u<C-r>
 nnoremap <Space>" :reg<CR>
 
 " Display marks:
-nnoremap <Space>' :marks<CR>
+nnoremap <Space>~ :marks<CR>
 
 " Insert mode easy paste:
 inoremap <C-r><C-w> <C-r>"
