@@ -2,9 +2,11 @@
 " See baby.vim for the entry point.
 
 " This file contains mappings for base Vim. Plugin mappings can be found in
-" corresponding conf/<plugin>/plugin/mappings.vim files.
+" corresponding conf/<plugin>/plugin/mappings.vim files. Filetype specific
+" mappings can be found in ftplugin/<filetype>/mappings.vim
 
 
+"
 "
 " Key Features
 "
@@ -20,13 +22,13 @@ inoremap <C-c> <Esc>
 nmap <Space> <C-w>
 vmap <Space> <C-w>
 
-
+"
 "
 " Files
 "
 
 " Close all:
-nnoremap <Space>>Q :qa<CR>
+nnoremap <Space>Q :qa<CR>
 
 " Write file:
 nnoremap <Space>w :w<CR>
@@ -34,10 +36,10 @@ nnoremap <Space>w :w<CR>
 " Write & close:
 nnoremap <Space>W :wq<CR>
 
-" Edit alternate file:
-nnoremap <Space>a <C-^>
+" Reload current file:
+nnoremap <F1> :e!<CR>zOzz
 
-" Next/prev buffer
+" Next/prev file in argument list:
 nnoremap <Space>> :ne<CR>
 nnoremap <Space>< :prev<CR>
 
@@ -58,7 +60,29 @@ nnoremap <Leader>dn :call files#next_by_date()<CR>
 nnoremap <Leader>dP :call files#first_by_date()<CR>
 nnoremap <Leader>dN :call files#last_by_date()<CR>
 
+"
+"
+" Buffers
+"
 
+" Edit alternate file:
+nnoremap <Space>a <C-^>
+
+" List buffers:
+nnoremap <M-o> :ls<CR>:b
+
+" List buffers from cmdline, see:
+" https://stackoverflow.com/questions/59040146/how-to-execute-a-command-from-cnoremap
+cnoremap <M-o> <Home>let @-="<End>"<CR>:ls<CR>:<C-r>-
+
+" Next/Prev buffer:
+nnoremap <Leader>< :bp<CR>
+nnoremap <Leader>> :bn<CR>
+
+" Delete buffer:
+nnoremap <Leader>q :bd<CR>
+
+"
 "
 " Windows
 "
@@ -133,7 +157,57 @@ nnoremap <C-w>027 27<C-w>w
 nnoremap <C-w>028 28<C-w>w
 nnoremap <C-w>029 29<C-w>w
 
+"
+"
+" Tabs
+"
 
+" Switch between tabs:
+nnoremap <Space>1 1gt
+nnoremap <Space>2 2gt
+nnoremap <Space>3 3gt
+nnoremap <Space>4 4gt
+nnoremap <Space>5 5gt
+nnoremap <Space>6 6gt
+nnoremap <Space>7 7gt
+nnoremap <Space>8 8gt
+nnoremap <Space>9 9gt
+
+nnoremap <Space>010 10gt
+nnoremap <Space>011 11gt
+nnoremap <Space>012 12gt
+nnoremap <Space>013 13gt
+nnoremap <Space>014 14gt
+nnoremap <Space>015 15gt
+nnoremap <Space>016 16gt
+nnoremap <Space>017 17gt
+nnoremap <Space>018 18gt
+nnoremap <Space>019 19gt
+
+nnoremap <Space>020 20gt
+nnoremap <Space>021 21gt
+nnoremap <Space>022 22gt
+nnoremap <Space>023 23gt
+nnoremap <Space>024 24gt
+nnoremap <Space>025 25gt
+nnoremap <Space>026 26gt
+nnoremap <Space>027 27gt
+nnoremap <Space>028 28gt
+nnoremap <Space>029 29gt
+
+" Open tab:
+nnoremap <Space>c :tabe<CR>
+
+" Most recent tab / previous tab:
+let g:lasttab = 1
+nnoremap <Space><Space> :exe "tabn " . g:lasttab<CR>
+
+augroup lasttab
+    autocmd!
+    autocmd TabLeave * let g:lasttab = tabpagenr()
+augroup END
+
+"
 "
 " Folds / Zoom
 "
@@ -158,7 +232,11 @@ nnoremap ,h H
 nnoremap ,m M
 nnoremap ,l L
 
+" Up / down arrows
+nnoremap <Up> 3<C-y>
+nnoremap <Down> 3<C-e>
 
+"
 "
 " Help
 "
@@ -166,7 +244,7 @@ nnoremap ,l L
 " Help on word under cursor:
 nnoremap g<C-]> :help <C-r><C-w><CR>
 
-
+"
 "
 " Navigation
 "
@@ -174,7 +252,13 @@ nnoremap g<C-]> :help <C-r><C-w><CR>
 " Go to line number under cursor:
 nnoremap <Leader>@ :<C-R><C-W><CR>
 
+" Display jumplist:
+nnoremap <M-S-o> :ju<CR>
 
+" C-t instead of C-i
+nnoremap <silent> <C-t> <C-i>
+
+"
 "
 " Search
 "
@@ -203,7 +287,7 @@ nnoremap <LocalLeader>* :%s /<C-r><C-w>//g<Left><Left>
 " Substitute last search pattern:
 nnoremap <LocalLeader>/ :%s /<C-r>///g<Left><Left>
 
-
+"
 "
 " Visual mode
 "
@@ -213,7 +297,17 @@ vnoremap K <nop>
 " No join in visual:
 vnoremap J <nop>
 
+" Select last paste in visual mode:
+nnoremap <expr> vp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
+" Yank to +:
+vnoremap <C-y> "+y
+vnoremap <Leader>y "+y
+
+" Narrowregion-like:
+vnoremap <Leader>nr y<C-w>npk"_dd
+
+"
 "
 " Normal mode
 "
@@ -261,13 +355,16 @@ nnoremap <M-y> @@
 nnoremap <Leader>gg :GolfChars<CR>
 vnoremap <Leader>gg :GolfChars<CR>
 
-
+"
 "
 " Command mode
 "
 
 " Edit previous command:
 nnoremap <Leader>: :<C-p>
+
+" Execute command with the shell:
+nnoremap !! :!
 
 " Directory of the current file:
 cnoremap %% <C-r>=expand('%:h').'/'<CR>
@@ -278,7 +375,7 @@ cmap $$ <C-r>=histget("cmd", -1)<CR><C-a><M-f>!
 " Args of a previous command
 cnoremap !$ <C-f>k0f y$G<C-c><End><C-r>"
 
-
+"
 "
 " Quickfix
 "
@@ -287,13 +384,14 @@ cnoremap !$ <C-f>k0f y$G<C-c><End><C-r>"
 nnoremap <C-n> :cn<CR>
 nnoremap <C-p> :cp<CR>
 
-
+"
 "
 " Preview Window
 "
 
 nnoremap <silent> zd :pclose<CR>
 
+"
 "
 " Insert mode
 "
@@ -349,13 +447,16 @@ inoremap ! !<C-g>u
 inoremap <C-w> <C-g>u<C-w>
 inoremap <C-r> <C-g>u<C-r>
 
-
+"
 "
 " Registers
 "
 
 " Detailed register status
 nnoremap <Space>" :reg<CR>
+
+" Display marks:
+nnoremap <Space>' :marks<CR>
 
 " Insert mode easy paste:
 inoremap <C-r><C-w> <C-r>"
@@ -376,10 +477,17 @@ inoremap <C-r>e <Esc>:set paste<CR>i<C-r>+<Esc>:set nopaste<CR>'[=']
 nnoremap <Leader>p "_ddP
 vnoremap <Leader>p "_dP
 
+" Propagate "" to "+ :
+nnoremap <silent> <Leader>y :let @+=@"<CR>:echo 'Yanked ' .
+            \ Pluralize('line', len(split(@+, '\n'))) . ' to +.'<CR>
 
+"
 "
 " Mouse
 "
+
+" Yank to ":
+vnoremap <LeftRelease> "*y<LeftRelease>
 
 " Mouse insert made easier:
 nnoremap <MiddleMouse> a<MiddleMouse><Esc>
@@ -393,7 +501,7 @@ imap <RightMouse> <Esc><RightMouse>
 " Clear Search with mouse
 nnoremap <C-LeftMouse> :let @/=""<CR>
 
-
+"
 "
 " Echo
 "
@@ -410,7 +518,7 @@ nnoremap <Leader>ei :echo indent(".")<CR>
 " Echo :pwd
 nnoremap <Leader>ep :pwd<CR>
 
-
+"
 "
 " Toggle
 "
@@ -421,7 +529,7 @@ nnoremap <Leader>tb :windo set scrollbind!<CR>
 " Toggle scrolloff mode:
 nnoremap <Leader>tz :let &scrolloff=999-&scrolloff<CR>
 
-
+"
 "
 " Terminal
 "
@@ -448,7 +556,7 @@ nnoremap <silent> <Leader><Space>V :exec 'vert term ++cols=' . winwidth(0)/4<CR>
 nnoremap <silent> <Leader><Space>gv :exec 'above term ++rows=' . winheight(0)/4<CR>
 nnoremap <silent> <Leader><Space>gV :exec 'above vert term ++cols=' . winwidth(0)/4<CR>
 
-
+"
 "
 " Current Directory
 "
@@ -464,3 +572,11 @@ nnoremap <Leader>cdt :silent execute 'cd' system('git rev-parse --show-toplevel'
 
 " Cd to .git dir:
 nnoremap <Leader>cdg :silent execute 'cd' system('git rev-parse --git-dir')<CR>:pwd<CR>
+
+"
+"
+" Vimrc
+"
+
+" Reload .vimrc
+nnoremap <F6> :source ~/.vimrc<CR>
