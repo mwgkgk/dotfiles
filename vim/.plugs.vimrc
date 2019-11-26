@@ -524,6 +524,10 @@ nnoremap <Space>r :AsyncRun tmux send -t motor C-u do-thing C-m<CR>
 nnoremap <Space><Tab> :AsyncRun tmux send -t motor C-c && sleep 0.1 && tmux send -t motor C-c <CR>
 " Refresh dev1 browser
 " autocmd plugs.vimrc BufWrite *.elm,*.html,*.css,*.ex,*.exs,*.tsx silent! AsyncRun refresh-dev1
+
+" Open current file in browser
+command! Chr AsyncRun chromium --incognito % &
+command! Ff  AsyncRun firefox-dmenu % &
 " }}}
 
 Plug 'arecarn/selection.vim'
