@@ -1,28 +1,6 @@
-" Keep ft for new windows
-function! windows#new(win_cmd)
-    let l:prev_ft = &filetype
-    exec a:win_cmd
-    exec 'set ft=' . l:prev_ft
-endfunction
-
-function! windows#new_small_horizontal()
-    call windows#new(winheight(0)/4 . 'new')
-endfunction
-
-function! windows#new_small_vertical()
-    call windows#new(winwidth(0)/4 . 'vnew')
-endfunction
-
-function! windows#new_small_above_horizontal()
-    call windows#new('above ' . winheight(0)/4 . 'new')
-endfunction
-
-function! windows#new_small_above_vertical()
-    call windows#new('above ' . winwidth(0)/4 . 'vnew')
-endfunction
-
 " From suckless.vim:
-function! windows#move(direction)
+
+function! window#suckless#move(direction)
     let winnr = winnr()
     let bufnr = bufnr('%')
 
@@ -63,3 +41,47 @@ function! windows#move(direction)
         endif
     endif
 endfunction
+
+function! window#suckless#move_to_prev_tab()
+  "there is only one window
+  if tabpagenr('$') == 1 && winnr('$') == 1
+    return
+  endif
+  "preparing new window
+  let l:tab_nr = tabpagenr('$')
+  let l:cur_buf = bufnr('%')
+  if tabpagenr() != 1
+    close!
+    if l:tab_nr == tabpagenr('$')
+      tabprev
+    endif
+    sp
+  else
+    close!
+    exe '0tabnew'
+  endif
+  "opening current buffer in new window
+  exe 'b'.l:cur_buf
+endfunc
+
+function! window#suckless#move_to_next_tab()
+  "there is only one window
+  if tabpagenr('$') == 1 && winnr('$') == 1
+    return
+  endif
+  "preparing new window
+  let l:tab_nr = tabpagenr('$')
+  let l:cur_buf = bufnr('%')
+  if tabpagenr() < tab_nr
+    close!
+    if l:tab_nr == tabpagenr('$')
+      tabnext
+    endif
+    sp
+  else
+    close!
+    tabnew
+  endif
+  "opening current buffer in new window
+  exe 'b'.l:cur_buf
+endfunc

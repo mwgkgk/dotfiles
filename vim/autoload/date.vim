@@ -13,3 +13,14 @@ function! date#seconds_to_utc(seconds)
 
     return a:seconds + l:offset
 endfunction
+
+function! date#echo_date(...)
+    if (a:0 == 1)
+        if empty(a:1)
+            echo systemlist('date')[0]
+        else
+            echo systemlist("date --date='" .
+                    \ substitute(a:1, '^in\s*', '', '') . "'")[0]
+        endif
+    endif
+endfunc

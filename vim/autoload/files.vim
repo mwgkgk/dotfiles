@@ -1,76 +1,43 @@
-function! files#prev_by_date()
-    let l:curr_fname = expand('%')
-    if filereadable(l:curr_fname)
-        let l:fname = system('prev-by-date ' . l:curr_fname)
-        if empty(l:fname)
-            echo 'No previous file.'
-        else
-            execute 'edit ' . l:fname
-        endif
+function! files#edit_multiple(...)
+    if(a:0 == 0)
+        e
     else
-        echo 'Current file has no modified date yet.'
+        let file = a:1
+        execute 'e ' . file
+
+        for file in a:000[1:]
+            execute 'sp ' . file
+        endfor
     endif
 endfunction
 
-function! files#next_by_date()
-    let l:curr_fname = expand('%')
-    if filereadable(l:curr_fname)
-        let l:fname = system('next-by-date ' . l:curr_fname)
-        if empty(l:fname)
-            echo 'No next file.'
-        else
-            execute 'edit ' . l:fname
-        endif
+function! files#split_multiple(...)
+    if(a:0 == 0)
+        sp
     else
-        echo 'Current file has no modified date yet.'
+        for file in a:000
+            execute 'sp ' . file
+        endfor
     endif
 endfunction
 
-function! files#first_by_date()
-    let l:fname = system('first-by-date ' . expand('%'))
-    if empty(l:fname)
-        echo 'No first file.'
+function! files#vsplit_multiple(...)
+    if(a:0 == 0)
+        vs
     else
-        execute 'edit ' . l:fname
+        for file in a:000
+            execute 'vs ' . file
+        endfor
     endif
 endfunction
 
-function! files#last_by_date()
-    let l:fname = system('last-by-date ' . expand('%'))
-    if empty(l:fname)
-        echo 'No last file.'
+function! files#force_split_multiple(...)
+    if(a:0 == 0)
+        sp
     else
-        execute 'edit ' . l:fname
+        for file in a:000
+            execute 'w ' . file
+            execute 'sp ' . file
+        endfor
     endif
-endfunction
-
-function! files#filepath_from_date(root, filename, date) abort
-    let l:utc_date = date#seconds_to_utc(a:date)
-
-    let l:year = strftime('%Y', l:utc_date)
-    let l:month = tolower(strftime('%b', l:utc_date))
-    let l:day = strftime('%d', l:utc_date)
-
-    return expand(a:root) . l:year . '/' . l:month . '/' . l:day . '/' .
-                \ a:filename
-endfunction
-
-function! files#todays_file(root, filename, ...) abort
-    let l:fname = files#filepath_from_date(a:root, a:filename, localtime())
-
-    call system('mkdir -p ' . fnamemodify(l:fname, ':p:h'))
-
-    execute 'edit' . l:fname
-
-    " a:1 is the optional file template
-    if a:0 >= 1
-        if !filereadable(l:fname)
-            execute '%!cat ' . a:1
-
-            write
-            edit
-        endif
-    endif
-
-    $
 endfunction

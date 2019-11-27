@@ -44,21 +44,21 @@ nnoremap <Space>> :ne<CR>
 nnoremap <Space>< :prev<CR>
 
 " Edit file under same directory as the buffer:
-nnoremap <Space>ge :e <C-r>=expand('%:h').'/'<CR><C-d>
+nnoremap <Space>ge :Edit <C-r>=expand('%:h').'/'<CR><C-d>
 
 " Split file under same directory as the buffer:
-nnoremap <Space>e :sp <C-r>=expand('%:h').'/'<CR><C-d>
+nnoremap <Space>e :Sp <C-r>=expand('%:h').'/'<CR><C-d>
 
 " VertSplit file under same directory as the buffer:
-nnoremap <Space>E :vs <C-r>=expand('%:h').'/'<CR><C-d>
+nnoremap <Space>E :Vs <C-r>=expand('%:h').'/'<CR><C-d>
 
 " Prev/next by modified date:
-nnoremap <Leader>dp :call files#prev_by_date()<CR>
-nnoremap <Leader>dn :call files#next_by_date()<CR>
+nnoremap <silent> <Leader>dp :call files#by_date#prev()<CR>
+nnoremap <silent> <Leader>dn :call files#by_date#next()<CR>
 
 " First/last by modified date:
-nnoremap <Leader>dP :call files#first_by_date()<CR>
-nnoremap <Leader>dN :call files#last_by_date()<CR>
+nnoremap <silent> <Leader>dP :call files#by_date#first()<CR>
+nnoremap <silent> <Leader>dN :call files#by_date#last()<CR>
 
 "
 "
@@ -91,28 +91,28 @@ nnoremap <Leader>q :bd<CR>
 nnoremap <C-w><C-w> <C-w>p
 
 " Keep filetype for new windows:
-nnoremap <silent> <Space>n :call windows#new("new")<CR>
-nnoremap <silent> <Space>N :call windows#new("vnew")<CR>
+nnoremap <silent> <Space>n :call window#new("new")<CR>
+nnoremap <silent> <Space>N :call window#new("vnew")<CR>
 
 " New window above/to the left:
-nnoremap <silent> <Space>gn :call windows#new("above new")<CR>
-nnoremap <silent> <Space>gN :call windows#new("above vnew")<CR>
+nnoremap <silent> <Space>gn :call window#new("above new")<CR>
+nnoremap <silent> <Space>gN :call window#new("above vnew")<CR>
 
 " New 33% split:
-nnoremap <silent> <Space>v :call windows#new_small_horizontal()<CR>
-nnoremap <silent> <Space>V :call windows#new_small_vertical()<CR>
+nnoremap <silent> <Space>v :call window#new_small_horizontal()<CR>
+nnoremap <silent> <Space>V :call window#new_small_vertical()<CR>
 
 " New 33% split above/to the left:
-nnoremap <silent> <Space>gv :call windows#new_small_above_horizontal()<CR>
-nnoremap <silent> <Space>gV :call windows#new_small_above_vertical()<CR>
+nnoremap <silent> <Space>gv :call window#new_small_above_horizontal()<CR>
+nnoremap <silent> <Space>gV :call window#new_small_above_vertical()<CR>
 
 " Switch & maximize window:
 nnoremap <Space>gj <C-w>j<C-w>_
 nnoremap <Space>gk <C-w>k<C-w>_
 
 " Move window between columns:
-nnoremap <silent> <Space>gh :call windows#move("h")<CR>
-nnoremap <silent> <Space>gl :call windows#move("l")<CR>
+nnoremap <silent> <Space>gh :call window#suckless#move("h")<CR>
+nnoremap <silent> <Space>gl :call window#suckless#move("l")<CR>
 
 " Split alt file:
 nnoremap <Space># :sp #<CR>
@@ -162,7 +162,7 @@ nnoremap <C-w>029 29<C-w>w
 " Tabs
 "
 
-" Switch between tabs:
+" Go to tab by tabpagenr()
 nnoremap <Space>1 1gt
 nnoremap <Space>2 2gt
 nnoremap <Space>3 3gt
@@ -195,8 +195,15 @@ nnoremap <Space>027 27gt
 nnoremap <Space>028 28gt
 nnoremap <Space>029 29gt
 
+" Display tabs:
+nnoremap <Space><M-o> :tabs<CR>
+
 " Open tab:
 nnoremap <Space>c :tabe<CR>
+
+" Move window to next/previous tab:
+nnoremap <Leader>th :call window#suckless#move_to_prev_tab()<CR>
+nnoremap <Leader>tl :call window#suckless#move_to_next_tab()<CR>
 
 " Most recent tab / previous tab:
 let g:lasttab = 1
@@ -255,8 +262,23 @@ nnoremap <Leader>@ :<C-R><C-W><CR>
 " Display jumplist:
 nnoremap <M-S-o> :ju<CR>
 
+" Go up the tag stack.
+nnoremap g<C-o> <C-t>
+
+" Go down the tag stack
+nnoremap g<C-t> :tag<CR>
+
+" Display tagstack:
+nnoremap g<M-o> :tags<CR>
+
 " C-t instead of C-i
 nnoremap <silent> <C-t> <C-i>
+
+" Jump to random line:
+nnoremap <Space><C-g> :RandomLine<CR>
+
+" Jump to random column:
+nnoremap <C-g> :RandomCol<CR>
 
 "
 "
@@ -473,13 +495,16 @@ inoremap <C-r>w <Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>'[=']
 inoremap <C-r>r <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
 inoremap <C-r>e <Esc>:set paste<CR>i<C-r>+<Esc>:set nopaste<CR>'[=']
 
-" Paste replacing:
+" Paste replacing line:
 nnoremap <Leader>p "_ddP
 vnoremap <Leader>p "_dP
 
+" Paste replacing, motion:
+nnoremap <silent> cp :set opfunc=change_paste#change<CR>g@
+
 " Propagate "" to "+ :
 nnoremap <silent> <Leader>y :let @+=@"<CR>:echo 'Yanked ' .
-            \ Pluralize('line', len(split(@+, '\n'))) . ' to +.'<CR>
+            \ helpers#pluralize('line', len(split(@+, '\n'))) . ' to +.'<CR>
 
 "
 "
@@ -506,6 +531,12 @@ nnoremap <C-LeftMouse> :let @/=""<CR>
 " Echo
 "
 
+" Display full name, number of lines, percentage, modified:
+nnoremap <Space><F1> 1<C-g>
+
+" Display column / line number, byte / word count:
+nnoremap g<F1> g<C-g>
+
 " Echo highlight:
 nnoremap <Leader>eh :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
@@ -523,11 +554,43 @@ nnoremap <Leader>ep :pwd<CR>
 " Toggle
 "
 
+" Toggle paste/nopaste:
+set pastetoggle=<Leader>tp
+
 " Toggle scrollbind:
 nnoremap <Leader>tb :windo set scrollbind!<CR>
 
 " Toggle scrolloff mode:
 nnoremap <Leader>tz :let &scrolloff=999-&scrolloff<CR>
+
+" Toggle light/dark background:
+nnoremap <Leader>tb :call toggle#background()<CR>
+
+" Toggle relativenumber:
+nnoremap <Leader>tr :call toggle#rnu()<CR>
+
+" Toggle hardwrap:
+nnoremap <Leader>tw :call toggle#hardwrap()<CR>
+
+" Toggle diff mode:
+nnoremap <Leader>td :call toggle#diff()<CR>
+
+" Toggle verbose:
+nnoremap <Leader>tv :call toggle#verbose()<CR>
+
+"
+"
+" Spellcheck
+"
+
+" Toggle spellcheck:
+nnoremap <Space><Enter> :call toggle#spelling()<CR>
+
+" Insert mode toggle:
+inoremap <C-g><Enter> <Esc>:call toggle#spelling()<CR>a
+
+" Fix previous word:
+inoremap <C-g><C-l> <C-g>u<Esc>:setlocal spell<CR>[s1z=`]a<C-g>u
 
 "
 "
