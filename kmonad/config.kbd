@@ -1,0 +1,48 @@
+INPUT = LINUX_DEVICE L64 /dev/input/by-id/usb-SIGMACHIP_USB_Keyboard-event-kbd
+OUTPUT = UINPUT_SINK
+
+
+/*
+
+LAYER template
+
+_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+_     _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
+_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     _                 _             _    _    _    _             _    _    _        _               _
+
+*/
+
+
+@num = LT-asdfnum
+@th1 = TH 300 esc lctl
+@th2 = TN esc lctl
+@th3 = TN ( rsft
+
+SRC
+
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
+grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
+tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
+caps   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
+lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
+lctl  lmet  lalt              spc           ralt rmet menu rctl          left down right    kp0             kpdot
+
+LAYER home
+
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
+grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
+tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
+@th2   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
+lsft    z    x    c    v    b    n    m    ,    .     /    @th3               up            kp1     kp2     kp3        kpenter
+lctl  lmet  lalt              spc           @num rmet menu rctl          left down right    kp0             kpdot
+
+LAYER asdfnum
+_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+~     !    @    #    $    _    %    ^    &    *    )    __   +    _      _    _    _        _       _       _          _
+_      1    2    3    4    5    6    7    8    9    0    _    _                             _       _       _
+_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     _                 _             _    _    _    _             _    _    _        _               _
