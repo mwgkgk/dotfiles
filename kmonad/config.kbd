@@ -37,7 +37,7 @@ grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  ho
 tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
 @th2   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
 lsft    z    x    c    v    b    n    m    ,    .     /    @th3               up            kp1     kp2     kp3        kpenter
-lctl  lmet  lalt              spc           @num rmet menu rctl          left down right    kp0             kpdot
+M-6   lmet  lalt              spc           @num rmet menu M-7           left down right    kp0             kpdot
 
 LAYER asdfnum
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
