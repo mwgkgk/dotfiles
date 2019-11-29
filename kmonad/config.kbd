@@ -25,6 +25,8 @@ _     _     _                 _             _    _    _    _             _    _ 
 @tn1 = TN esc lctl
 @tn2 = TN ( rsft
 
+@mt1 = MT M-7 350 M-S-7 350 M-A-7
+
 
 SRC
 esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
@@ -41,7 +43,7 @@ grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  ho
 tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret    del  end  pgdn     kp7     kp8     kp9        kpplus
 @tn1   a    s    d    f    g    h    j    k    l    ;    '    @tn2                          kp4     kp5     kp6
 lsft    z    x    c    v    b    n    m    ,    .     /    \                  up            kp1     kp2     kp3        kpenter
-M-6   lmet  lalt              spc           @lt1 rmet menu M-7           left down right    kp0             kpdot
+M-6   lmet  lalt              spc           @lt1 rmet menu @mt1          left down right    kp0             kpdot
 
 
 LAYER asdfnum
