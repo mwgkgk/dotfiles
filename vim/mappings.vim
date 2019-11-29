@@ -11,6 +11,9 @@
 " Key Features
 "
 
+let g:mapleader=";"
+let g:maplocalleader="'"
+
 " Support C-c as Esc replacement:
 " By default, C-c requires confirmation. Mapping to Esc would require
 " changing cpoptions - see `:help c_<Esc>`. This is weird but works:
