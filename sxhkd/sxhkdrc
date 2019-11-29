@@ -91,6 +91,9 @@ super + 6
 super + 7
 	xkb-switch -s ru
 
+super + shift + 7
+	xkb-switch -s ua
+
 # Firefox shadowstep tricks
 
 control + ~c
