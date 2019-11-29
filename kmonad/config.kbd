@@ -24,8 +24,11 @@ _     _     _                 _             _    _    _    _             _    _ 
 
 @tn1 = TN esc lctl
 @tn2 = TN ( rsft
+@tn3 = TN tab LT-tablife
 
 @mt1 = MT M-7 350 M-S-7 350 M-A-7
+
+@a1 = C-bspc
 
 
 SRC
@@ -40,7 +43,7 @@ lctl  lmet  lalt              spc           ralt rmet menu rctl          left do
 LAYER home
 esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
 grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
-tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret    del  end  pgdn     kp7     kp8     kp9        kpplus
+@tn3  q    w    e    r    t    y    u    i    o    p    [    ]    ret    del  end  pgdn     kp7     kp8     kp9        kpplus
 @tn1   a    s    d    f    g    h    j    k    l    ;    '    @tn2                          kp4     kp5     kp6
 lsft    z    x    c    v    b    n    m    ,    .     /    \                  up            kp1     kp2     kp3        kpenter
 M-6   lmet  lalt              spc           @lt1 rmet menu @mt1          left down right    kp0             kpdot
@@ -53,6 +56,14 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 _      1    2    3    4    5    6    7    8    9    0    _    _                             _       _       _
 _       _    _    _    %    _    &    *    _    _     _    _                  _             _       _       _          _
 _     _     _                 LA-scroll     _    _    _    _             _    _    _        _               _
+
+LAYER tablife
+_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+_     _    @a1  end  _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_      home _    _    _    _    left down up   rght _    _    _                             _       _       _
+_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     _                 _             _    _    _    _             _    _    _        _               _
 
 
 LAYER scroll
