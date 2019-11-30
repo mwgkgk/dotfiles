@@ -20,7 +20,9 @@ _     _     _                 _             _    _    _    _             _    _ 
 
 @lr1 = LR-scroll
 
-@th1 = TH 300 esc lctl
+@la1 = LA-scroll
+
+@th1 = TH 150 esc lctl
 
 @tn1 = TN esc lctl
 @tn2 = TN \ rsft
@@ -43,10 +45,10 @@ lctl  lmet  lalt              spc           ralt rmet menu rctl          left do
 LAYER home
 esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
 grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
-@tn3  q    w    e    r    t    y    u    i    o    p    [    ]    ret    del  end  pgdn     kp7     kp8     kp9        kpplus
-@tn1   a    s    d    f    g    h    j    k    l    ;    '    (                             kp4     kp5     kp6
-lsft    z    x    c    v    b    n    m    ,    .     /    @tn2               up            kp1     kp2     kp3        kpenter
-M-6   lmet  lalt              spc           @lt1 rmet menu @mt1          left down right    kp0             kpdot
+@tn3  q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
+@th1   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
+lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
+M-6   lmet  lalt              spc           @lt1 rmet menu M-7           left down right    kp0             kpdot
 
 
 LAYER asdfnum
@@ -55,7 +57,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 ~     !    @    #    $    _    _    _    /    \    _    _    _    _      _    _    _        _       _       _          _
 _      1    2    3    4    5    6    7    8    9    0    _    _                             _       _       _
 _       _    _    _    %    _    &    *    _    _     _    _                  _             _       _       _          _
-_     _     _                 LA-scroll     _    _    _    _             _    _    _        _               _
+@la1  _     _                 _             _    _    _    M-S-7         _    _    _        _               _
 
 LAYER tablife
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
@@ -63,8 +65,15 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 _     _    @a1  end  _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
 _      home _    _    _    _    left down up   rght _    _    _                             _       _       _
 _       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 _             _    _    _    _             _    _    _        _               _
+_     _     LT-tablifealt     _             _    _    _    _             _    _    _        _               _
 
+LAYER tablifealt
+_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+_     _    up   _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_      left down rght _    _    _    _    _    _    _    _    _                             _       _       _
+_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     _                 _             _    _    _    _             _    _    _        _               _
 
 LAYER scroll
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
@@ -72,7 +81,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 _     _    up   _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
 _      left down rght _    _    left down up   rght _    _    _                             _       _       _
 _       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 @lr1          @lt2 _    _    _             _    _    _        _               _
+@lr1  _     _                 @lr1          @lt2 _    _    _             _    _    _        _               _
 
 
 /*
@@ -87,5 +96,5 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 _     _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
 _      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
 _       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 @lr1          _    _    _    _             _    _    _        _               _
+@lr1  _     _                 @lr1          _    _    _    _             _    _    _        _               _
 
