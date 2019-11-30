@@ -57,14 +57,14 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 ~     !    @    #    $    _    _    _    /    \    _    _    _    _      _    _    _        _       _       _          _
 _      1    2    3    4    5    6    7    8    9    0    _    _                             _       _       _
 _       _    _    _    %    _    &    *    _    _     _    _                  _             _       _       _          _
-@la1  _     _                 _             _    _    _    M-S-7         _    _    _        _               _
+@la1  _     _                 (             _    _    _    _             _    _    _        _               _
 
 LAYER tablife
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     _    @a1  end  _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_     _    @a1  end  _    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
 _      home _    _    _    _    left down up   rght _    _    _                             _       _       _
-_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_       _    _    _    M-8  _    _    _    _    _     _    _                  _             _       _       _          _
 _     _     LT-tablifealt     _             _    _    _    _             _    _    _        _               _
 
 LAYER tablifealt
@@ -74,6 +74,12 @@ _     _    up   _    _    _    _    _    _    _    _    __   _    _      _    _ 
 _      left down rght _    _    _    _    _    _    _    _    _                             _       _       _
 _       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
 _     _     _                 _             _    _    _    _             _    _    _        _               _
+
+
+/*
+    Hands-off scroll mode for traversing Thunderbird RSS reader. Implemented as
+    a persistent layer with LA / LR rather than toggle, to reduce strain.
+*/
 
 LAYER scroll
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
@@ -86,7 +92,7 @@ _       _    _    _    _    _    _    _    _    _     _    _                  _ 
 
 /*
     The idea behind this one is that if ralt is transparent in SCROLL, it's
-    possible to trigger multiple LA-scroll with ralt-space, which is easy to
+    possible to trigger multiple LA-scroll with ralt-rctl, which is easy to
     press accidentally when trying to turn off SCROLL.
 */
 
