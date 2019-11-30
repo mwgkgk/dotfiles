@@ -53,6 +53,7 @@ lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up
 M-6   lmet  lalt              spc           @lt1 rmet menu M-7           left down right    kp0             kpdot
 
 
+LAYER tablife
 /*
     Editing shortcuts layer, toggled while Tab key is down.
 
@@ -62,8 +63,6 @@ M-6   lmet  lalt              spc           @lt1 rmet menu M-7           left do
     - Some are unique offerings, e.g. <Tab-v> to paste X selection.
     - <Tab-hjkl> to access arrows.
 */
-
-LAYER tablife
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     _    @a1  end  _    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
@@ -72,11 +71,10 @@ _       _    _    _    M-8  @a2  _    _    _    _     _    _                  _ 
 _     _     LT-tablifealt     _             _    _    _    _             _    _    _        _               _
 
 
+LAYER tablifealt
 /*
     Left-hand-only arrow shortcuts on <Tab-lalt-wasd>.
 */
-
-LAYER tablifealt
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     _    up   _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
@@ -85,6 +83,7 @@ _       _    _    _    _    _    _    _    _    _     _    _                  _ 
 _     _     _                 _             _    _    _    _             _    _    _        _               _
 
 
+LAYER asdfnum
 /*
     Layer to bring numbers and special symbols closer to homerow, triggered
     while ralt key is down. Home row is numbers.
@@ -92,22 +91,19 @@ _     _     _                 _             _    _    _    _             _    _ 
     Positions for special symbols are in flux. Optimizing for ease of access
     over consistency.
 */
-
-LAYER asdfnum
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 ~     !    @    #    $    \    _    _    (    )    _    _    _    _      _    _    _        _       _       _          _
 _      1    2    3    4    5    6    7    8    9    0    _    _                             _       _       _
-_       _    _    _    %    _    &    *    _    _     _    _                  _             _       _       _          _
+_       _    _    /    %    _    &    *    _    _     _    _                  _             _       _       _          _
 @la1  _     _                 _             _    _    _    _             _    _    _        _               _
 
 
+LAYER scroll
 /*
     Hands-off scroll mode for traversing Thunderbird RSS reader. Implemented as
     a persistent layer with LA / LR rather than toggle, to reduce strain.
 */
-
-LAYER scroll
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     _    up   _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
@@ -116,13 +112,12 @@ _       _    _    _    _    _    _    _    _    _     _    _                  _ 
 @lr1  _     _                 @lr1          @lt2 _    _    _             _    _    _        _               _
 
 
+LAYER scrolloff
 /*
     The idea behind this one is that if ralt is transparent in SCROLL, it's
     possible to trigger multiple LA-scroll with ralt-rctl, which is easy to
     press accidentally when trying to turn off SCROLL.
 */
-
-LAYER scrolloff
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
