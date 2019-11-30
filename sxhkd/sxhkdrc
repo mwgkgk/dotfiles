@@ -94,6 +94,11 @@ super + 7
 super + shift + 7
 	xkb-switch -s ua
 
+# Paste X selection
+
+super + 8
+	xpaste
+
 # Firefox shadowstep tricks
 
 control + ~c
