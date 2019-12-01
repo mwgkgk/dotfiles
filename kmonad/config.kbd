@@ -22,7 +22,7 @@ _     _     _                 _             _    _    _    _             _    _ 
 
 @la1 = LA-scroll
 
-@th1 = TH 150 esc lctl
+@th1 = TH 100 esc lctl
 
 @tn1 = TN esc lctl
 @tn2 = TN \ rsft
