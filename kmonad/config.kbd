@@ -15,25 +15,26 @@ _     _     _                 _             _    _    _    _             _    _ 
 */
 
 
-@lt1 = LT-asdfnum
-@lt2 = LT-scrolloff
+@ltO = LT-Omega
 
-@lr1 = LR-scroll
+@lrS = LR-Scroll
+@lrV = LR-Vanilla
 
-@la1 = LA-scroll
+@laS = LA-Scroll
+@laV = LA-Vanilla
 
-@th1 = TH 100 esc lctl
+@thC = TH 120 esc lctl
 
-@tn1 = TN esc lctl
-@tn2 = TN \ rsft
-@tn3 = TN tab LT-tablife
+@tnT = TN tab LT-TabLife
 
-@mt1 = MT M-7 350 M-S-7 350 M-A-7
+@tnE = TN esc LT-Toggle
+@tnU = TN esc LT-Untoggle
 
 @a1 = C-bspc
 @a2 = C-left
 @a3 = C-rght
 @a4 = C-del
+@a5 = S-tab
 
 
 SRC
@@ -46,15 +47,64 @@ lctl  lmet  lalt              spc           ralt rmet menu rctl          left do
 
 
 LAYER home
-esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
+@tnE f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
 grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
-@tn3  q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
-@th1   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
+@tnT  q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
+@thC   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
 lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
-M-6   lmet  lalt              spc           @lt1 rmet menu M-7           left down right    kp0             kpdot
+M-6   lmet  lalt              spc           @ltO rmet menu M-7           left down right    kp0             kpdot
 
 
-LAYER tablife
+LAYER Toggle
+/*
+    Utilize esc + keys to push layers onto the stack.
+*/
+_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+_     _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
+_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     @laV              @laS          _    _    _    _             _    _    _        _               _
+
+
+LAYER Untoggle
+/*
+    Remove layers from stack.
+*/
+_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+_     _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
+_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     @lrV              @lrS          _    _    _    _             _    _    _        _               _
+
+
+LAYER Vanilla
+/*
+    Restore keys to original values for when fast trigger is required.
+*/
+@tnU _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+tab   _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
+_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     _                 _             _    _    _    _             _    _    _        _               _
+
+
+LAYER Scroll
+/*
+    Hands-off scroll mode for traversing Thunderbird RSS reader. Implemented as
+    a persistent layer with LA / LR rather than toggle, to reduce strain.
+*/
+@tnU _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+_     _    up   _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_      @a5  down tab  _    _    left down up   rght _    _    _                             _       _       _
+_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     _                 @lrS          _    _    _    _             _    _    _        _               _
+
+
+LAYER TabLife
 /*
     Editing shortcuts layer, toggled while Tab key is down.
 
@@ -69,10 +119,10 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 _     _    @a1  end  _    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
 _      home ret  @a4  @a3  _    left down up   rght _    _    _                             _       _       _
 _       _    _    _    M-8  @a2  _    _    _    _     _    _                  _             _       _       _          _
-_     _     LT-tablifealt     _             _    _    _    _             _    _    _        _               _
+_     _     LT-TabLifeAlt     _             _    _    _    _             _    _    _        _               _
 
 
-LAYER tablifealt
+LAYER TabLifeAlt
 /*
     Left-hand-only arrow shortcuts on <Tab-lalt-wasd>.
 */
@@ -84,7 +134,7 @@ _       _    _    _    _    _    _    _    _    _     _    _                  _ 
 _     _     _                 _             _    _    _    _             _    _    _        _               _
 
 
-LAYER asdfnum
+LAYER Omega
 /*
     Layer to bring numbers and special symbols closer to homerow, triggered
     while ralt key is down. Home row is numbers.
@@ -97,32 +147,4 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 ~     !    @    #    $    _    _    _    (    |    )    _    _    _      _    _    _        _       _       _          _
 _      1    2    3    4    5    6    7    8    9    0    _    _                             _       _       _
 _       -    \    /    %    *    &    ret  _    _     _    _                  _             _       _       _          _
-@la1  _     _                 _             _    _    _    _             _    _    _        _               _
-
-
-LAYER scroll
-/*
-    Hands-off scroll mode for traversing Thunderbird RSS reader. Implemented as
-    a persistent layer with LA / LR rather than toggle, to reduce strain.
-*/
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     _    up   _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
-_      left down rght _    _    left down up   rght _    _    _                             _       _       _
-_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-@lr1  _     _                 @lr1          @lt2 _    _    _             _    _    _        _               _
-
-
-LAYER scrolloff
-/*
-    The idea behind this one is that if ralt is transparent in SCROLL, it's
-    possible to trigger multiple LA-scroll with ralt-rctl, which is easy to
-    press accidentally when trying to turn off SCROLL.
-*/
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
-_      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
-_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-@lr1  _     _                 @lr1          _    _    _    _             _    _    _        _               _
-
+_     _     _                 _             _    _    _    _             _    _    _        _               _
