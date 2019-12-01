@@ -23,8 +23,6 @@ _     _     _                 _             _    _    _    _             _    _ 
 @laS = LA-Scroll
 @laV = LA-Vanilla
 
-@thC = TH 120 esc lctl
-
 @tnT = TN tab LT-TabLife
 
 @tnE = TN esc LT-Toggle
@@ -50,7 +48,7 @@ LAYER home
 @tnE f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
 grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
 @tnT  q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
-@thC   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
+lctl   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
 lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
 M-6   lmet  lalt              spc           @ltO rmet menu M-7           left down right    kp0             kpdot
 
@@ -145,6 +143,6 @@ LAYER Omega
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 ~     !    @    #    $    _    _    _    (    |    )    _    _    _      _    _    _        _       _       _          _
-_      1    2    3    4    5    6    7    8    9    0    _    _                             _       _       _
+esc    1    2    3    4    5    6    7    8    9    0    _    _                             _       _       _
 _       -    \    /    %    *    &    ret  _    _     _    _                  _             _       _       _          _
 _     _     _                 _             _    _    _    _             _    _    _        _               _
