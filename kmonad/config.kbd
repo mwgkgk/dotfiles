@@ -33,6 +33,7 @@ _     _     _                 _             _    _    _    _             _    _ 
 @a1 = C-bspc
 @a2 = C-left
 @a3 = C-rght
+@a4 = C-del
 
 
 SRC
@@ -66,7 +67,7 @@ LAYER tablife
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     _    @a1  end  _    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
-_      home _    _    @a3  _    left down up   rght _    _    _                             _       _       _
+_      home ret  @a4  @a3  _    left down up   rght _    _    _                             _       _       _
 _       _    _    _    M-8  @a2  _    _    _    _     _    _                  _             _       _       _          _
 _     _     LT-tablifealt     _             _    _    _    _             _    _    _        _               _
 
