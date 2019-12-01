@@ -1,6 +1,6 @@
 " vim: foldmethod=marker foldlevel=0
 
-" Almost done with the rafactor.
+" Almost done with the refactor.
 
 filetype plugin indent on
 syntax on
@@ -10,39 +10,6 @@ scriptencoding utf-8
 augroup vimrc
     autocmd!
 augroup END
-
-" Interface
-set ruler
-set scrolloff=5
-set mouse=a
-set number
-set cursorline
-autocmd vimrc WinEnter * setlocal cursorline
-autocmd vimrc WinLeave * setlocal nocursorline
-set colorcolumn=80
-
-" Matching brackets :
-set showmatch
-set matchtime=2
-let g:loaded_matchparen=1
-
-" Wildmenu :
-set wildmenu
-set wildmode=longest,list:longest
-set wildignore=*.o,*~,*.pyc,*.jpg,*.jpeg,*.JPG,*.png,*.xcf,*.gif,*.bmp,*.pdf,*.beam,*.ibc
-
-" Wrapping & indent
-set autoindent
-set copyindent
-set wrap
-set linebreak
-set nocindent
-set cinoptions+=g1,h1
-set breakindent
-
-autocmd vimrc BufRead,BufNewFile *.marko setfiletype html
-autocmd vimrc BufNewFile,BufRead *.r2,*.r3,*.rbl,*.reb,*.red setfiletype rebol
-autocmd vimrc BufNewFile,BufRead *.ipkg setfiletype idris
 
 " Make
 
@@ -61,7 +28,6 @@ set tags=./tags;~
 set complete=.,b,u,]
 set completeopt=menu
 set pumheight=5
-set iskeyword+=-
 autocmd vimrc InsertEnter * set noignorecase
 autocmd vimrc InsertLeave * set ignorecase
 

@@ -23,6 +23,15 @@ syntax on
 
 "
 "
+" Autocommand Group
+"
+
+augroup settings
+    autocmd!
+augroup END
+
+"
+"
 " Display
 "
 
@@ -41,6 +50,15 @@ set t_vb=
 " Only highlight syntax on the first 200 columns:
 set synmaxcol=200
 
+" Visually wrap lines that are longer than the window width:
+set wrap
+
+" Visually break long lines at 'breakat' characters:
+set linebreak
+
+" Every wrapped line will continue visually indented:
+set breakindent
+
 "
 "
 " Editing
@@ -57,6 +75,47 @@ set shiftwidth=4
 
 " Wrap h l normal
 set whichwrap+=h,l
+
+" Copy indent  from current line when starting a new line:
+set autoindent
+
+" Use tabs if the previous line has used tabs, regardless of expandtab:
+set copyindent
+
+" Disable C-style languages indent:
+set nocindent
+
+
+"
+"
+" Interface
+"
+
+" These are necessary even with per-window cursorline, because there's no
+" WinEnter for the very first window.
+set cursorline
+set cursorcolumn
+
+" Only show cursorline in current window:
+autocmd settings WinEnter * setlocal cursorline cursorcolumn
+autocmd settings WinLeave * setlocal nocursorline nocursorcolumn
+
+" Highlight column 80:
+set colorcolumn=80
+
+" Try zero scrolloff, to facilitate commands that rely on screen lines:
+set scrolloff=0
+
+" Display line numbers:
+set number
+
+" Enable mouse in all modes:
+set mouse=a
+
+" Wildmenu :
+set wildmenu
+set wildmode=longest,list:longest
+set wildignore=*.o,*~,*.pyc,*.jpg,*.jpeg,*.JPG,*.png,*.xcf,*.gif,*.bmp,*.pdf,*.beam,*.ibc
 
 "
 "
