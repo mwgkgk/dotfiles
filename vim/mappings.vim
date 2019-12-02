@@ -660,3 +660,13 @@ nnoremap <Leader>cdg :silent execute 'cd' system('git rev-parse --git-dir')<CR>:
 
 " Reload .vimrc
 nnoremap <F6> :source ~/.vimrc<CR>
+
+"
+"
+" Dotfiles
+"
+
+nnoremap <Leader>cvv :e <C-r>=dotfiles#vim('.vimrc')<CR><CR>
+nnoremap <Leader>cvm :e <C-r>=dotfiles#vim('mappings.vim')<CR><CR>
+nnoremap <Leader>cvs :e <C-r>=dotfiles#vim('settings.vim')<CR><CR>
+nnoremap <Leader>cva :e <C-r>=dotfiles#vim('commands.vim')<CR><CR>

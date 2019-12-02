@@ -206,6 +206,14 @@ set viminfo='1000,:0,<0,@0,f1,/0
 
 "
 "
+" Dotfiles
+"
+
+let g:dotfiles = {}
+let g:dotfiles.vim = '~/code/dotfiles/vim/'
+
+"
+"
 " GUI
 "
 
