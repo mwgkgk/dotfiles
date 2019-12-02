@@ -202,7 +202,11 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-set viminfo='1000,:0,<0,@0,f1,/0
+if !has('nvim')
+    " This line causes crash on exit in Neovim.
+    " See https://github.com/neovim/neovim/issues/11497
+    set viminfo='1000,:0,<0,@0,f1,/0
+endif
 
 "
 "
