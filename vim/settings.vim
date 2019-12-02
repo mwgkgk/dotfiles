@@ -1,6 +1,3 @@
-" This file is part of the undergoing configuration refactor.
-" See baby.vim for the entry point.
-
 " This file contains settings for base Vim. Plugin settings can be found in
 " corresponding conf/<plugin>/plugin/settings.vim files.
 
@@ -112,10 +109,24 @@ set number
 " Enable mouse in all modes:
 set mouse=a
 
-" Wildmenu :
+"
+"
+" Wildmenu & Completion
+"
+
+" Wildmenu
 set wildmenu
 set wildmode=longest,list:longest
 set wildignore=*.o,*~,*.pyc,*.jpg,*.jpeg,*.JPG,*.png,*.xcf,*.gif,*.bmp,*.pdf,*.beam,*.ibc
+
+" Completion
+set complete=.,b,u,]
+set completeopt=menu
+set pumheight=5
+
+" Ignore case for search but not completion:
+autocmd settings InsertEnter * set noignorecase
+autocmd settings InsertLeave * set ignorecase
 
 "
 "

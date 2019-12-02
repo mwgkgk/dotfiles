@@ -1,17 +1,20 @@
-" This file is part of the undergoing configuration refactor.
-" See baby.vim for the entry point.
-
 " This file contains mappings for base Vim. Plugin mappings can be found in
-" corresponding conf/<plugin>/plugin/mappings.vim files. Filetype specific
-" mappings can be found in ftplugin/<filetype>/mappings.vim
+" corresponding conf/<plugin>/plugin/mappings.vim files.
+" Filetype specific mappings can be found in ftplugin/<filetype>/mappings.vim
 
+"
+"
+" UTF-8
+"
+
+scriptencoding utf-8
 
 "
 "
 " Key Features
 "
 
-let g:mapleader=";"
+let g:mapleader=';'
 let g:maplocalleader="'"
 
 " Support C-c as Esc replacement:
@@ -594,6 +597,17 @@ inoremap <C-g><Enter> <Esc>:call toggle#spelling()<CR>a
 
 " Fix previous word:
 inoremap <C-g><C-l> <C-g>u<Esc>:setlocal spell<CR>[s1z=`]a<C-g>u
+
+"
+"
+" Make
+"
+
+" Shift-F9 for proper make using makeprg
+nnoremap [18;2~ :make<CR>:copen<CR>
+
+" F9 for poor man's make using :terminal
+nnoremap <F9> :terminal make<CR>
 
 "
 "
