@@ -325,6 +325,8 @@ map <M-r> <Plug>(patternjump-forward)
 " }}}
 
 Plug 'andymass/vim-matchup' " {{{
+" Jump to % of the file:
+nnoremap ,, %
 " }}}
 
 Plug 'AndrewRadev/dsf.vim'
