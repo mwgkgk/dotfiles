@@ -82,16 +82,16 @@ control + F12
 	run-aloud tmux-kill-detached
 
 # Layouts:
-# L-CTRL and R-CTRL are configured to send Super+6 and Super+7
+# R-CTRL is configured to send Super+6
 # See kmonad/config.kbd
 
 super + 6
 	xkb-switch -s us
 
-super + 7
+super + control + 6
 	xkb-switch -s ru
 
-super + shift + 7
+super + shift + 6
 	xkb-switch -s ua
 
 # Paste X selection
