@@ -1,5 +1,7 @@
 " vim: foldmethod=marker foldlevel=0
 
+scriptencoding utf-8
+
 call plug#begin('~/.vim/plugs')
 
 augroup plugs.vimrc
