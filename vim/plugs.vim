@@ -4,7 +4,7 @@ scriptencoding utf-8
 
 call plug#begin('~/.vim/plugs')
 
-augroup plugs.vimrc
+augroup plugs
     autocmd!
 augroup END
 
@@ -347,7 +347,7 @@ Plug 'AndrewRadev/whitespaste.vim'
 Plug 'sickill/vim-pasta'
 
 " Plug 'inkarkat/vim-SyntaxRange' " {{{
-" autocmd plugs.vimrc FileType nlang call SyntaxRange#Include('@begin=c@', '@end=c@', 'c', 'NonText')
+" autocmd plugs FileType nlang call SyntaxRange#Include('@begin=c@', '@end=c@', 'c', 'NonText')
 " }}}
 Plug 'vim-scripts/ingo-library'
 Plug 'vim-scripts/JumpToLastOccurrence' " {{{
@@ -456,10 +456,10 @@ let g:formatters_d = ['dfmt']
 let g:formatdef_jsfmt = '"jsfmt"'
 let g:formatters_js = ['jsfmt']
 let g:formatters_python = ['black']
-" autocmd plugs.vimrc BufWrite *.elm :Autoformat
-autocmd plugs.vimrc FileType elm,haskell,idris,rust,ocaml,sh,perl,perl6,dhall,d,javascript,python,go,c nnoremap <buffer> <Space>f :Autoformat<CR>
-autocmd plugs.vimrc FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
-autocmd plugs.vimrc FileType scheme nnoremap <buffer> <Space>f :Trailing<CR>gg=G<C-O><C-O><CR>
+" autocmd plugs BufWrite *.elm :Autoformat
+autocmd plugs FileType elm,haskell,idris,rust,ocaml,sh,perl,perl6,dhall,d,javascript,python,go,c nnoremap <buffer> <Space>f :Autoformat<CR>
+autocmd plugs FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
+autocmd plugs FileType scheme nnoremap <buffer> <Space>f :Trailing<CR>gg=G<C-O><C-O><CR>
 " }}}
 
 Plug 'terryma/vim-multiple-cursors' " {{{
@@ -506,7 +506,7 @@ endif " {{{
 let g:deoplete#enable_at_startup = 0
 nnoremap <Space><Leader> :call deoplete#toggle()<CR>
 
-" autocmd plugs.vimrc FileType markdown,jiv call deoplete#disable()
+" autocmd plugs FileType markdown,jiv call deoplete#disable()
 " inoremap <M-j> <C-n>
 " inoremap <M-k> <C-p>
 
@@ -518,7 +518,7 @@ nnoremap <F3> :AsyncRun<Space>
 nnoremap <Space>r :AsyncRun tmux send -t motor C-u do-thing C-m<CR>
 nnoremap <Space><Tab> :AsyncRun tmux send -t motor C-c && sleep 0.1 && tmux send -t motor C-c <CR>
 " Refresh dev1 browser
-" autocmd plugs.vimrc BufWrite *.elm,*.html,*.css,*.ex,*.exs,*.tsx silent! AsyncRun refresh-dev1
+" autocmd plugs BufWrite *.elm,*.html,*.css,*.ex,*.exs,*.tsx silent! AsyncRun refresh-dev1
 
 " Open current file in browser
 command! Chr AsyncRun chromium --incognito % &
@@ -644,16 +644,8 @@ nmap <Leader>g* <Plug>(operator-g*)
 nmap <Leader>#  <Plug>(operator-#)
 nmap <Leader>g# <Plug>(operator-g#)
 " }}}
-Plug 'tyru/open-browser.vim' " {{{
-nmap gxx <Plug>(openbrowser-open)
-vmap gxx <Plug>(openbrowser-open)
-nmap gxs <Plug>(openbrowser-search)
-vmap gxs <Plug>(openbrowser-search)
-
-let g:openbrowser_search_engines = {
-            \  'clojuredocs': 'https://clojuredocs.org/search?q={query}'
-            \}
-" }}}
+Plug 'tyru/open-browser.vim'
+Plug '~/.vim/conf/_open-browser.vim'
 Plug 'tyru/open-browser-github.vim' " {{{
 nnoremap gxg :OpenGithubProject <C-r>"<CR>
 vnoremap gxg y:OpenGithubProject <C-r>"<CR>
@@ -698,7 +690,7 @@ map gJ <Plug>(IndentWiseBlockScopeBoundaryEnd)
 Plug 'wellle/visual-split.vim' " :VSSplit, :VSResize
 
 Plug 'junegunn/vim-after-object' " {{{
-autocmd plugs.vimrc VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';', ',', '.' )
+autocmd plugs VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';', ',', '.' )
 " }}}
 Plug 'junegunn/vader.vim'
 Plug 'junegunn/fzf.vim' " {{{
@@ -989,11 +981,11 @@ nnoremap <Leader>gs :!git commit --amend --no-edit<CR>
 nmap <Leader>hs <Plug>(GitGutterStageHunk):!git commit --amend --no-edit<CR>
 
 " LeaderLeader to stage hunk and commit: (requires vim-fugitive)
-autocmd plugs.vimrc FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
-autocmd plugs.vimrc FileType jiv,lisp,clojure nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>(GitGutterStageHunk):Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
+autocmd plugs FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
+autocmd plugs FileType jiv,lisp,clojure nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>(GitGutterStageHunk):Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
 
 " Stage hunk & commit with message from the unnamed register
-autocmd plugs.vimrc FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
+autocmd plugs FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
 " }}}
 
 Plug 'rbong/vim-flog' " {{{
@@ -1050,7 +1042,7 @@ cab man Man
 "     \ }
 " " \ 'javascript': ['typescript-language-server', '--stdio'],
 " " \ 'javascript.jsx': ['typescript-language-server', '--stdio'],
-" autocmd plugs.vimrc FileType typescript,typescript.tsx
+" autocmd plugs FileType typescript,typescript.tsx
 "     \ nnoremap <buffer> <Space>f :call LanguageClient#textDocument_formatting()<CR>
 " let g:LanguageClient_diagnosticsDisplay = {
 "     \     1: {
@@ -1235,13 +1227,13 @@ endfunction
 " nnoremap <M-S-j> F(xwi(<Esc>
 
 " TODO: rename markdown mj? or have both.
-autocmd plugs.vimrc FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nlang,markdown call s:vim_sexp_mappings()
+autocmd plugs FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nlang,markdown call s:vim_sexp_mappings()
 
 " TODO: This doesn't work
-" autocmd plugs.vimrc FileType mkd umap =-
+" autocmd plugs FileType mkd umap =-
 " }}}
 Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' } " {{{
-" autocmd plugs.vimrc FileType lisp <silent> <buffer> <LocalLeader>gi :call vlime#plugin#InteractionMode()<CR>
+" autocmd plugs FileType lisp <silent> <buffer> <LocalLeader>gi :call vlime#plugin#InteractionMode()<CR>
 " TODO <LocalLeader><LocalLeader> for <LocalLeader>st
 " let g:vlime_enable_autodoc = v:true
 let g:vlime_cl_impl = "ccl"
@@ -1270,39 +1262,11 @@ augroup END
 " }}}
 
 " Clojure
-Plug 'tpope/vim-fireplace', { 'for' : 'clojure' } " {{{
-let g:fireplace_no_maps = 1
-augroup clojure.plugs.vimrc
-    autocmd!
-    autocmd FileType clojure nmap <silent> <buffer> <C-g> <Plug>FireplaceK
-    autocmd FileType clojure nnoremap <silent> <buffer> <Leader><C-g> :call openbrowser#search('<C-r><C-w>', 'clojuredocs')<CR>
+Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
+Plug '~/.vim/conf/_vim-fireplace', { 'for' : 'clojure' }
 
-    " Use vim-sexp mappings to keep cursor position (see :help sexp-mappings)
-    autocmd FileType clojure nmap <silent> <buffer> X <Plug>FireplacePrint<Plug>(sexp_outer_list)``
-    autocmd FileType clojure nmap <silent> <buffer> <Leader>x <Plug>FireplacePrint<Plug>(sexp_outer_top_list)``
-    autocmd FileType clojure nmap <silent> <buffer> <LocalLeader>x <Plug>FireplacePrint<Plug>(sexp_inner_element)``
-
-    autocmd FileType clojure nnoremap <silent> <buffer> <LocalLeader>i :Eval (st/instrument)<CR>
-
-    autocmd FileType clojure nnoremap <silent> <buffer> <Space>x :Require<CR>
-
-    " TODO tidy up into a function, restore search reg
-    autocmd FileType clojure map <silent> <buffer> <Leader>X ya(:-1put<CR><C-o><Plug>FireplaceCountFilter:Commentary<CR>:s/^; /; => /<CR>:let @/=''<CR>
-    " )
-
-    autocmd FileType clojure nnoremap <LocalLeader>rr :silent !chi-send motor "lein repl"<CR>:redraw!<CR>
-
-    " TODO tidy up into a function
-    autocmd FileType clojure nnoremap <LocalLeader>cc :Connect localhost:<C-r>=readfile(".nrepl-port")<CR><BS><Space><C-r>=expand('%:p:h')<CR><CR>
-
-    autocmd FileType clojure map <C-]> <Plug>FireplaceDjump
-    autocmd FileType clojure map <C-w><C-]> <Plug>FireplaceDsplit
-augroup END
-" }}}
-Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' } " {{{
-autocmd plugs.vimrc FileType clojure nnoremap <buffer> <Space>f :Cljfmt<CR>
-autocmd plugs.vimrc BufWritePost *.clj,*.cljs normal! zv
-" }}}
+Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
+Plug '~/.vim/conf/_vim-cljfmt', { 'for' : 'clojure' }
 
 " Racket
 Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
@@ -1323,18 +1287,18 @@ Plug 'mjbrownie/django-template-textobjects', { 'for' : 'htmldjango' }
 
 " Hylang
 Plug 'hylang/vim-hy', { 'for' : 'hy' } " {{{
-autocmd plugs.vimrc FileType hy set lisp
+autocmd plugs FileType hy set lisp
 " }}}
 
 " LFE
 Plug 'lfe-support/vim-lfe', {'for' : 'lfe' } " {{{
-autocmd plugs.vimrc FileType lfe set lisp
+autocmd plugs FileType lfe set lisp
 " }}}
 
 " OCaml
 " Plug 'rgrinberg/vim-ocaml', { 'for': 'ocaml' }
 " Merlin {{{
-autocmd plugs.vimrc FileType ocaml command! OpamHelptags :execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"
+autocmd plugs FileType ocaml command! OpamHelptags :execute "helptags " . substitute(system('opam config var share'),'\n$','','''') .  "/merlin/vim/doc"
 
 " OPAM user-setup {{{
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
