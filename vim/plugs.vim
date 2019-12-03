@@ -1,6 +1,6 @@
 " vim: foldmethod=marker foldlevel=0
 
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.vim/plugs')
 
 augroup plugs.vimrc
     autocmd!
@@ -167,7 +167,6 @@ let g:cycle_default_groups = [
             \   [['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']],
             \   [['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']],
             \   [['this', 'next']],
-            \   [['Bundle', 'Plug']],
             \   [['forward', 'backward']],
             \   [['head', 'tail']],
             \   [['ctrl', 'alt', 'shift', 'win', 'meta']],
@@ -1453,7 +1452,7 @@ Plug 'junegunn/seoul256.vim'
 
 call plug#end()
 
-source ~/.vim/bundle/vim-matchup/autoload/matchup/custom.vim
+source ~/.vim/plugs/vim-matchup/autoload/matchup/custom.vim
 
 call matchup#custom#define_motion('nox', '%',
       \ 'matchup#custom#example_motion', { 'down': 1 })

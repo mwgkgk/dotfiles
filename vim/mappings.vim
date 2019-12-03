@@ -675,4 +675,4 @@ nnoremap <Leader>cvc :e <C-r>=dotfiles#vim('colors.vim')<CR><CR>
 
 nnoremap <Leader>cvl :e ~/.local.vimrc<CR>
 nnoremap <Leader>cvH :e ~/.local.plugs.vimrc<CR>
-nnoremap <Leader>cvb :e ~/.vim/bundle/<CR>
+nnoremap <Leader>cvb :e ~/.vim/plugs/<CR>
