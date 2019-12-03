@@ -48,7 +48,7 @@ super + backslash
 super + semicolon
 	silk
 
-super + space
+super + e
 	technodrome
 
 super + BackSpace
@@ -114,8 +114,8 @@ super + minus
 
 # Throwing Windows Around:
 
-super + grave
+super + space
 	punt
 
-super + shift + grave
+super + shift + space
 	punt-all
