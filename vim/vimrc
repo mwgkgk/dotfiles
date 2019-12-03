@@ -6,6 +6,8 @@ runtime mappings.vim
 
 runtime plugs.vim
 
+runtime colors.vim
+
 if filereadable(glob('~/.local.vimrc')) 
     source ~/.local.vimrc
 endif
