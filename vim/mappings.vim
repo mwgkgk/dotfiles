@@ -427,6 +427,9 @@ nnoremap <silent> zd :pclose<CR>
 " C-t for digraphs
 inoremap <C-t> <C-k>
 
+" M-t to transpose-char:
+inoremap <M-t> <Esc>xPgi
+
 " Kill line on C-k like readline
 inoremap <C-k> <C-o>D
 
