@@ -746,6 +746,7 @@ nnoremap sF :FzfFilesWithPreview ~/<CR>
 nnoremap sH :ProjectRootExe :FzfFilesWithPreview ./.git/hooks/<CR>
 nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
 nnoremap <M-v> :FzfFilesWithPreview ~/.vim/<CR>
+nnoremap <M-S-v> :FzfFilesWithPreview ~/.vim/plugs/<CR>
 nnoremap sv :FzfFilesWithPreview ~/.vim/<CR>
 nnoremap s" :FzfFilesWithPreview ~/.marvim/<CR>
 nnoremap sH :FzfFilesWithPreview ~/help/<CR>
