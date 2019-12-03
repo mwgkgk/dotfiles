@@ -8,7 +8,8 @@
 " If you would like to use another vi clone such Elvis or Vile
 " you will need to change this setting.
 
-set vicmd=vim\ -u\ ~/.plugs.vimrc\ --servername\ default
+set vicmd=Vim
+" set vicmd=vim\ -u\ ~/.plugs.vimrc\ --servername\ default
 " set vicmd=elvis\ -G\ termcap
 " set vicmd=vile
 
