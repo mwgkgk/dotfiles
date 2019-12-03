@@ -36,6 +36,7 @@ hi title		guifg=white	gui=bold	cterm=bold ctermfg=111
 
 hi ColorColumn ctermfg=none ctermbg=17
 hi CursorLine cterm=none ctermfg=none ctermbg=17
+hi CursorColumn cterm=none ctermfg=none ctermbg=17
 hi CursorLineNr ctermfg=216 ctermbg=17
 hi SignColumn ctermfg=166 ctermbg=none
 
