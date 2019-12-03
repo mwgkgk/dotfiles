@@ -4,6 +4,8 @@ runtime settings.vim
 runtime commands.vim
 runtime mappings.vim
 
+runtime plugs.vim
+
 if filereadable(glob('~/.local.vimrc')) 
     source ~/.local.vimrc
 endif

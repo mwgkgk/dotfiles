@@ -1,14 +1,6 @@
 " vim: foldmethod=marker foldlevel=0
 
-" Nocompatible isn't assumed when starting vim with -u option
-set nocompatible
-
 call plug#begin('~/.vim/bundle')
-
-let g:mapleader=";"
-let g:maplocalleader="'"
-
-" filetype off
 
 augroup plugs.vimrc
     autocmd!
@@ -1468,6 +1460,4 @@ call matchup#custom#define_motion('nox', '%',
 call matchup#custom#define_motion('nox', 'g%',
       \ 'matchup#custom#example_motion', { 'down': 0 })
 
-runtime .colors.vimrc
-
-source ~/.vimrc
+runtime colors.vim
