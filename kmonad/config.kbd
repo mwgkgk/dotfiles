@@ -20,7 +20,7 @@ _     _     _                 _             _    _    _    _             _    _ 
 @lrS = LR-Scroll
 @laS = LA-Scroll
 
-@tnB = TN grv LT-Burglar
+@tnB = TN M-6 LT-Burglar
 
 @tnT = TN f1 LT-Toggle
 @tnU = TN f1 LT-Untoggle
@@ -43,11 +43,11 @@ lctl  lmet  lalt              spc           ralt rmet cmps rctl          left do
 
 LAYER home
 esc  @tnT f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
-@tnB 1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
+grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
 tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
 lctl   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
 lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
-esc   lmet  lalt              spc           @ltO rmet (    M-6           left down right    kp0             kpdot
+@tnB  lmet  lalt              spc           @ltO rmet (    M-7           left down right    kp0             kpdot
 
 
 LAYER Toggle
@@ -89,13 +89,13 @@ _     _     _                 @lrS          _    _    _    _             _    _ 
 
 LAYER Burglar
 /*
-    Editing shortcuts layer, toggled while Tab key is down.
+    Editing shortcuts layer, toggled by holding down the original lctl key.
 
     - Some serve to achieve readline-like shortcuts when actual readline
-      keybinds are overridden: e.g. <Tab-e> for End, or <Tab-w> for C-bspc.
-    - Some are duplicates for consistency, e.g. <Tab-u> being C-u.
-    - Some are unique offerings, e.g. <Tab-v> to paste X selection.
-    - <Tab-hjkl> to access arrows.
+      keybinds are overridden: e.g. <B-e> for End, or <B-w> for C-bspc.
+    - Some are duplicates for consistency, e.g. <B-u> being C-u.
+    - Some are unique offerings, e.g. <B-v> to paste X selection.
+    - <B-hjkl> to access arrows.
 */
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
@@ -107,7 +107,7 @@ _     _     LT-Driver         _             _    _    _    _             _    _ 
 
 LAYER Driver
 /*
-    Left-hand-only arrow shortcuts on <Tab-lalt-wasd>.
+    Left-hand-only arrow shortcuts on <B-lalt-wasd>.
 */
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
