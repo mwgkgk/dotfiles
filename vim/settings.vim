@@ -205,7 +205,7 @@ set noswapfile
 if !has('nvim')
     " This line causes crash on exit in Neovim.
     " See https://github.com/neovim/neovim/issues/11497
-    set viminfo='1000,:0,<0,@0,f1,/0
+    set viminfo='1000,:1000,<0,@0,f1,/0
 endif
 
 "
