@@ -191,6 +191,7 @@ set undofile
 
 set sessionoptions-=options
 set sessionoptions-=localoptions
+set sessionoptions-=globals
 set sessionoptions-=buffers
 
 "
