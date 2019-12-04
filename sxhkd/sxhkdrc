@@ -91,7 +91,7 @@ super + 6
 super + control + 6
 	xkb-switch -s ru
 
-super + shift + 6
+super + control + shift + 6
 	xkb-switch -s ua
 
 # Paste X selection
