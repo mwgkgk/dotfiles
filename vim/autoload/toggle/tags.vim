@@ -3,5 +3,5 @@ function! toggle#tags#closest()
 endfunction
 
 function! toggle#tags#cwd()
-    set tags=./tags
+    set tags=tags
 endfunction

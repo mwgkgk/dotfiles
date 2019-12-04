@@ -693,82 +693,10 @@ Plug 'junegunn/vim-after-object' " {{{
 autocmd plugs VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';', ',', '.' )
 " }}}
 Plug 'junegunn/vader.vim'
-Plug 'junegunn/fzf.vim' " {{{
-let g:fzf_command_prefix = 'Fzf'
-let g:fzf_layout = { 'down': '~20%' }
-let g:fzf_action = {
-            \ 'ctrl-t': 'tab split',
-            \ 'space': 'split',
-            \ 'ctrl-v': 'vsplit' }
-let g:fzf_colors =
-            \ { 'fg':      ['fg', 'Normal'],
-            \ 'bg':      ['bg', 'Normal'],
-            \ 'hl':      ['fg', 'Comment'],
-            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-            \ 'hl+':     ['fg', 'Statement'],
-            \ 'info':    ['fg', 'PreProc'],
-            \ 'prompt':  ['fg', 'Conditional'],
-            \ 'pointer': ['fg', 'Exception'],
-            \ 'marker':  ['fg', 'Keyword'],
-            \ 'spinner': ['fg', 'Label'],
-            \ 'header':  ['fg', 'Comment'] }
-let g:fzf_history_dir = '~/.local/share/fzf-history'
-let g:fzf_buffers_jump = 1
-nnoremap s<Space> :FzfBuffers<CR>
 
-nnoremap H :FzfHelptags<CR>
-nnoremap s<Tab> :FzfSnippets<CR>
-nnoremap sK :FZF ~/.vim/skeletons/<CR>
-nnoremap sk :call fzf#run({'dir':'~/.vim/skeletons', 'sink':'%!cat', 'down': '~15%'})<CR>
-nnoremap sz :FzfTags<CR>
-nnoremap sm :FzfMarks<CR>
-nnoremap sM :FzfMaps<CR>
-nnoremap st :FzfFiletypes<CR>
-nnoremap sf :FzfGFiles<CR>
-nnoremap s' :FzfHistory<CR>
-nnoremap s: :FzfHistory:<CR>
-nnoremap s; :FzfHistory:<CR>
-nnoremap s/ :FzfHistory/<CR>
-nnoremap s[ :FzfBCommits<CR>
-nnoremap s] :FzfCommits<CR>
-nnoremap S :FzfBLines<CR>
+Plug '~/.vim/conf/_fzf.vim'
+Plug 'junegunn/fzf.vim'
 
-command! -bang -nargs=? -complete=dir FzfFilesWithPreview
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
-
-nnoremap ss :FzfFilesWithPreview .<CR>
-
-nnoremap sw :FzfFilesWithPreview ../<CR>
-nnoremap sT :FzfFilesWithPreview /tmp/<CR>
-nnoremap s~ :FzfFilesWithPreview ~/<CR>
-nnoremap sF :FzfFilesWithPreview ~/<CR>
-nnoremap sH :ProjectRootExe :FzfFilesWithPreview ./.git/hooks/<CR>
-nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
-nnoremap <M-v> :FzfFilesWithPreview ~/.vim/<CR>
-nnoremap <M-S-v> :FzfFilesWithPreview ~/.vim/plugs/<CR>
-nnoremap sv :FzfFilesWithPreview ~/.vim/<CR>
-nnoremap s" :FzfFilesWithPreview ~/.marvim/<CR>
-nnoremap sH :FzfFilesWithPreview ~/help/<CR>
-
-" --column: Show column number
-" --line-number: Show line number
-" --no-heading: Do not show file headings in results
-" --fixed-strings: Search term as a literal string
-" --ignore-case: Case insensitive search
-" --no-ignore: Do not respect .gitignore, etc...
-" --hidden: Search hidden files and folders
-" --follow: Follow symlinks
-" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-" --color: Search color options
-
-" TODO per-filetype fzf-rg through ~/shop and ~/temple
-command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
-nnoremap sa :Rg<CR>
-
-command! FzfGitModified call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --modified'}))
-nnoremap sF :FzfGitModified<CR>
-" }}}
 Plug 'junegunn/vim-peekaboo' " {{{
 let g:peekaboo_delay = 200
 let g:peekaboo_compact = 1
