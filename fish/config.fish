@@ -7,7 +7,7 @@ set -x fish_color_prompt C28B5B
 # set -x fish_command_timer_color AF875F
 
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
-set -x FZF_DEFAULT_OPTS " --bind 'ctrl-a:select-all+accept,tab:print-query'"
+set -x FZF_DEFAULT_OPTS " --bind 'ctrl-q:select-all+accept,tab:print-query'"
 
 # eval (perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 
