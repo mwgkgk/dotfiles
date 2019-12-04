@@ -812,7 +812,7 @@ inoremap <C-d> <Del>
 
 Plug 'tpope/vim-fugitive' " {{{
 nnoremap <Leader>G :Gstatus<CR>
-nnoremap <LocalLeader><LocalLeader> :Gstatus<CR>
+nnoremap <Leader><LocalLeader> :Gstatus<CR>
 
 nnoremap <Leader>D :Gvdiff<CR>
 
