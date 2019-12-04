@@ -114,6 +114,12 @@ super + minus
 
 # Throwing Windows Around:
 
+super + grave
+	punt
+
+super + shift + grave
+	punt-all
+
 super + space
 	punt
 
