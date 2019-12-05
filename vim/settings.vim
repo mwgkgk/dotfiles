@@ -194,6 +194,10 @@ set sessionoptions-=localoptions
 set sessionoptions-=globals
 set sessionoptions-=buffers
 
+" When sessionoptions is -= options, the help window status is not restored on
+" session load.
+autocmd settings SessionLoadPost *.txt call ftdetect#set_help_status()
+
 "
 "
 " Backup & Restore
