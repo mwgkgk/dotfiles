@@ -48,7 +48,7 @@ super + backslash
 super + semicolon
 	silk
 
-super + e
+super + space
 	technodrome
 
 super + BackSpace
@@ -118,10 +118,4 @@ super + grave
 	punt
 
 super + shift + grave
-	punt-all
-
-super + space
-	punt
-
-super + shift + space
 	punt-all
