@@ -908,12 +908,12 @@ map <Leader>i <Plug>(operator-insert)
 Plug 'mwgkgk/vim-auto-mkdir'
 
 Plug 'vifm/vifm.vim' " {{{
-cab fm SplitVifm
+cab <expr> fm getcmdtype() == ':' ? 'SplitVifm' : 'fm'
 nnoremap <F2> :SplitVifm<CR>
 " }}}
 
 Plug 'vim-utils/vim-man', { 'on' : 'Man' } " {{{
-cab man Man
+cab <expr> man getcmdtype() == ':' ? 'Man' : 'mank
 " }}}
 
 " Plug 'autozimu/LanguageClient-neovim', {

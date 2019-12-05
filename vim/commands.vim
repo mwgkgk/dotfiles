@@ -8,12 +8,12 @@
 " Standard Commands
 "
 
-cab Help help
+cab <expr> Help getcmdtype() == ':' ? 'help' : 'Help'
 cab H h
 
-cab vh vert help
+cab <expr> vh getcmdtype() == ':' ? 'vert help' : 'vh'
 
-cab ww saveas
+cab <expr> ww getcmdtype() == ':' ? 'saveas' : 'ww'
 
 "
 "
@@ -22,19 +22,19 @@ cab ww saveas
 
 " Pass multiple arguments to :e
 command! -nargs=* -complete=file Edit call files#edit_multiple(<f-args>)
-cab e Edit
+cab <expr> e getcmdtype() == ':' ? 'Edit' : 'e'
 
 " Pass multiple arguments to :sp
 command! -nargs=* -complete=file Sp call files#split_multiple(<f-args>)
-cab sp Sp
+cab <expr> sp getcmdtype() == ':' ? 'Sp' : 'sp'
 
 " Pass multiple arguments to :vs
 command! -nargs=* -complete=file Vs call files#vsplit_multiple(<f-args>)
-cab vs Vs
+cab <expr> vs getcmdtype() == ':' ? 'Vs' : 'vs'
 
 " Force split
 command! -nargs=* -complete=file Fsp call files#force_split_multiple(<f-args>)
-cab fsp Fsp
+cab <expr> fsp getcmdtype() == ':' ? 'Fsp' : 'fsp'
 
 "
 "
@@ -44,7 +44,7 @@ cab fsp Fsp
 " Without arguments, print the output of `date`
 " With arguments, shift the date with `date --date='$1'`.
 command! -nargs=? Date :call date#echo_date(<q-args>)
-cab date Date
+cab <expr> date getcmdtype() == ':' ? 'Date' : 'date'
 
 "
 "
@@ -61,7 +61,7 @@ command! -complete=shellcmd -nargs=+ Shell call shell#temp_window(<q-args>)
 
 " Save as 'last session':
 command! Mklast execute "mksession! ~/.vim/sessions/last"
-cab mklast Mklast
+cab <expr> mklast getcmdtype() == ':' ? 'Mklast' : 'mklast'
 
 "
 "
