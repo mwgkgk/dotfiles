@@ -589,8 +589,8 @@ Plug 'kana/vim-niceblock'
 Plug 'kana/vim-exjumplist' " {{{
 nmap <C-M-o> <Plug>(exjumplist-go-first)
 nmap <C-M-t> <Plug>(exjumplist-go-last)
-nmap <M-p> <Plug>(exjumplist-previous-buffer)
-nmap <M-n> <Plug>(exjumplist-next-buffer)
+nmap <M-u> <Plug>(exjumplist-previous-buffer)
+nmap <M-m> <Plug>(exjumplist-next-buffer)
 " }}}
 
 Plug 'thinca/vim-visualstar'
@@ -841,8 +841,8 @@ nnoremap <silent> <Leader>hg :GitGutterPreviewHunk<CR>
 nmap <Leader>hk <Plug>(GitGutterPrevHunk)
 nmap <Leader>hj <Plug>(GitGutterNextHunk)
 
-nmap <M-u> <Plug>(GitGutterPrevHunk)
-nmap <M-m> <Plug>(GitGutterNextHunk)
+nmap <M-p> <Plug>(GitGutterPrevHunk)
+nmap <M-n> <Plug>(GitGutterNextHunk)
 
 " This. (requires kana/vim-submode)
 " call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', '<Plug>(GitGutterPrevHunk)')
