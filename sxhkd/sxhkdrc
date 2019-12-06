@@ -119,3 +119,9 @@ super + grave
 
 super + shift + grave
 	punt-all
+
+super + period
+	punt
+
+super + shift + period
+	punt-all
