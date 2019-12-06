@@ -10,6 +10,7 @@ TREE_CMD:=tree -atrhn --du --filelimit 30\
 readme:
 	$(TREE_CMD) > $(README_TARGET)
 	# echo -e "\`$(TREE_CMD)\`\n\`\`\`\n`cat $(README_TARGET)`\n\`\`\`" > $(README_TARGET)
+	echo -e "\`\`\`\n`cat $(README_TARGET)`\n\`\`\`" > $(README_TARGET)
 	echo -e "\n> Generated on `date --utc +'%A, %B %e, %Y at %T %p %Z.'`" >> $(README_TARGET)
 	git add $(README_TARGET)
 	git commit -m "Update $(README_TARGET)"
