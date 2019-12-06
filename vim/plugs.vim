@@ -913,7 +913,7 @@ nnoremap <F2> :SplitVifm<CR>
 " }}}
 
 Plug 'vim-utils/vim-man', { 'on' : 'Man' } " {{{
-cab <expr> man getcmdtype() == ':' ? 'Man' : 'mank
+cab <expr> man getcmdtype() == ':' ? 'Man' : 'man'
 " }}}
 
 " Plug 'autozimu/LanguageClient-neovim', {
