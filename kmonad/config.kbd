@@ -20,8 +20,6 @@ _     _     _                 _             _    _    _    _             _    _ 
 @lrS = LR-Scroll
 @laS = LA-Scroll
 
-@thX = TH 110 esc lctl
-
 @tnB = TN M-6 LT-Burglar
 
 @tnT = TN f1 LT-Toggle
@@ -32,6 +30,8 @@ _     _     _                 _             _    _    _    _             _    _ 
 @a3 = C-rght
 @a4 = C-del
 @a5 = S-tab
+@a6 = esc
+@a7 = C-f1
 
 
 SRC
@@ -47,9 +47,9 @@ LAYER home
 esc  @tnT f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
 grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
 tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
-@thX   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
+lctl   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
 lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
-@tnB  lmet  lalt              spc           @ltO rmet (    M-7           left down right    kp0             kpdot
+@tnB  lmet  lalt              spc           @ltO rmet @a6  M-7           left down right    kp0             kpdot
 
 
 LAYER Toggle
@@ -99,7 +99,7 @@ LAYER Burglar
     - Some are unique offerings, e.g. <B-v> to paste X selection.
     - <B-hjkl> to access arrows.
 */
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    @a7  _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     _    @a1  end  _    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
 _      home ret  pgdn @a3  _    left down up   rght _    _    _                             _       _       _
