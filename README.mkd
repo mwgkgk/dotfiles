@@ -1,13 +1,11 @@
-`tree -atrhn --du --filelimit 30 -I '.git|README.mkd' -o README.mkd`
+`tree -atrhn --du --filelimit 30 -I '.git|README.mkd|tags|plugs|sessions|swap|undo|view|.netrwhist' -o README.mkd`
 ```
 .
-├── [ 437]  Makefile
-├── [5.5M]  vim
-│   ├── [416K]  undo [4998 entries exceeds filelimit, not opening dir]
+├── [ 523]  Makefile
+├── [390K]  vim
 │   ├── [ 48K]  plugs.vim
 │   ├── [2.0K]  commands.vim
 │   ├── [3.6K]  settings.vim
-│   ├── [4.0K]  sessions [234 entries exceeds filelimit, not opening dir]
 │   ├── [4.7K]  colors.vim
 │   ├── [ 58K]  conf
 │   │   ├── [ 13K]  _fzf.vim
@@ -57,7 +55,6 @@
 │   │   ├── [ 626]  folding.vim
 │   │   ├── [ 73K]  plug.vim
 │   │   └── [ 73K]  plug.vim.old
-│   ├── [4.7M]  tags
 │   ├── [ 211]  vimrc
 │   ├── [4.3K]  ftdetect
 │   │   ├── [  47]  idris.vim
@@ -66,7 +63,6 @@
 │   │   ├── [  45]  text.vim
 │   │   └── [  44]  min.vim
 │   ├── [  52]  .gitignore
-│   ├── [ 110]  .netrwhist
 │   ├── [4.5K]  plugin
 │   │   ├── [ 115]  change_paste.vim
 │   │   └── [ 379]  golf.vim
@@ -84,7 +80,6 @@
 │   │   └── [4.1K]  markdown
 │   │       └── [ 137]  mappings.vim
 │   ├── [4.0K]  skeletons [38 entries exceeds filelimit, not opening dir]
-│   ├── [4.0K]  plugs [153 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  usnippets [81 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  colors [97 entries exceeds filelimit, not opening dir]
 │   ├── [ 18K]  after
@@ -112,11 +107,7 @@
 │   │   └── [8.4K]  syntax
 │   │       ├── [ 275]  scheme.vim
 │   │       └── [4.1K]  min.vim
-│   ├── [  50]  settings.json
-│   ├── [4.0K]  swap
-│   └── [6.6K]  view
-│       └── [2.6K]  =+usr=+share=+vim=+vim74=+doc=+starting.txt=
-├── [4.9M]  tags
+│   └── [  50]  settings.json
 ├── [  14]  .gitignore
 ├── [ 18K]  user
 │   ├── [  61]  .inputrc
@@ -209,7 +200,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
-  11M used in 64 directories, 143 files
+ 652K used in 59 directories, 139 files
 ```
 
-> Generated on Friday, December  6, 2019 at 09:03:28 AM UTC.
+> Generated on Friday, December  6, 2019 at 09:09:47 AM UTC.
