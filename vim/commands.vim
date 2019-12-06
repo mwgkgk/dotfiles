@@ -13,7 +13,7 @@ cab H h
 
 cab <expr> vh getcmdtype() == ':' ? 'vert help' : 'vh'
 
-cab <expr> ww getcmdtype() == ':' ? 'saveas' : 'ww'
+cab <expr> ww getcmdtype() == ':' ? "saveas <C-r>=expand('%:p:h')<CR>/" : 'ww'
 
 "
 "
