@@ -1,7 +1,5 @@
-`tree -atrhn --du --filelimit 30 -I '.git|README.mkd|tags|plugs|sessions|swap|undo|view|.netrwhist' -o README.mkd`
-```
 .
-├── [ 523]  Makefile
+├── [ 529]  Makefile
 ├── [390K]  vim
 │   ├── [ 48K]  plugs.vim
 │   ├── [2.0K]  commands.vim
@@ -201,6 +199,5 @@
             └── [2.2K]  molokai.vimp
 
  652K used in 59 directories, 139 files
-```
 
-> Generated on Friday, December  6, 2019 at 09:09:47 AM UTC.
+> Generated on Friday, December  6, 2019 at 09:12:32 AM UTC.
