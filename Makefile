@@ -5,11 +5,10 @@ README_TARGET:=README.mkd
 
 # This is getting out of control
 TREE_CMD:=tree -atrhn --du --filelimit 30\
-	-I '.git|README.mkd|tags|plugs|sessions|swap|undo|view|.netrwhist'\
-	-o $(README_TARGET)
+	-I '.git|Makefile|README.mkd|tags|plugs|sessions|swap|undo|view|.netrwhist'
 
 readme:
-	$(TREE_CMD)
+	$(TREE_CMD) > $(README_TARGET)
 	# echo -e "\`$(TREE_CMD)\`\n\`\`\`\n`cat $(README_TARGET)`\n\`\`\`" > $(README_TARGET)
 	echo -e "\n> Generated on `date --utc +'%A, %B %e, %Y at %T %p %Z.'`" >> $(README_TARGET)
 	git add $(README_TARGET)
