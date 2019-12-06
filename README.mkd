@@ -1,5 +1,4 @@
 .
-├── [ 529]  Makefile
 ├── [390K]  vim
 │   ├── [ 48K]  plugs.vim
 │   ├── [2.0K]  commands.vim
@@ -198,6 +197,6 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 652K used in 59 directories, 139 files
+ 651K used in 59 directories, 138 files
 
-> Generated on Friday, December  6, 2019 at 09:12:32 AM UTC.
+> Generated on Friday, December  6, 2019 at 09:14:53 AM UTC.
