@@ -16,9 +16,12 @@ _     _     _                 _             _    _    _    _             _    _ 
 
 
 @ltO = LT-Omega
+@ltF = LT-Funk
 
 @lrS = LR-Scroll
 @laS = LA-Scroll
+
+@thX = TH 140 esc rsft
 
 @tnB = TN M-6 LT-Burglar
 
@@ -30,7 +33,6 @@ _     _     _                 _             _    _    _    _             _    _ 
 @a3 = C-rght
 @a4 = C-del
 @a5 = S-tab
-@a6 = esc
 @a7 = C-f1
 
 
@@ -48,13 +50,13 @@ esc  @tnT f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt sl
 grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
 tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
 lctl   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
-lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
-@tnB  lmet  lalt              spc           @ltO rmet @a6  M-7           left down right    kp0             kpdot
+lsft    z    x    c    v    b    n    m    ,    .     /    @thX               up            kp1     kp2     kp3        kpenter
+@tnB  lmet  lalt              spc           @ltO rmet @ltF M-7           left down right    kp0             kpdot
 
 
 LAYER Toggle
 /*
-    Utilize esc + keys to push layers onto the stack.
+    Push layers onto the stack.
 */
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
@@ -102,9 +104,9 @@ LAYER Burglar
 _    @a7  _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     _    @a1  end  _    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
-_      home ret  pgdn @a3  _    left down up   rght _    _    _                             _       _       _
+_      home down pgdn @a3  _    left down up   rght _    _    _                             _       _       _
 _       _    _    _    M-8  @a2  _    _    _    _     _    _                  _             _       _       _          _
-_     _     LT-Driver         _             _    _    _    _             _    _    _        _               _
+_     _     LT-Driver         ret           _    _    _    _             _    _    _        _               _
 
 
 LAYER Driver
@@ -129,7 +131,52 @@ LAYER Omega
 */
 _    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-=     1    2    3    4    :    _    _    9    0    ^    _    _    _      _    _    _        _       _       _          _
-esc    (    /    bspc -    +    |    *    #    $    %    )    _                             _       _       _
-~       5    6    7    8    \    &    __   !    ?     _    _                  _             _       _       _          _
-_     _     _                 ret                _    _    _             _    _    _        _               _
+=     1    5    3    4    :    _    _    9    0    ^    _    _    _      _    _    _        _       _       _          _
+~      (    /    bspc -    +    |    *    #    $    %    )    _                             _       _       _
+LT-Aug  2    6    7    8    \    &    __   !    ?     ret  _                  _             _       _       _          _
+_     _     @                 M-grave            _    _    _             _    _    _        _               _
+
+
+@aa1 = M-end
+@aa2 = M-del
+@aa3 = M-bspc
+@aa4 = M-ret
+@aa5 = M-\
+@aa6 = M-esc
+@aa7 = M--
+
+LAYER Aug
+/*
+    Homerow shortcuts for sxhkd shortcuts for summoning various types for
+    terminals.
+*/
+_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+_     _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_      _    @aa7 @aa6 @aa4 @aa5 _    _    _    _    @aa1 @aa2 _                             _       _       _
+_       @aa3 _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     _                 _             _    _    _    _             _    _    _        _               _
+
+
+LAYER Funk
+/*
+    Function keys!
+*/
+_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+_     f1   f5   f3   f4   _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_      f9   f10  f11  f12  _    _    _    _    _    _    _    _                             _       _       _
+_       f2   f6   f7   f8   _    _    _    _    _     _    _                  _             _       _       _          _
+_     _     _                 _             _    _    _    _             _    _    _        _               _
+
+
+/* Reference:
+
+esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
+grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
+tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
+caps   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
+lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
+lctl  lmet  lalt              spc           ralt rmet cmps rctl          left down right    kp0             kpdot
+
+*/
