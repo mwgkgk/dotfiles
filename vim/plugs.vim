@@ -490,7 +490,9 @@ omap aa <Plug>(textobj-between-a)
 " }}}
 Plug 'thinca/vim-prettyprint'
 
+Plug '~/.vim/conf/_vim-operator-user/'
 Plug 'kana/vim-operator-user'
+
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line' " {{{
 let g:textobj_line_no_default_key_mappings = 1
