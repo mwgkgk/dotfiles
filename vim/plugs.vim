@@ -594,8 +594,10 @@ nmap <Leader>g* <Plug>(operator-g*)
 nmap <Leader>#  <Plug>(operator-#)
 nmap <Leader>g# <Plug>(operator-g#)
 " }}}
-Plug 'tyru/open-browser.vim'
+
 Plug '~/.vim/conf/_open-browser.vim'
+Plug 'tyru/open-browser.vim'
+
 Plug 'tyru/open-browser-github.vim' " {{{
 nnoremap gxg :OpenGithubProject <C-r>"<CR>
 vnoremap gxg y:OpenGithubProject <C-r>"<CR>
@@ -1150,11 +1152,11 @@ augroup END
 " }}}
 
 " Clojure
-Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
 Plug '~/.vim/conf/_vim-fireplace', { 'for' : 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
 
-Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
 Plug '~/.vim/conf/_vim-cljfmt', { 'for' : 'clojure' }
+Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
 
 " Racket
 Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
