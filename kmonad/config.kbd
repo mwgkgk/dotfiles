@@ -121,6 +121,8 @@ _       _    _    _    _    _    _    _    _    _     _    _                  _ 
 _     _     _                 _             _    _    _    _             _    _    _        _               _
 
 
+@m1 = (( esc spc W ))
+
 LAYER Omega
 /*
     Layer to bring numbers and special symbols closer to homerow, triggered
@@ -134,7 +136,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 =     1    2    3    4    :    _    _    9    0    ^    @    _    _      _    _    _        _       _       _          _
 ~      (    /    -    esc  +    |    *    #    $    %    )    _                             _       _       _
 LT-Aug  5    6    7    8    bspc &    __   !    \     _    _                  _             _       _       _          _
-_     _     esc               M-grave            _    _    _             _    _    _        _               _
+_     _     @m1               M-grave            _    _    _             _    _    _        _               _
 
 
 @aa1 = M-end
