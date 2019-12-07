@@ -9,6 +9,14 @@ function! files#conf#new(pkg_name)
     let l:in = input('Conf: ' , l:conf_path, 'file')
 
     if !empty(l:in)
+
+        " Insert Plug statement above current line:
+        let l:indent = indent(line('.'))
+        call append(line('.') - 1, repeat(' ', l:indent) . "Plug '" .
+                    \ l:conf_path . "'")
+
+        write
+
         call files#api#ensure_directories_exist(l:in)
 
         execute 'split' . l:in
