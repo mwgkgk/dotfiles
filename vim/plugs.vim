@@ -43,14 +43,6 @@ nnoremap sr :CtrlPRegister<CR>
 inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 
-Plug 'scrooloose/nerdtree' " {{{
-nnoremap <silent> <Leader>_ :e  %:p:h<CR>
-nnoremap <silent> _ :sp<CR>:e  %:p:h<CR>
-let g:NERDTreeQuitOnOpen=1
-let g:NERDTreeShowHidden=1
-let g:NERDTreeMapUpdir="_"
-" }}}
-
 Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
 nnoremap <F5> :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle = 1

@@ -402,3 +402,11 @@ let g:rainbow_conf = {
 " Clear the highlighting conflict:
 " See https://github.com/luochen1990/rainbow/issues/95
 let g:sh_no_error = 1
+
+Plug 'scrooloose/nerdtree' " {{{
+nnoremap <silent> <Leader>_ :e  %:p:h<CR>
+nnoremap <silent> _ :sp<CR>:e  %:p:h<CR>
+let g:NERDTreeQuitOnOpen=1
+let g:NERDTreeShowHidden=1
+let g:NERDTreeMapUpdir="_"
+" }}}
