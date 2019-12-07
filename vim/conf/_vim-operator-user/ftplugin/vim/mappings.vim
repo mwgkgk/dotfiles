@@ -1,1 +1,1 @@
-nmap _c  <Plug>(operator-conf-entry)
+nmap <buffer> _c  <Plug>(operator-conf-entry)
