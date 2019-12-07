@@ -675,6 +675,7 @@ nnoremap <Leader>cva :e <C-r>=dotfiles#vim('commands.vim')<CR><CR>
 nnoremap <Leader>cvs :e <C-r>=dotfiles#vim('settings.vim')<CR><CR>
 nnoremap <Leader>cvp :e <C-r>=dotfiles#vim('plugs.vim')<CR><CR>
 nnoremap <Leader>cvc :e <C-r>=dotfiles#vim('colors.vim')<CR><CR>
+nnoremap <Leader>cvfm :e <C-r>=dotfiles#vim('conf/_fzf.vim/plugin/mappings.vim')<CR><CR>
 
 nnoremap <Leader>cvl :e ~/.local.vimrc<CR>
 nnoremap <Leader>cvH :e ~/.local.plugs.vimrc<CR>
