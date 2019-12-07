@@ -321,10 +321,10 @@ Plug 'tpope/vim-commentary' " {{{
 nmap gcd yypkgccj
 " }}}
 
-Plug 'dylanaraps/root.vim' " {{{
-let g:root#patterns = ['src','.git','.bzr','hg','_darcs','.svn']
-let g:root#auto = 1
-let g:root#echo = 0
+Plug 'airblade/vim-rooter' " {{{
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
+let g:rooter_use_lcd = 1
 " }}}
 
 Plug 'Valloric/ListToggle' " {{{

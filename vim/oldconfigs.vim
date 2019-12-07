@@ -410,3 +410,9 @@ let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMapUpdir="_"
 " }}}
+
+" Plug 'dylanaraps/root.vim' " {{{
+" let g:root#patterns = ['src','.git','.bzr','hg','_darcs','.svn']
+" let g:root#auto = 1
+" let g:root#echo = 0
+" }}}
