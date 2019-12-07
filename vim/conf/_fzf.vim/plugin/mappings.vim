@@ -92,6 +92,9 @@ nnoremap sz :call toggle#tags#closest()<CR>:FzfTags<CR>
 " Use the tags file in cwd:
 nnoremap sZ :call toggle#tags#cwd()<CR>:FzfTags<CR>
 
+" Buffer tags:
+nnoremap sd :FzfBTags<CR>
+
 "
 "
 " Marks
