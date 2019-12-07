@@ -50,13 +50,13 @@ nnoremap <Space>> :ne<CR>
 nnoremap <Space>< :prev<CR>
 
 " Edit file under same directory as the buffer:
-nnoremap <Space>ge :Edit <C-r>=expand('%:h').'/'<CR><C-d>
+nnoremap <Space>ge :EditCreating <C-r>=expand('%:h').'/'<CR><C-d>
 
 " Split file under same directory as the buffer:
-nnoremap <Space>e :Sp <C-r>=expand('%:h').'/'<CR><C-d>
+nnoremap <Space>e :SplitCreating <C-r>=expand('%:h').'/'<CR><C-d>
 
 " VertSplit file under same directory as the buffer:
-nnoremap <Space>E :Vs <C-r>=expand('%:h').'/'<CR><C-d>
+nnoremap <Space>E :VSplitCreating <C-r>=expand('%:h').'/'<CR><C-d>
 
 " Prev/next by modified date:
 nnoremap <silent> <Leader>dp :call files#by_date#prev()<CR>

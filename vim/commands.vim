@@ -21,20 +21,20 @@ cab <expr> ww getcmdtype() == ':' ? "saveas <C-r>=expand('%:p:h')<CR>/" : 'ww'
 "
 
 " Pass multiple arguments to :e
-command! -nargs=* -complete=file Edit call files#edit_multiple(<f-args>)
-cab <expr> e getcmdtype() == ':' ? 'Edit' : 'e'
+command! -nargs=* -complete=file EditCreating call files#edit_creating(<f-args>)
+cab <expr> e getcmdtype() == ':' ? 'EditCreating' : 'e'
 
 " Pass multiple arguments to :sp
-command! -nargs=* -complete=file Sp call files#split_multiple(<f-args>)
-cab <expr> sp getcmdtype() == ':' ? 'Sp' : 'sp'
+command! -nargs=* -complete=file SplitCreating call files#split_creating(<f-args>)
+cab <expr> sp getcmdtype() == ':' ? 'SplitCreating' : 'sp'
 
 " Pass multiple arguments to :vs
-command! -nargs=* -complete=file Vs call files#vsplit_multiple(<f-args>)
-cab <expr> vs getcmdtype() == ':' ? 'Vs' : 'vs'
+command! -nargs=* -complete=file VSplitCreating call files#vsplit_creating(<f-args>)
+cab <expr> vs getcmdtype() == ':' ? 'VSplitCreating' : 'vs'
 
 " Force split
-command! -nargs=* -complete=file Fsp call files#force_split_multiple(<f-args>)
-cab <expr> fsp getcmdtype() == ':' ? 'Fsp' : 'fsp'
+command! -nargs=* -complete=file ForceSplitCreating call files#force_split_creating(<f-args>)
+cab <expr> fsp getcmdtype() == ':' ? 'ForceSplitCreating' : 'fsp'
 
 "
 "
