@@ -901,11 +901,7 @@ map <Leader>i <Plug>(operator-insert)
 " }}}
 Plug 'mwgkgk/vim-auto-mkdir'
 
-Plug 'vifm/vifm.vim' " {{{
-nnoremap <F2> :terminal ++close env TERM=screen-256color vifm<CR>
-nnoremap <Leader><F2> :terminal ++curwin ++close env TERM=screen-256color vifm<CR>
-nnoremap <Space><F2> :vert terminal ++close env TERM=screen-256color vifm<CR>
-" }}}
+Plug 'vifm/vifm.vim'
 
 Plug 'vim-utils/vim-man', { 'on' : 'Man' } " {{{
 cab <expr> man getcmdtype() == ':' ? 'Man' : 'man'
