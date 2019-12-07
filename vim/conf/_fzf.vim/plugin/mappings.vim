@@ -7,13 +7,13 @@
 nnoremap H :FzfHelptags<CR>
 
 " Man pages:
-nnoremap <Space>H :call fzf#run({
+nnoremap sH :call fzf#run({
             \   'source': 'apropos .',
             \   'sink': function('sinks#man_from_apropos')
             \ })<CR>
 
 " Saved --help outputs:
-nnoremap sH :FzfFilesWithPreview ~/help/<CR>
+nnoremap sgH :FzfFilesWithPreview ~/help/<CR>
 
 "
 "
