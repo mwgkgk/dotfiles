@@ -901,6 +901,7 @@ map <Leader>i <Plug>(operator-insert)
 " }}}
 Plug 'mwgkgk/vim-auto-mkdir'
 
+Plug '~/.vim/conf/_vifm.vim'
 Plug 'vifm/vifm.vim'
 
 Plug 'vim-utils/vim-man', { 'on' : 'Man' } " {{{
