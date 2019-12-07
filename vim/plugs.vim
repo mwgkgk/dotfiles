@@ -977,12 +977,9 @@ cab <expr> man getcmdtype() == ':' ? 'Man' : 'man'
 Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
-Plug 'rhysd/reply.vim' " {{{
-autocmd FileType elixir,ocaml nnoremap <silent> <buffer> X :ReplSend<cr>
-autocmd FileType elixir,ocaml vnoremap <silent> <buffer> X :ReplSend<cr>
 
-autocmd FileType elixir,ocaml nnoremap <LocalLeader>rr :Repl<cr>
-" }}}
+Plug '~/.vim/conf/_reply.vim'
+Plug 'rhysd/reply.vim'
 
 " Go
 " Plug 'fatih/vim-go', { 'for' : 'go' }
