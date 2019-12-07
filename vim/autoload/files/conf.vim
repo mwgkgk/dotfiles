@@ -4,7 +4,7 @@ function! files#conf#new(pkg_name)
 
     if !empty(l:in)
         call files#api#ensure_directories_exist(l:in)
-    endif
 
-    execute 'split' . l:in
+        execute 'split' . l:in
+    endif
 endfunction
