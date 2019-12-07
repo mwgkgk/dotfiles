@@ -60,7 +60,7 @@ super + Return
 super + Delete
 	humvee
 
-super + End
+super + m
 	motor
 
 super + apostrophe
