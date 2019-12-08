@@ -4,7 +4,7 @@ all:
 README_TARGET:=README.mkd
 
 # This is getting out of control
-TREE_CMD:=tree -atrhn --du --filelimit 30\
+TREE_CMD:=tree -atrhn --du --filelimit 40\
 	-I '.git|Makefile|README.mkd|tags|plugs|sessions|swap|undo|view|.netrwhist'
 
 readme:
