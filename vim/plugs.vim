@@ -972,8 +972,8 @@ Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
-Plug '~/.vim/conf/_reply.vim/'
-Plug 'rhysd/reply.vim'
+Plug '~/.vim/conf/_reply.vim/', { 'for' : ['sh', 'ocaml', 'elixir'] }
+Plug 'rhysd/reply.vim', { 'for' : ['sh', 'ocaml', 'elixir'] }
 
 " Go
 " Plug 'fatih/vim-go', { 'for' : 'go' }
