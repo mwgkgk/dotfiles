@@ -1,14 +1,88 @@
 ```
 .
-├── [390K]  vim
-│   ├── [ 48K]  plugs.vim
-│   ├── [2.0K]  commands.vim
-│   ├── [3.6K]  settings.vim
-│   ├── [4.7K]  colors.vim
-│   ├── [ 58K]  conf
+├── [3.6K]  install
+├── [ 13K]  x11
+│   ├── [4.6K]  legacy
+│   │   ├── [ 486]  layouts.conf
+│   │   └── [ 125]  .Xmodmap
+│   ├── [2.7K]  .Xresources
+│   ├── [1.9K]  .xinitrc
+│   └── [ 305]  .Xdefaults
+├── [4.0K]  legacy
+├── [5.7K]  alsa
+│   └── [1.7K]  .asoundrc
+├── [4.1K]  readline
+│   └── [  61]  .inputrc
+├── [7.2K]  bash
+│   ├── [1.2K]  .bashrc
+│   ├── [ 170]  .bash_profile
+│   └── [1.8K]  .bash_aliases
+├── [7.5K]  repl
+│   ├── [ 590]  .clisprc.lisp
+│   ├── [ 588]  .eclrc
+│   ├── [ 592]  ccl-init.lisp
+│   ├── [ 590]  .sbclrc
+│   ├── [ 211]  profiles.clj
+│   ├── [ 859]  .iex.exs
+│   ├── [  48]  .lambda-term-inputrc
+│   └── [ 119]  .minrc
+├── [463K]  vim
+│   ├── [184K]  autoload
+│   │   ├── [1.6K]  ftdetect.vim
+│   │   ├── [7.0K]  files
+│   │   │   ├── [ 674]  conf.vim
+│   │   │   ├── [ 422]  api.vim
+│   │   │   ├── [ 845]  from_date.vim
+│   │   │   └── [1.1K]  by_date.vim
+│   │   ├── [4.1K]  operators
+│   │   │   └── [ 108]  vim.vim
+│   │   ├── [1.5K]  files.vim
+│   │   ├── [4.1K]  toggle
+│   │   │   └── [ 125]  tags.vim
+│   │   ├── [1006]  toggle.vim
+│   │   ├── [  94]  dotfiles.vim
+│   │   ├── [ 272]  helpers.vim
+│   │   ├── [ 566]  window.vim
+│   │   ├── [6.0K]  window
+│   │   │   └── [2.0K]  suckless.vim
+│   │   ├── [ 714]  shell.vim
+│   │   ├── [ 902]  date.vim
+│   │   ├── [  24]  .gitignore
+│   │   ├── [5.9K]  folding
+│   │   │   ├── [ 883]  clojure.vim
+│   │   │   └── [1023]  lisp.vim
+│   │   ├── [ 626]  folding.vim
+│   │   ├── [ 73K]  plug.vim
+│   │   └── [ 73K]  plug.vim.old
+│   ├── [ 47K]  plugs.vim
+│   ├── [116K]  conf
+│   │   ├── [ 17K]  _vim-man
+│   │   │   ├── [4.3K]  plugin
+│   │   │   │   ├── [ 205]  mappings.vim
+│   │   │   │   └── [  79]  settings.vim
+│   │   │   └── [8.8K]  autoload
+│   │   │       └── [4.8K]  _vim_man
+│   │   │           ├── [ 512]  ftdetect.vim
+│   │   │           └── [ 265]  sinks.vim
+│   │   ├── [8.3K]  _vifm.vim
+│   │   │   └── [4.3K]  plugin
+│   │   │       └── [ 305]  mappings.vim
+│   │   ├── [ 20K]  _reply.vim
+│   │   │   └── [ 16K]  ftplugin
+│   │   │       ├── [4.1K]  sh
+│   │   │       │   └── [ 140]  mappings.vim
+│   │   │       ├── [4.1K]  ocaml
+│   │   │       │   └── [ 140]  mappings.vim
+│   │   │       └── [4.1K]  elixir
+│   │   │           └── [ 140]  mappings.vim
+│   │   ├── [ 12K]  _vim-operator-user
+│   │   │   └── [8.1K]  ftplugin
+│   │   │       └── [4.1K]  vim
+│   │   │           ├── [  70]  mappings.vim
+│   │   │           └── [  68]  operators.vim
 │   │   ├── [ 13K]  _fzf.vim
-│   │   │   └── [8.6K]  plugin
-│   │   │       ├── [2.5K]  mappings.vim
+│   │   │   └── [8.8K]  plugin
+│   │   │       ├── [2.7K]  mappings.vim
 │   │   │       ├── [1.2K]  commands.vim
 │   │   │       └── [ 883]  settings.vim
 │   │   ├── [ 12K]  _vim-cljfmt
@@ -27,32 +101,26 @@
 │   │       └── [8.9K]  ftplugin
 │   │           └── [4.9K]  clojure
 │   │               └── [ 908]  mappings.vim
-│   ├── [ 14K]  oldconfigs.vim
 │   ├── [ 14K]  mappings.vim
-│   ├── [178K]  autoload
-│   │   ├── [1.6K]  ftdetect.vim
-│   │   ├── [  95]  sinks.vim
-│   │   ├── [4.1K]  toggle
-│   │   │   └── [ 125]  tags.vim
-│   │   ├── [1006]  toggle.vim
-│   │   ├── [  94]  dotfiles.vim
-│   │   ├── [6.0K]  files
-│   │   │   ├── [ 845]  from_date.vim
-│   │   │   └── [1.1K]  by_date.vim
-│   │   ├── [ 272]  helpers.vim
-│   │   ├── [ 772]  files.vim
-│   │   ├── [ 566]  window.vim
-│   │   ├── [6.0K]  window
-│   │   │   └── [2.0K]  suckless.vim
-│   │   ├── [ 714]  shell.vim
-│   │   ├── [ 902]  date.vim
-│   │   ├── [  24]  .gitignore
-│   │   ├── [5.9K]  folding
-│   │   │   ├── [ 883]  clojure.vim
-│   │   │   └── [1023]  lisp.vim
-│   │   ├── [ 626]  folding.vim
-│   │   ├── [ 73K]  plug.vim
-│   │   └── [ 73K]  plug.vim.old
+│   ├── [ 14K]  oldconfigs.vim
+│   ├── [4.7K]  colors.vim
+│   ├── [ 29K]  ftplugin
+│   │   ├── [4.3K]  sh
+│   │   │   └── [ 338]  mappings.vim
+│   │   ├── [4.2K]  clojure
+│   │   │   ├── [  86]  mappings.vim
+│   │   │   └── [ 103]  folding.vim
+│   │   ├── [4.0K]  vader
+│   │   │   └── [  38]  mappings.vim
+│   │   ├── [4.3K]  vim
+│   │   │   └── [ 312]  mappings.vim
+│   │   ├── [4.3K]  lisp
+│   │   │   ├── [ 165]  mappings.vim
+│   │   │   └── [ 100]  folding.vim
+│   │   └── [4.1K]  markdown
+│   │       └── [ 137]  mappings.vim
+│   ├── [2.1K]  commands.vim
+│   ├── [3.6K]  settings.vim
 │   ├── [ 211]  vimrc
 │   ├── [4.3K]  ftdetect
 │   │   ├── [  47]  idris.vim
@@ -64,24 +132,49 @@
 │   ├── [4.5K]  plugin
 │   │   ├── [ 115]  change_paste.vim
 │   │   └── [ 379]  golf.vim
-│   ├── [ 25K]  ftplugin
-│   │   ├── [4.2K]  clojure
-│   │   │   ├── [  77]  mappings.vim
-│   │   │   └── [ 103]  folding.vim
-│   │   ├── [4.0K]  vader
-│   │   │   └── [  38]  mappings.vim
-│   │   ├── [4.3K]  vim
-│   │   │   └── [ 312]  mappings.vim
-│   │   ├── [4.3K]  lisp
-│   │   │   ├── [ 165]  mappings.vim
-│   │   │   └── [ 100]  folding.vim
-│   │   └── [4.1K]  markdown
-│   │       └── [ 137]  mappings.vim
-│   ├── [4.0K]  skeletons [38 entries exceeds filelimit, not opening dir]
+│   ├── [9.7K]  skeletons
+│   │   ├── [  95]  sbcl-script.lisp
+│   │   ├── [  53]  temple.lisp
+│   │   ├── [  74]  temple.clj
+│   │   ├── [  79]  clojure.clj
+│   │   ├── [  53]  Makefile.make
+│   │   ├── [  28]  alias.fish
+│   │   ├── [ 150]  nim.gotask.yml
+│   │   ├── [ 315]  cargo.gotask.yml
+│   │   ├── [  43]  dash.sh
+│   │   ├── [ 119]  default.gotask.yml
+│   │   ├── [ 147]  python.py
+│   │   ├── [ 207]  react.gotask.yml
+│   │   ├── [  21]  ion.ion
+│   │   ├── [ 132]  racket.rkt
+│   │   ├── [  83]  repl.gotask.yml
+│   │   ├── [  63]  perl.pl
+│   │   ├── [  74]  perl5.10.pl
+│   │   ├── [  73]  picolisp.l
+│   │   ├── [ 266]  dlang.d
+│   │   ├── [  83]  chicken.scm
+│   │   ├── [ 205]  kb.mkd
+│   │   ├── [ 439]  spec.min
+│   │   ├── [  55]  hurdle.mkd
+│   │   ├── [ 100]  guile.scm
+│   │   ├── [ 159]  lux.lux
+│   │   ├── [ 100]  tcl.tcl
+│   │   ├── [ 145]  idris.ipkg
+│   │   ├── [ 739]  getopt.guile.scm
+│   │   ├── [ 275]  f.gotask.yml
+│   │   ├── [  23]  urn.lisp
+│   │   ├── [ 164]  f.bash.sh
+│   │   ├── [ 140]  turtle.hs
+│   │   ├── [  54]  plain.hs
+│   │   ├── [   9]  mkd.mkd
+│   │   ├── [  50]  idris.idr
+│   │   ├── [ 834]  elm.elm
+│   │   ├── [ 174]  bash.sh
+│   │   └── [  59]  hylang.hy
 │   ├── [4.0K]  usnippets [81 entries exceeds filelimit, not opening dir]
 │   ├── [4.0K]  colors [97 entries exceeds filelimit, not opening dir]
-│   ├── [ 18K]  after
-│   │   ├── [5.4K]  ftplugin
+│   ├── [ 17K]  after
+│   │   ├── [5.0K]  ftplugin
 │   │   │   ├── [  28]  make.vim
 │   │   │   ├── [  28]  yaml.vim
 │   │   │   ├── [  30]  ocaml.vim
@@ -92,7 +185,6 @@
 │   │   │   ├── [  28]  sxhkd.vim
 │   │   │   ├── [  28]  vim.vim
 │   │   │   ├── [  91]  lisp.vim
-│   │   │   ├── [ 451]  sh.vim
 │   │   │   ├── [  26]  fish.vim
 │   │   │   ├── [  64]  c.vim
 │   │   │   ├── [  69]  clojure.vim
@@ -106,61 +198,41 @@
 │   │       ├── [ 275]  scheme.vim
 │   │       └── [4.1K]  min.vim
 │   └── [  50]  settings.json
+├── [4.9K]  cmus
+│   ├── [ 262]  rc
+│   └── [ 674]  gruvbox-light.theme
 ├── [  14]  .gitignore
-├── [ 18K]  user
-│   ├── [  61]  .inputrc
-│   ├── [4.6K]  legacy
-│   │   ├── [ 486]  layouts.conf
-│   │   └── [ 125]  .Xmodmap
-│   ├── [1.9K]  .xinitrc
-│   ├── [2.7K]  .Xresources
-│   ├── [1.2K]  .bashrc
-│   ├── [1.7K]  .asoundrc
-│   ├── [ 170]  .bash_profile
-│   ├── [1.8K]  .bash_aliases
-│   └── [ 305]  .Xdefaults
 ├── [ 13K]  kmonad
-│   └── [9.5K]  config.kbd
-├── [7.5K]  repl
-│   ├── [ 590]  .clisprc.lisp
-│   ├── [ 588]  .eclrc
-│   ├── [ 592]  ccl-init.lisp
-│   ├── [ 590]  .sbclrc
-│   ├── [ 211]  profiles.clj
-│   ├── [ 859]  .iex.exs
-│   ├── [  48]  .lambda-term-inputrc
-│   └── [ 119]  .minrc
+│   └── [8.7K]  config.kbd
 ├── [4.2K]  xpdf
 │   └── [ 198]  .xpdfrc
-├── [5.2K]  sxhkd
-│   └── [1.2K]  sxhkdrc
+├── [5.0K]  sxhkd
+│   └── [1.0K]  sxhkdrc
 ├── [4.3K]  rofi
 │   └── [ 333]  config
 ├── [ 12K]  conky
 │   ├── [1.9K]  conky-birds.conf
 │   ├── [2.7K]  conky.conf
 │   └── [3.0K]  conky-dual.conf
-├── [4.3K]  cmus
-│   └── [ 262]  rc
 ├── [ 43K]  vifm
-│   ├── [ 11K]  vifmrc
-│   └── [ 28K]  colors
-│       ├── [3.2K]  Hell.vifm
-│       ├── [3.2K]  Day.vifm
-│       ├── [1.5K]  snowwhite.vifm
-│       ├── [3.2K]  GreenDay.vifm
-│       ├── [3.2K]  Black.vifm
-│       ├── [2.0K]  sunday256.vifm
-│       ├── [1.2K]  matrix.vifm
-│       ├── [3.2K]  Foggy.vifm
-│       └── [3.2K]  Default.vifm
+│   ├── [ 28K]  colors
+│   │   ├── [3.2K]  Hell.vifm
+│   │   ├── [3.2K]  Day.vifm
+│   │   ├── [1.5K]  snowwhite.vifm
+│   │   ├── [3.2K]  GreenDay.vifm
+│   │   ├── [3.2K]  Black.vifm
+│   │   ├── [2.0K]  sunday256.vifm
+│   │   ├── [1.2K]  matrix.vifm
+│   │   ├── [3.2K]  Foggy.vifm
+│   │   └── [3.2K]  Default.vifm
+│   └── [ 11K]  vifmrc
 ├── [8.8K]  tmux
 │   └── [4.8K]  .tmux.conf
 ├── [4.7K]  git
 │   └── [ 751]  .gitconfig
 ├── [ 51K]  fish
 │   ├── [ 191]  fishfile
-│   ├── [4.0K]  aliases [57 entries exceeds filelimit, not opening dir]
+│   ├── [4.0K]  aliases [59 entries exceeds filelimit, not opening dir]
 │   ├── [ 547]  config.fish
 │   ├── [ 17K]  config
 │   │   ├── [ 11K]  fish_user_key_bindings.fish
@@ -179,7 +251,6 @@
 │   └── [  38]  .rustfmt.toml
 ├── [ 13K]  alacritty
 │   └── [9.2K]  alacritty.yml
-├── [1.2K]  install.sh
 ├── [6.0K]  zsh
 │   └── [2.0K]  .zshrc
 └── [ 50K]  firefox
@@ -198,7 +269,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 651K used in 59 directories, 138 files
+ 743K used in 79 directories, 189 files
 ```
 
-> Generated on Friday, December  6, 2019 at 09:17:00 AM UTC.
+> Generated on Sunday, December  8, 2019 at 09:09:25 AM UTC.
