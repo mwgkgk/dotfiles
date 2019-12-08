@@ -58,7 +58,7 @@ nnoremap <M-S-v> :FzfFilesWithPreview ~/.vim/plugs/<CR>
 nnoremap svp :FzfFilesWithPreview ~/.vim/plugs/<CR>
 
 " Specific .vim/ dirs:
-nnoremap svc :FzfFilesWithPreview ~/.vim/conf/<CR>
+nnoremap svs :FzfFilesWithPreview ~/.vim/conf/<CR>
 nnoremap sva :FzfFilesWithPreview ~/.vim/autoload/<CR>
 nnoremap svfp :FzfFilesWithPreview ~/.vim/ftplugin/<CR>
 nnoremap svfa :FzfFilesWithPreview ~/.vim/after/ftplugin/<CR>
