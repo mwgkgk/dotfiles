@@ -813,10 +813,6 @@ nnoremap <Leader>hr :GReset<CR>:e!<CR>za
 " Find text added by commit:
 " :Glog --Sfindme --
 " :Glog --Sfindme -- %
-
-" These don't require fugitive:
-command! Mes :!git mes
-command! Back :!git rollback
 " }}}
 Plug 'tpope/vim-scriptease'
 
