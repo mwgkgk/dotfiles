@@ -1,0 +1,126 @@
+#!/bin/bash
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+DOTFILES="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+
+relevant=0
+relinked=0
+notfound=0
+skipped=0
+planted=0
+
+# Here, `pfad` is a helper script for shortening paths.
+
+verbose_link() {
+    if ! test -e "$1"; then
+        echo "$(tput setaf 202)Source not found:$(tput sgr0) $(pfad "$1")"
+
+        read -r -p "Continue? (default=yes): " do_continue
+        test -z "$do_continue" && do_continue="yes"
+
+        if test "$do_continue" != "yes"; then
+            exit 1
+        else
+            notfound=$((notfound + 1))
+        fi
+    elif test -h "$2"; then
+        if test "$2" -ef "$1"; then
+            relevant=$((relevant + 1))
+        else
+            echo "$(tput setaf 202)Relink$(tput sgr0)" \
+                "$(readlink -f "$2" | pfad)" \
+                "$(tput setaf 76)>$(tput sgr0) $(pfad "$1")" >&2
+            unlink "$2"
+            ln -s "$1" "$2" && relinked=$((relinked + 1))
+        fi
+    elif test -f "$2" || test -d "$2"; then
+        echo "$(tput setaf 202)Exists$(tput sgr0) $(pfad "$2")" >&2
+        skipped=$((skipped + 1))
+    elif ! test -e "$2"; then
+        ln -s "$1" "$2" \
+            && echo "$(tput setaf 76)Plant $(tput sgr0) $(pfad "$2")" \
+            && planted=$((planted + 1))
+    fi
+}
+
+# Kmonad
+verbose_link "$DOTFILES/kmonad/" ~/.config/kmonad
+
+# Readline
+verbose_link "$DOTFILES/readline/.inputrc" ~/.inputrc
+
+# Bash
+verbose_link "$DOTFILES/bash/.bashrc" ~/.bashrc
+verbose_link "$DOTFILES/bash/.bash_profile" ~/.bash_profile
+verbose_link "$DOTFILES/bash/.bash_aliases" ~/.bash_aliases
+
+# Zsh
+verbose_link "$DOTFILES/zsh/.zshrc" ~/.zshrc
+
+# Fish
+verbose_link "$DOTFILES/fish/config.fish" ~/.config/fish/config.fish
+verbose_link "$DOTFILES/fish/fishfile" ~/.config/fish/fishfile
+
+# Tmux
+verbose_link "$DOTFILES/tmux/.tmux.conf" ~/.tmux.conf
+
+# Vim
+verbose_link "$DOTFILES/vim/" ~/.vim
+
+# Vifm
+verbose_link "$DOTFILES/vifm/vifmrc" ~/.vifm/vifmrc
+verbose_link "$DOTFILES/vifm/colors/" ~/.vifm/colors
+
+# Git
+verbose_link "$DOTFILES/git/.gitconfig" ~/.gitconfig
+
+# Ctags
+verbose_link "$DOTFILES/ctags/.ctags" ~/.ctags
+
+# Autoformat
+verbose_link "$DOTFILES/fmt/.rustfmt.toml" ~/.rustfmt.toml
+
+# Repl
+verbose_link "$DOTFILES/repl/.sbclrc" ~/.sbclrc
+verbose_link "$DOTFILES/repl/ccl-init.lisp" ~/ccl-init.lisp
+verbose_link "$DOTFILES/repl/.clisprc.lisp" ~/.clisprc.lisp
+verbose_link "$DOTFILES/repl/.eclrc" ~/.eclrc
+verbose_link "$DOTFILES/repl/profiles.clj" ~/.lein/profiles.clj
+verbose_link "$DOTFILES/repl/.iex.exs" ~/.iex.exs
+verbose_link "$DOTFILES/repl/.lambda-term-inputrc" ~/.lambda-term-inputrc
+verbose_link "$DOTFILES/repl/.minrc" ~/.minrc
+
+# Cmus
+verbose_link "$DOTFILES/cmus/rc" ~/.config/cmus/rc
+verbose_link "$DOTFILES/cmus/gruvbox-light.theme" ~/.config/cmus/gruvbox-light.theme
+
+# X11
+verbose_link "$DOTFILES/x11/.xinitrc" ~/.xinitrc
+verbose_link "$DOTFILES/x11/.Xdefaults" ~/.Xdefaults
+verbose_link "$DOTFILES/x11/.Xresources" ~/.Xresources
+
+# Sxhkd
+verbose_link "$DOTFILES/sxhkd/sxhkdrc" ~/.config/sxhkd/sxhkdrc
+
+# Rofi
+verbose_link "$DOTFILES/rofi/config" ~/.config/rofi/config
+
+# Conky
+verbose_link "$DOTFILES/conky/conky-birds.conf" ~/.config/conky/conky-birds.conf
+verbose_link "$DOTFILES/conky/conky.conf" ~/.config/conky/conky.conf
+
+# Alacritty
+verbose_link "$DOTFILES/alacritty/alacritty.yml" ~/.config/alacritty/alacritty.yml
+
+# Xpdf
+verbose_link "$DOTFILES/xpdf/.xpdfrc" ~/.xpdfrc
+
+
+test $relevant -gt 0 && echo "Relevant:  $relevant"
+test $relinked -gt 0 && echo "Relinked:  $relinked"
+test $notfound -gt 0 && echo "Notfound:  $notfound"
+test $skipped  -gt 0 && echo "Skipped:   $skipped"
+test $planted  -gt 0 && echo "Planted:   $planted"
