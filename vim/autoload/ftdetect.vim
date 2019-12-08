@@ -16,7 +16,7 @@ function! ftdetect#set_help_status()
 
         " The <buffer> autocmd is assigned to the buffer number, which will
         " change as soon as we navigate to a tag, or another :help is invoked.
-        autocmd settings BufEnter <buffer> setl nolist nonumber
+        autocmd settings BufEnter,BufLeave <buffer> setl nolist nonumber
         " See register_for_one_execution_at() for an example of self-cleaning
         " autocmd. The overhead does not seem practical in this case: every
         " invocation has to have a unique augroup.
