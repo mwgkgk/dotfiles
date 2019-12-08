@@ -6,13 +6,6 @@
 
 nnoremap H :FzfHelptags<CR>
 
-" Man pages:
-nnoremap sH :call fzf#run({
-            \   'source': 'apropos .',
-            \   'sink': function('sinks#man_from_apropos'),
-            \   'down': '~15%'
-            \ })<CR>
-
 " Saved --help outputs:
 nnoremap sgH :FzfFilesWithPreview ~/help/<CR>
 

@@ -902,6 +902,7 @@ Plug 'mwgkgk/vim-auto-mkdir'
 Plug '~/.vim/conf/_vifm.vim'
 Plug 'vifm/vifm.vim'
 
+Plug '~/.vim/conf/_vim-man/'
 Plug 'vim-utils/vim-man', { 'on' : 'Man' }
 
 " Plug 'autozimu/LanguageClient-neovim', {
