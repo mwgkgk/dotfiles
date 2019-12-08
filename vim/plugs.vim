@@ -1117,34 +1117,9 @@ autocmd plugs FileType clojure,scheme,lisp,hy,lfe,racket,lux,picolisp,jiv,min,nl
 " TODO: This doesn't work
 " autocmd plugs FileType mkd umap =-
 " }}}
-Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' } " {{{
-" autocmd plugs FileType lisp <silent> <buffer> <LocalLeader>gi :call vlime#plugin#InteractionMode()<CR>
-" TODO <LocalLeader><LocalLeader> for <LocalLeader>st
-" let g:vlime_enable_autodoc = v:true
-let g:vlime_cl_impl = "ccl"
-let g:vlime_window_settings = {
-        \ 'repl': {
-            \ 'size': 17,
-        \ },
-        \ 'sldb': {
-            \ 'pos' : 'aboveleft',
-            \ 'size': 20,
-        \ },
-    \ }
-augroup lisp.plugs.vimrc
-    autocmd!
 
-    " Eval / Send-to-repl
-    autocmd FileType lisp nnoremap <silent> <buffer> X :call vlime#plugin#SendToREPL(vlime#ui#CurExprOrAtom())<cr>
-    autocmd FileType lisp nnoremap <silent> <buffer> <Leader>x :call vlime#plugin#SendToREPL(vlime#ui#CurTopExpr())<cr>
-    autocmd FileType lisp nnoremap <silent> <buffer> <LocalLeader>x :call vlime#plugin#SendToREPL(vlime#ui#CurAtom())<cr>
-
-    autocmd FileType lisp nnoremap <silent> <buffer> <C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui#CurAtom())<cr>
-
-    " TODO Rebind OpenFrameSource from S to <C-]>
-    " autocmd FileType vlime_sldb nnoremap <silent> <buffer> <C-]> :call vlime#ui#sldb#OpenFrameSource()<cr> 
-augroup END
-" }}}
+Plug '~/.vim/conf/_vlime/', { 'for' : 'lisp' }
+Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' }
 
 " Clojure
 Plug '~/.vim/conf/_vim-fireplace', { 'for' : 'clojure' }
