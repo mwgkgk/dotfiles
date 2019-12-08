@@ -906,9 +906,7 @@ Plug 'mwgkgk/vim-auto-mkdir'
 Plug '~/.vim/conf/_vifm.vim'
 Plug 'vifm/vifm.vim'
 
-Plug 'vim-utils/vim-man', { 'on' : 'Man' } " {{{
-cab <expr> man getcmdtype() == ':' ? 'Man' : 'man'
-" }}}
+Plug 'vim-utils/vim-man', { 'on' : 'Man' }
 
 " Plug 'autozimu/LanguageClient-neovim', {
 "     \ 'branch': 'next',
