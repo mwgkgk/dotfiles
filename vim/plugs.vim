@@ -595,7 +595,7 @@ nmap <Leader>#  <Plug>(operator-#)
 nmap <Leader>g# <Plug>(operator-g#)
 " }}}
 
-Plug '~/.vim/conf/_open-browser.vim'
+Plug '~/.vim/conf/_open-browser.vim/'
 Plug 'tyru/open-browser.vim'
 
 Plug 'tyru/open-browser-github.vim' " {{{
@@ -646,7 +646,7 @@ autocmd plugs VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';', 
 " }}}
 Plug 'junegunn/vader.vim'
 
-Plug '~/.vim/conf/_fzf.vim'
+Plug '~/.vim/conf/_fzf.vim/'
 Plug 'junegunn/fzf.vim'
 
 Plug 'junegunn/vim-peekaboo' " {{{
@@ -899,7 +899,7 @@ map <Leader>i <Plug>(operator-insert)
 " }}}
 Plug 'mwgkgk/vim-auto-mkdir'
 
-Plug '~/.vim/conf/_vifm.vim'
+Plug '~/.vim/conf/_vifm.vim/'
 Plug 'vifm/vifm.vim'
 
 Plug '~/.vim/conf/_vim-man/'
@@ -972,7 +972,7 @@ Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
-Plug '~/.vim/conf/_reply.vim'
+Plug '~/.vim/conf/_reply.vim/'
 Plug 'rhysd/reply.vim'
 
 " Go
@@ -1122,10 +1122,10 @@ Plug '~/.vim/conf/_vlime/', { 'for' : 'lisp' }
 Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' }
 
 " Clojure
-Plug '~/.vim/conf/_vim-fireplace', { 'for' : 'clojure' }
+Plug '~/.vim/conf/_vim-fireplace/', { 'for' : 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
 
-Plug '~/.vim/conf/_vim-cljfmt', { 'for' : 'clojure' }
+Plug '~/.vim/conf/_vim-cljfmt/', { 'for' : 'clojure' }
 Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
 
 " Racket
