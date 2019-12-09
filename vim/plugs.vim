@@ -1224,10 +1224,9 @@ Plug 'ianks/vim-tsx', { 'for' : 'typescript.tsx' }
 Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
 
 " Elixir
-Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' } " {{{
-let g:alchemist_mappings_disable = 1
-nnoremap <buffer> <silent> <C-g> :call alchemist#exdoc()<CR>
-" }}}
+Plug '~/.vim/conf/_alchemist.vim/', { 'for' : 'elixir' }
+Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' }
+
 Plug 'mwgkgk/vim-textobj-elixir', { 'for' : 'elixir' }
 
 " Haskell
