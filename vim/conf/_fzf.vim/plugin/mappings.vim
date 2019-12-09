@@ -6,9 +6,6 @@
 
 nnoremap H :FzfHelptags<CR>
 
-" Saved --help outputs:
-nnoremap sgH :FzfFilesWithPreview ~/help/<CR>
-
 "
 "
 " Files
@@ -32,33 +29,6 @@ nnoremap s. :FzfArgs<CR>
 
 "
 "
-" Vim files
-"
-
-" Everything from .vim/ directory except .gitignored files:
-nnoremap <M-v> :FzfFilesWithPreview ~/.vim/<CR>
-nnoremap svv :FzfFilesWithPreview ~/.vim/<CR>
-
-" Installed plugs:
-nnoremap <M-S-v> :FzfFilesWithPreview ~/.vim/plugs/<CR>
-nnoremap svp :FzfFilesWithPreview ~/.vim/plugs/<CR>
-
-" Specific .vim/ dirs:
-nnoremap svs :FzfFilesWithPreview ~/.vim/conf/<CR>
-nnoremap sva :FzfFilesWithPreview ~/.vim/autoload/<CR>
-nnoremap svfp :FzfFilesWithPreview ~/.vim/ftplugin/<CR>
-nnoremap svfa :FzfFilesWithPreview ~/.vim/after/ftplugin/<CR>
-nnoremap svfd :FzfFilesWithPreview ~/.vim/ftdetect/<CR>
-nnoremap svu :FzfFilesWithPreview ~/.vim/usnippets/<CR>
-
-" Edit a skeleton:
-nnoremap sK :FzfFilesWithPreview ~/.vim/skeletons/<CR>
-
-" Marvim saved macros:
-nnoremap s" :FzfFilesWithPreview ~/.marvim/<CR>
-
-"
-"
 " Buffers
 "
 
@@ -66,7 +36,7 @@ nnoremap s" :FzfFilesWithPreview ~/.marvim/<CR>
 nnoremap s<Space> :FzfBuffers<CR>
 
 " Set filetype:
-nnoremap st :FzfFiletypes<CR>
+nnoremap sT :FzfFiletypes<CR>
 
 "
 "

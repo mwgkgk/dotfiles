@@ -215,14 +215,6 @@ endif
 
 "
 "
-" Dotfiles
-"
-
-let g:dotfiles = {}
-let g:dotfiles.vim = '~/dot/vim/'
-
-"
-"
 " GUI
 "
 
