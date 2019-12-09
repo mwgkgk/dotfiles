@@ -1,3 +1,3 @@
 function dotf
-  cd ~/code/dotfiles/
+  cd ~/dot/
 end

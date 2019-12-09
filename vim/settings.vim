@@ -219,7 +219,7 @@ endif
 "
 
 let g:dotfiles = {}
-let g:dotfiles.vim = '~/code/dotfiles/vim/'
+let g:dotfiles.vim = '~/dot/vim/'
 
 "
 "

@@ -327,7 +327,7 @@ end
 function bind_ed
     set -l cmdline (commandline)
     if test -z "$cmdline"
-        fd --type file --hidden --follow --exclude .git "" ~/code/dotfiles/ | fzf +m --height 15 --reverse | read -l result
+        fd --type file --hidden --follow --exclude .git "" ~/dot/ | fzf +m --height 15 --reverse | read -l result
         and commandline -- "v $result" ;and commandline -f execute
         commandline -f repaint
   else

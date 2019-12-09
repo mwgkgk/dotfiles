@@ -19,7 +19,7 @@ super + F9
 	girl upd
 
 super + F12
-	girl Vim ~/code/dotfiles/sxhkd/sxhkdrc
+	girl Vim ~/dot/sxhkd/sxhkdrc
 
 super + f
 	smuggler

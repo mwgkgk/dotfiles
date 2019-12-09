@@ -1,7 +1,7 @@
-~/code/dotfiles/fish/aliases
-~/code/dotfiles/fish/completions
-~/code/dotfiles/fish/config
-~/code/dotfiles/fish/tools
+~/dot/fish/aliases
+~/dot/fish/completions
+~/dot/fish/config
+~/dot/fish/tools
 jorgebucaran/fnm
 jethrokuan/z
 jethrokuan/fzf
