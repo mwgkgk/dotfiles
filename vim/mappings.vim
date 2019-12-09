@@ -375,7 +375,7 @@ vnoremap <Leader>gg :GolfChars<CR>
 "
 
 " Edit previous command:
-nnoremap <Leader>: :<C-p>
+nnoremap <Space>: :<C-p>
 
 " Execute command with the shell:
 nnoremap !! :!
