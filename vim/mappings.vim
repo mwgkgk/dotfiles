@@ -251,14 +251,6 @@ nnoremap <Down> 3<C-e>
 
 "
 "
-" Help
-"
-
-" Help on word under cursor:
-nnoremap g<C-]> :help <C-r><C-w><CR>
-
-"
-"
 " Navigation
 "
 
