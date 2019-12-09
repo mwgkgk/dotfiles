@@ -148,4 +148,7 @@ nnoremap sM :FzfMaps<CR>
 nnoremap s<Tab> :FzfSnippets<CR>
 
 " Replace with skeleton:
-nnoremap sk :call fzf#run({'dir':'~/.vim/skeletons', 'sink':'%!cat', 'down': '~15%'})<CR>
+nnoremap sk :call fzf#run(fzf#wrap({
+    \   'dir':'~/.vim/skeletons', 
+    \   'sink':'%!cat'
+    \ }))<CR>
