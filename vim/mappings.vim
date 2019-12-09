@@ -280,12 +280,6 @@ nnoremap g<M-o> :tags<CR>
 " C-t instead of C-i
 nnoremap <silent> <C-t> <C-i>
 
-" Jump to random line:
-nnoremap <Space><C-g> :RandomLine<CR>
-
-" Jump to random column:
-nnoremap <C-g> :RandomCol<CR>
-
 "
 "
 " Search
