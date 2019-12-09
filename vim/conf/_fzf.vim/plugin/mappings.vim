@@ -126,11 +126,11 @@ nnoremap sf :FzfGFiles<CR>
 " Select from  untracked + unstaged files in current dir:
 nnoremap sF :FzfGitModified<CR>
 
-" Current buffer commits:
-nnoremap s[ :FzfBCommits<CR>
-
 " All commits:
-nnoremap s] :FzfCommits<CR>
+nnoremap sl :FzfCommits<CR>
+
+" Current buffer commits:
+nnoremap sL :FzfBCommits<CR>
 
 " Browse git hooks:
 nnoremap sgh :FzfFilesWithPreview ./.git/hooks/<CR>
