@@ -30,13 +30,6 @@ nnoremap s' :FzfHistory<CR>
 " Select from arglist (see ./commands.vim):
 nnoremap s. :FzfArgs<CR>
 
-
-" Files from /tmp:
-nnoremap sT :FzfFilesWithPreview /tmp/<CR>
-
-" Everything under $HOME:
-nnoremap s~ :FzfFilesWithPreview ~/<CR>
-
 "
 "
 " Vim files
