@@ -46,7 +46,7 @@ augroup END
 " let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
-" let s:static_colo = 'alduin'
+let s:static_colo = 'alduin'
 
 " let s:static_colo = 'apples'
 " let s:static_colo = 'github'
@@ -81,7 +81,7 @@ augroup END
 " let s:static_colo = 'ufo'
 
 " let s:static_colo = 'lucius-light'
-let s:static_colo = 'hybrid-light'
+" let s:static_colo = 'hybrid-light'
 
 " let s:static_colo = 'lucius-dark'
 " let s:static_colo = 'luciusmod'
