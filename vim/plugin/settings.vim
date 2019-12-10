@@ -1,22 +1,12 @@
 " This file contains settings for base Vim. Plugin settings can be found in
 " corresponding conf/<plugin>/plugin/settings.vim files.
 
-
 "
 "
 " UTF-8
 "
 
-set encoding=utf-8
 scriptencoding utf-8
-
-"
-"
-" Filetype & Syntax
-"
-
-filetype plugin indent on
-syntax on
 
 "
 "

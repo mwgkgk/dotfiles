@@ -1,13 +1,38 @@
 " Big Refactor still in progress.
 
-runtime settings.vim
-runtime commands.vim
-runtime mappings.vim
+"
+"
+" UTF-8
+"
+
+set encoding=utf-8
+
+"
+"
+" Filetype & Syntax
+"
+
+filetype plugin indent on
+syntax on
+
+"
+"
+" Leaders
+"
+
+let g:mapleader=';'
+let g:maplocalleader="'"
+
+"
+"
+" Plugs
+"
 
 runtime plugs.vim
 
-runtime colors.vim
+"
+"
+" Colors
+"
 
-if filereadable(glob('~/.local.vimrc')) 
-    source ~/.local.vimrc
-endif
+runtime colors.vim
