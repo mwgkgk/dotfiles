@@ -104,7 +104,7 @@ LAYER Burglar
 _    @a7  _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     K    @a1  end  J    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
-_      home down pgdn @a3  _    left down up   rght _    _    _                             _       _       _
+ret    home down pgdn @a3  _    left down up   rght _    _    _                             _       _       _
 _       _    _    _    M-8  @a2  _    _    _    _     _    _                  _             _       _       _          _
 _     _     LT-Driver         ret           _    _    _    _             _    _    _        _               _
 
