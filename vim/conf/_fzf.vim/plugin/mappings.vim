@@ -111,8 +111,11 @@ nnoremap sk :FzfHistory:<CR>
 " Editing
 "
 
-" Execute a fuzzy-selected map:
+" Execute a fuzzy-selected mapping:
 nnoremap sM :FzfMaps<CR>
+
+" Prepopulate with a fuzzy-selected command:
+nnoremap sN :FzfCommands<CR>
 
 " Insert a snippet:
 nnoremap s<Tab> :FzfSnippets<CR>
