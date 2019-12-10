@@ -11,7 +11,7 @@ function! date#seconds_to_utc(seconds)
     let l:offset = l:offset_hours * 3600 + l:offset_minutes * 60
     let l:offset = l:offset_direction ==# '+' ? l:offset : 0 - l:offset
 
-    return a:seconds + l:offset
+    return a:seconds - l:offset
 endfunction
 
 function! date#echo_date(...)
