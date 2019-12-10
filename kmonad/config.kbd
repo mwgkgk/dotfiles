@@ -86,9 +86,9 @@ LAYER Scroll
 _    @tnU _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     _    up   _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
-_      @a5  down tab  _    _    @a5  down up   tab  _    _    _                             _       _       _
+_      @a5  down tab  C-w  _    @a5  down up   tab  _    _    _                             _       _       _
 _       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 @lrS          _    _    _    _             _    _    _        _               _
+@lrS  _     _                 _             _    _    _    _             _    _    _        _               _
 
 
 LAYER Burglar
