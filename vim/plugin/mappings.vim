@@ -604,7 +604,7 @@ nnoremap <F9> :terminal make<CR>
 "
 
 " Replace current window with term:
-nnoremap <silent> <Leader><Space><Space> :term ++curwin<CR>
+nnoremap <silent> <Leader><Space>ge :term ++curwin<CR>
 
 " New tab:
 nnoremap <silent> <Leader><Space>c :tab term<CR>
