@@ -118,7 +118,7 @@ nnoremap sM :FzfMaps<CR>
 nnoremap s<Tab> :FzfSnippets<CR>
 
 " Replace with skeleton:
-nnoremap sk :call fzf#run(fzf#wrap({
+nnoremap <Leader>sk :call fzf#run(fzf#wrap({
     \   'dir':'~/.vim/skeletons', 
     \   'sink':'%!cat'
     \ }))<CR>
