@@ -104,7 +104,7 @@ nnoremap sgh :FzfFilesWithPreview ./.git/hooks/<CR>
 "
 
 " Prepop from command history:
-nnoremap s; :FzfHistory:<CR>
+nnoremap sk :FzfHistory:<CR>
 
 "
 "
