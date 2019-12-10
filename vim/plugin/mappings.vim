@@ -650,5 +650,5 @@ nnoremap <Leader>cdg :silent execute 'cd' system('git rev-parse --git-dir')<CR>:
 " Vimrc
 "
 
-" Reload .vimrc
-nnoremap <F6> :source ~/.vimrc<CR>
+" Reload vimrc:
+nnoremap <F6> :source ~/.vim/vimrc<CR>
