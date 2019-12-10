@@ -1,3 +1,3 @@
-nmap <buffer> _c  <Plug>(operator-conf-entry)
+nmap <buffer> <C-c>c  <Plug>(operator-conf-entry)
 
-nmap <buffer> __c _ci'
+nmap <buffer> <Leader><C-c>c <C-c>ci'
