@@ -407,6 +407,9 @@ nnoremap <silent> zd :pclose<CR>
 " Insert mode
 "
 
+" Disable <F1> insert-mode:
+inoremap <F1> <nop>
+
 " C-t for digraphs
 inoremap <C-t> <C-k>
 
