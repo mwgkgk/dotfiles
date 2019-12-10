@@ -65,7 +65,7 @@ nnoremap sm :FzfMarks<CR>
 "
 
 " Select from lines in current buffer & jump:
-nnoremap S :FzfBLines<CR>
+nnoremap sj :FzfBLines<CR>
 
 " Select from search history & search:
 nnoremap s/ :FzfHistory/<CR>
