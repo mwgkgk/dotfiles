@@ -76,7 +76,10 @@ nnoremap s/ :FzfHistory/<CR>
 "
 
 " Fuzzy ripgrep in cwd:
-noremap sa :Rg .<CR>
+noremap sas :Rg .<CR>
+
+" Fuzzy ripgrep in current file's dir:
+noremap sae :Rg <C-r>=expand('%:p:h')<CR><CR>
 
 "
 "
