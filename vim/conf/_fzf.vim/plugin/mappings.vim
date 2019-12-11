@@ -76,7 +76,7 @@ nnoremap s/ :FzfHistory/<CR>
 "
 
 " Fuzzy ripgrep in cwd:
-noremap sa :Rg<CR>
+noremap sa :Rg .<CR>
 
 "
 "
