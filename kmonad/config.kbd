@@ -123,6 +123,7 @@ _     _     _                 _             _    _    _    _             _    _ 
 @m2 = (( f12 u ))
 @m3 = (( esc spc w ))
 @m4 = (( esc spc w M-grave ))
+@m5 = (( esc spc w spc q ))
 
 LAYER Omega
 /*
@@ -132,12 +133,12 @@ LAYER Omega
     Positions for special symbols are in flux. Optimizing for ease of access
     over consistency.
 */
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+@m5  _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 @m1  _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 =     1    2    3    4    :    _    @m2  9    0    ^    @    _    _      _    _    _        _       _       _          _
 ~      (    /    bspc -    +    |    *    #    $    %    )    _                             _       _       _
 ret     5    6    7    8    :    &    __   !    \     _    _                  _             _       _       _          _
-@m3   @m4   esc               M-grave            _    _    _             _    _    _        _               _
+@m3   @m4   esc               _                  _    _    _             _    _    _        _               _
 
 
 
