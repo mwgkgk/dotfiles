@@ -181,7 +181,6 @@ set undofile
 
 set sessionoptions-=options
 set sessionoptions-=localoptions
-set sessionoptions-=globals
 set sessionoptions-=buffers
 
 " When sessionoptions is -= options, the help window status is not restored on
