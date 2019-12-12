@@ -290,6 +290,8 @@ nnoremap <Space>gp    :call yankwin#Paste({'edit_command': 'tab split'})<cr>
 nnoremap <Space>gP    :call yankwin#Paste({'edit_command': (tabpagenr() - 1).'tab split'})<cr>
 " }}}
 Plug 'AndrewRadev/exercism.vim'
+
+Plug '~/.vim/conf/_whitespaste.vim/'
 Plug 'AndrewRadev/whitespaste.vim'
 
 Plug 'sickill/vim-pasta'
