@@ -363,7 +363,7 @@ nmap \t :!xterm -fg chartreuse3 -bg black &<cr>
 " Opening vim to edit .vifmrc
 " nmap ;c :execute ':!v $MYVIFMRC' | restart<cr>
 " Change to resolve conflict with :screen
-nmap ;cfc :execute ':!v ~/.vifm/vifmrc' | restart<cr>
+nmap ;cff :execute ':!v ~/dot/vifm/vifmrc' | restart<cr>
 " Opening gvim to edit .vifmrc
 " nmap ;C :execute ':!v $MYVIFMRC' | restart<cr>
 nmap ;cfl :execute ':!v ~/.local.vifmrc' | restart<cr>
