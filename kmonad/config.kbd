@@ -119,11 +119,16 @@ _       _    _    _    _    _    _    _    _    _     _    _                  _ 
 _     _     _                 _             _    _    _    _             _    _    _        _               _
 
 
+// Exit insert-mode, save & close
 @m1 = (( esc spc W ))
+// Unique sequence for Omega-u to pass to Vim to jump-previous-ale-error
 @m2 = (( f12 u ))
+// Exit insert-mode, save
 @m3 = (( esc spc w ))
+// Exit insert-mode, save, punt window
 @m4 = (( esc spc w M-grave ))
-@m5 = (( esc spc w spc q ))
+// Exit insert-mode, save & close, close everything
+@m5 = (( esc spc W spc Q ))
 
 LAYER Omega
 /*
