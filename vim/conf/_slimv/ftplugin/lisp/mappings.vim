@@ -32,3 +32,20 @@ nnoremap <buffer> <C-g> :call SlimvDescribeSymbol()<CR>
 
 " Open hyperspec for atom under cursor:
 nnoremap <buffer> g<C-g> :call SlimvHyperspec()<CR>
+
+"
+"
+" Insert mode
+"
+
+" Utilize Slimv completion (is regular omni when not connected):
+inoremap <silent> <buffer> <C-h> <C-R>=SlimvHandleTab()<CR>
+
+"
+"
+" Indent
+"
+
+" Is slow, but works. Kinda seems like it belongs outside of slimv conf, but
+" we're relying specifically on swank when it's on, so this seems fair enough.
+nnoremap <buffer> <Space>f gg=G
