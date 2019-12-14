@@ -83,6 +83,7 @@ control + F12
 
 # Paste X selection
 
+# Kmonad: Burglar c
 super + 8
 	xpaste
 
@@ -93,6 +94,12 @@ control + ~c
 
 alt + ~c
 	browser-unbookmark
+
+# Thunderbird
+
+# Kmonad: Scroll x
+super + 6
+	thunderbird-open-link
 
 # dmenu
 

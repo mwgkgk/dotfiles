@@ -77,6 +77,10 @@ _      _    _    _    _    _    _    _    _    _    _    _    _                 
 _       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
 _     _     _                 @lrS          _    _    _    _             _    _    _        _               _
 
+// Thunderbird: previous folder
+@m6 = (( S-tab up tab ))
+// Thunderbird: next folder
+@m7 = (( S-tab down tab ))
 
 LAYER Scroll
 /*
@@ -85,9 +89,9 @@ LAYER Scroll
 */
 _    @tnU _    _    _    _    _    _    _    _    _    _    _            _    _    _
 C-w  _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     @a5  up   tab  _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
+_     @m6  up   @m7  _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
 _      @a5  down tab  _    _    @a5  down up   tab  _    _    _                             _       _       _
-@lrS    _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
+@lrS    _    M-6  n    _    _    _    _    _    _     _    _                  _             _       _       _          _
 _     _     _                 _             _    _    _    _             _    _    _        _               _
 
 
