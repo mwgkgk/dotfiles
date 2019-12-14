@@ -1151,6 +1151,8 @@ Plug 'AlessandroYorba/Arcadia'
 Plug 'mwgkgk/SerialExperimentsLain'
 Plug 'fcpg/vim-orbital'
 Plug 'junegunn/seoul256.vim'
+Plug 'fcpg/vim-fahrenheit'
+Plug 'fcpg/vim-farout'
 
 call plug#end()
 
