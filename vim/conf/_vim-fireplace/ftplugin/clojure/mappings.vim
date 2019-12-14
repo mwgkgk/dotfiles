@@ -16,7 +16,7 @@ map <silent> <buffer> <Leader>X ya(:-1put<CR><C-o><Plug>FireplaceCountFilter:Com
 " )
 
 " TODO tidy up into a function
-nnoremap <LocalLeader>cc :Connect localhost:<C-r>=readfile(".nrepl-port")<CR><BS><Space><C-r>=expand('%:p:h')<CR><CR>
+nnoremap <buffer> <LocalLeader>cc :Connect localhost:<C-r>=readfile(".nrepl-port")<CR><BS><Space><C-r>=expand('%:p:h')<CR><CR>
 
-map <C-]> <Plug>FireplaceDjump
-map <C-w><C-]> <Plug>FireplaceDsplit
+map <buffer> <C-]> <Plug>FireplaceDjump
+map <buffer> <C-w><C-]> <Plug>FireplaceDsplit
