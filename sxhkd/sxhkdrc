@@ -101,6 +101,10 @@ alt + ~c
 super + 6
 	thunderbird-open-link
 
+# Kmonad: Wraith e
+super + 7
+	thunderbird-next-unread-folder
+
 # dmenu
 
 super + minus
