@@ -758,6 +758,7 @@ inoremap <M-p> <Up>
 " Use actual <Del> which joins lines.
 inoremap <C-d> <Del>
 
+Plug '~/.vim/conf/_vim-fugitive/'
 Plug 'tpope/vim-fugitive' " {{{
 nnoremap <Leader>G :Gstatus<CR>
 nnoremap <Leader><LocalLeader> :Gstatus<CR>
