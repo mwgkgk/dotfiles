@@ -994,8 +994,12 @@ Plug '~/.vim/conf/_slimv/', { 'for' : 'lisp' }
 Plug 'kovisoft/slimv', { 'for' : 'lisp' }
 
 " Clojure
-Plug '~/.vim/conf/_vim-fireplace/', { 'for' : 'clojure' }
-Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
+if has('nvim')
+    Plug 'Olical/conjure', { 'tag': 'v2.1.2', 'do': 'bin/compile' }
+else
+    Plug '~/.vim/conf/_vim-fireplace/', { 'for' : 'clojure' }
+    Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
+endif
 
 Plug '~/.vim/conf/_vim-cljfmt/', { 'for' : 'clojure' }
 Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
