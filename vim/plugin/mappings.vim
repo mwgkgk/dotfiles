@@ -424,8 +424,9 @@ inoremap <C-M-k> <Esc>-Jgi
 " C-M-j to join down
 inoremap <C-M-j> <Esc>Jgi
 
-" C-j to slide down
-inoremap <C-j> <CR><Esc>kA
+" Add newlines before and after:
+inoremap <C-g><C-k> <Esc>O<Esc>2$a
+inoremap <C-g><C-j> <CR><Esc>kA
 
 " Move up/down to the end of the line
 inoremap <M-j> <Esc>jA
