@@ -97,7 +97,7 @@ alt + ~c
 
 # Thunderbird
 
-# Kmonad: Scroll x
+# Kmonad: Wraith x
 super + 6
 	thunderbird-open-link
 

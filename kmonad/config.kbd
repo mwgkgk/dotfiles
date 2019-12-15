@@ -18,8 +18,8 @@ _     _     _                 _             _    _    _    _             _    _ 
 @ltO = LT-Omega
 @ltF = LT-Funk
 
-@lrS = LR-Scroll
-@laS = LA-Scroll
+@lrW = LR-Wraith
+@laW = LA-Wraith
 
 @tnB = TN caps LT-Burglar
 
@@ -63,7 +63,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 _     _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
 _      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
 _       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 @laS          _    _    _    _             _    _    _        _               _
+_     _     _                 @laW          _    _    _    _             _    _    _        _               _
 
 
 LAYER Untoggle
@@ -75,14 +75,14 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 _     _    _    _    _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
 _      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
 _       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 @lrS          _    _    _    _             _    _    _        _               _
+_     _     _                 @lrW          _    _    _    _             _    _    _        _               _
 
 // Thunderbird: previous folder
 @m6 = (( S-tab up tab ))
 // Thunderbird: next folder
 @m7 = (( S-tab down tab ))
 
-LAYER Scroll
+LAYER Wraith
 /*
     Hands-off scroll mode for traversing Thunderbird RSS reader. Implemented as
     a persistent layer with LA / LR rather than toggle, to reduce strain.
@@ -91,7 +91,7 @@ _    @tnU _    _    _    _    _    _    _    _    _    _    _            _    _ 
 C-w  _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     @m6  up   @m7  _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
 _      @a5  down tab  _    _    @a5  down up   tab  _    _    _                             _       _       _
-@lrS    _    M-6  n    _    _    _    _    _    _     _    _                  _             _       _       _          _
+@lrW    _    M-6  n    _    _    _    _    _    _     _    _                  _             _       _       _          _
 _     _     _                 _             _    _    _    _             _    _    _        _               _
 
 
