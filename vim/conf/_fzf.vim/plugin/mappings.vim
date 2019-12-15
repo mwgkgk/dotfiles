@@ -20,6 +20,9 @@ nnoremap sw :FzfFilesWithPreview ../<CR>
 " Files in current buffer's dir:
 nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
 
+" Files in current buffer's parent dir:
+nnoremap sr :FzfFilesWithPreview <C-R>=expand('%:p:h:h')<CR><CR>
+
 
 " Select from recently opened files:
 nnoremap s' :FzfHistory<CR>
