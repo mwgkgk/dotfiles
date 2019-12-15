@@ -39,7 +39,7 @@ let g:ctrlp_session_dir = '.vim/sessions'
 nnoremap <C-w>s :MkS<CR>
 " }}}
 Plug 'mattn/ctrlp-register' " {{{
-nnoremap sr :CtrlPRegister<CR>
+nnoremap s" :CtrlPRegister<CR>
 inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 
