@@ -148,6 +148,10 @@ snippet dd "dd" i
 `!v system('date +"%Y-%m-%d" | tr -d "\n"')`: ${0}
 endsnippet
 
+snippet nn "nnoremap" b
+nnoremap ${1:X} ${2::silent ${3:!${4::echo ${5:sup}}}}
+endsnippet
+
 snippet nb "nnoremap buffer" b
 nnoremap <buffer> ${1:X} ${2::silent ${3:!${4::echo ${5:sup}}}}
 endsnippet
