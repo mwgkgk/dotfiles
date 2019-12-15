@@ -291,7 +291,7 @@ nnoremap <Space>gP    :call yankwin#Paste({'edit_command': (tabpagenr() - 1).'ta
 " }}}
 Plug 'AndrewRadev/exercism.vim'
 
-Plug 'AndrewRadev/whitespaste.vim'
+" Plug 'AndrewRadev/whitespaste.vim'
 
 Plug 'sickill/vim-pasta'
 
