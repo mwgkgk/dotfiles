@@ -201,8 +201,11 @@ nnoremap <Space>029 29gt
 " Display tabs:
 nnoremap <Space><M-o> :tabs<CR>
 
-" Open tab:
+" Open nameless tab (named tabs are <Space>c with taboo.vim):
 nnoremap <Space>C :tabe<CR>
+
+" Close tab:
+nnoremap <Space>gq :tabc<CR>
 
 " Move window to next/previous tab:
 nnoremap <Leader>th :call window#suckless#move_to_prev_tab()<CR>
