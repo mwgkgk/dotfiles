@@ -69,6 +69,25 @@ else
 endif
 endsnippet
 
+snippet el "else" b
+else
+	$0
+endsnippet
+
+snippet nvim "nvim" b
+if has('nvim')
+	${VISUAL}$1
+endif
+endsnippet
+
+snippet nvime "nvime" b
+if has('nvim')
+	$1
+else
+	${VISUAL}$2
+endif
+endsnippet
+
 # snippet au "Description" !b
 # if has('autocmd')
 # 	${VISUAL}
