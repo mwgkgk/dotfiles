@@ -107,7 +107,7 @@ nnoremap sgh :FzfFilesWithPreview ./.git/hooks/<CR>
 "
 
 " Prepop from command history:
-nnoremap sk :FzfHistory:<CR>
+nnoremap s: :FzfHistory:<CR>
 
 "
 "
@@ -124,7 +124,7 @@ nnoremap sN :FzfCommands<CR>
 nnoremap s<Tab> :FzfSnippets<CR>
 
 " Replace with skeleton:
-nnoremap <Leader>sk :call fzf#run(fzf#wrap({
+nnoremap sk :call fzf#run(fzf#wrap({
     \   'dir':'~/.vim/skeletons', 
     \   'sink':'%!cat'
     \ }))<CR>
