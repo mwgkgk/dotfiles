@@ -78,8 +78,14 @@ nnoremap s/ :FzfHistory/<CR>
 " Fuzzy ripgrep in cwd:
 noremap sas :Rg .<CR>
 
+" Fuzzy ripgrep in parent dir:
+noremap saw :Rg ../<CR>
+
 " Fuzzy ripgrep in current file's dir:
 noremap sae :Rg <C-r>=expand('%:p:h')<CR><CR>
+
+" Fuzzy ripgrep in parent dir to the current file:
+noremap sar :Rg <C-r>=expand('%:p:h:h')<CR><CR>
 
 "
 "
