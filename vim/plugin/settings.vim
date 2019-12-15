@@ -182,6 +182,7 @@ set undofile
 set sessionoptions-=options
 set sessionoptions-=localoptions
 set sessionoptions-=buffers
+" NOTE: taboo.vim config has sso+=tabpages,globals
 
 " When sessionoptions is -= options, the help window status is not restored on
 " session load.

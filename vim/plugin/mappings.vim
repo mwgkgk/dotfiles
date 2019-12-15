@@ -202,7 +202,7 @@ nnoremap <Space>029 29gt
 nnoremap <Space><M-o> :tabs<CR>
 
 " Open tab:
-nnoremap <Space>c :tabe<CR>
+nnoremap <Space>C :tabe<CR>
 
 " Move window to next/previous tab:
 nnoremap <Leader>th :call window#suckless#move_to_prev_tab()<CR>

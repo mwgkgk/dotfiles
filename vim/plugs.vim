@@ -213,13 +213,8 @@ let g:cycle_default_groups += [
 
 Plug 'c9s/bufexplorer'
 
-Plug 'gcmt/taboo.vim' " {{{
-set sessionoptions+=tabpages,globals
-nnoremap <C-W>C :TabooOpen 
-nnoremap <C-W>, :TabooRename 
-let g:taboo_tab_format="%N %f%m "
-let g:taboo_renamed_tab_format="%N %l%m "
-" }}}
+Plug '~/.vim/conf/_taboo.vim/'
+Plug 'gcmt/taboo.vim'
 
 Plug 'briandoll/change-inside-surroundings.vim' " {{{
 " <Leader>ci by default
