@@ -20,6 +20,9 @@ command! -bang -nargs=? -complete=dir FzfFilesWithPreview
 " --color: Search color options
 command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" "" '. <q-args> .'| tr -d "\017"', 1, <bang>0)
 
+" Rg ignoreing gitignore:
+command! -bang -nargs=* RgWithIgnore call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" "" '. <q-args> .'| tr -d "\017"', 1, <bang>0)
+
 " Fuzzy ripgrep on current file's extension, arguments = paths:
 command! -bang -nargs=* RgFt call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --glob "*.' . expand('%:e') . '" --color "always" "" '. <q-args> . '| tr -d "\017"', 1, <bang>0)
 
