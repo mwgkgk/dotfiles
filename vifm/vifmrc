@@ -332,8 +332,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 nmap S :!fish<cr>
 nmap s :sort<cr>
 nmap w :view<cr>
-nmap o :!gvim --remote-tab-silent %f<cr>
-nmap O :!gvim %f<cr>
+
+" nmap o :!gvim --remote-tab-silent %f<cr>
+" nmap O :!gvim %f<cr>
 
 nmap æ :!tmux new-window -n $(fish -c prompt_pwd)/ fm .<CR>
 
