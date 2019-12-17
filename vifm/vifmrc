@@ -124,7 +124,6 @@ mark h ~/
 " %m run the command in a menu window
 
 command R :restart
-command df df -h %m 2> /dev/null
 command rm rm %f
 command diff vim -d %f %F
 command zip zip -r %f.zip %f
@@ -408,6 +407,7 @@ nmap  h
 
 nmap U :undolist<cr>
 
+command df pydf --bw %m 2> /dev/null
 " M-o to show df:
 nmap ï :df<CR>
 
