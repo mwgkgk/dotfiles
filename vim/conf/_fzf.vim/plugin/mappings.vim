@@ -39,7 +39,7 @@ nnoremap s. :FzfArgs<CR>
 nnoremap s<Space> :FzfBuffers<CR>
 
 " Set filetype:
-nnoremap sT :FzfFiletypes<CR>
+nnoremap st :FzfFiletypes<CR>
 
 "
 "
