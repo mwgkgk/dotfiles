@@ -1,2 +1,2 @@
-nnoremap <Space>c :TabooOpen <C-r>=TabooTabName(tabpagenr())<CR>
+nnoremap <Space>c :TabooOpen<Space>
 nnoremap <Space>, :TabooRename <C-r>=TabooTabName(tabpagenr())<CR>
