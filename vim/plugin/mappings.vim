@@ -226,8 +226,8 @@ augroup END
 "
 
 " Fold/unfold everything:
-nnoremap <Space>z zM
-nnoremap z<Space> zR
+nnoremap <Space>z zR
+nnoremap z<Space> zM
 
 " Zoom up:
 nnoremap ze zt6<C-y>6<C-y>
