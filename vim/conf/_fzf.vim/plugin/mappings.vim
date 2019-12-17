@@ -131,6 +131,7 @@ nnoremap sN :FzfCommands<CR>
 
 " Insert a snippet:
 nnoremap s<Tab> :FzfSnippets<CR>
+inoremap <C-g><Tab> <C-o>:FzfSnippets<CR>
 
 " Replace with skeleton:
 nnoremap sk :call fzf#run(fzf#wrap({
