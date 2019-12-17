@@ -409,7 +409,7 @@ nmap  h
 nmap U :undolist<cr>
 
 " M-o to show df:
-nmap ï !df && read -n1 -s -r
+nmap ï :df<CR>
 
 nmap <Space>s :sync<CR><Tab>
 
