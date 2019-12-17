@@ -4,6 +4,7 @@
 "
 
 nnoremap <buffer> <LocalLeader>cc :call SlimvConnectServer()<CR>
+nnoremap <buffer> <LocalLeader>rr :call SlimvConnectServer()<CR>
 
 "
 "
