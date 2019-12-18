@@ -5,3 +5,6 @@ if has('nvim')
 else
     tnoremap <buffer> d <C-\><C-w>
 endif
+
+" Normal mode
+tnoremap <Esc> <C-W>N
