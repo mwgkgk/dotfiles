@@ -5,6 +5,7 @@
 "
 
 nnoremap H :FzfHelptags<CR>
+nnoremap sh :FzfHelptags<CR>
 
 "
 "
