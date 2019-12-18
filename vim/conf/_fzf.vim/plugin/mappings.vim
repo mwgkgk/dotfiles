@@ -47,14 +47,11 @@ nnoremap st :FzfFiletypes<CR>
 " Tags
 "
 
-" Look for closest tags file in parent dirs of the current file:
-nnoremap sz :call toggle#tags#closest()<CR>:FzfTags<CR>
-
-" Use the tags file in cwd:
-nnoremap sZ :call toggle#tags#cwd()<CR>:FzfTags<CR>
+" Tags from &tags:
+nnoremap sd :FzfTags<CR>
 
 " Buffer tags:
-nnoremap sd :FzfBTags<CR>
+nnoremap sz :FzfBTags<CR>
 
 "
 "

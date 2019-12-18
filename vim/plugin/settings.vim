@@ -120,6 +120,15 @@ autocmd settings InsertLeave * set ignorecase
 
 "
 "
+" Tags
+"
+
+" Closest tags file to the file under cursor, upto $HOME:
+" See :help file-searching
+set tags=./tags;~
+
+"
+"
 " Buffers
 "
 
