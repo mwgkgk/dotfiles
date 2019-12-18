@@ -205,7 +205,7 @@ nnoremap <Space><M-o> :tabs<CR>
 nnoremap <Space>C :tabe<CR>
 
 " Close tab:
-nnoremap <Space>gq :tabc<CR>
+nnoremap <Space>gc :tabc<CR>
 
 " Move window to next/previous tab:
 nnoremap <Leader>th :call window#suckless#move_to_prev_tab()<CR>
