@@ -280,9 +280,11 @@ nnoremap <Space>D :call yankwin#Delete({'path_type': 'absolute', 'with_line_numb
 let g:yankwin_default_paste_mappings = 0
 nnoremap <Space><c-p> :call yankwin#Paste({'edit_command': 'edit'})<cr>
 nnoremap <Space>p     :call yankwin#Paste({'edit_command': 'rightbelow split'})<cr>
-nnoremap <Space>P     :call yankwin#Paste({'edit_command': 'leftabove split'})<cr>
-nnoremap <Space>gp    :call yankwin#Paste({'edit_command': 'tab split'})<cr>
-nnoremap <Space>gP    :call yankwin#Paste({'edit_command': (tabpagenr() - 1).'tab split'})<cr>
+nnoremap <Space>gp    :call yankwin#Paste({'edit_command': 'leftabove split'})<cr>
+nnoremap <Space>P     :call yankwin#Paste({'edit_command': 'vert split'})<cr>
+nnoremap <Space>gP    :call yankwin#Paste({'edit_command': 'leftabove vert split'})<cr>
+nnoremap <Space>Gp    :call yankwin#Paste({'edit_command': 'tab split'})<cr>
+nnoremap <Space>GP    :call yankwin#Paste({'edit_command': (tabpagenr() - 1).'tab split'})<cr>
 " }}}
 Plug 'AndrewRadev/exercism.vim'
 
