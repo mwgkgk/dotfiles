@@ -134,13 +134,8 @@ let marvim_register = 'q' " Default
 let marvim_prefix = 0
 " }}}
 
-Plug 'SirVer/ultisnips' " {{{
-let g:UltiSnipsEditSplit = 'horizontal'
-let g:UltiSnipsSnippetsDir = '~/.vim/usnippets/'
-let g:UltiSnipsSnippetDirectories = ['usnippets']
-let g:UltiSnipsExpandTrigger = '<tab>'
-nnoremap <Leader>u :UltiSnipsEdit<CR>
-" }}}
+Plug '~/.vim/conf/_ultisnips/'
+Plug 'SirVer/ultisnips'
 
 Plug 'bootleq/vim-cycle' " {{{
 let g:cycle_no_mappings = 1
