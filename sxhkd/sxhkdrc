@@ -101,6 +101,10 @@ alt + ~c
 super + 6
 	thunderbird-open-link
 
+# Kmonad: Wraith v
+super + shift + 6
+	thunderbird-open-link-with-image
+
 # Kmonad: Wraith e
 super + 7
 	thunderbird-next-unread-folder

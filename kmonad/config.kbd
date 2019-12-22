@@ -81,6 +81,7 @@ _     _     _                 @lrW          _    _    _    _             _    _ 
 // @m7 = (( S-tab down n ))
 // Down 5 items at a time.
 @m7 = (( down down down down down ))
+@a8 = M-S-6
 
 LAYER Wraith
 /*
@@ -91,7 +92,7 @@ LAYER Wraith
 C-w  _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     @m6  up   M-7  _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
 _      @a5  down tab  @m7  _    @a5  down up   tab  _    _    _                             _       _       _
-_       _    M-6  n    _    _    _    _    _    _     _    _                  _             _       _       _          _
+_       _    M-6  n    @a8  _    _    _    _    _     _    _                  _             _       _       _          _
 _     _     _                 _             _    _    _    _             _    _    _        _               _
 
 
