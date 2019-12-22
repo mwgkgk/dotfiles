@@ -91,8 +91,8 @@ LAYER Wraith
 @lrW @tnU _    _    _    _    _    _    _    _    _    _    _            _    _    _
 C-w  _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     @m6  up   M-7  _    _    _    _    _    _    _    __   _    _      _    _    _        _       _       _          _
-_      @a5  down tab  @a8  _    @a5  down up   tab  _    _    _                             _       _       _
-_       _    M-6  n    @m7  _    _    _    _    _     _    _                  _             _       _       _          _
+_      @a5  down tab  n    _    @a5  down up   tab  _    _    _                             _       _       _
+_       _    M-6  @a8  @m7  _    _    _    _    _     _    _                  _             _       _       _          _
 _     _     _                 _             _    _    _    _             _    _    _        _               _
 
 
