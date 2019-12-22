@@ -101,7 +101,7 @@ alt + ~c
 super + 6
 	thunderbird-open-link
 
-# Kmonad: Wraith v
+# Kmonad: Wraith f
 super + shift + 6
 	thunderbird-open-link-with-image
 
