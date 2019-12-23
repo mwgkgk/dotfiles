@@ -127,15 +127,15 @@ _     _     _                 _             _    _    _    _             _    _ 
 
 
 // Exit insert-mode, save & close
-@m1 = (( esc spc W ))
+@mEQ = (( esc spc W ))
 // Unique sequence for Omega-u to pass to Vim to jump-previous-ale-error
-@m2 = (( f12 u ))
+@mFU = (( f12 u ))
 // Exit insert-mode, save
-@m3 = (( esc spc w ))
+@mEW = (( esc spc w ))
 // Exit insert-mode, save, punt window
-@m4 = (( esc spc w M-grave ))
+@mEP = (( esc spc w M-grave ))
 // Exit insert-mode, save & close, close everything
-@m5 = (( esc spc W spc Q ))
+@mEX = (( esc spc W spc Q ))
 
 LAYER Omega
 /*
@@ -145,12 +145,12 @@ LAYER Omega
     Positions for special symbols are in flux. Optimizing for ease of access
     over consistency.
 */
-@m5  _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-@m1  _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-=     1    2    3    4    :    _    @m2  9    0    ^    @    _    _      _    _    _        _       _       _          _
-~      (    /    bspc %    +    |    *    #    $    esc  )    _                             _       _       _
-ret     5    6    7    8    :    &    __   !    \     ret  _                  _             _       _       _          _
-esc   @m4   @m3               _                  _    _    _             _    _    _        _               _
+@mEX _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
+@mEQ _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
+=     1    2    3    4    ~    _    @mFU 9    0    ^    @    _    _      _    _    _        _       _       _          _
+_      (    /    bspc %    +    |    *    #    $    esc  )    _                             _       _       _
+_       5    6    7    8    :    &    __   !    \     @mEW _                  _             _       _       _          _
+@mEP  M-grv _                 _                  _    _    _             _    _    _        _               _
 
 
 
