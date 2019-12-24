@@ -54,6 +54,9 @@ super + space
 super + BackSpace
 	rogue
 
+super + z
+	rogue
+
 super + Return
 	zepp
 
