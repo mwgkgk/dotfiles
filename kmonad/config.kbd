@@ -95,6 +95,8 @@ _      @a5  down tab  n    _    @a5  down up   tab  _    _    _                 
 _       _    M-6  @a8  @m7  _    _    _    _    _     _    _                  _             _       _       _          _
 _     _     _                 _             _    _    _    _             _    _    _        _               _
 
+// Undo closed browser tab.
+@a9 = C-S-t
 
 LAYER Burglar
 /*
@@ -110,7 +112,7 @@ _    @a7  _    _    _    _    _    _    _    _    _    _    _            _    _ 
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     K    @a1  end  J    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
 ret    home down pgdn @a3  _    left down up   rght _    _    _                             _       _       _
-_       u    _    _    M-8  @a2  _    _    _    _     _    _                  _             _       _       _          _
+_       @a9  _    _    M-8  @a2  _    _    _    _     _    _                  _             _       _       _          _
 _     _     LT-Driver         ret           _    _    _    _             _    _    _        _               _
 
 
