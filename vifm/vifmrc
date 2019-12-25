@@ -402,7 +402,7 @@ nmap ï :df<CR>
 " Show file stats in status
 nmap <F1> :!f %f %S<CR>
 
-" nmap <Space>s :sync<CR><Tab>
+nmap <Space>s :sync<CR><Tab>
 
 " LocalLeader binds
 " TODO mkdir & move target under cursor there
