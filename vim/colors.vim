@@ -187,12 +187,6 @@ let s:gui_colo = 'freya'
 
 if has('gui_running')
     autocmd .colors VimEnter * call colorpolice#select(s:gui_colo)
-    " font {{{
-    " set guifont=Liberation\ Mono\ 22
-    " set guifont=Liberation\ Mono\ 8
-    " set guifont=Monospace\ 10
-    set guifont=Iosevka\ SS04\ 13
-    " }}}
 else
     set t_Co=256
 
