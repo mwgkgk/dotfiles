@@ -23,7 +23,8 @@ augroup END
 " let s:static_colo = 'haze'
 
 " let s:static_colo = 'farout'
-let s:static_colo = 'autumn'
+" let s:static_colo = 'autumn'
+let s:static_colo = 'shady'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
