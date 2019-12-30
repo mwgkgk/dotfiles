@@ -2,10 +2,6 @@
 " vim: foldmethod=marker foldlevel=0
 " }}}
 
-augroup .colors
-    autocmd!
-augroup END
-
 " let s:static_colo = 'industry'
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
@@ -110,13 +106,13 @@ let s:gui_colo = 'freya'
 " }}}
 
 if has('gui_running')
-    autocmd .colors VimEnter * call colorpolice#select(s:gui_colo)
+    call colorpolice#select(s:gui_colo)
 else
     set t_Co=256
 
     if !empty($CHI)
-        autocmd .colors VimEnter * call colorpolice#select(colors#chi_colo($CHI, s:static_colo))
+        call colorpolice#select(colors#chi_colo($CHI, s:static_colo))
     else
-        autocmd .colors VimEnter * call colorpolice#select(s:static_colo)
+        call colorpolice#select(s:static_colo)
     endif
 endif

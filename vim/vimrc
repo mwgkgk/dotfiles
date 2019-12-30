@@ -29,10 +29,3 @@ let g:maplocalleader="'"
 "
 
 runtime plugs.vim
-
-"
-"
-" Colors
-"
-
-runtime colors.vim

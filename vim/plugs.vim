@@ -1093,6 +1093,10 @@ Plug 'xolox/vim-colorscheme-switcher' " {{{
 " F8, Shift-F8
 " }}}
 
+Plug '~/.vim/conf/_colorpolice-vim/'
+" https://gitlab.com/mwgkgk/colorpolice-vim
+Plug '~/shop/oil/colorpolice/colorpolice-vim/'
+
 Plug 'romainl/Apprentice'
 Plug 'romainl/Disciple'
 Plug 'jnurmine/Zenburn'
