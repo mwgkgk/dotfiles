@@ -84,6 +84,10 @@ alt + F12
 control + F12
 	run-aloud tmux-kill-detached
 
+# Show clock: Kmonad: Omega ret
+super + shift + 7
+	dzen2-clock
+
 # Paste X selection
 
 # Kmonad: Burglar c
