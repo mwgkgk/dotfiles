@@ -6,7 +6,6 @@ augroup .colors
     autocmd!
 augroup END
 
-" static {{{
 " let s:static_colo = 'industry'
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
@@ -93,81 +92,6 @@ let s:static_colo = 'shady'
 " let s:static_colo = 'morning'
 
 " let s:static_colo = 'gruvbox-dark'
-" }}}
-
-" flex {{{
-function! s:flex_colo()
-    let hr = str2nr(strftime('%H'))
-    if hr < 15 && hr > 3
-        " return 'hybrid-light'
-
-        " return 'lucius-light'
-
-        " return 'seoul256-light'
-
-        " return 'disciple'
-        " return 'peaksea_mod'
-        return 'Tomorrow'
-
-        " return 'gruvbox'
-        " return 'sunday256'
-        " return 'mayansmokemod'
-        " return 'kalisi'
-        " return 'hybrid-light'
-    else
-        " return 'mustangmod'
-        " return 'kalisi-dark'
-
-        return 'Tomorrow-Night'
-        " return 'lucius'
-        " return 'devbox-dark-256-lighter'
-        " return 'hybrid'
-        " return 'typofree'
-        " return 'bubblegum'
-        " return 'apprentice'
-        " return 'gruvbox-dark'
-
-        " return 'seoul256'
-        " return 'zenburn'
-        " return 'last256'
-        " return 'outsider'
-        " return 'fadedvision'
-    endif
-endfunction
-" }}}
-
-" chi {{{
-function! s:chi_colo(chi)
-    if a:chi ==# 'technodrome'
-        return s:static_colo
-    elseif a:chi ==# 'ship'
-        return s:static_colo
-    elseif a:chi ==# 'girl'
-        return 'deepblue'
-    elseif a:chi ==# 'silk'
-        return s:static_colo
-    elseif a:chi ==# 'smuggler'
-        return 'hell'
-    elseif a:chi ==# 'druid'
-        return s:static_colo
-    elseif a:chi ==# 'fox'
-        return 'thief'
-    elseif a:chi ==# 'motor'
-        return s:static_colo
-    elseif a:chi ==# 'humvee'
-        return s:static_colo
-    elseif a:chi ==# 'gums'
-        return s:static_colo
-    elseif a:chi ==# 'zepp'
-        return s:static_colo
-    elseif a:chi ==# 'temple'
-        return s:static_colo
-    else
-        " Unrecognized non-empty $CHI
-        return 'desert'
-    endif
-endfunction
-" }}}
 
 " gui {{{
 let s:gui_colo = 'freya'
@@ -191,7 +115,7 @@ else
     set t_Co=256
 
     if !empty($CHI)
-        autocmd .colors VimEnter * call colorpolice#select(s:chi_colo($CHI))
+        autocmd .colors VimEnter * call colorpolice#select(colors#chi_colo($CHI, s:static_colo))
     else
         autocmd .colors VimEnter * call colorpolice#select(s:static_colo)
     endif
