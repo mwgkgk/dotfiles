@@ -93,3 +93,8 @@ URxvt.letterSpace: -1
 ! *color12: #3DC3D7
 !Yellow
 ! *color3: #CFC17A
+
+! Dzen2
+dzen2.font: -*-clean-*-*-*-*-9-*-*-*-*-*-iso10646-*
+dzen2.foreground: #A37E71
+dzen2.background: #262626
