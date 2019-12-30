@@ -260,7 +260,6 @@ Plug 'andymass/vim-matchup' " {{{
 nnoremap ,, %
 " }}}
 
-Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/yankwin.vim' " {{{
 let g:yankwin_default_yank_mappings = 0
 nnoremap <Space>gy  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 0})<cr>
@@ -513,6 +512,11 @@ omap aA <Plug>(textobj-entire-a)
 xmap A <Plug>(textobj-entire-a)
 omap A <Plug>(textobj-entire-a)
 " }}}
+
+Plug 'kana/vim-textobj-function'
+" Fallback for vim-textobj-function using syntax definitions:
+Plug 'haya14busa/vim-textobj-function-syntax'
+
 Plug 'kana/vim-submode', {'on' : [] } " {{{
 let g:submode_timeoutlen = 700
 
