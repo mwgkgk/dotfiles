@@ -36,7 +36,7 @@ hi Folded       guifg=#00bf00 guibg=#001200 gui=none ctermfg=243 ctermbg=235 cte
 hi Conceal      guifg=#00bf00 guibg=#001200 gui=none ctermfg=243 ctermbg=235 cterm=none
 hi Identifier   guifg=#50d930 guibg=#000000 gui=none ctermfg=151 ctermbg=none cterm=none
 hi IncSearch    gui=reverse cterm=reverse
-hi LineNr       guifg=#007900 guibg=#000600 gui=none ctermfg=237 ctermbg=016 cterm=none
+hi LineNr       guifg=#007900 guibg=#000600 gui=none ctermfg=242 ctermbg=233 cterm=none
 hi MatchParen   guifg=#304300 guibg=#00fe00 gui=none ctermfg=108 ctermbg=192 cterm=bold
 hi ModeMsg      guifg=#00ea00 guibg=#000900 gui=none ctermfg=101 ctermbg=none cterm=none
 hi MoreMsg      guifg=#00e700 guibg=#001000 gui=bold ctermfg=101 ctermbg=none cterm=bold
@@ -66,7 +66,7 @@ hi VisualNOS    guibg=#002700 gui=reverse ctermbg=192 cterm=reverse
 hi WarningMsg   guifg=#000000 guibg=#00ff00 gui=none ctermfg=108 ctermbg=none cterm=none
 hi WildMenu     guifg=#00cb00 guibg=#000000 gui=reverse ctermfg=000 ctermbg=108 cterm=reverse
 hi ColorColumn  guibg=#225101 ctermbg=235
-hi SignColumn   guibg=#225101 ctermbg=234
+hi SignColumn   guibg=#225101 ctermbg=233 ctermfg=228
 
 hi markdownH1 ctermfg=193 cterm=bold
 hi! link markdownH2 markdownH1
