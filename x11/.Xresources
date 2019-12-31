@@ -23,7 +23,8 @@ URxvt*.meta8: true
 ! URxvt*.foreground: #E6C29E
 ! URxvt*.foreground: #FFAF5F
 ! URxvt*.foreground: #49B4CC
-URxvt*.foreground: #F5A754
+! URxvt*.foreground: #F5A754
+URxvt*.foreground: #F7DC75
 ! URxvt*.foreground: #DADADA
 ! URxvt*.foreground: #DFA04A
 ! URxvt*.foreground: #CF423F
@@ -31,7 +32,8 @@ URxvt*.foreground: #F5A754
 ! URxvt*.background: #1b1b1b
 ! URxvt*.background: #2E2E2E
 ! URxvt*.background: #1D1200
-URxvt*.background: #2B2117
+! URxvt*.background: #2B2117
+URxvt*.background: #101111
 ! URxvt.depth: 24
 ! URxvt.background: [15]#000000
 ! URxvt*.cursorColor: #F76345
@@ -96,5 +98,5 @@ URxvt.letterSpace: -1
 
 ! Dzen2
 dzen2.font: -*-clean-*-*-*-*-9-*-*-*-*-*-iso10646-*
-dzen2.foreground: #A37E71
+dzen2.foreground: #F7DC75
 dzen2.background: #262626
