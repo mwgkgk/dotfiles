@@ -746,18 +746,9 @@ nmap <C-c>] <Esc>ysiW'
 " }}}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-eunuch'
+
+Plug '~/.vim/conf/_vim-rsi/'
 Plug 'tpope/vim-rsi'
-
-" It's busted currently, god knows why. g:rsi_no_meta doesn't help either.
-inoremap <M-b> <S-Left>
-inoremap <M-f> <S-Right>
-inoremap <M-d> <C-O>dw
-cnoremap <M-d> <S-Right><C-W>
-inoremap <M-n> <Down>
-inoremap <M-p> <Up>
-
-" Use actual <Del> which joins lines.
-inoremap <C-d> <Del>
 
 Plug '~/.vim/conf/_vim-fugitive/'
 Plug 'tpope/vim-fugitive' " {{{
