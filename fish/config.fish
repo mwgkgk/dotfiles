@@ -4,7 +4,7 @@ umask 0007
 
 set -x fish_color_prompt B5FFCE
 set -x fish_color_cwd 7CFFAA
-# set -x fish_command_timer_color AF875F
+set -x fish_command_timer_color 82826E
 
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
 set -x FZF_DEFAULT_OPTS " --bind 'ctrl-q:select-all+accept,tab:print-query'"
