@@ -589,7 +589,7 @@ nnoremap <Leader>tv :call toggle#verbose()<CR>
 nnoremap <Space><Enter> :call toggle#spelling()<CR>
 
 " Insert mode toggle:
-inoremap <C-g><Enter> <Esc>:call toggle#spelling()<CR>a
+inoremap <C-g><C-g> <Esc>:call toggle#spelling()<CR>a
 
 " Fix previous word:
 inoremap <C-g><C-l> <C-g>u<Esc>:setlocal spell<CR>[s1z=`]a<C-g>u
