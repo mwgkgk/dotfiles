@@ -40,6 +40,10 @@ pulseaudio --start && alsa-unmute &
 # xrandr --output DVI-I-2 --auto
 # xrandr --output HDMI-0 --auto --primary --right-of DVI-I-2
 
+# sxhkd doesn'trecommend fish:
+# https://github.com/baskerville/bspwm/wiki/Playing-nicely-with-fish-shell
+export SXHKD_SHELL='/bin/dash'
+
 # Simple X Hotkey Daemon
 sxhkd &
 
