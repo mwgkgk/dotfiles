@@ -13,4 +13,8 @@
     (if (not (probe-file compiled-file))
       (compile-file #P"~/asdf.lisp"
                     :output-file compiled-file))
-    (load compiled-file)))
+    (handler-case (load compiled-file)
+      (sb-fasl::invalid-fasl-version (c)
+         (compile-file #P"~/asdf.lisp"
+                    :output-file compiled-file)
+         (load compiled-file)))))
