@@ -22,7 +22,7 @@ _     _     _                 _             _    _    _    _             _    _ 
 @lrW = LR-Wraith
 @laW = LA-Wraith
 
-@tnB = TN caps LT-Burglar
+@tnB = TH 200 caps LT-Burglar
 
 @tnT = TN f1 LT-Toggle
 @tnU = TN f1 LT-Untoggle
