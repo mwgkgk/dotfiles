@@ -980,11 +980,11 @@ Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 Plug '~/.vim/conf/_vim-sexp/'
 Plug 'guns/vim-sexp'
 
-" Plug '~/.vim/conf/_vlime/', { 'for' : 'lisp' }
-" Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' }
+Plug '~/.vim/conf/_vlime/', { 'for' : 'lisp' }
+Plug 'l04m33/vlime', { 'rtp': 'vim/', 'for': 'lisp' }
 
-Plug '~/.vim/conf/_slimv/', { 'for' : 'lisp' }
-Plug 'kovisoft/slimv', { 'for' : 'lisp' }
+" Plug '~/.vim/conf/_slimv/', { 'for' : 'lisp' }
+" Plug 'kovisoft/slimv', { 'for' : 'lisp' }
 
 " Clojure
 if has('nvim')
