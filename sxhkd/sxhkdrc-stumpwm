@@ -1,3 +1,5 @@
+# vim:ft=sxhkd:
+
 # Citizens
 
 super + F1
@@ -36,11 +38,11 @@ super + t
 super + shift + i
 	fox
 
-super + o
-	firefox-ulm
+# super + o
+# 	firefox-ulm
 
-super + 0
-	firefox-default
+# super + 0
+# 	firefox-default
 
 super + backslash
 	girl
@@ -48,8 +50,8 @@ super + backslash
 super + semicolon
 	silk
 
-super + space
-	technodrome
+# super + space
+# 	technodrome
 
 super + BackSpace
 	rogue
