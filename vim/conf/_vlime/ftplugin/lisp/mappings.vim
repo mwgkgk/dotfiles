@@ -13,3 +13,7 @@ nnoremap <silent> <buffer> <C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui
 " nnoremap <silent> <buffer> <LocalLeader>gi :call vlime#plugin#InteractionMode()<CR>
 
 " TODO <LocalLeader><LocalLeader> for <LocalLeader>st
+
+if bufname() =~# 'stumpwm/config$'
+    call vlime#plugin#ConnectREPL('127.0.0.1', 44820, '', '', 'StumpWM connection')
+endif
