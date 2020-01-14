@@ -15,5 +15,8 @@ nnoremap <silent> <buffer> <C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui
 " TODO <LocalLeader><LocalLeader> for <LocalLeader>st
 
 if bufname() =~# 'stumpwm/config$'
-    call vlime#plugin#ConnectREPL('127.0.0.1', 44820, '', '', 'StumpWM connection')
+    if ! exists('b:vlime_auto_connection')
+        let b:vlime_auto_connection = vlime#plugin#ConnectREPL('127.0.0.1',
+                    \ 44820, '', '', 'StumpWM connection')
+    endif
 endif
