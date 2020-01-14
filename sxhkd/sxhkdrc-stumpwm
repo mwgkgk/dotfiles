@@ -47,8 +47,8 @@ super + shift + i
 super + backslash
 	girl
 
-super + semicolon
-	silk
+# super + semicolon
+# 	silk
 
 # super + space
 # 	technodrome
