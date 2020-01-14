@@ -24,7 +24,7 @@
 ; (define-key *root-map* (kbd "h") "move-focus left")
 ; (define-key *root-map* (kbd "l") "move-focus right")
 
-(undefine-key *root-map* (kbd "k"))
+(define-key *root-map* (kbd "k") "describe-key")
 
 (define-key *top-map* (kbd "s-C-k") "move-window up")
 (define-key *top-map* (kbd "s-C-j") "move-window down")
