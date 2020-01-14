@@ -1,0 +1,159 @@
+;; vim:ft=lisp:
+
+(in-package :stumpwm)
+
+(ql:quickload :vlime)
+(vlime:main :interface #(127 0 0 1)
+            :port 44820
+            :backend :vlime-usocket)
+
+;;; Root prefix
+(set-prefix-key (kbd "s-space"))
+
+;; Esc on C-;
+(define-key *top-map* (kbd "C-semicolon") "meta Escape")
+
+;;; Frame navigation:
+(define-key *top-map* (kbd "s-k") "move-focus up")
+(define-key *top-map* (kbd "s-j") "move-focus down")
+(define-key *top-map* (kbd "s-h") "move-focus left")
+(define-key *top-map* (kbd "s-l") "move-focus right")
+
+; (define-key *root-map* (kbd "k") "move-focus up")
+; (define-key *root-map* (kbd "j") "move-focus down")
+; (define-key *root-map* (kbd "h") "move-focus left")
+; (define-key *root-map* (kbd "l") "move-focus right")
+
+(undefine-key *root-map* (kbd "k"))
+
+(define-key *top-map* (kbd "s-C-k") "move-window up")
+(define-key *top-map* (kbd "s-C-j") "move-window down")
+(define-key *top-map* (kbd "s-C-h") "move-window left")
+(define-key *top-map* (kbd "s-C-l") "move-window right")
+
+;;; Frame numbers:
+(setf *frame-number-map* "123456789abcdefghijklmnopqrstuvxwyz")
+
+;;; Fselect:
+(define-key *top-map* (kbd "s-1") "fselect 1")
+(define-key *top-map* (kbd "s-2") "fselect 2")
+(define-key *top-map* (kbd "s-3") "fselect 3")
+(define-key *top-map* (kbd "s-4") "fselect 4")
+(define-key *top-map* (kbd "s-5") "fselect 5")
+(define-key *top-map* (kbd "s-6") "fselect 6")
+(define-key *top-map* (kbd "s-7") "fselect 7")
+(define-key *top-map* (kbd "s-8") "fselect 8")
+(define-key *top-map* (kbd "s-9") "fselect 9")
+
+;;; Creating frames
+(define-key *root-map* (kbd "N") "hsplit")
+(define-key *root-map* (kbd "n") "vsplit")
+
+;;; Remove split
+(define-key *root-map* (kbd "q") "remove-split")
+
+;;; Kill program
+(define-key *top-map* (kbd "s-Escape") "delete-window")
+;;; Kill -9
+(define-key *top-map* (kbd "s-S-Escape") "kill-window")
+;;; Wother
+(define-key *top-map* (kbd "M-TAB") "other-window")
+
+;;; Prev/next in-frame
+(define-key *top-map* (kbd "s-p") "prev-in-frame")
+(define-key *top-map* (kbd "s-n") "next-in-frame")
+
+;;; Balance frames
+(define-key *root-map* (kbd "=") "balance-frames")
+
+;;; Frame-window lists
+(define-key *top-map* (kbd "s-O") "frame-windows")
+(define-key *root-map* (kbd "o") "frame-windowlist")
+(define-key *top-map* (kbd "s-o") "vgroups")
+
+#+nil
+(progn
+  ;; Windowlist format:
+  *window-format*)
+
+;;; Groups
+(define-key *root-map* (kbd "c") "gnew")
+(define-key *root-map* (kbd "s-space") "grouplist")
+(define-key *root-map* (kbd ",") "grename")
+(define-key *groups-map* (kbd "c") "gkill")
+(define-key *groups-map* (kbd "C") "kill-windows-current-group")
+(define-key *groups-map* (kbd "C") "kill-windows-other")
+(define-key *top-map* (kbd "s-TAB") "gother")
+
+(define-key *root-map* (kbd "1") "gselect 1")
+(define-key *root-map* (kbd "2") "gselect 2")
+(define-key *root-map* (kbd "3") "gselect 3")
+(define-key *root-map* (kbd "4") "gselect 4")
+(define-key *root-map* (kbd "5") "gselect 5")
+(define-key *root-map* (kbd "6") "gselect 6")
+(define-key *root-map* (kbd "7") "gselect 7")
+(define-key *root-map* (kbd "8") "gselect 8")
+(define-key *root-map* (kbd "9") "gselect 9")
+
+;;; Info
+(define-key *root-map* (kbd "i") "show-window-properties")
+(define-key *root-map* (kbd "I") "info")
+
+;;; Redisplay last message:
+;; This doesn't quite make sense as of current moment cause we started always
+;; displaying the help on prefix for some reason.
+(define-key *root-map* (kbd "space") "lastmsg")
+
+;;; Burrow
+(define-key *top-map* (kbd "s-w") "exec burrow ~/.burrow/quick-launch")
+
+;;; Config
+(setf *mouse-focus-policy* :sloppy)
+
+;; Colors
+(set-border-color "#87d700")
+(set-font "-*-hack-medium-r-*-*-11-*-*-*-*-*-*-*")
+(setf *text-color* "#ffff87") ; This one doesn't work.
+
+#+nil
+(progn
+  (echo "hi")
+  (mode-line)
+  (describe-function #'set-font)
+  (describe-command :send-escape)
+  (run-commands "describe-key")
+  (run-commands "describe-command")
+  (apropos "echo")
+  ;; This is interesting with regards to color escape sequences:
+  *startup-message*)
+
+;;; Groups
+
+;; TODO Map Super+Enter to open ink:zepp
+
+
+;;; Overlays
+
+;; TODO Map keys to functions
+;; TODO Wrapper function to send keys with a delay
+;; TODO x: thunderbird-open-link
+;; TODO c: thunderbird-open-link-with-image
+(define-remapped-keys
+  '(("Thunderbird"
+     ("w" . "Up")
+     ("s" . "Down")
+     ("a" . "S-TAB")
+     ("d" . "TAB")
+
+     ("k" . "Up")
+     ("j" . "Down")
+     ("h" . "S-TAB")
+     ("l" . "TAB")
+
+     ("f" . "n")
+
+     ("q" . ("S-TAB" "Up" "TAB"))
+     ;; TODO Delay 100
+     ("e" . ("S-TAB" "Down" "n"))
+
+     ("v" . ("Down" "Down" "Down" "Down" "Down")))))
