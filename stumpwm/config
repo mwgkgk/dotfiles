@@ -110,9 +110,17 @@
 (setf *mouse-focus-policy* :sloppy)
 
 ;; Colors
-(set-border-color "#87d700")
 (set-font "-*-hack-medium-r-*-*-11-*-*-*-*-*-*-*")
 (setf *text-color* "#ffff87") ; This one doesn't work.
+
+(set-border-color "#87d700")
+(setf *message-window-gravity* :center)
+(setf *input-window-gravity* :center)
+(setf *suppress-frame-indicator* t)
+
+(set-focus-color "#87d700")
+(setf *normal-border-width* 1)
+(setf *window-border-style* :tight)
 
 #+nil
 (progn
@@ -122,7 +130,7 @@
   (describe-command :send-escape)
   (run-commands "describe-key")
   (run-commands "describe-command")
-  (apropos "echo")
+  (apropos "gravity")
   ;; This is interesting with regards to color escape sequences:
   *startup-message*)
 
