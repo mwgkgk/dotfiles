@@ -103,3 +103,13 @@ endsnippet
 snippet ( "(" i
 ~(${0:~a${VISUAL}}~)
 endsnippet
+
+# StumpWM
+
+snippet k "define-key-top" b
+(define-key *top-map* (kbd "${1:s-k}") "${2:move-focus up}")
+endsnippet
+
+snippet kk "define-key" b
+(define-key *${1:root}-map* (kbd "${2:k}") "${3:move-focus up}")
+endsnippet
