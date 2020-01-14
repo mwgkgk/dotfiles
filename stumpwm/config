@@ -79,6 +79,7 @@
 ;;; Groups
 (define-key *root-map* (kbd "c") "gnew")
 (define-key *root-map* (kbd "s-space") "grouplist")
+(define-key *root-map* (kbd "space") "groups")
 (define-key *root-map* (kbd ",") "grename")
 (define-key *groups-map* (kbd "c") "gkill")
 (define-key *groups-map* (kbd "C") "kill-windows-current-group")
@@ -100,9 +101,7 @@
 (define-key *root-map* (kbd "I") "info")
 
 ;;; Redisplay last message:
-;; This doesn't quite make sense as of current moment cause we started always
-;; displaying the help on prefix for some reason.
-(define-key *root-map* (kbd "space") "lastmsg")
+(define-key *top-map* (kbd "s-Up") "lastmsg")
 
 ;;; Burrow
 (define-key *top-map* (kbd "s-w") "exec burrow ~/.burrow/quick-launch")
