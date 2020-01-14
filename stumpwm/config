@@ -126,6 +126,10 @@
   ;; This is interesting with regards to color escape sequences:
   *startup-message*)
 
+;;; Spawn
+
+(define-key *root-map* (kbd "t") "exec tileterm")
+
 ;;; Groups
 
 ;; TODO Map Super+Enter to open ink:zepp
