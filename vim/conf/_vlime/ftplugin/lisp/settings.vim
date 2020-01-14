@@ -1,4 +1,4 @@
-let g:vlime_cl_impl = 'ccl'
+let g:vlime_cl_impl = 'sbcl'
 let g:vlime_window_settings = {
         \ 'repl': {
             \ 'size': 17,
