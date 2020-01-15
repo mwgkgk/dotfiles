@@ -200,3 +200,9 @@
      ("e" . ("S-TAB" "Down" "n"))
 
      ("v" . ("Down" "Down" "Down" "Down" "Down")))))
+
+
+;;; Rules
+
+(setf *suppress-deny-messages* t)
+(push '(:instance "Navigator") *deny-raise-request*)
