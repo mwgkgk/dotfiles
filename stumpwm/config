@@ -120,7 +120,12 @@
 
 (set-focus-color "#87d700")
 (setf *normal-border-width* 1)
-(setf *window-border-style* :tight)
+(setf *window-border-style* :thin)
+
+#+nil
+(progn
+  (sync-all-frame-windows (current-group))
+  (mapcar #'sync-all-frame-windows (screen-groups (current-screen))))
 
 #+nil
 (progn
