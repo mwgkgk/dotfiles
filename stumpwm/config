@@ -134,6 +134,9 @@
 (define-key *root-map* (kbd "i") "show-window-properties")
 (define-key *root-map* (kbd "I") "info")
 
+;; Hide the message (by displaying frame indicator)
+(define-key *root-map* (kbd "RET") "curframe")
+
 
 ;;; Mouse
 (setf *mouse-focus-policy* :sloppy)
