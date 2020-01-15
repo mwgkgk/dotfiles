@@ -78,13 +78,15 @@
 
 ;;; Groups
 (define-key *root-map* (kbd "c") "gnew")
-(define-key *root-map* (kbd "s-space") "grouplist")
 (define-key *root-map* (kbd "space") "groups")
+(define-key *root-map* (kbd "s-space") "gother")
 (define-key *root-map* (kbd ",") "grename")
+
+(define-key *top-map* (kbd "s-TAB") "grouplist")
+
 (define-key *groups-map* (kbd "c") "gkill")
 (define-key *groups-map* (kbd "C") "kill-windows-current-group")
 (define-key *groups-map* (kbd "C") "kill-windows-other")
-(define-key *top-map* (kbd "s-TAB") "gother")
 
 (define-key *root-map* (kbd "1") "gselect 1")
 (define-key *root-map* (kbd "2") "gselect 2")
