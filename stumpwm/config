@@ -177,6 +177,9 @@
 
 ;;; Overlays
 
+;; Circumvent remapped keys
+(define-key *root-map* (kbd "s") "send-raw-key")
+
 ;; TODO Map keys to functions
 ;; TODO Wrapper function to send keys with a delay
 ;; TODO x: thunderbird-open-link
