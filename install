@@ -102,6 +102,9 @@ verbose_link "$DOTFILES/x11/.xinitrc" ~/.xinitrc
 verbose_link "$DOTFILES/x11/.Xdefaults" ~/.Xdefaults
 verbose_link "$DOTFILES/x11/.Xresources" ~/.Xresources
 
+# StumpWM
+verbose_link "$DOTFILES/stumpwm/" ~/.config/stumpwm
+
 # Sxhkd
 verbose_link "$DOTFILES/sxhkd/sxhkdrc" ~/.config/sxhkd/sxhkdrc
 
