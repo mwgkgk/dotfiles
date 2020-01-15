@@ -145,6 +145,7 @@
 
 ;;; Groups
 
+;; Hmm: doesn't seem to work
 (setf *default-group-name* "departure")
 
 ;; TODO Map Super+Enter to open ink:zepp
