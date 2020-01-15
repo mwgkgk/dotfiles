@@ -209,3 +209,6 @@
 
 (setf *suppress-deny-messages* t)
 (push '(:instance "Navigator") *deny-raise-request*)
+
+(define-frame-preference "ink"
+  (0 t t :class "URxvt" :instance "zepp"))
