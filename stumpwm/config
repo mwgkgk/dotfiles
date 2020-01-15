@@ -7,34 +7,31 @@
             :port 44820
             :backend :vlime-usocket)
 
+
 ;;; Root prefix
 (set-prefix-key (kbd "s-space"))
 
-;; Esc on C-;
+
+;;; Esc on C-;
 (define-key *top-map* (kbd "C-semicolon") "meta Escape")
 
-;;; Frame navigation:
+
+;;; Help
+(define-key *root-map* (kbd "k") "describe-key")
+
+
+;;; Frames
+
+;; Frame numbers:
+(setf *frame-number-map* "123456789abcdefghijklmnopqrstuvxwyz")
+
+;; Frame navigation:
 (define-key *top-map* (kbd "s-k") "move-focus up")
 (define-key *top-map* (kbd "s-j") "move-focus down")
 (define-key *top-map* (kbd "s-h") "move-focus left")
 (define-key *top-map* (kbd "s-l") "move-focus right")
 
-; (define-key *root-map* (kbd "k") "move-focus up")
-; (define-key *root-map* (kbd "j") "move-focus down")
-; (define-key *root-map* (kbd "h") "move-focus left")
-; (define-key *root-map* (kbd "l") "move-focus right")
-
-(define-key *root-map* (kbd "k") "describe-key")
-
-(define-key *top-map* (kbd "s-C-k") "move-window up")
-(define-key *top-map* (kbd "s-C-j") "move-window down")
-(define-key *top-map* (kbd "s-C-h") "move-window left")
-(define-key *top-map* (kbd "s-C-l") "move-window right")
-
-;;; Frame numbers:
-(setf *frame-number-map* "123456789abcdefghijklmnopqrstuvxwyz")
-
-;;; Fselect:
+;; Fselect:
 (define-key *top-map* (kbd "s-1") "fselect 1")
 (define-key *top-map* (kbd "s-2") "fselect 2")
 (define-key *top-map* (kbd "s-3") "fselect 3")
@@ -45,28 +42,37 @@
 (define-key *top-map* (kbd "s-8") "fselect 8")
 (define-key *top-map* (kbd "s-9") "fselect 9")
 
-;;; Creating frames
+;; Creating frames
 (define-key *root-map* (kbd "N") "hsplit")
 (define-key *root-map* (kbd "n") "vsplit")
 
-;;; Remove split
+;; Remove split
 (define-key *root-map* (kbd "q") "remove-split")
 
-;;; Kill program
+;; Balance frames
+(define-key *root-map* (kbd "=") "balance-frames")
+
+
+;;; Windows
+
+;; Move windows:
+(define-key *top-map* (kbd "s-C-k") "move-window up")
+(define-key *top-map* (kbd "s-C-j") "move-window down")
+(define-key *top-map* (kbd "s-C-h") "move-window left")
+(define-key *top-map* (kbd "s-C-l") "move-window right")
+
+;; Kill program
 (define-key *top-map* (kbd "s-Escape") "delete-window")
-;;; Kill -9
+;; Kill -9
 (define-key *top-map* (kbd "s-S-Escape") "kill-window")
-;;; Wother
+;; Wother
 (define-key *top-map* (kbd "M-TAB") "other-window")
 
-;;; Prev/next in-frame
+;; Prev/next in-frame
 (define-key *top-map* (kbd "s-p") "prev-in-frame")
 (define-key *top-map* (kbd "s-n") "next-in-frame")
 
-;;; Balance frames
-(define-key *root-map* (kbd "=") "balance-frames")
-
-;;; Frame-window lists
+;; Frame-window lists
 (define-key *top-map* (kbd "s-O") "frame-windows")
 (define-key *root-map* (kbd "o") "frame-windowlist")
 (define-key *top-map* (kbd "s-o") "vgroups")
@@ -76,7 +82,12 @@
   ;; Windowlist format:
   *window-format*)
 
+
 ;;; Groups
+
+;; Hmm: doesn't seem to work:
+(setf *default-group-name* "departure")
+
 (define-key *root-map* (kbd "c") "gnew")
 (define-key *root-map* (kbd "space") "groups")
 (define-key *root-map* (kbd "s-space") "gother")
@@ -109,27 +120,28 @@
 (define-key *root-map* (kbd "s-9") "gselect 9")
 
 
-;;; Info
-(define-key *root-map* (kbd "i") "show-window-properties")
-(define-key *root-map* (kbd "I") "info")
-
-;;; Redisplay last message:
-(define-key *top-map* (kbd "s-Up") "lastmsg")
-
-;;; Burrow
-(define-key *top-map* (kbd "s-w") "exec burrow ~/.burrow/quick-launch")
-
-;;; Config
-(setf *mouse-focus-policy* :sloppy)
-
-;; Colors
-(set-font "-*-hack-medium-r-*-*-11-*-*-*-*-*-*-*")
-(setf *text-color* "#ffff87") ; This one doesn't work.
+;;; Messages
 
 (set-border-color "#87d700")
 (setf *message-window-gravity* :center)
 (setf *input-window-gravity* :center)
 (setf *suppress-frame-indicator* t)
+
+;; Redisplay last message:
+(define-key *top-map* (kbd "s-Up") "lastmsg")
+
+;; Info
+(define-key *root-map* (kbd "i") "show-window-properties")
+(define-key *root-map* (kbd "I") "info")
+
+
+;;; Mouse
+(setf *mouse-focus-policy* :sloppy)
+
+
+;;; Font & Borders
+(set-font "-*-hack-medium-r-*-*-11-*-*-*-*-*-*-*")
+(setf *text-color* "#ffff87") ; This one doesn't work.
 
 (set-focus-color "#87d700")
 (setf *normal-border-width* 1)
@@ -152,16 +164,12 @@
   ;; This is interesting with regards to color escape sequences:
   *startup-message*)
 
+
 ;;; Spawn
 
+(define-key *top-map* (kbd "s-w") "exec burrow ~/.burrow/quick-launch")
+
 (define-key *root-map* (kbd "t") "exec tileterm")
-
-;;; Groups
-
-;; Hmm: doesn't seem to work
-(setf *default-group-name* "departure")
-
-;; TODO Map Super+Enter to open ink:zepp
 
 
 ;;; Overlays
