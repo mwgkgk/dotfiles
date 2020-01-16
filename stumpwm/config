@@ -178,6 +178,35 @@
 (define-key *root-map* (kbd "t") "exec tileterm")
 
 
+;;; Commands
+
+(defcommand split-run (direction split-percentage shell-command)
+    ((:direction "Enter direction:")
+     (:number "Enter split %:")
+     ;; TODO is this :shell or :rest?
+     (:shell "Enter shell command:"))
+  ;; TODO use actual direction, percentage, shell command
+  (run-commands "vsplit"))
+
+
+;;; Leader
+
+;; TODO refactor it to define inplace, because defvars are not meant for reev
+(defvar *leader-map*
+  (let ((m (make-sparse-keymap)))
+    (define-key m (kbd "s-semicolon") "colon")
+    (define-key m (kbd "s-space") '*leader-space-map*)
+    (define-key m (kbd "s-n") "split-run down 50 tileterm Vim")
+    m))
+
+(define-key *top-map* (kbd "s-semicolon") '*leader-map*)
+
+(defvar *leader-space-map*
+  (let ((m (make-sparse-keymap)))
+    (define-key m (kbd "s-n") "split-run down 50 tileterm")
+    m))
+
+
 ;;; Overlays
 
 ;; Circumvent remapped keys
