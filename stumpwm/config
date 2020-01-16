@@ -133,12 +133,12 @@
 ;; Redisplay last message:
 (define-key *top-map* (kbd "s-Up") "lastmsg")
 
+;; Hide the message (by displaying frame indicator)
+(define-key *top-map* (kbd "s-Left") "curframe")
+
 ;; Info
 (define-key *root-map* (kbd "i") "show-window-properties")
 (define-key *root-map* (kbd "I") "info")
-
-;; Hide the message (by displaying frame indicator)
-(define-key *root-map* (kbd "RET") "curframe")
 
 
 ;;; Mouse
