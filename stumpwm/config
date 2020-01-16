@@ -25,6 +25,9 @@
 ;; Frame numbers:
 (setf *frame-number-map* "123456789abcdefghijklmnopqrstuvxwyz")
 
+;; Don't pull windows into new frames:
+(setf *new-frame-action* :empty)
+
 ;; Frame navigation:
 (define-key *top-map* (kbd "s-k") "move-focus up")
 (define-key *top-map* (kbd "s-j") "move-focus down")
