@@ -32,7 +32,6 @@ _     _     _                 _             _    _    _    _             _    _ 
 @a3 = C-rght
 @a4 = C-del
 @a5 = S-tab
-@a7 = C-f1
 
 
 SRC
@@ -109,7 +108,7 @@ LAYER Burglar
     - Some are unique offerings, e.g. <B-v> to paste X selection.
     - <B-hjkl> to access arrows.
 */
-_    @a7  _    _    _    _    _    _    _    _    _    _    _            _    _    _
+_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
 _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
 _     K    @a1  end  J    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
 ret    home down pgdn @a3  _    left down up   rght _    _    _                             _       _       _
