@@ -104,6 +104,7 @@ snippet ( "(" i
 ~(${0:~a${VISUAL}}~)
 endsnippet
 
+
 # StumpWM
 
 snippet k "define-key-top" b
@@ -116,4 +117,15 @@ endsnippet
 
 snippet kr "define-key-root" b
 (define-key *root-map* (kbd "${1:k}") "${2:move-focus up}")
+endsnippet
+
+snippet sk "sparse-keymap" b
+(defvar *${1:leader}-$2map*
+  (let ((m (make-sparse-keymap)))
+		$3
+		m))
+endsnippet
+
+snippet km "sparse-keymap map" b
+(define-key m (kbd "${1:k}") "${2:move-focus up}")
 endsnippet
