@@ -58,6 +58,9 @@
 ;; Balance frames
 (define-key *root-map* (kbd "=") "balance-frames")
 
+;; Only frame:
+(define-key *top-map* (kbd "s-S-SPC") "only")
+
 
 ;;; Windows
 
