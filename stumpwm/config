@@ -86,6 +86,7 @@
 ;; Prev/next in-frame
 (define-key *top-map* (kbd "s-p") "prev-in-frame")
 (define-key *top-map* (kbd "s-n") "next-in-frame")
+;; TODO prev/next hidden window regardless of frame
 
 ;; Frame-window lists
 (define-key *top-map* (kbd "s-O") "frame-windows")
