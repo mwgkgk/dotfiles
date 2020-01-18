@@ -49,10 +49,10 @@
 (define-key *top-map* (kbd "s-9") "fselect 9")
 
 ;; Creating frames
-(define-key *root-map* (kbd "N") "hsplit")
-(define-key *root-map* (kbd "s-N") "hsplit")
-(define-key *root-map* (kbd "n") "vsplit")
-(define-key *root-map* (kbd "s-n") "vsplit")
+(define-key *root-map* (kbd "N") "split-run right 50 tileterm Vim")
+(define-key *root-map* (kbd "s-N") "split-run right 50 tileterm Vim")
+(define-key *root-map* (kbd "n") "split-run down 50 tileterm Vim")
+(define-key *root-map* (kbd "s-n") "split-run down 50 tileterm Vim")
 
 ;; Remove split
 (define-key *root-map* (kbd "q") "remove-split")
@@ -241,7 +241,10 @@
   (let ((m (make-sparse-keymap)))
     (define-key m (kbd "s-semicolon") "colon")
     (define-key m (kbd "s-space") '*leader-space-map*)
-    (define-key m (kbd "s-n") "split-run down 50 tileterm Vim")
+    (define-key m (kbd "s-n") "vsplit")
+    (define-key m (kbd "n") "vsplit")
+    (define-key m (kbd "s-N") "hsplit")
+    (define-key m (kbd "N") "hsplit")
     (define-key m (kbd "s-quoteright") "run-shell-echo")
     m))
 
