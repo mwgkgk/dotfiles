@@ -129,3 +129,9 @@ endsnippet
 snippet km "sparse-keymap map" b
 (define-key m (kbd "${1:k}") "${2:move-focus up}")
 endsnippet
+
+snippet cmd "defcommand" b
+(defcommand ${1:cmd} (${2:arg})
+	((:${3:shell} "${4:Enter shell command}:")$5)
+	$6)
+endsnippet
