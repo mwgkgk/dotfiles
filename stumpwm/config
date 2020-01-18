@@ -200,8 +200,6 @@
 
 (setf *screen-mode-line-format* "%n %W^>%d")
 ;; TODO investigate urxvt crash on maximize with mode-line-border-width 0
-;; TODO Add command to set *debug-level* to 7 and redirect-all-output
-;; See https://github.com/stumpwm/stumpwm/issues/144#issuecomment-55866130
 ;; TODO Part of the mode-line-border-width problem is busy port upon restart
 ;; Unfortunately cannot find where I've seen the freeport:freeport facility.
 ;; This would however only be a bandaid fix, because the busy-port problem is
@@ -211,6 +209,20 @@
 (setf *mode-line-border-color* "#1A1A1A")
 (setf *mode-line-background-color* "#000000")
 (setf *mode-line-foreground-color* "#777777")
+
+
+;;; Debug
+
+(defcommand debug-mode (enable)
+  ((:y-or-n "Enable debug mode? (Y/n)"))
+  (if enable
+    (progn
+      (setf *debug-level* 7)
+      (redirect-all-output (data-dir-file "debug-output" "txt")))
+    (progn
+      ;; TODO Unclear how to also revert the effects of redirect-all-output
+      (setf *debug-level* 0))))
+
 
 ;;; Spawn
 
