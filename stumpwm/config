@@ -28,6 +28,9 @@
 ;; Don't pull windows into new frames:
 (setf *new-frame-action* :empty)
 
+;; Supress frame indicator:
+(setf *suppress-frame-indicator* t)
+
 ;; Frame navigation:
 (define-key *top-map* (kbd "s-k") "move-focus up")
 (define-key *top-map* (kbd "s-j") "move-focus down")
@@ -123,15 +126,17 @@
 (define-key *root-map* (kbd "s-9") "gselect 9")
 
 
-;;; Messages
+;;; Message window
 
-(set-border-color "#87d700")
+(set-font "-*-hack-medium-r-*-*-11-*-*-*-*-*-*-*")
+(set-fg-color "#F7DC75")
+(set-border-color "#6F9D7F")
+
 (setf *message-window-gravity* :center)
-(setf *input-window-gravity* :center)
-(setf *suppress-frame-indicator* t)
 
 ;; Redisplay last message:
 (define-key *top-map* (kbd "s-Up") "lastmsg")
+;; TODO Complementary nextmsg
 
 ;; Hide the message (by displaying frame indicator)
 (define-key *top-map* (kbd "s-Left") "curframe")
@@ -141,15 +146,23 @@
 (define-key *root-map* (kbd "I") "info")
 
 
+;;; Input window
+
+(setf *input-window-gravity* :center)
+(setf *input-history-ignore-duplicates* t)
+
+(define-key *input-map* (kbd "C-w") 'input-backward-kill-word)
+(define-key *input-map* (kbd "C-j") 'input-complete-forward)
+(define-key *input-map* (kbd "C-k") 'input-complete-backward)
+
+
 ;;; Mouse
 (setf *mouse-focus-policy* :sloppy)
 
 
-;;; Font & Borders
-(set-font "-*-hack-medium-r-*-*-11-*-*-*-*-*-*-*")
-(setf *text-color* "#ffff87") ; This one doesn't work.
+;;; Window borders
 
-(set-focus-color "#87d700")
+(set-focus-color "#6F9D7F")
 (setf *normal-border-width* 1)
 (setf *window-border-style* :thin)
 
