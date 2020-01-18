@@ -217,10 +217,18 @@
 (defcommand split-run (direction split-percentage shell-command)
     ((:direction "Enter direction:")
      (:number "Enter split %:")
-     ;; TODO is this :shell or :rest?
+     ;; todo is this :shell or :rest?
      (:shell "Enter shell command:"))
-  ;; TODO use actual direction, percentage, shell command
+  ;; todo use actual direction, percentage, shell command
   (run-commands "vsplit"))
+
+(defcommand run-shell-echo (cmd)
+  ((:shell "Enter shell command:"))
+  (if (plusp (length cmd)) (echo (run-shell-command cmd t))))
+
+#+nil
+(progn
+  (echo (run-shell-command "gmt" t)))
 
 
 ;;; Leader
@@ -231,6 +239,7 @@
     (define-key m (kbd "s-semicolon") "colon")
     (define-key m (kbd "s-space") '*leader-space-map*)
     (define-key m (kbd "s-n") "split-run down 50 tileterm Vim")
+    (define-key m (kbd "s-quoteright") "run-shell-echo")
     m))
 
 (define-key *top-map* (kbd "s-semicolon") '*leader-map*)
