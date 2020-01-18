@@ -187,6 +187,17 @@
   *startup-message*)
 
 
+;;; Mode Line
+
+(define-key *top-map* (kbd "s-B") "mode-line")
+
+(setf *screen-mode-line-format* "%n %W^>%d")
+;; Border width zero causes crash on new windows/frame resize, unforch:
+(setf *mode-line-border-width* 1)
+(setf *mode-line-border-color* "#1A1A1A")
+(setf *mode-line-background-color* "#000000")
+(setf *mode-line-foreground-color* "#777777")
+
 ;;; Spawn
 
 (define-key *top-map* (kbd "s-w") "exec burrow ~/.burrow/quick-launch")
