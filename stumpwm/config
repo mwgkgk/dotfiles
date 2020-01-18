@@ -273,6 +273,19 @@
     m))
 
 
+;;; Browser-leader
+
+(define-key *top-map*
+            (kbd "s-e") 
+            (let ((m (make-sparse-keymap)))
+              ;; TODO make a macro to generate these 4 lines (plus others)
+              (define-key m (kbd "n") "split-run down 50 firefox-default")
+              (define-key m (kbd "S-n") "split-run down 50 firefox-default")
+              (define-key m (kbd "N") "split-run right 50 firefox-default")
+              (define-key m (kbd "s-N") "split-run right 50 firefox-default")
+              m))
+
+
 ;;; Overlays
 
 ;; Circumvent remapped keys
