@@ -50,7 +50,9 @@
 
 ;; Creating frames
 (define-key *root-map* (kbd "N") "hsplit")
+(define-key *root-map* (kbd "s-N") "hsplit")
 (define-key *root-map* (kbd "n") "vsplit")
+(define-key *root-map* (kbd "s-n") "vsplit")
 
 ;; Remove split
 (define-key *root-map* (kbd "q") "remove-split")
