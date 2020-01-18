@@ -218,15 +218,29 @@
 ;;; Commands
 
 (defcommand split-run (direction split-percentage shell-command)
-    ((:direction "Enter direction:")
-     (:number "Enter split %:")
-     ;; todo is this :shell or :rest?
-     (:shell "Enter shell command:"))
-  ;; todo use actual direction, percentage, shell command
-  (run-commands "vsplit"))
+    ((:direction "Enter direction: ")
+     (:number "Enter split percentage: ")
+     (:shell "Enter shell command: "))
+  (let*
+    ;; TODO implement left, up (prob using exchange-direction)
+    ((direction-map '((:up . "vsplit")
+                      (:down . "vsplit")
+                      (:left . "hsplit")
+                      (:right . "hsplit")))
+     (split-cmd (format nil "~a ~d"
+                        (cdr (assoc direction direction-map))
+                        (- 1 (/ 1 (/ 100 split-percentage))))))
+    (run-commands split-cmd
+                  "fother"
+                  (format nil "exec ~a" shell-command))))
+
+#+nil
+(progn
+  (format nil "vsplit ~d" (- 1 (/ 1 (/ 100 20))))
+  (run-commands "split-run right 50 tileterm vifm"))
 
 (defcommand run-shell-echo (cmd)
-  ((:shell "Enter shell command:"))
+  ((:shell "Enter shell command: "))
   (if (plusp (length cmd)) (echo (run-shell-command cmd t))))
 
 #+nil
@@ -253,6 +267,9 @@
 (defvar *leader-space-map*
   (let ((m (make-sparse-keymap)))
     (define-key m (kbd "s-n") "split-run down 50 tileterm")
+    (define-key m (kbd "n") "split-run down 50 tileterm")
+    (define-key m (kbd "s-N") "split-run right 50 tileterm")
+    (define-key m (kbd "N") "split-run right 50 tileterm")
     m))
 
 
