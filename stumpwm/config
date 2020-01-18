@@ -56,6 +56,7 @@
 
 ;; Remove split
 (define-key *root-map* (kbd "q") "remove-split")
+(define-key *top-map* (kbd "s-q") "remove-split")
 
 ;; Balance frames
 (define-key *root-map* (kbd "=") "balance-frames")
