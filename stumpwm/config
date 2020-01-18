@@ -192,7 +192,14 @@
 (define-key *top-map* (kbd "s-B") "mode-line")
 
 (setf *screen-mode-line-format* "%n %W^>%d")
-;; Border width zero causes crash on new windows/frame resize, unforch:
+;; TODO investigate urxvt crash on maximize with mode-line-border-width 0
+;; TODO Add command to set *debug-level* to 7 and redirect-all-output
+;; See https://github.com/stumpwm/stumpwm/issues/144#issuecomment-55866130
+;; TODO Part of the mode-line-border-width problem is busy port upon restart
+;; Unfortunately cannot find where I've seen the freeport:freeport facility.
+;; This would however only be a bandaid fix, because the busy-port problem is
+;; happening even if vlime is not connected. Which means it's still busy from
+;; ourselves. Perhaps we can kill it after/before restart in a callback.
 (setf *mode-line-border-width* 1)
 (setf *mode-line-border-color* "#1A1A1A")
 (setf *mode-line-background-color* "#000000")
