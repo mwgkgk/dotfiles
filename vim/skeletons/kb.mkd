@@ -2,25 +2,10 @@
 vim: foldmethod=marker foldlevel=0 
 }}}
 
-# #############
-# Story Queue #
-# #############
-
-{{{
-}}}
-
-# ##########
-# Research #
-# ##########
-
-# #####
-# Dev #
-# #####
+# Preparatory Research
 
 
-# ######
-# Done #
-# ######
+# Early Deploy
 
-{{{
-}}}
+
+# Bright Future
