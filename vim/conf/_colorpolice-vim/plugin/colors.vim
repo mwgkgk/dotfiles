@@ -91,9 +91,9 @@ let s:static_colo = 'hawk'
 " let s:static_colo = 'gruvbox-dark'
 
 " gui {{{
-let s:gui_colo = 'freya'
+" let s:gui_colo = 'freya'
 " let s:gui_colo = 'pyte'
-" let s:gui_colo = 'seoul256'
+let s:gui_colo = 'seoul256'
 " let s:gui_colo = 'seoul256-light'
 " let s:gui_colo = 'hybrid'
 " let s:gui_colo = 'sceaduhelm'
