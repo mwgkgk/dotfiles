@@ -20,7 +20,7 @@
 " let s:static_colo = 'farout'
 " let s:static_colo = 'autumn'
 " let s:static_colo = 'shady'
-let s:static_colo = 'hawk'
+" let s:static_colo = 'hawk'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
@@ -86,7 +86,7 @@ let s:static_colo = 'hawk'
 " let s:static_colo = 'lucius-dark'
 " let s:static_colo = 'luciusmod'
 
-" let s:static_colo = 'morning'
+let s:static_colo = 'morning'
 
 " let s:static_colo = 'gruvbox-dark'
 
