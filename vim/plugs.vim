@@ -452,6 +452,13 @@ nnoremap <Space><Leader> :call deoplete#toggle()<CR>
 
 " inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 " }}}
+Plug 'Shougo/echodoc.vim' " {{{
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type = 'popup'
+" To use a custom highlight for the popup window,
+" change Pmenu to your highlight group
+highlight link EchoDocPopup Pmenu
+" }}}
 
 Plug 'skywind3000/asyncrun.vim' " {{{
 nnoremap <Leader>r<Space> :AsyncRun<Space>
@@ -1072,6 +1079,9 @@ Plug 'mwgkgk/lux-vim', { 'for' : 'lux' }
 
 " ATS
 Plug 'vmchale/ats-vim', { 'for' : 'ats' }
+
+" Vimscript
+Plug 'fcpg/vim-complimentary', { 'for' : 'vim' }
 
 " Local
 if filereadable(glob("~/.local.plugs.vimrc")) 
