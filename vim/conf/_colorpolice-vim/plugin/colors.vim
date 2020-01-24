@@ -3,7 +3,7 @@
 " }}}
 
 " let s:static_colo = 'industry'
-" let s:static_colo = '256-jungle'
+let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
 " let s:static_colo = 'mayansmokemod'
 " let s:static_colo = 'badwolf'
@@ -86,7 +86,7 @@
 " let s:static_colo = 'lucius-dark'
 " let s:static_colo = 'luciusmod'
 
-let s:static_colo = 'morning'
+" let s:static_colo = 'morning'
 
 " let s:static_colo = 'gruvbox-dark'
 
