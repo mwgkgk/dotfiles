@@ -769,10 +769,10 @@ nnoremap <Leader><LocalLeader> :Gstatus<CR>
 
 nnoremap <Leader>D :Gvdiff<CR>
 
-command! GCurrent :exe "Gcommit -q %:p"
+command! GCurrent :exe "Git commit -q %:p"
 nnoremap <Leader>hC :GCurrent<CR>
 
-command! GCurrentT :exe "Gcommit -v -q %:p"
+command! GCurrentT :exe "Git commit -v -q %:p"
 nnoremap <Leader>C :GCurrentT<CR>
 
 " Slap date:
@@ -787,18 +787,18 @@ nnoremap <Leader>hd :GCurrent<CR>i<C-r>=system('date-utc <bar> tr -d "\n"')<CR><
 " endfunction
 
 " Add
-nnoremap <Leader>ha :let @"=expand("%")<CR>:!git add %<CR>:GCurrent<CR>iAdd <C-r>"<Esc>
+nnoremap <Leader>ha :G add %<CR>:G commit %:p -e -m "Add <C-r>=expand("%")<CR>"<CR>
 
 " With preview
-command! GAllPreview :silent exe "Git add ." | :silent exe "Gcommit -v -q -a"
+command! GAllPreview :silent exe "Git add ." | :silent exe "Git commit -v -q -a"
 nnoremap <Leader>hA :GAllPreview<CR>
 
 " Quick version: (LeaderLeader too busy atm)
-" command! GAll :silent exe "Git add ." | :silent exe "Gcommit -q -a"
+" command! GAll :silent exe "Git add ." | :silent exe "Git commit -q -a"
 " nnoremap <Leader><Leader> :GAll<CR>
 
-nnoremap <Leader>hv :Gcommit -v<CR>
-nmap <Leader>hc <Plug>(GitGutterStageHunk):Gcommit -v<CR>
+nnoremap <Leader>hv :Git commit -v<CR>
+nmap <Leader>hc <Plug>(GitGutterStageHunk):Git commit -v<CR>
 
 " Git reset:
 command! GReset :ProjectRootExe :AsyncRun git reset
@@ -874,11 +874,11 @@ nnoremap <Leader>gs :!git commit --amend --no-edit<CR>
 nmap <Leader>hs <Plug>(GitGutterStageHunk):!git commit --amend --no-edit<CR>
 
 " LeaderLeader to stage hunk and commit: (requires vim-fugitive)
-autocmd plugs FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
-autocmd plugs FileType jiv,lisp,clojure nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>(GitGutterStageHunk):Gcommit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
+autocmd plugs FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>(GitGutterStageHunk):Git commit<CR>p:wq<CR><Space>
+autocmd plugs FileType jiv,lisp,clojure nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>(GitGutterStageHunk):Git commit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
 
 " Stage hunk & commit with message from the unnamed register
-autocmd plugs FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Gcommit<CR>p:wq<CR><Space>
+autocmd plugs FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Git commit<CR>p:wq<CR><Space>
 " }}}
 
 Plug 'rbong/vim-flog' " {{{
