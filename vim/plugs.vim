@@ -1089,6 +1089,9 @@ Plug 'vmchale/ats-vim', { 'for' : 'ats' }
 " Vimscript
 Plug 'fcpg/vim-complimentary', { 'for' : 'vim' }
 
+" Auto-insert a leading backslash in Vimscript:
+Plug 'lambdalisue/vim-backslash', { 'for' : 'vim' }
+
 " Local
 if filereadable(glob("~/.local.plugs.vimrc")) 
     source ~/.local.plugs.vimrc
