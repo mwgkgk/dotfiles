@@ -151,3 +151,8 @@ nnoremap sT :call fzf#run(fzf#wrap(fzf#vim#with_preview({
 nnoremap sY :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'syntax/**/' . &ft . '/*')) + split(globpath(&rtp, 'syntax/**/' . &ft . '.vim')),
             \ })))<CR>
+
+" Select from all syntax plugins:
+nnoremap svS :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+            \ 'source': split(globpath(&rtp, 'syntax/*')),
+            \ })))<CR>
