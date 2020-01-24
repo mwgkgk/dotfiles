@@ -146,3 +146,8 @@ nnoremap sK :call fzf#run(fzf#wrap(fzf#vim#with_preview({
 nnoremap sT :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'ftplugin/**/' . &ft . '/*')) + split(globpath(&rtp, 'ftplugin/**/' . &ft . '.vim')),
             \ })))<CR>
+
+" Edit syntax plugins for current extension:
+nnoremap sY :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+            \ 'source': split(globpath(&rtp, 'syntax/**/' . &ft . '/*')) + split(globpath(&rtp, 'syntax/**/' . &ft . '.vim')),
+            \ })))<CR>
