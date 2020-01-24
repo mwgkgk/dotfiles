@@ -229,7 +229,7 @@ filetype *.html,*.htm v "%f", firefox-default %f &,links,mozilla,uzbl-browser %f
 filetype *.o nm %f | less
 
 " Image
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.webp
         \ {View in sxiv}
         \ sxiv,
         \ {View in gpicview}
