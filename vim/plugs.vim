@@ -856,6 +856,7 @@ nmap <Leader>hp <Plug>(GitGutterStageHunk)
 nmap <Leader>hh <Plug>(GitGutterStageHunk):GCurrentT<CR>
 
 " Git-back
+" TODO don't go further back than the origin
 nnoremap <Leader>gb :!git back<CR>
 
 " Git-mes
