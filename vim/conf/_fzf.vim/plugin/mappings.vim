@@ -141,3 +141,8 @@ nnoremap sk :call fzf#run(fzf#wrap(fzf#vim#with_preview({
 nnoremap sK :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'skeletons/*')),
             \ })))<CR>
+
+" Edit ftplugins for current extension:
+nnoremap sT :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+            \ 'source': split(globpath(&rtp, 'ftplugin/**/' . &ft . '/*')) + split(globpath(&rtp, 'ftplugin/**/' . &ft . '.vim')),
+            \ })))<CR>
