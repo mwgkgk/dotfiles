@@ -27,4 +27,4 @@ command! -bang -nargs=* RgWithIgnore call fzf#vim#grep('rg --column --line-numbe
 command! -bang -nargs=* RgFt call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --glob "*.' . expand('%:e') . '" --color "always" "" '. <q-args> . '| tr -d "\017"', 1, <bang>0)
 
 " Select from Git modified files:
-command! FzfGitModified call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --modified'}))
+command! FzfGitModified call fzf#run(fzf#wrap(fzf#vim#with_preview({'source': 'git ls-files --exclude-standard --others --modified'})))
