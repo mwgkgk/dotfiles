@@ -497,6 +497,16 @@ inoremap <C-r>w <Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>'[=']
 inoremap <C-r>r <Esc>:set paste<CR>i<C-r>*<Esc>:set nopaste<CR>'[=']
 inoremap <C-r>e <Esc>:set paste<CR>i<C-r>+<Esc>:set nopaste<CR>'[=']
 
+" Easier <C-r> mappings:
+inoremap <C-r><C-a> <C-r>a
+cnoremap <C-r><C-a> <C-r>a
+inoremap <C-r><C-s> <C-r>s
+cnoremap <C-r><C-s> <C-r>s
+inoremap <C-r><C-d> <C-r>d
+cnoremap <C-r><C-d> <C-r>d
+inoremap <C-r><C-f> <C-r>f
+cnoremap <C-r><C-f> <C-r>f
+
 " Paste replacing line:
 nnoremap <Leader>p "_ddP
 vnoremap <Leader>p "_dP
