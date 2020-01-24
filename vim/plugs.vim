@@ -817,7 +817,6 @@ nnoremap <Leader>hr :GReset<CR>:e!<CR>za
 " :Glog --Sfindme --
 " :Glog --Sfindme -- %
 " }}}
-Plug 'tpope/vim-scriptease'
 
 Plug 'airblade/vim-gitgutter' " {{{
 
@@ -1088,11 +1087,20 @@ Plug 'mwgkgk/lux-vim', { 'for' : 'lux' }
 " ATS
 Plug 'vmchale/ats-vim', { 'for' : 'ats' }
 
-" Vimscript
+
+" ||
+" || Vimscript
+" ||
+
+" {{{
+Plug 'tpope/vim-scriptease'
+
 Plug 'fcpg/vim-complimentary', { 'for' : 'vim' }
 
 " Auto-insert a leading backslash in Vimscript:
 Plug 'lambdalisue/vim-backslash', { 'for' : 'vim' }
+" }}}
+
 
 " Local
 if filereadable(glob("~/.local.plugs.vimrc")) 
