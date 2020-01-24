@@ -132,7 +132,12 @@ nnoremap s<Tab> :FzfSnippets<CR>
 inoremap <C-g><Tab> <C-o>:FzfSnippets<CR>
 
 " Replace with skeleton:
-nnoremap sk :call fzf#run(fzf#wrap({
-    \   'dir':'~/.vim/skeletons', 
-    \   'sink':'%!cat'
-    \ }))<CR>
+nnoremap sk :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+            \ 'source': split(globpath(&rtp, 'skeletons/*')),
+            \ 'sink': '%!cat'
+            \ })))<CR>
+
+" Edit a skeleton:
+nnoremap sK :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+            \ 'source': split(globpath(&rtp, 'skeletons/*')),
+            \ })))<CR>
