@@ -1,5 +1,7 @@
 " vim: foldmethod=marker foldlevel=0
 
+" Big Refactor still in progress.
+
 scriptencoding utf-8
 
 call plug#begin('~/.vim/plugs')
