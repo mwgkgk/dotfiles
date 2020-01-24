@@ -44,28 +44,28 @@ endfunction
 
 function! files#edit_creating(...)
     for file in a:000
-        call files#api#ensure_directories_exist(file)
+        call dirs#ensure_directories_exist(file)
     endfor
     return call('files#edit_multiple', a:000)
 endfunction
 
 function! files#split_creating(...)
     for file in a:000
-        call files#api#ensure_directories_exist(file)
+        call dirs#ensure_directories_exist(file)
     endfor
     return call('files#split_multiple', a:000)
 endfunction
 
 function! files#vsplit_creating(...)
     for file in a:000
-        call files#api#ensure_directories_exist(file)
+        call dirs#ensure_directories_exist(file)
     endfor
     return call('files#vsplit_multiple', a:000)
 endfunction
 
 function! files#force_split_creating(...)
     for file in a:000
-        call files#api#ensure_directories_exist(file)
+        call dirs#ensure_directories_exist(file)
     endfor
     return call('files#force_split_multiple', a:000)
 endfunction

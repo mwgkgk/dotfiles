@@ -17,7 +17,7 @@ function! files#conf#new(pkg_name)
 
         write
 
-        call files#api#ensure_directories_exist(l:in)
+        call dirs#ensure_directories_exist(l:in)
 
         execute 'split' . l:in
     endif

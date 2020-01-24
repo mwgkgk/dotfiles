@@ -1,4 +1,4 @@
-function! files#api#ensure_directories_exist(filepath)
+function! dirs#ensure_directories_exist(filepath)
     if isdirectory(a:filepath)
         " Both /usr/bin and /usr/bin/ are isdirectory().
         " fnamemodify(':h') treats trailing slash as significant, however it
