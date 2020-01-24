@@ -229,6 +229,11 @@ let g:patternjump_patterns = {
         \     'tail' : ['^\(#\|>\)'],
         \     }
         \   },
+        \ 'mj' : {
+        \   'nox' : {
+        \     'tail' : ['^\(#\|>\)'],
+        \     }
+        \   },
         \ 'vim' : {
         \   'nox' : {
         \     'tail' : ['^Plug.*'],
