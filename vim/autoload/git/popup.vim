@@ -6,13 +6,15 @@ function! git#popup#status()
         call popup_close(b:git_status_popup)
     endif
 
-    let l:git_status = systemlist("git status -s")
+    let l:git_status = systemlist("git status -s -u")
+    let l:commit_log = systemlist("git log --oneline origin/master..HEAD")
 
     " TODO use fugitive buffer by number instead of l:git_status
-    let b:git_status_popup = popup_create(l:git_status, #{
-        \ pos: 'topleft',
-        \ line: 'cursor+1',
-        \ col: 'cursor',
-        \ moved: 'any',
+    let b:git_status_popup = popup_create(l:git_status + [' '] + l:commit_log,
+        \ #{
+        \   pos: 'topleft',
+        \   line: 'cursor+1',
+        \   col: 'cursor',
+        \   moved: 'any',
         \ })
 endfunction
