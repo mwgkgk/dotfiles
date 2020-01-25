@@ -764,58 +764,7 @@ Plug '~/.vim/conf/_vim-rsi/'
 Plug 'tpope/vim-rsi'
 
 Plug '~/.vim/conf/_vim-fugitive/'
-Plug 'tpope/vim-fugitive' " {{{
-nnoremap <Leader>G :rightbelow Gstatus<CR>
-
-nnoremap <Leader>D :Gvdiff<CR>
-
-command! GCurrent :exe "Git commit -q %:p"
-nnoremap <Leader>hC :GCurrent<CR>
-
-command! GCurrentT :exe "Git commit -v -q %:p"
-nnoremap <Leader>C :GCurrentT<CR>
-
-" Slap date:
-nnoremap <Leader>hd :GCurrent<CR>i<C-r>=system('date-utc <bar> tr -d "\n"')<CR><Esc>
-
-" TODO Add and close: function GAddCommit
-" function! GAddCommit()
-"     let l:fname = expand('%')
-"     !git add %
-"     :GCurrent
-"     append('iAdd ' . l:fname)
-" endfunction
-
-" Add
-nnoremap <Leader>ha :G add %<CR>:G commit %:p -e -m "Add <C-r>=expand("%")<CR>"<CR>
-
-" With preview
-command! GAllPreview :silent exe "Git add ." | :silent exe "Git commit -v -q -a"
-nnoremap <Leader>hA :GAllPreview<CR>
-
-" Quick version: (LeaderLeader too busy atm)
-" command! GAll :silent exe "Git add ." | :silent exe "Git commit -q -a"
-" nnoremap <Leader><Leader> :GAll<CR>
-
-nnoremap <Leader>hv :Git commit -v<CR>
-nmap <Leader>hc <Plug>(GitGutterStageHunk):Git commit -v<CR>
-
-" Git reset:
-command! GReset :ProjectRootExe :AsyncRun git reset
-nnoremap <Leader>hr :GReset<CR>:e!<CR>za
-
-" nnoremap <Leader><Leader> :Gtabedit @<CR>
-
-" Using vim-flog instead:
-" nnoremap <Leader>gL :silent! Glog<CR>:bot copen<CR>
-" Also, grep commit text in all or current file:
-" :Glog --grep=query --
-" :Glog --grep=query -- %
-" Find text added by commit:
-" :Glog --Sfindme --
-" :Glog --Sfindme -- %
-" }}}
-
+Plug 'tpope/vim-fugitive'
 
 Plug '~/.vim/conf/_vim-gitgutter/'
 Plug 'airblade/vim-gitgutter' " {{{
