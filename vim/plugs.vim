@@ -833,45 +833,28 @@ nnoremap <Leader>tg :GitGutterToggle<CR>
 
 nnoremap <silent> <Leader>hg :GitGutterPreviewHunk<CR>
 
-" Instead of this,
-" nmap <Leader>k <Plug>(GitGutterPrevHunk)
-" nmap <Leader>j <Plug>(GitGutterNextHunk)
-nmap <Leader>hk <Plug>(GitGutterPrevHunk)
-nmap <Leader>hj <Plug>(GitGutterNextHunk)
-
-nmap <M-p> <Plug>(GitGutterPrevHunk)
-nmap <M-n> <Plug>(GitGutterNextHunk)
-
-" This. (requires kana/vim-submode)
-" call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', '<Plug>(GitGutterPrevHunk)')
-" call submode#map(       'GitGutterPrevNext', 'n', '',  'k', '<Plug>(GitGutterPrevHunk)')
-" call submode#enter_with('GitGutterPrevNext', 'n', '', ';j', '<Plug>(GitGutterNextHunk)')
-" call submode#map(       'GitGutterPrevNext', 'n', '',  'j', '<Plug>(GitGutterNextHunk)')
-
-" Neither of these work. Something's up with submode.
-" call submode#enter_with('GitGutterPrevNext', 'n', '', ';k', ':GitGutterPrevHunk')
-" call submode#map(       'GitGutterPrevNext', 'n', '',  'k', ':GitGutterPrevHunk')
-" call submode#enter_with('GitGutterPrevNext', 'n', '', ';j', ':GitGutterNextHunk')
-" call submode#map(       'GitGutterPrevNext', 'n', '',  'j', ':GitGutterNextHunk')
-
-" Hunk put:
-nmap <Leader>hp <Plug>(GitGutterStageHunk)
+Plug '~/.vim/conf/_vim-gitgutter/'
+Plug 'airblade/vim-gitgutter' " {{{
 
 " Stage and verbose commit:
 nmap <Leader>hh <Plug>(GitGutterStageHunk):GCurrentT<CR>
 
 " Git-back
 " TODO don't go further back than the origin
+" TODO Move this to independent git plugin, or fugitive
 nnoremap <Leader>gb :!git back<CR>
 
 " Git-mes
+" TODO Move this to independent git plugin, or fugitive
 nnoremap <Leader>gr :!git mes<CR>
 
 " Git-last-message
-nmap <silent> <Leader>gm :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>
-nmap <silent> <Leader>gM :echo "<C-r>=system('git log -1')<CR>"<CR>
+" TODO Move this to independent git plugin, or fugitive
+nnoremap <silent> <Leader>gm :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>
+nnoremap <silent> <Leader>gM :echo "<C-r>=system('git log -1')<CR>"<CR>
 
 " Git slurp: for staged hunks
+" TODO Move this to independent git plugin, or fugitive
 nnoremap <Leader>gs :!git commit --amend --no-edit<CR>
 
 " Hunk slurp: Stage hunk and amend noedit
