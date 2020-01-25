@@ -72,7 +72,7 @@ nnoremap <silent> <Leader>dN :call files#by_date#last()<CR>
 nnoremap <Space>a <C-^>
 
 " List buffers:
-nnoremap <M-o> :ls<CR>:b
+nnoremap gb :ls<CR>:b
 
 " List buffers from cmdline, see:
 " https://stackoverflow.com/questions/59040146/how-to-execute-a-command-from-cnoremap
