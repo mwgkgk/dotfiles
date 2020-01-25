@@ -28,7 +28,12 @@ nnoremap <silent> <M-z> :GitGutterPreviewHunk<CR>
 
 " Which we do because it's the only way to dispatch synchronously without
 " flicker.
-nnoremap <Leader>gu :call system("git reset") <Bar> :GitGutterAll <Bar> :echo "Git reset"<CR>
+
+" Unstage current file:
+nnoremap <Leader>gu :call _vim_gitgutter#unstage#current()<CR>
+
+" Unstage everything:
+nnoremap <Leader>gU :call _vim_gitgutter#unstage#all()<CR>
 
 " ||
 " || Fugitive
