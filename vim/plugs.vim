@@ -766,8 +766,8 @@ Plug 'tpope/vim-rsi'
 
 Plug '~/.vim/conf/_vim-fugitive/'
 Plug 'tpope/vim-fugitive' " {{{
-nnoremap <Leader>G :Gstatus<CR>
-nnoremap <Leader><LocalLeader> :Gstatus<CR>
+nnoremap <Leader>G :above Gstatus<CR>
+nnoremap <Leader><LocalLeader> :rightbelow Gstatus<CR>
 
 nnoremap <Leader>D :Gvdiff<CR>
 
