@@ -29,3 +29,10 @@ nnoremap <silent> <M-z> :GitGutterPreviewHunk<CR>
 " Which we do because it's the only way to dispatch synchronously without
 " flicker.
 nnoremap <Leader>gu :call system("git reset") <Bar> :GitGutterAll <Bar> :echo "Git reset"<CR>
+
+" ||
+" || Fugitive
+" ||
+
+" Stage hunk and verbose commit:
+nmap <Leader>hh <Plug>(GitGutterStageHunk):Git commit -v<CR>

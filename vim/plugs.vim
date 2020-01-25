@@ -816,26 +816,9 @@ nnoremap <Leader>hr :GReset<CR>:e!<CR>za
 " :Glog --Sfindme -- %
 " }}}
 
-Plug 'airblade/vim-gitgutter' " {{{
-
-let g:gitgutter_sign_removed = '>'
-let g:gitgutter_sign_removed_first_line = '^'
-let g:gitgutter_sign_modified_removed = '<'
-
-hi link GitGutterAdd SignColumn
-hi link GitGutterChange SignColumn
-hi link GitGutterDelete SignColumn
-hi link GitGutterChangeDelete SignColumn
-
-nnoremap <Leader>tg :GitGutterToggle<CR>
-
-nnoremap <silent> <Leader>hg :GitGutterPreviewHunk<CR>
 
 Plug '~/.vim/conf/_vim-gitgutter/'
 Plug 'airblade/vim-gitgutter' " {{{
-
-" Stage and verbose commit:
-nmap <Leader>hh <Plug>(GitGutterStageHunk):GCurrentT<CR>
 
 " Git-back
 " TODO don't go further back than the origin
