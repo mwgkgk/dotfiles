@@ -37,9 +37,14 @@ end
 function bind_tab
     set -l cmdline (commandline)
     if test -z "$cmdline"
-        commandline -i "goog "
-        # else if test "$cmdline" = "d "
-        #   commandline -f execute
+        fdz-file ~/.vim/sessions/ | read -l result
+        if test -n "$result"
+            set -l result (basename $result)
+            commandline -r "v $result"
+            commandline -f execute
+        else
+            commandline -f repaint
+        end
   else
       commandline -f complete
   end
