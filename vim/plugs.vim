@@ -1059,11 +1059,6 @@ Plug 'tpope/vim-fugitive'
 Plug '~/.vim/conf/_vim-gitgutter/'
 Plug 'airblade/vim-gitgutter' " {{{
 
-" Git-last-message
-" TODO Move this to independent git plugin, or fugitive
-nnoremap <silent> <Leader>gm :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>
-nnoremap <silent> <Leader>gM :echo "<C-r>=system('git log -1')<CR>"<CR>
-
 " Git slurp: for staged hunks
 " TODO Move this to independent git plugin, or fugitive
 nnoremap <Leader>gs :!git commit --amend --no-edit<CR>
