@@ -10,6 +10,35 @@ augroup plugs
     autocmd!
 augroup END
 
+" ||
+" || Deps
+" ||
+
+" {{{
+
+Plug 'kana/vim-textobj-user'
+
+Plug '~/.vim/conf/_vim-operator-user/'
+Plug 'kana/vim-operator-user'
+
+Plug 'vim-scripts/ingo-library'
+
+Plug 'tpope/vim-repeat'
+
+Plug 'arecarn/selection.vim'
+
+" }}}
+
+
+" ||
+" || Fuzzy-select
+" ||
+
+" {{{
+
+Plug '~/.vim/conf/_fzf.vim/'
+Plug 'junegunn/fzf.vim'
+
 Plug 'kien/ctrlp.vim' " {{{
 map s <NOP>
 let g:ctrlp_map = 's0'
@@ -45,47 +74,31 @@ nnoremap s" :CtrlPRegister<CR>
 inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 " }}}
 
+" }}}
+
+
+" ||
+" || Undo
+" ||
+
+" {{{
+
 Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
 nnoremap <F5> :UndotreeToggle<CR>
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_WindowLayout = 2
 " }}}
 
-Plug 'majutsushi/tagbar', { 'on' : 'TagbarOpen' } " {{{
-nnoremap <silent> <F4> :TagbarOpen fjc<CR>
-let g:tagbar_singleclick = 1
-let g:tagbar_foldlevel = 1
-let g:tagbar_left = 1
-let g:tagbar_type_rust = {
-      \ 'ctagstype' : 'rust',
-      \ 'kinds' : [
-      \'T:types,type definitions',
-      \'f:functions,function definitions',
-      \'g:enum,enumeration names',
-      \'s:structure names',
-      \'m:modules,module names',
-      \'c:consts,static constants',
-      \'t:traits',
-      \'i:impls,trait implementations',
-      \]
-      \}
 " }}}
 
-Plug 'w0rp/ale' " {{{ lint
-let g:ale_linters = {
-      \ 'haskell': ['stack-ghc'],
-      \ 'perl'   : ['perl', 'perlcritic'],
-      \ 'rust'   : ['cargo'],
-      \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
-      \ }
-let g:ale_tcl_nagelfar_executable = 'nagelfar'
-let g:ale_sign_error = '>'
-let g:ale_sign_warning = '!'
-let g:ale_lint_on_save = 1
-let g:ale_set_highlights = 0
-nmap <silent> <F12>u <Plug>(ale_previous_wrap)
-nmap <silent> _ <Plug>(ale_next_wrap)
-" }}}
+
+" ||
+" || Movement
+" ||
+
+" {{{
+
+" The line between Movement and Textobjects is often blurry.
 
 Plug 'Lokaltog/vim-easymotion' " {{{
 " let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*():;"<>.,/?[]{}ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -128,16 +141,434 @@ nmap cr c\t)<Space>
 nmap cR c\T(<Space>
 " }}}
 
-Plug 'RogerioDosSantos/marvim' "{{{
-let marvim_find_key='<Leader>m'
-let marvim_store_key = '<Leader>"'
-let marvim_load_key = '<Leader>M'
-let marvim_register = 'q' " Default
-let marvim_prefix = 0
+Plug 'machakann/vim-patternjump' " {{{
+let g:patternjump_no_default_key_mappings = 1
+let g:patternjump_patterns = {
+        \ '_' : { 
+        \   'nox' : {
+        \     'tail' : ['^\s*$'],
+        \     }
+        \   },
+        \ 'markdown' : {
+        \   'nox' : {
+        \     'tail' : ['^\(#\|>\)'],
+        \     }
+        \   },
+        \ 'mj' : {
+        \   'nox' : {
+        \     'tail' : ['^\(#\|>\)'],
+        \     }
+        \   },
+        \ 'vim' : {
+        \   'nox' : {
+        \     'tail' : ['^Plug.*'],
+        \     }
+        \   },
+        \ 'conf' : {
+        \   'nox' : {
+        \     'head' : ['^\s*#.*'],
+        \     }
+        \   },
+        \ 'python' : {
+        \   'nox' : {
+        \     'tail' : ['^\s*def.*'],
+        \     }
+        \   },
+        \ 'html' : {
+        \   'nox' : {
+        \     'tail' : ['^\s*<.+>'],
+        \     }
+        \   },
+        \ }
+
+map <M-q> <Plug>(patternjump-backward)
+map <M-r> <Plug>(patternjump-forward)
 " }}}
 
-Plug '~/.vim/conf/_ultisnips/'
-Plug 'SirVer/ultisnips'
+" Depends on vim-scripts/ingo-library
+Plug 'vim-scripts/JumpToLastOccurrence' " {{{
+" ,f ,F ,t ,T
+" }}}
+
+" TODO Rebind, add wildfire-water (reverse direction), change objects to full
+" forms instead of inside-forms
+" Plug 'gcmt/wildfire.vim' " {{{
+" nmap <Leader><Enter> <Plug>(wildfire-quick-select)
+" }}}
+
+Plug 'fcpg/vim-shore'
+
+Plug 'jeetsukumaran/vim-indentwise' " {{{
+map gH <Plug>(IndentWisePreviousLesserIndent)
+map gh <Plug>(IndentWiseNextLesserIndent)
+
+map gL <Plug>(IndentWisePreviousGreaterIndent)
+map gl <Plug>(IndentWiseNextGreaterIndent)
+
+nnoremap <Leader>j gj
+nnoremap <Leader>k gk
+vnoremap <Leader>j gj
+vnoremap <Leader>k gk
+
+map gk <Plug>(IndentWisePreviousEqualIndent)
+map gj <Plug>(IndentWiseNextEqualIndent)
+
+map g[ <Plug>(IndentWisePreviousAbsoluteIndent)
+map g] <Plug>(IndentWiseNextAbsoluteIndent)
+
+map gK <Plug>(IndentWiseBlockScopeBoundaryBegin)
+map gJ <Plug>(IndentWiseBlockScopeBoundaryEnd)
+" }}}
+
+" Plug 'wellle/targets.vim' " {{{
+" let g:targets_separators = '. ; : + - ~ _ * \ |'
+" }}}
+
+Plug 'haya14busa/vim-edgemotion' " {{{
+map <M-j> <Plug>(edgemotion-j)
+map <M-k> <Plug>(edgemotion-k)
+" Poor man's horizontal edgemotion
+map <M-h> B
+map <M-l> E
+" }}}
+
+Plug 'mwgkgk/CamelCaseMotion' " {{{
+" Default mappings: ,w ,b ,e   i,w i,b i,e
+" kill-small-word insert mode:
+imap <C-g><C-w> <Esc>,bcw
+" }}}
+
+Plug 'andymass/vim-matchup' " {{{
+" Jump to % of the file:
+nnoremap ,, %
+" }}}
+
+" }}}
+
+
+" ||
+" || Textobjects
+" ||
+
+" {{{
+
+Plug 'kana/vim-textobj-line' " {{{
+let g:textobj_line_no_default_key_mappings = 1
+nmap vv v<Plug>(textobj-line-i)
+" }}}
+Plug 'kana/vim-textobj-indent' " {{{
+let g:textobj_indent_no_default_key_mappings = 1
+xmap an  <Plug>(textobj-indent-a)
+omap an  <Plug>(textobj-indent-a)
+xmap in  <Plug>(textobj-indent-i)
+omap in  <Plug>(textobj-indent-i)
+xmap aN  <Plug>(textobj-indent-same-a)
+omap aN  <Plug>(textobj-indent-same-a)
+xmap iN  <Plug>(textobj-indent-same-i)
+omap iN  <Plug>(textobj-indent-same-i)
+
+" }}}
+Plug 'kana/vim-textobj-lastpat'
+Plug 'kana/vim-textobj-entire' " {{{
+let g:textobj_entire_no_default_key_mappings = 1
+xmap iA <Plug>(textobj-entire-i)
+omap iA <Plug>(textobj-entire-i)
+xmap aA <Plug>(textobj-entire-a)
+omap aA <Plug>(textobj-entire-a)
+xmap A <Plug>(textobj-entire-a)
+omap A <Plug>(textobj-entire-a)
+" }}}
+
+Plug 'kana/vim-textobj-function'
+" Fallback for vim-textobj-function using syntax definitions:
+Plug 'haya14busa/vim-textobj-function-syntax'
+
+Plug 'thinca/vim-textobj-between' " {{{
+let g:textobj_between_no_default_key_mappings = 1
+xmap ii <Plug>(textobj-between-i)
+omap ii <Plug>(textobj-between-i)
+xmap aa <Plug>(textobj-between-a)
+omap aa <Plug>(textobj-between-a)
+" }}}
+
+Plug 'junegunn/vim-after-object' " {{{
+autocmd plugs VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';', ',', '.' )
+" }}}
+
+Plug 'sgur/vim-textobj-parameter'
+
+Plug 'akiyan/vim-textobj-xml-attribute'
+
+Plug 'machakann/vim-textobj-equation'
+
+" Depends on Lokaltog/vim-easymotion
+Plug 'haya14busa/vim-easyoperator-line' " {{{
+let g:EasyOperator_line_do_mapping = 0
+nmap gy <Plug>(easyoperator-line-yank)
+nmap gd <Plug>(easyoperator-line-delete)
+" }}}
+
+" }}}
+
+
+" ||
+" || Operators
+" ||
+
+" {{{
+
+Plug 'tpope/vim-surround' " {{{
+" Wrapping in braces:
+" imap <C-c><C-c> <Esc>hysiw)ea
+nmap <C-c><C-c> <Esc>ysiw)
+" imap <C-c>) <Esc>hysiw)ea
+nmap <C-c>) <Esc>ysiw)
+" Two words
+nmap <C-c>l ys3iw)
+" Not working
+" nmap <C-c>h ys2b)
+" Quotes
+" imap <C-c>" <Esc>hysiW"ea
+nmap <C-c>" <Esc>ysiW"
+" imap <C-c>' <Esc>hysiW'ea
+nmap <C-c>' <Esc>ysiW'
+" imap <C-c>] <Esc>hysiW'ea
+nmap <C-c>] <Esc>ysiW'
+" }}}
+
+Plug 'tpope/vim-commentary' " {{{
+nmap gcd yypkgccj
+" }}}
+
+Plug 'briandoll/change-inside-surroundings.vim' " {{{
+" <Leader>ci by default
+nnoremap cI :ChangeInsideSurrounding<CR>
+" }}}
+
+Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
+
+Plug 'tommcdo/vim-exchange'
+
+Plug 'tyru/operator-star.vim' " {{{
+nmap <Leader>*  <Plug>(operator-*)
+nmap <Leader>g* <Plug>(operator-g*)
+nmap <Leader>#  <Plug>(operator-#)
+nmap <Leader>g# <Plug>(operator-g#)
+" }}}
+
+" Depends on tyru/open-browser.vim, kana/vim-operator-user
+Plug 'sgur/vim-operator-openbrowser'" {{{
+nmap gx <Plug>(operator-openbrowser)
+" }}}
+
+Plug 'mwgkgk/vim-operator-append' " {{{
+map <Leader>a <Plug>(operator-append)
+" }}}
+Plug 'mwgkgk/vim-operator-insert' " {{{
+map <Leader>i <Plug>(operator-insert)
+" }}}
+
+Plug '~/shop/oil/vim-operator-replacemode/' " {{{
+nmap gr <Plug>(operator-replacemode)
+" }}}
+
+" }}}
+
+
+" ||
+" || Submodes
+" ||
+
+" {{{
+
+Plug 'kana/vim-submode', {'on' : [] } " {{{
+let g:submode_timeoutlen = 700
+
+silent! call plug#load('vim-submode')
+
+call submode#enter_with('Remote↑↓', 'n', '', '[k', ':silent! VimProcBang bro scrollUp<CR>')
+call submode#map(       'Remote↑↓', 'n', '',  'k', ':silent! VimProcBang bro scrollUp<CR>')
+call submode#enter_with('Remote↑↓', 'n', '', '[j', ':silent! VimProcBang bro scrollDown<CR>')
+call submode#map(       'Remote↑↓', 'n', '',  'j', ':silent! VimProcBang bro scrollDown<CR>')
+
+call submode#enter_with('RemoteYT', 'n', '', '[l', ':silent! VimProcBang bro ytForward5<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'l', ':silent! VimProcBang bro ytForward5<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[L', ':silent! VimProcBang bro ytForward10<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'L', ':silent! VimProcBang bro ytForward10<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[;', ':silent! VimProcBang bro ytForward20<CR>')
+call submode#map(       'RemoteYT', 'n', '',  ';', ':silent! VimProcBang bro ytForward20<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[h', ':silent! VimProcBang bro ytBackward5<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'h', ':silent! VimProcBang bro ytBackward5<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[H', ':silent! VimProcBang bro ytBackward10<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'H', ':silent! VimProcBang bro ytBackward10<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[g', ':silent! VimProcBang bro ytBackward20<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'g', ':silent! VimProcBang bro ytBackward20<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[<', ':silent! VimProcBang bro ytFaster<CR>')
+call submode#map(       'RemoteYT', 'n', '',  '<', ':silent! VimProcBang bro ytFaster<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[>', ':silent! VimProcBang bro ytSlower<CR>')
+call submode#map(       'RemoteYT', 'n', '',  '>', ':silent! VimProcBang bro ytSlower<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[<Space>', ':silent! VimProcBang bro space<CR>')
+call submode#map(       'RemoteYT', 'n', '',  '<Space>', ':silent! VimProcBang bro space<CR>')
+
+" call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-y>', '<Esc>:silent!
+" VimProcBang bro ytBackward5<CR>gi')
+" call submode#map(       'RemoteYT_I', 'i', '', '<C-y>', '<Esc>:silent!
+" VimProcBang bro ytBackward5<CR>gi')
+
+" call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-u>', '<Esc>:silent!
+" VimProcBang bro space<CR>gi')
+" call submode#map(       'RemoteYT_I', 'i', '', '<C-u>', '<Esc>:silent!
+" VimProcBang bro space<CR>gi')
+
+" call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-i>', '<Esc>:silent!
+" VimProcBang bro ytForward5<CR>gi')
+" call submode#map(       'RemoteYT_I', 'i', '', '<C-i>', '<Esc>:silent!
+" VimProcBang bro ytForward5<CR>gi')
+
+" inoremap <C-u><C-t> <Esc>:silent! VimProcBang bro ytPls<CR>gi
+
+nnoremap [u :silent! VimProcBang bro space<CR>
+
+call submode#enter_with('RemoteZoom', 'n', '', '[zo', ':silent! VimProcBang bro zoomOut<CR>')
+call submode#map(       'RemoteZoom', 'n', '',   'o', ':silent! VimProcBang bro zoomOut<CR>')
+call submode#enter_with('RemoteZoom', 'n', '', '[zi', ':silent! VimProcBang bro zoomIn<CR>')
+call submode#map(       'RemoteZoom', 'n', '',   'i', ':silent! VimProcBang bro zoomIn<CR>')
+
+" call submode#enter_with('ScrollGo', 'n', '', ';k', '6<C-Y>6k')
+" call submode#map(       'ScrollGo', 'n', '',  'k', '6<C-Y>6k')
+" call submode#enter_with('ScrollGo', 'n', '', ';j', '6<C-E>6j')
+" call submode#map(       'ScrollGo', 'n', '',  'j', '6<C-E>6j')
+
+call submode#enter_with('ScrollStay', 'n', '', ']k', '3<C-Y>')
+" call submode#enter_with('ScrollStay', 'n', '', ';k', '3<C-Y>')
+call submode#map(       'ScrollStay', 'n', '',  'k', '3<C-Y>')
+call submode#enter_with('ScrollStay', 'n', '', ']j', '3<C-E>')
+" call submode#enter_with('ScrollStay', 'n', '', ';j', '3<C-E>')
+call submode#map(       'ScrollStay', 'n', '',  'j', '3<C-E>')
+" }}}
+
+" }}}
+
+
+" ||
+" || Insert mode
+" ||
+
+" {{{
+
+Plug '~/.vim/conf/_vim-rsi/'
+Plug 'tpope/vim-rsi'
+
+Plug '~/shop/oil/newliner/newliner-vim' " {{{
+inoremap <expr>  newliner#newline()
+" }}}
+
+" }}}
+
+
+" ||
+" || Visual mode
+" ||
+
+" {{{
+
+Plug 'kana/vim-niceblock'
+
+Plug 'thinca/vim-visualstar'
+
+Plug 't9md/vim-textmanip' " {{{
+xmap <C-M-j> <Plug>(textmanip-move-down)
+xmap <C-M-k> <Plug>(textmanip-move-up)
+xmap <C-M-h> <Plug>(textmanip-move-left)
+xmap <C-M-l> <Plug>(textmanip-move-right)
+nmap <C-M-k> V<Plug>(textmanip-move-up)
+nmap <C-M-j> V<Plug>(textmanip-move-down)
+nmap <C-M-h> V<Plug>(textmanip-move-left)
+nmap <C-M-l> V<Plug>(textmanip-move-right)
+
+nmap g<C-M-k> <Plug>(textmanip-duplicate-up)
+nmap g<C-M-j> <Plug>(textmanip-duplicate-down)
+xmap g<C-M-k> <Plug>(textmanip-duplicate-up)
+xmap g<C-M-j> <Plug>(textmanip-duplicate-down)
+
+nmap <Leader><C-M-k> <Plug>(textmanip-blank-above)
+nmap <Leader><C-M-j> <Plug>(textmanip-blank-below)
+xmap <Leader><C-M-k> <Plug>(textmanip-blank-above)
+xmap <Leader><C-M-j> <Plug>(textmanip-blank-below)
+" }}}
+
+" }}}
+
+
+" ||
+" || Highlight
+" ||
+
+" {{{
+
+" Plug 'inkarkat/vim-SyntaxRange' " {{{
+" autocmd plugs FileType nlang call SyntaxRange#Include('@begin=c@', '@end=c@', 'c', 'NonText')
+" }}}
+
+Plug 't9md/vim-quickhl' " {{{
+nmap <Space>m <Plug>(quickhl-manual-this)
+xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
+let g:quickhl_manual_colors = [
+            \ "ctermfg=7 cterm=bold guifg=#ffffff gui=bold",
+            \ "ctermfg=206 cterm=bold guifg=#ff5fd7 gui=bold",
+            \ "ctermfg=111 cterm=bold guifg=#87afff gui=bold",
+            \ "ctermfg=227 cterm=bold guifg=#ffff5f gui=bold",
+            \ "ctermfg=188 cterm=bold guifg=#d7d7d7 gui=bold",
+            \ "ctermfg=204 cterm=bold guifg=#ff5f87 gui=bold",
+            \ "ctermfg=84 cterm=bold guifg=#5fff87 gui=bold",
+            \ "ctermfg=129 cterm=bold guifg=#af00ff gui=bold",
+            \ ]
+
+" nmap <Space>J <Plug>(quickhl-cword-toggle)
+" nmap <Space>] <Plug>(quickhl-tag-toggle)
+" For use with vim-operator-user
+" map H <Plug>(operator-quickhl-manual-this-motion)
+" }}}
+
+Plug 'RRethy/vim-illuminate' " {{{
+let g:Illuminate_delay = 0
+" }}}
+
+Plug 'haya14busa/vim-operator-flashy' " {{{
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
+" let g:operator#flashy#group = "Visual"
+let g:operator#flashy#group = "Search"
+" }}}
+
+" }}}
+
+
+" ||
+" || Multi-cursor
+" ||
+
+" {{{
+
+Plug 'terryma/vim-multiple-cursors' " {{{
+" H & L replacements can be found in mappings.vim
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key = 'L'
+let g:multi_cursor_prev_key = 'H'
+let g:multi_cursor_skip_key = '<C-x>'
+let g:multi_cursor_quit_key = '<Esc>'
+" }}}
+
+" }}}
+
+
+" ||
+" || Cycle
+" ||
+
+" {{{
 
 Plug 'bootleq/vim-cycle' " {{{
 let g:cycle_no_mappings = 1
@@ -208,145 +639,66 @@ let g:cycle_default_groups += [
             \ ]
 " }}}
 
-Plug 'c9s/bufexplorer'
-
-Plug '~/.vim/conf/_taboo.vim/'
-Plug 'gcmt/taboo.vim'
-
-Plug 'briandoll/change-inside-surroundings.vim' " {{{
-" <Leader>ci by default
-nnoremap cI :ChangeInsideSurrounding<CR>
 " }}}
 
-Plug 'machakann/vim-patternjump' " {{{
-let g:patternjump_no_default_key_mappings = 1
-let g:patternjump_patterns = {
-        \ '_' : { 
-        \   'nox' : {
-        \     'tail' : ['^\s*$'],
-        \     }
-        \   },
-        \ 'markdown' : {
-        \   'nox' : {
-        \     'tail' : ['^\(#\|>\)'],
-        \     }
-        \   },
-        \ 'mj' : {
-        \   'nox' : {
-        \     'tail' : ['^\(#\|>\)'],
-        \     }
-        \   },
-        \ 'vim' : {
-        \   'nox' : {
-        \     'tail' : ['^Plug.*'],
-        \     }
-        \   },
-        \ 'conf' : {
-        \   'nox' : {
-        \     'head' : ['^\s*#.*'],
-        \     }
-        \   },
-        \ 'python' : {
-        \   'nox' : {
-        \     'tail' : ['^\s*def.*'],
-        \     }
-        \   },
-        \ 'html' : {
-        \   'nox' : {
-        \     'tail' : ['^\s*<.+>'],
-        \     }
-        \   },
-        \ }
 
-map <M-q> <Plug>(patternjump-backward)
-map <M-r> <Plug>(patternjump-forward)
+" ||
+" || Snippets
+" ||
+
+" {{{
+
+Plug '~/.vim/conf/_ultisnips/'
+Plug 'SirVer/ultisnips'
+
 " }}}
 
-Plug 'andymass/vim-matchup' " {{{
-" Jump to % of the file:
-nnoremap ,, %
+
+" ||
+" || Macros
+" ||
+
+" {{{
+
+Plug 'RogerioDosSantos/marvim' "{{{
+let marvim_find_key='<Leader>m'
+let marvim_store_key = '<Leader>"'
+let marvim_load_key = '<Leader>M'
+let marvim_register = 'q' " Default
+let marvim_prefix = 0
 " }}}
 
-Plug 'AndrewRadev/yankwin.vim' " {{{
-let g:yankwin_default_yank_mappings = 0
-nnoremap <Space>gy  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 0})<cr>
-nnoremap <Space>y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 0})<cr>
-nnoremap <Space>gY  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 1})<cr>
-nnoremap <Space>Y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 1})<cr>
-let g:yankwin_default_delete_mappings = 0
-nnoremap <Space>gd  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 0})<cr>
-nnoremap <Space>d :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 0})<cr>
-nnoremap <Space>gD  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 1})<cr>
-nnoremap <Space>D :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 1})<cr>
-let g:yankwin_default_paste_mappings = 0
-nnoremap <Space><c-p> :call yankwin#Paste({'edit_command': 'edit'})<cr>
-nnoremap <Space>p     :call yankwin#Paste({'edit_command': 'rightbelow split'})<cr>
-nnoremap <Space>gp    :call yankwin#Paste({'edit_command': 'leftabove split'})<cr>
-nnoremap <Space>P     :call yankwin#Paste({'edit_command': 'vert split'})<cr>
-nnoremap <Space>gP    :call yankwin#Paste({'edit_command': 'leftabove vert split'})<cr>
-nnoremap <Space>Gp    :call yankwin#Paste({'edit_command': 'tab split'})<cr>
-nnoremap <Space>GP    :call yankwin#Paste({'edit_command': (tabpagenr() - 1).'tab split'})<cr>
 " }}}
-Plug 'AndrewRadev/exercism.vim'
+
+
+" ||
+" || Registers
+" ||
+
+" {{{
+
+if !has('nvim')
+    Plug 'ardagnir/united-front'
+endif
+
+Plug 'junegunn/vim-peekaboo' " {{{
+let g:peekaboo_delay = 200
+let g:peekaboo_compact = 1
+let g:peekaboo_window = 'bo 30new'
+" }}}
 
 " Plug 'AndrewRadev/whitespaste.vim'
 
 Plug 'sickill/vim-pasta'
 
-" Plug 'inkarkat/vim-SyntaxRange' " {{{
-" autocmd plugs FileType nlang call SyntaxRange#Include('@begin=c@', '@end=c@', 'c', 'NonText')
-" }}}
-Plug 'vim-scripts/ingo-library'
-Plug 'vim-scripts/JumpToLastOccurrence' " {{{
-" ,f ,F ,t ,T
 " }}}
 
-Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
 
-" TODO Rebind, add wildfire-water (reverse direction), change objects to full
-" forms instead of inside-forms
-" Plug 'gcmt/wildfire.vim' " {{{
-" nmap <Leader><Enter> <Plug>(wildfire-quick-select)
-" }}}
+" ||
+" || Marks
+" ||
 
-Plug 'szw/vim-maximizer' " {{{
-let g:maximizer_set_default_mapping = 0
-nnoremap <silent>Z :MaximizerToggle<CR>
-" }}}
-
-Plug 'tommcdo/vim-exchange'
-
-Plug 'tpope/vim-commentary' " {{{
-nmap gcd yypkgccj
-" }}}
-
-Plug 'airblade/vim-rooter' " {{{
-let g:rooter_silent_chdir = 1
-let g:rooter_resolve_links = 1
-let g:rooter_use_lcd = 1
-" }}}
-
-Plug 'Valloric/ListToggle' " {{{
-let g:lt_quickfix_list_toggle_map = '<Space>`'
-let g:lt_location_list_toggle_map = "<Space>'"
-" }}}
-Plug 'yssl/QFEnter'
-Plug 'fcpg/vim-kickfix'" {{{
-let g:kickfix_zebra = 0
-" }}}
-
-Plug 'ardagnir/united-front'
-
-Plug 'rking/ag.vim'  " {{{
-let g:ag_prg = 'ag --hidden --nogroup --nocolor --column --smart-case --skip-vcs-ignores'
-let g:ag_highlight=1
-nnoremap <Leader>ge :Ag<Space><Space>"<C-R>=expand('%:p:h')<CR>/"<C-left><Left>
-nnoremap <Leader>gE :Ag <C-R><C-W> "<C-R>=expand('%:p:h')<CR>/"<C-left><Left>
-nnoremap <Leader>gx :Ag <C-R>/ "<C-R>=expand('%:p:h')<CR>/"<C-left><Left>
-nnoremap <Leader>gp :ProjectRootExe Ag <C-R><C-W>
-nnoremap <Leader>gf :ProjectRootExe find **/<C-R><C-W>*<CR>
-nnoremap <Leader>g<Tab> :Ag <C-r><C-w> ~/ink/mozg<CR>
-" }}}
+" {{{
 
 Plug 'kshenoy/vim-signature' " {{{
 let g:SignatureMap = {
@@ -380,6 +732,223 @@ hi link SignatureMarkText SignColumn
 hi link SignatureMarkerText SignColumn
 
 " }}}
+
+" }}}
+
+
+" ||
+" || Jumps
+" ||
+
+" {{{
+
+Plug 'kana/vim-exjumplist' " {{{
+nmap <C-M-o> <Plug>(exjumplist-go-first)
+nmap <C-M-t> <Plug>(exjumplist-go-last)
+nmap <M-u> <Plug>(exjumplist-previous-buffer)
+nmap <M-m> <Plug>(exjumplist-next-buffer)
+" }}}
+
+" }}}
+
+
+" ||
+" || Search
+" ||
+
+" {{{
+
+Plug 'rking/ag.vim'  " {{{
+let g:ag_prg = 'ag --hidden --nogroup --nocolor --column --smart-case --skip-vcs-ignores'
+let g:ag_highlight=1
+nnoremap <Leader>ge :Ag<Space><Space>"<C-R>=expand('%:p:h')<CR>/"<C-left><Left>
+nnoremap <Leader>gE :Ag <C-R><C-W> "<C-R>=expand('%:p:h')<CR>/"<C-left><Left>
+nnoremap <Leader>gx :Ag <C-R>/ "<C-R>=expand('%:p:h')<CR>/"<C-left><Left>
+nnoremap <Leader>gp :ProjectRootExe Ag <C-R><C-W>
+nnoremap <Leader>gf :ProjectRootExe find **/<C-R><C-W>*<CR>
+nnoremap <Leader>g<Tab> :Ag <C-r><C-w> ~/ink/mozg<CR>
+" }}}
+
+" }}}
+
+
+" ||
+" || Files
+" ||
+
+" {{{
+
+Plug '~/.vim/conf/_vifm.vim/'
+Plug 'vifm/vifm.vim'
+
+Plug 'mwgkgk/vim-auto-mkdir'
+
+" }}}
+
+
+" ||
+" || Buffers
+" ||
+
+" {{{
+
+Plug 'c9s/bufexplorer'
+
+" }}}
+
+
+" ||
+" || Windows
+" ||
+
+" {{{
+
+Plug 'AndrewRadev/yankwin.vim' " {{{
+let g:yankwin_default_yank_mappings = 0
+nnoremap <Space>gy  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 0})<cr>
+nnoremap <Space>y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 0})<cr>
+nnoremap <Space>gY  :call yankwin#Yank({'path_type': 'relative', 'with_line_number': 1})<cr>
+nnoremap <Space>Y :call yankwin#Yank({'path_type': 'absolute', 'with_line_number': 1})<cr>
+let g:yankwin_default_delete_mappings = 0
+nnoremap <Space>gd  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 0})<cr>
+nnoremap <Space>d :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 0})<cr>
+nnoremap <Space>gD  :call yankwin#Delete({'path_type': 'relative', 'with_line_number': 1})<cr>
+nnoremap <Space>D :call yankwin#Delete({'path_type': 'absolute', 'with_line_number': 1})<cr>
+let g:yankwin_default_paste_mappings = 0
+nnoremap <Space><c-p> :call yankwin#Paste({'edit_command': 'edit'})<cr>
+nnoremap <Space>p     :call yankwin#Paste({'edit_command': 'rightbelow split'})<cr>
+nnoremap <Space>gp    :call yankwin#Paste({'edit_command': 'leftabove split'})<cr>
+nnoremap <Space>P     :call yankwin#Paste({'edit_command': 'vert split'})<cr>
+nnoremap <Space>gP    :call yankwin#Paste({'edit_command': 'leftabove vert split'})<cr>
+nnoremap <Space>Gp    :call yankwin#Paste({'edit_command': 'tab split'})<cr>
+nnoremap <Space>GP    :call yankwin#Paste({'edit_command': (tabpagenr() - 1).'tab split'})<cr>
+" }}}
+
+Plug 'szw/vim-maximizer' " {{{
+let g:maximizer_set_default_mapping = 0
+nnoremap <silent>Z :MaximizerToggle<CR>
+" }}}
+
+Plug 'wellle/visual-split.vim' " :VSSplit, :VSResize
+
+" }}}
+
+
+" ||
+" || Quickfix
+" ||
+
+" {{{
+
+Plug 'Valloric/ListToggle' " {{{
+let g:lt_quickfix_list_toggle_map = '<Space>`'
+let g:lt_location_list_toggle_map = "<Space>'"
+" }}}
+
+Plug 'yssl/QFEnter'
+
+Plug 'fcpg/vim-kickfix' " {{{
+let g:kickfix_zebra = 0
+" }}}
+
+Plug 'chauncey-garrett/vim-tasklist', { 'on' : '<Plug>TaskList' } " {{{
+" Mnemonic: Toggle tasklist
+nmap <leader>tt <Plug>TaskList
+let g:tlTokenList = ['FIXME', 'TODO', 'XXX']
+let g:tlRememberPosition = 1
+let g:tlWindowPosition = 0
+" }}}
+
+" }}}
+
+
+" ||
+" || Tabs
+" ||
+
+" {{{
+
+Plug '~/.vim/conf/_taboo.vim/'
+Plug 'gcmt/taboo.vim'
+
+" }}}
+
+
+" ||
+" || Projects
+" ||
+
+" {{{
+
+Plug 'airblade/vim-rooter' " {{{
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
+let g:rooter_use_lcd = 1
+" }}}
+
+" }}}
+
+
+" ||
+" || Tags
+" ||
+
+" {{{
+
+Plug 'majutsushi/tagbar', { 'on' : 'TagbarOpen' } " {{{
+nnoremap <silent> <F4> :TagbarOpen fjc<CR>
+let g:tagbar_singleclick = 1
+let g:tagbar_foldlevel = 1
+let g:tagbar_left = 1
+let g:tagbar_type_rust = {
+      \ 'ctagstype' : 'rust',
+      \ 'kinds' : [
+      \'T:types,type definitions',
+      \'f:functions,function definitions',
+      \'g:enum,enumeration names',
+      \'s:structure names',
+      \'m:modules,module names',
+      \'c:consts,static constants',
+      \'t:traits',
+      \'i:impls,trait implementations',
+      \]
+      \}
+" }}}
+
+" }}}
+
+
+" ||
+" || Lint
+" ||
+
+" {{{
+
+Plug 'w0rp/ale' " {{{ lint
+let g:ale_linters = {
+      \ 'haskell': ['stack-ghc'],
+      \ 'perl'   : ['perl', 'perlcritic'],
+      \ 'rust'   : ['cargo'],
+      \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
+      \ }
+let g:ale_tcl_nagelfar_executable = 'nagelfar'
+let g:ale_sign_error = '>'
+let g:ale_sign_warning = '!'
+let g:ale_lint_on_save = 1
+let g:ale_set_highlights = 0
+nmap <silent> <F12>u <Plug>(ale_previous_wrap)
+nmap <silent> _ <Plug>(ale_next_wrap)
+" }}}
+
+" }}}
+
+
+" ||
+" || Autoformat
+" ||
+
+" {{{
+
 Plug 'Chiel92/vim-autoformat' " {{{
 let g:formatdef_elmformat = '"elm-format --upgrade --yes --stdin"'
 let g:formatters_elm = ['elmformat']
@@ -409,49 +978,48 @@ autocmd plugs FileType markdown nnoremap <buffer> <Space>f :Trailing<CR>
 autocmd plugs FileType scheme nnoremap <buffer> <Space>f :Trailing<CR>gg=G<C-O><C-O><CR>
 " }}}
 
-Plug 'terryma/vim-multiple-cursors' " {{{
-" H & L replacements can be found in mappings.vim
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key = 'L'
-let g:multi_cursor_prev_key = 'H'
-let g:multi_cursor_skip_key = '<C-x>'
-let g:multi_cursor_quit_key = '<Esc>'
 " }}}
 
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' } " {{{
-vnoremap gX y:call vimproc#system('bro url <C-R>"')<CR>
-vnoremap gx y:call vimproc#system('firefox-default <C-R>" &')<CR>
-vnoremap gs y:call vimproc#system('firefox-default https://google.com/search?hl=en&q=<C-R>" &')<CR>
 
-" Xpdf gotoPage
-nnoremap [gl :silent! VimProcBang xpdf -remote xpdfserv 'gotoPage\(<C-R><C-W>\)'<CR>
+" ||
+" || Eval
+" ||
+
+" {{{
+
+" Depends on arecarn/selection.vim
+Plug 'arecarn/crunch.vim' " {{{
+inoremap <C-g>= <Esc>vB:Crunch<CR>a
 " }}}
-Plug 'Shougo/vimshell.vim' " {{{
-nnoremap <Leader>E :VimShell<CR>
-nnoremap <Leader>vp :exe 'VimShell -popup' ProjectRootGuess()<CR>
-nnoremap <Leader>vP :exe 'VimShell -split' ProjectRootGuess()<CR>
-nnoremap <Leader>vb :VimShellBufferDir -popup<CR>
-nnoremap <Leader>vB :VimShellBufferDir -split<CR>
-nnoremap <Leader>vv :VimShellSendString h<CR>
-nmap <Leader>vw yw:VimShell<CR><Esc><C-P>A<C-W><C-R>"<CR><Esc><C-W>p
-nmap <Leader>vf wyw:VimShell<CR><Esc><C-P>A<C-W><C-R>"<CR><Esc><C-W>p
-nmap <Leader>va yw:VimShell<CR><Esc><C-P>A.<C-R>"<CR><Esc><C-W>p
-nmap <Leader>vu yw:VimShell<CR><Esc><C-P>A<C-W><C-W><CR><Esc><C-W>p
-" Use current directory as vimshell prompt.
-let g:vimshell_prompt_expr =
-            \ 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
-let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
-let g:vimshell_scrollback_limit = 65535
+
+Plug '~/.vim/conf/_reply.vim/', { 'for' : ['sh', 'ocaml', 'elixir'] }
+Plug 'rhysd/reply.vim', {
+            \   'for' : ['sh', 'ocaml', 'elixir'],
+            \   'on' : ['ReplSend', 'Repl']
+            \ }
+
+Plug 'thinca/vim-quickrun' " {{{
+nmap <Leader>rr <Plug>(quickrun)
 " }}}
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif " {{{
-let g:deoplete#enable_at_startup = 0
-nnoremap <Space><Leader> :call deoplete#toggle()<CR>
+
+" }}}
+
+
+" ||
+" || Autocomplete
+" ||
+
+" {{{
+
+" if has('nvim')
+"     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"     Plug 'Shougo/deoplete.nvim'
+"     Plug 'roxma/nvim-yarp'
+"     Plug 'roxma/vim-hug-neovim-rpc'
+" endif " {{{
+" let g:deoplete#enable_at_startup = 0
+" nnoremap <Space><Leader> :call deoplete#toggle()<CR>
 
 " autocmd plugs FileType markdown,jiv call deoplete#disable()
 " inoremap <M-j> <C-n>
@@ -459,6 +1027,16 @@ nnoremap <Space><Leader> :call deoplete#toggle()<CR>
 
 " inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 " }}}
+
+" }}}
+
+
+" ||
+" || Docs
+" ||
+
+" {{{
+
 Plug 'Shougo/echodoc.vim' " {{{
 let g:echodoc#enable_at_startup = 1
 let g:echodoc#type = 'echo'
@@ -466,302 +1044,14 @@ set noshowmode
 highlight link EchoDocPopup Pmenu
 " }}}
 
-Plug 'skywind3000/asyncrun.vim' " {{{
-nnoremap <Leader>r<Space> :AsyncRun<Space>
-nnoremap <Space>r :AsyncRun tmux send -t motor C-u do-thing C-m<CR>
-nnoremap <Space><Tab> :AsyncRun tmux send -t motor C-c && sleep 0.1 && tmux send -t motor C-c <CR>
-" Refresh dev1 browser
-" autocmd plugs BufWrite *.elm,*.html,*.css,*.ex,*.exs,*.tsx silent! AsyncRun refresh-dev1
-
-" Open current file in browser
-command! Chr AsyncRun chromium --incognito % &
-command! Ff  AsyncRun firefox-dmenu % &
 " }}}
 
-Plug 'arecarn/selection.vim'
-Plug 'arecarn/crunch.vim' " {{{
-inoremap <C-g>= <Esc>vB:Crunch<CR>a
-" }}}
 
-Plug 'thinca/vim-quickrun' " {{{
-nmap <Leader>rr <Plug>(quickrun)
-" }}}
-Plug 'thinca/vim-textobj-between' " {{{
-let g:textobj_between_no_default_key_mappings = 1
-xmap ii <Plug>(textobj-between-i)
-omap ii <Plug>(textobj-between-i)
-xmap aa <Plug>(textobj-between-a)
-omap aa <Plug>(textobj-between-a)
-" }}}
-Plug 'thinca/vim-prettyprint'
+" ||
+" || Git
+" ||
 
-Plug '~/.vim/conf/_vim-operator-user/'
-Plug 'kana/vim-operator-user'
-
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-line' " {{{
-let g:textobj_line_no_default_key_mappings = 1
-nmap vv v<Plug>(textobj-line-i)
-" }}}
-Plug 'kana/vim-textobj-indent' " {{{
-let g:textobj_indent_no_default_key_mappings = 1
-xmap an  <Plug>(textobj-indent-a)
-omap an  <Plug>(textobj-indent-a)
-xmap in  <Plug>(textobj-indent-i)
-omap in  <Plug>(textobj-indent-i)
-xmap aN  <Plug>(textobj-indent-same-a)
-omap aN  <Plug>(textobj-indent-same-a)
-xmap iN  <Plug>(textobj-indent-same-i)
-omap iN  <Plug>(textobj-indent-same-i)
-
-" }}}
-Plug 'kana/vim-textobj-lastpat'
-Plug 'kana/vim-textobj-entire' " {{{
-let g:textobj_entire_no_default_key_mappings = 1
-xmap iA <Plug>(textobj-entire-i)
-omap iA <Plug>(textobj-entire-i)
-xmap aA <Plug>(textobj-entire-a)
-omap aA <Plug>(textobj-entire-a)
-xmap A <Plug>(textobj-entire-a)
-omap A <Plug>(textobj-entire-a)
-" }}}
-
-Plug 'kana/vim-textobj-function'
-" Fallback for vim-textobj-function using syntax definitions:
-Plug 'haya14busa/vim-textobj-function-syntax'
-
-Plug 'kana/vim-submode', {'on' : [] } " {{{
-let g:submode_timeoutlen = 700
-
-silent! call plug#load('vim-submode')
-
-call submode#enter_with('Remote↑↓', 'n', '', '[k', ':silent! VimProcBang bro scrollUp<CR>')
-call submode#map(       'Remote↑↓', 'n', '',  'k', ':silent! VimProcBang bro scrollUp<CR>')
-call submode#enter_with('Remote↑↓', 'n', '', '[j', ':silent! VimProcBang bro scrollDown<CR>')
-call submode#map(       'Remote↑↓', 'n', '',  'j', ':silent! VimProcBang bro scrollDown<CR>')
-
-call submode#enter_with('RemoteYT', 'n', '', '[l', ':silent! VimProcBang bro ytForward5<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'l', ':silent! VimProcBang bro ytForward5<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[L', ':silent! VimProcBang bro ytForward10<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'L', ':silent! VimProcBang bro ytForward10<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[;', ':silent! VimProcBang bro ytForward20<CR>')
-call submode#map(       'RemoteYT', 'n', '',  ';', ':silent! VimProcBang bro ytForward20<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[h', ':silent! VimProcBang bro ytBackward5<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'h', ':silent! VimProcBang bro ytBackward5<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[H', ':silent! VimProcBang bro ytBackward10<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'H', ':silent! VimProcBang bro ytBackward10<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[g', ':silent! VimProcBang bro ytBackward20<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'g', ':silent! VimProcBang bro ytBackward20<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[<', ':silent! VimProcBang bro ytFaster<CR>')
-call submode#map(       'RemoteYT', 'n', '',  '<', ':silent! VimProcBang bro ytFaster<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[>', ':silent! VimProcBang bro ytSlower<CR>')
-call submode#map(       'RemoteYT', 'n', '',  '>', ':silent! VimProcBang bro ytSlower<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[<Space>', ':silent! VimProcBang bro space<CR>')
-call submode#map(       'RemoteYT', 'n', '',  '<Space>', ':silent! VimProcBang bro space<CR>')
-
-" call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-y>', '<Esc>:silent! VimProcBang bro ytBackward5<CR>gi')
-" call submode#map(       'RemoteYT_I', 'i', '', '<C-y>', '<Esc>:silent! VimProcBang bro ytBackward5<CR>gi')
-
-" call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-u>', '<Esc>:silent! VimProcBang bro space<CR>gi')
-" call submode#map(       'RemoteYT_I', 'i', '', '<C-u>', '<Esc>:silent! VimProcBang bro space<CR>gi')
-
-" call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-i>', '<Esc>:silent! VimProcBang bro ytForward5<CR>gi')
-" call submode#map(       'RemoteYT_I', 'i', '', '<C-i>', '<Esc>:silent! VimProcBang bro ytForward5<CR>gi')
-
-" inoremap <C-u><C-t> <Esc>:silent! VimProcBang bro ytPls<CR>gi
-
-nnoremap [u :silent! VimProcBang bro space<CR>
-
-call submode#enter_with('RemoteZoom', 'n', '', '[zo', ':silent! VimProcBang bro zoomOut<CR>')
-call submode#map(       'RemoteZoom', 'n', '',   'o', ':silent! VimProcBang bro zoomOut<CR>')
-call submode#enter_with('RemoteZoom', 'n', '', '[zi', ':silent! VimProcBang bro zoomIn<CR>')
-call submode#map(       'RemoteZoom', 'n', '',   'i', ':silent! VimProcBang bro zoomIn<CR>')
-
-" call submode#enter_with('ScrollGo', 'n', '', ';k', '6<C-Y>6k')
-" call submode#map(       'ScrollGo', 'n', '',  'k', '6<C-Y>6k')
-" call submode#enter_with('ScrollGo', 'n', '', ';j', '6<C-E>6j')
-" call submode#map(       'ScrollGo', 'n', '',  'j', '6<C-E>6j')
-
-call submode#enter_with('ScrollStay', 'n', '', ']k', '3<C-Y>')
-" call submode#enter_with('ScrollStay', 'n', '', ';k', '3<C-Y>')
-call submode#map(       'ScrollStay', 'n', '',  'k', '3<C-Y>')
-call submode#enter_with('ScrollStay', 'n', '', ']j', '3<C-E>')
-" call submode#enter_with('ScrollStay', 'n', '', ';j', '3<C-E>')
-call submode#map(       'ScrollStay', 'n', '',  'j', '3<C-E>')
-" }}}
-Plug 'kana/vim-niceblock'
-Plug 'kana/vim-exjumplist' " {{{
-nmap <C-M-o> <Plug>(exjumplist-go-first)
-nmap <C-M-t> <Plug>(exjumplist-go-last)
-nmap <M-u> <Plug>(exjumplist-previous-buffer)
-nmap <M-m> <Plug>(exjumplist-next-buffer)
-" }}}
-
-Plug 'thinca/vim-visualstar'
-Plug 'tyru/operator-star.vim' " {{{
-nmap <Leader>*  <Plug>(operator-*)
-nmap <Leader>g* <Plug>(operator-g*)
-nmap <Leader>#  <Plug>(operator-#)
-nmap <Leader>g# <Plug>(operator-g#)
-" }}}
-
-Plug '~/.vim/conf/_open-browser.vim/'
-Plug 'tyru/open-browser.vim'
-
-Plug 'tyru/open-browser-github.vim' " {{{
-nnoremap gxg :OpenGithubProject <C-r>"<CR>
-vnoremap gxg y:OpenGithubProject <C-r>"<CR>
-" }}}
-
-Plug 'sgur/vim-operator-openbrowser'" {{{
-nmap gx <Plug>(operator-openbrowser)
-" }}}
-Plug 'sgur/vim-textobj-parameter'
-
-Plug 'akiyan/vim-textobj-xml-attribute'
-
-Plug 'machakann/vim-textobj-equation'
-
-Plug 'fcpg/vim-shore'
-
-Plug 'jeetsukumaran/vim-indentwise' " {{{
-map gH <Plug>(IndentWisePreviousLesserIndent)
-map gh <Plug>(IndentWiseNextLesserIndent)
-
-map gL <Plug>(IndentWisePreviousGreaterIndent)
-map gl <Plug>(IndentWiseNextGreaterIndent)
-
-nnoremap <Leader>j gj
-nnoremap <Leader>k gk
-vnoremap <Leader>j gj
-vnoremap <Leader>k gk
-
-map gk <Plug>(IndentWisePreviousEqualIndent)
-map gj <Plug>(IndentWiseNextEqualIndent)
-
-map g[ <Plug>(IndentWisePreviousAbsoluteIndent)
-map g] <Plug>(IndentWiseNextAbsoluteIndent)
-
-map gK <Plug>(IndentWiseBlockScopeBoundaryBegin)
-map gJ <Plug>(IndentWiseBlockScopeBoundaryEnd)
-" }}}
-
-" Plug 'wellle/targets.vim' " {{{
-" let g:targets_separators = '. ; : + - ~ _ * \ |'
-" }}}
-Plug 'wellle/visual-split.vim' " :VSSplit, :VSResize
-
-Plug 'junegunn/vim-after-object' " {{{
-autocmd plugs VimEnter * call after_object#enable('=', ':', '-', '#', ' ', ';', ',', '.' )
-" }}}
-Plug 'junegunn/vader.vim'
-
-Plug '~/.vim/conf/_fzf.vim/'
-Plug 'junegunn/fzf.vim'
-
-Plug 'junegunn/vim-peekaboo' " {{{
-let g:peekaboo_delay = 200
-let g:peekaboo_compact = 1
-let g:peekaboo_window = 'bo 30new'
-" }}}
-
-Plug 'chauncey-garrett/vim-tasklist', { 'on' : '<Plug>TaskList' } " {{{
-" Mnemonic: Toggle tasklist
-nmap <leader>tt <Plug>TaskList
-let g:tlTokenList = ['FIXME', 'TODO', 'XXX']
-let g:tlRememberPosition = 1
-let g:tlWindowPosition = 0
-" }}}
-
-Plug 't9md/vim-textmanip' " {{{
-xmap <C-M-j> <Plug>(textmanip-move-down)
-xmap <C-M-k> <Plug>(textmanip-move-up)
-xmap <C-M-h> <Plug>(textmanip-move-left)
-xmap <C-M-l> <Plug>(textmanip-move-right)
-nmap <C-M-k> V<Plug>(textmanip-move-up)
-nmap <C-M-j> V<Plug>(textmanip-move-down)
-nmap <C-M-h> V<Plug>(textmanip-move-left)
-nmap <C-M-l> V<Plug>(textmanip-move-right)
-
-nmap g<C-M-k> <Plug>(textmanip-duplicate-up)
-nmap g<C-M-j> <Plug>(textmanip-duplicate-down)
-xmap g<C-M-k> <Plug>(textmanip-duplicate-up)
-xmap g<C-M-j> <Plug>(textmanip-duplicate-down)
-
-nmap <Leader><C-M-k> <Plug>(textmanip-blank-above)
-nmap <Leader><C-M-j> <Plug>(textmanip-blank-below)
-xmap <Leader><C-M-k> <Plug>(textmanip-blank-above)
-xmap <Leader><C-M-j> <Plug>(textmanip-blank-below)
-" }}}
-Plug 't9md/vim-quickhl' " {{{
-nmap <Space>m <Plug>(quickhl-manual-this)
-xmap <Space>m <Plug>(quickhl-manual-this)
-nmap <Space>M <Plug>(quickhl-manual-reset)
-xmap <Space>M <Plug>(quickhl-manual-reset)
-let g:quickhl_manual_colors = [
-            \ "ctermfg=7 cterm=bold guifg=#ffffff gui=bold",
-            \ "ctermfg=206 cterm=bold guifg=#ff5fd7 gui=bold",
-            \ "ctermfg=111 cterm=bold guifg=#87afff gui=bold",
-            \ "ctermfg=227 cterm=bold guifg=#ffff5f gui=bold",
-            \ "ctermfg=188 cterm=bold guifg=#d7d7d7 gui=bold",
-            \ "ctermfg=204 cterm=bold guifg=#ff5f87 gui=bold",
-            \ "ctermfg=84 cterm=bold guifg=#5fff87 gui=bold",
-            \ "ctermfg=129 cterm=bold guifg=#af00ff gui=bold",
-            \ ]
-
-" nmap <Space>J <Plug>(quickhl-cword-toggle)
-" nmap <Space>] <Plug>(quickhl-tag-toggle)
-" For use with vim-operator-user
-" map H <Plug>(operator-quickhl-manual-this-motion)
-" }}}
-
-Plug 'RRethy/vim-illuminate' " {{{
-let g:Illuminate_delay = 0
-" }}}
-
-Plug 'haya14busa/vim-operator-flashy' " {{{
-map y <Plug>(operator-flashy)
-nmap Y <Plug>(operator-flashy)$
-" let g:operator#flashy#group = "Visual"
-let g:operator#flashy#group = "Search"
-" }}}
-Plug 'haya14busa/vim-easyoperator-line' " {{{
-let g:EasyOperator_line_do_mapping = 0
-nmap gy <Plug>(easyoperator-line-yank)
-nmap gd <Plug>(easyoperator-line-delete)
-" }}}
-Plug 'haya14busa/vim-edgemotion' " {{{
-map <M-j> <Plug>(edgemotion-j)
-map <M-k> <Plug>(edgemotion-k)
-" Poor man's horizontal edgemotion
-map <M-h> B
-map <M-l> E
-" }}}
-
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-surround' " {{{
-" Wrapping in braces:
-" imap <C-c><C-c> <Esc>hysiw)ea
-nmap <C-c><C-c> <Esc>ysiw)
-" imap <C-c>) <Esc>hysiw)ea
-nmap <C-c>) <Esc>ysiw)
-" Two words
-nmap <C-c>l ys3iw)
-" Not working
-" nmap <C-c>h ys2b)
-" Quotes
-" imap <C-c>" <Esc>hysiW"ea
-nmap <C-c>" <Esc>ysiW"
-" imap <C-c>' <Esc>hysiW'ea
-nmap <C-c>' <Esc>ysiW'
-" imap <C-c>] <Esc>hysiW'ea
-nmap <C-c>] <Esc>ysiW'
-" }}}
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-eunuch'
-
-Plug '~/.vim/conf/_vim-rsi/'
-Plug 'tpope/vim-rsi'
+" {{{
 
 Plug '~/.vim/conf/_vim-fugitive/'
 Plug 'tpope/vim-fugitive'
@@ -806,24 +1096,97 @@ nnoremap <Leader>gl :Flog -all<CR>
 nnoremap <Leader>gL :Flog -all -path=<C-R>=expand('%')<CR><CR>
 " }}}
 
-Plug 'mwgkgk/CamelCaseMotion' " {{{
-" Default mappings: ,w ,b ,e   i,w i,b i,e
-" kill-small-word insert mode:
-imap <C-g><C-w> <Esc>,bcw
 " }}}
-Plug 'mwgkgk/vim-operator-append' " {{{
-map <Leader>a <Plug>(operator-append)
-" }}}
-Plug 'mwgkgk/vim-operator-insert' " {{{
-map <Leader>i <Plug>(operator-insert)
-" }}}
-Plug 'mwgkgk/vim-auto-mkdir'
 
-Plug '~/.vim/conf/_vifm.vim/'
-Plug 'vifm/vifm.vim'
+
+" ||
+" || Shell
+" ||
+
+" {{{
+
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' } " {{{
+vnoremap gX y:call vimproc#system('bro url <C-R>"')<CR>
+vnoremap gx y:call vimproc#system('firefox-default <C-R>" &')<CR>
+vnoremap gs y:call vimproc#system('firefox-default https://google.com/search?hl=en&q=<C-R>" &')<CR>
+
+" Xpdf gotoPage
+nnoremap [gl :silent! VimProcBang xpdf -remote xpdfserv 'gotoPage\(<C-R><C-W>\)'<CR>
+" }}}
+Plug 'Shougo/vimshell.vim' " {{{
+nnoremap <Leader>E :VimShell<CR>
+nnoremap <Leader>vp :exe 'VimShell -popup' ProjectRootGuess()<CR>
+nnoremap <Leader>vP :exe 'VimShell -split' ProjectRootGuess()<CR>
+nnoremap <Leader>vb :VimShellBufferDir -popup<CR>
+nnoremap <Leader>vB :VimShellBufferDir -split<CR>
+nnoremap <Leader>vv :VimShellSendString h<CR>
+nmap <Leader>vw yw:VimShell<CR><Esc><C-P>A<C-W><C-R>"<CR><Esc><C-W>p
+nmap <Leader>vf wyw:VimShell<CR><Esc><C-P>A<C-W><C-R>"<CR><Esc><C-W>p
+nmap <Leader>va yw:VimShell<CR><Esc><C-P>A.<C-R>"<CR><Esc><C-W>p
+nmap <Leader>vu yw:VimShell<CR><Esc><C-P>A<C-W><C-W><CR><Esc><C-W>p
+" Use current directory as vimshell prompt.
+let g:vimshell_prompt_expr =
+            \ 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
+let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
+let g:vimshell_scrollback_limit = 65535
+" }}}
+
+Plug 'skywind3000/asyncrun.vim' " {{{
+nnoremap <Leader>r<Space> :AsyncRun<Space>
+nnoremap <Space>r :AsyncRun tmux send -t motor C-u do-thing C-m<CR>
+nnoremap <Space><Tab> :AsyncRun tmux send -t motor C-c && sleep 0.1 && tmux send -t motor C-c <CR>
+" Refresh dev1 browser
+" autocmd plugs BufWrite *.elm,*.html,*.css,*.ex,*.exs,*.tsx silent! AsyncRun refresh-dev1
+
+" Open current file in browser
+command! Chr AsyncRun chromium --incognito % &
+command! Ff  AsyncRun firefox-dmenu % &
+" }}}
+
+" }}}
+
+
+" ||
+" || Unix
+" ||
+
+" {{{
 
 Plug '~/.vim/conf/_vim-man/'
 Plug 'vim-utils/vim-man', { 'on' : 'Man' }
+
+Plug 'tpope/vim-eunuch'
+
+Plug '~/shop/core/colony/colony-vim/'
+
+" }}}
+
+
+" ||
+" || Internet
+" ||
+
+" {{{
+
+Plug '~/.vim/conf/_open-browser.vim/'
+Plug 'tyru/open-browser.vim'
+
+Plug 'tyru/open-browser-github.vim' " {{{
+nnoremap gxg :OpenGithubProject <C-r>"<CR>
+vnoremap gxg y:OpenGithubProject <C-r>"<CR>
+" }}}
+
+Plug 'AndrewRadev/exercism.vim'
+
+" }}}
+
+
+" ||
+" || Filetypes
+" ||
+
+
+" {{{
 
 " Plug 'autozimu/LanguageClient-neovim', {
 "     \ 'branch': 'next',
@@ -891,12 +1254,6 @@ Plug 'vim-utils/vim-man', { 'on' : 'Man' }
 Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
-
-Plug '~/.vim/conf/_reply.vim/', { 'for' : ['sh', 'ocaml', 'elixir'] }
-Plug 'rhysd/reply.vim', {
-            \   'for' : ['sh', 'ocaml', 'elixir'],
-            \   'on' : ['ReplSend', 'Repl']
-            \ }
 
 " Go
 " Plug 'fatih/vim-go', { 'for' : 'go' }
@@ -1004,15 +1361,23 @@ Plug 'mwgkgk/lux-vim', { 'for' : 'lux' }
 " ATS
 Plug 'vmchale/ats-vim', { 'for' : 'ats' }
 
+" }}}
+
 
 " ||
 " || Vimscript
 " ||
 
 " {{{
+
 Plug 'tpope/vim-scriptease'
 
+" Plug 'thinca/vim-prettyprint'
+
 Plug 'fcpg/vim-complimentary', { 'for' : 'vim' }
+
+Plug 'junegunn/vader.vim'
+
 " }}}
 
 
@@ -1021,16 +1386,19 @@ if filereadable(glob("~/.local.plugs.vimrc"))
     source ~/.local.plugs.vimrc
 endif
 
-" Colors
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-colorscheme-switcher' " {{{
-" F8, Shift-F8
-" }}}
+" ||
+" || Colors
+" ||
 
-Plug '~/.vim/conf/_colorpolice-vim/'
+" {{{
+
 " https://gitlab.com/mwgkgk/colorpolice-vim
+" Colorscheme wrapper to fix common annoyances or adjust colors on personal
+" preference.
+Plug '~/.vim/conf/_colorpolice-vim/'
 Plug '~/shop/oil/colorpolice/colorpolice-vim/'
 
+Plug '~/shop/forks/gruvbox/'
 Plug 'romainl/Apprentice'
 Plug 'romainl/Disciple'
 Plug 'jnurmine/Zenburn'
@@ -1051,6 +1419,8 @@ Plug 'fcpg/vim-orbital'
 Plug 'junegunn/seoul256.vim'
 Plug 'fcpg/vim-fahrenheit'
 Plug 'fcpg/vim-farout'
+
+" }}}
 
 call plug#end()
 
