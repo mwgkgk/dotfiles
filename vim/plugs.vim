@@ -1059,15 +1059,6 @@ Plug 'tpope/vim-fugitive'
 Plug '~/.vim/conf/_vim-gitgutter/'
 Plug 'airblade/vim-gitgutter' " {{{
 
-" Git-back
-" TODO don't go further back than the origin
-" TODO Move this to independent git plugin, or fugitive
-nnoremap <Leader>gb :!git back<CR>
-
-" Git-mes
-" TODO Move this to independent git plugin, or fugitive
-nnoremap <Leader>gr :!git mes<CR>
-
 " Git-last-message
 " TODO Move this to independent git plugin, or fugitive
 nnoremap <silent> <Leader>gm :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>

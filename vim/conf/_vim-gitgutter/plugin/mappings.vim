@@ -30,10 +30,13 @@ nnoremap <silent> <M-z> :GitGutterPreviewHunk<CR>
 " flicker.
 
 " Unstage current file:
-nnoremap <Leader>gu :call _vim_gitgutter#unstage#current()<CR>
+nnoremap <silent> <Leader>gu :call _vim_gitgutter#reset#current()<CR>
 
 " Unstage everything:
-nnoremap <Leader>gU :call _vim_gitgutter#unstage#all()<CR>
+nnoremap <silent> <Leader>gU :call _vim_gitgutter#reset#all()<CR>
+
+" Roll back last commit:
+nnoremap <silent> <Leader>gb :call _vim_gitgutter#reset#back()<CR>
 
 " ||
 " || Fugitive

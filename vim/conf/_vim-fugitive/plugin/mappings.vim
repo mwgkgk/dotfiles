@@ -19,6 +19,13 @@ nnoremap <Leader>C :Git commit -v %:p<CR>
 nnoremap <Leader>gC :call system('git add -A') <Bar> :Git commit -v<CR>
 
 " ||
+" || Undo
+" ||
+
+" Rename last commit:
+nnoremap <silent> <Leader>gr :call _vim_fugitive#cautious_amend()<CR>
+
+" ||
 " || Untracked
 " ||
 

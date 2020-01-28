@@ -5,3 +5,13 @@ function! _vim_fugitive#stage_and_commit_untracked_file(fpath)
 
     exec 'Git commit ' . a:fpath . ' -e -m "Add ' . a:fpath . '"'
 endfunction
+
+function! _vim_fugitive#cautious_amend()
+    let l:last_commit = systemlist('git log --oneline -n 1')[0]
+
+    if !git#remote#contains_head()
+        Git commit --amend
+    else
+        echo "Can't amend: " . l:last_commit
+    endif
+endfunction
