@@ -1,5 +1,6 @@
 " A custom git status pop-up:
 nnoremap <silent> <M-o> :call git#popup#status()<CR>
+inoremap <silent> <M-o> <C-c>:call git#popup#status()<CR>gi
 
 " Display last message:
 nnoremap <silent> <Leader>gm :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>

@@ -9,12 +9,16 @@ function! git#popup#status()
     let l:git_status = systemlist("git status -s -u")
     let l:commit_log = systemlist("git log --oneline origin/master..HEAD")
 
+    " This uses moved: [col('.'), col('.')], which allows for 1-column travel to
+    " the right, to allow for insert-mode mapping (which otherwise closes the
+    " dialog upon entering insert-mode).
+
     " TODO use fugitive buffer by number instead of l:git_status
     let b:git_status_popup = popup_create(l:git_status + [' '] + l:commit_log,
         \ #{
         \   pos: 'topleft',
         \   line: 'cursor+1',
         \   col: 'cursor',
-        \   moved: 'any',
+        \   moved: [col('.'), col('.')],
         \ })
 endfunction
