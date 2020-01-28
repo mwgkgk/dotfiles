@@ -78,21 +78,6 @@ inoremap <C-g><C-r> <C-O>:CtrlPRegister<CR>
 
 
 " ||
-" || Undo
-" ||
-
-" {{{
-
-Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
-nnoremap <F5> :UndotreeToggle<CR>
-let g:undotree_SetFocusWhenToggle = 1
-let g:undotree_WindowLayout = 2
-" }}}
-
-" }}}
-
-
-" ||
 " || Movement
 " ||
 
@@ -913,6 +898,21 @@ let g:tagbar_type_rust = {
       \'i:impls,trait implementations',
       \]
       \}
+" }}}
+
+" }}}
+
+
+" ||
+" || Undo
+" ||
+
+" {{{
+
+Plug 'mbbill/undotree', { 'on' : 'UndotreeToggle' } " {{{
+nnoremap <F5> :UndotreeToggle<CR>
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_WindowLayout = 2
 " }}}
 
 " }}}
