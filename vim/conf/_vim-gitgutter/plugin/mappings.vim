@@ -10,6 +10,9 @@ nmap <M-n> <Plug>(GitGutterNextHunk)
 " Hunk put:
 nmap <Leader>hp <Plug>(GitGutterStageHunk)
 
+" Hunk slurp: Stage hunk and amend noedit
+nnoremap <silent> <Leader>hs :call _vim_gitgutter#slurp_current_hunk()<CR>
+
 " ||
 " || Preview
 " ||

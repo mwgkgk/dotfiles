@@ -1059,10 +1059,6 @@ Plug 'tpope/vim-fugitive'
 Plug '~/.vim/conf/_vim-gitgutter/'
 Plug 'airblade/vim-gitgutter' " {{{
 
-" Hunk slurp: Stage hunk and amend noedit
-" TODO cancel out if we're not at least 1 commit ahead of upstream
-nmap <Leader>hs <Plug>(GitGutterStageHunk):!git commit --amend --no-edit<CR>
-
 " LeaderLeader to stage hunk and commit: (requires vim-fugitive)
 autocmd plugs FileType * nmap <buffer> <Leader><Leader> :w<CR>yy<Plug>(GitGutterStageHunk):Git commit<CR>p:wq<CR><Space>
 autocmd plugs FileType jiv,lisp,clojure nmap <buffer> <Leader><Leader> :w<CR>yaf<Plug>(GitGutterStageHunk):Git commit<CR>:let @"=substitute(@",'\n\s\+',' ','g')<CR>p:wq<CR><Space>
