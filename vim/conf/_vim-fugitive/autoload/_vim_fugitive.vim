@@ -25,3 +25,12 @@ function! _vim_fugitive#cautious_amend_no_edit()
         echo "Can't amend: " . l:last_commit
     endif
 endfunction
+
+function! _vim_fugitive#checkout_branch(dirty_name)
+    let l:branch = substitute(a:dirty_name,'^\s\+\*\?\s\?', '', 'g')
+
+    " Running this requires an extra keypress (like anything with Fugitive)
+    " but calling this function as a fzf sink obscures the confirmation
+    " window, so the whole situation is extra ugly.
+    exec 'Git checkout ' . l:branch
+endfunction
