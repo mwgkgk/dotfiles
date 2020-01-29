@@ -54,9 +54,4 @@ nnoremap <Leader>D :Gvdiff<CR>
 " || Branches
 " ||
 
-nnoremap <Leader>w :call fzf#run(fzf#wrap({
-            \ 'source': systemlist('git branch'),
-            \ 'sink': function('_vim_fugitive#checkout_branch')
-            \ }))<CR>
-
 nnoremap <Leader>gw :Git checkout -b<Space>
