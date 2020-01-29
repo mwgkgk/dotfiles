@@ -360,8 +360,8 @@ end
 function bind_eb
     set -l cmdline (commandline)
     if test -z "$cmdline"
-        fd --type file --follow --exclude .git "" ~/bin/ | fzf +m --height 15 --reverse | read -l result
-        and commandline -- "v $result" ;and commandline -f execute
+        git branch | fzf +m --height 15 --reverse | read -l result
+        and commandline -- "git checkout $result" ;and commandline -f execute
         commandline -f repaint
   else
       commandline -f backward-word
@@ -511,7 +511,7 @@ function fish_user_key_bindings
     bind Ä bind_esd
     # M-v to fzf-vim ~/.vim
     bind ö bind_ev
-    # M-b to fzf-vim ~/bin or backward-word
+    # M-b to git branch or backward-word
     bind â bind_eb
     # C-b to become royal
     bind \cb bind_royals
