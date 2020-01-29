@@ -15,3 +15,13 @@ function! _vim_fugitive#cautious_amend()
         echo "Can't amend: " . l:last_commit
     endif
 endfunction
+
+function! _vim_fugitive#cautious_amend_no_edit()
+    let l:last_commit = systemlist('git log --oneline -n 1')[0]
+
+    if !git#remote#contains_head()
+        Git commit --amend --no-edit
+    else
+        echo "Can't amend: " . l:last_commit
+    endif
+endfunction

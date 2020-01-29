@@ -1059,10 +1059,6 @@ Plug 'tpope/vim-fugitive'
 Plug '~/.vim/conf/_vim-gitgutter/'
 Plug 'airblade/vim-gitgutter' " {{{
 
-" Git slurp: for staged hunks
-" TODO Move this to independent git plugin, or fugitive
-nnoremap <Leader>gs :!git commit --amend --no-edit<CR>
-
 " Hunk slurp: Stage hunk and amend noedit
 " TODO cancel out if we're not at least 1 commit ahead of upstream
 nmap <Leader>hs <Plug>(GitGutterStageHunk):!git commit --amend --no-edit<CR>

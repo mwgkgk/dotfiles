@@ -18,6 +18,9 @@ nnoremap <Leader>C :Git commit -v %:p<CR>
 " Stage and commit everything there is:
 nnoremap <Leader>gC :call system('git add -A') <Bar> :Git commit -v<CR>
 
+" Git slurp: for staged hunks
+nnoremap <silent> <Leader>gs :call _vim_fugitive#cautious_amend_no_edit()<CR>
+
 " ||
 " || Undo
 " ||
