@@ -40,12 +40,9 @@ nnoremap <silent> <M-z> :GitGutterPreviewHunk<CR>
 " flicker.
 
 " Unstage current file:
-" TODO Exit early if there are no staged changes in current file
-" TODO Exit early if buffer has unwritten changes
 nnoremap <silent> <Leader>gu :call _vim_gitgutter#reset#current()<CR>
 
 " Unstage everything:
-" TODO Exit early if there are no staged changes
 nnoremap <silent> <Leader>gU :call _vim_gitgutter#reset#all()<CR>
 
 " Roll back last commit:

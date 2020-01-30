@@ -1,13 +1,25 @@
 function! _vim_gitgutter#reset#current()
-    call system('git reset -- ' . expand('%'))
+    let l:current_file = expand('%')
+
+    if !git#diff#has_staged_changes_in_file(l:current_file)
+        echo 'No staged changes in ' . l:current_file
+        return
+    endif
+
+    call system('git reset -- ' . l:current_file)
 
     " Update signs for the current buffer:
     GitGutter
 
-    echo 'Unstage ' . expand('%')
+    echo 'Unstage ' . l:current_file
 endfunction
 
 function! _vim_gitgutter#reset#all()
+    if !git#diff#has_staged_changes()
+        echo 'No staged changes'
+        return
+    endif
+
     call system('git reset')
 
     " Update signs for all buffers:
