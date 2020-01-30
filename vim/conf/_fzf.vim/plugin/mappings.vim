@@ -108,6 +108,12 @@ nnoremap sL :FzfBCommits<CR>
 " Browse git hooks:
 nnoremap sgh :FzfFilesWithPreview ./.git/hooks/<CR>
 
+" Select branch to checkout
+nnoremap sgb :call fzf#run(fzf#wrap({
+            \ 'source': systemlist('git branch'),
+            \ 'sink': function('git#branch#checkout')
+            \ }))<CR>
+
 "
 "
 " Commands
