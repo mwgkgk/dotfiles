@@ -1,6 +1,3 @@
-" These use system() and not :Git because fugitive's async commands don't
-" compose.
-
 function! _vim_gitgutter#reset#current()
     call system('git reset -- ' . expand('%'))
 
@@ -21,7 +18,7 @@ endfunction
 
 
 function! _vim_gitgutter#reset#back()
-    let l:last_commit = systemlist('git log --oneline -n 1')[0]
+    let l:last_commit = git#log#last_commit()
 
     if !git#remote#contains_head()
         call system('git reset HEAD~1')

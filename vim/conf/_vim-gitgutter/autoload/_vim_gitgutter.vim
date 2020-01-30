@@ -20,30 +20,59 @@ function! _vim_gitgutter#current_hunk() abort
 endfunction
 
 
-function! _vim_gitgutter#slurp_current_hunk()
-    let l:hunk = _vim_gitgutter#current_hunk()
+function! _vim_gitgutter#stage_current_hunk()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
 
-    if empty(l:hunk)
+    if empty(_vim_gitgutter#current_hunk())
         echo 'No hunk under cursor'
         return
     endif
 
-    let l:last_commit = systemlist('git log --oneline -n 1')[0]
+    GitGutterStageHunk
+endfunction
+
+function! _vim_gitgutter#slurp_current_hunk()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    if git#diff#has_staged_changes()
+        echo 'There are staged changes'
+        return
+    endif
+
+    if empty(_vim_gitgutter#current_hunk())
+        echo 'No hunk under cursor'
+        return
+    endif
 
     if !git#remote#contains_head()
         GitGutterStageHunk
 
         " Requires fugitive:
+        " TODO Doesn't need to be fugitive
         Git commit --amend --no-edit
     else
-        echo "Can't amend: " . l:last_commit
+        echo "Can't amend: " . git#log#last_commit()
     endif
 endfunction
 
 function! _vim_gitgutter#stage_commit_current_hunk()
-    let l:hunk = _vim_gitgutter#current_hunk()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
 
-    if empty(l:hunk)
+    if git#diff#has_staged_changes()
+        echo 'There are staged changes'
+        return
+    endif
+
+    if empty(_vim_gitgutter#current_hunk())
         echo 'No hunk under cursor'
         return
     endif
@@ -52,4 +81,61 @@ function! _vim_gitgutter#stage_commit_current_hunk()
 
     " Requires fugitive:
     Git commit -v
+endfunction
+
+function! _vim_gitgutter#stage_commit_current_hunk_with_message_from_form()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    if git#diff#has_staged_changes()
+        echo 'There are staged changes'
+        return
+    endif
+
+    if empty(_vim_gitgutter#current_hunk())
+        echo 'No hunk under cursor'
+        return
+    endif
+
+    " Yank ambient form: <Plug>(sexp_outer_list)
+    " Which is sexp#select_current_list from ~/plugs/vim-sexp/autoload/sexp.vim
+    " Trying to use the actual function doesn't seem to be worth it.
+    normal yaf
+
+    GitGutterStageHunk
+
+    if git#commit#with_message(substitute(getreg('"'), '\n\+\s\+', ' ', 'g'))
+        echo 'Commit ' . git#log#last_commit()
+    endif
+endfunction
+
+
+function! _vim_gitgutter#stage_commit_current_hunk_with_message_from_line()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    if git#diff#has_staged_changes()
+        echo 'There are staged changes'
+        return
+    endif
+
+    if empty(_vim_gitgutter#current_hunk())
+        echo 'No hunk under cursor'
+        return
+    endif
+
+    " Yank ambient form: <Plug>(sexp_outer_list)
+    " Which is sexp#select_current_list from ~/plugs/vim-sexp/autoload/sexp.vim
+    " Trying to use the actual function doesn't seem to be worth it.
+    normal yy
+
+    GitGutterStageHunk
+
+    if git#commit#with_message(substitute(getreg('"'), '\n\+\s\+', ' ', 'g'))
+        echo 'Commit ' . git#log#last_commit()
+    endif
 endfunction

@@ -25,11 +25,13 @@ nnoremap <Leader>gC :call system('git add -A') <Bar> :Git commit -v<CR>
 
 " Git slurp: for staged hunks
 " TODO Exit early if there are no staged changes, change 'Can't amend' wording
+" TODO Doesn't need to be fugitive
 nnoremap <silent> <Leader>gs :call _vim_fugitive#cautious_amend_no_edit()<CR>
 
 " Rename last commit:
 " TODO Check if there are any staged hunks & exit
 " TODO Add separate slurp+rename on <Leader>gR, change 'Can't amend' wording
+" TODO Doesn't need to be fugitive
 nnoremap <silent> <Leader>gr :call _vim_fugitive#cautious_amend()<CR>
 
 " ||
