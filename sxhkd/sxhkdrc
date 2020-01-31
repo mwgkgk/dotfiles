@@ -85,7 +85,7 @@ control + F12
 	run-aloud tmux-kill-detached
 
 # Show clock: Kmonad: Omega ret
-super + shift + 7
+super + Return
 	dzen2-clock
 
 # Paste X selection
