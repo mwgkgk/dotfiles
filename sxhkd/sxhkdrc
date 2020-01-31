@@ -57,10 +57,10 @@ super + BackSpace
 super + z
 	rogue
 
-super + Return
+super + i
 	zepp
 
-super + i
+super + q
 	humvee
 
 super + m
