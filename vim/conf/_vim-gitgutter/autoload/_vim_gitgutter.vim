@@ -106,7 +106,7 @@ function! _vim_gitgutter#stage_commit_current_hunk_with_message_from_form()
 
     GitGutterStageHunk
 
-    if git#commit#with_message(substitute(getreg('"'), '\n\+\s\+', ' ', 'g'))
+    if git#commit#with_message(git#commit#flatten_message(getreg('"')))
         echo 'Commit ' . git#log#last_commit()
     endif
 endfunction
@@ -135,7 +135,7 @@ function! _vim_gitgutter#stage_commit_current_hunk_with_message_from_line()
 
     GitGutterStageHunk
 
-    if git#commit#with_message(substitute(getreg('"'), '\n\+\s\+', ' ', 'g'))
+    if git#commit#with_message(git#commit#flatten_message(getreg('"')))
         echo 'Commit ' . git#log#last_commit()
     endif
 endfunction
