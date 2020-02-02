@@ -59,6 +59,12 @@ snippet r "return" b
 return $0
 endsnippet
 
+snippet ba "basement" b
+if null {
+	${VISUAL}$0
+}
+endsnippet
+
 snippet m "m" b
 ${1:methodName}() {
 	const { ${2:something} } = this.state;
