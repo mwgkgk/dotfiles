@@ -417,7 +417,7 @@ inoremap <F1> <nop>
 inoremap <C-t> <C-k>
 
 " M-t to transpose-char:
-inoremap <M-t> <Esc>xhPgi
+inoremap <M-t> <Esc>hxpa
 
 " Kill line on C-k like readline
 inoremap <C-k> <C-o>D
