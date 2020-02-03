@@ -596,7 +596,7 @@ nnoremap <Leader>tv :call toggle#verbose()<CR>
 "
 
 " Toggle spellcheck:
-nnoremap <Space><Enter> :call toggle#spelling()<CR>
+nnoremap <C-g><C-g> :call toggle#spelling()<CR>
 
 " Insert mode toggle:
 inoremap <C-g><C-g> <Esc>:call toggle#spelling()<CR>a
