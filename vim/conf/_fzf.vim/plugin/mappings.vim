@@ -109,7 +109,7 @@ nnoremap sL :FzfBCommits<CR>
 nnoremap sgh :FzfFilesWithPreview ./.git/hooks/<CR>
 
 " Select branch to checkout
-nnoremap sb :call fzf#run(fzf#wrap({
+nnoremap <silent> sb :call fzf#run(fzf#wrap({
             \ 'source': systemlist('git branch'),
             \ 'sink': function('git#branch#checkout')
             \ }))<CR>
@@ -138,27 +138,27 @@ nnoremap s<Tab> :FzfSnippets<CR>
 inoremap <C-g><Tab> <C-o>:FzfSnippets<CR>
 
 " Replace with skeleton:
-nnoremap sk :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+nnoremap <silent> sk :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'skeletons/*')),
             \ 'sink': '%!cat'
             \ })))<CR>
 
 " Edit a skeleton:
-nnoremap sK :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+nnoremap <silent> sK :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'skeletons/*')),
             \ })))<CR>
 
 " Edit ftplugins for current extension:
-nnoremap sT :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+nnoremap <silent> sT :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'ftplugin/**/' . &ft . '/*')) + split(globpath(&rtp, 'ftplugin/**/' . &ft . '.vim')),
             \ })))<CR>
 
 " Edit syntax plugins for current extension:
-nnoremap sY :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+nnoremap <silent> sY :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'syntax/**/' . &ft . '/*')) + split(globpath(&rtp, 'syntax/**/' . &ft . '.vim')),
             \ })))<CR>
 
 " Select from all syntax plugins:
-nnoremap svS :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+nnoremap <silent> svS :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'syntax/*')),
             \ })))<CR>
