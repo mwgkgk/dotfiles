@@ -596,7 +596,8 @@ nnoremap <Leader>tv :call toggle#verbose()<CR>
 "
 
 " Toggle spellcheck:
-nnoremap <C-g><C-g> :call toggle#spelling()<CR>
+" NOTE <C-g> normal mode is used for docs, so using <C-g><C-g> adds a delay.
+nnoremap <Space><C-g> :call toggle#spelling()<CR>
 
 " Insert mode toggle:
 inoremap <C-g><C-g> <Esc>:call toggle#spelling()<CR>a
