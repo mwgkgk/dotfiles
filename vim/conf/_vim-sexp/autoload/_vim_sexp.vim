@@ -108,7 +108,7 @@ function! _vim_sexp#setup_mappings()
   xmap <silent><buffer> <M-S-l>         <Plug>(sexp_capture_next_element)
   imap <silent><buffer> <M-S-l>         <Esc><Plug>(sexp_capture_next_element)a
   imap <silent><buffer> <BS>            <Plug>(sexp_insert_backspace)
-  imap <silent><buffer> "               <Plug>(sexp_insert_double_quote)
+  " imap <silent><buffer> "               <Plug>(sexp_insert_double_quote)
   imap <silent><buffer> (               <Plug>(sexp_insert_opening_round)
   imap <silent><buffer> )               <Plug>(sexp_insert_closing_round)
   imap <silent><buffer> [               <Plug>(sexp_insert_opening_square)
