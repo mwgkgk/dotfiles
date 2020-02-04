@@ -153,12 +153,17 @@ nnoremap <silent> sT :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'ftplugin/**/' . &ft . '/*')) + split(globpath(&rtp, 'ftplugin/**/' . &ft . '.vim')),
             \ })))<CR>
 
+" Select from all ftplugins:
+nnoremap <silent> svT :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+            \ 'source': split(globpath(&rtp, 'ftplugin/**/*.vim')),
+            \ })))<CR>
+
 " Edit syntax plugins for current extension:
 nnoremap <silent> sY :call fzf#run(fzf#wrap(fzf#vim#with_preview({
             \ 'source': split(globpath(&rtp, 'syntax/**/' . &ft . '/*')) + split(globpath(&rtp, 'syntax/**/' . &ft . '.vim')),
             \ })))<CR>
 
 " Select from all syntax plugins:
-nnoremap <silent> svS :call fzf#run(fzf#wrap(fzf#vim#with_preview({
-            \ 'source': split(globpath(&rtp, 'syntax/*')),
+nnoremap <silent> svY :call fzf#run(fzf#wrap(fzf#vim#with_preview({
+            \ 'source': split(globpath(&rtp, 'syntax/**/*.vim')),
             \ })))<CR>
