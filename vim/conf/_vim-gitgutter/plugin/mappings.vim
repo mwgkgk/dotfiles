@@ -23,6 +23,9 @@ nnoremap <silent> <Leader><Leader> :call _vim_gitgutter#stage_commit_current_hun
 " Stage and commit hunk under cursor with message specified by motion:
 nmap <Leader>hc <Plug>(operator-commit-current-hunk-with-message)
 
+" Stage and commit file with message specified by motion:
+nmap <Leader>gc <Plug>(operator-commit-file-with-message)
+
 " ||
 " || Preview
 " ||
@@ -36,7 +39,7 @@ nnoremap <silent> <M-z> :GitGutterPreviewHunk<CR>
 " Perhaps someday in 2030 it'll be possible to unstage-last-hunk, but for now
 " we resort to git reset.
 
-" This mapping should reside in ~/.vim/plugin/git/mappings.vim however
+" These mappings should reside in ~/.vim/plugin/git/mappings.vim however
 " gitgutter update needs to be triggered manually if we use system() call.
 
 " Which we do because it's the only way to dispatch synchronously without
