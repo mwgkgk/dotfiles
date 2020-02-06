@@ -20,6 +20,9 @@ nnoremap <silent> <Leader>hs :call _vim_gitgutter#slurp_current_hunk()<CR>
 " This gets overwritten for certain filetypes in conf/_vim-gitgutter/ftplugin
 nnoremap <silent> <Leader><Leader> :call _vim_gitgutter#stage_commit_current_hunk_with_message_from_line()<CR>
 
+" Stage and commit hunk under cursor with message specified by motion:
+nmap <Leader>hc <Plug>(operator-commit-current-hunk-with-message)
+
 " ||
 " || Preview
 " ||

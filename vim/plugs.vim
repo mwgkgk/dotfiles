@@ -521,7 +521,7 @@ Plug 'RRethy/vim-illuminate' " {{{
 let g:Illuminate_delay = 0
 " }}}
 
-Plug 'haya14busa/vim-operator-flashy' " {{{
+Plug 'haya14busa/vim-operator-flashy', { 'commit' : 'b24673a9b0d5d60b26d202deb13d4ebf90d7a2ae' } " {{{
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 " let g:operator#flashy#group = "Visual"
