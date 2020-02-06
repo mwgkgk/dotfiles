@@ -441,17 +441,17 @@ function fish_user_key_bindings
     # M-S-l to cd !$
     bind Ì bind_cd_lastcmd
 
-    # M-o to git
-    bind ï bind_git_status
-    # M-S-o to git diff
-    bind Ï bind_git_diff
-    # C-M-o to raise
-    bind  bind_raise
+    # M-o to ls
+    bind ï bind_ls_here
+    # M-S-o to exa -l --sort modified --tree
+    bind Ï bind_lstree_here
 
-    # M-i to ls status
-    bind é bind_ls_here
-    # M-S-i to exa -l --sort modified --tree
-    bind É bind_lstree_here
+    # M-i to git status
+    bind é bind_git_status
+    # M-S-i to git diff
+    bind É bind_git_diff
+    # C-M-i to raise
+    bind  bind_raise
 
     # M-u to suh
     bind õ bind_suh
