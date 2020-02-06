@@ -11,7 +11,7 @@ nnoremap <Leader>G :rightbelow Gstatus<CR>
 
 " Commit staged files verbosely:
 " TODO Exit early if there are no staged changes
-nnoremap <Leader>gc :Git commit -v<CR>
+nnoremap <Leader>cc :Git commit -v<CR>
 
 " Stage & commit current file:
 " TODO Check if buffer has unwritten changes
