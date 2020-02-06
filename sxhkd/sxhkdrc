@@ -48,7 +48,7 @@ super + backslash
 super + semicolon
 	silk
 
-super + space
+super + control + space
 	technodrome
 
 super + BackSpace
@@ -60,7 +60,7 @@ super + z
 super + i
 	zepp
 
-super + q
+super + space
 	humvee
 
 super + m
