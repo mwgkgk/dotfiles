@@ -31,15 +31,6 @@ nnoremap <silent> <Leader>gs :call _vim_fugitive#cautious_amend_no_edit()<CR>
 nnoremap <silent> <Leader>gr :call _vim_fugitive#cautious_amend()<CR>
 
 " ||
-" || Untracked
-" ||
-
-" Stage untracked file:
-" TODO Exit early if buffer has unwritten changes
-" TODO Doesn't need to be fugitive
-nnoremap <Leader>ha :Git add % <Bar> :echo "Stage <C-r>=expand("%")<CR>"<CR>
-
-" ||
 " || Diff
 " ||
 
