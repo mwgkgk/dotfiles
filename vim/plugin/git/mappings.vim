@@ -33,6 +33,13 @@ nnoremap <silent> <Leader>ha :call git#stage#interactively(expand('%'))<CR>
 nnoremap <silent> <Leader>ga :call git#commit#add_untracked_file(expand('%'))<CR>
 
 " ||
+" || Amend
+" ||
+
+" Slurp staged files:
+nnoremap <silent> <Leader>gs :call git#commit#slurp_staged()<CR>
+
+" ||
 " || Undo
 " ||
 

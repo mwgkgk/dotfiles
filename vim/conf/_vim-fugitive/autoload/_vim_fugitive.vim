@@ -84,13 +84,3 @@ function! _vim_fugitive#rename_slurp_last_commit()
 
     Git commit --amend
 endfunction
-
-function! _vim_fugitive#cautious_amend_no_edit()
-    let l:last_commit = git#log#last_commit()
-
-    if !git#remote#contains_head()
-        Git commit --amend --no-edit
-    else
-        echo "Can't amend: " . l:last_commit
-    endif
-endfunction

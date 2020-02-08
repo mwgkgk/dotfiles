@@ -41,3 +41,24 @@ function! git#commit#add_untracked_file(fpath)
         echo 'Commit ' . git#log#last_commit()
     endif
 endfunction
+
+function! git#commit#slurp_staged()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    if !git#diff#has_staged_changes()
+        echo 'No staged changes'
+        return
+    endif
+
+    if git#remote#contains_head()
+        echo "Can't amend: " . git#log#last_commit()
+        return
+    endif
+
+    if system#success('git commit --amend --no-edit')
+        echo 'Modified ' . git#log#last_commit()
+    endif
+endfunction
