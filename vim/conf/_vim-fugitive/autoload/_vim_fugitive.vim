@@ -1,3 +1,17 @@
+function! _vim_fugitive#commit_staged()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    if !git#diff#has_staged_changes()
+        echo 'No staged changes'
+        return
+    endif
+
+    tab Git commit -v
+endfunction
+
 function! _vim_fugitive#stage_and_commit_current_file()
     if &modified
         echo 'Buffer has unwritten changes'

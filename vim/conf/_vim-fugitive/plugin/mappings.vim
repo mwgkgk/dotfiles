@@ -10,8 +10,7 @@ nnoremap <Leader>G :rightbelow Gstatus<CR>
 " ||
 
 " Commit staged files verbosely:
-" TODO Exit early if there are no staged changes
-nnoremap <Leader>cc :Git commit -v<CR>
+nnoremap <silent> <Leader>cc :call _vim_fugitive#commit_staged()<CR>
 
 " Stage & commit current file:
 nnoremap <silent> <Leader>C :call _vim_fugitive#stage_and_commit_current_file()<CR>
