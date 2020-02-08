@@ -1,16 +1,6 @@
 function! git#commit#with_message(mes)
     if len(a:mes)
-        let l:res = system('git commit -m "' . a:mes . '"')
-
-        if v:shell_error
-            " This isn't an echoerr because we want to handle the return value
-            " graciously.
-            echom l:res
-        endif
-
-        " If we used the value without negating it, the function would be
-        " called git#commit#with_message_was_unsuccessful
-        return !v:shell_error
+        return system#success('git commit -m "' . a:mes . '"')
     else
         " If we used 1 here, the function would be called
         " git#commit#with_message_was_unsuccessful
