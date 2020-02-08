@@ -38,6 +38,25 @@ function! _vim_fugitive#stage_and_commit_current_file()
     exec 'Git commit -v ' . l:file
 endfunction
 
+function! _vim_fugitive#stage_and_commit_everything()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    if git#diff#has_staged_changes()
+        echo 'There are staged changes'
+        return
+    endif
+
+    if !system#success('git add -A')
+        " The error message is echoed from system#success.
+        return
+    endif
+
+    tab Git commit -v
+endfunction
+
 function! _vim_fugitive#cautious_amend()
     let l:last_commit = git#log#last_commit()
 
