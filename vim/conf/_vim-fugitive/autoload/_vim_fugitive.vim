@@ -57,14 +57,32 @@ function! _vim_fugitive#stage_and_commit_everything()
     tab Git commit -v
 endfunction
 
-function! _vim_fugitive#cautious_amend()
-    let l:last_commit = git#log#last_commit()
-
-    if !git#remote#contains_head()
-        Git commit --amend
-    else
-        echo "Can't amend: " . l:last_commit
+function! _vim_fugitive#rename_last_commit()
+    if git#remote#contains_head()
+        echo "Can't amend: " . git#log#last_commit()
+        return
     endif
+
+    if git#diff#has_staged_changes()
+        echo 'There are staged changes'
+        return
+    endif
+
+    Git commit --amend
+endfunction
+
+function! _vim_fugitive#rename_slurp_last_commit()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    if git#remote#contains_head()
+        echo "Can't amend: " . git#log#last_commit()
+        return
+    endif
+
+    Git commit --amend
 endfunction
 
 function! _vim_fugitive#cautious_amend_no_edit()

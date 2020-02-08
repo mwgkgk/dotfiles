@@ -24,9 +24,10 @@ nnoremap <silent> <Leader>gC :call _vim_fugitive#stage_and_commit_everything()<C
 nnoremap <silent> <Leader>gs :call _vim_fugitive#cautious_amend_no_edit()<CR>
 
 " Rename last commit:
-" TODO Check if there are any staged hunks & exit
-" TODO Add separate slurp+rename on <Leader>gR, change 'Can't amend' wording
-nnoremap <silent> <Leader>gr :call _vim_fugitive#cautious_amend()<CR>
+nnoremap <silent> <Leader>gr :call _vim_fugitive#rename_last_commit()<CR>
+
+" Rename last commit + slurp staged:
+nnoremap <silent> <Leader>gR :call _vim_fugitive#rename_slurp_last_commit()<CR>
 
 " ||
 " || Diff
