@@ -53,9 +53,9 @@ function! _vim_gitgutter#slurp_current_hunk()
     if !git#remote#contains_head()
         GitGutterStageHunk
 
-        " Requires fugitive:
-        " TODO Doesn't need to be fugitive
-        Git commit --amend --no-edit
+        if system#success('git commit --amend --no-edit')
+            echo 'Modified ' . git#log#last_commit()
+        endif
     else
         echo "Can't amend: " . git#log#last_commit()
     endif

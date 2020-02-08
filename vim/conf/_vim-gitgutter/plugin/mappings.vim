@@ -14,7 +14,6 @@ nnoremap <silent> <Leader>hp :call _vim_gitgutter#stage_current_hunk()<CR>
 nnoremap <silent> <Leader>hh :call _vim_gitgutter#stage_commit_current_hunk()<CR>
 
 " Hunk slurp: Stage hunk and amend noedit
-" TODO Doesn't need to use fugitive
 nnoremap <silent> <Leader>hs :call _vim_gitgutter#slurp_current_hunk()<CR>
 
 " Stage and commit hunk under cursor with line under cursor as message:
