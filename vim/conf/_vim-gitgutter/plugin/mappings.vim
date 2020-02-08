@@ -25,6 +25,7 @@ nnoremap <silent> <Leader><Leader> :call _vim_gitgutter#stage_commit_current_hun
 nmap <Leader>hc <Plug>(operator-commit-current-hunk-with-message)
 
 " Stage and commit file with message specified by motion:
+" TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
 nmap <Leader>gc <Plug>(operator-commit-file-with-message)
 
 " ||
@@ -32,25 +33,3 @@ nmap <Leader>gc <Plug>(operator-commit-file-with-message)
 " ||
 
 nnoremap <silent> <M-z> :GitGutterPreviewHunk<CR>
-
-" ||
-" || Undo
-" ||
-
-" Perhaps someday in 2030 it'll be possible to unstage-last-hunk, but for now
-" we resort to git reset.
-
-" These mappings should reside in ~/.vim/plugin/git/mappings.vim however
-" gitgutter update needs to be triggered manually if we use system() call.
-
-" Which we do because it's the only way to dispatch synchronously without
-" flicker.
-
-" Unstage current file:
-nnoremap <silent> <Leader>gu :call _vim_gitgutter#reset#current()<CR>
-
-" Unstage everything:
-nnoremap <silent> <Leader>gU :call _vim_gitgutter#reset#all()<CR>
-
-" Roll back last commit:
-nnoremap <silent> <Leader>gb :call _vim_gitgutter#reset#back()<CR>

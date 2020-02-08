@@ -1,4 +1,4 @@
-function! _vim_gitgutter#reset#current()
+function! git#reset#current()
     let l:current_file = expand('%')
 
     if !git#diff#has_staged_changes_in_file(l:current_file)
@@ -14,7 +14,7 @@ function! _vim_gitgutter#reset#current()
     echo 'Unstage ' . l:current_file
 endfunction
 
-function! _vim_gitgutter#reset#all()
+function! git#reset#all()
     if !git#diff#has_staged_changes()
         echo 'No staged changes'
         return
@@ -29,7 +29,7 @@ function! _vim_gitgutter#reset#all()
 endfunction
 
 
-function! _vim_gitgutter#reset#back()
+function! git#reset#back()
     let l:last_commit = git#log#last_commit()
 
     if !git#remote#contains_head()

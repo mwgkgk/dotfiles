@@ -31,3 +31,19 @@ nnoremap <silent> <Leader>ha :call git#stage#interactively(expand('%'))<CR>
 
 " Stage & commit untracked file with auto-generated message:
 nnoremap <silent> <Leader>ga :call git#commit#add_untracked_file(expand('%'))<CR>
+
+" ||
+" || Undo
+" ||
+
+" Perhaps someday in 2030 it'll be possible to unstage-last-hunk, but for now
+" we resort to git reset.
+
+" Unstage current file:
+nnoremap <silent> <Leader>gu :call git#reset#current()<CR>
+
+" Unstage everything:
+nnoremap <silent> <Leader>gU :call git#reset#all()<CR>
+
+" Roll back last commit:
+nnoremap <silent> <Leader>gb :call git#reset#back()<CR>
