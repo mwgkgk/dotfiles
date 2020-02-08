@@ -6,8 +6,16 @@ function! _vim_fugitive#stage_and_commit_current_file()
 
     let l:file = expand('%')
 
+    if !filereadable(l:file)
+        echo 'File not readable: ' . l:file
+        return
+    endif
+
     if git#diff#is_untracked(l:file)
-        call system('git add ' . l:file)
+        if !git#stage#file(l:file)
+            " The error message is echoed from git#stage#file.
+            return
+        endif
     elseif !git#diff#has_changes_in_file(l:file)
         echo 'No changes in current file'
         return

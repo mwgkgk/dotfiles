@@ -68,7 +68,10 @@ function! _vim_gitgutter#operators#commit_file_with_message(motion_wiseness)
 
     normal! `[yv`]
 
-    call system('git add ' . expand('%'))
+    if !git#stage#file(expand('%'))
+        " The error message is echoed from git#stage#file.
+        return
+    endif
 
     " Update signs for the current buffer:
     GitGutter

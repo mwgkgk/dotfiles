@@ -42,7 +42,10 @@ function! git#commit#add_untracked_file(fpath)
         return
     endif
 
-    call system('git add ' . a:fpath)
+    if !git#stage#file(a:fpath)
+        " The error message is echoed from git#stage#file.
+        return
+    endif
 
     if git#commit#with_message('Add ' . a:fpath)
         echo 'Commit ' . git#log#last_commit()
