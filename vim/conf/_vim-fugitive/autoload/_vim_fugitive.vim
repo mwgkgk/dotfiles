@@ -1,3 +1,21 @@
+function! _vim_fugitive#stage_and_commit_current_file()
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    let l:file = expand('%')
+
+    if git#diff#is_untracked(l:file)
+        call system('git add ' . l:file)
+    elseif !git#diff#has_changes_in_file(l:file)
+        echo 'No changes in current file'
+        return
+    endif
+
+    exec 'Git commit -v ' . l:file
+endfunction
+
 function! _vim_fugitive#stage_and_commit_untracked_file(fpath)
     " This uses system() and not :Git because fugitive's async commands don't
     " compose.

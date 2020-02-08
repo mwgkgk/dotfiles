@@ -14,10 +14,7 @@ nnoremap <Leader>G :rightbelow Gstatus<CR>
 nnoremap <Leader>cc :Git commit -v<CR>
 
 " Stage & commit current file:
-" TODO Check if buffer has unwritten changes
-" TODO Check if current file has any stageable changes
-" TODO If file is untracked, stage_and_commit_untracked_file
-nnoremap <Leader>C :Git commit -v %:p<CR>
+nnoremap <silent> <Leader>C :call _vim_fugitive#stage_and_commit_current_file()<CR>
 
 " Stage and commit everything there is:
 " TODO Exit early if there are no staged changes
