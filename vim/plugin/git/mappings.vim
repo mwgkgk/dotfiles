@@ -5,3 +5,6 @@ inoremap <silent> <M-o> <C-c>:call git#popup#status()<CR>gi
 " Display last message:
 nnoremap <silent> <Leader>gm :echo "<C-r>=systemlist('git log --oneline -1')[0]<CR>"<CR>
 nnoremap <silent> <Leader>gM :echo "<C-r>=system('git log -1')<CR>"<CR>
+
+" Stage & commit untracked file with auto-generated message:
+nnoremap <silent> <Leader>ga :call git#commit#add_untracked_file(expand('%'))<CR>

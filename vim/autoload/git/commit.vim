@@ -28,3 +28,21 @@ function! git#commit#flatten_message(mes)
 
     return l:mes
 endfunction
+
+function! git#commit#add_untracked_file(fpath)
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    if !git#diff#is_untracked(a:fpath)
+        echo 'File is tracked by git'
+        return
+    endif
+
+    call system('git add ' . a:fpath)
+
+    if git#commit#with_message('Add ' . a:fpath)
+        echo 'Commit ' . git#log#last_commit()
+    endif
+endfunction
