@@ -685,38 +685,8 @@ Plug 'sickill/vim-pasta'
 
 " {{{
 
-Plug 'kshenoy/vim-signature' " {{{
-let g:SignatureMap = {
-    \ 'Leader'             :  "m",
-    \ 'PlaceNextMark'      :  "mm",
-    \ 'ToggleMarkAtLine'   :  "m.",
-    \ 'PurgeMarksAtLine'   :  "m-",
-    \ 'DeleteMark'         :  "dm",
-    \ 'PurgeMarks'         :  "m_",
-    \ 'PurgeMarkers'       :  "m<BS>",
-    \ 'GotoNextLineAlpha'  :  "']",
-    \ 'GotoPrevLineAlpha'  :  "'[",
-    \ 'GotoNextSpotAlpha'  :  "`]",
-    \ 'GotoPrevSpotAlpha'  :  "`[",
-    \ 'GotoNextLineByPos'  :  "]'",
-    \ 'GotoPrevLineByPos'  :  "['",
-    \ 'GotoNextSpotByPos'  :  "]`",
-    \ 'GotoPrevSpotByPos'  :  "[`",
-    \ 'GotoNextMarker'     :  "]-",
-    \ 'GotoPrevMarker'     :  "[-",
-    \ 'GotoNextMarkerAny'  :  "]=",
-    \ 'GotoPrevMarkerAny'  :  "[=",
-    \ 'ListBufferMarks'    :  "m/",
-    \ 'ListBufferMarkers'  :  "m?"
-    \ }
-" M replacement can be found in mappings.vim
-nmap M `]
-nmap U `[
-
-hi link SignatureMarkText SignColumn
-hi link SignatureMarkerText SignColumn
-
-" }}}
+Plug '~/.vim/conf/_vim-signature/'
+Plug 'kshenoy/vim-signature'
 
 " }}}
 
