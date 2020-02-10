@@ -97,6 +97,8 @@ _     _     _                 _             _    _    _    _             _    _ 
 
 // Undo closed browser tab.
 @a9 = C-S-t
+// Send enter and then punt the window.
+@a6 = (( ret M-grave ))
 
 LAYER Burglar
 /*
@@ -113,7 +115,7 @@ _    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _ 
 _     K    @a1  end  J    _    _    C-u  _    _    _    __   _    _      _    _    _        _       _       _          _
 ret    home down pgdn @a3  _    left down up   rght _    _    _                             _       _       _
 _       @a9  _    _    M-8  @a2  _    _    _    _     _    _                  _             _       _       _          _
-_     _     LT-Driver         ret           _    _    _    _             _    _    _        _               _
+_     _     LT-Driver         @a6           _    _    _    _             _    _    _        _               _
 
 
 LAYER Driver
