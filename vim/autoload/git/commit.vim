@@ -59,6 +59,6 @@ function! git#commit#slurp_staged()
     endif
 
     if system#success('git commit --amend --no-edit')
-        echo 'Modified ' . git#log#last_commit()
+        echo 'Modify ' . git#log#last_commit()
     endif
 endfunction
