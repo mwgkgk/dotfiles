@@ -27,7 +27,7 @@ super + f
 super + g
 	gums
 
-super + c
+super + control + c
 	cmums
 
 super + t
@@ -68,6 +68,14 @@ super + m
 
 super + apostrophe
 	druid
+
+# Burrow
+
+super + w
+	burrow ~/.burrow/quick-launch
+
+super + c
+	burrow ~/.burrow/quick-files
 
 # Paste
 
