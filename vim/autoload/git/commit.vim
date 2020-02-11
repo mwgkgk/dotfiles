@@ -8,6 +8,16 @@ function! git#commit#with_message(mes)
     endif
 endfunction
 
+function! git#commit#rename(mes)
+    if len(a:mes)
+        return system#success('git commit --amend --no-edit -m "' . a:mes . '"')
+    else
+        " If we used 1 here, the function would be called
+        " git#commit#rename_was_unsuccessful
+        return 0
+    endif
+endfunction
+
 function! git#commit#flatten_message(mes)
     " Remove leading whitespace
     let l:mes = substitute(a:mes, '^\s\+', '', 'g')

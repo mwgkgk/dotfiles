@@ -27,6 +27,9 @@ nmap <Leader>hc <Plug>(operator-commit-current-hunk-with-message)
 " TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
 nmap <Leader>gc <Plug>(operator-commit-file-with-message)
 
+" Rename last commit with message specified by motion:
+nmap <Leader>hr <Plug>(operator-rename-last-commit)
+
 " ||
 " || Preview
 " ||
