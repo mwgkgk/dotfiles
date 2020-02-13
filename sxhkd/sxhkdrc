@@ -27,7 +27,7 @@ super + f
 super + g
 	gums
 
-super + control + c
+super + c
 	cmums
 
 super + t
@@ -74,7 +74,7 @@ super + apostrophe
 super + w
 	burrow ~/.burrow/quick-launch
 
-super + c
+super + control + c
 	burrow ~/.burrow/quick-files
 
 # Paste
