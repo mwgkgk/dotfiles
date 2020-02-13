@@ -19,7 +19,7 @@
 
 " let s:static_colo = 'farout'
 " let s:static_colo = 'autumn'
-" let s:static_colo = 'shady'
+let s:static_colo = 'shady'
 " let s:static_colo = 'hawk'
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
@@ -29,7 +29,7 @@
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
 
-let s:static_colo = 'nuclear'
+" let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
