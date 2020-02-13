@@ -24,7 +24,7 @@ function! git#commit#flatten_message(mes)
     " Remove newlines that are optionally followed by whitespace
     let l:mes = substitute(l:mes, '\n\+\s*', ' ', 'g')
     " Remove trailing whitespace
-    let l:mes = substitute(a:mes, '\s\+$', '', 'g')
+    let l:mes = substitute(l:mes, '\s\+$', '', 'g')
     " Escape quotes
     let l:mes = substitute(l:mes, '"', '\\"', 'g')
 
