@@ -19,7 +19,8 @@
 
 " let s:static_colo = 'farout'
 " let s:static_colo = 'autumn'
-let s:static_colo = 'shady'
+" let s:static_colo = 'shady'
+let s:static_colo = 'hemisu-dark'
 " let s:static_colo = 'hawk'
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
