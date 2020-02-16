@@ -17,7 +17,7 @@ endif
 
 let g:colors_name = 'nil'
 
-hi Normal ctermbg=236 ctermfg=48 cterm=none
+hi Normal ctermbg=236 ctermfg=49 cterm=none
 hi Type ctermfg=47
 hi Statement ctermfg=41
 hi Constant ctermfg=47
