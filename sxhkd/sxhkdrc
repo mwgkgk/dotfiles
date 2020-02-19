@@ -48,7 +48,7 @@ super + backslash
 super + semicolon
 	silk
 
-super + control + space
+super + control + semicolon
 	technodrome
 
 super + BackSpace
@@ -74,7 +74,7 @@ super + apostrophe
 super + w
 	burrow ~/.burrow/quick-launch
 
-super + control + c
+super + control + space
 	burrow ~/.burrow/quick-files
 
 # Paste
