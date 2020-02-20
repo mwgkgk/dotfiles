@@ -51,6 +51,9 @@ super + semicolon
 super + control + semicolon
 	technodrome
 
+control + semicolon 
+	sleep 0.1 && xdotool keyup ctrl+semicolon key Escape space w
+
 super + BackSpace
 	rogue
 
