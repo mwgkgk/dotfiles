@@ -18,6 +18,13 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "^(\()?m" "m" r
+(defmacro ${1:name} (${2:expr})
+	${3:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet ba "basement" b
 #+nil
 (progn
