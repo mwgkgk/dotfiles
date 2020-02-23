@@ -2,133 +2,169 @@ INPUT = LINUX_DEVICE L64 /dev/input/by-id/usb-SIGMACHIP_USB_Keyboard-event-kbd
 OUTPUT = UINPUT_SINK
 
 
-/*
-
-LAYER template
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     _    _    _    _    _    _    _    _    _    _    _    _    _      _    _    _        _       _       _          _
-_      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
-_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 _             _    _    _    _             _    _    _        _               _
-
-*/
-
-
-@ltO = LT-Omega
-@ltZ = LT-Zeta
-@ltF = LT-Funk
-
-@lrW = LR-Wraith
-@laW = LA-Wraith
-
-@tnB = TH 200 caps LT-Burglar
-
-@tnT = TN f1 LT-Toggle
-@tnU = TN f1 LT-Untoggle
-
-@a1 = C-bspc
-@a2 = C-left
-@a3 = C-rght
-@a4 = C-del
-@a5 = S-tab
-
-
 SRC
-esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
-grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
-tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
-caps   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
-lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
-lctl  lmet  lalt              spc           ralt rmet cmps rctl          left down right    kp0             kpdot
+esc              f1               f2               f3               f4               f5               f6               f7               f8               f9               f10              f11              f12                                prnt slck pause
+grv              1                2                3                4                5                6                7                8                9                0                -                =                bspc              ins  home pgup     numlock kpslash kpasterisk kpminus
+tab               q                w                e                r                t                y                u                i                o                p                [                ]                \                del  end  pgdn     kp7     kp8     kp9        kpplus
+caps               a                s                d                f                g                h                j                k                l                ;                '                ret                                                 kp4     kp5     kp6
+lsft                z                x                c                v                b                n                m                ,                .                 /                rsft                                                 up            kp1     kp2     kp3        kpenter
+lctl              lmet              lalt                                                              spc                                               ralt             rmet             cmps             rctl                                left down right    kp0             kpdot
 
+
+/* ----------------------------------------------------------------------------
+ *                                     home
+ * ----------------------------------------------------------------------------
+ * 
+ * Base layer.
+ * 
+ */
+
+@togBurglar = TH 200 caps LT-Burglar
+
+@togPush = TN f1 LT-Push
+@togPop = TN f1 LT-Pop
 
 LAYER home
-esc  @tnT f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
-grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
-tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
-lctl   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
-lsft    z    x    c    v    b    n    m    ,    .     /    @ltZ               up            kp1     kp2     kp3        kpenter
-@tnB  lmet  lalt              spc           @ltO rmet @ltF S-caps        left down right    kp0             kpdot
+esc              @togPush         f2               f3               f4               f5               f6               f7               f8               f9               f10              f11              f12                                prnt slck pause
+grv              1                2                3                4                5                6                7                8                9                0                -                =                bspc              ins  home pgup     numlock kpslash kpasterisk kpminus
+tab               q                w                e                r                t                y                u                i                o                p                [                ]                \                del  end  pgdn     kp7     kp8     kp9        kpplus
+LT-Strg            a                s                d                f                g                h                j                k                l                ;                '                ret                                                 kp4     kp5     kp6
+lsft                z                x                c                v                b                n                m                ,                .                 /                LT-Zeta                                              up            kp1     kp2     kp3        kpenter
+@togBurglar       lmet              lalt                                                              spc                                               LT-Omega         rmet             LT-Funk          S-caps                              left down right    kp0             kpdot
 
 
-LAYER Toggle
-/*
-    Push layers onto the stack.
-*/
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     _    _    _    _    _    _    _    _    _    _    _    _    _      _    _    _        _       _       _          _
-_      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
-_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 @laW          _    _    _    _             _    _    _        _               _
+/* ----------------------------------------------------------------------------
+ *                                     Push
+ * ----------------------------------------------------------------------------
+ * 
+ * Push layers on stack.
+ * 
+ */
+
+LAYER Push
+_                _                _                _                _                _                _                _                _                _                _                _                _                                  _    _    _
+_                _                _                _                _                _                _                _                _                _                _                _                _                _                 _    _    _        _       _       _          _
+_                 _                _                _                _                _                _                _                _                _                _                _                _                _                _    _    _        _       _       _          _
+_                  _                _                _                _                _                _                _                _                _                _                _                _                                                   _       _       _
+_                   _                _                _                _                _                _                _                _                _                 _                _                                                    _             _       _       _          _
+_                 _                 _                                                                 LA-Wraith                                         _                _                _                _                                   _    _    _        _               _
 
 
-LAYER Untoggle
-/*
-    Remove layers from stack.
-*/
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     _    _    _    _    _    _    _    _    _    _    _    _    _      _    _    _        _       _       _          _
-_      _    _    _    _    _    _    _    _    _    _    _    _                             _       _       _
-_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 @lrW          _    _    _    _             _    _    _        _               _
+/* ----------------------------------------------------------------------------
+ *                                     Pop
+ * ----------------------------------------------------------------------------
+ * 
+ * Remove layers from stack.
+ * 
+ */
+
+LAYER Pop
+_                _                _                _                _                _                _                _                _                _                _                _                _                                  _    _    _
+_                _                _                _                _                _                _                _                _                _                _                _                _                _                 _    _    _        _       _       _          _
+_                 _                _                _                _                _                _                _                _                _                _                _                _                _                _    _    _        _       _       _          _
+_                  _                _                _                _                _                _                _                _                _                _                _                _                                                   _       _       _
+_                   _                _                _                _                _                _                _                _                _                 _                _                                                    _             _       _       _          _
+_                 _                 _                                                                 LR-Wraith                                         _                _                _                _                                   _    _    _        _               _
+
+
+/* ----------------------------------------------------------------------------
+ *                                    Wraith
+ * ----------------------------------------------------------------------------
+ * 
+ * Persistent scroll mode for traversing Thunderbird folders.
+ *
+ */
 
 // Thunderbird: previous folder
-@m6 = (( S-tab up tab ))
+@mTP = (( S-tab up tab ))
 // Thunderbird: next folder. Requires delay. See https://github.com/david-janssen/kmonad/issues/23
-// @m7 = (( S-tab down n ))
+// @mTN = (( S-tab down n ))
 // Down 5 items at a time.
-@m7 = (( down down down down down ))
-@a8 = M-S-6
+@mTD = (( down down down down down ))
 
 LAYER Wraith
-/*
-    Hands-off scroll mode for traversing Thunderbird RSS reader. Implemented as
-    a persistent layer with LA / LR rather than toggle, to reduce strain.
-*/
-@lrW @tnU _    _    _    _    _    _    _    _    _    _    _            _    _    _
-C-w  _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     @m6  up   M-7  _    _    _    _    _    _    _    _    _    _      _    _    _        _       _       _          _
-_      @a5  down tab  n    _    @a5  down up   tab  _    _    _                             _       _       _
-_       _    M-6  @a8  @m7  _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 _             _    _    _    _             _    _    _        _               _
+LR-Wraith        @togPop          _                _                _                _                _                _                _                _                _                _                _                                  _    _    _
+C-w              _                _                _                _                _                _                _                _                _                _                _                _                _                 _    _    _        _       _       _          _
+_                 @mTP             up               M-7              _                _                _                _                _                _                _                _                _                _                _    _    _        _       _       _          _
+_                  S-tab            down             tab              n                _                S-tab            down             up               tab              _                _                _                                                   _       _       _
+_                   _                M-6              M-S-6            @mTD             _                _                _                _                _                 _                _                                                    _             _       _       _          _
+_                 _                 _                                                                 _                                                 _                _                _                _                                   _    _    _        _               _
 
-// Undo closed browser tab.
-@a9 = C-S-t
+
+/* ----------------------------------------------------------------------------
+ *                                     Strg
+ * ----------------------------------------------------------------------------
+ * 
+ * Unix-style Control with a few keys altered.
+ * 
+ */
+
+LAYER Strg
+C-esc            C-f1             C-f2             C-f3             C-f4             C-f5             C-f6             C-f7             C-f8             C-f9             C-f10            C-f11            C-f12                              _    _    _
+C-grv            C-1              C-2              C-3              C-4              C-5              C-6              C-7              C-8              C-9              C-0              C--              C-=              C-bspc            _    _    _        _       _       _          _
+C-tab             C-q              C-w              C-e              C-r              C-t              C-y              C-u              C-i              C-o              C-p              C-[              C-]              C-\              _    _    _        _       _       _          _
+_                  C-a              C-s              C-d              C-f              C-g              C-h              C-j              C-k              C-l              esc              C-'              C-ret                                               _       _       _
+_                   C-z              C-x              C-c              C-v              C-b              C-n              ret              C-,              C-.               C-/              _                                                    _             _       _       _          _
+_                 _                 _                                                                 C-spc                                             _                _                _                _                                   _    _    _        _               _
+
+
+/* ----------------------------------------------------------------------------
+ *                                     Burglar
+ * ----------------------------------------------------------------------------
+ *
+ * Text editing shortcuts on the original lctl key.
+ *                                                                         
+ * Some serve to replicate readline-like shortcuts when actual readline
+ * keybinds are overridden: e.g. <B-e> for End, or <B-w> for C-bspc.
+ *
+ * Some are duplicates for consistency, e.g. <B-u> being C-u.
+ *
+ * Some are unique offerings, e.g. <B-v> to paste X selection.
+ *
+ * <B-hjkl> to access arrows.
+ *
+ */
+
 // Send enter and then punt the window.
-@a6 = (( ret M-grave ))
+@mRP = (( ret M-grave ))
 
 LAYER Burglar
-/*
-    Editing shortcuts layer, toggled by holding down the original lctl key.
+_                _                _                _                _                _                _                _                _                _                _                _                _                                  _    _    _
+_                _                _                _                _                _                _                _                _                _                _                _                _                _                 _    _    _        _       _       _          _
+_                 K                C-bspc           end              J                _                _                C-u              _                _                _                esc              _                _                _    _    _        _       _       _          _
+ret                home             down             pgdn             C-rght           _                left             down             up               rght             _                _                _                                                   _       _       _
+_                   C-S-t            _                _                M-8              C-left           _                C-m              _                _                 _                _                                                    _             _       _       _          _
+_                 _                 LT-Driver                                                         @mRP                                              _                _                _                _                                   _    _    _        _               _
 
-    - Some serve to achieve readline-like shortcuts when actual readline
-      keybinds are overridden: e.g. <B-e> for End, or <B-w> for C-bspc.
-    - Some are duplicates for consistency, e.g. <B-u> being C-u.
-    - Some are unique offerings, e.g. <B-v> to paste X selection.
-    - <B-hjkl> to access arrows.
-*/
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     K    @a1  end  J    _    _    C-u  _    _    _    esc  _    _      _    _    _        _       _       _          _
-ret    home down pgdn @a3  _    left down up   rght _    _    _                             _       _       _
-_       @a9  _    _    M-8  @a2  _    ret  _    _     _    _                  _             _       _       _          _
-_     _     LT-Driver         @a6           _    _    _    _             _    _    _        _               _
 
+/* ----------------------------------------------------------------------------
+ *                                    Driver
+ * ----------------------------------------------------------------------------
+ * 
+ * Movement and other shortcuts with alt + Burglar.
+ * 
+ */
 
 LAYER Driver
-/*
-    Movement and other shortcuts with alt + Burglar.
-*/
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     left up   rght _    _    _    _    _    _    _    _    _    _      _    _    _        _       _       _          _
-_      _    down @a4  _    _    _    _    _    _    _    _    _                             _       _       _
-_       _    _    _    _    _    _    _    _    _     _    _                  _             _       _       _          _
-_     _     _                 _             _    _    _    _             _    _    _        _               _
+_                _                _                _                _                _                _                _                _                _                _                _                _                                  _    _    _
+_                _                _                _                _                _                _                _                _                _                _                _                _                _                 _    _    _        _       _       _          _
+_                 left             up               rght             _                _                _                _                _                _                _                _                _                _                _    _    _        _       _       _          _
+_                  _                down             C-del                             _                _                _                _                _                _                _                _                                                   _       _       _
+_                   _                _                _                _                _                _                _                _                _                 _                _                                                    _             _       _       _          _
+_                 _                 _                                                                 _                                                 _                _                _                _                                   _    _    _        _               _
 
+
+/* ----------------------------------------------------------------------------
+ *                                    Omega
+ * ----------------------------------------------------------------------------
+ * 
+ * Layer to bring numbers and special symbols closer to homerow, triggered
+ * while AltGr key is down.
+ *                                                                          
+ * Positions for special symbols are in flux. Optimizing for ease of access
+ * over consistency.
+ * 
+ */
 
 // Exit insert-mode, save & close
 @mEQ = (( esc spc W ))
@@ -142,60 +178,57 @@ _     _     _                 _             _    _    _    _             _    _ 
 @mEX = (( esc spc W spc Q ))
 
 LAYER Omega
-/*
-    Layer to bring numbers and special symbols closer to homerow, triggered
-    while ralt key is down.
+@mEX             _                _                _                _                _                _                _                _                _                _                _                _                                  _    _    _
+@mEQ             _                _                _                _                _                _                _                _                _                _                _                _                _                 _    _    _        _       _       _          _
+=                 1                2                3                4                ~                _                @mFU             9                0                ^                esc              _                _                _    _    _        _       _       _          _
+_                  (                \                bspc             )                +                |                *                #                $                @mEW             `                _                                                   _       _       _
+_                   5                6                7                8                %                &                __               @                !                 \                _                                                    _             _       _       _          _
+@mEP              M-grv             _                                                                 _                                                 _                _                _                _                                   _    _    _        _               _
 
-    Positions for special symbols are in flux. Optimizing for ease of access
-    over consistency.
-*/
-@mEX _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-@mEQ _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-=     1    2    3    4    ~    _    @mFU 9    0    ^    esc  _    _      _    _    _        _       _       _          _
-_      (    -    bspc )    +    |    *    #    $    @mEW `    _                             _       _       _
-_       5    6    7    8    %    &    __   @    !     \    _                  _             _       _       _          _
-@mEP  M-grv _                 _                  _    _    _             _    _    _        _               _
 
-@a10 = M-f10
-@a11 = M-f11
-@a12 = M-f12
-
-@a13 = C-A-f1
-@a14 = C-A-f2
-@a15 = C-A-f3
-@a16 = C-A-f4
+/* ----------------------------------------------------------------------------
+ *                                     Zeta
+ * ----------------------------------------------------------------------------
+ * 
+ * Super + Function keys & TTY switching.
+ * 
+ */
 
 LAYER Zeta
-/*
-    Aliases for remote Super-key shortcuts.
-*/
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-_    @a13 @a14 @a15 @a16 _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     M-f1 M-f2 M-f3 M-f4 _    _    _    _    _    _    _    _    _      _    _    _        _       _       _          _
-_      M-f9 @a10 @a11 @a12 _    _    _    _    _    _    _    _                             _       _       _
-_       M-f5 M-f6 M-f7 M-f8 _    _    _    _    _     ?    _                  _             _       _       _          _
-_     _     _                 _             _    _    _    _             _    _    _        _               _
+_                _                _                _                _                _                _                _                _                _                _                _                _                                  _    _    _
+_                C-A-f1           C-A-f2           C-A-f3           C-A-f4           C-A-f5           C-A-f6           C-A-f7           _                _                _                _                _                _                 _    _    _        _       _       _          _
+_                 M-f1             M-f2             M-f3             M-f4             _                _                _                _                _                _                _                _                _                _    _    _        _       _       _          _
+_                  M-f9             M-f10            M-f11            M-f12            _                _                _                _                _                _                _                _                                                   _       _       _
+_                   M-f5             M-f6             M-f7             M-f8             _                _                _                _                _                 _                _                                                    _             _       _       _          _
+_                 _                 _                                                                 _                                                 _                _                _                _                                   _    _    _        _               _
 
+
+/* ----------------------------------------------------------------------------
+ *                                     Funk
+ * ----------------------------------------------------------------------------
+ * 
+ * Function keys.
+ * 
+ */
 
 LAYER Funk
-/*
-    Function keys!
-*/
-_    _    _    _    _    _    _    _    _    _    _    _    _            _    _    _
-_    _    _    _    _    _    _    _    _    _    _    _    _    _       _    _    _        _       _       _          _
-_     f1   f2   f3   f4   _    _    f13  f14  f15  f16  _    _    _      _    _    _        _       _       _          _
-_      f9   f10  f11  f12  _    _    f21  f22  f23  f24  _    _                             _       _       _
-_       f5   f6   f7   f8   _    _    f17  f18  f19   f20  _                  _             _       _       _          _
-_     _     _                 _             _    _    _    _             _    _    _        _               _
+_                _                _                _                _                _                _                _                _                _                _                _                _                                  _    _    _
+_                _                _                _                _                _                _                _                _                _                _                _                _                _                 _    _    _        _       _       _          _
+_                 f1               f2               f3               f4               _                _                f13              f14              f15              f16              _                _                _                _    _    _        _       _       _          _
+_                  f9               f10              f11              f12              _                _                f21              f22              f23              f24              _                _                                                   _       _       _
+_                   f5               f6               f7               f8               _                _                f17              f18              f19               f20              _                                                    _             _       _       _          _
+_                 _                 _                                                                 _                                                 _                _                _                _                                   _    _    _        _               _
 
 
-/* Reference:
+/* ----------------------------------------------------------------------------
+ *                                  Reference
+ * ----------------------------------------------------------------------------
 
-esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12          prnt slck pause
-grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc    ins  home pgup     numlock kpslash kpasterisk kpminus
-tab   q    w    e    r    t    y    u    i    o    p    [    ]    \      del  end  pgdn     kp7     kp8     kp9        kpplus
-caps   a    s    d    f    g    h    j    k    l    ;    '    ret                           kp4     kp5     kp6
-lsft    z    x    c    v    b    n    m    ,    .     /    rsft               up            kp1     kp2     kp3        kpenter
-lctl  lmet  lalt              spc           ralt rmet cmps rctl          left down right    kp0             kpdot
+esc              f1               f2               f3               f4               f5               f6               f7               f8               f9               f10              f11              f12                                prnt slck pause
+grv              1                2                3                4                5                6                7                8                9                0                -                =                bspc              ins  home pgup     numlock kpslash kpasterisk kpminus
+tab               q                w                e                r                t                y                u                i                o                p                [                ]                \                del  end  pgdn     kp7     kp8     kp9        kpplus
+caps               a                s                d                f                g                h                j                k                l                ;                '                ret                                                 kp4     kp5     kp6
+lsft                z                x                c                v                b                n                m                ,                .                 /                rsft                                                 up            kp1     kp2     kp3        kpenter
+lctl              lmet              lalt                                                              spc                                               ralt             rmet             cmps             rctl                                left down right    kp0             kpdot
 
 */
