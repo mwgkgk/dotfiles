@@ -34,8 +34,8 @@ set noerrorbells
 set visualbell 
 set t_vb=
 
-" Only highlight syntax on the first 300 columns:
-set synmaxcol=300
+" Only highlight syntax on the first 350 columns:
+set synmaxcol=350
 
 " Visually wrap lines that are longer than the window width:
 set wrap
