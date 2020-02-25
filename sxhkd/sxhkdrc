@@ -48,9 +48,6 @@ super + backslash
 super + semicolon
 	silk
 
-super + control + semicolon
-	technodrome
-
 super + BackSpace
 	rogue
 
