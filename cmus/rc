@@ -4,8 +4,8 @@ colorscheme gruvbox-alt
 set lib_sort=filename
 
 bind -f common q :q
-bind -f common ^L :vol +5%
-bind -f common ^H :vol -5%
+bind -f common p :vol -5%
+bind -f common n :vol +5%
 bind -f common * :win-toggle
 
 set output_plugin=alsa
