@@ -71,9 +71,6 @@ super + apostrophe
 super + w
 	burrow ~/.burrow/quick-launch
 
-super + control + space
-	burrow ~/.burrow/quick-files
-
 # Paste
 
 # super + ctrl + v
