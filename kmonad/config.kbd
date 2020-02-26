@@ -28,7 +28,7 @@ LAYER home
 esc              @togPush         f2               f3               f4               f5               f6               f7               f8               f9               f10              f11              f12                                prnt        slck        pause
 grv              1                2                3                4                5                6                7                8                9                0                -                =                bspc              ins         home        pgup             numlock         kpslash         kpasterisk         kpminus
 tab               q                w                e                r                t                y                u                i                o                p                [                ]                \                del         end         pgdn             kp7             kp8             kp9                kpplus
-LT-Strg            a                s                d                f                g                h                j                k                l                ;                '                ret                                                                       kp4             kp5             kp6
+lctl               a                s                d                f                g                h                j                k                l                ;                '                ret                                                                       kp4             kp5             kp6
 lsft                z                x                c                v                b                n                m                ,                .                 /                LT-Zeta                                                     up                           kp1             kp2             kp3                kpenter
 @togBurglar       lmet              lalt                                                              spc                                               LT-Omega         rmet             LT-Funk          S-caps                              left        down        right            kp0                             kpdot
 
@@ -92,23 +92,6 @@ _                 _                 _                                           
 
 
 /* ----------------------------------------------------------------------------
- *                                     Strg
- * ----------------------------------------------------------------------------
- * 
- * Unix-style Control with a few keys altered.
- * 
- */
-
-LAYER Strg
-C-esc            C-f1             C-f2             C-f3             C-f4             C-f5             C-f6             C-f7             C-f8             C-f9             C-f10            C-f11            C-f12                              C-prnt      C-slck      C-pause
-C-grv            C-1              C-2              C-3              C-4              C-5              C-6              C-7              C-8              C-9              C-0              C--              C-=              C-bspc            C-ins       C-home      C-pgup           C-numlock       C-kpslash       C-kpasterisk       C-kpminus
-C-tab             C-q              C-w              C-e              C-r              C-t              C-y              C-u              C-i              C-o              C-p              C-[              C-]              C-\              C-del       C-end       C-pgdn           C-kp7           C-kp8           C-kp9              C-kpplus
-_                  C-a              C-s              C-d              C-f              C-g              C-h              C-j              C-k              C-l              esc              C-'              C-ret                                                                     C-kp4           C-kp5           C-kp6
-_                   C-z              C-x              C-c              C-v              C-b              C-n              ret              C-,              C-.               C-/              _                                                           C-up                         C-kp1           C-kp2           C-kp3              C-kpenter
-_                 _                 _                                                                 C-spc                                             _                _                _                _                                   C-left      C-down      C-right          C-kp0                           C-kpdot
-
-
-/* ----------------------------------------------------------------------------
  *                                     Burglar
  * ----------------------------------------------------------------------------
  *
@@ -133,7 +116,7 @@ _                _                _                _                _           
 _                _                _                _                _                _                _                _                _                _                _                _                _                _                 _           _           _                _               _               _                  _
 _                 K                C-bspc           end              J                _                _                C-u              _                _                _                esc              _                _                _           _           _                _               _               _                  _
 ret                home             down             pgdn             C-rght           _                left             down             up               rght             _                _                _                                                                         _               _               _
-_                   C-S-t            _                _                M-8              C-left           _                C-m              _                _                 _                _                                                           _                            _               _               _                  _
+_                   C-S-t            _                _                M-8              C-left           _                ret              _                _                 _                _                                                           _                            _               _               _                  _
 _                 _                 LT-Driver                                                         @mRP                                              _                _                _                _                                   _           _           _                _                               _
 
 
