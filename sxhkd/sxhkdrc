@@ -24,9 +24,6 @@ super + F12
 super + f
 	smuggler
 
-super + g
-	gums
-
 super + c
 	cmums
 
@@ -70,6 +67,9 @@ super + apostrophe
 
 super + w
 	burrow ~/.burrow/quick-launch
+
+super + g
+	~/.burrow/quick-launch/go/guns
 
 # Paste
 
