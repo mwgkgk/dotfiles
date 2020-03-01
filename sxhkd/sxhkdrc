@@ -45,8 +45,11 @@ super + backslash
 super + semicolon
 	silk
 
-control + semicolon 
+control + semicolon
 	sleep 0.1 && xdotool keyup ctrl+semicolon key Escape space w
+
+control + apostrophe
+	technodrome
 
 super + BackSpace
 	rogue
