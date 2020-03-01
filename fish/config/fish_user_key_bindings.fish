@@ -381,25 +381,25 @@ end
 
 function bind_fdz_guns
     fdz-guns | read -l result
-    and commandline -- "Vim $result" ;and commandline -f execute
+    and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
 end
 
 function bind_fdz_vim_ark
     fdz-file ~/ink/ark | read -l result
-    and commandline -- "Vim $result" ;and commandline -f execute
+    and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
 end
 
 function bind_fdz_vim_shop
     fdz-file ~/shop/ | read -l result
-    and commandline -- "Vim $result" ;and commandline -f execute
+    and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
 end
 
 function bind_fdz_vim_ink
     fdz-ink | read -l result
-    and commandline -- "Vim $result" ;and commandline -f execute
+    and commandline -- "v $result" ;and commandline -f execute
     commandline -f repaint
 end
 
