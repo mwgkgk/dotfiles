@@ -9,10 +9,10 @@ super + F2
 super + F4
 	basso
 
-super + F5
+super + F8
 	girl gotop
 
-super + F8
+super + F5
 	girl alsamixer -c 0
 
 super + F9
