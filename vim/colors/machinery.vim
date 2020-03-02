@@ -1,17 +1,17 @@
-if !has("gui_running") && &t_Co != 256 && &t_Co != 88
-    echomsg ""
-    echomsg "err: please use GUI or a 256-color terminal or 88-color terminal"
-    echomsg ""
+if !has('gui_running') && &t_Co != 256 && &t_Co != 88
+    echomsg ''
+    echomsg 'err: please use GUI or a 256-color terminal or 88-color terminal'
+    echomsg ''
     finish
 endif
 
-if &background == "dark"
+if &background ==# 'dark'
     set background=light
 endif
 
 hi clear
 
-if exists("syntax_on")
+if exists('syntax_on')
   syntax reset
 endif
 
