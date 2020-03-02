@@ -42,13 +42,16 @@ super + 0
 super + backslash
 	girl
 
-super + semicolon
+super + comma
 	silk
+
+super + semicolon
+	humvee
 
 control + semicolon
 	sleep 0.1 && xdotool keyup ctrl+semicolon key Escape space w
 
-control + apostrophe
+super + space
 	technodrome
 
 super + BackSpace
@@ -59,9 +62,6 @@ super + z
 
 super + i
 	zepp
-
-super + space
-	humvee
 
 super + m
 	motor
