@@ -26,6 +26,7 @@ hi PreProc ctermfg=242
 hi Keyword ctermfg=102
 
 hi Comment ctermfg=131
+hi Title ctermfg=131
 
 hi NonText ctermfg=242
 hi SpecialKey ctermfg=242
