@@ -30,7 +30,7 @@
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
 
-let s:static_colo = 'nuclear'
+" let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
@@ -68,6 +68,7 @@ let s:static_colo = 'nuclear'
 
 " let s:static_colo = 'mwgkgk'
 " let s:static_colo = 'moot'
+let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'blue'
 
 " let s:static_colo = 'seoul256-light'
