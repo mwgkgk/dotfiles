@@ -68,7 +68,6 @@
 
 " let s:static_colo = 'mwgkgk'
 " let s:static_colo = 'moot'
-let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'blue'
 
 " let s:static_colo = 'seoul256-light'
@@ -76,6 +75,8 @@ let s:static_colo = 'fogbell_light'
 
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
+" let s:static_colo = 'fogbell_light'
+let s:static_colo = 'machinery'
 
 " let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
