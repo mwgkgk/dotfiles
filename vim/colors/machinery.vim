@@ -44,9 +44,9 @@ hi SignColumn ctermbg=none ctermfg=237
 
 hi Folded ctermbg=180 ctermfg=237
 
-hi TabLineFill ctermfg=235
-hi TabLineSel ctermbg=236 cterm=none ctermfg=216
-hi TabLine ctermfg=242 ctermbg=235 cterm=none
+hi TabLineFill ctermfg=241
+hi TabLineSel ctermbg=241 cterm=bold ctermfg=221
+hi TabLine ctermfg=180 ctermbg=241 cterm=none
 
 hi StatusLine ctermbg=241 ctermfg=221 cterm=none
 hi StatusLineNC ctermbg=241 ctermfg=180 cterm=none
