@@ -33,11 +33,11 @@ hi SpecialKey ctermfg=242
 hi Special ctermfg=241
 
 hi ColorColumn ctermbg=173 ctermfg=none cterm=none
-hi CursorColumn ctermbg=222 ctermfg=none cterm=none
-hi CursorLine ctermbg=222 ctermfg=none cterm=none
-hi CursorLineNr ctermfg=249 ctermbg=222 cterm=none
+hi CursorColumn ctermbg=215 ctermfg=none cterm=none
+hi CursorLine ctermbg=215 ctermfg=none cterm=none
+hi CursorLineNr ctermfg=237 ctermbg=215 cterm=none
 
-hi Visual ctermbg=181
+hi Visual ctermbg=185
 
 hi LineNr ctermfg=242
 hi SignColumn ctermbg=none ctermfg=237
@@ -55,7 +55,7 @@ hi VertSplit ctermbg=241 ctermfg=221 cterm=none
 hi Pmenu ctermbg=244
 
 hi Search ctermbg=209
-hi IncSearch ctermbg=228 cterm=none
+hi IncSearch ctermbg=202 cterm=none
 
 hi SpellBad ctermbg=none ctermfg=202 cterm=none
 hi TODO ctermbg=none ctermfg=229
