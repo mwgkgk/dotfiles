@@ -23,7 +23,7 @@ hi Statement ctermfg=237
 hi Constant ctermfg=237
 hi Identifier ctermfg=243 cterm=none
 hi PreProc ctermfg=242
-hi Keyword ctermfg=102
+hi Keyword ctermfg=237
 
 hi Comment ctermfg=131
 hi Title ctermfg=131
@@ -45,16 +45,16 @@ hi SignColumn ctermbg=none ctermfg=237
 hi Folded ctermbg=180 ctermfg=237
 
 hi TabLineFill ctermfg=235
-hi TabLineSel ctermbg=236 cterm=none
+hi TabLineSel ctermbg=236 cterm=none ctermfg=216
 hi TabLine ctermfg=242 ctermbg=235 cterm=none
 
-hi StatusLine ctermbg=241 ctermfg=227 cterm=none
+hi StatusLine ctermbg=241 ctermfg=221 cterm=none
 hi StatusLineNC ctermbg=241 ctermfg=180 cterm=none
 hi VertSplit ctermbg=241 ctermfg=221 cterm=none
 
 hi Pmenu ctermbg=244
 
-hi Search ctermbg=221
+hi Search ctermbg=209
 hi IncSearch ctermbg=228 cterm=none
 
 hi SpellBad ctermbg=none ctermfg=202 cterm=none
