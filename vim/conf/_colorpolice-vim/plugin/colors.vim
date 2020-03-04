@@ -53,7 +53,7 @@
 
 " let s:static_colo = 'apples'
 " let s:static_colo = 'github'
-" let s:static_colo = 'pink'
+let s:static_colo = 'pink'
 
 " let s:static_colo = 'orbital'
 " let s:static_colo = 'sceaduhelm'
@@ -76,7 +76,7 @@
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
 " let s:static_colo = 'fogbell_light'
-let s:static_colo = 'machinery'
+" let s:static_colo = 'machinery'
 
 " let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
