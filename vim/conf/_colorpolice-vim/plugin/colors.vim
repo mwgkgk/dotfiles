@@ -22,7 +22,7 @@
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
 " let s:static_colo = 'hawk'
-" let s:static_colo = 'zorn'
+let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 
 " let s:static_colo = 'gentooish'
@@ -53,7 +53,7 @@
 
 " let s:static_colo = 'apples'
 " let s:static_colo = 'github'
-let s:static_colo = 'pink'
+" let s:static_colo = 'pink'
 
 " let s:static_colo = 'orbital'
 " let s:static_colo = 'sceaduhelm'
