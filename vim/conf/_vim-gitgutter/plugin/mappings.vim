@@ -30,6 +30,22 @@ nmap <Leader>gc <Plug>(operator-commit-file-with-message)
 " Rename last commit with message specified by motion:
 nmap <Leader>hr <Plug>(operator-rename-last-commit)
 
+" Stage and commit hunk verbosely with message specified by motion
+" TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
+nmap <Leader>hv <Plug>(operator-verb-commit-hunk-with-message)
+
+" Stage and commit file verbosely with message specified by motion
+" TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
+nmap <Leader>gv <Plug>(operator-verb-commit-file-with-message)
+
+" Stage and commit everything verbosely with message specified by motion
+" TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
+nmap <Leader>gV <Plug>(operator-verb-commit-everything-with-message)
+
+" Rename last commit verbosely with message specified by motion:
+" TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
+nmap <Leader>hR <Plug>(operator-verb-rename-last-commit)
+
 " ||
 " || Preview
 " ||
