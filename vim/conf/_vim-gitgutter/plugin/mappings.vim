@@ -23,9 +23,17 @@ nnoremap <silent> <Leader><Leader> :call _vim_gitgutter#stage_commit_current_hun
 " Stage and commit hunk under cursor with message specified by motion:
 nmap <Leader>hc <Plug>(operator-commit-current-hunk-with-message)
 
+" Stage and commit hunk under cursor with message specified by motion,
+" prepending Add:
+nmap <Leader>hma <Plug>(operator-commit-current-hunk-as-add)
+
 " Stage and commit file with message specified by motion:
 " TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
 nmap <Leader>gc <Plug>(operator-commit-file-with-message)
+
+" Stage and commit hunk everything with message specified by motion,
+" prepending Add:
+nmap <Leader>gMa <Plug>(operator-commit-everything-as-add)
 
 " Rename last commit with message specified by motion:
 nmap <Leader>hr <Plug>(operator-rename-last-commit)
