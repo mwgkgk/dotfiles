@@ -578,6 +578,7 @@ let g:cycle_default_groups = [
             \   [['head', 'tail']],
             \   [['ctrl', 'alt', 'shift', 'win', 'meta']],
             \   [['car', 'cdr']],
+            \   [['todo','later']],
             \ ]
 
 "  -- Python
