@@ -49,7 +49,7 @@ super + semicolon
 	technodrome
 
 control + semicolon
-	sleep 0.1 && xdotool keyup ctrl+semicolon key --delay 150 Escape space w
+	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
 
 super + space
 	humvee
