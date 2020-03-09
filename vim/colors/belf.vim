@@ -66,7 +66,7 @@ hi VisualNOS    guibg=#002700 gui=reverse ctermbg=137 cterm=reverse
 hi WarningMsg   guifg=#000000 guibg=#00ff00 gui=none ctermfg=179 ctermbg=none cterm=none
 hi WildMenu     guifg=#00cb00 guibg=#000000 gui=reverse ctermfg=000 ctermbg=179 cterm=reverse
 hi ColorColumn  guibg=#225101 ctermbg=235
-hi SignColumn   guibg=#225101 ctermbg=234
+hi SignColumn   guibg=#225101 ctermbg=234 ctermfg=184
 
 hi markdownH1 ctermfg=154 cterm=bold
 hi! link markdownH2 markdownH1
