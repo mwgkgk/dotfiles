@@ -42,10 +42,10 @@ super + 0
 super + backslash
 	girl
 
-super + comma
+super + semicolon
 	silk
 
-super + semicolon
+super + comma
 	technodrome
 
 control + semicolon
