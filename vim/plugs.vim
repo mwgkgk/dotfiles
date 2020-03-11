@@ -1343,6 +1343,9 @@ endif
 Plug '~/.vim/conf/_colorpolice-vim/'
 Plug '~/shop/oil/colorpolice/colorpolice-vim/'
 
+" As seen at https://github.com/mwgkgk/vim-colorscheme-heavy-industry
+Plug '~/shop/oil/vim-colorscheme-heavy-industry/'
+
 Plug '~/shop/forks/gruvbox/'
 Plug 'romainl/Apprentice'
 Plug 'romainl/Disciple'
