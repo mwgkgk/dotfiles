@@ -1,4 +1,4 @@
-# Citizens
+ Citizens
 
 super + F1
 	ship
@@ -131,15 +131,9 @@ super + minus
 
 # Throwing Windows Around:
 
-super + grave
+super + j
 	punt
 # -- aka gas
 
-super + shift + grave
-	punt-all
-
-super + period
-	punt
-
-super + shift + period
+super + grave
 	punt-all
