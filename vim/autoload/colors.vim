@@ -38,7 +38,7 @@ function! colors#flex_colo()
 endfunction
 
 function! colors#chi_colo(chi, static_colo)
-    if a:chi ==# 'technodrome'
+    if a:chi ==# 'king'
         return a:static_colo
     elseif a:chi ==# 'ship'
         return a:static_colo

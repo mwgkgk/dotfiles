@@ -46,7 +46,7 @@ super + semicolon
 	silk
 
 super + comma
-	technodrome
+	king
 
 control + semicolon
 	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
