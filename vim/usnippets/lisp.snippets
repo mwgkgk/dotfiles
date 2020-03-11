@@ -142,3 +142,11 @@ snippet cmd "defcommand" b
 	((:${3:shell} "${4:Enter shell command}:")$5)
 	$6)
 endsnippet
+
+priority -2
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $1)
+endsnippet
