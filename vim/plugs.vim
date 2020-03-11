@@ -240,6 +240,9 @@ nnoremap ,, %
 Plug 'kana/vim-textobj-line' " {{{
 let g:textobj_line_no_default_key_mappings = 1
 nmap vv v<Plug>(textobj-line-i)
+
+omap il <Plug>(textobj-line-i)
+omap al <Plug>(textobj-line-a)
 " }}}
 Plug 'kana/vim-textobj-indent' " {{{
 let g:textobj_indent_no_default_key_mappings = 1
