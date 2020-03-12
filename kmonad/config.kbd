@@ -109,7 +109,7 @@ _                 _                 _                                           
  */
 
 // Send enter and then punt the window.
-@mRP = (( ret M-grave ))
+@mRP = (( ret M-j ))
 
 LAYER Burglar
 _                _                _                _                _                _                _                _                _                _                _                _                _                                  _           _           _
