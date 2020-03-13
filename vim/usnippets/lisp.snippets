@@ -31,6 +31,12 @@ snippet ba "basement" b
 	${VISUAL}${1:nil})
 endsnippet
 
+snippet at "at" b
+#J
+(at `date-jiv`
+		${0})
+endsnippet
+
 snippet "(\()?cond" "cond" r
 (cond
 	((${1:equal x y}) ${2:nil})$3`!p
@@ -149,21 +155,21 @@ snippet defcl "defcl" b
 endsnippet
 
 snippet j "jiv" b
-#j
+#J
 ($1)
 endsnippet
 
 snippet dj "dj" b
 ;;; `date-utc` ;;;
 
-#j
+#J
 ($1)
 endsnippet
 
 priority -2
 
 snippet /^([\!:\w=-]+)/ "expand-any-word-b" br
-#j
+#J
 (`!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` $1)
