@@ -28,4 +28,6 @@ function! files#from_date#todays_file(root, filename, ...) abort
     endif
 
     $
+
+    return l:fname
 endfunction
