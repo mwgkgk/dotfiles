@@ -19,7 +19,7 @@
 " let s:static_colo = 'haze'
 
 " let s:static_colo = 'farout'
-" let s:static_colo = 'autumn'
+let s:static_colo = 'autumn'
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
 " let s:static_colo = 'hawk'
@@ -78,7 +78,7 @@
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
 " let s:static_colo = 'fogbell_light'
-let s:static_colo = 'machinery'
+" let s:static_colo = 'machinery'
 
 " let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
