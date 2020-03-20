@@ -1,3 +1,5 @@
+/* vim: nowrap */
+
 INPUT = LINUX_DEVICE L64 /dev/input/by-id/usb-SIGMACHIP_USB_Keyboard-event-kbd
 OUTPUT = UINPUT_SINK
 
