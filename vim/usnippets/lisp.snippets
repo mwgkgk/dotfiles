@@ -6,8 +6,13 @@ if match.group(1) is None:
 	snip.rv = ")"`$2
 endsnippet
 
-snippet defp "defp" b
+snippet defp "defp" w
 (defparameter *$1*
+	${2:nil})
+endsnippet
+
+snippet defv "defv" w
+(defvar *$1*
 	${2:nil})
 endsnippet
 
