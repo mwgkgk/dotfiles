@@ -135,6 +135,9 @@ super + j
 	punt
 # -- aka gas
 
+control + j
+	burrow ~/.burrow/snutz-mode
+
 super + grave
 	punt
 
