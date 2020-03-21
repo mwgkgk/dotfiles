@@ -47,7 +47,7 @@ function! colors#chi_colo(chi, static_colo)
     elseif a:chi ==# 'silk'
         return a:static_colo
     elseif a:chi ==# 'smuggler'
-        return 'hell'
+        return a:static_colo
     elseif a:chi ==# 'druid'
         return a:static_colo
     elseif a:chi ==# 'fox'
