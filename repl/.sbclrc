@@ -7,14 +7,15 @@
 
 ;;; Use a newer asdf version:
 (let
-  ((compiled-file #P"~/.cache/local/common-lisp/sbcl/asdf.fasl"))
+    ((compiled-file #P"~/.cache/local/common-lisp/sbcl/asdf.fasl"))
   (progn
     (ensure-directories-exist (directory-namestring compiled-file))
     (if (not (probe-file compiled-file))
-      (compile-file #P"~/asdf.lisp"
-                    :output-file compiled-file))
+        (compile-file #P"~/asdf.lisp"
+                      :output-file compiled-file))
     (handler-case (load compiled-file)
       (sb-fasl::invalid-fasl-version (c)
-         (compile-file #P"~/asdf.lisp"
-                    :output-file compiled-file)
-         (load compiled-file)))))
+        (declare (ignore c))
+        (compile-file #P"~/asdf.lisp"
+                      :output-file compiled-file)
+        (load compiled-file)))))
