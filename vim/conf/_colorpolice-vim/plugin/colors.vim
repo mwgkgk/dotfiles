@@ -47,7 +47,7 @@
 " let s:static_colo = 'typofree'
 " let s:static_colo = 'badwolf'
 
-let s:static_colo = 'redmustang'
+" let s:static_colo = 'redmustang'
 " let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
@@ -63,7 +63,7 @@ let s:static_colo = 'redmustang'
 " let s:static_colo = 'kalisi-dark'
 
 " let s:static_colo = 'apprentice'
-" let s:static_colo = 'disciple'
+let s:static_colo = 'disciple'
 
 " let s:static_colo = 'sunday256'
 " let s:static_colo = 'ivan'
