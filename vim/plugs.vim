@@ -1010,8 +1010,6 @@ inoremap <silent><expr> <C-l>
     \ <SID>check_back_space() ? "\<TAB>" :
     \ deoplete#manual_complete()
 
-
-inoremap <C-l> <C-n><Esc>:w<CR>
 " }}}
 
 " {{{
