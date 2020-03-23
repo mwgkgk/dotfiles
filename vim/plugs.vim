@@ -985,26 +985,24 @@ nmap <Leader>rr <Plug>(quickrun)
 
 " {{{
 
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif " {{{
-let g:deoplete#enable_at_startup = 1
-nnoremap <Leader>tc :call deoplete#toggle()<CR>
+" if has('nvim')
+"     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"     Plug 'Shougo/deoplete.nvim'
+"     Plug 'roxma/nvim-yarp'
+"     Plug 'roxma/vim-hug-neovim-rpc'
+" endif " {{{
+" let g:deoplete#enable_at_startup = 1
+" nnoremap <Leader>tc :call deoplete#toggle()<CR>
 
 " autocmd plugs FileType markdown,jiv call deoplete#disable()
 
 " inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " Complete and Escape
-inoremap <C-l> <C-n><Esc>:w<CR>
+" inoremap <C-l> <C-n><Esc>:w<CR>
 
-" Complete and Space
-" inoremap <C-s> <C-n><Space>
-
+" This version is like a tab, and doesn't work for sequencing <Esc>:w after.
 " inoremap <silent><expr> <C-l>
 "     \ pumvisible() ? "\<C-n>" :
 "     \ <SID>check_back_space() ? "\<TAB>" :
@@ -1014,11 +1012,18 @@ inoremap <C-l> <C-n><Esc>:w<CR>
 
 " {{{
 
-if has('win32') || has('win64')
-  Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
-else
-  Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
-endif
+" if has('win32') || has('win64')
+"   Plug 'tbodt/deoplete-tabnine', { 'do': 'powershell.exe .\install.ps1' }
+" else
+"   Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' }
+" endif
+
+
+" " Add this after plug#end;
+" call deoplete#custom#var('tabnine', {
+"             \ 'line_limit': 500,
+"             \ 'max_num_results': 20,
+"             \ })
 
 " }}}
 
@@ -1402,9 +1407,3 @@ call matchup#custom#define_motion('nox', '%',
       \ 'matchup#custom#example_motion', { 'down': 1 })
 call matchup#custom#define_motion('nox', 'g%',
       \ 'matchup#custom#example_motion', { 'down': 0 })
-
-" Deoplete: try more lines:
-call deoplete#custom#var('tabnine', {
-            \ 'line_limit': 500,
-            \ 'max_num_results': 20,
-            \ })
