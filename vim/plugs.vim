@@ -1405,6 +1405,6 @@ call matchup#custom#define_motion('nox', 'g%',
 
 " Deoplete: try more lines:
 call deoplete#custom#var('tabnine', {
-            \ 'line_limit': 50000,
+            \ 'line_limit': 500,
             \ 'max_num_results': 20,
             \ })
