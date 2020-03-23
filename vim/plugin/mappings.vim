@@ -443,6 +443,10 @@ inoremap <expr> <C-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(
 
 " Complete and Escape
 inoremap <C-l> <C-n><Esc>:w<CR>
+
+" Complete and Space
+inoremap <C-s> <C-n><Space>
+
 " Omni complete
 inoremap <M-w> <C-x><C-o>
 
