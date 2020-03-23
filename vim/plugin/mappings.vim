@@ -441,6 +441,8 @@ inoremap <M-k> <Esc>kA
 " Insert word from the line above (C-y improved)
 inoremap <expr> <C-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
 
+" Complete line
+inoremap <C-l> <C-x><C-l>
 " Omni complete
 inoremap <M-w> <C-x><C-o>
 
