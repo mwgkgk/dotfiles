@@ -998,6 +998,20 @@ nnoremap <Leader>tc :call deoplete#toggle()<CR>
 " autocmd plugs FileType markdown,jiv call deoplete#disable()
 
 " inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+
+" Complete and Escape
+" inoremap <C-l> <C-n><Esc>:w<CR>
+
+" Complete and Space
+" inoremap <C-s> <C-n><Space>
+
+inoremap <silent><expr> <C-l>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ deoplete#manual_complete()
+
+
+inoremap <C-l> <C-n><Esc>:w<CR>
 " }}}
 
 " {{{

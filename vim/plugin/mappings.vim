@@ -441,12 +441,6 @@ inoremap <M-k> <Esc>kA
 " Insert word from the line above (C-y improved)
 inoremap <expr> <C-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
 
-" Complete and Escape
-inoremap <C-l> <C-n><Esc>:w<CR>
-
-" Complete and Space
-inoremap <C-s> <C-n><Space>
-
 " Omni complete
 inoremap <M-w> <C-x><C-o>
 
