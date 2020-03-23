@@ -1000,15 +1000,15 @@ nnoremap <Leader>tc :call deoplete#toggle()<CR>
 " inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " Complete and Escape
-" inoremap <C-l> <C-n><Esc>:w<CR>
+inoremap <C-l> <C-n><Esc>:w<CR>
 
 " Complete and Space
 " inoremap <C-s> <C-n><Space>
 
-inoremap <silent><expr> <C-l>
-    \ pumvisible() ? "\<C-n>" :
-    \ <SID>check_back_space() ? "\<TAB>" :
-    \ deoplete#manual_complete()
+" inoremap <silent><expr> <C-l>
+"     \ pumvisible() ? "\<C-n>" :
+"     \ <SID>check_back_space() ? "\<TAB>" :
+"     \ deoplete#manual_complete()
 
 " }}}
 
