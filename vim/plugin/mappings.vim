@@ -442,7 +442,7 @@ inoremap <M-k> <Esc>kA
 inoremap <expr> <C-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
 
 " Complete and Escape
-inoremap <C-l> <C-n><Esc>
+inoremap <C-l> <C-n><Esc>:w<CR>
 " Omni complete
 inoremap <M-w> <C-x><C-o>
 
