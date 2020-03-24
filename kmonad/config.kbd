@@ -155,8 +155,6 @@ _                 _                 _                                           
 @mEQ = (( esc spc W ))
 // Unique sequence for Omega-u to pass to Vim to jump-previous-ale-error
 @mFU = (( f12 u ))
-// Exit insert-mode, save
-@mEW = (( esc spc w ))
 // Exit insert-mode, save, punt window
 @mEP = (( esc spc w M-grave ))
 // Exit insert-mode, save & close, close everything
@@ -166,7 +164,7 @@ LAYER Omega
 @mEX             _                _                _                _                _                _                _                _                _                _                _                _                                  _           _           _
 @mEQ             _                _                _                _                _                _                _                _                _                _                _                _                _                 _           _           _                _               _               _                  _
 =                 1                2                3                4                ~                _                @mFU             9                0                ^                esc              _                _                _           _           _                _               _               _                  _
-_                  (                \                bspc             )                +                |                *                #                $                @mEW             `                _                                                                         _               _               _
+_                  (                \                bspc             )                +                |                *                #                $                :                `                _                                                                         _               _               _
 _                   8                7                6                5                %                &                @mEQ             @                ~                 !                _                                                           _                            _               _               _                  _
 @mEP              M-grv             _                                                                 _                                                 _                _                _                _                                   _           _           _                _                               _
 
