@@ -14,7 +14,11 @@ function fish_prompt --description 'Write out the prompt'
             set suffix ' '
     end
 
-    echo -n -s (set_color $fish_color_prompt) "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd)
+    if set -q LISP_ADV
+        echo -n -s (set_color $fish_color_prompt) "lisp-adv"
+    else
+        echo -n -s (set_color $fish_color_prompt) "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd)
+    end
 
     set -l job_count (jobs -c | wc -l)
     if test $job_count -ne 0
