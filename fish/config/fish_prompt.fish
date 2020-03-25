@@ -17,7 +17,7 @@ function fish_prompt --description 'Write out the prompt'
     if set -q LISP_ADV
         echo -n -s (set_color $fish_color_prompt) "lisp-adv"
     else
-        echo -n -s (set_color $fish_color_prompt) "$USER" @ (prompt_hostname) ' ' (set_color $color_cwd) (prompt_pwd)
+        echo -n -s (set_color $fish_color_prompt) (prompt_hostname)/"$USER" ' ' (set_color $color_cwd) (prompt_pwd)
     end
 
     set -l job_count (jobs -c | wc -l)
