@@ -15,12 +15,3 @@ nnoremap <silent> <buffer> <C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui
 
 " Hide all vlime windows:
 nnoremap <silent> <buffer> <LocalLeader>` :call vlime#plugin#CloseWindow("")<cr>
-
-
-" Auto-connect to StumpWM:
-if bufname() =~# 'stumpwm/config$'
-    if ! exists('b:vlime_auto_connection')
-        let b:vlime_auto_connection = vlime#plugin#ConnectREPL('127.0.0.1',
-                    \ 44820, '', '', 'StumpWM connection')
-    endif
-endif
