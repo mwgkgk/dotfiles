@@ -73,7 +73,7 @@ endsnippet
 
 snippet "(\()?let" "let" r
 (let
-	((${1:x} ${3:($2)})$4)
+	((${1:${VISUAL}} ${3:($2)})$4)
 	${5:$1}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
