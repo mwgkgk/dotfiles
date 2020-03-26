@@ -23,6 +23,15 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet main "main" b
+(defun main ()
+	${1:nil})
+
+#+nil
+(progn
+	(main$2))
+endsnippet
+
 snippet "(\()?\bm" "m" rw
 (defmacro ${1:name} (${2:&rest forms})
 	${3:nil}`!p
