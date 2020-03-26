@@ -6,6 +6,40 @@ if match.group(1) is None:
 	snip.rv = ")"`$2
 endsnippet
 
+snippet defsys "defsystem" b
+(defsystem "${1:school}"
+  :version "0.1.0"
+  :depends-on (#:${2:find-port})
+
+  :in-order-to ((test-op (test-op "$1-test")))
+
+  :build-operation program-op
+  :build-pathname "target/release/$1"
+  :entry-point "$1::main"
+
+  :components ((:module "src"
+                :serial t 
+                :components
+                ((:file "package")
+                 (:file "$1")))))
+
+(defsystem "$1/debug"
+  :version "0.1.0"
+  :depends-on (#:${2:find-port})
+
+  :in-order-to ((test-op (test-op "$1-test")))
+
+  :build-operation program-op
+  :build-pathname "target/debug/$1"
+  :entry-point "$1::main"
+
+  :components ((:module "src"
+                :serial t 
+                :components
+                ((:file "package")
+                 (:file "$1")))))
+endsnippet
+
 snippet defp "defp" w
 (defparameter *$1*
 	${2:nil})
