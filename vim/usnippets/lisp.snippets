@@ -66,6 +66,10 @@ snippet main "main" b
 	(main$2))
 endsnippet
 
+snippet decl "decl " w
+(declare (ignore ${1:args}))
+endsnippet
+
 snippet "(\()?\bm" "m" rw
 (defmacro ${1:name} (${2:&rest forms})
 	${3:nil}`!p
