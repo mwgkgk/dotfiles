@@ -42,7 +42,7 @@ super + 0
 super + backslash
 	girl
 
-super + semicolon
+super + bracketleft
 	silk
 
 super + comma
@@ -76,6 +76,9 @@ super + w
 
 super + g
 	~/.burrow/quick-launch/go/guns
+
+super + semicolon
+	burrow ~/.burrow/leader
 
 # Paste
 
