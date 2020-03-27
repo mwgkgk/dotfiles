@@ -1132,6 +1132,8 @@ Plug 'tpope/vim-eunuch'
 
 Plug '~/shop/core/colony/colony-vim/'
 
+Plug '~/shop/augs/crown/crown-vim/'
+
 " }}}
 
 
