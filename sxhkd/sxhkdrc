@@ -131,12 +131,15 @@ super + minus
 
 # Throwing Windows Around:
 
-super + j
-	punt
+# super + j
+# 	punt
 # -- aka gas
 
 super + k
-	burrow ~/.burrow/snutz-mode
+	xdotool mousemove --sync 580 580
+
+super + j
+	xdotool mousemove --sync 1690 420
 
 super + grave
 	punt
