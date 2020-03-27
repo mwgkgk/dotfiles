@@ -46,7 +46,7 @@ super + bracketleft
 	silk
 
 super + comma
-	humvee
+	hulk
 
 control + semicolon
 	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
