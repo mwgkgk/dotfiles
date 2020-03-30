@@ -117,7 +117,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?fle" "flet" r
+snippet "(\()?fle" "flet" wr
 (flet
 	((${1:x} ($2)
 		${3:nil})$4)
@@ -130,40 +130,40 @@ snippet lc "let clause" i
 (${1:x} ($2))$3
 endsnippet
 
-snippet "(\()?eq" "equal" r
+snippet "(\()?eq" "equal" wr
 (equal $1`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?fmt" "format" r
+snippet "(\()?fmt" "format" wr
 (format ${3:nil} "$1"$2`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?p" "print" r
+snippet "(\()?p" "print" wr
 (format ${4:t} "${3:${2:~a}~%}" ${1:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?lo" "loop" r
+snippet "(\()?lo(op)?" "loop" wr
 (loop
 	${2::for }$1`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet for "Loop for" b
+snippet for "Loop for" w
 :for ${1:x} ${2::across} ${3:str}
 endsnippet
 
-snippet col "Loop collect" b
+snippet col "Loop collect" w
 :collect $1
 endsnippet
 
-snippet /:?fin(ally)?/ "Loop finally" rb
+snippet /:?fin(ally)?/ "Loop finally" rw
 :finally (return ${2:($1)})
 endsnippet
 
