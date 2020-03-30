@@ -115,4 +115,6 @@ function! _vim_sexp#setup_mappings()
   imap <silent><buffer> ]               <Plug>(sexp_insert_closing_square)
   imap <silent><buffer> {               <Plug>(sexp_insert_opening_curly)
   imap <silent><buffer> }               <Plug>(sexp_insert_closing_curly)
+
+  let b:is_sexp_buffer = 1
 endfunction
