@@ -142,12 +142,6 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?p" "print" wr
-(format ${4:t} "${3:${2:~a}~%}" ${1:${VISUAL}}`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
-
 snippet "(\()?lo(op)?" "loop" wr
 (loop
 	${2::for }$1`!p
@@ -241,6 +235,14 @@ snippet q "question" b
 (question
   "$1"
   $2)
+endsnippet
+
+priority -1
+
+snippet "(\()?p" "print" wr
+(format ${4:t} "${3:${2:~a}~%}" ${1:${VISUAL}}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 priority -2
