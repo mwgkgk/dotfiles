@@ -4,7 +4,7 @@
 "
 
 " Help on word under cursor:
-nnoremap <C-g> :help <C-r><C-w><CR>
+nnoremap <buffer> <C-g> :help <C-r><C-w><CR>
 
 "
 "
