@@ -71,8 +71,16 @@ snippet decl "decl " w
 endsnippet
 
 snippet "(\()?\bm" "m" rw
-(defmacro ${1:name} (${2:&body forms})
-	${3:nil}`!p
+(defmacro ${1:name} ($3${2:&body forms})
+	${4:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bdo" "m" rw
+(do ((${1:x} ${2:0} (${3:1+ x}))$4)
+    (${5:end-condition} ${6:optional-exit-form})
+  $7`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -245,9 +253,7 @@ snippet ' "'" w
 '(${VISUAL}$1)$2
 endsnippet
 
-priority -1
-
-snippet "(\()?p" "print" wr
+snippet "(\()?\bp" "print" wr
 (format ${4:t} "${3:${2:~a}~%}" ${1:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
