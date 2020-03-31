@@ -17,4 +17,5 @@ nnoremap <silent> <buffer> <C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui
 nnoremap <silent> <buffer> <LocalLeader>` :call vlime#plugin#CloseWindow("")<cr>
 
 " Close all visible preview windows:
-nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :call vlime#plugin#CloseWindow("preview")<cr>
+" Not <buffer> because we can be in any buffer
+nnoremap <silent> <LocalLeader><LocalLeader> :call vlime#plugin#CloseWindow("preview")<cr>
