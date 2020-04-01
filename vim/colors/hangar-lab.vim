@@ -41,7 +41,7 @@ hi MatchParen   guifg=#304300 guibg=#00fe00 gui=none ctermfg=108 ctermbg=192 cte
 hi ModeMsg      guifg=#00ea00 guibg=#000900 gui=none ctermfg=47 ctermbg=none cterm=none
 hi MoreMsg      guifg=#00e700 guibg=#001000 gui=bold ctermfg=47 ctermbg=none cterm=bold
 hi NonText      guifg=#008700 guibg=#001000 gui=none ctermfg=237 ctermbg=none cterm=none
-hi Normal       guifg=#00a900 guibg=#000000 gui=none ctermfg=83 ctermbg=233 cterm=none
+hi Normal       guifg=#00a900 guibg=#000000 gui=none ctermfg=83 ctermbg=234 cterm=none
 hi Pmenu        guifg=#00bf00 guibg=#000a00 gui=none ctermfg=47 ctermbg=none cterm=none
 hi PmenuSbar    guifg=#00dc00 guibg=#001c00 gui=none ctermfg=47 ctermbg=192 cterm=none
 hi PmenuSel     guifg=#00f300 guibg=#002200 gui=none ctermfg=108 ctermbg=192 cterm=none
