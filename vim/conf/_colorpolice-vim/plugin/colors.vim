@@ -28,7 +28,7 @@
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 
-let s:static_colo = 'gentooish'
+" let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
@@ -68,7 +68,7 @@ let s:static_colo = 'gentooish'
 " let s:static_colo = 'disciple'
 
 " let s:static_colo = 'sunday256'
-" let s:static_colo = 'summerfruit256'
+let s:static_colo = 'summerfruit256'
 
 " let s:static_colo = 'ivan'
 
