@@ -77,7 +77,7 @@ super + w
 super + g
 	~/.burrow/quick-launch/go/guns
 
-super + grave
+super + bracketright
 	burrow ~/.burrow/leader/c-files
 
 # Paste
@@ -147,6 +147,8 @@ super + j
 super + semicolon
 	punt
 
-# TODO Change this
+super + grave
+	punt
+
 super + control + grave
 	punt-all
