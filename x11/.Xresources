@@ -24,7 +24,7 @@ URxvt*.meta8: true
 ! URxvt*.foreground: #FFAF5F
 ! URxvt*.foreground: #49B4CC
 ! URxvt*.foreground: #F5A754
-URxvt*.foreground: #F7DC75
+
 ! URxvt*.foreground: #DADADA
 ! URxvt*.foreground: #DFA04A
 ! URxvt*.foreground: #CF423F
@@ -33,13 +33,21 @@ URxvt*.foreground: #F7DC75
 ! URxvt*.background: #2E2E2E
 ! URxvt*.background: #1D1200
 ! URxvt*.background: #2B2117
-URxvt*.background: #101111
 ! URxvt.depth: 24
 ! URxvt.background: [15]#000000
 ! URxvt*.cursorColor: #F76345
 ! URxvt*.cursorColor: #A75BC1
 ! URxvt*.cursorColor: #A08E6B
 ! URxvt*.cursorColor: #995834
+
+! Hawk
+! URxvt*.foreground: #F7DC75
+! URxvt*.background: #101111
+! URxvt*.cursorColor: #B7F2D2
+
+! Lab
+URxvt*.foreground: #15B915
+URxvt*.background: #031403
 URxvt*.cursorColor: #B7F2D2
 
 ! URxvt*.tabbed.tab-bg: #98D53D
