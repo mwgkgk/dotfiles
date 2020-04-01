@@ -77,8 +77,8 @@ super + w
 super + g
 	~/.burrow/quick-launch/go/guns
 
-super + semicolon
-	burrow ~/.burrow/leader
+super + grave
+	burrow ~/.burrow/leader/c-files
 
 # Paste
 
@@ -144,8 +144,9 @@ super + k
 super + j
 	xdotool mousemove --sync 1690 420
 
-super + grave
+super + semicolon
 	punt
 
+# TODO Change this
 super + control + grave
 	punt-all
