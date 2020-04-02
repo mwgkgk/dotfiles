@@ -581,6 +581,9 @@ nnoremap <Leader>tz :let &scrolloff=999-&scrolloff<CR>
 " Toggle light/dark background:
 nnoremap <Leader>tb :call toggle#background()<CR>
 
+" Toggle number:
+nnoremap <Leader>tn :call toggle#number()<CR>
+
 " Toggle relativenumber:
 nnoremap <Leader>tr :call toggle#rnu()<CR>
 

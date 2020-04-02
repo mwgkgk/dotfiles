@@ -6,6 +6,15 @@ function! toggle#background()
     endif
 endfunction
 
+function! toggle#number()
+    if(&number == 1)
+        set nonumber
+    else
+        set number
+    endif
+    echo (&number == 1 ? 'number' : 'nonumber')
+endfunction
+
 function! toggle#rnu()
     if(&relativenumber == 1)
         set norelativenumber
