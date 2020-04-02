@@ -155,15 +155,15 @@ super + k
 super + j
 	xdotool mousemove --sync 1690 420
 
+# super + control + k
+# 	xdotool mousemove_relative --sync 0 -300
 
-super + control + k
-	xdotool mousemove_relative --sync 0 -300
+# super + control + j
+# 	xdotool mousemove_relative --sync 0 300
 
-super + control + j
-	xdotool mousemove_relative --sync 0 300
+# Unfortunately this one doesn't trigger, tentatively blame dwm
+# super + control + h
+# 	xdotool mousemove_relative --sync -300 0
 
-super + control + h
-	xdotool mousemove_relative --sync -300 0
-
-super + control + l
-	xdotool mousemove_relative --sync 300 0
+# super + control + l
+# 	xdotool mousemove_relative --sync 300 0
