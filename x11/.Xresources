@@ -46,7 +46,7 @@ URxvt*.meta8: true
 ! URxvt*.cursorColor: #B7F2D2
 
 ! Lab
-URxvt*.foreground: #15B915
+URxvt*.foreground: #5FFF87
 URxvt*.background: #031403
 URxvt*.cursorColor: #B7F2D2
 
