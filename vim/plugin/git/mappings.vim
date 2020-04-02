@@ -54,3 +54,9 @@ nnoremap <silent> <Leader>gU :call git#reset#all()<CR>
 
 " Roll back last commit:
 nnoremap <silent> <Leader>gb :call git#reset#back()<CR>
+
+" Hard reset current file:
+nnoremap <silent> <Leader>ghu :call git#hardreset#current()<CR>
+
+" Hard reset everything:
+nnoremap <silent> <Leader>ghU :call git#hardreset#all()<CR>

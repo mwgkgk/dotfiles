@@ -138,12 +138,6 @@ super + minus
 # 	punt
 # -- aka gas
 
-super + k
-	xdotool mousemove --sync 580 580
-
-super + j
-	xdotool mousemove --sync 1690 420
-
 super + semicolon
 	punt
 
@@ -152,3 +146,24 @@ super + grave
 
 super + control + grave
 	punt-all
+
+# Maus
+
+super + k
+	xdotool mousemove --sync 580 580
+
+super + j
+	xdotool mousemove --sync 1690 420
+
+
+super + control + k
+	xdotool mousemove_relative --sync 0 -300
+
+super + control + j
+	xdotool mousemove_relative --sync 0 300
+
+super + control + h
+	xdotool mousemove_relative --sync -300 0
+
+super + control + l
+	xdotool mousemove_relative --sync 300 0
