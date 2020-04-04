@@ -1,4 +1,6 @@
-# TODO: handle the beginning-of-line whitespace and brackets as match group
+snippet ' "'" w
+'(${VISUAL}$1)$2
+endsnippet
 
 snippet "^(\()?rq" "require" r
 (require ${1:"asdf"}`!p
@@ -77,7 +79,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bdo" "m" rw
+snippet "(\()?\bdo" "do" rw
 (do ((${1:x} ${2:0} (${3:1+ x}))$4)
     (${5:end-condition} ${6:optional-exit-form})
   $7`!p
@@ -93,6 +95,17 @@ snippet ba "basement" b
 #+nil
 (progn
 	${VISUAL}${1:nil})
+endsnippet
+
+snippet cl "defcl" b
+(defclass ${1:bank-account} ($2)
+  (${3:balance}))
+endsnippet
+
+snippet "(\()?\bmi" "make-instance" rw
+(make-instance '${1:bank-account}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 snippet ql "quickload" b
@@ -222,10 +235,7 @@ snippet cmd "defcommand" b
 	$6)
 endsnippet
 
-snippet cl "defcl" b
-(defclass ${1:bank-account} ($2)
-  (${3:balance}))
-endsnippet
+# Jiv
 
 snippet j "jiv" b
 #+J
@@ -252,10 +262,6 @@ endsnippet
 snippet #+nil "#+nil continued" b
 #+nil
 ($0)
-endsnippet
-
-snippet ' "'" w
-'(${VISUAL}$1)$2
 endsnippet
 
 snippet "(\()?\bp" "print" wr
