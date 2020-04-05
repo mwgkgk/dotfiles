@@ -72,6 +72,12 @@ snippet decl "decl " w
 (declare (ignore ${1:args}))
 endsnippet
 
+snippet "(\()?\bfmk" "fmk" rw
+(fmakunbound '${1:name}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "(\()?\bm" "m" rw
 (defmacro ${1:name} ($3${2:&body body})
 	${4:nil}`!p
