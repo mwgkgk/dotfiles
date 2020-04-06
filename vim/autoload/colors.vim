@@ -54,7 +54,7 @@ function! colors#chi_colo(chi, static_colo)
         return 'thief'
     elseif a:chi ==# 'motor'
         return a:static_colo
-    elseif a:chi ==# 'humvee'
+    elseif a:chi ==# 'hulk'
         return a:static_colo
     elseif a:chi ==# 'gums'
         return a:static_colo
