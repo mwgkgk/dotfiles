@@ -106,10 +106,6 @@ set statusline="  %t%= %A %10u:%-7g %15s %20d  "
 
 nmap ` '
 
-mark b ~/bin/
-mark h ~/heap/
-mark v ~/dot/vim/
-
 " There's no way to mark `:
 nnoremap `` :cd<CR>
 
