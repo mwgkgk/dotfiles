@@ -1,0 +1,28 @@
+# https://github.com/go-task/task
+
+# TODO %s/crown/project-name/g
+d:
+  desc: Build Debug
+  cmds:
+    # - sbcl --eval '(asdf:make :crown/debug)' --quit
+    - ccl --eval '(asdf:make :crown/debug)'
+
+release:
+  desc: Build Release
+  cmds:
+    # - sbcl --eval '(asdf:make :crown)' --quit
+    - ccl --eval '(asdf:make :crown)'
+
+default:
+  deps: [release]
+
+r:
+  desc: Run Release
+  cmds:
+    - ./target/release/crown
+
+dd:
+  desc: Run Debug
+  cmds:
+    - ./target/debug/crown
+
