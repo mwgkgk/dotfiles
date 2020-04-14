@@ -97,6 +97,12 @@ snippet re "&rest" w
 &rest ${1:forms}$2
 endsnippet
 
+snippet "(\()?fc" "funcall" wr
+(funcall $1`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet ba "basement" b
 #+nil
 (progn
