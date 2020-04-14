@@ -2,6 +2,10 @@ snippet ' "'" w
 '(${VISUAL}$1)$2
 endsnippet
 
+snippet ` "`" w
+\`(${VISUAL}$1)$2
+endsnippet
+
 snippet "^(\()?rq" "require" r
 (require ${1:"asdf"}`!p
 if match.group(1) is None:
