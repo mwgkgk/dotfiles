@@ -149,11 +149,18 @@ super + control + grave
 
 # Maus
 
+super + h
+	xdotool mousemove --sync 580 480
+	xdotool mousemove --sync 580 479
+
+super + l
+	xdotool mousemove --sync 1690 480
+
 super + k
-	xdotool mousemove --sync 580 580
+	xdotool mousemove --sync 630 100
 
 super + j
-	xdotool mousemove --sync 1690 420
+	xdotool mousemove --sync 630 1020
 
 # super + control + k
 # 	xdotool mousemove_relative --sync 0 -300
