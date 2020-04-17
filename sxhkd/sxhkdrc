@@ -19,7 +19,7 @@ super + F9
 	girl upd
 
 super + F12
-	king Vim ~/dot/sxhkd/sxhkdrc
+	march Vim ~/dot/sxhkd/sxhkdrc
 
 super + f
 	smuggler
@@ -52,7 +52,7 @@ control + semicolon
 	sleep 0.2 && xdotool keyup ctrl+semicolon key Escape space w
 
 super + space
-	king
+	march
 
 super + BackSpace
 	rogue
