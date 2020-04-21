@@ -8,7 +8,9 @@ endsnippet
 
 snippet ql "quickload" b
 #+ql
-(ql:quickload '(:${1:find-port}))
+(progn
+	(ql:quickload '(:${1:1am}))
+	(use-package :$1)
 endsnippet
 
 snippet defsys "defsystem" b
