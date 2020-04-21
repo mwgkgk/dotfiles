@@ -82,6 +82,10 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet l "lambda" w
+#'(lambda (${1:x}) ${2:nil})
+endsnippet
+
 snippet "(\()?\bm" "m" rw
 (defmacro ${1:name} ($3${2:&body body})
 	${4:nil}`!p
