@@ -11,7 +11,7 @@ $4
 endsnippet
 
 snippet fl "Lisp snippet" b
-`!p snip.rv = "snippet"` "(\()?${1:trigger}" "${2:$1}" r
+`!p snip.rv = "snippet"` "(\()?\b${1:trigger}" "${2:$1}" rw
 ($2
 	$3\`!p
 if match.group(1) is None:
