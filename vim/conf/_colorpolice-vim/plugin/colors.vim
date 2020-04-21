@@ -4,7 +4,7 @@
 
 " let s:static_colo = 'industry'
 " let s:static_colo = 'heavy-industry'
-let s:static_colo = 'light-industry'
+" let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
 " let s:static_colo = 'mayansmokemod'
@@ -20,7 +20,7 @@ let s:static_colo = 'light-industry'
 " let s:static_colo = 'haze'
 " let s:static_colo = 'grapes'
 
-" let s:static_colo = 'farout'
+let s:static_colo = 'farout'
 " let s:static_colo = 'autumn'
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
