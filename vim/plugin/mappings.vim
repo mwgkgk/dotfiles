@@ -93,6 +93,9 @@ nnoremap <Leader>q :bd<CR>
 " Previous window:
 nnoremap <C-w><C-w> <C-w>p
 
+" Close window:
+nnoremap <Space><Leader> <C-w>q
+
 " Keep filetype for new windows:
 nnoremap <silent> <Space>n :call window#new("new")<CR>
 nnoremap <silent> <Space>N :call window#new("vnew")<CR>
