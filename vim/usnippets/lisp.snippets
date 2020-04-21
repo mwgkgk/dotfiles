@@ -56,11 +56,9 @@ snippet defv "defv" w
 	${2:nil})
 endsnippet
 
-snippet "(\()?f" "f" rw
+snippet f "function" w
 (defun ${1:name} ($2)
-	${3:nil}`!p
-if match.group(1) is None:
-	snip.rv = ")"`
+	${3:nil})
 endsnippet
 
 snippet main "main" b
