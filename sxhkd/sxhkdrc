@@ -157,7 +157,7 @@ super + l
 	xdotool mousemove --sync 1690 480
 
 super + k
-	xdotool mousemove --sync 630 100
+	xdotool mousemove --sync 1030 50
 
 super + j
 	xdotool mousemove --sync 630 1020
