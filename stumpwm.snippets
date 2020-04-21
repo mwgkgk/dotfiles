@@ -1,0 +1,30 @@
+# Currently unused, saving for posterity
+
+snippet k "define-key-top" b
+(define-key *top-map* (kbd "${1:s-k}") "${2:move-focus up}")
+endsnippet
+
+snippet kk "define-key" b
+(define-key *${1:root}-map* (kbd "${2:k}") "${3:move-focus up}")
+endsnippet
+
+snippet kr "define-key-root" b
+(define-key *root-map* (kbd "${1:k}") "${2:move-focus up}")
+endsnippet
+
+snippet sk "sparse-keymap" b
+(defvar *${1:leader}-$2map*
+  (let ((m (make-sparse-keymap)))
+		$3
+		m))
+endsnippet
+
+snippet km "sparse-keymap map" b
+(define-key m (kbd "${1:k}") "${2:move-focus up}")
+endsnippet
+
+snippet cmd "defcommand" b
+(defcommand ${1:cmd} (${2:arg})
+	((:${3:shell} "${4:Enter shell command}:")$5)
+	$6)
+endsnippet
