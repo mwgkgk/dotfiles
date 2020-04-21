@@ -1,15 +1,14 @@
-snippet ' "'" w
-'(${VISUAL}$1)$2
-endsnippet
+# Imports & Packages
 
-snippet ` "`" w
-\`(${VISUAL}$1)$2
-endsnippet
-
-snippet "^(\()?rq" "require" r
+snippet "^(\()?\brq" "require" rw
 (require ${1:"asdf"}`!p
 if match.group(1) is None:
 	snip.rv = ")"`$2
+endsnippet
+
+snippet ql "quickload" b
+#+ql
+(ql:quickload '(:${1:find-port}))
 endsnippet
 
 snippet defsys "defsystem" b
@@ -46,6 +45,8 @@ snippet defsys "defsystem" b
                  (:file "$1")))))
 endsnippet
 
+# Variables
+
 snippet defp "defp" w
 (defparameter *$1*
 	${2:nil})
@@ -56,9 +57,17 @@ snippet defv "defv" w
 	${2:nil})
 endsnippet
 
-snippet f "function" w
+# Functions
+
+snippet "(\()?\bf" "defun" rw
 (defun ${1:name} ($2)
-	${3:nil})
+	${3:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet re "&rest" w
+&rest ${1:forms}$2
 endsnippet
 
 snippet main "main" b
@@ -84,36 +93,13 @@ snippet l "lambda" w
 #'(lambda (${1:x}) ${2:nil})
 endsnippet
 
-snippet "(\()?\bm" "m" rw
-(defmacro ${1:name} ($3${2:&body body})
-	${4:nil}`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
-
-snippet "(\()?\bdo" "do" rw
-(do ((${1:x} ${2:0} (${3:1+ x}))$4)
-    (${5:end-condition} ${6:optional-exit-form})
-  $7`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
-
-snippet re "&rest" w
-&rest ${1:forms}$2
-endsnippet
-
-snippet "(\()?fc" "funcall" wr
-(funcall $1`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
-
 snippet ba "basement" b
 #+nil
 (progn
 	${VISUAL}${1:nil})
 endsnippet
+
+# Classes
 
 snippet cl "defcl" b
 (defclass ${1:bank-account} ($2)
@@ -126,29 +112,39 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet ql "quickload" b
-#+ql
-(ql:quickload '(:${1:find-port}))
+# Macros
+
+snippet "(\()?\bm" "m" rw
+(defmacro ${1:name} ($3${2:&body body})
+	${4:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
-snippet at "at" b
-#J
-(at `date-jiv`
-		${0})
+snippet "(\()?\bdo" "do" rw
+(do ((${1:x} ${2:0} (${3:1+ x}))$4)
+	(${5:end-condition} ${6:optional-exit-form})
+  $7`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?cond" "cond" r
+# Cond Macro
+
+snippet "(\()?\bcond" "cond" r
 (cond
 	((${1:equal x y}) ${2:nil})$3`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet cc "cond clause" i
+snippet cc "cond clause" w
 (${3:(${1:equal}$2)} $4)$5
 endsnippet
 
-snippet "(\()?let" "let" r
+# Let, Flet, Labels,
+
+snippet "(\()?\blet" "let" wr
 (let
 	((${1:${VISUAL}} ${3:($2)})$4)
 	${5:$1}`!p
@@ -156,7 +152,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?fle" "flet" wr
+snippet "(\()?\bflet" "flet" wr
 (flet
 	((${1:x} ($2)
 		${3:nil})$4)
@@ -165,23 +161,48 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet lc "let clause" i
-(${1:x} ($2))$3
-endsnippet
-
-snippet "(\()?eq" "equal" wr
-(equal $1`!p
+snippet "(\()?\blab" "labels" wr
+(labels
+	((${1:x} ($2)
+		${3:nil})$4)
+	${5:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?fmt" "format" wr
+snippet lc "let clause" w
+(${1:x} ($2))$3
+endsnippet
+
+# Format Utility
+
+snippet "(\()?\bfmt" "format" wr
 (format ${3:nil} "$1"$2`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?lo(op)?" "loop" wr
+snippet "(\()?\bp" "print" wr
+(format ${4:t} "${3:${2:~a}~%}" ${1:${VISUAL}}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet { "{" i
+~{${0:~a${VISUAL}}~}
+endsnippet
+
+snippet [ "[" i
+~[${0:~a${VISUAL}}~]
+endsnippet
+
+snippet ( "(" i
+~(${0:~a${VISUAL}}~)
+endsnippet
+
+# Loop Utility
+
+snippet "(\()?\blo(op)?" "loop" wr
 (loop
 	${2::for }$1`!p
 if match.group(1) is None:
@@ -200,6 +221,46 @@ snippet /:?fin(ally)?/ "Loop finally" rw
 :finally (return ${2:($1)})
 endsnippet
 
+# Higher Order Functions
+
+snippet "(\()?fc" "funcall" wr
+(funcall $1`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bri" "remove-if" rw
+(remove-if ${2:nullp} ${1:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\brn" "remove-if-not" rw
+(remove-if-not ${2:nullp} ${1:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# Predicates
+
+snippet "(\()?\be" "equal" wr
+(equal $1`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# Quotes
+
+snippet ' "'" w
+'(${VISUAL}$1)$2
+endsnippet
+
+snippet ` "`" w
+\`(${VISUAL}$1)$2
+endsnippet
+
+# Bits and Pieces
+
 snippet /^;?;?;/ ";" r
 ;;; ${VISUAL}$0
 endsnippet
@@ -209,51 +270,20 @@ snippet / *d(a)?(te)?/ "Date" rb
 ${0}
 endsnippet
 
-snippet { "{" i
-~{${0:~a${VISUAL}}~}
+snippet nil "#+nil" b
+#+nil
 endsnippet
 
-snippet [ "[" i
-~[${0:~a${VISUAL}}~]
+snippet #+nil "#+nil continued" b
+#+nil
+($0)
 endsnippet
 
-snippet ( "(" i
-~(${0:~a${VISUAL}}~)
+snippet im "doing my part" b
+"I'm doing my part!"
 endsnippet
 
-
-# StumpWM
-
-snippet k "define-key-top" b
-(define-key *top-map* (kbd "${1:s-k}") "${2:move-focus up}")
-endsnippet
-
-snippet kk "define-key" b
-(define-key *${1:root}-map* (kbd "${2:k}") "${3:move-focus up}")
-endsnippet
-
-snippet kr "define-key-root" b
-(define-key *root-map* (kbd "${1:k}") "${2:move-focus up}")
-endsnippet
-
-snippet sk "sparse-keymap" b
-(defvar *${1:leader}-$2map*
-  (let ((m (make-sparse-keymap)))
-		$3
-		m))
-endsnippet
-
-snippet km "sparse-keymap map" b
-(define-key m (kbd "${1:k}") "${2:move-focus up}")
-endsnippet
-
-snippet cmd "defcommand" b
-(defcommand ${1:cmd} (${2:arg})
-	((:${3:shell} "${4:Enter shell command}:")$5)
-	$6)
-endsnippet
-
-# Jiv
+# Jiv-within-CL, because it sometimes be like that
 
 snippet j "jiv" b
 #+J
@@ -267,30 +297,19 @@ snippet dj "dj" b
 ($1)
 endsnippet
 
+snippet at "at" b
+#J
+(at `date-jiv`
+		${0})
+endsnippet
+
 snippet q "question" b
 (question
   "$1"
   $2)
 endsnippet
 
-snippet nil "#+nil" b
-#+nil
-endsnippet
-
-snippet #+nil "#+nil continued" b
-#+nil
-($0)
-endsnippet
-
-snippet "(\()?\bp" "print" wr
-(format ${4:t} "${3:${2:~a}~%}" ${1:${VISUAL}}`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
-
-snippet im "doing my part" b
-"I'm doing my part!"
-endsnippet
+# Fallbacks
 
 priority -2
 
