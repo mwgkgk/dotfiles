@@ -232,13 +232,13 @@ if match.group(1) is None:
 endsnippet
 
 snippet "(\()?\bri" "remove-if" rw
-(remove-if ${2:#'nullp} ${1:nil}`!p
+(remove-if ${3:#'nullp}$2 ${1:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\brin" "remove-if-not" rw
-(remove-if-not ${2:#'nullp} ${1:nil}`!p
+(remove-if-not ${3:#'nullp}$2 ${1:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
