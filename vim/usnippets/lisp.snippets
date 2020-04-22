@@ -285,6 +285,16 @@ snippet im "doing my part" b
 "I'm doing my part!"
 endsnippet
 
+# 1am
+
+snippet ro "rooftops" b
+#+nil
+(progn
+	(1am:test ${1:test-name}
+		${VISUAL}${3:(is ${2:nil})})
+	(1am:run '($1)))
+endsnippet
+
 # Jiv-within-CL, because it sometimes be like that
 
 snippet j "jiv" b
