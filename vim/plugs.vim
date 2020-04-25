@@ -610,6 +610,11 @@ let g:cycle_default_groups += [
 let g:cycle_default_groups += [
             \   [['=', 'is', 'name']],
             \ ]
+
+"  -- Lisp
+let g:cycle_default_groups += [
+            \   [['flet', 'labels']],
+            \ ]
 " }}}
 
 " }}}
