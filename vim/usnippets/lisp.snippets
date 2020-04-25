@@ -49,14 +49,18 @@ endsnippet
 
 # Variables
 
-snippet defp "defp" w
+snippet "(\()?\bdefp" "defparameter" rw
 (defparameter *$1*
-	${2:nil})
+	${2:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
-snippet defv "defv" w
+snippet "(\()?\bdefv" "defvar" rw
 (defvar *$1*
-	${2:nil})
+	${2:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 # Functions
