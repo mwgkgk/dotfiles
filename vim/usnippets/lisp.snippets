@@ -162,7 +162,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bflet" "flet" wr
+snippet "(\()?\bflet|letf" "flet" wr
 (flet
 	((${1:x} ($2)
 		${3:nil})$4)
