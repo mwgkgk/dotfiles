@@ -1062,6 +1062,18 @@ nnoremap <Leader>gL :Flog -all -path=<C-R>=expand('%')<CR><CR>
 
 
 " ||
+" || Term
+" ||
+
+Plug 'kassio/neoterm' " {{{
+
+" F9 for poor man's make using :terminal
+nnoremap <F9> :rightbelow T make<CR>
+
+" }}}
+
+
+" ||
 " || Shell
 " ||
 

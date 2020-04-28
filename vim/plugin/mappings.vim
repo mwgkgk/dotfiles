@@ -622,9 +622,6 @@ inoremap <C-g><C-l> <C-g>u<Esc>:setlocal spell<CR>[s1z=`]a<C-g>u
 " Shift-F9 for proper make using makeprg
 nnoremap [18;2~ :make<CR>:copen<CR>
 
-" F9 for poor man's make using :terminal
-nnoremap <F9> :terminal make<CR>
-
 "
 "
 " Terminal
