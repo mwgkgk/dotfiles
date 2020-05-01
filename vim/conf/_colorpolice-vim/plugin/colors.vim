@@ -6,7 +6,7 @@
 " let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
-" let s:static_colo = 'tactical'
+let s:static_colo = 'tactical'
 " let s:static_colo = 'mayansmokemod'
 " let s:static_colo = 'badwolf'
 " let s:static_colo = 'devbox-dark-256'
@@ -24,6 +24,7 @@
 " let s:static_colo = 'autumn'
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
+" let s:static_colo = 'hemisu-light'
 " let s:static_colo = 'hawk'
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
@@ -84,7 +85,7 @@
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
-let s:static_colo = 'SerialExperimentsLain'
+" let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
 " let s:static_colo = 'nighted'
 
