@@ -6,7 +6,7 @@
 " let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
-let s:static_colo = 'tactical'
+" let s:static_colo = 'tactical'
 " let s:static_colo = 'mayansmokemod'
 " let s:static_colo = 'badwolf'
 " let s:static_colo = 'devbox-dark-256'
@@ -77,7 +77,7 @@ let s:static_colo = 'tactical'
 " let s:static_colo = 'moot'
 " let s:static_colo = 'blue'
 
-" let s:static_colo = 'seoul256-light'
+let s:static_colo = 'seoul256-light'
 " let s:static_colo = 'seoul256'
 
 " let s:static_colo = 'solarized-light'
