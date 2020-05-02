@@ -283,8 +283,14 @@ endsnippet
 
 # Bits and Pieces
 
-snippet /^;?;?;/ ";" r
+snippet /^;?;?;/ ";;;" r
 ;;; ${VISUAL}$0
+endsnippet
+
+snippet /^(\s+);/ ";;" r
+`!p
+if match.group(1) is not None:
+    snip.rv = match.group(1)`;; ${VISUAL}$0
 endsnippet
 
 snippet / *d(a)?(te)?/ "Date" rb
