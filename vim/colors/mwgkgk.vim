@@ -57,6 +57,8 @@ hi VertSplit  ctermfg=233 ctermbg=237 cterm=none
 hi StatusLine   cterm=reverse ctermfg=237 ctermbg=183
 hi StatusLineNC ctermfg=237 ctermbg=245
 
+hi EndOfBuffer ctermfg=240
+
 " yellow
 hi Constant        ctermfg=186
 hi String          ctermfg=117
