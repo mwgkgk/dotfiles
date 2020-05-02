@@ -73,11 +73,11 @@
 
 " let s:static_colo = 'ivan'
 
-" let s:static_colo = 'mwgkgk'
+let s:static_colo = 'mwgkgk'
 " let s:static_colo = 'moot'
 " let s:static_colo = 'blue'
 
-let s:static_colo = 'seoul256-light'
+" let s:static_colo = 'seoul256-light'
 " let s:static_colo = 'seoul256'
 
 " let s:static_colo = 'solarized-light'
