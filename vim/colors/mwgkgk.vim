@@ -36,7 +36,7 @@ hi Title        cterm=bold      ctermfg=193
 hi WarningMsg   term=standout  ctermfg=LightRed
 hi Visual       term=reverse   cterm=reverse
 
-hi CursorColumn    ctermbg=239    cterm=none
+hi CursorColumn    ctermbg=238    cterm=none
 hi CursorLine      ctermbg=238    cterm=none
 hi CursorLineNr    ctermbg=240    cterm=none ctermfg=233
 
