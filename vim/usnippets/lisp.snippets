@@ -121,6 +121,14 @@ snippet t "basement-test" b
 	(t ${VISUAL}${1:nil}))
 endsnippet
 
+# Types
+
+snippet "(\()?\bdeft" "deftype" rw
+(deftype $1`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # Classes
 
 snippet cl "defcl" b
