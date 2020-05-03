@@ -1,6 +1,5 @@
 ```
 .
-├── [ 682]  stumpwm.snippets
 ├── [ 14K]  x11
 │   ├── [2.9K]  .Xresources
 │   ├── [1.8K]  .xinitrc
@@ -9,6 +8,7 @@
 │   │   └── [ 125]  .Xmodmap
 │   └── [ 305]  .Xdefaults
 ├── [702K]  vim
+│   ├── [4.0K]  usnippets [79 entries exceeds filelimit, not opening dir]
 │   ├── [ 35K]  plugs.vim
 │   ├── [198K]  autoload
 │   │   ├── [ 77K]  plug.vim
@@ -228,7 +228,6 @@
 │   │       └── [8.9K]  ftplugin
 │   │           └── [4.9K]  clojure
 │   │               └── [ 935]  mappings.vim
-│   ├── [4.0K]  usnippets [78 entries exceeds filelimit, not opening dir]
 │   ├── [4.1K]  syntax
 │   │   └── [ 122]  gitignore.vim
 │   ├── [ 35K]  ftplugin
@@ -393,7 +392,7 @@
             ├── [3.3K]  Mediterranean.vimp
             └── [2.2K]  molokai.vimp
 
- 1010K used in 128 directories, 264 files
+ 1009K used in 128 directories, 263 files
 ```
 
-> Generated on Sunday, May  3, 2020 at 21:06:59 PM UTC.
+> Generated on Sunday, May  3, 2020 at 21:08:06 PM UTC.
