@@ -113,13 +113,17 @@ endsnippet
 snippet /^$/ "basement-implicit" r
 #+nil
 (progn
-	${VISUAL}${1:nil})
+	${VISUAL}${1:`!p
+if not snip.v.text:
+	snip.rv = "nil"`})
 endsnippet
 
 snippet /^e/ "basement-test" r
 #+nil
 (progn
-	(e ${VISUAL}${1:nil}))
+	(e ${VISUAL}${1:`!p
+if not snip.v.text:
+	snip.rv = "nil"`}))
 endsnippet
 
 # Types
