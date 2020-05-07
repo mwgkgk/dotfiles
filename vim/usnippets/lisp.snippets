@@ -103,28 +103,23 @@ snippet l "lambda" w
 #'(lambda (${1:x}) ${2:nil})
 endsnippet
 
-snippet ba "basement" b
-#+nil
-(progn
-	${VISUAL}${1:nil})
-endsnippet
-
 snippet /^$/ "basement-implicit" r
 #+nil
 (progn
 	${VISUAL}${1:nil})
 endsnippet
 
-snippet /^t/ "basement-test" r
+snippet /^e/ "basement-test" r
 #+nil
 (progn
-	(t ${VISUAL}${1:nil}))
+	(e ${VISUAL}${1:nil}))
 endsnippet
 
 # Types
 
-snippet "(\()?\bdeft" "deftype" rw
-(deftype $1`!p
+snippet "(\()?\bt" "deftype" rw
+(deftype $1 (${2:&optional ${3:type}})
+	\`${4:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -283,7 +278,7 @@ endsnippet
 
 # Predicates
 
-snippet "(\()?\be" "equal" wr
+snippet "(\()?\beq" "equal" wr
 (equal $1`!p
 if match.group(1) is None:
 	snip.rv = ")"`
