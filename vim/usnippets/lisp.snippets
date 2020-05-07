@@ -63,6 +63,13 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bdefc" "defconstant" rw
+(defconstant +$1+
+	${2:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # Functions
 
 snippet "(\()?\bf" "defun" rw
