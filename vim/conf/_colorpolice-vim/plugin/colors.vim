@@ -28,6 +28,7 @@
 " let s:static_colo = 'hawk'
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
+let s:static_colo = 'fukuoka'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
@@ -73,7 +74,7 @@
 
 " let s:static_colo = 'ivan'
 
-let s:static_colo = 'mwgkgk'
+" let s:static_colo = 'mwgkgk'
 " let s:static_colo = 'moot'
 " let s:static_colo = 'blue'
 
