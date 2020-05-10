@@ -36,7 +36,7 @@ hi CursorLine ctermbg=132 ctermfg=none cterm=none
 hi CursorLineNr ctermfg=249 ctermbg=132 cterm=none
 
 hi LineNr ctermfg=182
-hi SignColumn ctermbg=132
+hi SignColumn ctermbg=132 ctermfg=222
 
 hi Folded ctermbg=132 ctermfg=250
 
