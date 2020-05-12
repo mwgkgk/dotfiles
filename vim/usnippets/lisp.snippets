@@ -1,5 +1,13 @@
 # Imports & Packages
 
+snippet "(\()?\bip" "in-package" rw
+(in-package #:${VISUAL}${1:`!p
+if not snip.v.text:
+	snip.rv = "common-lisp-user"`}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "^(\()?\brq" "require" rw
 (require ${1:"asdf"}`!p
 if match.group(1) is None:
