@@ -34,4 +34,5 @@ nnoremap <Leader>D :Gvdiff<CR>
 " || Branches
 " ||
 
+" Mnenomic: Go Wide
 nnoremap <Leader>gw :Git checkout -b<Space>
