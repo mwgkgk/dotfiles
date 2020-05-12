@@ -30,7 +30,7 @@ snippet defsys "defsystem" b
 
   :build-operation program-op
   :build-pathname "target/release/$1"
-  :entry-point "$1::main"
+  :entry-point "$1::run"
 
   :components ((:module "src"
                 :serial t 
@@ -46,7 +46,7 @@ snippet defsys "defsystem" b
 
   :build-operation program-op
   :build-pathname "target/debug/$1"
-  :entry-point "$1::main"
+  :entry-point "$1::run"
 
   :components ((:module "src"
                 :serial t 
@@ -95,13 +95,13 @@ snippet opt "&optional" w
 &optional ${1:form}$2
 endsnippet
 
-snippet main "main" b
-(defun main ()
+snippet run "run" b
+(defun run ()
 	${1:nil})
 
 #+nil
 (progn
-	(main$2))
+	(run$2))
 endsnippet
 
 snippet decl "decl " w
