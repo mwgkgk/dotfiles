@@ -55,7 +55,7 @@
 " let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
-let s:static_colo = 'alduin'
+" let s:static_colo = 'alduin'
 
 " let s:static_colo = 'apples'
 " let s:static_colo = 'github'
@@ -72,7 +72,7 @@ let s:static_colo = 'alduin'
 " let s:static_colo = 'sunday256'
 " let s:static_colo = 'summerfruit256'
 
-" let s:static_colo = 'ivan'
+let s:static_colo = 'ivan'
 
 " let s:static_colo = 'mwgkgk'
 " let s:static_colo = 'moot'
