@@ -126,49 +126,8 @@ nmap cr c\t)<Space>
 nmap cR c\T(<Space>
 " }}}
 
-Plug 'machakann/vim-patternjump' " {{{
-let g:patternjump_no_default_key_mappings = 1
-let g:patternjump_patterns = {
-        \ '_' : { 
-        \   'nox' : {
-        \     'tail' : ['^\s*$'],
-        \     }
-        \   },
-        \ 'markdown' : {
-        \   'nox' : {
-        \     'tail' : ['^\(#\|>\)'],
-        \     }
-        \   },
-        \ 'mj' : {
-        \   'nox' : {
-        \     'tail' : ['^\(#\|>\)'],
-        \     }
-        \   },
-        \ 'vim' : {
-        \   'nox' : {
-        \     'tail' : ['^Plug.*'],
-        \     }
-        \   },
-        \ 'conf' : {
-        \   'nox' : {
-        \     'head' : ['^\s*#.*'],
-        \     }
-        \   },
-        \ 'python' : {
-        \   'nox' : {
-        \     'tail' : ['^\s*def.*'],
-        \     }
-        \   },
-        \ 'html' : {
-        \   'nox' : {
-        \     'tail' : ['^\s*<.+>'],
-        \     }
-        \   },
-        \ }
-
-map <M-q> <Plug>(patternjump-backward)
-map <M-r> <Plug>(patternjump-forward)
-" }}}
+Plug '~/.vim/conf/_vim-patternjump/'
+Plug 'machakann/vim-patternjump'
 
 " Depends on vim-scripts/ingo-library
 Plug 'vim-scripts/JumpToLastOccurrence' " {{{
