@@ -39,6 +39,9 @@ super + u
 super + 0
 	firefox-default
 
+super + o
+	outlaw
+
 super + backslash
 	girl
 
