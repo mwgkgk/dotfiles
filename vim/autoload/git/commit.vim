@@ -74,7 +74,9 @@ function! git#commit#slurp_staged()
 endfunction
 
 function! git#commit#propagate()
-    echoerr "Unifinished code! git#commit#propagate"
+    echoerr 'Unifinished code! git#commit#propagate'
+    return 1
+
     " let l:git_dir = ...
-    if git#commit#with_message('Propagate ' . l:git_dir) 
+    " if git#commit#with_message('Propagate ' . l:git_dir) 
 endfunction
