@@ -44,7 +44,7 @@
 " let s:static_colo = 'thief'
 " let s:static_colo = 'hangar-lab'
 
-" let s:static_colo = 'Tomorrow'
+let s:static_colo = 'Tomorrow'
 " let s:static_colo = 'primary'
 
 " let s:static_colo = 'hybrid-dark'
@@ -72,7 +72,7 @@
 " let s:static_colo = 'sunday256'
 " let s:static_colo = 'summerfruit256'
 
-let s:static_colo = 'ivan'
+" let s:static_colo = 'ivan'
 
 " let s:static_colo = 'mwgkgk'
 " let s:static_colo = 'moot'
