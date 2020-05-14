@@ -1094,6 +1094,8 @@ Plug '~/shop/core/colony/colony-vim/'
 
 Plug '~/shop/augs/crown/crown-vim/'
 
+Plug '~/um/humix/humix-vim/'
+
 " }}}
 
 
