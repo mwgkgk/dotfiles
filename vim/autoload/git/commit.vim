@@ -79,4 +79,10 @@ function! git#commit#propagate()
 
     " let l:git_dir = ...
     " if git#commit#with_message('Propagate ' . l:git_dir) 
+
+    " Actual code from slap:
+
+    " git add "$arg"
+    " message=$(git submodule summary "$arg" | sed '1 s/$/\n/')
+    " git commit -v -m "$message"
 endfunction
