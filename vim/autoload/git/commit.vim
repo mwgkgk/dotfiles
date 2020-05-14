@@ -72,3 +72,9 @@ function! git#commit#slurp_staged()
         echo 'Modify ' . git#log#last_commit()
     endif
 endfunction
+
+function! git#commit#propagate()
+    echoerr "Unifinished code! git#commit#propagate"
+    " let l:git_dir = ...
+    if git#commit#with_message('Propagate ' . l:git_dir) 
+endfunction

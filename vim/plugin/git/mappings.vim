@@ -60,3 +60,9 @@ nnoremap <silent> <Leader>ghu :call git#hardreset#current()<CR>
 
 " Hard reset everything:
 nnoremap <silent> <Leader>ghU :call git#hardreset#all()<CR>
+
+" ||
+" || Propagate
+" ||
+
+nnoremap <silent> <Leader>gu :call git#commit#propagate()<CR>
