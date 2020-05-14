@@ -48,6 +48,8 @@ function! colors#chi_colo(chi, static_colo)
         return a:static_colo
     elseif a:chi ==# 'smuggler'
         return a:static_colo
+    elseif a:chi ==# 'outlaw'
+        return a:static_colo
     elseif a:chi ==# 'druid'
         return a:static_colo
     elseif a:chi ==# 'fox'
