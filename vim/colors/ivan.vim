@@ -54,7 +54,7 @@ hi DiffText ctermbg=148 ctermfg=234
 hi DiffChange ctermbg=240
 hi DiffDelete ctermbg=167
 
-hi Pmenu ctermfg=216 ctermbg=240
+hi Pmenu ctermfg=216 ctermbg=235
 hi PmenuSel ctermfg=240 ctermbg=216
 
 hi TabLine      guifg=NONE    guibg=#343434 gui=none ctermfg=gray ctermbg=239 cterm=none
