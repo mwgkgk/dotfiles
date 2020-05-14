@@ -35,4 +35,14 @@ let g:patternjump_patterns = {
         \     'tail' : ['^\s*<.+>'],
         \     }
         \   },
+        \ 'lisp' : {
+        \   'nox' : {
+        \     'head' : ['____'],
+        \     }
+        \   },
+        \ 'jiv' : {
+        \   'nox' : {
+        \     'head' : ['\.\.'],
+        \     }
+        \   },
         \ }
