@@ -99,6 +99,13 @@ set number
 " Enable mouse in all modes:
 set mouse=a
 
+" ||
+" || Registers
+" ||
+
+" Use * as ":
+set clipboard=unnamed
+
 "
 "
 " Wildmenu & Completion
