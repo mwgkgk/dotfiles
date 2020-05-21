@@ -27,8 +27,8 @@
 " let s:static_colo = 'hemisu-light'
 " let s:static_colo = 'hawk'
 " let s:static_colo = 'zorn'
-let s:static_colo = 'nil'
-" let s:static_colo = 'fukuoka'
+" let s:static_colo = 'nil'
+let s:static_colo = 'fukuoka'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
