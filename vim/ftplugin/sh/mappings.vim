@@ -5,7 +5,10 @@
 
 " nnoremap <buffer> X :silent .w !bash<CR>
 nnoremap <buffer> <Leader>x :silent .,$w !bash<CR>
-nnoremap <buffer> <M-x> :exec ':term ' . getline('.')<CR>
+
+" Outclassed by Reply, neoterm
+" nnoremap <buffer> <M-x> :exec ':term ' . getline('.')<CR>
+
 nnoremap <buffer> <Space>x :silent %w !bash<CR>
 
 " TODO C-x motion
