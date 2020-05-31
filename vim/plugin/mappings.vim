@@ -406,7 +406,7 @@ nnoremap <C-p> :cp<CR>
 " Preview Window
 "
 
-nnoremap <silent> zd :pclose<CR>
+nnoremap <silent> <LocalLeader><LocalLeader> :pclose<CR>
 
 "
 "

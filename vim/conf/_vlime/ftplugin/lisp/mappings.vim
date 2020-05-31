@@ -18,4 +18,6 @@ nnoremap <silent> <buffer> <LocalLeader>` :call vlime#plugin#CloseWindow("")<cr>
 
 " Close all visible preview windows:
 " Not <buffer> because we can be in any buffer
-nnoremap <silent> <LocalLeader><LocalLeader> :call vlime#plugin#CloseWindow("preview")<cr>
+" Moving to <buffer> because otherwise we can't cleanly clear the
+" lisp-specific mappings on b:undo_ftplugin
+nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :call vlime#plugin#CloseWindow("preview")<cr>
