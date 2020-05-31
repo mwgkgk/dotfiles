@@ -914,9 +914,9 @@ Plug 'arecarn/crunch.vim' " {{{
 inoremap <C-g>= <Esc>vB:Crunch<CR>a
 " }}}
 
-Plug '~/.vim/conf/_reply.vim/', { 'for' : ['sh', 'ocaml', 'elixir'] }
+Plug '~/.vim/conf/_reply.vim/', { 'for' : ['sh', 'ocaml', 'elixir', 'julia'] }
 Plug 'rhysd/reply.vim', {
-            \   'for' : ['sh', 'ocaml', 'elixir'],
+            \   'for' : ['sh', 'ocaml', 'elixir', 'julia'],
             \   'on' : ['ReplSend', 'Repl']
             \ }
 
