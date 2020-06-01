@@ -10,5 +10,10 @@ setlocal shiftwidth=2
 " https://github.com/JuliaEditorSupport/julia-vim/issues/38
 " https://github.com/JuliaEditorSupport/julia-vim/issues/64
 " ~/.vim/plugs/julia-vim/ftdetect/julia.vim
+" I've opened an issue on Vim issue tracker:
+" Reason being that it's easier to edit /usr/share/vim/vim82/filetype.vim than
+" to fuck with Lisp plugins that should not have been loaded in the first
+" place.
+" https://github.com/vim/vim/issues/6178
 let b:undo_ftplugin = 'setlocal comments< define< formatoptions< iskeyword< lisp<'
             \ . '| mapclear <buffer>'
