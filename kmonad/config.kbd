@@ -22,6 +22,7 @@ lctl              lmet              lalt                                        
  */
 
 @togBurglar = TH 200 caps LT-Burglar
+@togFocus = TH 200 x LT-Focus
 
 @togPush = TN f1 LT-Push
 @togPop = TN f1 LT-Pop
@@ -31,7 +32,7 @@ esc              @togPush         f2               f3               f4          
 grv              1                2                3                4                5                6                7                8                9                0                -                =                bspc              ins         home        pgup             numlock         kpslash         kpasterisk         kpminus
 tab               q                w                e                r                t                y                u                i                o                p                [                ]                \                del         end         pgdn             kp7             kp8             kp9                kpplus
 lctl               a                s                d                f                g                h                j                k                l                ;                '                ret                                                                       kp4             kp5             kp6
-lsft                z                x                c                v                b                n                m                ,                .                 /                LT-Zeta                                                     up                           kp1             kp2             kp3                kpenter
+lsft                z                @togFocus        c                v                b                n                m                ,                .                 /                LT-Zeta                                                     up                           kp1             kp2             kp3                kpenter
 @togBurglar       lmet              lalt                                                              spc                                               LT-Omega         rmet             LT-Funk          S-caps                              left        down        right            kp0                             kpdot
 
 
@@ -200,6 +201,23 @@ _                _                _                _                _           
 _                 f1               f2               f3               f4               _                _                f13              f14              f15              f16              _                _                _                _           _           _                _               _               _                  _
 _                  f9               f10              f11              f12              _                _                f21              f22              f23              f24              _                _                                                                         _               _               _
 _                   f8               f7               f6               f5               _                _                f17              f18              f19               f20              _                                                           _                            _               _               _                  _
+_                 _                 _                                                                 _                                                 _                _                _                _                                   _           _           _                _                               _
+
+
+/* ----------------------------------------------------------------------------
+ *                                     Focus
+ * ----------------------------------------------------------------------------
+ * 
+ * VM control
+ * 
+ */
+
+LAYER Focus
+_                _                _                _                _                _                _                _                _                _                _                _                _                                  _           _           _
+_                M-C-S-A-1        M-C-S-A-2        M-C-S-A-3        M-C-S-A-4        M-C-S-A-5        M-C-S-A-6        M-C-S-A-7        M-C-S-A-8        M-C-S-A-9        _                _                _                _                 _           _           _                _               _               _                  _
+_                 M-C-S-A-q        M-C-S-A-w        M-C-S-A-e        M-C-S-A-r        M-C-S-A-t        _                _                _                _                _                _                _                _                _           _           _                _               _               _                  _
+_                  M-C-S-A-a        M-C-S-A-s        M-C-S-A-d        M-C-S-A-f        M-C-S-A-g        _                _                _                _                _                _                _                                                                         _               _               _
+_                   _                _                M-C-S-A-c        _                _                _                _                _                _                 _                _                                                           _                            _               _               _                  _
 _                 _                 _                                                                 _                                                 _                _                _                _                                   _           _           _                _                               _
 
 

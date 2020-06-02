@@ -176,3 +176,65 @@ super + j
 
 # super + control + l
 # 	xdotool mousemove_relative --sync 300 0
+
+# VMControl (see kmonad: Focus)
+
+super + control + shift + alt + a
+	VBoxManage controlvm w10 keyboardputstring a
+
+super + control + shift + alt + s
+	VBoxManage controlvm w10 keyboardputstring s
+
+super + control + shift + alt + d
+	VBoxManage controlvm w10 keyboardputstring d
+
+super + control + shift + alt + f
+	VBoxManage controlvm w10 keyboardputstring f
+
+super + control + shift + alt + g
+	VBoxManage controlvm w10 keyboardputstring g
+
+super + control + shift + alt + c
+	VBoxManage controlvm w10 keyboardputstring c
+
+super + control + shift + alt + q
+	VBoxManage controlvm w10 keyboardputstring q
+
+super + control + shift + alt + w
+	VBoxManage controlvm w10 keyboardputstring w
+
+super + control + shift + alt + e
+	VBoxManage controlvm w10 keyboardputstring e
+
+super + control + shift + alt + r
+	VBoxManage controlvm w10 keyboardputstring r
+
+super + control + shift + alt + t
+	VBoxManage controlvm w10 keyboardputstring t
+
+super + control + shift + alt + 1
+	VBoxManage controlvm w10 keyboardputstring 1
+
+super + control + shift + alt + 2
+	VBoxManage controlvm w10 keyboardputstring 2
+
+super + control + shift + alt + 3
+	VBoxManage controlvm w10 keyboardputstring 3
+
+super + control + shift + alt + 4
+	VBoxManage controlvm w10 keyboardputstring 4
+
+super + control + shift + alt + 5
+	VBoxManage controlvm w10 keyboardputstring 5
+
+super + control + shift + alt + 6
+	VBoxManage controlvm w10 keyboardputstring 6
+
+super + control + shift + alt + 7
+	VBoxManage controlvm w10 keyboardputstring 7
+
+super + control + shift + alt + 8
+	VBoxManage controlvm w10 keyboardputstring 8
+
+super + control + shift + alt + 9
+	VBoxManage controlvm w10 keyboardputstring 9
