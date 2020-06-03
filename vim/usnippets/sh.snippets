@@ -218,6 +218,10 @@ snippet / *d(a)?(te)?/ "Date" rb
 ${0}
 endsnippet
 
+snippet dd "dd" w
+`!v system('date +"%Y-%m-%d" | tr -d "\n"')`: ${0}
+endsnippet
+
 snippet ba "add-basement" b
 : <<'BASEMENT'
 
