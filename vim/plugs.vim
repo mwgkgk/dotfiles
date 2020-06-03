@@ -317,29 +317,29 @@ let g:submode_timeoutlen = 700
 
 silent! call plug#load('vim-submode')
 
-call submode#enter_with('Remote↑↓', 'n', '', '[k', ':silent! VimProcBang bro scrollUp<CR>')
-call submode#map(       'Remote↑↓', 'n', '',  'k', ':silent! VimProcBang bro scrollUp<CR>')
-call submode#enter_with('Remote↑↓', 'n', '', '[j', ':silent! VimProcBang bro scrollDown<CR>')
-call submode#map(       'Remote↑↓', 'n', '',  'j', ':silent! VimProcBang bro scrollDown<CR>')
+call submode#enter_with('Remote↑↓', 'n', '', '[k', ':AsyncRun bro scrollUp<CR>')
+call submode#map(       'Remote↑↓', 'n', '',  'k', ':AsyncRun bro scrollUp<CR>')
+call submode#enter_with('Remote↑↓', 'n', '', '[j', ':AsyncRun bro scrollDown<CR>')
+call submode#map(       'Remote↑↓', 'n', '',  'j', ':AsyncRun bro scrollDown<CR>')
 
-call submode#enter_with('RemoteYT', 'n', '', '[l', ':silent! VimProcBang bro ytForward5<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'l', ':silent! VimProcBang bro ytForward5<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[L', ':silent! VimProcBang bro ytForward10<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'L', ':silent! VimProcBang bro ytForward10<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[;', ':silent! VimProcBang bro ytForward20<CR>')
-call submode#map(       'RemoteYT', 'n', '',  ';', ':silent! VimProcBang bro ytForward20<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[h', ':silent! VimProcBang bro ytBackward5<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'h', ':silent! VimProcBang bro ytBackward5<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[H', ':silent! VimProcBang bro ytBackward10<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'H', ':silent! VimProcBang bro ytBackward10<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[g', ':silent! VimProcBang bro ytBackward20<CR>')
-call submode#map(       'RemoteYT', 'n', '',  'g', ':silent! VimProcBang bro ytBackward20<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[<', ':silent! VimProcBang bro ytFaster<CR>')
-call submode#map(       'RemoteYT', 'n', '',  '<', ':silent! VimProcBang bro ytFaster<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[>', ':silent! VimProcBang bro ytSlower<CR>')
-call submode#map(       'RemoteYT', 'n', '',  '>', ':silent! VimProcBang bro ytSlower<CR>')
-call submode#enter_with('RemoteYT', 'n', '', '[<Space>', ':silent! VimProcBang bro space<CR>')
-call submode#map(       'RemoteYT', 'n', '',  '<Space>', ':silent! VimProcBang bro space<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[l', ':AsyncRun bro ytForward5<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'l', ':AsyncRun bro ytForward5<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[L', ':AsyncRun bro ytForward10<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'L', ':AsyncRun bro ytForward10<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[;', ':AsyncRun bro ytForward20<CR>')
+call submode#map(       'RemoteYT', 'n', '',  ';', ':AsyncRun bro ytForward20<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[h', ':AsyncRun bro ytBackward5<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'h', ':AsyncRun bro ytBackward5<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[H', ':AsyncRun bro ytBackward10<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'H', ':AsyncRun bro ytBackward10<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[g', ':AsyncRun bro ytBackward20<CR>')
+call submode#map(       'RemoteYT', 'n', '',  'g', ':AsyncRun bro ytBackward20<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[<', ':AsyncRun bro ytFaster<CR>')
+call submode#map(       'RemoteYT', 'n', '',  '<', ':AsyncRun bro ytFaster<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[>', ':AsyncRun bro ytSlower<CR>')
+call submode#map(       'RemoteYT', 'n', '',  '>', ':AsyncRun bro ytSlower<CR>')
+call submode#enter_with('RemoteYT', 'n', '', '[<Space>', ':AsyncRun bro space<CR>')
+call submode#map(       'RemoteYT', 'n', '',  '<Space>', ':AsyncRun bro space<CR>')
 
 " call submode#enter_with('RemoteYT_I', 'i', '', '<C-u><C-y>', '<Esc>:silent!
 " VimProcBang bro ytBackward5<CR>gi')
@@ -356,14 +356,12 @@ call submode#map(       'RemoteYT', 'n', '',  '<Space>', ':silent! VimProcBang b
 " call submode#map(       'RemoteYT_I', 'i', '', '<C-i>', '<Esc>:silent!
 " VimProcBang bro ytForward5<CR>gi')
 
-" inoremap <C-u><C-t> <Esc>:silent! VimProcBang bro ytPls<CR>gi
+" inoremap <C-u><C-t> <Esc>:AsyncRun bro ytPls<CR>gi
 
-nnoremap [u :silent! VimProcBang bro space<CR>
-
-call submode#enter_with('RemoteZoom', 'n', '', '[zo', ':silent! VimProcBang bro zoomOut<CR>')
-call submode#map(       'RemoteZoom', 'n', '',   'o', ':silent! VimProcBang bro zoomOut<CR>')
-call submode#enter_with('RemoteZoom', 'n', '', '[zi', ':silent! VimProcBang bro zoomIn<CR>')
-call submode#map(       'RemoteZoom', 'n', '',   'i', ':silent! VimProcBang bro zoomIn<CR>')
+call submode#enter_with('RemoteZoom', 'n', '', '[zo', ':AsyncRun bro zoomOut<CR>')
+call submode#map(       'RemoteZoom', 'n', '',   'o', ':AsyncRun bro zoomOut<CR>')
+call submode#enter_with('RemoteZoom', 'n', '', '[zi', ':AsyncRun bro zoomIn<CR>')
+call submode#map(       'RemoteZoom', 'n', '',   'i', ':AsyncRun bro zoomIn<CR>')
 
 " call submode#enter_with('ScrollGo', 'n', '', ';k', '6<C-Y>6k')
 " call submode#map(       'ScrollGo', 'n', '',  'k', '6<C-Y>6k')
@@ -1027,15 +1025,6 @@ Plug 'kassio/neoterm'
 
 " {{{
 
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' } " {{{
-vnoremap gX y:call vimproc#system('bro url <C-R>"')<CR>
-vnoremap gx y:call vimproc#system('firefox-default <C-R>" &')<CR>
-vnoremap gs y:call vimproc#system('firefox-default https://google.com/search?hl=en&q=<C-R>" &')<CR>
-
-" Xpdf gotoPage
-nnoremap [gl :silent! VimProcBang xpdf -remote xpdfserv 'gotoPage\(<C-R><C-W>\)'<CR>
-" }}}
-
 Plug 'skywind3000/asyncrun.vim' " {{{
 nnoremap <Leader>r<Space> :AsyncRun<Space>
 nnoremap <Space>r :AsyncRun tmux send -t motor C-u do-thing C-m<CR>
@@ -1046,6 +1035,9 @@ nnoremap <Space><Tab> :AsyncRun tmux send -t motor C-c && sleep 0.1 && tmux send
 " Open current file in browser
 command! Chr AsyncRun chromium --incognito % &
 command! Ff  AsyncRun firefox-dmenu % &
+
+" Xpdf gotoPage
+nnoremap [gl :AsyncRun xpdf -remote xpdfserv 'gotoPage(<C-R><C-W>)'<CR>
 " }}}
 
 " }}}
