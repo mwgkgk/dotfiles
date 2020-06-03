@@ -1035,23 +1035,6 @@ vnoremap gs y:call vimproc#system('firefox-default https://google.com/search?hl=
 " Xpdf gotoPage
 nnoremap [gl :silent! VimProcBang xpdf -remote xpdfserv 'gotoPage\(<C-R><C-W>\)'<CR>
 " }}}
-Plug 'Shougo/vimshell.vim' " {{{
-nnoremap <Leader>E :VimShell<CR>
-nnoremap <Leader>vp :exe 'VimShell -popup' ProjectRootGuess()<CR>
-nnoremap <Leader>vP :exe 'VimShell -split' ProjectRootGuess()<CR>
-nnoremap <Leader>vb :VimShellBufferDir -popup<CR>
-nnoremap <Leader>vB :VimShellBufferDir -split<CR>
-nnoremap <Leader>vv :VimShellSendString h<CR>
-nmap <Leader>vw yw:VimShell<CR><Esc><C-P>A<C-W><C-R>"<CR><Esc><C-W>p
-nmap <Leader>vf wyw:VimShell<CR><Esc><C-P>A<C-W><C-R>"<CR><Esc><C-W>p
-nmap <Leader>va yw:VimShell<CR><Esc><C-P>A.<C-R>"<CR><Esc><C-W>p
-nmap <Leader>vu yw:VimShell<CR><Esc><C-P>A<C-W><C-W><CR><Esc><C-W>p
-" Use current directory as vimshell prompt.
-let g:vimshell_prompt_expr =
-            \ 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
-let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
-let g:vimshell_scrollback_limit = 65535
-" }}}
 
 Plug 'skywind3000/asyncrun.vim' " {{{
 nnoremap <Leader>r<Space> :AsyncRun<Space>
