@@ -315,6 +315,9 @@ nmap gr <Plug>(operator-replacemode)
 Plug 'kana/vim-submode', {'on' : [] } " {{{
 let g:submode_timeoutlen = 700
 
+" The reason we do this is because it's before plug#end, and so the autoloads
+" are otherwise unavailable.
+" TODO Move to conf and split into files
 silent! call plug#load('vim-submode')
 
 call submode#enter_with('Remote↑↓', 'n', '', '[k', ':AsyncRun bro scrollUp<CR>')
@@ -1345,6 +1348,7 @@ call plug#end()
 
 source ~/.vim/plugs/vim-matchup/autoload/matchup/custom.vim
 
+" TODO This can be fixed with plug#load('matchup') I believe
 call matchup#custom#define_motion('nox', '%',
       \ 'matchup#custom#example_motion', { 'down': 1 })
 call matchup#custom#define_motion('nox', 'g%',
