@@ -1205,8 +1205,7 @@ Plug '~/.vim/conf/_vim-sexp/'
 Plug 'guns/vim-sexp'
 
 Plug '~/.vim/conf/_vlime/', { 'for' : 'lisp' }
-" Plug 'vlime/vlime', { 'rtp': 'vim/', 'for': 'lisp' }
-Plug '~/shop/forks/vlime', { 'rtp': 'vim/', 'for': 'lisp' }
+Plug 'vlime/vlime', { 'rtp': 'vim/', 'for': 'lisp' }
 
 " Plug '~/.vim/conf/_slimv/', { 'for' : 'lisp' }
 " Plug 'kovisoft/slimv', { 'for' : 'lisp' }
