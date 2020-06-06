@@ -154,7 +154,8 @@ _                 _                 _                                           
 
 // Exit insert-mode, save & close
 @mEQ = (( esc spc W ))
-// Unique sequence for Omega-u to pass to Vim to jump-previous-ale-error
+// Unique sequence for Omega-u to pass to Vim to jump-previous-ale-error;
+// The mirrored keybind is Omega-m being __
 @mFU = (( f12 u ))
 // Exit insert-mode, save, punt window
 @mEP = (( esc spc w M-grave ))
@@ -166,7 +167,7 @@ LAYER Omega
 @mEQ             _                _                _                _                _                _                _                _                _                _                _                _                _                 _           _           _                _               _               _                  _
 =                 1                2                3                4                ~                _                @mFU             9                0                ^                esc              _                _                _           _           _                _               _               _                  _
 _                  (                \                bspc             )                +                |                *                #                $                :                `                _                                                                         _               _               _
-_                   8                7                6                5                %                &                ret              __               @                 !                _                                                           _                            _               _               _                  _
+_                   8                7                6                5                %                &                __               .                @                 !                _                                                           _                            _               _               _                  _
 @mEP              M-grv             _                                                                 _                                                 _                _                _                _                                   _           _           _                _                               _
 
 
