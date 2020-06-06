@@ -624,33 +624,6 @@ nnoremap [18;2~ :make<CR>:copen<CR>
 
 "
 "
-" Terminal
-"
-
-" Replace current window with term:
-nnoremap <silent> <Leader><Space>ge :term ++curwin<CR>
-
-" New tab:
-nnoremap <silent> <Leader><Space>c :tab term<CR>
-
-" New 50% terminal window:
-nnoremap <silent> <Leader><Space>n :term<CR>
-nnoremap <silent> <Leader><Space>N :vert term<CR>
-
-" New 50% terminal window above / to the left:
-nnoremap <silent> <Leader><Space>gn :above term<CR>
-nnoremap <silent> <Leader><Space>gN :above vert term<CR>
-
-" New 33% terminal window:
-nnoremap <silent> <Leader><Space>v :exec 'term ++rows=' . winheight(0)/4<CR>
-nnoremap <silent> <Leader><Space>V :exec 'vert term ++cols=' . winwidth(0)/4<CR>
-
-" New 33% terminal above/to the left:
-nnoremap <silent> <Leader><Space>gv :exec 'above term ++rows=' . winheight(0)/4<CR>
-nnoremap <silent> <Leader><Space>gV :exec 'above vert term ++cols=' . winwidth(0)/4<CR>
-
-"
-"
 " Current Directory
 "
 
