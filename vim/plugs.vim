@@ -581,6 +581,17 @@ let g:cycle_default_groups += [
 
 
 " ||
+" || Pairs
+" ||
+
+" {{{
+
+Plug 'cohama/lexima.vim', { 'for' : 'julia' }
+
+" }}}
+
+
+" ||
 " || Snippets
 " ||
 
