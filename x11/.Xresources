@@ -54,6 +54,7 @@ URxvt*.meta8: true
 URxvt*.foreground: #383838
 URxvt*.background: #FFFFFF
 URxvt*.cursorColor: #FFDCA6
+URxvt*.cursorColor2: #564A4A
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
