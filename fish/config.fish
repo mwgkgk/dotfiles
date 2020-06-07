@@ -11,6 +11,8 @@ umask 0007
 set -x fish_color_prompt 383838
 set -x fish_color_cwd C4A980
 set -x fish_command_timer_color C4C4C4
+set -x fish_command_timer_success_color C4C4C4
+set -x fish_command_timer_fail_color C4C4C4
 
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
 set -x FZF_DEFAULT_OPTS " --bind 'ctrl-q:select-all+accept,tab:print-query'"
