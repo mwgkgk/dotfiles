@@ -10,7 +10,7 @@ super + F4
 	basso
 
 super + F8
-	girl gotop
+	girl Top
 
 super + F5
 	girl alsamixer -c 0
