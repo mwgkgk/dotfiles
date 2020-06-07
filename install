@@ -96,6 +96,7 @@ verbose_link "$DOTFILES/repl/.minrc" ~/.minrc
 # Cmus
 verbose_link "$DOTFILES/cmus/rc" ~/.config/cmus/rc
 verbose_link "$DOTFILES/cmus/gruvbox-light.theme" ~/.config/cmus/gruvbox-light.theme
+verbose_link "$DOTFILES/cmus/xterm-snowwhite.theme" ~/.config/cmus/xterm-snowwhite.theme
 
 # X11
 verbose_link "$DOTFILES/x11/.xinitrc" ~/.xinitrc

@@ -1,6 +1,6 @@
 cd ~/music/
 
-colorscheme gruvbox-alt
+colorscheme xterm-snowwhite
 set lib_sort=filename
 
 bind -f common q :q
