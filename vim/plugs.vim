@@ -1206,8 +1206,11 @@ Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
 Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
 
 " Julia
-Plug '~/.vim/conf/_julia-vim/'
+Plug '~/.vim/conf/_julia-vim/', { 'for' : 'julia' }
 Plug 'JuliaEditorSupport/julia-vim', { 'for' : 'julia' }
+
+Plug '~/.vim/conf/_JuliaFormatter.vim/'
+Plug 'kdheepak/JuliaFormatter.vim', { 'for' : 'julia' }
 
 " Lua
 Plug 'tbastos/vim-lua', { 'for' : 'lua' }
