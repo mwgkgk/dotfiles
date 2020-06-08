@@ -238,3 +238,6 @@ super + control + shift + alt + 8
 
 super + control + shift + alt + 9
 	VBoxManage controlvm w10 keyboardputstring 9
+
+super + control + shift + alt + BackSpace
+	VBoxManage controlvm w10 keyboardputscancode 0e 8e
