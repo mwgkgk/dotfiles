@@ -1,6 +1,6 @@
 cd ~/music/
 
-colorscheme xterm-snowwhite
+colorscheme zenburn
 set lib_sort=filename
 
 bind -f common q :q

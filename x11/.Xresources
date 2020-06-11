@@ -51,10 +51,15 @@ URxvt*.meta8: true
 /* URxvt*.cursorColor: #B7F2D2 */
 
 ! Science
-URxvt*.foreground: #383838
-URxvt*.background: #FFFFFF
-URxvt*.cursorColor: #FFDCA6
-URxvt*.cursorColor2: #564A4A
+/* URxvt*.foreground: #383838 */
+/* URxvt*.background: #FFFFFF */
+/* URxvt*.cursorColor: #FFDCA6 */
+/* URxvt*.cursorColor2: #564A4A */
+
+! Thief/JP
+URxvt*.foreground: #EEE36A
+URxvt*.background: #0E0A17
+URxvt*.cursorColor: #B7F2D2
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
