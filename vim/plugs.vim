@@ -1037,7 +1037,7 @@ Plug 'kassio/neoterm'
 " {{{
 
 Plug 'skywind3000/asyncrun.vim' " {{{
-nnoremap <Leader>r<Space> :AsyncRun<Space>
+" nnoremap <Leader>r<Space> :AsyncRun<Space>
 " nnoremap <Space>r :AsyncRun tmux send -t motor C-u do-thing C-m<CR>
 " nnoremap <Space><Tab> :AsyncRun tmux send -t motor C-c && sleep 0.1 && tmux send -t motor C-c <CR>
 " Refresh dev1 browser

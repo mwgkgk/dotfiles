@@ -62,4 +62,4 @@ nmap <Leader>X <Plug>(neoterm-repl-send-line)
 " || Do-thing
 " ||
 
-nnoremap <Space>r :silent T do-thing<CR>
+nnoremap <Leader>r :silent T do-thing<CR>
