@@ -562,7 +562,7 @@ let g:cycle_default_groups += [
             \   [['ul', 'select', 'ol'], 'sub_tag'],
             \   [['em', 'strong', 'small'], 'sub_tag'],
             \   [['a', 'button'], 'sub_tag'],
-            \   [['div', 'form', 'p'], 'sub_tag'],
+            \   [['div', 'form'], 'sub_tag'],
             \   [['class', 'id', 'style']],
             \ ]
 
@@ -574,6 +574,11 @@ let g:cycle_default_groups += [
 "  -- Lisp
 let g:cycle_default_groups += [
             \   [['flet', 'labels']],
+            \ ]
+
+"  -- Zig
+let g:cycle_default_groups += [
+            \ [['pub fn', 'fn']],
             \ ]
 " }}}
 
