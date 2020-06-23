@@ -57,3 +57,9 @@ nmap <Leader>x <Plug>(neoterm-repl-send)
 xmap <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <Leader>X <Plug>(neoterm-repl-send-line)
+
+" ||
+" || Do-thing
+" ||
+
+nnoremap <Space>r :silent T do-thing<CR>
