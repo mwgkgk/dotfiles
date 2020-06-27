@@ -87,6 +87,12 @@ snippet er "error" w
 error.${1:ArgNotFound}
 endsnippet
 
+snippet if "if" w
+if ($1) {
+	$2${VISUAL}
+}
+endsnippet
+
 priority -3
 
 snippet  /([\!:\w=-]+)/ "expand-any-word" rw
