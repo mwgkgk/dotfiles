@@ -18,7 +18,7 @@
 " let s:static_colo = 'zenburn'
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
-let s:static_colo = 'grapes'
+" let s:static_colo = 'grapes'
 
 " let s:static_colo = 'farout'
 " let s:static_colo = 'autumn'
@@ -78,7 +78,7 @@ let s:static_colo = 'grapes'
 " let s:static_colo = 'moot'
 " let s:static_colo = 'blue'
 
-" let s:static_colo = 'seoul256-light'
+let s:static_colo = 'seoul256-light'
 " let s:static_colo = 'seoul256'
 
 " let s:static_colo = 'solarized-light'
