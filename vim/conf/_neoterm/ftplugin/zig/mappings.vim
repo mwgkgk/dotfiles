@@ -1,7 +1,7 @@
 " Use <Leader>r to run tests on current file.
-nnoremap <Leader>r :silent T zt <C-r>=expand('%')<CR><CR>
+nnoremap <buffer> <Leader>r :silent T zt <C-r>=expand('%')<CR><CR>
 
 " Don't send specific lines for now.
-nnoremap X <Nop>
-nnoremap <Leader>x <Nop>
-nnoremap <Leader>X <Nop>
+nnoremap <buffer> X <Nop>
+nnoremap <buffer> <Leader>x <Nop>
+nnoremap <buffer> <Leader>X <Nop>
