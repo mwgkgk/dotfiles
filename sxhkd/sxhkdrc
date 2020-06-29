@@ -45,8 +45,11 @@ super + o
 super + backslash
 	girl
 
-super + bracketleft
+super + bracketright
 	silk
+
+super + bracketleft
+	milk
 
 super + comma
 	hulk
@@ -80,7 +83,7 @@ super + w
 super + g
 	~/.burrow/quick-launch/go/guns
 
-super + bracketright
+super + Delete
 	burrow ~/.burrow/leader/c-files
 
 # Paste
