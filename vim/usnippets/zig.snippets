@@ -8,6 +8,12 @@ snippet i "import" b
 const ${1:std} = @import("${2:$1}")$3;
 endsnippet
 
+snippet st "std" b
+const std = @import("std");
+
+$1
+endsnippet
+
 snippet f "f" b
 fn ${2:celebrate}($3) ${4:!void} {
 	${VISUAL}$5
@@ -58,11 +64,17 @@ endsnippet
 
 snippet t "test" b
 test "$1" {
-	$2
+	${VISUAL}$2
 }
 endsnippet
 
-snippet a "assert" b
+snippet b "basement" b
+test "BASEMENT/`date-jiv`" {
+	${VISUAL}$2
+}
+endsnippet
+
+snippet as "assert" b
 std.debug.assert($1);
 endsnippet
 
@@ -93,7 +105,13 @@ endsnippet
 
 snippet if "if" w
 if ($1) {
-	$2${VISUAL}
+	${VISUAL}$2
+}
+endsnippet
+
+snippet for "for" b
+for (${1:xs}) |${2:x}| {
+	${VISUAL}$3
 }
 endsnippet
 
