@@ -416,8 +416,8 @@ nnoremap <silent> <LocalLeader><LocalLeader> :pclose<CR>
 " Disable <F1> insert-mode:
 inoremap <F1> <nop>
 
-" Move C-t to <C-g><C-t>
-inoremap <C-g><C-t> <C-t>
+" Move C-t to <C-g><C-d>
+inoremap <C-g><C-d> <C-t>
 
 " C-t for digraphs
 inoremap <C-t> <C-k>
