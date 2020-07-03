@@ -380,6 +380,9 @@ vnoremap <Leader>gg :GolfChars<CR>
 " Edit previous command:
 nnoremap <Space>: :<C-p>
 
+" Open in vert split:
+nnoremap <Leader>: :vert<Space>
+
 " Execute command with the shell:
 nnoremap !! :!
 
