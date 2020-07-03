@@ -33,13 +33,13 @@ super + t
 super + shift + i
 	fox
 
-super + u
+super + o
 	firefox-ulm
 
 super + 0
 	firefox-default
 
-super + o
+super + u
 	outlaw
 
 super + backslash
