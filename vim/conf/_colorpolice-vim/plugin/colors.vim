@@ -51,7 +51,7 @@
 " let s:static_colo = 'typofree'
 " let s:static_colo = 'badwolf'
 
-" let s:static_colo = 'redmustang'
+let s:static_colo = 'redmustang'
 " let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
@@ -82,7 +82,7 @@
 " let s:static_colo = 'seoul256'
 
 " let s:static_colo = 'solarized-light'
-let s:static_colo = 'gruvbox-light'
+" let s:static_colo = 'gruvbox-light'
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
