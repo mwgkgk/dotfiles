@@ -40,4 +40,9 @@ let g:patternjump_patterns = {
         \     'head' : ['\.\.'],
         \     }
         \   },
+        \ 'zig' : {
+        \   'nox' : {
+        \     'tail' : ['^\(\s*\/\)\@!.\+'],
+        \     }
+        \   },
         \ }
