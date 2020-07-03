@@ -2,7 +2,7 @@ let g:patternjump_no_default_key_mappings = 1
 let g:patternjump_patterns = {
         \ '_' : { 
         \   'nox' : {
-        \     'tail' : ['^\s*$'],
+        \     'tail' : ['^\s*.\+'],
         \     }
         \   },
         \ 'markdown' : {
