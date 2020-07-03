@@ -15,11 +15,6 @@ let g:patternjump_patterns = {
         \     'tail' : ['^\(#\|>\)'],
         \     }
         \   },
-        \ 'vim' : {
-        \   'nox' : {
-        \     'tail' : ['^Plug.*'],
-        \     }
-        \   },
         \ 'conf' : {
         \   'nox' : {
         \     'head' : ['^\s*#.*'],
