@@ -4,6 +4,23 @@ snippet l "#lang" b
 #lang ${1:racket}$2
 endsnippet
 
+# Functions
+
+snippet "(\()?\bf" "define" rw
+(define (${1:name})
+	${2:#f}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet /^$/ "basement-implicit" r
+#;
+(begin
+	${VISUAL}${1:`!p
+if not snip.v.text:
+	snip.rv = "#f"`})
+endsnippet
+
 # Quotes
 
 snippet ' "'" w
