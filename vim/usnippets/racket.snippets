@@ -1,9 +1,56 @@
-extends scheme
-
-priority 1
-
 snippet if "if" i
 (if (> 0 (vector-length (current-command-line-arguments)))
 	(displayln "Unexpected arguments.")
 	(displayln "Unexpected absence of arguments."))
+endsnippet
+
+# Quotes
+
+snippet ' "'" w
+'(${VISUAL}$1)$2
+endsnippet
+
+snippet ` "`" w
+\`(${VISUAL}$1)$2
+endsnippet
+
+# Bits and Pieces
+
+snippet /^;?;?;/ ";;;" r
+;;; ${VISUAL}$0
+endsnippet
+
+snippet /^(\s+);/ ";;" r
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`;; ${VISUAL}$0
+endsnippet
+
+snippet / *d(a)?(te)?/ "Date" rb
+;;; `date-utc` ;;;
+${0}
+endsnippet
+
+snippet dd "dd" b
+;;; VISITED `date-utc`
+endsnippet
+
+snippet vis "vis" w
+VISITED `date-utc`
+endsnippet
+
+snippet | "|" b
+;;; |||
+;;; ||| ${VISUAL}$1
+;;; |||$0
+endsnippet
+
+# Fallback
+
+priority -3
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $1)
 endsnippet
