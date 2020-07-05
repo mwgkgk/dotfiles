@@ -25,6 +25,20 @@ snippet l "lambda" w
 (lambda (${1:x}) ${2:#f})
 endsnippet
 
+# Let
+
+snippet "(\()?\blet" "let" wr
+(let
+	([$1 ${3:(${2:${VISUAL}})}]$4)
+	${5:$1}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet lc "let clause" w
+[${1:x} ($2)]$3
+endsnippet
+
 # Conditionals
 
 snippet "(\()?\bcond" "cond" r
