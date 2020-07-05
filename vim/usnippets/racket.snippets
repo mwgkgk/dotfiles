@@ -21,6 +21,19 @@ if not snip.v.text:
 	snip.rv = "#f"`})
 endsnippet
 
+# Conditionals
+
+snippet "(\()?\bcond" "cond" r
+(cond
+	[(${1:equal? x y}) ${2:#f}]$3`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet cc "cond clause" w
+[${3:(${1:equal?}$2)} $4]$5
+endsnippet
+
 # Quotes
 
 snippet ' "'" w
