@@ -63,7 +63,7 @@ try $0
 endsnippet
 
 snippet p "warn" w
-std.debug.warn("${2:$1: \{\}}", .{${1:x}});
+std.debug.warn("\n${2:$1 == \{\}}\n", .{${1:x}});
 endsnippet
 
 snippet t "test" b
