@@ -6,15 +6,19 @@
 nnoremap <silent> <Leader><Space>e :call _neoterm#open#here()<CR>
 
 " New tab:
-nnoremap <silent> <Leader><Space>c :tab Tnew<CR>
+nnoremap <silent> <Leader><Space>c ::call _neoterm#open#jump('tab', '')<CR>
 
 " New 50% terminal window:
-nnoremap <silent> <Leader><Space>n :below Tnew<CR>
-nnoremap <silent> <Leader><Space>N :vert Tnew<CR>
+
+" (Symmetry with <Space>ge)
+nnoremap <silent> <Leader><Space>ge :call _neoterm#open#jump('below', '')<CR>
+
+nnoremap <silent> <Leader><Space>n :call _neoterm#open#jump('below', '')<CR>
+nnoremap <silent> <Leader><Space>N :call _neoterm#open#jump('below', 'vert')<CR>
 
 " New 50% terminal window above / to the left:
-nnoremap <silent> <Leader><Space>gn :above Tnew<CR>
-nnoremap <silent> <Leader><Space>gN :above vert Tnew<CR>
+nnoremap <silent> <Leader><Space>gn :call _neoterm#open#jump('above', '')<CR>
+nnoremap <silent> <Leader><Space>gN :call _neoterm#open#jump('above', 'vert')<CR>
 
 " In the following commands, leaving the original commands for plain :term as
 " they are different enough to warrant it.

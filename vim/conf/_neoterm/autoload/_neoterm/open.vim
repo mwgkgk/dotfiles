@@ -19,7 +19,23 @@ function! _neoterm#open#small(above, vert)
         let g:neoterm_size = winwidth(0)/4
     endif
 
-    exec join([a:above, a:vert, 'Tnew'])
+    call _neoterm#open#jump(a:above, a:vert)
 
     let g:neoterm_size = l:stored_size
+endfunction
+
+" We want autojump+autoinsert to be disabled by default, so that the
+" send-to-repl commands do not steal window focus. We do want to jump when
+" explicitely opening a terminal split.
+function! _neoterm#open#jump(above, vert)
+    let l:stored_autojump = g:neoterm_autojump
+    let l:stored_autoinsert = g:neoterm_autoinsert
+
+    let g:neoterm_autojump = 1
+    let g:neoterm_autoinsert = 1
+
+    exec join([a:above, a:vert, 'Tnew'])
+
+    let g:neoterm_autojump = l:stored_autojump
+    let g:neoterm_autoinsert = l:stored_autoinsert
 endfunction
