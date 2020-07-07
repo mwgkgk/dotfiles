@@ -3,7 +3,7 @@
 " ||
 
 " Replace current window with term:
-nnoremap <silent> <Leader><Space>ge :call _neoterm#open#here()<CR>
+nnoremap <silent> <Leader><Space>e :call _neoterm#open#here()<CR>
 
 " New tab:
 nnoremap <silent> <Leader><Space>c :tab Tnew<CR>

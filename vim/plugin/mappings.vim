@@ -47,10 +47,10 @@ nnoremap <Space>> :ne<CR>
 nnoremap <Space>< :prev<CR>
 
 " Edit file under same directory as the buffer:
-nnoremap <Space>ge :EditCreating <C-r>=expand('%:h').'/'<CR><C-d>
+nnoremap <Space>e :EditCreating <C-r>=expand('%:h').'/'<CR><C-d>
 
 " Split file under same directory as the buffer:
-nnoremap <Space>e :SplitCreating <C-r>=expand('%:h').'/'<CR><C-d>
+nnoremap <Space>ge :SplitCreating <C-r>=expand('%:h').'/'<CR><C-d>
 
 " VertSplit file under same directory as the buffer:
 nnoremap <Space>E :VSplitCreating <C-r>=expand('%:h').'/'<CR><C-d>
