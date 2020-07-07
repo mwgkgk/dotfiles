@@ -91,7 +91,7 @@ std.debug.assert($1);
 endsnippet
 
 snippet ae "assert equals" b
-std.debug.assert(${1:err} == $2);
+std.debug.assert(${1:err} == ${2:0);}
 endsnippet
 
 snippet ex "expect" b
@@ -99,7 +99,7 @@ std.testing.expect($1);
 endsnippet
 
 snippet ee "expect equals" b
-std.testing.expect(${1:err} == $2);
+std.testing.expect(${1:err} == ${2:0});
 endsnippet
 
 snippet n "null" w
