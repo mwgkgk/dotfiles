@@ -139,7 +139,7 @@ snippet er "error" w
 error.${1:ArgNotFound}
 endsnippet
 
-snippet cat "catch" w
+snippet ca "catch" w
 catch |err| {
 	${VISUAL}$1
 }
@@ -155,6 +155,17 @@ snippet else "else" w
 else {
 	${VISUAL}$1
 }
+endsnippet
+
+snippet sw "switch" w
+switch (${1:x}) {
+	${2:1} => ${3:$1},
+	else => ${4:$1},
+}
+endsnippet
+
+snippet sc "switch clause" b
+${1:else} => ${2:0},
 endsnippet
 
 snippet for "for" b
