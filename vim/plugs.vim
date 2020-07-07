@@ -1208,6 +1208,9 @@ Plug 'kdheepak/JuliaFormatter.vim', { 'for' : 'julia' }
 " Lua
 Plug 'tbastos/vim-lua', { 'for' : 'lua' }
 
+" Janet
+Plug 'bakpakin/janet.vim'
+
 " Python
 Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
 map ]f ]pf
