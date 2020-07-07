@@ -135,6 +135,12 @@ snippet er "error" w
 error.${1:ArgNotFound}
 endsnippet
 
+snippet cat "catch" w
+catch |err| {
+	${VISUAL}$1
+}
+endsnippet
+
 snippet if "if" w
 if ($1) {
 	${VISUAL}$2
