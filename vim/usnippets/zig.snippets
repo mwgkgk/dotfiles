@@ -86,8 +86,16 @@ snippet as "assert" b
 std.debug.assert($1);
 endsnippet
 
+snippet ae "assert equals" b
+std.debug.assert(${1:err} == $2);
+endsnippet
+
 snippet ex "expect" b
 std.testing.expect($1);
+endsnippet
+
+snippet ee "expect equals" b
+std.testing.expect(${1:err} == $2);
 endsnippet
 
 snippet n "null" w
@@ -119,7 +127,7 @@ snippet ii "+=" w
 += 
 endsnippet
 
-snippet ae "anyerror" w
+snippet aer "anyerror" w
 anyerror
 endsnippet
 
