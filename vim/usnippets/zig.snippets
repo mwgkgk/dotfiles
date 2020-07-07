@@ -7,9 +7,13 @@ snippet dd "dd-comment" b
 // `!v system('date-jiv | tr -d "\n"')` ${0}
 endsnippet
 
+priority -1
+
 snippet dd "dd-inline" w
 `!v system('date-jiv | tr -d "\n"')` ${0}
 endsnippet
+
+priority 0
 
 snippet i "import" b
 const ${1:std} = @import("${2:$1}")$3;
@@ -157,12 +161,23 @@ else {
 }
 endsnippet
 
-snippet sw "switch" w
+snippet sw "switch" b
 switch (${1:x}) {
 	${2:1} => ${3:$1},
 	else => ${4:$1},
 }
 endsnippet
+
+priority -1
+
+snippet sw "switch-inline" w
+switch (${1:x}) {
+	${2:1} => ${3:$1},
+	else => ${4:$1},
+};
+endsnippet
+
+priority 0
 
 snippet sc "switch clause" b
 ${1:else} => ${2:0},
