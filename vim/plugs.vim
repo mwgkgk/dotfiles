@@ -1174,6 +1174,9 @@ Plug 'hotchpotch/perldoc-vim', { 'for' : 'perl' }
 " Sxhkd
 Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 
+" Factor
+Plug '~/.ghq/github.com/factor/factor/misc/vim/'
+
 " Lisp
 Plug '~/.vim/conf/_vim-sexp/'
 Plug 'guns/vim-sexp'
