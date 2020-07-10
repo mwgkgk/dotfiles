@@ -10,3 +10,10 @@ nnoremap <buffer> g<Leader>2 :silent T :2<CR>
 nnoremap <buffer> g<Leader>3 :silent T :3<CR>
 nnoremap <buffer> g<Leader>4 :silent T :4<CR>
 nnoremap <buffer> g<Leader>5 :silent T :5<CR>
+
+" Errors
+nnoremap <buffer> g<Leader>e :silent T :errors<CR>
+
+" Clear
+nnoremap <buffer> g<Leader>c :silent T clear<CR>
+
