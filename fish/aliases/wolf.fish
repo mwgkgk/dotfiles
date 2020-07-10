@@ -1,3 +1,3 @@
 function wolf
-  g wolf $argv
+  v wolf $argv
 end
