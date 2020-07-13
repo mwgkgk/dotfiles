@@ -29,3 +29,5 @@
     graph = log --graph --all --decorate --stat --date=iso
 [core]
     fileMode = false
+[pull]
+	ff = only
