@@ -17,3 +17,5 @@ nnoremap <buffer> g<Leader>e :silent T :errors<CR>
 " Clear
 nnoremap <buffer> g<Leader>c :silent T clear<CR>
 
+" Drop
+nnoremap <buffer> g<Leader>d :silent T drop<CR>
