@@ -5,17 +5,20 @@ nnoremap <buffer> <C-g> :silent T \ <C-r><C-a> see<CR>
 nnoremap <buffer> g<C-g> :silent T \ <C-r><C-a> help<CR>
 
 " Restarts
-nnoremap <buffer> g<Leader>1 :silent T :1<CR>
-nnoremap <buffer> g<Leader>2 :silent T :2<CR>
-nnoremap <buffer> g<Leader>3 :silent T :3<CR>
-nnoremap <buffer> g<Leader>4 :silent T :4<CR>
-nnoremap <buffer> g<Leader>5 :silent T :5<CR>
+nnoremap <buffer> g<LocalLeader>1 :silent T :1<CR>
+nnoremap <buffer> g<LocalLeader>2 :silent T :2<CR>
+nnoremap <buffer> g<LocalLeader>3 :silent T :3<CR>
+nnoremap <buffer> g<LocalLeader>4 :silent T :4<CR>
+nnoremap <buffer> g<LocalLeader>5 :silent T :5<CR>
 
 " Errors
-nnoremap <buffer> g<Leader>e :silent T :errors<CR>
+nnoremap <buffer> g<LocalLeader>e :silent T :errors<CR>
 
 " Clear
-nnoremap <buffer> g<Leader>c :silent T clear<CR>
+nnoremap <buffer> <LocalLeader>c :silent T clear<CR>
 
 " Drop
-nnoremap <buffer> g<Leader>d :silent T drop<CR>
+nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
+
+" Dup
+nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
