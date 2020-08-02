@@ -82,7 +82,7 @@ sxhkd &
   # sleep 1
 # done &
 
-xsetroot -name "λ"
+xsetroot -name "hobby"
 
 while true; do
   # Log stderror to a file 
