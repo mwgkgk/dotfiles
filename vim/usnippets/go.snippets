@@ -153,9 +153,19 @@ endsnippet
 # || Bits & pieces
 # ||
 
+snippet /^(\s)+;/ "double-edged :=" r
+`!p
+if match.group(1) is not None:
+    snip.rv = match.group(1)`$1 := $2
+endsnippet
+
+priority -1
+
 snippet ; ":=" w
 := 
 endsnippet
+
+priority 0
 
 snippet / "//" b
 // $0
