@@ -34,13 +34,13 @@ super + shift + i
 	fox
 
 super + o
-	firefox-ulm
+	outlaw
 
 super + 0
 	firefox-default
 
 super + u
-	outlaw
+	firefox-ulm
 
 super + backslash
 	girl
