@@ -110,6 +110,12 @@ if ${1:condition}${1/(.+)/ /}{
 }
 endsnippet
 
+snippet } "else" w
+} else {
+	${VISUAL}$1
+}$2
+endsnippet
+
 snippet switch "Switch statement" !b
 switch ${1:expression}${1/(.+)/ /}{
 case${0}
