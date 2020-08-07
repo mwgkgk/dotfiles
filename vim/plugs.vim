@@ -591,7 +591,7 @@ let g:cycle_default_groups += [
 
 " {{{
 
-Plug 'cohama/lexima.vim', { 'for' : ['julia', 'zig'] }
+Plug 'cohama/lexima.vim', { 'for' : ['julia', 'zig', 'go'] }
 
 " }}}
 
