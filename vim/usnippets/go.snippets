@@ -33,7 +33,7 @@ package ${1:main}
 endsnippet
 
 # ||
-# || Func
+# || Functions
 # ||
 
 snippet f "function" b
@@ -52,6 +52,10 @@ snippet m "Method" b
 func (${1:receiver} ${2:type}) ${3:name}(${4:params})${5/(.+)/ /}${5:type} {
 	${0:${VISUAL}}
 }
+endsnippet
+
+snippet r "return" w
+return $1
 endsnippet
 
 # ||
