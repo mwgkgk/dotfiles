@@ -37,10 +37,20 @@ endsnippet
 # ||
 
 snippet f "function" b
-func ${1:name}(${2:params})${3/(.+)/ /}${3:bool} {
+func ${1:name}(${2:x int})${3/(.+)/ /}${3:int} {
 	${0:${VISUAL}}
 }
 endsnippet
+
+priority -1
+
+snippet f "anonymous function" w
+func(${2:x int})${3/(.+)/ /}${3:int} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+priority 0
 
 snippet main "main" b
 func main() {
