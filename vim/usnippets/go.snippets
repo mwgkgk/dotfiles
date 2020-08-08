@@ -155,11 +155,11 @@ endsnippet
 
 priority 0
 
-snippet p "fmt.Println name, type, value" w
-fmt.Println("var $1 %T = %v", ${1:${VISUAL}}, $1)
+snippet p "fmt.Fprintln name, type, value" w
+fmt.Fprintln("var $1 %T = %v", ${1:${VISUAL}}, $1)
 endsnippet
 
-snippet e "fmt.Println to stderr" w
+snippet e "fmt.Fprintln to stderr" w
 fmt.Fprintln(os.Stderr, "$1")
 endsnippet
 
