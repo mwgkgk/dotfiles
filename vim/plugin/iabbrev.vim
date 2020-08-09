@@ -5,3 +5,4 @@ iabbrev nothign nothing
 iabbrev anythign anything
 
 iabbrev teh the
+iabbrev kidna kinda
