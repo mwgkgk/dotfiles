@@ -174,8 +174,7 @@ fmt.Fprintln(os.Stderr, "$1")
 endsnippet
 
 snippet uc "Under construction" b
-defer os.Exit(1)
-defer fmt.Fprintln(os.Stderr, "Under construction!")
+defer log.Fatal("Under construction!")
 endsnippet
 
 # ||
