@@ -178,6 +178,16 @@ defer log.Fatal("Under construction!")
 endsnippet
 
 # ||
+# || Errors
+# ||
+
+snippet ie "if err := nil" b
+if err := nil {
+	${1:log.Fatal(${2:"${3:${4:Under construction}!}"})}
+}$5
+endsnippet
+
+# ||
 # || Bits & pieces
 # ||
 
