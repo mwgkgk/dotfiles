@@ -106,6 +106,12 @@ endsnippet
 # || Control Flow
 # ||
 
+snippet fo "For loop with no arg (while loop)" b
+for {
+	${VISUAL}$1
+}
+endsnippet
+
 snippet for "For loop" !b
 for ${1:condition}${1/(.+)/ /}{
 	${0:${VISUAL}}
