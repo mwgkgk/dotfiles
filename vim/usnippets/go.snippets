@@ -173,18 +173,26 @@ snippet e "fmt.Fprintln to stderr" w
 fmt.Fprintln(os.Stderr, "$1")
 endsnippet
 
-snippet uc "Under construction" b
-defer log.Fatal("Under construction!")
-endsnippet
-
 # ||
 # || Errors
 # ||
 
+snippet de "defer" b
+defer ${1:log.Fatal(${2:"${3:${4:Under construction}!}"})}
+endsnippet
+
+snippet uc "Under construction!" w
+"Under construction!""
+endsnippet
+
 snippet ie "if err := nil" b
 if err := nil {
-	${1:log.Fatal(${2:"${3:${4:Under construction}!}"})}
+	${1:err}
 }$5
+endsnippet
+
+snippet lf "log.Fatal" w
+log.Fatal(${2:"${3:${4:Under construction}!}"})
 endsnippet
 
 # ||
