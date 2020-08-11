@@ -82,11 +82,11 @@ endsnippet
 # || Const
 # ||
 
-snippet c "const" w
-const ${1:name}${2/(.+)/ /}${2:type} = ${0:value}
+snippet let "const" w
+const ${1:listenAddr}${2/(.+)/ /}${2:string} = ${0:"localhost:8153"}
 endsnippet
 
-snippet cc "consts" w
+snippet lets "consts" w
 const (
 	${1:constant}${2/(.+)/ /}${2:type} = ${0:value}
 )
