@@ -233,6 +233,14 @@ endsnippet
 # || Fallbacks
 # ||
 
+priority -3
+
+snippet  /([\!:\w=-]+),/ "expand-any-word-comma-err-:=" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` err := ${1:nil, nil}
+endsnippet
+
 priority -4
 
 snippet  /([\!:\w=-]+)/ "expand-any-word" rw
