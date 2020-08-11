@@ -193,7 +193,7 @@ endsnippet
 
 snippet ie "if err := nil" b
 if err := nil {
-	${1:err}
+	${1:log.Fatal(${2:err}}
 }$5
 endsnippet
 
