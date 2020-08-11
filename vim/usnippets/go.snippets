@@ -184,6 +184,33 @@ select {
 endsnippet
 
 # ||
+# || Errors
+# ||
+
+snippet de "defer" w
+defer ${1:log.Fatal(${2:"${3:${4:Under construction}!}"})}
+endsnippet
+
+snippet uc "defer under-construction" w
+defer log.Fatal("Under construction!")
+endsnippet
+
+
+snippet U "Under construction!" w
+Under construction!
+endsnippet
+
+snippet ie "if err != nil" b
+if err != nil {
+	${1:log.Fatal(${2:err})}
+}$5
+endsnippet
+
+snippet lf "log.Fatal" w
+log.Fatal(${2:"${3:${4:Under construction}!}"})
+endsnippet
+
+# ||
 # || Printing
 # ||
 
@@ -206,25 +233,19 @@ fmt.Fprintln(os.Stderr, "$1")
 endsnippet
 
 # ||
-# || Errors
+# || Time
 # ||
 
-snippet de "defer" b
-defer ${1:log.Fatal(${2:"${3:${4:Under construction}!}"})}
+snippet sl "sleep" w
+time.Sleep(${1:${2:500} * ${3:time.Millisecond}})
 endsnippet
 
-snippet uc "Under construction!" w
-"Under construction!""
+snippet sec "sec" w
+time.Second
 endsnippet
 
-snippet ie "if err != nil" b
-if err != nil {
-	${1:log.Fatal(${2:err})}
-}$5
-endsnippet
-
-snippet lf "log.Fatal" w
-log.Fatal(${2:"${3:${4:Under construction}!}"})
+snippet ms "ms" w
+time.Millisecond
 endsnippet
 
 # ||
