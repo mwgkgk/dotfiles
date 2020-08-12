@@ -80,11 +80,11 @@ endsnippet
 # || Var
 # ||
 
-snippet var "Variable declaration" !b
+snippet var "Variable declaration" b
 var ${1:name}${2/(.+)/ /}${2:type}${3: = ${0:value}}
 endsnippet
 
-snippet vars "Variables declaration" !b
+snippet vars "Variables declaration" b
 var (
 	${1:name}${2/(.+)/ /}${2:type}${3: = ${0:value} }
 )
@@ -136,19 +136,19 @@ for {
 }
 endsnippet
 
-snippet for "For loop" !b
+snippet for "For loop" b
 for ${1:condition}${1/(.+)/ /}{
 	${0:${VISUAL}}
 }
 endsnippet
 
-snippet forr "For range loop" !b
+snippet forr "For range loop" b
 for ${2:name} := range ${1:collection} {
 	${0:${VISUAL}}
 }
 endsnippet
 
-snippet if "If statement" !b
+snippet if "If statement" b
 if ${1:condition}${1/(.+)/ /}{
 	${0:${VISUAL}}
 }
@@ -160,18 +160,18 @@ snippet } "else" w
 }$2
 endsnippet
 
-snippet switch "Switch statement" !b
+snippet switch "Switch statement" b
 switch ${1:expression}${1/(.+)/ /}{
 case${0}
 }
 endsnippet
 
-snippet case "Case clause" !b
+snippet c "Case clause" b
 case ${1:condition}:
 	${0:${VISUAL}}
 endsnippet
 
-snippet default "Default clause" !b
+snippet default "Default clause" b
 default:
 	${0:${VISUAL}}
 endsnippet
