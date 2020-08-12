@@ -10,6 +10,12 @@ augroup plugs
     autocmd!
 augroup END
 
+
+" Workaround for Ultisnips' :py3-after-using-:python error.
+" https://github.com/SirVer/ultisnips/pull/1129#issuecomment-555899587
+call has('python3')
+
+
 " ||
 " || Deps
 " ||
