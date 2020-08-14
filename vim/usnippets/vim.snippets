@@ -157,6 +157,10 @@ snippet nb "nnoremap buffer" b
 nnoremap <buffer> ${1:X} ${2::silent ${3:!${4::echo ${5:sup}}}}
 endsnippet
 
+snippet ia "iabbrev" b
+iabbrev ${1:teh} $1$2
+endsnippet
+
 snippet com "command" b
 command! ${1:CommandName} ${2::call ${3:some#function}($4)<CR>}
 endsnippet
