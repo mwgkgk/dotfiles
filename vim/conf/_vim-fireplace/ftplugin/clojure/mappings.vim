@@ -9,7 +9,8 @@ nmap <silent> <buffer> <LocalLeader>x <Plug>FireplacePrint<Plug>(sexp_inner_elem
 
 nnoremap <silent> <buffer> <LocalLeader>i :Eval (st/instrument)<CR>
 
-nnoremap <silent> <buffer> <Space>x :Require<CR>
+" TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
+" nnoremap <silent> <buffer> <Space>x :Require<CR>
 
 " TODO tidy up into a function, restore search reg
 map <silent> <buffer> <Leader>X ya(:-1put<CR><C-o><Plug>FireplaceCountFilter:Commentary<CR>:s/^; /; => /<CR>:let @/=''<CR>

@@ -21,7 +21,8 @@ nnoremap <buffer> X :call SlimvEvalExp()<CR>
 nnoremap <buffer> <Leader>x :call SlimvEvalDefun()<CR>
 
 " Eval buffer:
-nnoremap <buffer> <Space>x :call SlimvEvalBuffer()<CR>
+" TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
+" nnoremap <buffer> <Space>x :call SlimvEvalBuffer()<CR>
 
 "
 "
