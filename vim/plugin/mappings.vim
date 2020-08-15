@@ -112,6 +112,9 @@ nnoremap <silent> <Space>V :call window#new_small_vertical()<CR>
 nnoremap <silent> <Space>gv :call window#new_small_above_horizontal()<CR>
 nnoremap <silent> <Space>gV :call window#new_small_above_vertical()<CR>
 
+" Switch & jump:
+nnoremap <C-w>X <C-w>x<C-w>p
+
 " Switch & maximize window:
 nnoremap <Space>gj <C-w>j<C-w>_
 nnoremap <Space>gk <C-w>k<C-w>_
