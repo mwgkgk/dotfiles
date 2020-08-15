@@ -134,37 +134,38 @@ nnoremap <Space>+ 10<C-w>+
 nnoremap <Space>- 10<C-w>-
 
 " Go to window by winnr()
-nnoremap <C-w>1 1<C-w>w
-nnoremap <C-w>2 2<C-w>w
-nnoremap <C-w>3 3<C-w>w
-nnoremap <C-w>4 4<C-w>w
-nnoremap <C-w>5 5<C-w>w
-nnoremap <C-w>6 6<C-w>w
-nnoremap <C-w>7 7<C-w>w
-nnoremap <C-w>8 8<C-w>w
-nnoremap <C-w>9 9<C-w>w
+" Note: used to use <C-w>1 etc. Change to easymotion's prefix to use <Omega>s
+nnoremap \1 1<C-w>w
+nnoremap \2 2<C-w>w
+nnoremap \3 3<C-w>w
+nnoremap \4 4<C-w>w
+nnoremap \5 5<C-w>w
+nnoremap \6 6<C-w>w
+nnoremap \7 7<C-w>w
+nnoremap \8 8<C-w>w
+nnoremap \9 9<C-w>w
 
-nnoremap <C-w>010 10<C-w>w
-nnoremap <C-w>011 11<C-w>w
-nnoremap <C-w>012 12<C-w>w
-nnoremap <C-w>013 13<C-w>w
-nnoremap <C-w>014 14<C-w>w
-nnoremap <C-w>015 15<C-w>w
-nnoremap <C-w>016 16<C-w>w
-nnoremap <C-w>017 17<C-w>w
-nnoremap <C-w>018 18<C-w>w
-nnoremap <C-w>019 19<C-w>w
+nnoremap \010 10<C-w>w
+nnoremap \011 11<C-w>w
+nnoremap \012 12<C-w>w
+nnoremap \013 13<C-w>w
+nnoremap \014 14<C-w>w
+nnoremap \015 15<C-w>w
+nnoremap \016 16<C-w>w
+nnoremap \017 17<C-w>w
+nnoremap \018 18<C-w>w
+nnoremap \019 19<C-w>w
 
-nnoremap <C-w>020 20<C-w>w
-nnoremap <C-w>021 21<C-w>w
-nnoremap <C-w>022 22<C-w>w
-nnoremap <C-w>023 23<C-w>w
-nnoremap <C-w>024 24<C-w>w
-nnoremap <C-w>025 25<C-w>w
-nnoremap <C-w>026 26<C-w>w
-nnoremap <C-w>027 27<C-w>w
-nnoremap <C-w>028 28<C-w>w
-nnoremap <C-w>029 29<C-w>w
+nnoremap \020 20<C-w>w
+nnoremap \021 21<C-w>w
+nnoremap \022 22<C-w>w
+nnoremap \023 23<C-w>w
+nnoremap \024 24<C-w>w
+nnoremap \025 25<C-w>w
+nnoremap \026 26<C-w>w
+nnoremap \027 27<C-w>w
+nnoremap \028 28<C-w>w
+nnoremap \029 29<C-w>w
 
 "
 "
