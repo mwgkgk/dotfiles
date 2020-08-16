@@ -453,16 +453,28 @@ nmap <Space>m <Plug>(quickhl-manual-this)
 xmap <Space>m <Plug>(quickhl-manual-this)
 nmap <Space>M <Plug>(quickhl-manual-reset)
 xmap <Space>M <Plug>(quickhl-manual-reset)
+
 let g:quickhl_manual_colors = [
-            \ "ctermfg=7 cterm=bold guifg=#ffffff gui=bold",
-            \ "ctermfg=206 cterm=bold guifg=#ff5fd7 gui=bold",
-            \ "ctermfg=111 cterm=bold guifg=#87afff gui=bold",
-            \ "ctermfg=227 cterm=bold guifg=#ffff5f gui=bold",
-            \ "ctermfg=188 cterm=bold guifg=#d7d7d7 gui=bold",
-            \ "ctermfg=204 cterm=bold guifg=#ff5f87 gui=bold",
-            \ "ctermfg=84 cterm=bold guifg=#5fff87 gui=bold",
-            \ "ctermfg=129 cterm=bold guifg=#af00ff gui=bold",
+            \ 'ctermfg=174 cterm=bold guifg=#ffffff gui=bold',
+            \ 'ctermfg=215 cterm=bold guifg=#ff5fd7 gui=bold',
+            \ 'ctermfg=111 cterm=bold guifg=#87afff gui=bold',
+            \ 'ctermfg=177 cterm=bold guifg=#ffff5f gui=bold',
+            \ 'ctermfg=202 cterm=bold guifg=#d7d7d7 gui=bold',
+            \ 'ctermfg=166 cterm=bold guifg=#ff5f87 gui=bold',
+            \ 'ctermfg=30 cterm=bold guifg=#5fff87 gui=bold',
+            \ 'ctermfg=129 cterm=bold guifg=#af00ff gui=bold',
             \ ]
+
+" let g:quickhl_manual_colors = [
+"             \ 'ctermfg=7 cterm=bold guifg=#ffffff gui=bold',
+"             \ 'ctermfg=206 cterm=bold guifg=#ff5fd7 gui=bold',
+"             \ 'ctermfg=111 cterm=bold guifg=#87afff gui=bold',
+"             \ 'ctermfg=227 cterm=bold guifg=#ffff5f gui=bold',
+"             \ 'ctermfg=188 cterm=bold guifg=#d7d7d7 gui=bold',
+"             \ 'ctermfg=204 cterm=bold guifg=#ff5f87 gui=bold',
+"             \ 'ctermfg=84 cterm=bold guifg=#5fff87 gui=bold',
+"             \ 'ctermfg=129 cterm=bold guifg=#af00ff gui=bold',
+"             \ ]
 
 " nmap <Space>J <Plug>(quickhl-cword-toggle)
 " nmap <Space>] <Plug>(quickhl-tag-toggle)
