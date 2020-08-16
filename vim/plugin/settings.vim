@@ -80,12 +80,12 @@ set nocindent
 
 " These are necessary even with per-window cursorline, because there's no
 " WinEnter for the very first window.
-set cursorline
-set cursorcolumn
+" set cursorline
+" set cursorcolumn
 
 " Only show cursorline in current window:
-autocmd settings WinEnter * setlocal cursorline cursorcolumn
-autocmd settings WinLeave * setlocal nocursorline nocursorcolumn
+" autocmd settings WinEnter * setlocal cursorline cursorcolumn
+" autocmd settings WinLeave * setlocal nocursorline nocursorcolumn
 
 " Highlight column 80:
 set colorcolumn=80
