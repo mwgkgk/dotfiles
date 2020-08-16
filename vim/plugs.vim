@@ -1326,6 +1326,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'fcpg/vim-fahrenheit'
 Plug 'fcpg/vim-farout'
 Plug 'jaredgorski/fogbell.vim'
+Plug 'plan9-for-vimspace/acme-colors'
 
 " }}}
 
