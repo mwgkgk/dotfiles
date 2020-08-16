@@ -160,11 +160,11 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+  primary:
+   background: '#0E0A17'
+   foreground: '#EEE36A'
 
     # Bright and dim foreground colors
     #
@@ -180,9 +180,9 @@ font:
   #
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+  cursor:
+   text: '#0E0A17'
+   cursor: '#EC7154'
 
   # Vi mode cursor colors
   #
