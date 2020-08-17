@@ -57,9 +57,15 @@ URxvt*.meta8: true
 /* URxvt*.cursorColor2: #564A4A */
 
 ! Thief/JP
+/* URxvt*.foreground: #EEE36A */
+/* URxvt*.background: #0E0A17 */
+/* URxvt*.cursorColor: #B7F2D2 */
+
+! Acme
 URxvt*.foreground: #EEE36A
 URxvt*.background: #0E0A17
-URxvt*.cursorColor: #B7F2D2
+Urxvt*.cursorColor: #EC7154
+Urxvt*.cursorColor2: #0E0A17
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
