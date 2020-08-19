@@ -30,7 +30,7 @@
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
-" let s:static_colo = 'shenzhen'
+let s:static_colo = 'shenzhen'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
@@ -85,7 +85,7 @@
 
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
-let s:static_colo = 'acme'
+" let s:static_colo = 'acme'
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
