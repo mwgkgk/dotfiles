@@ -39,6 +39,7 @@ import "log"
 
 func main() {
 	defer log.Fatal("Under construction!")
+
 	${VISUAL}$1
 }
 endsnippet
@@ -119,7 +120,9 @@ priority 0
 
 snippet main "main" b
 func main() {
-	${0:${VISUAL}}
+	defer log.Fatal("Under construction!")
+
+	${VISUAL}$1
 }
 endsnippet
 
