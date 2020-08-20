@@ -39,6 +39,9 @@ super + o
 super + 0
 	firefox-default
 
+super + 9
+	firefox-9high
+
 super + u
 	firefox-ulm
 
