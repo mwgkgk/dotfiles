@@ -38,7 +38,8 @@ package main
 import "log"
 
 func main() {
-	${1:log.Fatal(${2:"${3:${4:Under construction}!}"})}
+	defer log.Fatal("Under construction!")
+	${VISUAL}$1
 }
 endsnippet
 
