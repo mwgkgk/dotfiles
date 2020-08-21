@@ -307,10 +307,16 @@ endsnippet
 
 priority -3
 
+snippet  /([\!:\w=-]+);/ "expand-any-word-semicolon-:=" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(1)` := $1
+endsnippet
+
 snippet  /([\!:\w=-]+),/ "expand-any-word-comma-err-:=" rw
 `!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)` err := ${1:nil, nil}
+	snip.rv = match.group(0)` err := $1
 endsnippet
 
 priority -4
