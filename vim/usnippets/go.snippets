@@ -227,6 +227,14 @@ snippet lf "log.Fatal" w
 log.Fatal(${2:"${3:${4:Under construction}!}"})
 endsnippet
 
+snippet , "Full err := nil experience" b
+${2:${VISUAL}}, err := ${VISUAL}$1
+
+if err != nil {
+	log.Fatal(err)
+}$3
+endsnippet
+
 # ||
 # || Printing
 # ||
