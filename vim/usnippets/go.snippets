@@ -239,7 +239,7 @@ endsnippet
 
 priority 0
 
-snippet /^(\s)+p/ "fmt.Fprintln name, type, value" r
+snippet /^(\s+)p/ "fmt.Fprintln name, type, value" r
 `!p
 if match.group(1) is not None:
     snip.rv = match.group(1)`fmt.Fprintln("var $1 %T = %v", ${1:${VISUAL}}, $1)
