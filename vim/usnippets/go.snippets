@@ -240,7 +240,7 @@ endsnippet
 
 priority -1
 
-snippet s "fmt.Println" w
+snippet S "fmt.Println" w
 fmt.Println(${3:"$1"}$2)$4
 endsnippet
 
@@ -254,6 +254,14 @@ endsnippet
 
 snippet e "fmt.Fprintln to stderr" w
 fmt.Fprintln(os.Stderr, "$1")
+endsnippet
+
+# ||
+# || Strings
+# ||
+
+snippet s "strings" w
+strings.$1
 endsnippet
 
 # ||
