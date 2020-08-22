@@ -68,13 +68,13 @@ endsnippet
 # || Const
 # ||
 
-snippet let "const" w
-const ${1:listenAddr}${2/(.+)/ /}${2:string} = ${0:"localhost:8153"}
+snippet l "const" w
+const ${1:listenAddr}${2/(.+)/ /}${2:string} = ${3:"localhost:8153"}
 endsnippet
 
-snippet lets "consts" w
+snippet ll "consts" w
 const (
-	${1:constant}${2/(.+)/ /}${2:type} = ${0:value}
+	${1:constant}${2/(.+)/ /}${2:type} = ${3:value}
 )
 endsnippet
 
