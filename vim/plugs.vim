@@ -502,13 +502,17 @@ let g:operator#flashy#group = "Search"
 
 " {{{
 
-Plug 'terryma/vim-multiple-cursors' " {{{
+Plug 'mg979/vim-visual-multi' " {{{
+let g:VM_maps = {}
+
 " H & L replacements can be found in mappings.vim
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key = 'L'
-let g:multi_cursor_prev_key = 'H'
-let g:multi_cursor_skip_key = '<C-x>'
-let g:multi_cursor_quit_key = '<Esc>'
+let g:VM_maps['Find Under'] = 'L'
+let g:VM_maps['Find Subword Under'] = 'L'
+
+" let g:multi_cursor_next_key = 'L'
+" let g:multi_cursor_prev_key = 'H'
+" let g:multi_cursor_skip_key = '<C-x>'
+" let g:multi_cursor_quit_key = '<Esc>'
 " }}}
 
 " }}}

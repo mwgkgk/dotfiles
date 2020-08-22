@@ -416,3 +416,15 @@ let g:NERDTreeMapUpdir="_"
 " let g:root#auto = 1
 " let g:root#echo = 0
 " }}}
+
+" Sat Aug 22 06:20:05 UTC 2020
+
+Plug 'terryma/vim-multiple-cursors' " {{{
+" H & L replacements can be found in mappings.vim
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key = 'L'
+let g:multi_cursor_prev_key = 'H'
+let g:multi_cursor_skip_key = '<C-x>'
+let g:multi_cursor_quit_key = '<Esc>'
+" }}}
+
