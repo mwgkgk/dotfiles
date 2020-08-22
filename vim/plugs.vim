@@ -925,15 +925,15 @@ inoremap <C-g>= <Esc>vB:Crunch<CR>a
 
 " {{{
 
-" if has('nvim')
-"     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"     Plug 'Shougo/deoplete.nvim'
-"     Plug 'roxma/nvim-yarp'
-"     Plug 'roxma/vim-hug-neovim-rpc'
-" endif " {{{
-" let g:deoplete#enable_at_startup = 1
-" nnoremap <Leader>tc :call deoplete#toggle()<CR>
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif " {{{
+let g:deoplete#enable_at_startup = 0
+nnoremap <Leader>tc :call deoplete#toggle()<CR>
 
 " autocmd plugs FileType markdown,jiv call deoplete#disable()
 
