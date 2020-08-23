@@ -61,7 +61,7 @@ function! colors#chi_colo(chi, static_colo)
     elseif a:chi ==# 'gums'
         return a:static_colo
     elseif a:chi ==# 'zepp'
-        return a:static_colo
+        return 'zenburn'
     elseif a:chi ==# 'temple'
         return a:static_colo
     else
