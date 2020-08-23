@@ -888,21 +888,21 @@ let g:undotree_WindowLayout = 2
 
 " {{{
 
-" Plug 'w0rp/ale' " {{{ lint
-" let g:ale_linters = {
-"       \ 'haskell': ['stack-ghc'],
-"       \ 'perl'   : ['perl', 'perlcritic'],
-"       \ 'rust'   : ['cargo'],
-"       \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
-"       \ }
-" let g:ale_tcl_nagelfar_executable = 'nagelfar'
-" let g:ale_sign_error = '>'
-" let g:ale_sign_warning = '!'
-" let g:ale_lint_on_save = 1
-" let g:ale_set_highlights = 0
-" nmap <silent> <F12>u <Plug>(ale_previous_wrap)
-" nmap <silent> _ <Plug>(ale_next_wrap)
-" " }}}
+Plug 'w0rp/ale' " {{{ lint
+let g:ale_linters = {
+      \ 'haskell': ['stack-ghc'],
+      \ 'perl'   : ['perl', 'perlcritic'],
+      \ 'rust'   : ['cargo'],
+      \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
+      \ }
+let g:ale_tcl_nagelfar_executable = 'nagelfar'
+let g:ale_sign_error = '>'
+let g:ale_sign_warning = '!'
+let g:ale_lint_on_save = 1
+let g:ale_set_highlights = 0
+nmap <silent> <F12>u <Plug>(ale_previous_wrap)
+nmap <silent> _ <Plug>(ale_next_wrap)
+" }}}
 
 " }}}
 
