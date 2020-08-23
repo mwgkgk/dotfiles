@@ -854,7 +854,15 @@ let g:rooter_cd_cmd = 'lcd'
 "       \}
 " " }}}
 
-Plug 'liuchengxu/vista.vim'
+Plug 'liuchengxu/vista.vim' " {{{
+
+let g:vista_sidebar_position = 'vertical topleft'
+
+" TODO Open :Vista automatically on some filetypes
+nnoremap <silent> <F4> :Vista vim_lsp<CR>
+nnoremap sd :call vista#finder#fzf#Run()<CR>
+
+" }}}}
 
 " }}}
 
@@ -880,21 +888,21 @@ let g:undotree_WindowLayout = 2
 
 " {{{
 
-Plug 'w0rp/ale' " {{{ lint
-let g:ale_linters = {
-      \ 'haskell': ['stack-ghc'],
-      \ 'perl'   : ['perl', 'perlcritic'],
-      \ 'rust'   : ['cargo'],
-      \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
-      \ }
-let g:ale_tcl_nagelfar_executable = 'nagelfar'
-let g:ale_sign_error = '>'
-let g:ale_sign_warning = '!'
-let g:ale_lint_on_save = 1
-let g:ale_set_highlights = 0
-nmap <silent> <F12>u <Plug>(ale_previous_wrap)
-nmap <silent> _ <Plug>(ale_next_wrap)
-" }}}
+" Plug 'w0rp/ale' " {{{ lint
+" let g:ale_linters = {
+"       \ 'haskell': ['stack-ghc'],
+"       \ 'perl'   : ['perl', 'perlcritic'],
+"       \ 'rust'   : ['cargo'],
+"       \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
+"       \ }
+" let g:ale_tcl_nagelfar_executable = 'nagelfar'
+" let g:ale_sign_error = '>'
+" let g:ale_sign_warning = '!'
+" let g:ale_lint_on_save = 1
+" let g:ale_set_highlights = 0
+" nmap <silent> <F12>u <Plug>(ale_previous_wrap)
+" nmap <silent> _ <Plug>(ale_next_wrap)
+" " }}}
 
 " }}}
 
@@ -1101,6 +1109,9 @@ Plug '~/shop/oil/borzhch'
 " ||
 " || Filetypes
 " ||
+
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 
 " {{{
 

@@ -48,7 +48,7 @@ nnoremap st :FzfFiletypes<CR>
 "
 
 " Tags from &tags:
-nnoremap sd :FzfTags<CR>
+nnoremap sD :FzfTags<CR>
 
 " Buffer tags:
 nnoremap sz :FzfBTags<CR>
