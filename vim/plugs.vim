@@ -1110,7 +1110,12 @@ Plug '~/shop/oil/borzhch'
 " || Filetypes
 " ||
 
-Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/vim-lsp' " {{{
+
+let g:lsp_diagnostics_enabled = 0
+
+" }}}}
+
 Plug 'mattn/vim-lsp-settings'
 
 " {{{
