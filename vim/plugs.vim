@@ -931,29 +931,35 @@ inoremap <C-g>= <Esc>vB:Crunch<CR>a
 
 " {{{
 
-" if has('nvim')
-"     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"     Plug 'Shougo/deoplete.nvim'
-"     Plug 'roxma/nvim-yarp'
-"     Plug 'roxma/vim-hug-neovim-rpc'
-" endif " {{{
-" let g:deoplete#enable_at_startup = 0
-" nnoremap <Leader>tc :call deoplete#toggle()<CR>
+if has('nvim')
+    " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" autocmd plugs FileType markdown,jiv call deoplete#disable()
+    " Installed as dep for vista.vim:
+    Plug 'neoclide/coc.nvim'
+    " Disable coc by default: it's not desigend to be loaded per-filetype, and
+    " I didn't ask for this.
+    CocDisable
+else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
 
-" inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    let g:deoplete#enable_at_startup = 0
+    nnoremap <Leader>tc :call deoplete#toggle()<CR>
 
-" Complete and Escape
-" inoremap <C-l> <C-n><Esc>:w<CR>
+    " autocmd plugs FileType markdown,jiv call deoplete#disable()
 
-" This version is like a tab, and doesn't work for sequencing <Esc>:w after.
-" inoremap <silent><expr> <C-l>
-"     \ pumvisible() ? "\<C-n>" :
-"     \ <SID>check_back_space() ? "\<TAB>" :
-"     \ deoplete#manual_complete()
+    " inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
+    " Complete and Escape
+    " inoremap <C-l> <C-n><Esc>:w<CR>
+
+    " This version is like a tab, and doesn't work for sequencing <Esc>:w after.
+    " inoremap <silent><expr> <C-l>
+    "     \ pumvisible() ? "\<C-n>" :
+    "     \ <SID>check_back_space() ? "\<TAB>" :
+    "     \ deoplete#manual_complete()
+endif
 " }}}
 
 " {{{
@@ -974,14 +980,6 @@ inoremap <C-g>= <Esc>vB:Crunch<CR>a
 " }}}
 
 " }}}
-
-" {{{
-
-if has('nvim')
-    Plug 'neoclide/coc.nvim'
-endif
-
-" }}}}
 
 " ||
 " || Docs
