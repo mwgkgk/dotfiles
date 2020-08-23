@@ -584,32 +584,32 @@ mouse_bindings:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-key_bindings:
-  - { key: Z,        mods: Alt,     chars: "ú"                           }
-  - { key: X,        mods: Alt,     chars: "ø"                           }
-  - { key: C,        mods: Alt,     chars: "ã"                           }
-  - { key: V,        mods: Alt,     chars: "ö"                           }
-  - { key: B,        mods: Alt,     chars: "â"                           }
-  - { key: N,        mods: Alt,     chars: "î"                           }
-  - { key: M,        mods: Alt,     chars: "í"                           }
-  - { key: A,        mods: Alt,     chars: "á"                           }
-  - { key: S,        mods: Alt,     chars: "ó"                           }
-  - { key: D,        mods: Alt,     chars: "ä"                           }
-  - { key: F,        mods: Alt,     chars: "æ"                           }
-  - { key: G,        mods: Alt,     chars: "ç"                           }
-  - { key: K,        mods: Alt,     chars: "ë"                           }
-  - { key: J,        mods: Alt,     chars: "ê"                           }
-  - { key: L,        mods: Alt,     chars: "ì"                           }
-  - { key: Q,        mods: Alt,     chars: "ñ"                           }
-  - { key: W,        mods: Alt,     chars: "÷"                           }
-  - { key: E,        mods: Alt,     chars: "å"                           }
-  - { key: R,        mods: Alt,     chars: "ò"                           }
-  - { key: T,        mods: Alt,     chars: "ô"                           }
-  - { key: Y,        mods: Alt,     chars: "ù"                           }
-  - { key: U,        mods: Alt,     chars: "õ"                           }
-  - { key: I,        mods: Alt,     chars: "é"                           }
-  - { key: O,        mods: Alt,     chars: "ï"                           }
-  - { key: P,        mods: Alt,     chars: "ð"                           }
+# key_bindings:
+  # - { key: Z,        mods: Alt,     chars: "ú"                           }
+  # - { key: X,        mods: Alt,     chars: "ø"                           }
+  # - { key: C,        mods: Alt,     chars: "ã"                           }
+  # - { key: V,        mods: Alt,     chars: "ö"                           }
+  # - { key: B,        mods: Alt,     chars: "â"                           }
+  # - { key: N,        mods: Alt,     chars: "î"                           }
+  # - { key: M,        mods: Alt,     chars: "í"                           }
+  # - { key: A,        mods: Alt,     chars: "á"                           }
+  # - { key: S,        mods: Alt,     chars: "ó"                           }
+  # - { key: D,        mods: Alt,     chars: "ä"                           }
+  # - { key: F,        mods: Alt,     chars: "æ"                           }
+  # - { key: G,        mods: Alt,     chars: "ç"                           }
+  # - { key: K,        mods: Alt,     chars: "ë"                           }
+  # - { key: J,        mods: Alt,     chars: "ê"                           }
+  # - { key: L,        mods: Alt,     chars: "ì"                           }
+  # - { key: Q,        mods: Alt,     chars: "ñ"                           }
+  # - { key: W,        mods: Alt,     chars: "÷"                           }
+  # - { key: E,        mods: Alt,     chars: "å"                           }
+  # - { key: R,        mods: Alt,     chars: "ò"                           }
+  # - { key: T,        mods: Alt,     chars: "ô"                           }
+  # - { key: Y,        mods: Alt,     chars: "ù"                           }
+  # - { key: U,        mods: Alt,     chars: "õ"                           }
+  # - { key: I,        mods: Alt,     chars: "é"                           }
+  # - { key: O,        mods: Alt,     chars: "ï"                           }
+  # - { key: P,        mods: Alt,     chars: "ð"                           }
   #- { key: Paste,                                action: Paste          }
   #- { key: Copy,                                 action: Copy           }
   #- { key: L,         mods: Control,             action: ClearLogNotice }
