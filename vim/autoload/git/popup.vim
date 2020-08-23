@@ -29,6 +29,14 @@ function! git#popup#status()
         let l:popup_text = 'No changes on ' . l:current_branch
     endif
 
+    " 2020-08-23: As of current year, finding information on how to succinctly
+    " replace this in Neovim has had middling to low amounts of success. The
+    " thing seems merged but not having docs, closest thing to an example
+    " here: https://github.com/SpaceVim/SpaceVim/pull/1102/files Which creates
+    " a straight up new window which is floating, and has all the buffer shit
+    " in it. Merged in 2018 but nobody gives a fuck, kinda sketch at this
+    " point.
+
     " This uses moved: [col('.'), col('.')], which allows for 1-column travel to
     " the right, to allow for insert-mode mapping (which otherwise closes the
     " dialog upon entering insert-mode).
