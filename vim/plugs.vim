@@ -834,25 +834,27 @@ let g:rooter_cd_cmd = 'lcd'
 
 " {{{
 
-Plug 'majutsushi/tagbar', { 'on' : 'TagbarOpen' } " {{{
-nnoremap <silent> <F4> :TagbarOpen fjc<CR>
-let g:tagbar_singleclick = 1
-let g:tagbar_foldlevel = 1
-let g:tagbar_left = 1
-let g:tagbar_type_rust = {
-      \ 'ctagstype' : 'rust',
-      \ 'kinds' : [
-      \'T:types,type definitions',
-      \'f:functions,function definitions',
-      \'g:enum,enumeration names',
-      \'s:structure names',
-      \'m:modules,module names',
-      \'c:consts,static constants',
-      \'t:traits',
-      \'i:impls,trait implementations',
-      \]
-      \}
-" }}}
+" Plug 'majutsushi/tagbar', { 'on' : 'TagbarOpen' } " {{{
+" nnoremap <silent> <F4> :TagbarOpen fjc<CR>
+" let g:tagbar_singleclick = 1
+" let g:tagbar_foldlevel = 1
+" let g:tagbar_left = 1
+" let g:tagbar_type_rust = {
+"       \ 'ctagstype' : 'rust',
+"       \ 'kinds' : [
+"       \'T:types,type definitions',
+"       \'f:functions,function definitions',
+"       \'g:enum,enumeration names',
+"       \'s:structure names',
+"       \'m:modules,module names',
+"       \'c:consts,static constants',
+"       \'t:traits',
+"       \'i:impls,trait implementations',
+"       \]
+"       \}
+" " }}}
+
+Plug 'liuchengxu/vista.vim'
 
 " }}}
 
@@ -929,15 +931,15 @@ inoremap <C-g>= <Esc>vB:Crunch<CR>a
 
 " {{{
 
-if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif " {{{
-let g:deoplete#enable_at_startup = 0
-nnoremap <Leader>tc :call deoplete#toggle()<CR>
+" if has('nvim')
+"     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"     Plug 'Shougo/deoplete.nvim'
+"     Plug 'roxma/nvim-yarp'
+"     Plug 'roxma/vim-hug-neovim-rpc'
+" endif " {{{
+" let g:deoplete#enable_at_startup = 0
+" nnoremap <Leader>tc :call deoplete#toggle()<CR>
 
 " autocmd plugs FileType markdown,jiv call deoplete#disable()
 
@@ -973,6 +975,13 @@ nnoremap <Leader>tc :call deoplete#toggle()<CR>
 
 " }}}
 
+" {{{
+
+if has('nvim')
+    Plug 'neoclide/coc.nvim'
+endif
+
+" }}}}
 
 " ||
 " || Docs
