@@ -432,6 +432,10 @@ inoremap <C-t> <C-k>
 " M-t to transpose-char:
 inoremap <M-t> <Esc>hxpa
 
+" This both fixes the Ultisnip annoyance and is better than c-f [Citation
+" needed]
+inoremap <C-j> <Right>
+
 " Kill line on C-k like readline
 inoremap <C-k> <C-o>D
 
