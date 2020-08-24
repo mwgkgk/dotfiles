@@ -104,7 +104,7 @@ endsnippet
 
 snippet f "function" b
 func ${1:name}(${2:x int})${3/(.+)/ /}${3:int} {
-	return ${0:${VISUAL}}
+	${4:${VISUAL}}$5
 }
 endsnippet
 
@@ -112,7 +112,7 @@ priority -1
 
 snippet f "anonymous function" w
 func(${2:x int})${3/(.+)/ /}${3:int} {
-	return ${0:${VISUAL}}
+	${4:${VISUAL}}$5
 }
 endsnippet
 
@@ -128,7 +128,7 @@ endsnippet
 
 snippet m "Method" b
 func (${1:receiver} ${2:type}) ${3:name}(${4:params})${5/(.+)/ /}${5:type} {
-	return ${0:${VISUAL}}
+	${6:${VISUAL}}$7
 }
 endsnippet
 
