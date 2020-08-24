@@ -127,7 +127,8 @@ func main() {
 endsnippet
 
 snippet m "Method" b
-func (${1:receiver} ${2:type}) ${3:name}(${4:params})${5/(.+)/ /}${5:type} {
+// ${1:BlockingCall} $2
+func (${3:i *SafeInterp}) $1(${4:f func(i *SafeInterp)})${5/(.+)/ /}${5:int} {
 	${6:${VISUAL}}$7
 }
 endsnippet
