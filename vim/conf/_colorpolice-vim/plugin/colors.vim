@@ -30,7 +30,7 @@
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
-" let s:static_colo = 'shenzhen'
+let s:static_colo = 'shenzhen'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
@@ -58,7 +58,7 @@
 " let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
-let s:static_colo = 'alduin'
+" let s:static_colo = 'alduin'
 
 " let s:static_colo = 'apples'
 " let s:static_colo = 'github'
