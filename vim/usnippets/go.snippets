@@ -267,6 +267,10 @@ snippet e "fmt.Fprintln to stderr" w
 fmt.Fprintln(os.Stderr, "$1")
 endsnippet
 
+snippet ffl "fmt.Fprintln" w
+fmt.Fprintln(${1:w}, ${2:err})
+endsnippet
+
 # ||
 # || Strings
 # ||
