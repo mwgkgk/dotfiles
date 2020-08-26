@@ -15,7 +15,7 @@
 " let s:static_colo = 'grind'
 " let s:static_colo = 'murphy_mod'
 " let s:static_colo = 'devbox-dark-256-lighter'
-" let s:static_colo = 'zenburn'
+let s:static_colo = 'zenburn'
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
 " let s:static_colo = 'grapes'
@@ -30,7 +30,7 @@
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
-let s:static_colo = 'shenzhen'
+" let s:static_colo = 'shenzhen'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
