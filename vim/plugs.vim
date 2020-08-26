@@ -1188,8 +1188,8 @@ let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
 " Go
-Plug '~/.vim/conf/_vim-go/'
-Plug 'fatih/vim-go', { 'for' : 'go' }
+" Plug '~/.vim/conf/_vim-go/'
+" Plug 'fatih/vim-go', { 'for' : 'go' }
 
 " Perl
 Plug 'hotchpotch/perldoc-vim', { 'for' : 'perl' }
