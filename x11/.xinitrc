@@ -82,7 +82,11 @@ sxhkd &
   # sleep 1
 # done &
 
-xsetroot -name "hobby"
+if test -f "$HOME/.xsetroot-message"; then
+    xsetroot -name "$(cat ~/.xsetroot-message | tr -d '\n')"
+else
+    xsetroot -name "workout"
+fi
 
 while true; do
   # Log stderror to a file 
