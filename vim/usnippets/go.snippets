@@ -255,6 +255,10 @@ snippet S "fmt.Println" w
 fmt.Println(${3:"$1"}$2)$4
 endsnippet
 
+snippet P "fmt.Println" w
+fmt.Println(${1:"$2"}$3)$4
+endsnippet
+
 priority 0
 
 snippet /^(\s+)p/ "fmt.Fprintln name, type, value" r
