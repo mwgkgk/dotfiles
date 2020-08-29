@@ -218,9 +218,24 @@ endsnippet
 
 priority -2
 
-snippet "(\w+)" "dereferencing" irs
+# snippet "(\w+)" "dereferencing" irs
+# `!p
+# if match.group(0) is not None:
+#     snip.rv = match.group(0)`->$0
+# endsnippet
+
+priority -3
+
+snippet  /^\s+([\!:\w=-]+)$/ "expand-any-word-endline" rw
 `!p
 if match.group(0) is not None:
-    snip.rv = match.group(0)`->$0
+	snip.rv = match.group(0)`($1);
 endsnippet
-# vim:ft=snippets:
+
+priority -4
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`($1)
+endsnippet
