@@ -1,6 +1,6 @@
-###########################################################################
-#                            TextMate Snippets                            #
-###########################################################################
+# ||
+# || PreProc
+# ||
 
 snippet def "#define ..."
 #define ${1}
@@ -31,30 +31,6 @@ ${1:#pragma mark -
 $0
 endsnippet
 
-snippet main "main() (main)"
-int main(int argc, char *argv[])
-{
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-	return 0;
-}
-endsnippet
-
-snippet for "for loop (for)"
-for (${4:int }${1:i} = 0; $1 < ${2:count}; ${3:++$1}) {
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-}
-endsnippet
-
-snippet fori "for int loop (fori)"
-for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-}
-endsnippet
-
-snippet enum "Enumeration"
-enum ${1:name} { $0 };
-endsnippet
-
 # snippet once "Include header once only guard"
 # #ifndef ${1:`!p
 # if not snip.c:
@@ -81,25 +57,72 @@ ${0}
 #endif  // $1
 endsnippet
 
+# ||
+# || Typedef
+# ||
+
 snippet td "Typedef"
 typedef ${1:int} ${2:MyCustomType};
 endsnippet
 
-snippet wh "while loop"
-while(${1:/* condition */}) {
+# ||
+# || Enum
+# ||
+
+snippet enum "Enumeration"
+enum ${1:name} { $0 };
+endsnippet
+
+# ||
+# || Struct
+# ||
+
+snippet st "struct"
+struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`}
+{
+	${0:/* data */}
+};
+endsnippet
+
+
+# ||
+# || Function
+# ||
+
+snippet f "function" b
+${1:void}
+${2:name}(${3:const int &${4:a}})
+${6:{
+	$5
+}}
+endsnippet
+
+snippet main "main() (main)"
+int main(int argc, char *argv[])
+{
 	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+	return 0;
 }
 endsnippet
 
-snippet do "do...while loop (do)"
-do {
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-} while(${1:/* condition */});
+# ||
+# || Return
+# ||
+
+snippet r "return" w
+return
 endsnippet
 
-snippet fprintf "fprintf ..."
-fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+snippet r0 "r0" w
+return 0;
 endsnippet
+
+snippet r1 "r1" w
+return 1;
+endsnippet
+# ||
+# || If
+# ||
 
 snippet if "if .. (if)"
 if (${1:/* condition */}) {
@@ -124,6 +147,46 @@ else
 }
 endsnippet
 
+# ||
+# || For
+# ||
+
+snippet for "for loop (for)"
+for (${4:int }${1:i} = 0; $1 < ${2:count}; ${3:++$1}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}
+endsnippet
+
+snippet fori "for int loop (fori)"
+for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}
+endsnippet
+
+# ||
+# || While
+# ||
+
+snippet wh "while loop"
+while(${1:/* condition */}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}
+endsnippet
+
+snippet do "do...while loop (do)"
+do {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+} while(${1:/* condition */});
+endsnippet
+
+# ||
+# || Print
+# ||
+
+snippet fprintf "fprintf ..."
+fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
 snippet printf "printf .. (printf)"
 printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
@@ -132,24 +195,9 @@ snippet echo "echo" b
 printf("Hello from $1");
 endsnippet
 
-snippet st "struct"
-struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`}
-{
-	${0:/* data */}
-};
-endsnippet
-
-snippet f "function" b
-${1:void}
-${2:name}(${3:const int &${4:a}})
-${6:{
-	$5
-}}
-endsnippet
-
-snippet fund "function declaration" b
-${1:void} ${2:function_name}(${3});
-endsnippet
+# ||
+# || Comments
+# ||
 
 snippet copy "copyright" b
 // Copyright `!v system('date +"%Y" | tr -d "\n"')` github.com/mwgkgk
@@ -163,6 +211,10 @@ snippet dd "dd" w
 // `!v system('date-jiv | tr -d "\n"')`
 // ${0}
 endsnippet
+
+# ||
+# || Fallbacks
+# ||
 
 priority -2
 
