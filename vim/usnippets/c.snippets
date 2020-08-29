@@ -1,3 +1,5 @@
+# vim:ft=snippets:
+
 # ||
 # || PreProc
 # ||
@@ -125,8 +127,9 @@ endsnippet
 # ||
 
 snippet if "if .. (if)"
-if (${1:/* condition */}) {
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+if (${1:argc < ${2:2}}) {
+	${VISUAL}${1:fprintf(stderr, "ERROR: You need at least one argument.\n");
+	return 1; }
 }
 endsnippet
 
@@ -193,6 +196,23 @@ endsnippet
 
 snippet echo "echo" b
 printf("Hello from $1");
+endsnippet
+
+snippet e "e" w
+fprintf(stderr, ${2:"${1:ERROR: You need at least one argument.}$\n"}$3);
+endsnippet
+
+snippet er "er" w
+fprintf(stderr, ${2:"${1:ERROR: You need at least one argument.}$\n"}$3);
+return 1;
+endsnippet
+
+# ||
+# || System
+# ||
+
+snippet sys "sys" w
+system($1);
 endsnippet
 
 # ||
