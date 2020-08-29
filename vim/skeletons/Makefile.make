@@ -1,4 +1,5 @@
-.DEFAULT_GOAL := all
+.DEFAULT_GOAL := debug
 
-all:
-	echo >&2 "Nothing to do"
+debug:
+	echo >&2 "Compiling tabm ..."
+	clang tabm.c -S -O3 -o target/debug/tabm
