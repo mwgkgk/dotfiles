@@ -4,7 +4,7 @@
 " endfunction
 
 " nnoremap <buffer> X :silent .w !bash<CR>
-nnoremap <buffer> <Leader>x :silent .,$w !bash<CR>
+" nnoremap <buffer> <Leader>x :silent .,$w !bash<CR>
 
 " Outclassed by Reply, neoterm
 " nnoremap <buffer> <M-x> :exec ':term ' . getline('.')<CR>
