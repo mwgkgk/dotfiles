@@ -1115,76 +1115,13 @@ Plug 'prabirshrestha/vim-lsp'
 
 Plug 'mattn/vim-lsp-settings'
 
-" {{{
-
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash install.sh',
-"     \ 'for': [
-"     \   'rust',
-"     \   'javascript', 'javascript.jsx',
-"     \   'typescript', 'typescript.jsx',
-"     \   'ocaml',
-"     \   'clojure',
-"     \ ]
-"     \ } " {{{
-" let g:LanguageClient_autoStart = 0
-" let g:LanguageClient_loadSettings = 1
-" let g:LanguageClient_settingsPath = $HOME . '/.vim/settings.json'
-" let g:LanguageClient_serverCommands = {
-"     \ 'rust': ['rls'],
-"     \ 'javascript': ['javascript-typescript-stdio'],
-"     \ 'javascript.jsx': ['javascript-typescript-stdio'],
-"     \ 'typescript': ['typescript-language-server', '--stdio'],
-"     \ 'typescript.tsx': ['typescript-language-server', '--stdio'],
-"     \ 'ocaml': ['ocaml-language-server', '--stdio'],
-"     \ 'clojure': ['bash', '-c', 'clojure-lsp'],
-"     \ }
-" " \ 'javascript': ['typescript-language-server', '--stdio'],
-" " \ 'javascript.jsx': ['typescript-language-server', '--stdio'],
-" autocmd plugs FileType typescript,typescript.tsx
-"     \ nnoremap <buffer> <Space>f :call LanguageClient#textDocument_formatting()<CR>
-" let g:LanguageClient_diagnosticsDisplay = {
-"     \     1: {
-"     \         "name": "Error",
-"     \         "texthl": "ALEError",
-"     \         "signText": ">",
-"     \         "signTexthl": "ALEErrorSign",
-"     \     },
-"     \     2: {
-"     \         "name": "Warning",
-"     \         "texthl": "ALEWarning",
-"     \         "signText": "!",
-"     \         "signTexthl": "ALEWarningSign",
-"     \     },
-"     \     3: {
-"     \         "name": "Information",
-"     \         "texthl": "ALEInfo",
-"     \         "signText": "?",
-"     \         "signTexthl": "ALEInfoSign",
-"     \     },
-"     \     4: {
-"     \         "name": "Hint",
-"     \         "texthl": "ALEInfo",
-"     \         "signText": "➤",
-"     \         "signTexthl": "ALEInfoSign",
-"     \     },
-"     \ }
-" nnoremap <silent> <Leader>H :call LanguageClient#textDocument_hover()<CR>
-" nnoremap <silent> <Leader><Tab> :call LanguageClient#workspace_symbol()<CR>
-" nnoremap <silent> <Leader>[ :call LanguageClient#textDocument_documentSymbol()<CR>
-" nnoremap <silent> <Leader>] :call LanguageClient#textDocument_references()<CR>
-" " nnoremap <silent> <Leader>] :call LanguageClient#textDocument_definition()<CR>
-" nnoremap <silent> <Leader>' :call LanguageClient#textDocument_codeAction()<CR>
-" nnoremap <silent> <Leader>` :call LanguageClient_contextMenu()<CR>
-" " }}}
 
 " Many languages
 Plug 'sheerun/vim-polyglot' " {{{
 let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
-" Go
+" Golang
 " Plug '~/.vim/conf/_vim-go/'
 " Plug 'fatih/vim-go', { 'for' : 'go' }
 
