@@ -216,6 +216,23 @@ system($1);
 endsnippet
 
 # ||
+# || Files
+# ||
+
+snippet fo "fopen" b
+FILE *${1:fp} = fopen(${3:"${2:data.txt}"}, "${4:r}");
+if ($1 == NULL) {
+  fprintf(stderr, "fopen(${3/"/\\"/g}), \"$4\" failed in file %s at line # %d",
+				__FILE__, __LINE__);
+  exit(EXIT_FAILURE);
+}
+
+$5
+
+fclose($1);
+endsnippet
+
+# ||
 # || Comments
 # ||
 
