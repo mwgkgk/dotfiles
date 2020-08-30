@@ -92,16 +92,13 @@ endsnippet
 # ||
 
 snippet f "function" b
-${1:void}
-${2:name}(${3:const int &${4:a}})
-${6:{
-	$5
-}}
+${2:int} ${1:name}(${3:const int &${4:a}}) {
+	return EXIT_FAILURE$5
+}
 endsnippet
 
 snippet main "main() (main)"
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 	return 0;
 }
