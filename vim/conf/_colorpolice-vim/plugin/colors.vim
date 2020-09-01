@@ -3,7 +3,7 @@
 " }}}
 
 " let s:static_colo = 'industry'
-" let s:static_colo = 'heavy-industry'
+let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
@@ -64,7 +64,7 @@
 " let s:static_colo = 'github'
 " let s:static_colo = 'pink'
 
-let s:static_colo = 'orbital'
+" let s:static_colo = 'orbital'
 " let s:static_colo = 'sceaduhelm'
 
 " let s:static_colo = 'kalisi-dark'
