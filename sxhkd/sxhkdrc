@@ -34,7 +34,7 @@ super + shift + i
 	fox
 
 super + o
-	outlaw
+	firefox-ulm
 
 super + 0
 	firefox-default
@@ -43,7 +43,7 @@ super + 9
 	firefox-9high
 
 super + u
-	firefox-ulm
+	outlaw
 
 super + backslash
 	girl
