@@ -237,5 +237,5 @@ if has('gui_running')
     " set guifont=Anonymous\ Pro\ 10
     " set guifont=Iosevka\ SS04\ 13
     set noantialias
-    set guifont=Hack\ 8
+    set guifont=Hack\ 6
 endif
