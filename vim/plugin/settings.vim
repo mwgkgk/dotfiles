@@ -241,4 +241,7 @@ if has('gui_running')
 
     set guicursor+=a:blinkon0
     set guicursor+=i:block
+
+    " TODO Stop blinking pls
+    " set guicursor+=a:block-nCursor
 endif
