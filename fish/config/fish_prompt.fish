@@ -17,6 +17,14 @@ function fish_prompt --description 'Write out the prompt'
     if set -q LISP_ADV
         echo -n -s (set_color $fish_color_prompt) "lisp-adv"
     else
+        # White themes are unsupported for now
+
+        # if test -z "$VIM_SERVERNAME"
+        #     echo -n -s (set_color $fish_color_prompt) (prompt_hostname) " $USER" ' ' (set_color $color_cwd) (prompt_pwd)
+        # else
+        #     echo -n -s (set_color $fish_color_prompt_gvim) (prompt_hostname) " $USER" ' ' (set_color $color_cwd) (prompt_pwd)
+        # end
+
         echo -n -s (set_color $fish_color_prompt) (prompt_hostname) " $USER" ' ' (set_color $color_cwd) (prompt_pwd)
     end
 
