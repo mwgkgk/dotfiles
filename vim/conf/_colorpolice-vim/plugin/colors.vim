@@ -110,13 +110,14 @@ let s:static_colo = 'jellyfish'
 " gui {{{
 " let s:gui_colo = 'freya'
 " let s:gui_colo = 'pyte'
-let s:gui_colo = 'seoul256'
+" let s:gui_colo = 'seoul256'
 " let s:gui_colo = 'seoul256-light'
 " let s:gui_colo = 'hybrid'
 " let s:gui_colo = 'sceaduhelm'
 " let s:gui_colo = 'zenburn'
 " let s:gui_colo = 'jabeigemod'
 " let s:gui_colo = 'base16-atelierdune'
+let s:gui_colo = 'base16-atelierseaside'
 " let s:gui_colo = 'revolutionsmod'
 " let s:gui_colo = 'badwolf'
 " let s:gui_colo = 'gruvbox'
@@ -124,6 +125,7 @@ let s:gui_colo = 'seoul256'
 " }}}
 
 if has('gui_running')
+    set background=light
     call colorpolice#select(s:gui_colo)
 else
     set t_Co=256
