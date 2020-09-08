@@ -1,2 +1,1 @@
-" Vim's extra sensitive keybind
-nnoremap <Space>x :TREPLSendFile<CR>
+" Vim's <Space>x keybind is located in vim/ftplugin/vim/mappings.vim
