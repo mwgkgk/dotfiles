@@ -238,4 +238,6 @@ if has('gui_running')
     " set guifont=Iosevka\ SS04\ 13
     set noantialias
     set guifont=Hack\ 6
+
+    set guicursor+=a:blinkon0
 endif
