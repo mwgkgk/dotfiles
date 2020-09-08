@@ -117,10 +117,10 @@ let s:static_colo = 'jellyfish'
 " let s:gui_colo = 'zenburn'
 " let s:gui_colo = 'jabeigemod'
 " let s:gui_colo = 'base16-atelierdune'
-let s:gui_colo = 'base16-atelierseaside-light'
+" let s:gui_colo = 'base16-atelierseaside-light'
 " let s:gui_colo = 'revolutionsmod'
 " let s:gui_colo = 'badwolf'
-" let s:gui_colo = 'gruvbox'
+let s:gui_colo = 'gruvbox'
 " let s:gui_colo = 'github'
 " }}}
 
