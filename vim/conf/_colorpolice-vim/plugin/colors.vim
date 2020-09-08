@@ -3,7 +3,7 @@
 " }}}
 
 " let s:static_colo = 'industry'
-let s:static_colo = 'heavy-industry'
+" let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
@@ -86,7 +86,7 @@ let s:static_colo = 'heavy-industry'
 
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
-" let s:static_colo = 'acme'
+let s:static_colo = 'acme'
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
