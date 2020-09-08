@@ -240,4 +240,5 @@ if has('gui_running')
     set guifont=Hack\ 6
 
     set guicursor+=a:blinkon0
+    set guicursor+=i:block
 endif
