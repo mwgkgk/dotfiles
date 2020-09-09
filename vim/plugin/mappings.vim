@@ -487,6 +487,13 @@ inoremap <C-r> <C-g>u<C-r>
 
 "
 "
+" Terminal
+"
+
+tnoremap <Esc> <C-\><C-n>
+
+"
+"
 " Registers
 "
 
