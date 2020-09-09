@@ -105,7 +105,7 @@ set mouse=a
 " || Terminal
 " ||
 
-set termwinkey=<C-\>
+set termwinkey=<C-x>
 
 " ||
 " || Registers
