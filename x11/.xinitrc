@@ -44,6 +44,7 @@ sxhkd &
 
 gnumeric ~/ink/ref/gnumeric/mars.gnumeric &
 
+# TODO move to D
 zepp &
 
 outlaw &
