@@ -42,6 +42,8 @@ export SXHKD_SHELL='/bin/dash'
 # Simple X Hotkey Daemon
 sxhkd &
 
+gnumeric ~/ink/ref/gnumeric/mars.gnumeric &
+
 # while true ; do
 #   date_local=$(date +"%R %a, %b %d")
   # date_est=$(TZ=US/Eastern date +" %a, %b %d %R" | xargs)
