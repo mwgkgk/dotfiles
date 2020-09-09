@@ -102,6 +102,12 @@ set number
 set mouse=a
 
 " ||
+" || Terminal
+" ||
+
+set termwinkey=<C-\>
+
+" ||
 " || Registers
 " ||
 
