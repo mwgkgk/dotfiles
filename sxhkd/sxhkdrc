@@ -33,7 +33,7 @@ super + t
 super + shift + i
 	fox
 
-super + o
+super + u
 	firefox-ulm
 
 super + 0
@@ -42,7 +42,7 @@ super + 0
 super + 9
 	firefox-9high
 
-super + u
+super + o
 	outlaw
 
 super + backslash
