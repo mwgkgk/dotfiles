@@ -42,12 +42,12 @@ export SXHKD_SHELL='/bin/dash'
 # Simple X Hotkey Daemon
 sxhkd &
 
-gnumeric ~/ink/ref/gnumeric/mars.gnumeric &
+# gnumeric ~/ink/ref/gnumeric/mars.gnumeric &
 
 # TODO move to D
-zepp &
+# zepp &
 
-outlaw &
+# outlaw &
 
 # while true ; do
 #   date_local=$(date +"%R %a, %b %d")
