@@ -1188,9 +1188,7 @@ autocmd plugs FileType hy set lisp
 " }}}
 
 " LFE
-Plug 'lfe-support/vim-lfe', {'for' : 'lfe' } " {{{
-autocmd plugs FileType lfe set lisp
-" }}}
+Plug 'lfe-support/vim-lfe', {'for' : 'lfe' }
 
 " Rust
 Plug 'rust-lang/rust.vim', { 'for' : 'rust' }
