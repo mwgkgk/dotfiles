@@ -1,3 +1,3 @@
-if executable('rebar3 lfe repl')
+if executable('rebar3')
   call neoterm#repl#set('rebar3 lfe repl')
 endif
