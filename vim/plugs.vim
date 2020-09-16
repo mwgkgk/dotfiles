@@ -1110,10 +1110,10 @@ Plug '~/shop/oil/borzhch'
 " || Filetypes
 " ||
 
-Plug '~/.vim/conf/_vim-lsp/'
-Plug 'prabirshrestha/vim-lsp'
+" Plug '~/.vim/conf/_vim-lsp/'
+" Plug 'prabirshrestha/vim-lsp'
 
-Plug 'mattn/vim-lsp-settings'
+" Plug 'mattn/vim-lsp-settings'
 
 
 " Many languages
