@@ -40,7 +40,7 @@
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'hell'
-let s:static_colo = 'lecture'
+" let s:static_colo = 'lecture'
 " let s:static_colo = 'lecture-dark'
 " let s:static_colo = 'belf'
 " let s:static_colo = 'thief'
@@ -97,7 +97,7 @@ let s:static_colo = 'lecture'
 " let s:static_colo = 'jellybeans'
 " let s:static_colo = 'ufo'
 
-" let s:static_colo = 'lucius-light'
+let s:static_colo = 'lucius-light'
 " let s:static_colo = 'hybrid-light'
 
 " let s:static_colo = 'lucius-dark'
