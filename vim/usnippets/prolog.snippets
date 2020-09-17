@@ -7,3 +7,11 @@ endsnippet
 snippet ft "ft" b
 % vim`!:`: ft=prolog
 endsnippet
+
+snippet dd "dd-comment" b
+// `!v system('date-jiv | tr -d "\n"')` ${0}
+endsnippet
+
+snippet dd "dd-inline" w
+`!v system('date-jiv | tr -d "\n"')` ${0}
+endsnippet
