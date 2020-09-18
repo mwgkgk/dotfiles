@@ -51,6 +51,8 @@ sxhkd &
 
 hulk v 6ix9ine &
 
+braap &
+
 # while true ; do
 #   date_local=$(date +"%R %a, %b %d")
   # date_est=$(TZ=US/Eastern date +" %a, %b %d %R" | xargs)
