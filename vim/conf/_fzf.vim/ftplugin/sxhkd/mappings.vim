@@ -1,2 +1,2 @@
-" Select from `super +` keybindings:
-nnoremap <buffer> S :FzfBLines ^super + <CR>
+" Select from keybindings:
+nnoremap <buffer> S :FzfBLines ^\w\+<CR>
