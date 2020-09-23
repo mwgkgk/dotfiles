@@ -58,7 +58,7 @@ super + comma
 	hulk
 
 control + semicolon
-	sleep 0.2 && xdotool keyup ctrl+semicolon key Escape space w
+	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
 
 super + space
 	march
