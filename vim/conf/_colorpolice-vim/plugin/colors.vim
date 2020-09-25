@@ -37,7 +37,7 @@
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
 
-" let s:static_colo = 'nuclear'
+let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
@@ -105,7 +105,7 @@
 
 " let s:static_colo = 'morning'
 
-let s:static_colo = 'gruvbox-dark'
+" let s:static_colo = 'gruvbox-dark'
 
 " gui {{{
 " let s:gui_colo = 'freya'
