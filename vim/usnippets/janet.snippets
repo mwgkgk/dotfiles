@@ -1,5 +1,21 @@
+# ||
+# || Date
+# ||
+
 snippet / *d(a)?(te)?/ "Date" rb
 ## `date-utc` ##
 
 ${0}
+endsnippet
+
+# ||
+# || Fallbacks
+# ||
+
+priority -3
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $1)
 endsnippet
