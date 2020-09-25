@@ -6,7 +6,7 @@
 ! URxvt*.transparent:  false
 ! URxvt*.inheritPixmap: false
 
-URxvt.perl-ext-common: default,tabbedex,-searchable-scrollback
+URxvt.perl-ext-common: default,-searchable-scrollback
 URxvt.tabbed.autohide: yes
 URxvt.tabbed.title: false
 
@@ -75,10 +75,10 @@ URxvt*.color12: #8775E8
 URxvt*.color4:  #3465A4
 URxvt*.tabbed.tab-bg: 9
 
-URxvt.keysym.Meta-F1: perl:tabbedex:prev_tab
-URxvt.keysym.Meta-F2: perl:tabbedex:next_tab
-URxvt.keysym.Meta-F3: perl:tabbedex:new_tab
-URxvt.keysym.Meta-F4: perl:tabbedex:rename_tab
+/* URxvt.keysym.Meta-F1: perl:tabbedex:prev_tab */
+/* URxvt.keysym.Meta-F2: perl:tabbedex:next_tab */
+/* URxvt.keysym.Meta-F3: perl:tabbedex:new_tab */
+/* URxvt.keysym.Meta-F4: perl:tabbedex:rename_tab */
 
 /* URxvt.font: xft:Liberation Mono:pixelsize=10 */
 /* URxvt.boldFont: xft:Liberation Mono:bold:pixelsize=10 */
