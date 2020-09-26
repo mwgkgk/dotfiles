@@ -12,8 +12,8 @@ endsnippet
 # || Functions
 # ||
 
-snippet "(\()?\bf" "fn" rw
-(fn ${1:name} [$2]
+snippet "(\()?\bf" "defn" rw
+(defn ${1:name} [$2]
 	${3:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
