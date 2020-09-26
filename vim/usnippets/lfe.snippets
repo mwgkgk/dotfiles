@@ -1,1 +1,42 @@
-extends lisp
+# ||
+# || Date
+# ||
+
+
+snippet / *d(a)?(te)?/ "Date" rb
+;;; `date-utc` ;;;
+${0}
+endsnippet
+
+# ||
+# || Functions
+# ||
+
+snippet "(\()?\bf" "defun" rw
+(defun ${1:name} ($2)
+	${3:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
+# || Printing
+# ||
+
+snippet "(\()?\bp" "print" wr
+(io:format "${3:${2:~a}~n}" ${1:${VISUAL}}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
+# || Fallbacks
+# ||
+
+priority -3
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $1)
+endsnippet
