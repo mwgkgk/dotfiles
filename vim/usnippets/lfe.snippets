@@ -35,6 +35,18 @@ snippet l "lambda" w
 endsnippet
 
 # ||
+# || Basements
+# ||
+
+snippet /^$/ "basement-implicit" rb
+(if 'false
+	(progn
+		${VISUAL}${1:`!p
+if not snip.v.text:
+	snip.rv = "nil"`}))
+endsnippet
+
+# ||
 # || Printing
 # ||
 
