@@ -1,2 +1,4 @@
 " Use forms instead of lines:
-nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
+" Notice: it's ), not f, because vim-sexp is too smart and we want to use #|
+" |# comments as evaluation history.
+nmap <silent> <buffer> X <Plug>(neoterm-repl-send)a)
