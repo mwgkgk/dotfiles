@@ -47,7 +47,7 @@ sxhkd &
 # TODO move to D
 # zepp &
 
-# outlaw &
+outlaw &
 
 hulk-init &
 
