@@ -47,9 +47,9 @@ sxhkd &
 # TODO move to D
 # zepp &
 
-outlaw &
+# outlaw &
 
-hulk-init &
+# hulk-init &
 
 # while true ; do
 #   date_local=$(date +"%R %a, %b %d")
