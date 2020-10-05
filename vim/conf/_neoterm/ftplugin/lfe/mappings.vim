@@ -14,3 +14,6 @@ nnoremap <buffer> <Leader>r :silent T (c "<C-r>=expand('%')<CR>")<CR>
 
 " Slurp current file
 nnoremap <buffer> <LocalLeader>s :silent T (slurp "<C-r>=expand('%')<CR>")<CR>
+
+" Unslurp
+nnoremap <buffer> <LocalLeader>u :silent T (unslurp)<CR>
