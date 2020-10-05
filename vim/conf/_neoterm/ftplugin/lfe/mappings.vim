@@ -1,5 +1,8 @@
 " Open repl:
-nnoremap <LocalLeader>r :silent above T rebar3 lfe repl<CR>
+nnoremap <buffer> <LocalLeader>r :silent above T rebar3 lfe repl<CR>
+
+" Exit repl:
+nnoremap <buffer> <LocalLeader>q :silent T (exit)<CR>
 
 " Use forms instead of lines:
 " Notice: it's ), not f, because vim-sexp is too smart and we want to use #|
