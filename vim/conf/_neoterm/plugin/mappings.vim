@@ -68,3 +68,9 @@ nmap <Leader>X <Plug>(neoterm-repl-send-line)
 " ||
 
 nnoremap <Leader>R :silent T do-thing<CR>
+
+" ||
+" || Close
+" ||
+
+nnoremap <silent> <LocalLeader>d :silent T exit<CR>
