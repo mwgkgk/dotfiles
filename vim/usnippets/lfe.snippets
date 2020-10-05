@@ -28,7 +28,7 @@ endsnippet
 
 snippet "(\()?\br" "defrecord" rw
 (defrecord ${1:name}
-	${2:nil}`!p
+	${2:'false}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -39,7 +39,7 @@ endsnippet
 
 snippet "(\()?\bm" "m" rw
 (defmacro ${1:name} ($3${2:&body body})
-	${4:nil}`!p
+	${4:'false}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -50,13 +50,13 @@ endsnippet
 
 snippet "(\()?\bf" "defun" rw
 (defun ${1:name}
-	${2:nil}`!p
+	${2:'false}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet l "lambda" w
-(lambda (${1:x}) ${2:nil})
+(lambda (${1:x}) ${2:'false})
 endsnippet
 
 # ||
@@ -68,7 +68,7 @@ snippet /^$/ "basement-implicit" rb
 
 ${VISUAL}${1:`!p
 if not snip.v.text:
-	snip.rv = "nil"`}
+	snip.rv = "'false"`}
 
 |#
 endsnippet
