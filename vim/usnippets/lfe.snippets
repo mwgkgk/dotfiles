@@ -34,10 +34,22 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Maps
+# ||
+
+priority -1
+
+snippet m "m" w
+(map $1)
+endsnippet
+
+priority 0
+
+# ||
 # || Macros
 # ||
 
-snippet "(\()?\bm" "m" rw
+snippet "^(\()?\bm" "m" rb
 (defmacro ${1:name} ($3${2:&body body})
 	${4:'false}`!p
 if match.group(1) is None:
