@@ -9,5 +9,8 @@ nnoremap <buffer> <LocalLeader>q :silent T (exit)<CR>
 " |# comments as evaluation history.
 nmap <silent> <buffer> X <Plug>(neoterm-repl-send)a)
 
+" Compile current file
+nnoremap <buffer> <Leader>r :silent T (c "<C-r>=expand('%')<CR>")<CR>
+
 " Slurp current file
-nnoremap <buffer> <Leader>r :silent T (slurp "<C-r>=expand('%')<CR>")<CR>
+nnoremap <buffer> <LocalLeader>s :silent T (slurp "<C-r>=expand('%')<CR>")<CR>
