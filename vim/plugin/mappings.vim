@@ -600,7 +600,7 @@ nnoremap <Leader>tb :windo set scrollbind!<CR>
 nnoremap <Leader>tz :let &scrolloff=999-&scrolloff<CR>
 
 " Toggle light/dark background:
-nnoremap <Leader>tb :call toggle#background()<CR>
+nnoremap <Leader>bg :call toggle#background()<CR>
 
 " Toggle number:
 nnoremap <Leader>tn :call toggle#number()<CR>
