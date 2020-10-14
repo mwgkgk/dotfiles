@@ -16,6 +16,20 @@ snippet dd "dd-inline" w
 endsnippet
 
 # ||
+# || Basement
+# ||
+
+snippet /^$/ "basement-implicit" rb
+/*
+
+${VISUAL}${1:`!p
+if not snip.v.text:
+	snip.rv = ""`}
+
+*/
+endsnippet
+
+# ||
 # || Fallbacks
 # ||
 
