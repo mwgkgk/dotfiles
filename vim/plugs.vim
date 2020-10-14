@@ -1118,7 +1118,8 @@ Plug '~/shop/oil/borzhch'
 
 " Many languages
 Plug 'sheerun/vim-polyglot' " {{{
-let g:polyglot_disabled = ['markdown', 'racket']
+" Perl and raku disabled because polyglot doesn't respect filetype_pl
+let g:polyglot_disabled = ['markdown', 'racket', 'raku', 'perl']
 " }}}
 
 " Golang
@@ -1129,6 +1130,9 @@ Plug 'adimit/prolog.vim'
 
 " Perl
 Plug 'hotchpotch/perldoc-vim', { 'for' : 'perl' }
+
+" Prolog
+let g:filetype_pl = 'prolog'
 
 " Sxhkd
 Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
