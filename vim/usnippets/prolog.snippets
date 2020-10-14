@@ -1,11 +1,10 @@
+# ||
+# || Date
+# ||
+
 snippet / *d(a)?(te)?/ "Date" rb
 % `date-utc` %
 ${0}
-endsnippet
-
-# Colon is a shell noop
-snippet ft "ft" b
-% vim`!:`: ft=prolog
 endsnippet
 
 snippet dd "dd-comment" b
@@ -14,4 +13,24 @@ endsnippet
 
 snippet dd "dd-inline" w
 `!v system('date-jiv | tr -d "\n"')` ${0}
+endsnippet
+
+# ||
+# || Fallbacks
+# ||
+
+priority -3
+
+snippet  /^\s*([\!:\w=-]+)$/ "expand-any-word-endline" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`($1).
+endsnippet
+
+priority -4
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`($1)
 endsnippet
