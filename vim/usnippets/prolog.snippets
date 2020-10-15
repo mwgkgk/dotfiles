@@ -22,12 +22,26 @@ endsnippet
 # TODO if line above is empty, basement, else `!v normal <C-Y>`
 snippet /^$/ "basement-implicit" rb
 /*
-
 ${VISUAL}${1:`!p
 if not snip.v.text:
 	snip.rv = ""`}
-
 */
+endsnippet
+
+# ||
+# || Rules
+# ||
+
+snippet r "rule" w
+${1:thinks}(${2:X}) :-
+	${3:exists}(${4:$2})$5.
+endsnippet
+
+# TODO Rule with 1,2,3 variables
+
+snippet ) ")" i
+),
+${1:exists}(${2:X})
 endsnippet
 
 # ||
