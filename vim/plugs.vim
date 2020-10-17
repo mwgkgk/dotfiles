@@ -666,7 +666,11 @@ let g:peekaboo_window = 'bo 30new'
 
 " Plug 'AndrewRadev/whitespaste.vim'
 
-Plug 'sickill/vim-pasta'
+Plug 'sickill/vim-pasta' " {{{
+
+let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml', 'prolog']
+
+" }}}
 
 " }}}
 
