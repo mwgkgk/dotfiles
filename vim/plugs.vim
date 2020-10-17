@@ -1118,8 +1118,7 @@ Plug '~/shop/oil/borzhch'
 
 " Many languages
 Plug 'sheerun/vim-polyglot' " {{{
-" Perl and raku disabled because polyglot doesn't respect filetype_pl
-let g:polyglot_disabled = ['markdown', 'racket', 'raku', 'perl']
+let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
 " Golang
