@@ -19,13 +19,58 @@ endsnippet
 # || Basement
 # ||
 
-# TODO if line above is empty, basement, else `!v normal <C-Y>`
-snippet /^$/ "basement-implicit" rb
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
 /*
 ${VISUAL}${1:`!p
+
 if not snip.v.text:
-	snip.rv = ""`}
+	snip.rv = ""
+`}
 */
+endsnippet
+
+# If the line above ends with comma, indent to the last unclosed paren:
+snippet /^$/ "indent-comma" "re.match('^.*,$', snip.buffer[snip.line-1])" re
+${VISUAL}`!p
+
+def last_unmathed_paren_pos(s):
+	stack = []
+	for i, c in enumerate(s):
+		if c == '(':
+			stack.append(i)
+		elif c == ')':
+			try:
+				stack.pop()
+			except IndexError:
+				# This little guy is an unmatched closing bracket, abandon ship:
+				return -1
+	try:
+		return stack.pop() + 1
+	except IndexError:
+		return -1
+
+indent_to = last_unmathed_paren_pos(context.group(0))
+if indent_to == -1:
+	# Indent the same as previous line. Yes this is scary but it's apparently
+	# faster than doing itertools.takewhile
+	# https://stackoverflow.com/a/17089248/2383252
+	indent_to = len(context.group(0)) - len(context.group(0).lstrip())
+
+snip.rv = " " * indent_to
+`${1:`!p
+# TODO get the \w+ at indent_to
+snip.rv = re.match("\w+", context.group(0)[indent_to:]).group(0)
+`}$2
+endsnippet
+
+# If the line above ends with a dot, make another fact.
+snippet /^$/ "copy-fact" "re.match('^.*\((.*)\).$', snip.buffer[snip.line-1])" re
+`!p
+snip.rv = re.match("\w+", context.group(0)).group(0)
+`(${1:`!p
+snip.rv = context.group(1)
+`}).
 endsnippet
 
 # ||
@@ -58,6 +103,7 @@ endsnippet
 
 priority -3
 
+# TODO end with comma if the line below is indented
 snippet  /^\s*([\!:\w=-]+)$/ "expand-any-word-endline" rw
 `!p
 if match.group(0) is not None:
