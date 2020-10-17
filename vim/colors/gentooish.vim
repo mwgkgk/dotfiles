@@ -112,7 +112,7 @@ else
     hi DiffChange     term=bold ctermbg=54
     hi DiffDelete     term=bold ctermfg=252 ctermbg=95
     hi DiffText       term=reverse ctermfg=16 ctermbg=77
-    hi SignColumn     term=standout ctermfg=51 ctermbg=250
+    hi SignColumn     term=none ctermfg=51 ctermbg=234
     hi TabLine        term=underline cterm=underline ctermbg=248
     hi TabLineSel     term=bold cterm=bold
     hi TabLineFill    term=reverse ctermfg=234 ctermbg=252
