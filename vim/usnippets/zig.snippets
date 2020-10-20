@@ -74,8 +74,12 @@ snippet re "return" w
 return$0
 endsnippet
 
-snippet p "warn" w
+snippet w "warn" w
 std.debug.warn("\n${2:$1 == \{\}}\n", .{${1:x}});
+endsnippet
+
+snippet p "print" w
+stdout.print("\n${2:$1 == \{\}}\n", .{${1:x}});
 endsnippet
 
 snippet t "test" b
