@@ -30,9 +30,9 @@
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
-" let s:static_colo = 'shenzhen'
+let s:static_colo = 'shenzhen'
 
-let s:static_colo = 'gentooish'
+" let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
