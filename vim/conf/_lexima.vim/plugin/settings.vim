@@ -37,7 +37,7 @@ let g:_lexima#default_rules += [
 \ {'char': "'", 'at': '\w\%#''\@!'},
 \ {'char': "'", 'at': '\\\%#'},
 \ {'char': "'", 'at': '\\\%#', 'leave': 1, 'filetype': ['vim', 'sh', 'csh', 'ruby', 'tcsh', 'zsh']},
-\ {'char': "'", 'filetype': ['haskell', 'lisp', 'lfe', 'clojure', 'ocaml', 'reason', 'scala', 'rust', 'jiv', 'mj']},
+\ {'char': "'", 'filetype': ['haskell', 'lisp', 'lfe', 'scheme', 'clojure', 'ocaml', 'reason', 'scala', 'rust', 'jiv', 'mj']},
 \ {'char': '<BS>', 'at': "'\\%#'", 'delete': 1},
 \ {'char': "'", 'at': "''\\%#", 'input_after': "'''"},
 \ {'char': "'", 'at': "\\%#'''", 'leave': 3},
