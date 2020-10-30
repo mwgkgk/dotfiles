@@ -1,3 +1,3 @@
-if executable('icyc')
-  call neoterm#repl#set('icyc')
+if executable('scheme')
+  call neoterm#repl#set('scheme')
 endif
