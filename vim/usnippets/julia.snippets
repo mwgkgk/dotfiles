@@ -1,3 +1,7 @@
+# ||
+# || Date
+# ||
+
 snippet / *d(a)?(te)?/ "Date" rb
 ## `date-utc` ##
 
@@ -8,13 +12,36 @@ snippet dd "inline date" w
 `!v system('date +"%Y-%m-%d" | tr -d "\n"')`: ${0}
 endsnippet
 
+# ||
+# || Modules
+# ||
+
 snippet mod "mod" b
 module $1
+
+using Test: @test
 
 $2
 
 end
 endsnippet
+
+snippet u "using" b
+using ${1:Test: @test}$2
+endsnippet
+
+# ||
+# || Structs
+# ||
+
+snippet struct "struct" w
+struct $1
+end
+endsnippet
+
+# ||
+# || Functions
+# ||
 
 snippet f "f" b
 function ${1:f}($2)
@@ -22,20 +49,45 @@ function ${1:f}($2)
 end
 endsnippet
 
-snippet b "BASEMENT" b
-if false
-	$1
-end
+snippet comp "comp" w
+∘($1, $2)
 endsnippet
+
+# ||
+# || Testing
+# ||
+
+# If line above is empty, @test:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+@test ${VISUAL}${1:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+endsnippet
+
+# If line above is @test, @test:
+snippet /^$/ "basement-implicit" "re.match('^@test.*', snip.buffer[snip.line-1])" re
+@test ${VISUAL}${1:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+endsnippet
+
+snippet t "testset" b
+@testset "${1:Subject}" begin
+	$2
+end$0
+endsnippet
+
+# ||
+# || Control flow
+# ||
 
 snippet do "do" w
 do ${1:element}
 	$2
-end
-endsnippet
-
-snippet struct "struct" w
-struct $1
 end
 endsnippet
 
@@ -44,13 +96,29 @@ if $1
 end
 endsnippet
 
-snippet comp "comp" w
-∘($1, $2)
-endsnippet
+# ||
+# || Printing
+# ||
 
 snippet p "println" w
 println(${2:"$${1:a"})
 endsnippet
+
+# } higlighting bug
+
+# ||
+# || Basement
+# ||
+
+snippet b "BASEMENT" b
+if false
+	$1
+end
+endsnippet
+
+# ||
+# || Fallbacks
+# ||
 
 priority -3
 
