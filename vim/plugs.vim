@@ -602,6 +602,12 @@ let g:cycle_default_groups += [
 let g:cycle_default_groups += [
             \ [['pub fn', 'fn']],
             \ ]
+
+"  -- Julia
+let g:cycle_default_groups += [
+            \ [['@test', '@test_throws']],
+            \ ]
+
 " }}}
 
 " }}}
