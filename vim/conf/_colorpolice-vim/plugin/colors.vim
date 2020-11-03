@@ -3,7 +3,7 @@
 " }}}
 
 " let s:static_colo = 'industry'
-let s:static_colo = 'heavy-industry'
+" let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
@@ -60,7 +60,7 @@ let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'outsider'
 " let s:static_colo = 'alduin'
 
-" let s:static_colo = 'apples'
+let s:static_colo = 'apples'
 " let s:static_colo = 'github'
 " let s:static_colo = 'pink'
 
