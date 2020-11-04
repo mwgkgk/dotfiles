@@ -413,7 +413,7 @@ nnoremap <C-p> :cp<CR>
 " Preview Window
 "
 
-nnoremap <silent> <LocalLeader><LocalLeader> :pclose<CR>
+nnoremap <silent> <LocalLeader>c :pclose<CR>
 
 "
 "
