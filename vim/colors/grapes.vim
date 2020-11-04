@@ -38,7 +38,7 @@ hi CursorLineNr    ctermbg=234    cterm=bold ctermfg=70
 
 hi Folded          ctermfg=213    ctermbg=bg
 hi FoldColumn      ctermfg=213    ctermbg=238
-hi SignColumn      ctermfg=79     ctermbg=238
+hi SignColumn      ctermfg=79     ctermbg=234
 hi ColorColumn     ctermfg=fg     ctermbg=235
 
 hi Pmenu           ctermfg=fg     ctermbg=237
