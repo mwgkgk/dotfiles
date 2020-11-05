@@ -22,3 +22,6 @@ nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
 
 " Dup
 nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
+
+" Reload
+nnoremap <buffer> <LocalLeader>r :silent T "<C-r>=expand('%:t:r')<CR>" reload<CR>
