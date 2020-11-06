@@ -28,3 +28,14 @@ endsnippet
 snippet t "test" b
 { ${1:t} } [ ${VISUAL}$2 ] unit-test
 endsnippet
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+/*
+${VISUAL}${1:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+*/
+endsnippet
