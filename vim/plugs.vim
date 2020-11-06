@@ -232,9 +232,10 @@ xmap A <Plug>(textobj-entire-a)
 omap A <Plug>(textobj-entire-a)
 " }}}
 
-Plug 'kana/vim-textobj-function'
+" Borken atm
+" Plug 'kana/vim-textobj-function'
 " Fallback for vim-textobj-function using syntax definitions:
-Plug 'haya14busa/vim-textobj-function-syntax'
+" Plug 'haya14busa/vim-textobj-function-syntax'
 
 Plug 'thinca/vim-textobj-between' " {{{
 let g:textobj_between_no_default_key_mappings = 1
