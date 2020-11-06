@@ -25,3 +25,6 @@ nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
 
 " Reload
 nnoremap <buffer> <LocalLeader>r :silent T "<C-r>=expand('%:t:r')<CR>" reload<CR>
+
+" USE
+nnoremap <buffer> <LocalLeader>r :silent T USE: <C-r>=expand('%:t:r')<CR><CR>
