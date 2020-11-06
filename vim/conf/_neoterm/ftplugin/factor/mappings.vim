@@ -28,3 +28,7 @@ nnoremap <buffer> <LocalLeader>r :silent T "<C-r>=expand('%:t:r')<CR>" reload<CR
 
 " USE
 nnoremap <buffer> <LocalLeader>u :silent T USE: <C-r>=expand('%:t:r')<CR><CR>
+
+" Test
+" TODO %s the -tests$ away
+nnoremap <buffer> <LocalLeader>t :silent T "<C-r>=expand('%:t:r')<CR>" test<CR>
