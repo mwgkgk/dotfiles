@@ -7,6 +7,9 @@ nnoremap <buffer> <LocalLeader>s :silent T .s<CR>
 " .
 nnoremap <buffer> <LocalLeader>. :silent T .<CR>
 
+" Clear
+nnoremap <buffer> <LocalLeader>c :silent T clearstack<CR>
+
 " Drop
 nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
 
