@@ -1,0 +1,30 @@
+# ||
+# || Date
+# ||
+
+snippet /^ *d(a)?(te)?/ "Date" rb
+\ `date-utc`
+$0
+endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet \ "comment-explicit" w
+\ ${VISUAL}$0
+endsnippet
+
+# ||
+# || Words
+# ||
+
+snippet w "word" b
+: ${1:word} ( ${2:x} -- ${3:?} ) ${4:.s} ;
+endsnippet
+
+snippet /^$/ "word-implicit" rb
+: ${1:word} ( $2-- $3) ${4:`!p
+if not snip.v.text:
+	snip.rv = ".s"`} ;
+endsnippet
