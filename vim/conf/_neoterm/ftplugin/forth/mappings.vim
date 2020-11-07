@@ -15,3 +15,6 @@ nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
 
 " Dup
 nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
+
+" <C-g> to see word
+nnoremap <buffer> <C-g> :silent T see <C-r><C-a><CR>
