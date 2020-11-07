@@ -25,11 +25,11 @@ nnoremap <silent> <Leader><Space>gN :call _neoterm#open#jump('above', 'vert')<CR
 
 " New 33% terminal window:
 
-" nnoremap <silent> <Leader><Space>v :exec 'term ++rows=' . winheight(0)/4<CR>
-nnoremap <silent> <Leader><Space>v :call _neoterm#open#small('below', '')<CR>
+" nnoremap <silent> <Leader><Space>V :exec 'term ++rows=' . winheight(0)/4<CR>
+nnoremap <silent> <Leader><Space>V :call _neoterm#open#small('below', '')<CR>
 
-" nnoremap <silent> <Leader><Space>V :exec 'vert term ++cols=' . winwidth(0)/4<CR>
-nnoremap <silent> <Leader><Space>V :call _neoterm#open#small('below', 'vert')<CR>
+" nnoremap <silent> <Leader><Space>v :exec 'vert term ++cols=' . winwidth(0)/4<CR>
+nnoremap <silent> <Leader><Space>v :call _neoterm#open#small('below', 'vert')<CR>
 
 " New 33% terminal above/to the left:
 
