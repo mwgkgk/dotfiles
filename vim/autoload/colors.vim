@@ -46,6 +46,8 @@ function! colors#chi_colo(chi, static_colo)
         return 'deepblue'
     elseif a:chi ==# 'silk'
         return a:static_colo
+    elseif a:chi ==# 'will'
+        return a:static_colo
     elseif a:chi ==# 'smuggler'
         return a:static_colo
     elseif a:chi ==# 'outlaw'
