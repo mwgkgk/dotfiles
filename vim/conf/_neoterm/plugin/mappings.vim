@@ -51,17 +51,18 @@ nnoremap <F9> :rightbelow T make<CR>
 " || Send
 " ||
 
-nnoremap <silent> X :TREPLSendLine<CR>
-vnoremap <silent> X :TREPLSendSelection<CR>
+" Move shit to individual filetypes, because blanket send to repl is bad.
+" nnoremap <silent> X :TREPLSendLine<CR>
+" vnoremap <silent> X :TREPLSendSelection<CR>
 
-" TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
-" nnoremap <Space>X :TREPLSendFile<CR>
+" " TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
+" " nnoremap <Space>X :TREPLSendFile<CR>
 
-" The latter is for visual, and duplicates :TREPLSendSelection. Big hmm.
-nmap <Leader>x <Plug>(neoterm-repl-send)
-xmap <Leader>x <Plug>(neoterm-repl-send)
+" " The latter is for visual, and duplicates :TREPLSendSelection. Big hmm.
+" nmap <Leader>x <Plug>(neoterm-repl-send)
+" xmap <Leader>x <Plug>(neoterm-repl-send)
 
-nmap <Leader>X <Plug>(neoterm-repl-send-line)
+" nmap <Leader>X <Plug>(neoterm-repl-send-line)
 
 " Enter your own stuff
 nnoremap <LocalLeader><LocalLeader> :T<Space>
