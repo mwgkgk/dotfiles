@@ -18,3 +18,6 @@ nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
 
 " <C-g> to see word
 nnoremap <buffer> <C-g> :silent T see <C-r><C-a><CR>
+
+" g<C-g> to simple-see word
+nnoremap <buffer> g<C-g> :silent T simple-see <C-r><C-a><CR>
