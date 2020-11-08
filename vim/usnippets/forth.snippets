@@ -7,6 +7,13 @@ snippet /^ *d(a)?(te)?/ "Date" rb
 $0
 endsnippet
 
+# TODO make this implicit on tab
+snippet da "implicit-date-file-start" "snip.line == 0" e
+\ `date-utc`
+
+$0
+endsnippet
+
 # ||
 # || Comments
 # ||
@@ -15,11 +22,16 @@ snippet \ "comment-explicit" w
 \ ${VISUAL}$0
 endsnippet
 
-snippet /^$/ "basement-implicit" rb
+priority -1
+
+# See UltiSnips-custom-context-snippets
+snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
 /*
 ${VISUAL}$0
 */
 endsnippet
+
+priority 0
 
 # ||
 # || Words
