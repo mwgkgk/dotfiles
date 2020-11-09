@@ -1,0 +1,19 @@
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+\\\\ `date-utc`
+${0}
+endsnippet
+
+# ||
+# || Define
+# ||
+
+snippet "(\()?\bf" "define" rw
+(define ${1:name}
+	${2:false}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
