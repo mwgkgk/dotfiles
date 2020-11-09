@@ -1174,6 +1174,9 @@ Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
 " Racket
 Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
 
+" Shen
+Plug 'nimaai/vim-shen', { 'for' : 'shen' }
+
 " Julia
 Plug '~/.vim/conf/_julia-vim/', { 'for' : 'julia' }
 Plug 'JuliaEditorSupport/julia-vim', { 'for' : 'julia' }
