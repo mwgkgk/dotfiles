@@ -3,8 +3,9 @@
 " || Highlighting
 " ||
 
-hi link SignatureMarkText SignColumn
-hi link SignatureMarkerText SignColumn
+" Temporarily disable because some light colorschemes misbehave
+" hi link SignatureMarkText SignColumn
+" hi link SignatureMarkerText SignColumn
 
 " ||
 " || Mappings
