@@ -104,6 +104,16 @@ if $1
 end
 endsnippet
 
+snippet for "for" w
+for ${1:x} in ${2:ARGS}
+	${VISUAL}${3:`!p
+
+if not snip.v.text:
+	snip.rv = "0"
+`}
+end
+endsnippet
+
 # ||
 # || Printing
 # ||
