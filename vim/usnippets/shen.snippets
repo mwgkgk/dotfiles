@@ -17,3 +17,7 @@ snippet "(\()?\bf" "define" rw
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
+
+snippet l "[_ | _]" w
+[${1:_} | ${2:_}]$3
+endsnippet
