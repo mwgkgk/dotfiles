@@ -85,7 +85,7 @@
 " let s:static_colo = 'seoul256'
 
 " let s:static_colo = 'solarized-light'
-" let s:static_colo = 'gruvbox-light'
+let s:static_colo = 'gruvbox-light'
 " let s:static_colo = 'acme'
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
@@ -98,7 +98,7 @@
 " let s:static_colo = 'ufo'
 
 " let s:static_colo = 'lucius-light'
-let s:static_colo = 'hybrid-light'
+" let s:static_colo = 'hybrid-light'
 
 " let s:static_colo = 'lucius-dark'
 " let s:static_colo = 'luciusmod'
