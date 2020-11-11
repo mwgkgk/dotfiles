@@ -21,7 +21,7 @@
 " let s:static_colo = 'grapes'
 " let s:static_colo = 'jellyfish'
 
-" let s:static_colo = 'farout'
+let s:static_colo = 'farout'
 " let s:static_colo = 'autumn'
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
@@ -85,7 +85,7 @@
 " let s:static_colo = 'seoul256'
 
 " let s:static_colo = 'solarized-light'
-let s:static_colo = 'gruvbox-light'
+" let s:static_colo = 'gruvbox-light'
 " let s:static_colo = 'acme'
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
