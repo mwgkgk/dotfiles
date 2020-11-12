@@ -32,3 +32,19 @@ nnoremap <buffer> <LocalLeader>u :silent T USE: <C-r>=expand('%:t:r')<CR><CR>
 " Test
 " TODO %s the -tests$ away
 nnoremap <buffer> <LocalLeader>t :silent T "<C-r>=expand('%:t:r')<CR>" test<CR>
+
+" ||
+" || Send
+" ||
+
+nnoremap <silent> <buffer> X :TREPLSendLine<CR>
+vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
+
+" TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
+" nnoremap <Space>X :TREPLSendFile<CR>
+
+" The latter is for visual, and duplicates :TREPLSendSelection. Big hmm.
+nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
+xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
+
+nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
