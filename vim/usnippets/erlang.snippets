@@ -7,6 +7,15 @@ snippet / *d(a)?(te)?/ "Date" rb
 ${0}
 endsnippet
 
+# ||
+# || Basement
+# ||
+
+# See UltiSnips-custom-context-snippets
+snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
+% ${VISUAL}$0
+endsnippet
+
 snippet pat "Case:Receive:Try Clause"
 ${1:pattern}${2: when ${3:guard}} ->;
 	${4:body}
