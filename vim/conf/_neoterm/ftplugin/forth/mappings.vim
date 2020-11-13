@@ -1,5 +1,5 @@
 " Run repl
-nnoremap <buffer> <silent> <Leader>r :call _neoterm#open#small('above', '') <Bar> :silent T gforth<CR>
+nnoremap <buffer> <silent> <Leader>r :call _neoterm#open#small('above', '') <Bar> :silent T gf<CR>
 
 " Stack
 nnoremap <buffer> <LocalLeader>s :silent T .s<CR>
