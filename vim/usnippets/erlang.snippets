@@ -1,6 +1,11 @@
-###########################################################################
-#                            TEXTMATE SNIPPETS                            #
-###########################################################################
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+%% `date-utc` %%
+${0}
+endsnippet
 
 snippet pat "Case:Receive:Try Clause"
 ${1:pattern}${2: when ${3:guard}} ->;
