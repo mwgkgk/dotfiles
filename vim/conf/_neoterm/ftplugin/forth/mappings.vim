@@ -1,26 +1,9 @@
+" ||
+" || REPL control
+" ||
+
 " Run repl
-nnoremap <buffer> <silent> <Leader>r :call _neoterm#open#small('above', '') <Bar> :silent T gf<CR>
-
-" Stack
-nnoremap <buffer> <LocalLeader>s :silent T .s<CR>
-
-" .
-nnoremap <buffer> <LocalLeader>. :silent T .<CR>
-
-" Clear
-nnoremap <buffer> <LocalLeader>c :silent T clearstack<CR>
-
-" Drop
-nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
-
-" Dup
-nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
-
-" <C-g> to see word
-nnoremap <buffer> <C-g> :silent T see <C-r><C-a><CR>
-
-" g<C-g> to simple-see word
-nnoremap <buffer> g<C-g> :silent T simple-see <C-r><C-a><CR>
+nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T gf<CR>
 
 " ||
 " || Send
@@ -37,3 +20,58 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
+
+" ||
+" || C-q
+" ||
+
+inoremap <silent> <buffer> <C-q><C-q> <Esc>:TREPLSendLine<CR>a
+
+inoremap <buffer> <C-q><C-w> <Esc>:silent T <C-r><C-a><CR>a
+nnoremap <buffer> <C-q><C-w> <Esc>:silent T <C-r><C-a><CR>
+
+" To be continued...
+inoremap <buffer> <C-q>2 <Esc>vBBy:silent T <C-r>"<CR>gi
+inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
+
+" ||
+" || See
+" ||
+
+" <C-g> to see word
+nnoremap <buffer> <C-g> :silent T see <C-r><C-a><CR>
+
+" g<C-g> to simple-see word
+nnoremap <buffer> g<C-g> :silent T simple-see <C-r><C-a><CR>
+
+" g<Space><C-g> to help word
+nnoremap <buffer> g<Space><C-g> :silent T help <C-r><C-a><CR>
+
+" ||
+" || Stack
+" ||
+
+" Stack
+nnoremap <buffer> <LocalLeader>s :silent T .s<CR>
+inoremap <buffer> <C-q>s <Esc>:silent T .s<CR>a
+
+" Clear
+nnoremap <buffer> <LocalLeader>c :silent T clearstack<CR>
+inoremap <buffer> <C-q>c <Esc>:silent T clearstack<CR>a
+
+" ||
+" || Drop
+" ||
+
+" .
+nnoremap <buffer> <LocalLeader>. :silent T .<CR>
+
+" Drop
+nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
+
+" ||
+" || Dup
+" ||
+
+" Dup
+nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
