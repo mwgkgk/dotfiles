@@ -1148,6 +1148,11 @@ let g:filetype_pl = 'prolog'
 Plug 'adimit/prolog.vim'
 
 " Mercury
+" This is needed to resolve conflict. see vim/runtime/autoload/dist/ft.vim,
+" dist#ft#FTm().
+" TODO push the fix to vim/runtime/autoload/dist/ft.vim upstream
+let g:filetype_m = 'mercury'
+
 Plug 'stewy33/mercury-vim'
 
 " Sxhkd
