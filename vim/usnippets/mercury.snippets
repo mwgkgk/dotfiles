@@ -1,0 +1,48 @@
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+% `date-utc`
+${0}
+endsnippet
+
+# ||
+# || Module
+# ||
+
+snippet m "module" w
+:- module ${1:`!p
+snip.rv = snip.basename
+`}.
+:- interface.
+$2
+:- implementation.
+$3
+endsnippet
+
+snippet u "use_module" w
+:- use_module ${1:io}.
+endsnippet
+
+snippet i "import_module" w
+:- import_module ${1:io}.
+endsnippet
+
+# ||
+# || Types
+# ||
+
+snippet t "t" b
+:- type ${1:days}
+	--->	$2
+	;		$3.
+endsnippet
+
+# ||
+# || Printing
+# ||
+
+snippet p "print" w
+io.write_string("${1:Hello, world!}\n", !IO)
+endsnippet
