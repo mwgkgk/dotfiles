@@ -1128,8 +1128,9 @@ Plug '~/shop/oil/borzhch'
 
 
 " Many languages
-Plug 'sheerun/vim-polyglot' " {{{
-let g:polyglot_disabled = ['markdown', 'racket']
+" TODO Contribute to fix mercury-octave ft on write bug
+" Plug 'sheerun/vim-polyglot' " {{{
+" let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
 " Golang
