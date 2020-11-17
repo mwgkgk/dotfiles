@@ -121,6 +121,14 @@ snippet defs "defstruct" b
 defstruct ${1:name}: ${2:nil}
 endsnippet
 
+snippet m "defmacro" b
+defmacro ${1:name}($2) do
+	quote do
+		$3
+	end
+end
+endsnippet
+
 snippet vers "vers" b
 def version() do
 	"${1:0.0.1}"
