@@ -1146,6 +1146,9 @@ let g:filetype_pl = 'prolog'
 
 Plug 'adimit/prolog.vim'
 
+" Mercury
+Plug 'stewy33/mercury-vim'
+
 " Sxhkd
 Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 
