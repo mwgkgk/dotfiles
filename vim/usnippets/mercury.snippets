@@ -12,13 +12,13 @@ endsnippet
 # ||
 
 snippet m "module" w
-:- module ${1:`!p
+:- module `!p
 snip.rv = snip.basename
-`}.
+`.
 :- interface.
-$2
+$1
 :- implementation.
-$3
+$2
 endsnippet
 
 snippet u "use_module" w
