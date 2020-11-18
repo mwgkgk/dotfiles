@@ -39,10 +39,14 @@ snippet t "t" b
 	;		$3.
 endsnippet
 
+snippet p "pred" w
+:- pred ${1:name}($2) is ${3:det}.
+endsnippet
+
 # ||
 # || Printing
 # ||
 
-snippet p "print" w
+snippet pr "print" w
 io.write_string("${1:Hello, world!}\n", !IO)
 endsnippet
