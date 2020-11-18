@@ -35,8 +35,8 @@ endsnippet
 
 snippet t "t" b
 :- type ${1:days}
-	--->	$2
-	;		$3.
+	--->    $2
+	;       $3.
 endsnippet
 
 snippet p "pred" w
@@ -46,6 +46,16 @@ endsnippet
 # ||
 # || Functions
 # ||
+
+snippet f "func" b
+:- func ${1:name}(${2:type}) = ${3:type}.
+$1(${4:$2}) = $5.
+endsnippet
+
+snippet c "constant" b
+:- func ${1:name} = ${2:type}.
+$1 = $3.
+endsnippet
 
 snippet main "main" b
 main(!IO) :-
