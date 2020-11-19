@@ -39,3 +39,4 @@ inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
 " ||
 
 nnoremap <buffer> <C-g> :silent T help <C-r><C-a><CR>
+nnoremap <buffer> g<C-g> :silent T source <C-r><C-a><CR>
