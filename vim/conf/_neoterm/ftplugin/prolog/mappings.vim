@@ -3,10 +3,11 @@
 " ||
 
 " Open repl with file
-nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T swipl <C-r>=expand('%')<CR><CR>
+nnoremap <buffer> <LocalLeader>r :call _neoterm#prolog_repl#join("<C-r>=expand('%:h')<CR>", "<C-r>=expand('%:t')<CR>")<CR>
 
-" nnoremap <buffer> <Leader>r :silent T make.<CR>
-nnoremap <buffer> <Leader>r :silent T make, run_tests.<CR>
+nnoremap <buffer> <LocalLeader>q :call _neoterm#prolog_repl#quit()<CR>
+
+nnoremap <buffer> <Leader>r :call _neoterm#prolog_repl#send('make, run_tests.')<CR>
 
 " TODO nnoremap <buffer> <silent> X 0f<Space>v$:TREPLSendSelection<CR>
 " Problem lies in it only being usable on comment lines.
