@@ -3,7 +3,7 @@
 " ||
 
 " Open repl with file
-nnoremap <buffer> <LocalLeader>r :silent above T swipl <C-r>=expand('%')<CR><CR>
+nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T swipl <C-r>=expand('%')<CR><CR>
 
 nnoremap <buffer> <Leader>r :silent T make.<CR>
 
