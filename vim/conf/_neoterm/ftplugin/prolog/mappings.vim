@@ -24,11 +24,14 @@ nnoremap <buffer> <LocalLeader><Leader> :silent T n<CR>
 " || Restarts
 " ||
 
-nnoremap <buffer> <LocalLeader>1 :silent T :1<CR>
-nnoremap <buffer> <LocalLeader>2 :silent T :2<CR>
-nnoremap <buffer> <LocalLeader>3 :silent T :3<CR>
-nnoremap <buffer> <LocalLeader>4 :silent T :4<CR>
-nnoremap <buffer> <LocalLeader>5 :silent T :5<CR>
+nnoremap <buffer> <LocalLeader>1 :silent T 1<CR>
+nnoremap <buffer> <LocalLeader>2 :silent T 2<CR>
+nnoremap <buffer> <LocalLeader>3 :silent T 3<CR>
+nnoremap <buffer> <LocalLeader>4 :silent T 4<CR>
+nnoremap <buffer> <LocalLeader>5 :silent T 5<CR>
+
+nnoremap <buffer> <LocalLeader>n :silent T n<CR>
+nnoremap <buffer> <LocalLeader>q :silent T q<CR>
 
 " ||
 " || Send
