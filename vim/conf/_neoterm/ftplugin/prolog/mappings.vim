@@ -60,10 +60,11 @@ inoremap <buffer> <C-q>2 <Esc>vBBy:silent T <C-r>"<CR>gi
 inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
 
 " ||
-" || Listing
+" || Help
 " ||
 
 nnoremap <buffer> <C-g> :silent T listing(<C-r><C-w>).<CR>
+nnoremap <buffer> g<C-g> :silent T help(<C-r><C-w>).<CR>
 
 
 " TODO assert
