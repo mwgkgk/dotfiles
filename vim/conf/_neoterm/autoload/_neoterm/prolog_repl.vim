@@ -3,7 +3,7 @@ function! _neoterm#prolog_repl#join(dir, file)
         silent! execute ":T ['" . a:file . "']."
     else
         call _neoterm#open#small('above', '')
-        silent! execute ':T cd ' . a:dir . '&& swipl -s ' . a:file
+        silent! execute ':T cd ' . a:dir . ' ; and swipl -s ' . a:file
         let g:_neoterm#prolog_repl#active = 1
     endif
 endfunction
