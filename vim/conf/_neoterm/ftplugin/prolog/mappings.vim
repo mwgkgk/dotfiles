@@ -47,3 +47,9 @@ nnoremap <buffer> <C-q><C-w> <Esc>:silent T <C-r><C-a><CR>
 " To be continued...
 inoremap <buffer> <C-q>2 <Esc>vBBy:silent T <C-r>"<CR>gi
 inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
+
+" ||
+" || Listing
+" ||
+
+nnoremap <buffer> <C-g> :silent T listing(<C-r><C-w>).<CR>
