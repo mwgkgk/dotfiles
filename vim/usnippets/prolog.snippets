@@ -97,6 +97,12 @@ ${1:thinks}(${2:X}) :-
 	${3:exists}(${4:$2})$5.
 endsnippet
 
+snippet /(^.*):$/ "expand-colon-as-rule" r
+`!p
+snip.rv = match.group(1)` :-
+	$1
+endsnippet
+
 # TODO Rule with 1,2,3 variables
 
 snippet ) "conjunction" i
