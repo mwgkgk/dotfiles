@@ -53,3 +53,6 @@ inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
 " ||
 
 nnoremap <buffer> <C-g> :silent T listing(<C-r><C-w>).<CR>
+
+
+" TODO assert
