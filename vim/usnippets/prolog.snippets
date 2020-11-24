@@ -30,6 +30,14 @@ if not snip.v.text:
 */
 endsnippet
 
+snippet dab "dab" w
+% `date-utc`
+
+/*
+${VISUAL}$0
+*/
+endsnippet
+
 # If the line above ends with comma, indent to the last unclosed paren:
 snippet /^$/ "indent-comma" "re.match('^.*,$', snip.buffer[snip.line-1])" re
 ${VISUAL}`!p
