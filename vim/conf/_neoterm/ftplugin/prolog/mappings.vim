@@ -51,6 +51,9 @@ xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
 
+" Send-and-exit-insert-mode
+inoremap <M-.> .<Esc>:TREPLSendLine<CR>
+
 " ||
 " || C-q
 " ||
