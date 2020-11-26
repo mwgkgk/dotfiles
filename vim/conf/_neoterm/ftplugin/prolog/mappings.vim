@@ -5,7 +5,7 @@
 " Open repl with file
 nnoremap <buffer> <LocalLeader>r :call _neoterm#prolog_repl#join("<C-r>=expand('%:h')<CR>", "<C-r>=expand('%:t')<CR>")<CR>
 
-nnoremap <buffer> <LocalLeader>q :call _neoterm#prolog_repl#quit()<CR>
+nnoremap <buffer> <LocalLeader>Q :call _neoterm#prolog_repl#quit()<CR>
 
 nnoremap <buffer> <Leader>r :call _neoterm#prolog_repl#send('make, run_tests.')<CR>
 
