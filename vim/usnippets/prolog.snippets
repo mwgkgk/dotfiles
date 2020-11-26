@@ -22,8 +22,7 @@ endsnippet
 # If line above is empty, basement:
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
 /*
-`!p
-snip.rv = ' '`${VISUAL}${1:`!p
+ ${VISUAL}${1:`!p
 
 if not snip.v.text:
 	snip.rv = ""
