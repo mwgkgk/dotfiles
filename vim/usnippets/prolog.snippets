@@ -114,9 +114,11 @@ endsnippet
 
 # TODO Rule with 1,2,3 variables
 
-snippet ) "conjunction" i
-),
-${1:exists}(${2:X})
+snippet /(^.*),$/ "expand-comma-as-same-term" r
+`!p
+snip.rv = match.group(1)`,
+${1:`!p
+snip.rv = match.group(1)`}
 endsnippet
 
 # ||
