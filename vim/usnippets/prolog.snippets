@@ -34,8 +34,12 @@ snippet dab "dab" w
 % `date-utc`
 
 /*
-${VISUAL}$0
-*/
+ ${VISUAL}${1:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+ */
 endsnippet
 
 # If the line above ends with comma, indent to the last unclosed paren:
