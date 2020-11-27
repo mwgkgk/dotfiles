@@ -168,4 +168,5 @@ hooks, file_search_path/2, set_prolog_flag/2 and portray/1.
 
 % To work embedded in Neoterm, for TREPLSendLine and friends, we need the
 % inputs to terminate with <CR>.
+% TODO This fails: No permission to modify static procedure
 set_prolog_flag(tty_control, false).
