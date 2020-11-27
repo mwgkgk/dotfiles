@@ -92,6 +92,7 @@ verbose_link "$DOTFILES/repl/profiles.clj" ~/.lein/profiles.clj
 verbose_link "$DOTFILES/repl/.iex.exs" ~/.iex.exs
 verbose_link "$DOTFILES/repl/.lambda-term-inputrc" ~/.lambda-term-inputrc
 verbose_link "$DOTFILES/repl/.minrc" ~/.minrc
+verbose_link "$DOTFILES/repl/init.pl" ~/.config/swi-prolog/init.pl
 
 # Cmus
 verbose_link "$DOTFILES/cmus/rc" ~/.config/cmus/rc
