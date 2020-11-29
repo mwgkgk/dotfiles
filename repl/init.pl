@@ -78,7 +78,7 @@ hooks, file_search_path/2, set_prolog_flag/2 and portray/1.
 %	If you want to suppress printing toplevel query variables
 %	starting with an `_'
 
-% :- set_prolog_flag(toplevel_print_anon, false).
+:- set_prolog_flag(toplevel_print_anon, true).
 
 %	If you do not want the tracer to stop at at the exit port.
 
