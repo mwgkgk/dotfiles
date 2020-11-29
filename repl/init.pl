@@ -128,7 +128,7 @@ hooks, file_search_path/2, set_prolog_flag/2 and portray/1.
 %	each file), `brief` (feedback  at  end   of  toplevel  file) and
 %	`silent` (no feedback).
 
-% :- set_prolog_flag(verbose_load, silent).
+:- set_prolog_flag(verbose_load, full).
 
 
 		 /*******************************
