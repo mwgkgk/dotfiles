@@ -15,7 +15,7 @@ nnoremap <buffer> <Leader>r :call _neoterm#prolog_repl#send('make, run_tests.')<
 " Unfortunately this includes a caret return, and Neoterm doesn't support
 " otherwise. Hence this is only superficially useful in enumerating results.
 " Fixed: set_prolog_flag(tty_control, false).
-nnoremap <buffer> <LocalLeader><Leader> :silent T n<CR>
+nnoremap <buffer> <LocalLeader><Leader> :silent T ;<CR>
 
 " TODO use tab-wide t:termbufnr, or scout for neoterm api to get bufnr
 " nnoremap <buffer> <LocalLeader><Leader> :call term_sendkeys("n")<CR>
