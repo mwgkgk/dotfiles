@@ -26,6 +26,19 @@ nnoremap <buffer> <LocalLeader>n :silent T n<CR>
 nnoremap <buffer> <LocalLeader>q :silent T q<CR>
 
 " ||
+" || Debugger
+" ||
+
+nnoremap <buffer> <LocalLeader>h :silent T h<CR>
+nnoremap <buffer> <LocalLeader>c :silent T c<CR>
+nnoremap <buffer> <LocalLeader>a :silent T a<CR>
+
+nnoremap <buffer> <LocalLeader>u :silent T u<CR>
+nnoremap <buffer> <LocalLeader>l :silent T l<CR>
+nnoremap <buffer> <LocalLeader>s :silent T s<CR>
+nnoremap <buffer> <LocalLeader>A :silent T A<CR>
+
+" ||
 " || Restarts
 " ||
 
