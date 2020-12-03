@@ -287,6 +287,9 @@ Plug 'arthurxavierx/vim-caser' " gsc, gss, gsk, ...
 
 Plug 'tommcdo/vim-exchange'
 
+Plug '~/.vim/conf/_sideways.vim/'
+Plug 'AndrewRadev/sideways.vim'
+
 Plug 'tyru/operator-star.vim' " {{{
 nmap <Leader>*  <Plug>(operator-*)
 nmap <Leader>g* <Plug>(operator-g*)
