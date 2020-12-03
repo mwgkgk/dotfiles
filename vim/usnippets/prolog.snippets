@@ -20,7 +20,7 @@ endsnippet
 # ||
 
 snippet m "module" b
-:- module(${1:`!v expand("%:t:r")`}).
+:- module(${0:`!v expand("%:t:r")`}).
 endsnippet
 
 # ||
@@ -30,7 +30,7 @@ endsnippet
 # If line above is empty, basement:
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
 /*
-${VISUAL}${1:`!p
+${VISUAL}${0:`!p
 
 if not snip.v.text:
 	snip.rv = ""
@@ -42,7 +42,7 @@ snippet dab "dab" w
 % `date-utc`
 
 /*
-${VISUAL}${1:`!p
+${VISUAL}${0:`!p
 
 if not snip.v.text:
 	snip.rv = ""
@@ -78,7 +78,7 @@ if indent_to == -1:
 	indent_to = len(context.group(0)) - len(context.group(0).lstrip())
 
 snip.rv = " " * indent_to
-`${1:`!p
+`${0:`!p
 # TODO get the \w+ at indent_to
 snip.rv = re.match("\w+", context.group(0)[indent_to:]).group(0)
 `}$2
@@ -88,7 +88,7 @@ endsnippet
 snippet /^$/ "copy-fact" "re.match('^.*\((.*)\).$', snip.buffer[snip.line-1])" re
 `!p
 snip.rv = re.match("\w+", context.group(0)).group(0)
-`(${1:`!p
+`(${0:`!p
 snip.rv = context.group(1)
 `}).
 endsnippet
@@ -120,7 +120,7 @@ endsnippet
 snippet /(^.*):$/ "expand-colon-as-rule" r
 `!p
 snip.rv = match.group(1)` :-
-	$1
+	$0
 endsnippet
 
 # TODO Rule with 1,2,3 variables
@@ -128,7 +128,7 @@ endsnippet
 snippet /(^.*),$/ "expand-comma-as-same-term" r
 `!p
 snip.rv = match.group(1)`,
-${1:`!p
+${0:`!p
 snip.rv = match.group(1)`}
 endsnippet
 
@@ -154,7 +154,7 @@ priority -3
 snippet  /^\s*([\!:\w=-]+)$/ "expand-any-word-endline" rw
 `!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)`($1)`!p
+	snip.rv = match.group(0)`($0)`!p
 
 def next_line_is_indented():
 	# Somehow this is next line. Don't ask.
@@ -176,5 +176,5 @@ priority -4
 snippet  /([\!:\w=-]+)/ "expand-any-word" rw
 `!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)`($1)
+	snip.rv = match.group(0)`($0)
 endsnippet
