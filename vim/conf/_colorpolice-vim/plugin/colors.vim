@@ -22,6 +22,7 @@
 " let s:static_colo = 'jellyfish'
 
 " let s:static_colo = 'farout'
+let s:static_colo = 'fahrenheit'
 " let s:static_colo = 'autumn'
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
@@ -95,7 +96,7 @@
 " let s:static_colo = 'nighted'
 
 " let s:static_colo = 'jellybeans'
-let s:static_colo = 'ufo'
+" let s:static_colo = 'ufo'
 
 " let s:static_colo = 'lucius-light'
 " let s:static_colo = 'hybrid-light'
