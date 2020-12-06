@@ -23,6 +23,10 @@ snippet m "module" b
 :- module(${0:`!v expand("%:t:r")`}, []).
 endsnippet
 
+snippet u "use_module" b
+:- use_module(${1:library(${2:lists})}, [$3]).$0
+endsnippet
+
 # ||
 # || Basement
 # ||
