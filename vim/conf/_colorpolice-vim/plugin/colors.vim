@@ -26,7 +26,7 @@
 " let s:static_colo = 'autumn'
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
-" let s:static_colo = 'hemisu-light'
+let s:static_colo = 'hemisu-light'
 " let s:static_colo = 'hawk'
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
@@ -59,7 +59,7 @@
 " let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
-let s:static_colo = 'alduin'
+" let s:static_colo = 'alduin'
 
 " let s:static_colo = 'apples'
 " let s:static_colo = 'github'
