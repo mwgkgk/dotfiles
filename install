@@ -79,6 +79,7 @@ verbose_link "$DOTFILES/git/.gitconfig" ~/.gitconfig
 
 # Ctags
 verbose_link "$DOTFILES/ctags/.ctags" ~/.ctags
+verbose_link "$DOTFILES/ctags/.ctags" ~/.ctags.d/default.ctags
 
 # Autoformat
 verbose_link "$DOTFILES/fmt/.rustfmt.toml" ~/.rustfmt.toml
