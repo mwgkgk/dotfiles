@@ -38,14 +38,11 @@ inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
 " || See
 " ||
 
-" <C-g> to see word
 nnoremap <buffer> <C-g> :silent T see <C-r><C-a><CR>
 
-" g<C-g> to simple-see word
-nnoremap <buffer> g<C-g> :silent T simple-see <C-r><C-a><CR>
+nnoremap <buffer> <LocalLeader><C-g> :silent T simple-see <C-r><C-a><CR>
 
-" g<Space><C-g> to help word
-nnoremap <buffer> g<Space><C-g> :silent T help <C-r><C-a><CR>
+nnoremap <buffer> g<C-g> :silent T help <C-r><C-a><CR>
 
 " ||
 " || Stack
