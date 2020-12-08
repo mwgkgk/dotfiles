@@ -3,3 +3,5 @@ setlocal colorcolumn=65
 
 " TODO fix quotes in iskeyword
 setlocal iskeyword+=>"
+
+setl commentstring=\\\ %s
