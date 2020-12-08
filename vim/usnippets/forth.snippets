@@ -41,10 +41,12 @@ endsnippet
 # || Words
 # ||
 
-snippet f "word" b
+snippet /f|w/ "word" rb
 : ${1:word} ( $2-- $3) ${4:`!p
 if not snip.v.text:
-	snip.rv = ".s"`} ;
+	snip.rv = ".s"
+else:
+	snip.rv = snip.v.text`} ;
 endsnippet
 
 # ||
