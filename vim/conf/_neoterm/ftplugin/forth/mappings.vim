@@ -11,6 +11,8 @@ nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '')
 
 " : →   .s clearstack ;
 nnoremap <silent> <buffer> X :T <C-r>=getline('.')<CR> →<CR>
+" : ↓   cr .s clearstack ;
+nnoremap <silent> <buffer> gX :T <C-r>=getline('.')<CR> ↓<CR>
 
 vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
 
