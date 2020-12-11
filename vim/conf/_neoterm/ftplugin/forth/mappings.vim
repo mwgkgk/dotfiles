@@ -9,7 +9,9 @@ nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '')
 " || Send
 " ||
 
-nnoremap <silent> <buffer> X :TREPLSendLine<CR>
+" : →   .s clearstack ;
+nnoremap <silent> <buffer> X :T <C-r>=getline('.')<CR> →<CR>
+
 vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
 
 " TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
