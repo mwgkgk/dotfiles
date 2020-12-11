@@ -41,12 +41,13 @@ endsnippet
 # || Words
 # ||
 
-snippet /f|w/ "word" rb
-: ${1:word} ( $2-- $3) ${4:`!p
-if not snip.v.text:
-	snip.rv = ".s"
-else:
-	snip.rv = snip.v.text`} ;
+# TODO Split into different macros based on number/type of args
+snippet w "word, start with body" w
+: ${1:word} ( n -- n ) ${0:${VISUAL}};
+endsnippet
+
+snippet f "word, start with arity" w
+: ${1:word} ( ${2:n} -- ${3:n} ) ${0:${VISUAL}};
 endsnippet
 
 # ||
