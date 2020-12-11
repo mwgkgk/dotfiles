@@ -41,9 +41,8 @@ endsnippet
 # || Words
 # ||
 
-# TODO Split into different macros based on number/type of args
-snippet w "word, start with body" w
-: ${1:word} ( n -- n ) ${0:${VISUAL}};
+snippet w "word" w
+: ${1:word}   ${0:${VISUAL}} ;
 endsnippet
 
 snippet f "word, start with arity" w
