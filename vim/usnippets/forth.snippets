@@ -49,12 +49,36 @@ endsnippet
 # || Words
 # ||
 
-snippet w "word" w
+snippet w "word, no stack effect" w
 : ${1:word}   ${0:${VISUAL}} ;
 endsnippet
 
-snippet f "word, start with arity" w
+snippet f "word, ( n -- n ), start with definition" w
+: ${1:word} ( ${3:n} -- ${4:n} ) ${2:${VISUAL}} ;
+endsnippet
+
+snippet f0 "word, ( -- )" w
+: ${1:word} ( ${2:n} -- ) ${0:${VISUAL}} ;
+endsnippet
+
+snippet f01 "word, ( -- n )" w
+: ${1:word} ( -- ${2:n} ) ${0:${VISUAL}} ;
+endsnippet
+
+snippet f1 "word, ( n -- n )" w
 : ${1:word} ( ${2:n} -- ${3:n} ) ${0:${VISUAL}} ;
+endsnippet
+
+snippet f10 "word, ( n -- )" w
+: ${1:word} ( ${2:n} -- ) ${0:${VISUAL}} ;
+endsnippet
+
+snippet f12 "word, ( n -- n n )" w
+: ${1:word} ( ${2:n} -- ${3:n} ${4:n} ) ${0:${VISUAL}} ;
+endsnippet
+
+snippet f2 "word, ( n n -- n )" w
+: ${1:word} ( ${2:n} ${3:n} -- ${4:n} ) ${0:${VISUAL}} ;
 endsnippet
 
 # ||
