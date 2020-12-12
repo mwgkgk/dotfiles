@@ -7,3 +7,6 @@ setlocal formatoptions=tcqj
 setlocal iskeyword+=>"
 
 setl commentstring=\\\ %s
+
+" TODO fix comments for \G
+" setl comments^=:\\\ ,:\\G\ 
