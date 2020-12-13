@@ -1,3 +1,4 @@
 \ vim:ft=forth
 
-s" ~/shop/core/ghost/ghost-fs/src/ghost.fs" required
+\ We include every time to make load-rc work for reloads
+include ~/shop/core/ghost/ghost-fs/src/ghost.fs
