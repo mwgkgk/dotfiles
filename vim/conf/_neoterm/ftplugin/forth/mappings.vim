@@ -5,6 +5,9 @@
 " Run repl
 nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T gf<CR>
 
+" Reload RC
+nnoremap <buffer> <silent> <LocalLeader>R :T load-rc<CR>
+
 " ||
 " || Send
 " ||
