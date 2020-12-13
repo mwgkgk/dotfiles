@@ -93,6 +93,14 @@ snippet f30 "word, ( n n n -- )" w
 : ${1:word} ( ${2:n} ${3:n} ${4:n} -- ) ${0:${VISUAL}} ;
 endsnippet
 
+# Add arity to a word:
+
+snippet /^: ([\!:\w=-]+) $/ "add-arity-to-word" rb
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`( $1 -- $2 ) $0
+endsnippet
+
 # ||
 # || Asserts
 # ||
