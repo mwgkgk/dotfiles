@@ -95,7 +95,7 @@ endsnippet
 
 # Add arity to a word:
 
-snippet /^: ([\!:\w=-]+) $/ "add-arity-to-word" rb
+snippet /^: ([\!:\w=-?]+) $/ "add-arity-to-word" rb
 `!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)`( $1 -- $2 ) $0
@@ -152,7 +152,7 @@ endsnippet
 
 priority -3
 
-snippet /^([\!:\w=-]+)/ "expand-any-word-b" br
+snippet /^([\!:\w=-?]+)/ "expand-any-word-b" br
 : `!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` $1 ;
