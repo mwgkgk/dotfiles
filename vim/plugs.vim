@@ -623,8 +623,8 @@ let g:cycle_default_groups += [
 
 " {{{
 
-Plug '~/.vim/conf/_lexima.vim/'
-Plug 'cohama/lexima.vim'
+" Plug '~/.vim/conf/_lexima.vim/'
+" Plug 'cohama/lexima.vim'
 
 " }}}
 
