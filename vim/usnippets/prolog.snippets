@@ -155,25 +155,35 @@ endsnippet
 priority -3
 
 # End with comma if the line below is indented:
-snippet  /^\s*([\!:\w=-]+)$/ "expand-any-word-endline" rw
-`!p
-if match.group(0) is not None:
-	snip.rv = match.group(0)`($0)`!p
+# snippet  /^\s*([\!:\w=-]+)$/ "expand-any-word-endline" rw
+# `!p
+# if match.group(0) is not None:
+# 	snip.rv = match.group(0)`($0)`!p
 
-def next_line_is_indented():
-	# Somehow this is next line. Don't ask.
-	nextlinenr = int(vim.eval('line(".")'))
-	try:
-		return bool(re.match("\s+", snip.buffer[nextlinenr]))
-	except IndexError:
-		return False
+# def next_line_is_indented():
+# 	# Somehow this is next line. Don't ask.
+# 	nextlinenr = int(vim.eval('line(".")'))
+# 	try:
+# 		return bool(re.match("\s+", snip.buffer[nextlinenr]))
+# 	except IndexError:
+# 		return False
 
-if next_line_is_indented():
-	snip.rv = ","
-else:
-	snip.rv = "."
-`
-endsnippet
+# # This doesn't work.
+# def line_has_dot_or_comma():
+# 	try:
+# 		return bool(re.match(".$", vim.current.line))
+# 	except IndexError:
+# 		return False
+
+# if is_endline():
+# 	if next_line_is_indented():
+# 		snip.rv = ","
+# 	else:
+# 		snip.rv = "."
+# else:
+# 	snip.rv = ""
+# `
+# endsnippet
 
 priority -4
 
