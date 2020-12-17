@@ -1150,6 +1150,10 @@ let g:filetype_pl = 'prolog'
 
 Plug 'adimit/prolog.vim'
 
+Plug '~/.vim/conf/_porog-vim/', { 'for' : 'prolog' }
+" https://github.com/mwgkgk/porog-vim
+Plug '~/shop/oil/porog/porog-vim', { 'for' : 'prolog' }
+
 " Mercury
 " This is needed to resolve conflict. see vim/runtime/autoload/dist/ft.vim,
 " dist#ft#FTm().
