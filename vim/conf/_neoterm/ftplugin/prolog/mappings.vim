@@ -82,9 +82,9 @@ inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
 " ||
 
 nnoremap <buffer> <C-g> :silent T listing(<C-r><C-w>).<CR>
-nnoremap <buffer> g<C-g> :silent T help(<C-r><C-w>).<CR>
+nnoremap <buffer> g<C-g> :silent T vm_list(<C-r><C-w>).<CR>
+nnoremap <buffer> <Leader><C-g> :silent T help(<C-r><C-w>).<CR>
 nnoremap <buffer> <LocalLeader><C-g> :silent T apropos(<C-r><C-w>).<CR>
-nnoremap <buffer> <Leader><C-g> :silent T vm_list(<C-r><C-w>).<CR>
 
 
 " TODO assert
