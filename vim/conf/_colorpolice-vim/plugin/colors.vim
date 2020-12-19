@@ -65,8 +65,8 @@
 " let s:static_colo = 'github'
 " let s:static_colo = 'pink'
 
-" let s:static_colo = 'orbital'
-let s:static_colo = 'sceaduhelm'
+let s:static_colo = 'orbital'
+" let s:static_colo = 'sceaduhelm'
 
 " let s:static_colo = 'kalisi-dark'
 
