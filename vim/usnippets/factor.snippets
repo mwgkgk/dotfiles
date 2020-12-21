@@ -12,7 +12,11 @@ endsnippet
 # || Vocabs
 # ||
 
-snippet i "USING" w
+snippet i "IN" w
+IN: ${0:`!v expand('%:t:r')`} ;
+endsnippet
+
+snippet u "USING" w
 USING: ${0:`!p 
 if not snip.v.text:
 	snip.rv = "multiline"
