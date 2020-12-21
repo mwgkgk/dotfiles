@@ -1,8 +1,28 @@
+# ||
+# || Date
+# ||
+
 snippet /^ *d(a)?(te)?/ "Date" rb
 ! `date-utc`
 
 $0
 endsnippet
+
+# ||
+# || Vocabs
+# ||
+
+snippet i "USING" w
+USING: ${0:`!p 
+if not snip.v.text:
+	snip.rv = "multiline"
+else:
+	snip.rv = snip.v.text`} ;
+endsnippet
+
+# ||
+# || Words
+# ||
 
 snippet f "f" b
 : ${1:do-something} ( ${2:x} -- $3 )
