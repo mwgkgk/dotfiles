@@ -32,3 +32,6 @@ set -x FZF_DEFAULT_OPTS " --bind 'ctrl-q:select-all+accept,tab:print-query'"
 
 # NPM
 set -x npm_config_prefix ~/.node_modules
+
+# Carp
+set -x CARP_DIR ~/.ghq/github.com/carp-lang/Carp/
