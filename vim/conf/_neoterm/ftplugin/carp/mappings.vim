@@ -4,9 +4,21 @@
 
 nnoremap <buffer> <LocalLeader>r :silent :above T carp <C-r>=expand('%')<CR><CR>
 
+nnoremap <buffer> <Leader>r :silent T :r<CR>
+
+nnoremap <buffer> <LocalLeader>b :silent T :b<CR>
+nnoremap <buffer> <LocalLeader>p :silent T :p<CR>
+nnoremap <buffer> <LocalLeader>q :silent T :q<CR>
+
 " ||
 " || Sending to repl
 " ||
 
 " Use forms instead of lines:
 nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
+
+" ||
+" || Docs
+" ||
+
+nnoremap <buffer> g<C-g> :silent T (info <C-r><C-w>)<CR>
