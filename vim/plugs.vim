@@ -1178,6 +1178,9 @@ Plug 'vlime/vlime', { 'rtp': 'vim/', 'for': 'lisp' }
 " Plug '~/.vim/conf/_slimv/', { 'for' : 'lisp' }
 " Plug 'kovisoft/slimv', { 'for' : 'lisp' }
 
+" Carp
+Plug 'hellerve/carp-vim'
+
 " Clojure
 if has('nvim')
     Plug 'Olical/conjure', { 'tag': 'v2.1.2', 'do': 'bin/compile' }
