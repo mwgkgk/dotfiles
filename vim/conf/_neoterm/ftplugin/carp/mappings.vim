@@ -2,7 +2,7 @@
 " || Opening a repl
 " ||
 
-nnoremap <buffer> <LocalLeader>r :silent :above T carp<CR>
+nnoremap <buffer> <LocalLeader>r :silent :above T carp <C-r>=expand('%')<CR><CR>
 
 " ||
 " || Sending to repl
