@@ -1,0 +1,65 @@
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+;;; `date-utc`
+${0}
+endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet /^;?;?;/ ";;;" r
+;;; ${VISUAL}$0
+endsnippet
+
+snippet /^(\s+);/ ";;" r
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`;; ${VISUAL}$0
+endsnippet
+
+snippet | "|" b
+;;; |||
+;;; ||| ${VISUAL}$1
+;;; |||$0
+endsnippet
+
+# ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+#;
+(progn
+	${VISUAL}${1:`!p
+if not snip.v.text:
+	snip.rv = ""
+`})
+endsnippet
+
+# ||
+# || Functions
+# ||
+
+snippet "(\()?\bf" "defn" rw
+(defn ${1:name} [$2]
+	${0:false}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
+# || Fallbacks
+# ||
+
+priority -3
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $1)
+endsnippet
