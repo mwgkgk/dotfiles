@@ -33,8 +33,7 @@ endsnippet
 
 # If line above is empty, basement:
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-#;
-(progn
+(comment
 	${VISUAL}${1:`!p
 if not snip.v.text:
 	snip.rv = ""
