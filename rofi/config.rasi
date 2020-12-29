@@ -1,0 +1,14 @@
+configuration {
+	modi: "run";
+	font: "mono 8";
+	matching: "fuzzy";
+	sort: true;
+	sorting-method: "fzf";
+
+	kb-accept-entry: "Control+m,Return,KP_Enter";
+	kb-remove-to-eol: "Control+Delete";
+	kb-row-down: "Control+j,Control+n";
+	kb-row-up: "Control+k,Control+p";
+
+	theme: "/usr/share/rofi/themes/gruvbox-dark.rasi";
+}

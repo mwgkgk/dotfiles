@@ -114,6 +114,7 @@ verbose_link "$DOTFILES/sxhkd/sxhkdrc" ~/.config/sxhkd/sxhkdrc
 
 # Rofi
 verbose_link "$DOTFILES/rofi/config" ~/.config/rofi/config
+verbose_link "$DOTFILES/rofi/config.rasi" ~/.config/rofi/config.rasi
 
 # Conky
 verbose_link "$DOTFILES/conky/conky-birds.conf" ~/.config/conky/conky-birds.conf
