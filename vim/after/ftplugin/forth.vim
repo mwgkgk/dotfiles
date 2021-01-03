@@ -13,4 +13,5 @@ setlocal iskeyword+=>"
 setl commentstring=\\\ %s
 
 " TODO fix comments for \G, bugged?
-setl comments=:\\\ 
+" TODO unfortunately despite b, (<EOL> doesn't work
+setl comments=:\\\ ,sb:(,eb:)
