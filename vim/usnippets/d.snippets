@@ -1,4 +1,33 @@
-# Simple shortcuts
+# ||
+# || Comments
+# ||
+
+snippet / "/" w
+// ${VISUAL}$0
+endsnippet
+
+snippet T "TODO (todo)" !
+// TODO: ${1}
+endsnippet
+
+# ||
+# || Basement
+# ||
+
+priority -1
+
+# See UltiSnips-custom-context-snippets
+snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
+/+
+${VISUAL}$0
++/
+endsnippet
+
+priority 0
+
+# ||
+# || Unsorted
+# ||
 
 snippet imp "import (imp)" b
 import ${1:std.stdio};
@@ -483,13 +512,6 @@ string toString() @safe const pure nothrow
 endsnippet
 
 
-# Comments
-
-
-snippet todo "TODO (todo)" !
-// TODO: ${1}
-endsnippet
-
 
 
 # DDoc
@@ -529,51 +551,4 @@ Examples:
 /// --------------------
 /// ${1:example code}
 /// --------------------
-endsnippet
-
-
-# License blocks
-
-snippet gpl "GPL (gpl)" b
-// This program is free software; you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation; either version 2 of the License, or
-// (at your option) any later version.
-// 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-// 
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
-// 
-// Copyright (C) ${1:Author}, `!v strftime("%Y")`
-
-${2}
-endsnippet
-
-snippet boost "Boost (boost)" b
-//          Copyright ${1:Author} `!v strftime("%Y")`.
-// Distributed under the Boost Software License, Version 1.0.
-//    (See accompanying file LICENSE_1_0.txt or copy at
-//          http://www.boost.org/LICENSE_1_0.txt)
-
-${2}
-endsnippet
-
-
-# New module
-
-snippet module "New module (module)" b
-//          Copyright ${1:Author} `!v strftime("%Y")`.
-// Distributed under the Boost Software License, Version 1.0.
-//    (See accompanying file LICENSE_1_0.txt or copy at
-//          http://www.boost.org/LICENSE_1_0.txt)
-
-module ${2}.`!v Filename('$1', 'name')`;
-
-
-${3}
 endsnippet
