@@ -222,13 +222,16 @@ snippet dd "dd" w
 `!v system('date +"%Y-%m-%d" | tr -d "\n"')`: ${0}
 endsnippet
 
-snippet ba "add-basement" b
+priority -1
+
+# See UltiSnips-custom-context-snippets
+snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
 : <<'BASEMENT'
-
 ${1:${VISUAL}}$0
-
 BASEMENT
 endsnippet
+
+priority 0
 
 snippet us "usage" b
 echo >&2 "usage: \$0 ${2:<${1:arg}>}"; exit 1
