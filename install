@@ -12,11 +12,9 @@ notfound=0
 skipped=0
 planted=0
 
-# Here, `pfad` is a helper script for shortening paths.
-
 verbose_link() {
     if ! test -e "$1"; then
-        echo "$(tput setaf 202)Source not found:$(tput sgr0) $(pfad "$1")"
+        echo "$(tput setaf 202)Source not found:$(tput sgr0) "$1""
 
         read -r -p "Continue? (default=yes): " do_continue
         test -z "$do_continue" && do_continue="yes"
@@ -31,17 +29,17 @@ verbose_link() {
             relevant=$((relevant + 1))
         else
             echo "$(tput setaf 202)Relink$(tput sgr0)" \
-                "$(readlink -f "$2" | pfad)" \
-                "$(tput setaf 76)>$(tput sgr0) $(pfad "$1")" >&2
+                "$(readlink -f "$2")" \
+                "$(tput setaf 76)>$(tput sgr0) "$1"" >&2
             unlink "$2"
             ln -s "$1" "$2" && relinked=$((relinked + 1))
         fi
     elif test -f "$2" || test -d "$2"; then
-        echo "$(tput setaf 202)Exists$(tput sgr0) $(pfad "$2")" >&2
+        echo "$(tput setaf 202)Exists$(tput sgr0) "$2"" >&2
         skipped=$((skipped + 1))
     elif ! test -e "$2"; then
         ln -s "$1" "$2" \
-            && echo "$(tput setaf 76)Plant $(tput sgr0) $(pfad "$2")" \
+            && echo "$(tput setaf 76)Plant $(tput sgr0) "$2"" \
             && planted=$((planted + 1))
     fi
 }
@@ -71,6 +69,7 @@ verbose_link "$DOTFILES/tmux/.tmux.conf" ~/.tmux.conf
 verbose_link "$DOTFILES/vim/" ~/.vim
 
 # Vifm
+mkdir -p ~/.vifm
 verbose_link "$DOTFILES/vifm/vifmrc" ~/.vifm/vifmrc
 verbose_link "$DOTFILES/vifm/colors/" ~/.vifm/colors
 
@@ -79,6 +78,7 @@ verbose_link "$DOTFILES/git/.gitconfig" ~/.gitconfig
 
 # Ctags
 verbose_link "$DOTFILES/ctags/.ctags" ~/.ctags
+mkdir -p ~/.ctags.d
 verbose_link "$DOTFILES/ctags/.ctags" ~/.ctags.d/default.ctags
 
 # Autoformat
@@ -89,10 +89,12 @@ verbose_link "$DOTFILES/repl/.sbclrc" ~/.sbclrc
 verbose_link "$DOTFILES/repl/ccl-init.lisp" ~/ccl-init.lisp
 verbose_link "$DOTFILES/repl/.clisprc.lisp" ~/.clisprc.lisp
 verbose_link "$DOTFILES/repl/.eclrc" ~/.eclrc
+mkdir -p ~/.lein
 verbose_link "$DOTFILES/repl/profiles.clj" ~/.lein/profiles.clj
 verbose_link "$DOTFILES/repl/.iex.exs" ~/.iex.exs
 verbose_link "$DOTFILES/repl/.lambda-term-inputrc" ~/.lambda-term-inputrc
 verbose_link "$DOTFILES/repl/.minrc" ~/.minrc
+mkdir -p ~/.config/swi-prolog
 verbose_link "$DOTFILES/repl/init.pl" ~/.config/swi-prolog/init.pl
 verbose_link "$DOTFILES/repl/gforthrc" ~/.config/gforthrc
 
