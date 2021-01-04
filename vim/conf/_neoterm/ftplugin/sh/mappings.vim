@@ -1,4 +1,11 @@
 " ||
+" || REPL control
+" ||
+
+" Run repl
+nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T bash<CR>
+
+" ||
 " || Send
 " ||
 
