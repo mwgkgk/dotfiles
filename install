@@ -99,6 +99,7 @@ verbose_link "$DOTFILES/repl/init.pl" ~/.config/swi-prolog/init.pl
 verbose_link "$DOTFILES/repl/gforthrc" ~/.config/gforthrc
 
 # Cmus
+mkdir -p ~/.config/cmus
 verbose_link "$DOTFILES/cmus/rc" ~/.config/cmus/rc
 verbose_link "$DOTFILES/cmus/gruvbox-light.theme" ~/.config/cmus/gruvbox-light.theme
 verbose_link "$DOTFILES/cmus/xterm-snowwhite.theme" ~/.config/cmus/xterm-snowwhite.theme
@@ -112,20 +113,25 @@ verbose_link "$DOTFILES/x11/.Xresources" ~/.Xresources
 verbose_link "$DOTFILES/stumpwm/" ~/.config/stumpwm
 
 # Sxhkd
+mkdir -p ~/.config/sxhkd
 verbose_link "$DOTFILES/sxhkd/sxhkdrc" ~/.config/sxhkd/sxhkdrc
 
 # Rofi
+mkdir -p ~/.config/rofi
 verbose_link "$DOTFILES/rofi/config" ~/.config/rofi/config
 verbose_link "$DOTFILES/rofi/config.rasi" ~/.config/rofi/config.rasi
 
 # Conky
+mkdir -p ~/.config/conky
 verbose_link "$DOTFILES/conky/conky-birds.conf" ~/.config/conky/conky-birds.conf
 verbose_link "$DOTFILES/conky/conky.conf" ~/.config/conky/conky.conf
 
 # Alacritty
+mkdir -p ~/.config/alacritty
 verbose_link "$DOTFILES/alacritty/alacritty.yml" ~/.config/alacritty/alacritty.yml
 
 # Xpdf
+mkdir -p ~/.config/xpdf
 verbose_link "$DOTFILES/xpdf/.xpdfrc" ~/.xpdfrc
 
 
