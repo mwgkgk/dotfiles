@@ -6,6 +6,8 @@
     (load quicklisp-init)))
 
 ;;; Use a newer asdf version:
+;;; Apparently this relies asdf-install method which is deprecated
+#+nil
 (let
     ((compiled-file #P"~/.cache/local/common-lisp/sbcl/asdf.fasl"))
   (progn
