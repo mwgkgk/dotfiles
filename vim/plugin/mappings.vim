@@ -491,6 +491,7 @@ inoremap <C-r> <C-g>u<C-r>
 "
 
 tnoremap <Esc> <C-\><C-n>
+tnoremap <C-\><Esc> <Esc>
 
 "
 "
