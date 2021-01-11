@@ -20,3 +20,9 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
+
+" ||
+" || Docs
+" ||
+
+nnoremap <buffer> <C-g> :Man <C-r><C-a><CR>
