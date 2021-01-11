@@ -5,6 +5,10 @@
 " Run repl
 nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T bash<CR>
 
+
+" Source current file
+nnoremap <buffer> <silent> <Leader>r :T source <C-r>=expand("%")<CR><CR>
+
 " ||
 " || Send
 " ||
