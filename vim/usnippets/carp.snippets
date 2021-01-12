@@ -51,6 +51,13 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bfd" "defn" rw
+(defndynamic ${1:name} [$2]
+	${0:false}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Fallbacks
 # ||
