@@ -7,6 +7,16 @@ snippet / *d(a)?(te)?/ "" rb
 endsnippet
 
 # ||
+# || Basement
+# ||
+
+snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
+if 0 {
+	${VISUAL}$0
+}
+endsnippet
+
+# ||
 # || Unsorted
 # ||
 
