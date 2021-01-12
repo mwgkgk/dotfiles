@@ -19,6 +19,24 @@ endsnippet
 priority 0
 
 # ||
+# || Comments
+# ||
+
+snippet "/|//" "comment-explicit" wr
+// ${VISUAL}$0
+endsnippet
+
+snippet T "TODO" w
+// TODO $1
+endsnippet
+
+snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
+/*
+${VISUAL}$0
+*/
+endsnippet
+
+# ||
 # || Packages
 # ||
 
@@ -316,22 +334,6 @@ snippet ; ":=" w
 endsnippet
 
 priority 0
-
-snippet / "//" w
-// $0
-endsnippet
-
-snippet // "//" w
-// ${VISUAL}`getroyal`: $1
-endsnippet
-
-snippet %// % "// continued" wr
-// ${VISUAL}`getroyal`: $1
-endsnippet
-
-snippet /t "// TODO" w
-// TODO $1
-endsnippet
 
 snippet { "{" w
 {
