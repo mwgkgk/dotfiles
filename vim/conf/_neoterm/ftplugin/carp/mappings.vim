@@ -24,3 +24,4 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 nnoremap <buffer> <C-g> :silent T (expand <C-r><C-w>)<CR>
 nnoremap <buffer> g<C-g> :silent T (type <C-r><C-w>)<CR>
 nnoremap <buffer> <Leader><C-g> :silent T (info <C-r><C-w>)<CR>
+nnoremap <buffer> <LocalLeader><C-g> :silent T (c <C-r><C-w>)<CR>
