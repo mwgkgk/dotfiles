@@ -1,0 +1,6 @@
+% vim: ft=prolog
+% https://github.com/mthom/scryer-prolog
+
+:- use_module(library(format)).
+:- use_module(library(reif)).
+:- use_module(library(dif)).
