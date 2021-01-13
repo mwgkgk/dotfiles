@@ -60,6 +60,16 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Printing
+# ||
+
+snippet "(\()?\bp" "print" rw
+(IO.println ${2:"${1:Hello!}"}$3`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Fallbacks
 # ||
 
