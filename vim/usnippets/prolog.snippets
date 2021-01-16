@@ -15,7 +15,7 @@ endsnippet
 
 priority 0
 
-snippet dd "dd-comment" b
+snippet % "dd-comment" b
 % `!v system('date-jiv | tr -d "\n"')` ${0}
 endsnippet
 
@@ -45,7 +45,7 @@ snippet T "TODO" b
 endsnippet
 
 snippet ; "Comment-generic" w
-% ${VISUAL}$0
+% `!v system('date-jiv | tr -d "\n"')` ${0}
 endsnippet
 
 # ||
