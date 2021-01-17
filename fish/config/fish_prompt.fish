@@ -16,6 +16,8 @@ function fish_prompt --description 'Write out the prompt'
 
     if set -q LISP_ADV
         echo -n -s (set_color $fish_color_prompt) "lisp-adv"
+    elseif set -q THIS
+        echo -n -s (set_color $fish_color_prompt) "this"
     else
         # White themes are unsupported for now
 
