@@ -1140,6 +1140,9 @@ Plug '~/shop/oil/borzhch'
 " Plug '~/.vim/conf/_vim-go/'
 " Plug 'fatih/vim-go', { 'for' : 'go' }
 
+" Fish
+Plug 'dag/vim-fish'
+
 " Perl
 Plug 'hotchpotch/perldoc-vim', { 'for' : 'perl' }
 
