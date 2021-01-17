@@ -1,6 +1,6 @@
-###########################################################################
-#                            TEXTMATE SNIPPETS                            #
-###########################################################################
+# ||
+# || Header
+# ||
 
 #! header
 snippet # "Shebang header for python scripts" b
@@ -9,9 +9,13 @@ snippet # "Shebang header for python scripts" b
 $0
 endsnippet
 
-snippet utf "Description" !b
+snippet utf "utf" !b
 # -*- coding: utf-8 -*-
 endsnippet
+
+# ||
+# || Main
+# ||
 
 snippet ifmain "ifmain" b
 if __name__ == '__main__':
@@ -21,6 +25,16 @@ endsnippet
 snippet main "main" b
 def main():
 	${VISUAL}$0
+endsnippet
+
+# ||
+# || Basement
+# ||
+
+snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
+'''
+${VISUAL}$0
+'''
 endsnippet
 
 ##########
@@ -372,7 +386,7 @@ endsnippet
 # 	${0:pass}
 # endsnippet
 
-snippet def "function with no docstrings" b!
+snippet f "function with no docstrings" b!
 def ${1:function}(`!p
 if snip.indent:
 	snip.rv = 'self' + (", " if len(t[2]) else "")`${2}):
@@ -764,9 +778,10 @@ __init__(self, *args, **kwargs):
 	super(${1}, self).__init__(*args, **kwargs)
 endsnippet
 
-snippet f "method wrapped around visual" !
-${1}(${VISUAL:/\n//g})
-endsnippet
+# Legacy
+# snippet f "method wrapped around visual" !
+# ${1}(${VISUAL:/\n//g})
+# endsnippet
 
 snippet bla "blank true" !i
 blank=True, null=True
