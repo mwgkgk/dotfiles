@@ -13,7 +13,9 @@ endsnippet
 
 # See UltiSnips-custom-context-snippets
 snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
-% ${VISUAL}$0
+-ifdef(comment).
+${VISUAL}$0
+-endif.
 endsnippet
 
 snippet pat "Case:Receive:Try Clause"
