@@ -13,6 +13,34 @@ snippet dd "inline date" w
 endsnippet
 
 # ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+#= `!v system('date-jiv | tr -d "\n"')`
+${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+=#
+endsnippet
+
+snippet dab "dab" w
+# `date-utc`
+
+#=
+${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+=#
+endsnippet
+
+
+# ||
 # || Program
 # ||
 
@@ -65,23 +93,23 @@ endsnippet
 # || Testing
 # ||
 
-# If line above is empty, @test:
-snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-@test ${VISUAL}${1:`!p
+# # If line above is empty, @test:
+# snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+# @test ${VISUAL}${1:`!p
 
-if not snip.v.text:
-	snip.rv = ""
-`}
-endsnippet
+# if not snip.v.text:
+# 	snip.rv = ""
+# `}
+# endsnippet
 
-# If line above is @test, @test:
-snippet /^$/ "basement-implicit" "re.match('^@test.*', snip.buffer[snip.line-1])" re
-@test ${VISUAL}${1:`!p
+# # If line above is @test, @test:
+# snippet /^$/ "basement-implicit" "re.match('^@test.*', snip.buffer[snip.line-1])" re
+# @test ${VISUAL}${1:`!p
 
-if not snip.v.text:
-	snip.rv = ""
-`}
-endsnippet
+# if not snip.v.text:
+# 	snip.rv = ""
+# `}
+# endsnippet
 
 snippet t "testset" b
 @testset "${1:Subject}" begin
