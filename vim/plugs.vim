@@ -957,10 +957,10 @@ if has('nvim')
     " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
     " Installed as dep for vista.vim:
-    Plug 'neoclide/coc.nvim'
+    " Plug 'neoclide/coc.nvim'
     " Disable coc by default: it's not desigend to be loaded per-filetype, and
     " I didn't ask for this.
-    CocDisable
+    " CocDisable
 else
     Plug 'Shougo/deoplete.nvim'
     Plug 'roxma/nvim-yarp'
