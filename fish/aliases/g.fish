@@ -1,4 +1,8 @@
 function g
 	# gold  $argv;
-	golddown  $argv;
+	if test (count $argv) -eq 0
+	    v global-plan
+    else
+        golddown  $argv;
+	end
 end
