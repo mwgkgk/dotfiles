@@ -9,7 +9,28 @@ ${0}
 endsnippet
 
 # ||
-# || Vars
+# || Comments
+# ||
+
+
+priority 1
+
+snippet # "#" b
+#!/usr/bin/env hy3
+endsnippet
+
+priority 0
+
+# ||
+# || Modules
+# ||
+
+snippet /imp|i/ "i" br
+(import [${1:time} [${2:sleep}]])
+endsnippet
+
+# ||
+# || Var
 # ||
 
 snippet /v|setv/ "v" br
@@ -17,7 +38,7 @@ snippet /v|setv/ "v" br
 endsnippet
 
 # ||
-# || Unsorted
+# || Function
 # ||
 
 snippet f "defn" b
@@ -29,6 +50,15 @@ snippet defn "defn" b
 (defn $1 [$2]$3)
 endsnippet
 
+snippet main "main" b
+(defmain [&rest args] 
+	${VISUAL}$0)
+endsnippet
+
+# ||
+# || Class
+# ||
+
 snippet defc "defclass" b
 (defclass ${1:Classname} [$2]
 	[${3:name} None]
@@ -36,26 +66,12 @@ snippet defc "defclass" b
 		(setv self.$3 $3)))
 endsnippet
 
-snippet main "main" b
-(defmain [&rest args] 
-	${VISUAL}$0)
-endsnippet
+# ||
+# || Loops
+# ||
 
 snippet for "for" b
 (for [${1:ele} ${2:[1 2 3]}] ($3))
-endsnippet
-
-snippet if "if" b
-(if ($1)
-	${VISUAL}$2)
-endsnippet
-
-snippet /imp|i/ "i" br
-(import [${1:time} [${2:sleep}]])
-endsnippet
-
-snippet p "p" b
-(print
 endsnippet
 
 snippet do "do" b
@@ -63,8 +79,19 @@ snippet do "do" b
 	${VISUAL}$0
 endsnippet
 
-priority 1
+# ||
+# || Conditionals
+# ||
 
-snippet # "#" b
-#!/usr/bin/env hy3
+snippet if "if" b
+(if ($1)
+	${VISUAL}$2)
+endsnippet
+
+# ||
+# || Print
+# ||
+
+snippet p "p" b
+(print
 endsnippet
