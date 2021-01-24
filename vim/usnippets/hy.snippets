@@ -1,10 +1,24 @@
-snippet v "v" b
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+# `date-utc`
+
+${0}
+endsnippet
+
+# ||
+# || Vars
+# ||
+
+snippet /v|setv/ "v" br
 (setv$1
 endsnippet
 
-snippet setv "v" b
-(setv$1
-endsnippet
+# ||
+# || Unsorted
+# ||
 
 snippet f "defn" b
 (defn $1 [$2]
