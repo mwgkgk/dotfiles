@@ -1,3 +1,3 @@
 function fin
-  fisher
+  fisher update
 end
