@@ -18,7 +18,7 @@
 " let s:static_colo = 'zenburn'
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
-let s:static_colo = 'grapes'
+" let s:static_colo = 'grapes'
 " let s:static_colo = 'jellyfish'
 
 " let s:static_colo = 'farout'
@@ -30,7 +30,7 @@ let s:static_colo = 'grapes'
 " let s:static_colo = 'hawk'
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
-" let s:static_colo = 'fukuoka'
+let s:static_colo = 'fukuoka'
 " let s:static_colo = 'shenzhen'
 
 " let s:static_colo = 'gentooish'
