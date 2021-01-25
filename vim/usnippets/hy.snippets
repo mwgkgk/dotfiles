@@ -41,8 +41,10 @@ endsnippet
 # || Var
 # ||
 
-snippet /v|setv/ "v" br
-(setv$1
+snippet /(\()?\b(v|setv)/ "setv" br
+(setv ${0:${VISUAL}}`!p
+if match.group(1) is None:
+  snip.rv = ")"`
 endsnippet
 
 # ||
