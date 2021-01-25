@@ -12,6 +12,15 @@ endsnippet
 # || Comments
 # ||
 
+snippet /^;?;?;/ ";;;" r
+;;; ${VISUAL}$0
+endsnippet
+
+snippet /^(\s+);/ ";;" r
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`;; ${VISUAL}$0
+endsnippet
 
 priority 1
 
