@@ -21,6 +21,14 @@ endsnippet
 
 priority 0
 
+snippet /^$/ "basement-implicit" r
+#_
+(do
+	${VISUAL}${1:`!p
+if not snip.v.text:
+	snip.rv = "nil"`})
+endsnippet
+
 # ||
 # || Modules
 # ||
