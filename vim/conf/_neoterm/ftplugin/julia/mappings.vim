@@ -22,4 +22,5 @@ nmap <Leader>X <Plug>(neoterm-repl-send-line)
 " || Docs
 " ||
 
-nnoremap <buffer> g<C-g> :silent T @doc <C-r><C-w><CR>
+nnoremap <buffer> g<C-g> :silent T @doc <C-r><C-a><CR>
+nnoremap <buffer> <LocalLeader><C-g> :silent T apropos("<C-r><C-a>")<CR>
