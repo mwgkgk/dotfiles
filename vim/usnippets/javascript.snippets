@@ -1,6 +1,68 @@
 extends jquery
 extends phantomjs
 extends node
+
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+// `date-utc`
+${0}
+endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet T "TODO" b
+// TODO 
+endsnippet
+
+snippet ; "Comment-generic" w
+// `!v system('date-jiv | tr -d "\n"')` ${0}
+endsnippet
+
+snippet / "Comment-/" w
+// `!v system('date-jiv | tr -d "\n"')` ${0}
+endsnippet
+
+# ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+/* `!v system('date-jiv | tr -d "\n"')`
+${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+*/
+endsnippet
+
+snippet dab "dab" w
+// `date-utc`
+
+/*
+${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+*/
+endsnippet
+
+
+
+
+
+
+
+
+
+
 ###########################################################################
 #                            TextMate Snippets                            #
 ###########################################################################
@@ -218,11 +280,6 @@ endsnippet
 
 snippet enc "encodeURIComponent" i
 encodeURIComponent(${VISUAL}$1)$0
-endsnippet
-
-snippet / *d(a)?(te)?/ "Date" rb
-/* `date-utc` */
-${0}
 endsnippet
 
 # JSX
