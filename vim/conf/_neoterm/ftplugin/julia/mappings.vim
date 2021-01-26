@@ -17,3 +17,9 @@ nmap <Leader>x <Plug>(neoterm-repl-send)
 xmap <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <Leader>X <Plug>(neoterm-repl-send-line)
+
+" ||
+" || Docs
+" ||
+
+nnoremap <buffer> g<C-g> :silent T @doc <C-r><C-w><CR>
