@@ -199,6 +199,28 @@ endsnippet
 
 priority -3
 
+# ||
+# || Arity fallbacks
+# ||
+
+snippet /([\!:\w=-]+);/  "arity-2" wr
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`(${1:X}, ${0:Y})
+endsnippet
+
+snippet /([\!:\w=-]+);;/  "arity-3" wr
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`(${1:X}, ${2:Y}, ${0:Z})
+endsnippet
+
+snippet /([\!:\w=-]+);;;/  "arity-4" wr
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`(${1:X}, ${2:Y}, ${3:Z}, ${4:L})
+endsnippet
+
 # End with comma if the line below is indented:
 # snippet  /^\s*([\!:\w=-]+)$/ "expand-any-word-endline" rw
 # `!p
