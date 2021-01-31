@@ -46,10 +46,10 @@
 " let s:static_colo = 'belf'
 " let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
-let s:static_colo = 'hangar-lab'
+" let s:static_colo = 'hangar-lab'
 
 " let s:static_colo = 'Tomorrow'
-" let s:static_colo = 'primary'
+let s:static_colo = 'primary'
 
 " let s:static_colo = 'hybrid-dark'
 " let s:static_colo = 'typofree'
