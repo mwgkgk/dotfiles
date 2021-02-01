@@ -29,6 +29,8 @@ nnoremap <buffer> <LocalLeader>q :silent T q<CR>
 " || Debugger
 " ||
 
+nnoremap <buffer> <LocalLeader>d :silent T trace.<CR>
+
 nnoremap <buffer> <LocalLeader>h :silent T h<CR>
 nnoremap <buffer> <LocalLeader>c :silent T c<CR>
 nnoremap <buffer> <LocalLeader>a :silent T a<CR>
