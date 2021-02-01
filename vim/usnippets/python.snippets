@@ -970,3 +970,39 @@ endsnippet
 snippet qma "qtile matches arg" i
 matches=[Match(wm_${2:instance_}class=['$1'])]
 endsnippet
+
+# ||
+# || Fallbacks
+# ||
+
+priority -3
+
+# ||
+# || Arity fallbacks
+# ||
+
+snippet /([\!:\w=-]+);/  "arity-2" wr
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`(${1:X}, ${0:Y})
+endsnippet
+
+snippet /([\!:\w=-]+);;/  "arity-3" wr
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`(${1:X}, ${2:Y}, ${0:Z})
+endsnippet
+
+snippet /([\!:\w=-]+);;;/  "arity-4" wr
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`(${1:X}, ${2:Y}, ${3:Z}, ${4:L})
+endsnippet
+
+priority -4
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`(${0:X})
+endsnippet
