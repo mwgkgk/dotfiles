@@ -30,6 +30,7 @@ nnoremap <buffer> <LocalLeader>q :silent T q<CR>
 " ||
 
 nnoremap <buffer> <LocalLeader>d :silent T trace.<CR>
+nnoremap <buffer> <LocalLeader>D :silent T nodebug.<CR>
 
 nnoremap <buffer> <LocalLeader>h :silent T h<CR>
 nnoremap <buffer> <LocalLeader>c :silent T c<CR>
