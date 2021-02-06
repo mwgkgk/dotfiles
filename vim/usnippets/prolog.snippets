@@ -32,8 +32,8 @@ snippet m "module" b
 :- module(${0:`!v expand("%:t:r")`}, []).
 endsnippet
 
-snippet u "use_module" b
-:- use_module(${1:library(${0:lists})}).
+snippet /(i|u)/ "use_module" br
+:- use_module(${1:library(${0:clpfd})}).
 endsnippet
 
 # ||
