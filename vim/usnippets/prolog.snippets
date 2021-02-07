@@ -122,8 +122,10 @@ endsnippet
 # || Facts
 # ||
 
-snippet f "fact" w
-${1:exists}(${2:X}).
+snippet f "fact-with-comment" w
+%!      ${1:f}(${2:+List:list}) is det.
+
+$1(${3:${2/[\+-]//g}})$0.
 endsnippet
 
 snippet /^.*\.$/ "expand-dot-as-same-fact" r
