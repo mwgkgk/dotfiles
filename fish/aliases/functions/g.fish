@@ -1,7 +1,7 @@
 function g
 	# gold  $argv;
 	if test (count $argv) -eq 0
-	    v global-plan
+	    grand
     else
         golddown  $argv;
 	end
