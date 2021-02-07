@@ -146,8 +146,13 @@ endsnippet
 
 snippet /(^.*):$/ "expand-colon-as-rule" r
 `!p
-snip.rv = match.group(1)` :-
+snip.rv = rstrip(match.group(1))` :-
 	$0
+endsnippet
+
+snippet /(^.*)-$/ "expand-dash-as-rule" r
+`!p
+snip.rv = rstrip(match.group(1))` :- $0
 endsnippet
 
 # TODO Rule with 1,2,3 variables
