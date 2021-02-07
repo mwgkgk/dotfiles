@@ -29,7 +29,7 @@ endsnippet
 # ||
 
 snippet /(mod|m)/ "module" br
-:- module(${0:`!v expand("%:t:r")`}, []).
+:- module(${1:`!v expand("%:t:r")`}$0).
 endsnippet
 
 snippet /(i|u)/ "use_module" br
