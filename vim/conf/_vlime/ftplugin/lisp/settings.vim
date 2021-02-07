@@ -1,4 +1,5 @@
-let g:vlime_cl_impl = 'sbcl'
+" let g:vlime_cl_impl = 'sbcl'
+let g:vlime_cl_impl = 'clisp'
 let g:vlime_window_settings = {
         \ 'repl': {
             \ 'pos': 'topleft',
