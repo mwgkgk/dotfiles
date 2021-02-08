@@ -23,20 +23,25 @@ global !p
 import subprocess
 endglobal
 
-snippet /^(\s+)(;|dd)?/ ";;" r
-`!p
-snip.rv = ""
-if match.group(1) is not None:
-	snip.rv = snip.rv + match.group(1)
-snip.rv = snip.rv + ";; "
-subprocess = subprocess.Popen("date-jiv", shell=True, stdout=subprocess.PIPE)
-date_jiv = subprocess.stdout.read().replace('\n', '')
-snip.rv = snip.rv + date_jiv
-if match.group(1) is not None:
-	snip.rv = match.group(1)
-snip.rv = snip.rv + ";; "
-`${VISUAL}$0
-endsnippet
+# PepeHands
+# snippet /^(\s+)(;|dd)?/ ";;" r
+# `!p
+# snip.rv = ""
+# if match.group(1) is not None:
+# 	snip.rv = snip.rv + match.group(1)
+# snip.rv = snip.rv + ";; "
+
+# # date_jiv = subprocess.check_output(["date-jiv"]).decode().replace('\n', '')
+# date_jiv = "420:69"
+
+# snip.rv = snip.rv + date_jiv
+# if match.group(1) is not None:
+# 	snip.rv = snip.rv + match.group(1)
+# snip.rv = snip.rv + ";; "
+# ``!p
+# snip.rv = " "
+# `${1:${VISUAL}}$0
+# endsnippet
 
 snippet /^;?;?;/ ";;;" r
 ;;; ${VISUAL}$0
