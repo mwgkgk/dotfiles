@@ -24,24 +24,28 @@ import subprocess
 endglobal
 
 # PepeHands
-# snippet /^(\s+)(;|dd)?/ ";;" r
-# `!p
-# snip.rv = ""
-# if match.group(1) is not None:
-# 	snip.rv = snip.rv + match.group(1)
-# snip.rv = snip.rv + ";; "
+snippet /^(\s+)(;|dd)?/ ";;" r
+`!p
+snip.rv = ""
+if match.group(1) is not None:
+	snip.rv = snip.rv + match.group(1)
+snip.rv = snip.rv + ";; "
 
-# # date_jiv = subprocess.check_output(["date-jiv"]).decode().replace('\n', '')
-# date_jiv = "420:69"
+# 2021-02-08/06:38:47
+# Okay at this point it's easier to replicate date-jiv.
+# This is not base64, it's a string:
+# date_jiv = subprocess.check_output(["date-jiv"]).decode('base64')
+# Bytes-like object, not str: ???
+# date_jiv = subprocess.check_output(["date-jiv"]).replace('\n', '') + '\n'
+# 2021-02-08/06:41:45 However even this is enough to replicate the bug:
+date_jiv = "420:69" + '\n'
 
-# snip.rv = snip.rv + date_jiv
-# if match.group(1) is not None:
-# 	snip.rv = snip.rv + match.group(1)
-# snip.rv = snip.rv + ";; "
-# ``!p
-# snip.rv = " "
-# `${1:${VISUAL}}$0
-# endsnippet
+snip.rv = snip.rv + date_jiv
+if match.group(1) is not None:
+	snip.rv = snip.rv + match.group(1)
+snip.rv = snip.rv + ";; "
+`$0
+endsnippet
 
 snippet /^;?;?;/ ";;;" r
 ;;; ${VISUAL}$0
