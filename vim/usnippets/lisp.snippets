@@ -165,13 +165,13 @@ endsnippet
 
 # If line above is empty, basement:
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-#| `!v system('date-jiv | tr -d "\n"')`
-${VISUAL}${0:`!p
+#+nil
+(quote ; `!v system('date-jiv | tr -d "\n"')`
+	${VISUAL}${0:`!p
 
 if not snip.v.text:
-	snip.rv = ""
-`}
-|#
+	snip.rv = "nil"
+`})
 endsnippet
 
 snippet /^e/ "basement-test" r
