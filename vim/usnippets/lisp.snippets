@@ -19,13 +19,23 @@ priority 0
 # || Comments
 # ||
 
-snippet /^(\s+)(;|dd)/ ";;" r
+global !p
+import subprocess
+endglobal
+
+snippet /^(\s+)(;|dd)?/ ";;" r
 `!p
+snip.rv = ""
 if match.group(1) is not None:
-	# We don't | tr -d "\n" to make it multiline:
-	snip.rv = match.group(1)`;; `!v system('date-jiv')``!p
+	snip.rv = snip.rv + match.group(1)
+snip.rv = snip.rv + ";; "
+subprocess = subprocess.Popen("date-jiv", shell=True, stdout=subprocess.PIPE)
+date_jiv = subprocess.stdout.read().replace('\n', '')
+snip.rv = snip.rv + date_jiv
 if match.group(1) is not None:
-	snip.rv = match.group(1)`;; ${VISUAL}$0
+	snip.rv = match.group(1)
+snip.rv = snip.rv + ";; "
+`${VISUAL}$0
 endsnippet
 
 snippet /^;?;?;/ ";;;" r
