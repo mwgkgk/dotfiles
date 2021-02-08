@@ -28,3 +28,6 @@ let g:vlime_window_settings = {
     \ }
 
 " let g:vlime_enable_autodoc = v:true
+
+" This has all the downsides of C-w / Space :terminal problems
+" let g:vlime_cl_use_terminal = v:true
