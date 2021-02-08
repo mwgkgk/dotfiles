@@ -1,6 +1,51 @@
-#########################
-# SNIPPETS for SNIPPETS #
-#########################
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "" rb
+# `date-utc`${0}
+endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet # "Section" b
+# ||
+# || ${1:Date}
+# ||$0
+endsnippet
+
+# ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+\`\`\` `!v system('date-jiv | tr -d "\n"')`
+${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+\`\`\`
+endsnippet
+
+# ||
+# || Priority
+# ||
+
+snippet p "priority -1" w
+priority -1
+
+${VISUAL}$0
+
+priority 0
+endsnippet
+
+# ||
+# || Snippets
+# ||
 
 # We use a little hack so that the snippet is expanded
 # and parsed correctly
@@ -32,6 +77,18 @@ snippet snipi "Snippet definition" !
 `!p snip.rv = "endsnippet"`
 endsnippet
 
+snippet vis "visual" i
+\${VISUAL}
+endsnippet
+
+snippet $0 "$0" w
+\${0:\${VISUAL}}
+endsnippet
+
+# ||
+# || Python
+# ||
+
 snippet /^(global|glob|g)/ "Global snippet" !r
 `!p snip.rv = "global"` !p
 $0
@@ -42,27 +99,13 @@ endsnippet
 #\$\{VISUAL${1:${2:default}${3:/transform/}}\}
 #endsnippet
 
-snippet vis "visual" i
-\${VISUAL}
-endsnippet
-
-snippet $0 "$0" w
-\${0:\${VISUAL}}
-endsnippet
-
-snippet # "Section" b
-# ||
-# || ${1:Date}
-# ||$0
-endsnippet
-
 snippet match "match" i
 \`!p
 if match.group(${1:0}) is not None:
     snip.rv = match.group($1)\`$0
 endsnippet
 
-snippet pp "python block" i
+snippet ` "python block" i
 \`!p snip.rv = $1\`
 endsnippet
 
@@ -70,15 +113,38 @@ snippet r "return" b
 return $0
 endsnippet
 
-snippet p "priority -1" w
-priority -1
+# ||
+# || Fallbacks
+# ||
 
-${VISUAL}$0
+priority -3
 
-priority 0
+# ||
+# || Arity fallbacks
+# ||
+
+snippet /([\!:\w=-]+);/  "arity-2" wr
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`(${1:X}, ${0:Y})
 endsnippet
 
-snippet / *d(a)?(te)?/ "" rb
-# `date-utc`${0}
+snippet /([\!:\w=-]+);;/  "arity-3" wr
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`(${1:X}, ${2:Y}, ${0:Z})
 endsnippet
-# vim:ft=snippets:
+
+snippet /([\!:\w=-]+);;;/  "arity-4" wr
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`(${1:X}, ${2:Y}, ${3:Z}, ${4:L})
+endsnippet
+
+priority -4
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`(${0:X})
+endsnippet
