@@ -32,7 +32,7 @@ snippet snipi "Snippet definition" !
 `!p snip.rv = "endsnippet"`
 endsnippet
 
-snippet global "Global snippet" !
+snippet /^(global|glob|g)/ "Global snippet" !r
 `!p snip.rv = "global"` !p
 $0
 `!p snip.rv = "endglobal"`
