@@ -15,22 +15,22 @@ endsnippet
 
 priority 0
 
-snippet % "dd-comment" w
-;; `!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
-endsnippet
-
 # ||
 # || Comments
 # ||
 
-snippet /^(\s+);/ ";;" r
+snippet /^(\s+)(;|dd)/ ";;" r
 `!p
 if match.group(1) is not None:
-	snip.rv = match.group(1)`;; ${VISUAL}$0
+	snip.rv = match.group(1)`;; `!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
 endsnippet
 
 snippet /^;?;?;/ ";;;" r
 ;;; ${VISUAL}$0
+endsnippet
+
+snippet /^dd/ "dd-comment" r
+;;; `!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
 endsnippet
 
 snippet | "|" b
