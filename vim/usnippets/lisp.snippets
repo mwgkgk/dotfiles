@@ -10,7 +10,7 @@ endsnippet
 priority -1
 
 snippet dd "dd-inline" w
-`!v system('date-jiv | tr -d "\n"')` ${0}
+`!v system('date-jiv | tr -d "\n"')`${0}
 endsnippet
 
 priority 0
@@ -22,7 +22,10 @@ priority 0
 snippet /^(\s+)(;|dd)/ ";;" r
 `!p
 if match.group(1) is not None:
-	snip.rv = match.group(1)`;; `!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
+	# We don't | tr -d "\n" to make it multiline:
+	snip.rv = match.group(1)`;; `!v system('date-jiv')``!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`;; ${VISUAL}$0
 endsnippet
 
 snippet /^;?;?;/ ";;;" r
