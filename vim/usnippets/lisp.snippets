@@ -118,12 +118,19 @@ snippet l "lambda" w
 #'(lambda (${1:x}) ${2:nil})
 endsnippet
 
-snippet /^$/ "basement-implicit" r
-#+nil
-(progn
-	${VISUAL}${1:`!p
+# ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+#| `!v system('date-jiv | tr -d "\n"')`
+${VISUAL}${0:`!p
+
 if not snip.v.text:
-	snip.rv = "nil"`})
+	snip.rv = ""
+`}
+|#
 endsnippet
 
 snippet /^e/ "basement-test" r
