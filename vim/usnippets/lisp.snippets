@@ -1,3 +1,44 @@
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+;;; `date-utc` ;;;
+${0}
+endsnippet
+
+priority -1
+
+snippet dd "dd-inline" w
+`!v system('date-jiv | tr -d "\n"')` ${0}
+endsnippet
+
+priority 0
+
+snippet % "dd-comment" w
+;; `!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
+endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet /^(\s+);/ ";;" r
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`;; ${VISUAL}$0
+endsnippet
+
+snippet /^;?;?;/ ";;;" r
+;;; ${VISUAL}$0
+endsnippet
+
+snippet | "|" b
+;;; |||
+;;; ||| ${VISUAL}$1
+;;; |||$0
+endsnippet
+
 # Imports & Packages
 
 snippet "(\()?\bip" "in-package" rw
@@ -327,35 +368,6 @@ snippet ` "`" w
 endsnippet
 
 # Bits and Pieces
-
-snippet /^;?;?;/ ";;;" r
-;;; ${VISUAL}$0
-endsnippet
-
-snippet /^(\s+);/ ";;" r
-`!p
-if match.group(1) is not None:
-    snip.rv = match.group(1)`;; ${VISUAL}$0
-endsnippet
-
-snippet / *d(a)?(te)?/ "Date" rb
-;;; `date-utc` ;;;
-${0}
-endsnippet
-
-snippet dd "dd" b
-;;; VISITED `date-utc`
-endsnippet
-
-snippet vis "vis" w
-VISITED `date-utc`
-endsnippet
-
-snippet | "|" b
-;;; |||
-;;; ||| ${VISUAL}$1
-;;; |||$0
-endsnippet
 
 snippet nil "#+nil" b
 #+nil
