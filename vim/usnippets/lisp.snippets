@@ -26,25 +26,11 @@ endglobal
 # PepeHands
 snippet /^(\s+)(;|dd)?/ ";;" r
 `!p
-snip.rv = ""
 if match.group(1) is not None:
-	snip.rv = snip.rv + match.group(1)
-snip.rv = snip.rv + ";; "
-
-# 2021-02-08/06:38:47
-# Okay at this point it's easier to replicate date-jiv.
-# This is not base64, it's a string:
-# date_jiv = subprocess.check_output(["date-jiv"]).decode('base64')
-# Bytes-like object, not str: ???
-# date_jiv = subprocess.check_output(["date-jiv"]).replace('\n', '') + '\n'
-# 2021-02-08/06:41:45 However even this is enough to replicate the bug:
-date_jiv = "420:69" + '\n'
-
-snip.rv = snip.rv + date_jiv
+	snip.rv = match.group(1)`;; `!v system('date-jiv | tr -d "\n"')`
+`!p
 if match.group(1) is not None:
-	snip.rv = snip.rv + match.group(1)
-snip.rv = snip.rv + ";; "
-`$0
+	snip.rv = match.group(1)`;; ${1:${VISUAL}}$0
 endsnippet
 
 snippet /^;?;?;/ ";;;" r
