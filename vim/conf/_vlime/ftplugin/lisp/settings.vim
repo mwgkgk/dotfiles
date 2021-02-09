@@ -1,8 +1,9 @@
-let g:vlime_cl_impl = 'sbcl'
-" let g:vlime_cl_impl = 'clisp'
+" let g:vlime_cl_impl = 'sbcl'
+let g:vlime_cl_impl = 'ccl'
 
 " eeh this doesn't work
 " https://susam.in/blog/lisp-in-vim-with-slimv-or-vlime/#use-vlime-with-clisp
+" let g:vlime_cl_impl = 'clisp'
 " function! VlimeBuildServerCommandFor_clisp(vlime_loader, vlime_eval)
 "     return ['clisp', '-i', a:vlime_loader,
 "                 \ '-x', a:vlime_eval,
