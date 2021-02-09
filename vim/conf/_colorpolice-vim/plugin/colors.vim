@@ -38,7 +38,7 @@
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
 
-" let s:static_colo = 'nuclear'
+let s:static_colo = 'nuclear'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
@@ -88,7 +88,7 @@
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
 " let s:static_colo = 'acme'
-let s:static_colo = 'fogbell_light'
+" let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
 " let s:static_colo = 'SerialExperimentsLain'
