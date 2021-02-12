@@ -23,4 +23,5 @@
         (load compiled-file)))))
 
 ;;; Utils
+(ql:quickload :craftsperson)
 (use-package :craftsperson)
