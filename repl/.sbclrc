@@ -21,3 +21,6 @@
         (compile-file #P"~/asdf.lisp"
                       :output-file compiled-file)
         (load compiled-file)))))
+
+;;; Utils
+(use-package :craftsperson)
