@@ -64,6 +64,11 @@ endsnippet
 
 # Imports & Packages
 
+snippet defpac "defpac" w
+(defpackage ${1:name}
+	(:use #:cl))
+endsnippet
+
 snippet "(\()?\bip" "in-package" rw
 (in-package #:${VISUAL}${1:`!p
 if not snip.v.text:
