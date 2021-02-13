@@ -24,7 +24,12 @@ import subprocess
 endglobal
 
 # PepeHands
-snippet /^(\s+)(dd)?/ ";;" r
+# 2021-02-13/04:03:56 changed back to pure dd. used to be implicit whitespace
+# as well:
+#   snippet /^(\s+)(dd)?/ ";;" r
+# In it's implicit form it had the old bug of whitespace-not-expanding at the
+# end of the snippets. Didn't occur on dd<Tab>.
+snippet /^(\s+)dd/ ";;" r
 `!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`;; `!v system('date-jiv | tr -d "\n"')`
