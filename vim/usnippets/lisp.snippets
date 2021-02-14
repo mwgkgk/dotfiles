@@ -513,7 +513,13 @@ if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
 endsnippet
 
-# TODO Expand any word as let - what mnemonic? $ because php/perl?
+snippet  /([\!:\w=\-?]+)\$/ "expand-any-word-as-let" rw
+(let
+	((`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)` ${1:nil})$2)
+	${3:nil})
+endsnippet
 
 priority -2
 
