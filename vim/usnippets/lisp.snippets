@@ -191,6 +191,12 @@ snippet l "lambda" w
 #'(lambda (${1:x}) ${2:nil})
 endsnippet
 
+snippet "(\()?\b(null|n)" "null" rw
+(null ${1:list}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Basement
 # ||
@@ -480,7 +486,7 @@ priority -2
 snippet /^([\!:\w=\-\+><\*]+)/ "expand-any-word-b" br
 (defun `!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)` ($1)
+	snip.rv = match.group(0)` (${1:list})
 	${2:nil})
 endsnippet
 
