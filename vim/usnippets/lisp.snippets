@@ -149,7 +149,7 @@ endsnippet
 
 # Functions
 
-snippet "(\()?\bf" "defun" rw
+snippet "(\()?\b(defun|defu|f)" "defun" rw
 (defun ${1:name} ($2)
 	${3:nil}`!p
 if match.group(1) is None:
@@ -248,7 +248,7 @@ endsnippet
 
 # Macros
 
-snippet "(\()?\bm" "m" rw
+snippet "(\()?\b(defmacro|defmac|defm|m)" "m" rw
 (defmacro ${1:name} ($3${2:&body body})
 	${4:nil}`!p
 if match.group(1) is None:
