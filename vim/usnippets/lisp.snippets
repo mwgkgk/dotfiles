@@ -501,6 +501,14 @@ if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
 endsnippet
 
+priority 0
+
+snippet (' "expand (' as '(" w
+'(
+endsnippet
+
+priority -1
+
 snippet  /([\!:\w=\-?]+)(#'|'#)/ "expand-any-word-as-sharp-quote" rw
 #'`!p
 if match.group(1) is not None:
