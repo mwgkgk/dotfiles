@@ -2,7 +2,7 @@
 " || Opening a repl
 " ||
 
-nnoremap <buffer> <LocalLeader>r :silent :above T icyc<CR>
+nnoremap <buffer> <LocalLeader>r :silent :above T guile<CR>
 
 " ||
 " || Sending to repl
