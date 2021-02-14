@@ -58,8 +58,13 @@ snippet | "|" b
 ;;; |||$0
 endsnippet
 
-snippet T "TODO" b
+snippet /^T$/ "TODO" r
 ;;; TODO ${VISUAL}$0
+endsnippet
+snippet /^(\s+)T$/ "TODO-indented" r
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`;; TODO ${VISUAL}$0
 endsnippet
 
 # Imports & Packages
