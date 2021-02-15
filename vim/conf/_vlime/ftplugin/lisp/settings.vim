@@ -1,5 +1,5 @@
-let g:vlime_cl_impl = 'sbcl'
-" let g:vlime_cl_impl = 'ccl'
+" let g:vlime_cl_impl = 'sbcl'
+let g:vlime_cl_impl = 'ccl'
 
 " eeh this doesn't work
 " https://susam.in/blog/lisp-in-vim-with-slimv-or-vlime/#use-vlime-with-clisp
