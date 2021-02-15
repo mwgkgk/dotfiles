@@ -14,3 +14,7 @@
       (compile-file #P"~/asdf.lisp"
                     :output-file compiled-file))
     (load compiled-file)))
+
+;;; Utils
+(ql:quickload :craftsperson)
+(use-package :craftsperson)
