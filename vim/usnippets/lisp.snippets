@@ -203,25 +203,25 @@ if match.group(1) is None:
 endsnippet
 
 snippet "(\()?\bcar" "car" rw
-(car ${1:list}`!p
+(car ${0:list}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bcdr" "cdr" rw
-(cdr ${1:list}`!p
+(cdr ${0:list}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bfirst" "first" rw
-(first ${1:list}`!p
+(first ${0:list}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\brest" "rest" rw
-(rest ${1:list}`!p
+(rest ${0:list}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -564,7 +564,7 @@ snippet /^([\!:\w=\-\+><\*]+)/ "expand-any-word-b" br
 (defun `!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` (${1:list})
-	${2:nil})
+	${0:nil})
 endsnippet
 
 priority -3
