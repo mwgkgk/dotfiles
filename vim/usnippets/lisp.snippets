@@ -197,7 +197,7 @@ snippet l "lambda" w
 endsnippet
 
 snippet "(\()?\b(null|n)" "null" rw
-(null ${1:list}`!p
+(null ${0:list}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
