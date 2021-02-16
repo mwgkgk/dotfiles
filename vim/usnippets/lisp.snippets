@@ -165,12 +165,12 @@ snippet re "&rest" w
 &rest ${1:forms}$2
 endsnippet
 
-snippet opt "&optional" w
-&optional ${1:form}$0
+snippet /(opt|o)/ "&optional" w
+&optional (${1:form} ${2:nil})$0
 endsnippet
 
-snippet k "&key" w
-&key ${1:form}$0
+snippet /(key|k)/ "&key" wr
+&key (${1:form} ${2:nil})$0
 endsnippet
 
 snippet run "run" b
