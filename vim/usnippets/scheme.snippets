@@ -7,6 +7,14 @@ snippet / *d(a)?(te)?/ "Date" rb
 ${0}
 endsnippet
 
+priority -1
+
+snippet dd "dd-inline" w
+`!v system('date-jiv | tr -d "\n"')`${0}
+endsnippet
+
+priority 0
+
 # ||
 # || Comments
 # ||
