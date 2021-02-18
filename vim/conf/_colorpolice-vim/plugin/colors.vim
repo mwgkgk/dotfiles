@@ -39,7 +39,7 @@
 " let s:static_colo = 'flatlandia'
 
 " let s:static_colo = 'nuclear'
-let s:static_colo = 'fadedvision'
+" let s:static_colo = 'fadedvision'
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
 " let s:static_colo = 'lecture-dark'
@@ -91,7 +91,7 @@ let s:static_colo = 'fadedvision'
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
-" let s:static_colo = 'SerialExperimentsLain'
+let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
 " let s:static_colo = 'nighted'
 
