@@ -74,7 +74,7 @@ snippet defpac "defpac" w
 	(:use #:cl))
 endsnippet
 
-snippet "(\()?\bip" "in-package" rw
+snippet "(\()?\bin?\-?p?" "in-package" rw
 (in-package #:${VISUAL}${1:`!p
 if not snip.v.text:
 	snip.rv = "common-lisp-user"`}`!p
