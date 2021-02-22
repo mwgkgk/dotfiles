@@ -1171,6 +1171,9 @@ Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 " Factor
 Plug '~/.ghq/github.com/factor/factor/misc/vim/'
 
+" Smalltalk
+Plug 'davidbalbert/vim-io'
+
 " Lisp
 Plug '~/.vim/conf/_vim-sexp/'
 Plug 'guns/vim-sexp'
