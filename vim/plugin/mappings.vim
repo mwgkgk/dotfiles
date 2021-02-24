@@ -285,8 +285,9 @@ nnoremap <silent> <C-t> <C-i>
 "
 
 " Recenter on n / N:
-nnoremap n nzOzz
-nnoremap N NzOzz
+" The error is kinda slow
+" nnoremap n nzOzz
+" nnoremap N NzOzz
 
 " Edit previous search:
 nnoremap <Leader>/ /<C-r>/
