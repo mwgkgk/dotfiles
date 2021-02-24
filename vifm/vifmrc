@@ -132,10 +132,10 @@ command unbz tar -xjf %f
 command unxz tar -xvJf %f
 command umount udiskie-umount %f
 command getphotos gphoto2 --get-all-files
-command mkcd :mkdir %a | :cd %a
-command C :mkdir %a | :cd %a
-command mkdatedir !mkdatedir %a
-command mktimedir !mktimedir %a
+command mkcd :mkdir "%a" | :cd "%a"
+command C :mkdir "%a" | :cd "%a"
+command mkdatedir !mkdatedir "%a"
+command mktimedir !mktimedir "%a"
 command FF !firefox-default %f &
 command cdgit :execute 'cd' system('git rev-parse --git-dir')
 
