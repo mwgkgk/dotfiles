@@ -33,6 +33,8 @@ nmap <Leader>hmu <Plug>(operator-commit-current-hunk-as-use)
 nmap <Leader>hmU <Plug>(operator-commit-current-hunk-as-update)
 " prepending Extract:
 nmap <Leader>hme <Plug>(operator-commit-current-hunk-as-extract)
+" prepending Fix:
+nmap <Leader>hmf <Plug>(operator-commit-current-hunk-as-fix)
 
 " TODO rename previous commit and append word under cursor with a comma
 
