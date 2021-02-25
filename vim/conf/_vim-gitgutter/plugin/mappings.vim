@@ -36,7 +36,8 @@ nmap <Leader>hme <Plug>(operator-commit-current-hunk-as-extract)
 " prepending Fix:
 nmap <Leader>hmf <Plug>(operator-commit-current-hunk-as-fix)
 
-" TODO rename previous commit and append word under cursor with a comma
+" TODO rename previous commit and append word under cursor with a comma, and
+" stage and commit hunk under cursor.
 
 " Stage and commit file with message specified by motion:
 " TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
