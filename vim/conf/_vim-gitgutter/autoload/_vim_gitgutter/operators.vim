@@ -215,6 +215,49 @@ function! _vim_gitgutter#operators#commit_current_hunk_as_update(motion_wiseness
     endif
 endfunction
 
+function! _vim_gitgutter#operators#commit_current_hunk_as_tackle(motion_wiseness)
+    if &modified
+        echo 'Buffer has unwritten changes'
+        return
+    endif
+
+    if git#diff#has_staged_changes()
+        echo 'There are staged changes'
+        return
+    endif
+
+    if empty(_vim_gitgutter#current_hunk())
+        echo 'No hunk under cursor'
+        return
+    endif
+
+    if s:is_empty_region()
+      return
+    endif
+
+    " Save cursor position for linewise motion like 'yj'.
+    if a:motion_wiseness is# 'line'
+      let w = winsaveview()
+    endif
+
+    let visual_command = operator#user#visual_command_from_wise_name(a:motion_wiseness)
+    let start = [line("'["), virtcol("'[")]
+    let end = [line("']"), virtcol("']")]
+    let pattern = vital#_operator_flashy#Coaster#Search#pattern_by_range(visual_command, start, end)
+
+    normal! `[yv`]
+
+    GitGutterStageHunk
+
+    let l:message = 'Tackle ' . git#commit#flatten_message(getreg('"'))
+
+    if git#commit#with_message(l:message)
+        echo 'Commit ' . l:message
+
+        call operator#flashy#flash(pattern, g:operator#flashy#flash_time)
+    endif
+endfunction
+
 function! _vim_gitgutter#operators#commit_current_hunk_as_fix(motion_wiseness)
     if &modified
         echo 'Buffer has unwritten changes'

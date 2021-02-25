@@ -35,6 +35,8 @@ nmap <Leader>hmU <Plug>(operator-commit-current-hunk-as-update)
 nmap <Leader>hme <Plug>(operator-commit-current-hunk-as-extract)
 " prepending Fix:
 nmap <Leader>hmf <Plug>(operator-commit-current-hunk-as-fix)
+" prepending Tackle:
+nmap <Leader>hmt <Plug>(operator-commit-current-hunk-as-tackle)
 
 " Stage and commit file with message specified by motion:
 " TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
