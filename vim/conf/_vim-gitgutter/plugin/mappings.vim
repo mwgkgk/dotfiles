@@ -23,9 +23,16 @@ nnoremap <silent> <Leader><Leader> :call _vim_gitgutter#stage_commit_current_hun
 " Stage and commit hunk under cursor with message specified by motion:
 nmap <Leader>hc <Plug>(operator-commit-current-hunk-with-message)
 
+" Haha, this is what it's like not to use macros:
 " Stage and commit hunk under cursor with message specified by motion,
 " prepending Add:
 nmap <Leader>hma <Plug>(operator-commit-current-hunk-as-add)
+" prepending Use:
+nmap <Leader>hmu <Plug>(operator-commit-current-hunk-as-use)
+" prepending Update:
+nmap <Leader>hmU <Plug>(operator-commit-current-hunk-as-update)
+" prepending Extract:
+nmap <Leader>hme <Plug>(operator-commit-current-hunk-as-extract)
 
 " Stage and commit file with message specified by motion:
 " TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
