@@ -30,3 +30,17 @@ nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
 " ||
 
 nnoremap <buffer> <C-g> :Man <C-r><C-a><CR>
+
+" ||
+" || C-q
+" ||
+
+inoremap <silent> <buffer> <C-q><C-q> <Esc>:TREPLSendLine<CR>a
+nnoremap <buffer> <C-q><C-q> <Esc>:silent T <C-r><C-a><CR>
+
+inoremap <buffer> <C-q><C-w> <Esc>:silent T <C-r><C-a><CR>a
+nnoremap <buffer> <C-q><C-w> <Esc>:silent T <C-r><C-a><CR>
+
+" To be continued...
+inoremap <buffer> <C-q>2 <Esc>vBBy:silent T <C-r>"<CR>gi
+inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
