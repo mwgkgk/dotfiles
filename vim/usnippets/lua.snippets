@@ -1,16 +1,65 @@
-#################################
-# Snippets for the Lua language #
-#################################
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+--[[ `date-utc` --]]
+${0}
+endsnippet
+
+# ||
+# || Header
+# ||
+
 snippet #! "Shebang header" b
 #!/usr/bin/env lua
 $0
 endsnippet
+
+# ||
+# || Function
+# ||
 
 snippet !f(un)?! "New function" br
 local function ${1:new_function}(${2:args})
    $0
 end
 endsnippet
+
+# ||
+# || Scope
+# ||
+
+snippet do "do" i
+do
+	$0
+end
+endsnippet
+
+# ||
+# || Conditionals
+# ||
+
+snippet if "if" b
+if $1 then
+	$2
+end
+endsnippet
+
+snippet then "then" i
+then
+	$0
+end
+endsnippet
+
+snippet else "else" i
+else
+	$0
+endsnippet
+
+# ||
+# || For loops
+# ||
 
 snippet for "pair for loop" b
 for ${1:k},${2:v} in ipairs(${3:table_name}) do
@@ -30,33 +79,20 @@ for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
 end
 endsnippet
 
+# ||
+# || Vars
+# ||
+
 snippet /(l|local)/ "local x = 1" r
 local ${1:x} = ${0:1}
 endsnippet
 
+# ||
+# || Print
+# ||
+
 snippet mes "message" b
 message(${2:'${1:Hi}'})
-endsnippet
-
-snippet if "if" b
-if $1 then
-	$2
-end
-endsnippet
-
-snippet then "then" i
-then
-	$0
-end
-endsnippet
-
-snippet else "else" i
-else
-	$0
-endsnippet
-
-snippet ex "exec" b
-os.execute(${1:"$0"})
 endsnippet
 
 snippet help "help" b
@@ -65,10 +101,10 @@ local function print_help()
 end
 endsnippet
 
-snippet do "do" i
-do
-	$0
-end
-endsnippet
+# ||
+# || Shell
+# ||
 
-# vim:ft=snippets:
+snippet ex "exec" b
+os.execute(${1:"$0"})
+endsnippet
