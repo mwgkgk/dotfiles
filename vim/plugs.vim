@@ -1218,6 +1218,11 @@ Plug 'tbastos/vim-lua', { 'for' : 'lua' }
 " Fennel
 Plug 'bakpakin/fennel.vim'
 
+if has('nvim')
+    Plug 'Olical/aniseed', { 'tag': 'v3.16.0' }
+    let g:aniseed#env = v:true
+endif
+
 " Janet
 Plug 'bakpakin/janet.vim'
 
