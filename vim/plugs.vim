@@ -1215,6 +1215,9 @@ Plug 'kdheepak/JuliaFormatter.vim', { 'for' : 'julia' }
 " Lua
 Plug 'tbastos/vim-lua', { 'for' : 'lua' }
 
+" Fennel
+Plug 'bakpakin/fennel.vim'
+
 " Janet
 Plug 'bakpakin/janet.vim'
 
