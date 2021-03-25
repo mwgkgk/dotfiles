@@ -1190,7 +1190,7 @@ Plug 'hellerve/carp-vim'
 
 " Clojure
 if has('nvim')
-    Plug 'Olical/conjure', { 'tag': 'v2.1.2', 'do': 'bin/compile' }
+    Plug 'Olical/conjure', { 'tag': 'v4.16.0' }
 else
     Plug '~/.vim/conf/_vim-fireplace/', { 'for' : 'clojure' }
     Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
