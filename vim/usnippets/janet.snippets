@@ -20,6 +20,22 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+#+nil
+(quote
+	${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = "nil"
+`}
+	nil) ; `!v system('date-jiv | tr -d "\n"')`
+endsnippet
+
+# ||
 # || Fallbacks
 # ||
 
