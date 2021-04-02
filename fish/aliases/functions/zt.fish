@@ -1,3 +1,3 @@
 function zt
-    zig test --cache-dir ~/.cache/zig-test $argv
+    zig-master test --cache-dir ~/.cache/zig-test $argv
 end
