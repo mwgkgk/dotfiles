@@ -37,7 +37,8 @@
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
 
-let s:static_colo = 'nuclear'
+" let s:static_colo = 'nuclear'
+let s:static_colo = 'nuclear-dark'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'calmar256-dark'
 " let s:static_colo = 'hell'
