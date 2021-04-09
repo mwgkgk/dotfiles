@@ -15,10 +15,11 @@ endsnippet
 
 snippet /^$/ "basement-implicit" r
 #;
-(begin
+(quote
 	${VISUAL}${1:`!p
 if not snip.v.text:
-	snip.rv = "#f"`})
+	snip.rv = "#f"`}
+	null)
 endsnippet
 
 snippet l "lambda" w
