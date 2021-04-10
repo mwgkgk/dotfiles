@@ -51,6 +51,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bdv" "define-values" rw
+(define-values (${1:name}) (values ${2:#f})`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Functions
 # ||
