@@ -45,9 +45,8 @@ endsnippet
 # || Vars
 # ||
 
-snippet "(\()?\bf" "define" rw
-(define (${1:name})
-	${2:#f}`!p
+snippet "(\()?\bv" "define-variable" rw
+(define ${1:name} ${2:#f}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -56,7 +55,7 @@ endsnippet
 # || Functions
 # ||
 
-snippet "(\()?\bf" "define" rw
+snippet "(\()?\bf" "define-function" rw
 (define (${1:name})
 	${2:#f}`!p
 if match.group(1) is None:
