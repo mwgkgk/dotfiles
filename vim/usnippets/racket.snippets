@@ -1,10 +1,49 @@
-# Headers
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+;;; `date-utc` ;;;
+${0}
+endsnippet
+
+snippet dd "dd" b
+`date-utc`
+endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet /^;?;?;/ ";;;" r
+;;; ${VISUAL}$0
+endsnippet
+
+snippet /^(\s+);/ ";;" r
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`;; ${VISUAL}$0
+endsnippet
+
+# TODO generate the appropriate amount of ======
+# Maybe rethink shortcut but this is muscle memory
+snippet # "#" b
+;;;
+;;; ${VISUAL}$1
+;;;
+endsnippet
+
+# ||
+# || Headers
+# ||
 
 snippet l "#lang" b
 #lang ${1:racket}$2
 endsnippet
 
-# Functions
+# ||
+# || Vars
+# ||
 
 snippet "(\()?\bf" "define" rw
 (define (${1:name})
@@ -12,6 +51,25 @@ snippet "(\()?\bf" "define" rw
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
+
+# ||
+# || Functions
+# ||
+
+snippet "(\()?\bf" "define" rw
+(define (${1:name})
+	${2:#f}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet l "lambda" w
+(lambda (${1:x}) ${2:#f})
+endsnippet
+
+# ||
+# || Basement
+# ||
 
 snippet /^$/ "basement-implicit" r
 #;
@@ -22,11 +80,9 @@ if not snip.v.text:
 	null)
 endsnippet
 
-snippet l "lambda" w
-(lambda (${1:x}) ${2:#f})
-endsnippet
-
-# Let
+# ||
+# || Let
+# ||
 
 snippet "(\()?\blet" "let" wr
 (let
@@ -40,7 +96,9 @@ snippet lc "let clause" w
 [${1:x} ($2)]$3
 endsnippet
 
-# Conditionals
+# ||
+# || Conditionals
+# ||
 
 snippet "(\()?\bcond" "cond" r
 (cond
@@ -53,7 +111,9 @@ snippet cc "cond clause" w
 [${3:(${1:equal?}$2)} $4]$5
 endsnippet
 
-# Quotes
+# ||
+# || Quotes
+# ||
 
 snippet ' "'" w
 '(${VISUAL}$1)$2
@@ -63,42 +123,22 @@ snippet ` "`" w
 \`(${VISUAL}$1)$2
 endsnippet
 
-# Bits and Pieces
+# ||
+# || Fallbacks
+# ||
 
-snippet /^;?;?;/ ";;;" r
-;;; ${VISUAL}$0
+priority -2
+
+snippet /^([\!:\w=\-\+><\*]+)/ "expand-any-word-b" br
+(define `!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` (${1:list})
+	${0:nil})
 endsnippet
-
-snippet /^(\s+);/ ";;" r
-`!p
-if match.group(1) is not None:
-	snip.rv = match.group(1)`;; ${VISUAL}$0
-endsnippet
-
-snippet / *d(a)?(te)?/ "Date" rb
-;;; `date-utc` ;;;
-${0}
-endsnippet
-
-snippet dd "dd" b
-;;; VISITED `date-utc`
-endsnippet
-
-snippet vis "vis" w
-VISITED `date-utc`
-endsnippet
-
-snippet | "|" b
-;;; |||
-;;; ||| ${VISUAL}$1
-;;; |||$0
-endsnippet
-
-# Fallback
 
 priority -3
 
-snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+snippet  /([\!:\w=\-\+><\*]+)/ "expand-any-word" rw
 (`!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` $1)
