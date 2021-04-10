@@ -1,12 +1,12 @@
-" let g:vlime_cl_impl = 'sbcl'
+let g:vlime_cl_impl = 'sbcl'
 " let g:vlime_cl_impl = 'ccl'
 
-let g:vlime_cl_impl = "ros"
-function! VlimeBuildServerCommandFor_ros(vlime_loader, vlime_eval)
-    return ["ros", "run",
-                \ "--load", a:vlime_loader,
-                \ "--eval", a:vlime_eval]
-endfunction
+" let g:vlime_cl_impl = "ros"
+" function! VlimeBuildServerCommandFor_ros(vlime_loader, vlime_eval)
+"     return ["ros", "run",
+"                 \ "--load", a:vlime_loader,
+"                 \ "--eval", a:vlime_eval]
+" endfunction
 
 " eeh this doesn't work
 " https://susam.in/blog/lisp-in-vim-with-slimv-or-vlime/#use-vlime-with-clisp
