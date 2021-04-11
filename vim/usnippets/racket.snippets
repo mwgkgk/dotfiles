@@ -58,6 +58,17 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Structs
+# ||
+
+snippet "(\()?\bs" "struct" rw
+(struct ${1:struct-name}
+	($2)`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Functions
 # ||
 
