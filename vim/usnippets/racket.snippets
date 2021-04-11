@@ -29,7 +29,7 @@ endsnippet
 # Maybe rethink shortcut but this is muscle memory
 snippet # "#" b
 ;;;
-;;; ${VISUAL}$1
+;;; ${VISUAL}$0
 ;;;
 endsnippet
 
@@ -38,7 +38,7 @@ endsnippet
 # ||
 
 snippet l "#lang" b
-#lang ${1:racket}$2
+#lang ${1:racket}$0
 endsnippet
 
 # ||
@@ -46,13 +46,13 @@ endsnippet
 # ||
 
 snippet "(\()?\bv|define|def" "define-variable" rw
-(define ${1:name} ${2:#f}`!p
+(define $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bdv" "define-values" rw
-(define-values (${1:name}) (values ${2:#f})`!p
+(define-values (${1:names}) (values ${0:#f})`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -63,7 +63,7 @@ endsnippet
 
 snippet "(\()?\bs" "struct" rw
 (struct ${1:struct-name}
-	($2)`!p
+	(${0:fields})`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -73,14 +73,14 @@ endsnippet
 # ||
 
 snippet "(\()?\bf" "define-function" rw
-(define (${1:name})
-	${2:#f}`!p
+(define (${1:function-name})
+	${0:#f}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet l "lambda" w
-(lambda (${1:x}) ${2:#f})
+(lambda (${1:x}) ${0:#f})
 endsnippet
 
 # ||
@@ -90,7 +90,7 @@ endsnippet
 snippet /^$/ "basement-implicit" r
 #;
 (quote
-	${VISUAL}${1:`!p
+	${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = "#f"`}
 	null)
@@ -102,14 +102,10 @@ endsnippet
 
 snippet "(\()?\blet" "let" wr
 (let
-	([$1 ${3:(${2:${VISUAL}})}]$4)
-	${5:$1}`!p
+	([$1])
+	${0:null}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
-endsnippet
-
-snippet lc "let clause" w
-[${1:x} ($2)]$3
 endsnippet
 
 # ||
@@ -118,13 +114,9 @@ endsnippet
 
 snippet "(\()?\bcond" "cond" r
 (cond
-	[(${1:equal? x y}) ${2:#f}]$3`!p
+	[$0]`!p
 if match.group(1) is None:
 	snip.rv = ")"`
-endsnippet
-
-snippet cc "cond clause" w
-[${3:(${1:equal?}$2)} $4]$5
 endsnippet
 
 # ||
@@ -132,11 +124,11 @@ endsnippet
 # ||
 
 snippet ' "'" w
-'(${VISUAL}$1)$2
+'(${VISUAL}$0)
 endsnippet
 
 snippet ` "`" w
-\`(${VISUAL}$1)$2
+\`(${VISUAL}$0)
 endsnippet
 
 # ||
