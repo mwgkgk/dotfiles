@@ -68,6 +68,19 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet m "#:mutable" w
+#:mutable
+endsnippet
+
+snippet tr "#:transparent" w
+#:transparent
+endsnippet
+
+snippet g "#:guard" w
+#:guard (λ ($1)
+	${0:null}))
+endsnippet
+
 # ||
 # || Functions
 # ||
@@ -80,7 +93,7 @@ if match.group(1) is None:
 endsnippet
 
 snippet l "lambda" w
-(lambda (${1:x}) ${0:#f})
+(λ (${1:x}) ${0:#f})
 endsnippet
 
 # ||
