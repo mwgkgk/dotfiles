@@ -2,7 +2,7 @@
 # || Date
 # ||
 
-snippet / *d(a)?(te)?/ "Date" rb
+snippet / *da(te)?/ "Date" rb
 ;;; `date-utc` ;;;
 ${0}
 endsnippet
@@ -45,7 +45,7 @@ endsnippet
 # || Vars
 # ||
 
-snippet "(\()?\bv|define|def" "define-variable" rw
+snippet "(\()?\bdefine|def|d" "define-variable" rw
 (define $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
