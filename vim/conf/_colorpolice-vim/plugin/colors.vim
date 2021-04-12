@@ -25,7 +25,7 @@
 " let s:static_colo = 'fahrenheit'
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
-let s:static_colo = 'hemisu-light'
+" let s:static_colo = 'hemisu-light'
 " let s:static_colo = 'hawk'
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
@@ -56,7 +56,7 @@ let s:static_colo = 'hemisu-light'
 " let s:static_colo = 'typofree'
 " let s:static_colo = 'badwolf'
 
-" let s:static_colo = 'redmustang'
+let s:static_colo = 'redmustang'
 " let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
