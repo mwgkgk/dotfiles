@@ -3,7 +3,7 @@
 " }}}
 
 " let s:static_colo = 'industry'
-" let s:static_colo = 'heavy-industry'
+let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
@@ -56,7 +56,7 @@
 " let s:static_colo = 'typofree'
 " let s:static_colo = 'badwolf'
 
-let s:static_colo = 'redmustang'
+" let s:static_colo = 'redmustang'
 " let s:static_colo = 'mustangmod'
 
 " let s:static_colo = 'outsider'
