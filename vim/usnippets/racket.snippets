@@ -145,6 +145,16 @@ snippet ` "`" w
 endsnippet
 
 # ||
+# || Strings
+# ||
+
+snippet "(\()?\bsl" "string-length" rw
+(string-length ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Fallbacks
 # ||
 
