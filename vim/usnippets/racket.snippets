@@ -133,6 +133,17 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Loops
+# ||
+
+snippet "(\()?\bfor" "for" rw
+(for ([$1])
+	${0:null}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Quotes
 # ||
 
