@@ -45,7 +45,7 @@ endsnippet
 # || Vars
 # ||
 
-snippet "(\()?\bdefine|def|d" "define-variable" rw
+snippet "(\()?\b(define|def|d)" "define-variable" rw
 (define $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
