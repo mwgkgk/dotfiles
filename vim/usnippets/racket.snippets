@@ -143,7 +143,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bfor*" "for*" rw
+snippet "(\()?\bfor\*" "for*" rw
 (for* ([$1])
 	${0:null}`!p
 if match.group(1) is None:
