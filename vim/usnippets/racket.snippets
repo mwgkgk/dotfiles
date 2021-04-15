@@ -163,6 +163,17 @@ snippet ` "`" w
 endsnippet
 
 # ||
+# || Macros
+# ||
+
+snippet "(\()?\bdsr" "define-syntax-rule" rw
+(define-syntax-rule ($1)
+	${0:null}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Strings
 # ||
 
