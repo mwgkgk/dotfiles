@@ -57,6 +57,16 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+priority -1
+
+snippet "(\()?\bs" "set!" rw
+(set! `!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+priority 0
+
 # ||
 # || Structs
 # ||
