@@ -179,7 +179,7 @@ endsnippet
 snippet "(\()?\bds" "define-syntax" rw
 (define-syntax $1
 	(syntax-rules ()
-		[$0])`!p
+		[($0)])`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
