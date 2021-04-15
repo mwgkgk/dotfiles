@@ -165,6 +165,14 @@ endsnippet
 # || Macros
 # ||
 
+snippet "(\()?\bds" "define-syntax" rw
+(define-syntax $1
+	(syntax-rules ()
+		[$0]))`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "(\()?\bdsr" "define-syntax-rule" rw
 (define-syntax-rule ($1)
 	${0:null}`!p
