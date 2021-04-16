@@ -234,7 +234,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bp" "displayln" rw
+snippet "(\()?\b(display|displa|displ|disp|dis|di|p)" "displayln" rw
 (displayln ${0:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
