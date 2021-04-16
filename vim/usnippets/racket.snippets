@@ -235,19 +235,19 @@ if match.group(1) is None:
 endsnippet
 
 snippet "(\()?\bp" "displayln" rw
-(displayln $0`!p
+(displayln ${0:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bw" "writeln" rw
-(writeln $0`!p
+(writeln ${0:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\b(printf|print|prin|pri|pr|pf|fmt)" "printf" rw
-(printf "$0"`!p
+(printf "$1" ${0:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
