@@ -158,7 +158,7 @@ endsnippet
 # || Blocks
 # ||
 
-snippet "(\()?\bb" "begin" rw
+snippet "(\()?\b(progn|begin|b)" "begin" rw
 (begin
 	${VISUAL}$0`!p
 if match.group(1) is None:
