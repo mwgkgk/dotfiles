@@ -71,7 +71,7 @@ priority 0
 # || Structs
 # ||
 
-snippet "^(\()?\bs" "struct" rw
+snippet "^(\()?\b(struct|struc|stru|str|st|s)" "struct" rw
 (struct ${1:struct-name}
 	(${0:fields})`!p
 if match.group(1) is None:
