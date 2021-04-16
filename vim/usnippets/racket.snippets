@@ -240,6 +240,18 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bw" "writeln" rw
+(writeln $0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\b(printf|print|prin|pri|pr|pf|fmt)" "printf" rw
+(printf "$0"`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Higher-order functions
 # ||
