@@ -37,8 +37,8 @@ endsnippet
 # || Headers
 # ||
 
-snippet l "#lang" b
-#lang ${1:racket}$0
+snippet /^l/ "#lang" br
+#lang ${0:typed/racket}
 endsnippet
 
 # ||
@@ -102,9 +102,13 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+priority -1
+
 snippet l "lambda" w
 (λ (${1:x}) ${0:#f})
 endsnippet
+
+priority 0
 
 # ||
 # || Basement
