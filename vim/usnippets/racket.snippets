@@ -60,7 +60,7 @@ endsnippet
 priority -1
 
 snippet "(\()?\bs" "set!" rw
-(set! `!p
+(set! $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
