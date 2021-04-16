@@ -248,6 +248,26 @@ endsnippet
 # || Fallbacks
 # ||
 
+priority -1
+
+snippet /([\!:\w=\-\+><\*\/\?\.]+):/ "expand-any-word-as-keyword" rw
+#:`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`$0
+endsnippet
+
+snippet /([\!:\w=\-\+><\*\/\?\.]*[\!:\w=\-\+><\*\/\?])\./ "expand-any-word-as-no-arguments-call" rw
+(`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`)$0
+endsnippet
+
+snippet /([\!:\w=\-\+><\*\/\?\.]+)\.\./ "expand-any-word-as-square-brackets-list" rw
+[`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)` $0]
+endsnippet
+
 priority -2
 
 snippet /^([\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word-b" br
