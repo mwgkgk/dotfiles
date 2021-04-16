@@ -294,7 +294,7 @@ priority -3
 snippet  /([\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word" rw
 (`!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)` $1)
+	snip.rv = match.group(0)` $0)
 endsnippet
 
 priority -4
@@ -302,5 +302,5 @@ priority -4
 snippet  /(\(([\!:\w=\-\+><\*\/\?\.]+\s*)+\))/ "expand-any-on-level-form" rw
 (`!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)` $1)
+	snip.rv = match.group(0)` $0)
 endsnippet
