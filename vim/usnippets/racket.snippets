@@ -115,6 +115,16 @@ snippet t# "t#" w
 endsnippet
 
 # ||
+# || Symbols
+# ||
+
+snippet /(\()?\b(symbol=|symbol|symbo|symb|sym|sy)/ "symbol=?" wr
+(symbol=? ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Functions
 # ||
 
