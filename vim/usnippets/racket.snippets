@@ -3,7 +3,7 @@
 # ||
 
 snippet / *da(te)?/ "Date" rb
-;;; `date-utc` ;;;
+;; `date-utc` ;;
 ${0}
 endsnippet
 
@@ -15,25 +15,21 @@ endsnippet
 # || Comments
 # ||
 
-snippet /^;?;?;/ ";;;" r
-;;; ${VISUAL}$0
+snippet /^;?;/ ";;" r
+;; ${VISUAL}$0
 endsnippet
 
-snippet /^(\s+);/ ";;" r
+snippet /^(\s+);/ ";" r
 `!p
 if match.group(1) is not None:
-	snip.rv = match.group(1)`;; ${VISUAL}$0
+	snip.rv = match.group(1)`; ${VISUAL}$0
 endsnippet
 
-# TODO generate the appropriate amount of ======
-# Maybe rethink shortcut but this is muscle memory
-snippet # "#" b
-;;;
+snippet ;;; ";;;" b
 ;;; ${VISUAL}$0
-;;;
 endsnippet
 
-snippet | "|" w
+snippet # "#| |#" w
 #|
 ${VISUAL}$0
 |#
