@@ -179,6 +179,22 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Equality
+# ||
+
+snippet "(\()?\be" "equal?" rw
+(equal? `!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\beq" "eq?" rw
+(eq? `!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Blocks
 # ||
 
