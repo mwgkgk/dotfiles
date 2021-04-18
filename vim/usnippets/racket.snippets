@@ -201,13 +201,13 @@ endsnippet
 # ||
 
 snippet "(\()?\be" "equal?" rw
-(equal? `!p
+(equal? $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\beq" "eq?" rw
-(eq? `!p
+(eq? $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
