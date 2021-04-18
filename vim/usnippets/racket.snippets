@@ -325,7 +325,53 @@ endsnippet
 # ||
 
 snippet "(\()?\bcomp" "compose" rw
-(compose `!p
+(compose ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
+# || Testing
+# ||
+
+snippet "(\()?\bce" "check-equal?" rw
+(check-equal? ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bcne" "check-not-equal?" rw
+(check-not-equal? ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bc=" "check-=" rw
+(check-= ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bcp" "check-pred" rw
+(check-pred ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bct" "check-true" rw
+(check-true ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bcf" "check-false" rw
+(check-false ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bcnf" "check-not-false" rw
+(check-not-false ${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
