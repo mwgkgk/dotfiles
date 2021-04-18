@@ -79,8 +79,7 @@ endsnippet
 
 snippet ls "Lisp snippet" b
 `!p snip.rv = "snippet"` "(\()?\b${1:trigger}" "${2:$1}" rw
-($2
-	$0\`!p
+($2 \$0$0\`!p
 if match.group(1) is None:
 	snip.rv = ")"\`
 `!p snip.rv = "endsnippet"`
