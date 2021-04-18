@@ -1,9 +1,13 @@
+# {{{
+# vim: foldmethod=marker foldlevel=0
+# }}}
+
 # ||
 # || Date
 # ||
 
 snippet / *da(te)?/ "Date" rb
-;; `date-utc` ;;
+;;; `date-utc` ;;;
 ${0}
 endsnippet
 
@@ -15,19 +19,33 @@ endsnippet
 # || Comments
 # ||
 
-snippet /^;?;/ ";;" r
-;; ${VISUAL}$0
-endsnippet
-
-snippet /^(\s+);/ ";" r
+snippet /^(\s+);?;/ ";;" r
 `!p
 if match.group(1) is not None:
-	snip.rv = match.group(1)`; ${VISUAL}$0
+	snip.rv = match.group(1)`;; ${VISUAL}$0
 endsnippet
 
-snippet ;;; ";;;" b
+snippet /^;?;?;/ ";;;" r
 ;;; ${VISUAL}$0
 endsnippet
+
+# Canonical comments: {{{
+
+# snippet /^;?;/ ";;" r
+# ;; ${VISUAL}$0
+# endsnippet
+
+# snippet /^(\s+);/ ";" r
+# `!p
+# if match.group(1) is not None:
+# 	snip.rv = match.group(1)`; ${VISUAL}$0
+# endsnippet
+
+# snippet ;;; ";;;" b
+# ;;; ${VISUAL}$0
+# endsnippet
+
+# }}}
 
 snippet # "#| |#" w
 #|
