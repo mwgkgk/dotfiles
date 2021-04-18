@@ -62,6 +62,16 @@ snippet /^l/ "#lang" br
 endsnippet
 
 # ||
+# || Modules
+# ||
+
+snippet "(\()?\br" "require" rw
+(require $0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Vars
 # ||
 
