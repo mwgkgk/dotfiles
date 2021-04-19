@@ -80,8 +80,8 @@ endsnippet
 # ||
 
 snippet "(\()?\bf" "defun" rw
-(defun ${1:name}
-	${2:'false}`!p
+(defun $1 ($2)
+	${0:'false}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -129,17 +129,10 @@ endsnippet
 priority -2
 
 snippet /^([\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word-b" br
-(define (`!p
-if match.group(0) is not None:
-	snip.rv = match.group(0)`$1)
-	${0:nil})
-endsnippet
-
-snippet /^([\!:\w=\-\+><\*\/\?\.]+ )/ "expand-any-word-b-args" br
-(define (`!p
-if match.group(0) is not None:
-	snip.rv = match.group(0)`${1:list})
-	${0:nil})
+(defun $1 ($2)
+	${0:'false}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 priority -3

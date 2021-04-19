@@ -419,14 +419,14 @@ snippet /^([\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word-b" br
 (define (`!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)`$1)
-	${0:nil})
+	${0:null})
 endsnippet
 
 snippet /^([\!:\w=\-\+><\*\/\?\.]+ )/ "expand-any-word-b-args" br
 (define (`!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)`${1:list})
-	${0:nil})
+	${0:null})
 endsnippet
 
 priority -3
