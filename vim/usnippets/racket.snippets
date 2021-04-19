@@ -206,6 +206,13 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bunl" "unless" rw
+(unless $1
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Equality
 # ||
