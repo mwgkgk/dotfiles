@@ -17,3 +17,8 @@ nnoremap <buffer> <LocalLeader>s :silent T (slurp "<C-r>=expand('%')<CR>")<CR>
 
 " Unslurp
 nnoremap <buffer> <LocalLeader>u :silent T (unslurp)<CR>
+
+" Mon Apr 19 11:15:03 UTC 2021
+
+" Reset-environment
+nnoremap <buffer> <LocalLeader><LocalLeader>R :silent T (reset-environment)<CR>
