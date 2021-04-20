@@ -1,5 +1,6 @@
-let g:vlime_cl_impl = 'sbcl'
+" let g:vlime_cl_impl = 'sbcl'
 " let g:vlime_cl_impl = 'ccl'
+let g:vlime_cl_impl = 'ecl'
 
 " let g:vlime_cl_impl = "ros"
 " function! VlimeBuildServerCommandFor_ros(vlime_loader, vlime_eval)
