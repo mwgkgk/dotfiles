@@ -51,3 +51,46 @@ snippet f "f" b
 (de ${1:fname} (${2:args})
 	${VISUAL}$0)
 endsnippet
+
+# ||
+# || Fallbacks
+# ||
+
+priority -1
+
+snippet /([\!:\w=\-\+><\*\/\?\.]*[\!:\w=\-\+><\*\/\?])\./ "expand-any-word-as-no-arguments-call" rw
+(`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`)$0
+endsnippet
+
+snippet /([\!:\w=\-\+><\*\/\?\.]+)\.\./ "expand-any-word-as-square-brackets-list" rw
+[`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)` $0]
+endsnippet
+
+priority -2
+
+snippet /^([\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word-b" br
+(de `!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` ($1)
+	${0:nil})
+endsnippet
+
+priority -3
+
+snippet  /([\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $0)
+endsnippet
+
+priority -4
+
+snippet  /(\(([\!:\w=\-\+><\*\/\?\.]+\s*)+\))/ "expand-any-one-level-form" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $0)
+endsnippet
