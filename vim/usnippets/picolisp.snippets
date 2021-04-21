@@ -1,3 +1,21 @@
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+# `date-utc`
+
+${0}
+endsnippet
+
+snippet dd "dd-inline" w
+`!v system('date-jiv | tr -d "\n"')`${0}
+endsnippet
+
+# ||
+# || Functions
+# ||
+
 snippet f "f" b
 (de ${1:fname} (${2:args})
 	${VISUAL}$0)
