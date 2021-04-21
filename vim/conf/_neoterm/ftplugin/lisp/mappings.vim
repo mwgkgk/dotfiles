@@ -17,4 +17,7 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 " || Docs
 " ||
 
-nnoremap <buffer> <C-g> :silent T (describe <C-r><C-w><CR>)
+nnoremap <buffer> g<C-g> :silent T (describe <C-r><C-w><CR>)
+
+" ECL-specific
+nnoremap <buffer> <C-g> :silent T (help <C-r><C-w><CR>)
