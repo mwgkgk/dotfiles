@@ -1,6 +1,56 @@
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+# `date-utc`
+
+${VISUAL}${0}
+endsnippet
+
+snippet dd "dd" w
+`!v system('date-jiv | tr -d "\n"')`${0}
+endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet # "comment" w
+# ${VISUAL}$0
+endsnippet
+
+snippet ; "comment-generic" w
+# ${VISUAL}$0
+endsnippet
+
+# ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+#[ `!v system('date-jiv | tr -d "\n"')`
+${VISUAL}$0
+]#
+endsnippet
+
+# ||
+# || Modules
+# ||
+
 snippet i "i" b
 import ${1:os}
 endsnippet
+
+snippet ifm "ifm" b
+when isMainModule:
+	${1:main()}
+endsnippet
+
+# ||
+# || Functions
+# ||
 
 snippet f "f" b
 proc ${1:parseArgs}(${4:${2:args}: ${3:varargs[String]}}) =
@@ -12,6 +62,10 @@ func ${1:parseArgs}(${4:${2:args}: ${3:varargs[String]}}) =
 	${VISUAL}$0
 endsnippet
 
+# ||
+# || Printing
+# ||
+
 snippet p "p" b
 echo ${0:"${VISUAL}$1"}
 endsnippet
@@ -19,6 +73,10 @@ endsnippet
 snippet e "e" b
 stderr.writeLine ${0:"${VISUAL}$1"}
 endsnippet
+
+# ||
+# || Conditionals
+# ||
 
 snippet if "if" b
 if ${2:${1:name} == ""}:
@@ -50,14 +108,13 @@ else:
 	$0
 endsnippet
 
+# ||
+# || Errors
+# ||
+
 snippet try "try" b
 try:
 	$1
 except ${1:OSError}:
 	$0
-endsnippet
-
-snippet ifm "ifm" b
-when isMainModule:
-	${1:main()}
 endsnippet
