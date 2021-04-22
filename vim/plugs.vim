@@ -1303,6 +1303,10 @@ Plug 'mwgkgk/lux-vim', { 'for' : 'lux' }
 " ATS
 Plug 'vmchale/ats-vim', { 'for' : 'ats' }
 
+" Nim
+Plug '~/.vim/conf/_nim.vim/'
+Plug 'zah/nim.vim'
+
 " }}}
 
 
