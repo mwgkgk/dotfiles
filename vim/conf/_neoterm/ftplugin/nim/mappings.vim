@@ -17,13 +17,16 @@ nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '')
 
 " TODO These don't auto run repl like <Plug>(neoterm-repl-send)
 nnoremap <silent> <buffer> X :TREPLSendLine<CR>
-vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
+vnoremap <silent> <buffer> X :TREPLSendSelection<CR>:T 
 
 " Send word
 nmap <silent> <buffer> <Leader>X <Plug>(neoterm-repl-send)aw
 
 " TODO send top expr
 " nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
+
+" Send file
+nnoremap <buffer> <silent> <LocalLeader>l :TREPLSendFile<CR>
 
 " ||
 " || C-q
