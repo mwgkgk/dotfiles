@@ -17,7 +17,9 @@ nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '')
 
 " TODO These don't auto run repl like <Plug>(neoterm-repl-send)
 nnoremap <silent> <buffer> X :TREPLSendLine<CR>
-vnoremap <silent> <buffer> X :TREPLSendSelection<CR>:T 
+
+" TODO Send space as last line bcus identation-based syntax
+vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
 
 " Send word
 nmap <silent> <buffer> <Leader>X <Plug>(neoterm-repl-send)aw
