@@ -93,13 +93,13 @@ endsnippet
 snippet "^(\()?\brq" "require" rw
 (require ${1:"asdf"}`!p
 if match.group(1) is None:
-	snip.rv = ")"`$2
+	snip.rv = ")"`$0
 endsnippet
 
 snippet ql "quickload" b
 #+ql
 (progn
-	(ql:quickload '(:${1:1am}))
+	(ql:quickload '(:${0:1am}))
 	(use-package :$1))
 endsnippet
 
