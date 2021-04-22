@@ -99,7 +99,7 @@ endsnippet
 snippet ql "quickload" b
 #+ql
 (progn
-	(ql:quickload '(:${0:1am}))
+	(ql:quickload '(:${1:1am}))
 	(use-package :$1))
 endsnippet
 
@@ -141,21 +141,21 @@ endsnippet
 
 snippet "(\()?\bdefp" "defparameter" rw
 (defparameter *$1*
-	${2:nil}`!p
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bdefv" "defvar" rw
 (defvar *$1*
-	${2:nil}`!p
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bdefc" "defconstant" rw
 (defconstant +$1+
-	${2:nil}`!p
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -164,21 +164,21 @@ endsnippet
 
 snippet "(\()?\b(defun|defu|f)" "defun" rw
 (defun ${1:name} ($2)
-	${3:nil}`!p
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet re "&rest" w
-&rest ${1:forms}$2
+&rest ${0:forms}
 endsnippet
 
 snippet opt "&optional" w
-&optional (${1:form} ${2:nil})$0
+&optional (${1:form} ${0:nil})
 endsnippet
 
 snippet /(key|k)/ "&key" wr
-&key (${1:form} ${2:nil})$0
+&key (${1:form} ${0:nil})
 endsnippet
 
 snippet run "run" b
@@ -187,21 +187,21 @@ snippet run "run" b
 
 #+nil
 (progn
-	(run$2))
+	(run$0))
 endsnippet
 
 snippet decl "decl " w
-(declare (ignore ${1:args}))
+(declare (ignore ${0:args}))
 endsnippet
 
 snippet "(\()?\bfmk" "fmk" rw
-(fmakunbound '${1:name}`!p
+(fmakunbound '${0:name}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet l "lambda" w
-#'(lambda (${1:x}) ${2:nil})
+#'(lambda ($1) ${0:nil})
 endsnippet
 
 snippet "(\()?\b(null|n)" "null" rw
@@ -253,7 +253,7 @@ endsnippet
 snippet /^e/ "basement-test" r
 #+nil
 (progn
-	(e ${VISUAL}${1:`!p
+	(e ${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = "nil"`}))
 endsnippet
@@ -262,7 +262,7 @@ endsnippet
 
 snippet "(\()?\bt" "deftype" rw
 (deftype $1 (${2:&optional ${3:type}})
-	\`${4:nil}`!p
+	\`${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -271,11 +271,11 @@ endsnippet
 
 snippet cl "defcl" b
 (defclass ${1:bank-account} ($2)
-  (${3:balance}$0))
+  (${0:balance}))
 endsnippet
 
 snippet "(\()?\bmi" "make-instance" rw
-(make-instance '${1:bank-account}`!p
+(make-instance '${0:bank-account}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -284,7 +284,7 @@ endsnippet
 
 snippet "(\()?\bs" "struct" rw
 (defstruct ${1:name}
-	${2:nil}$0`!p
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -292,16 +292,16 @@ endsnippet
 # Macros
 
 snippet "(\()?\b(defmacro|defmac|defm|m)" "m" rw
-(defmacro ${1:name} ($3${2:&body body})
-	${4:nil}`!p
+(defmacro ${1:name} (${2:&body ${3:body}})
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bdo" "do" rw
-(do ((${1:x} ${2:0} (${3:1+ x}))$4)
-	(${5:end-condition} ${6:optional-exit-form})
-  $7`!p
+(do ((${1:x} ${2:0} (${3:1+ x})))
+	(${4:end-condition} ${5:optional-exit-form})
+  ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -310,13 +310,9 @@ endsnippet
 
 snippet "(\()?\bcond" "cond" r
 (cond
-	((${1:equal x y}) ${2:nil})$3`!p
+	((${1:equal x y}) ${0:nil})`!p
 if match.group(1) is None:
 	snip.rv = ")"`
-endsnippet
-
-snippet cc "cond clause" w
-(${3:(${1:equal}$2)} $4)$5
 endsnippet
 
 # Case Macro
@@ -324,7 +320,7 @@ endsnippet
 snippet "(\()?\bcase" "case" rw
 (case $1
 	($2)
-	${4:(otherwise ${3:nil})}`!p
+	(otherwise ${0:nil})`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -334,7 +330,7 @@ endsnippet
 snippet "(\()?\blet" "let" wr
 (let
 	(($1 ${3:(${2:${VISUAL}})})$4)
-	${5:$1}`!p
+	${0:$1}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -343,7 +339,7 @@ snippet "(\()?\bflet|letf" "flet" wr
 (flet
 	((${1:x} ($2)
 		${3:nil})$4)
-	$5`!p
+	$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -352,13 +348,9 @@ snippet "(\()?\b(labels|lab)" "labels" wr
 (labels
 	((${1:x} ($2)
 		${3:nil})$4)
-	${5:nil}`!p
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
-endsnippet
-
-snippet lc "let clause" w
-(${1:x} ($2))$3
 endsnippet
 
 snippet "(\()?\b(mvb|bind|mul)" "multiple-value-bind" wr
@@ -371,15 +363,15 @@ endsnippet
 # Format
 
 snippet "(\()?\b(format|fmt)" "format" wr
-(format ${3:nil} "$1"$2`!p
+(format ${1:nil} "$0"`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Bandaid fix: removed optional open quote because python's "w" word snippet
-# doesn't believe in dashes, so anything-p is triggering this.
 snippet p "print" w
-(format ${4:t} "${3:${2:~a}~%}" ${1:${VISUAL}})
+(format ${1:t} "${0:~a}~%" ${2:${VISUAL}}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 snippet { "{" i
@@ -398,39 +390,39 @@ endsnippet
 
 snippet "(\()?\blo(op)?" "loop" wr
 (loop
-	${2::for }$1`!p
+	${0::for }$1`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet for "Loop for" w
-:for ${1:x} ${2::across} ${3:str}
+:for ${1:x} ${2::across} ${0:str}
 endsnippet
 
 snippet /:?col(lect)?/ "Loop collect" rw
-:collect $1
+:collect ${VISUAL}$0
 endsnippet
 
 snippet /:?fin(ally)?/ "Loop finally" rw
-:finally (return ${2:($1)})
+:finally (return ${0:($1)})
 endsnippet
 
 # Higher Order Functions
 
 snippet "(\()?\bfc" "funcall" wr
-(funcall $1`!p
+(funcall $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bri" "remove-if" rw
-(remove-if ${3:#'nullp}$2 ${1:nil}`!p
+(remove-if ${1:#'nullp} ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\brin" "remove-if-not" rw
-(remove-if-not ${3:#'nullp}$2 ${1:nil}`!p
+(remove-if-not ${1:#'nullp} ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -438,13 +430,13 @@ endsnippet
 # Predicates
 
 snippet "(\()?\beq" "equal" wr
-(equal $1`!p
+(equal $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bep" "equalp" wr
-(equalp $1`!p
+(equalp $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -452,11 +444,11 @@ endsnippet
 # Quotes
 
 snippet ' "'" w
-'(${VISUAL}$1)$2
+'(${VISUAL}$0)
 endsnippet
 
 snippet ` "`" w
-\`(${VISUAL}$1)$2
+\`(${VISUAL}$0)
 endsnippet
 
 # Bits and Pieces
@@ -484,7 +476,7 @@ snippet ro "rooftops" b
 #+nil
 (progn
 	(1am:test ${1:test-name}
-		${VISUAL}${3:(is ${2:nil})})
+		(is ${0:nil})})
 	(1am:run '($1)))
 endsnippet
 
@@ -492,14 +484,14 @@ endsnippet
 
 snippet j "jiv" b
 #+J
-($1)
+($0)
 endsnippet
 
 snippet dj "dj" b
 ;;; `date-utc` ;;;
 
 #+J
-($1)
+($0)
 endsnippet
 
 snippet at "at" b
@@ -578,7 +570,7 @@ snippet  /([\!:\w=\-\+><\*\/\?\.]+)\$/ "expand-any-word-as-let" rw
 	((`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)` ${1:nil})$2)
-	${3:nil})
+	${0:nil})
 endsnippet
 
 priority -2
@@ -595,7 +587,7 @@ priority -3
 snippet  /([\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word" rw
 (`!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)` $1)
+	snip.rv = match.group(0)` $0)
 endsnippet
 
 priority 0
