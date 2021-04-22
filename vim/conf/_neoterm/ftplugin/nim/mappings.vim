@@ -1,15 +1,26 @@
 " ||
+" || REPL control
+" ||
+
+" Run repl
+nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T inim<CR>
+
+" TODO Load current file
+" nnoremap <buffer> <silent> <Leader>r :T include <C-r>=expand("%")<CR><CR>
+
+" TODO Reload RC
+" nnoremap <buffer> <silent> <LocalLeader>R :T load-rc<CR>
+
+" ||
 " || Eval
 " ||
 
+" TODO These don't auto run repl like <Plug>(neoterm-repl-send)
 nnoremap <silent> <buffer> X :TREPLSendLine<CR>
 vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
 
 " Send word
 nmap <silent> <buffer> <Leader>X <Plug>(neoterm-repl-send)aw
-
-" TODO load file
-" nnoremap <buffer> <LocalLeader>l :silent T ,load "<C-r>=expand('%')<CR>"<CR>
 
 " TODO send top expr
 " nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
