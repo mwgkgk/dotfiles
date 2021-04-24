@@ -123,7 +123,8 @@ let s:static_colo = 'heavy-industry'
 " let s:gui_colo = 'base16-atelierseaside-light'
 " let s:gui_colo = 'revolutionsmod'
 " let s:gui_colo = 'badwolf'
-let s:gui_colo = 'gruvbox'
+" let s:gui_colo = 'gruvbox'
+let s:gui_colo = 'SerialExperimentsLain'
 " let s:gui_colo = 'github'
 " }}}
 
