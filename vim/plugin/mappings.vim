@@ -21,6 +21,9 @@ cnoremap <C-c> <C-c>
 " Default C-c does not trigger InsertLeave, see `:help i_CTRL-c`.
 inoremap <C-c> <Esc>
 
+" Support C-g as Esc replacement:
+cnoremap <C-g> <C-c>
+
 " Use Space as C-w:
 nmap <Space> <C-w>
 vmap <Space> <C-w>
