@@ -104,6 +104,10 @@ URxvt*font: xft:Anka/Coder Narrow:size=9:antialias=true
 URxvt*boldFont: xft:Anka/Coder Narrow:size=9:weight=Bold:antialias=true
 URxvt.letterSpace: -1
 
+/* URxvt*font: xft:Anka/Coder Narrow:size=12:antialias=true */
+/* URxvt*boldFont: xft:Anka/Coder Narrow:size=12:weight=Bold:antialias=true */
+/* URxvt.letterSpace: -1 */
+
 /* URxvt*font: xft:Hack:size=6:antialias=true */
 /* URxvt*boldFont: xft:Hack:size=6:weight=Bold:antialias=true */
 /* URxvt.letterSpace: -1 */
