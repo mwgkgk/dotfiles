@@ -20,7 +20,8 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 nnoremap <buffer> <C-g>a :silent T (apropos "<C-r><C-w>")<CR>
 nnoremap <buffer> <C-g><C-a> :silent T (apropos "<C-r><C-w>")<CR>
 
-nnoremap <buffer> <C-g>d :silent T (describe <C-r><C-w>)<CR>
+nnoremap <buffer> <C-g><C-g> :silent T (describe '<C-r><C-w>)<CR>
+nnoremap <buffer> <C-g>d :silent T (describe '<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-d> :silent T (describe #'<C-r><C-w>)<CR>
 
 nnoremap <buffer> <C-g>v :silent T (documentation '<C-r><C-w> 'variable)<CR>
