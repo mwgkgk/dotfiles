@@ -594,4 +594,12 @@ if match.group(0) is not None:
 	snip.rv = match.group(0)` $0)
 endsnippet
 
+priority -4
+
+snippet  /(\(([\!:\w=\-\+><\*\/\?\.\s\(\)]+)+\))/ "expand-any-form" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $0)
+endsnippet
+
 priority 0
