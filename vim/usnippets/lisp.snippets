@@ -200,12 +200,16 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet l "lambda" w
-(lambda ($1) ${0:nil})
+snippet /(\()?\b(lambda|lambd|lamb|lam|la|l)/ "lambda" r
+(lambda ($1) ${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
-snippet /(l#|#l)/ "#'lambda" r
-#'(lambda ($1) ${0:nil})
+snippet /(\()?\b(l#|#l)/ "#'lambda" r
+#'(lambda ($1) ${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\b(null|n)" "null" rw
