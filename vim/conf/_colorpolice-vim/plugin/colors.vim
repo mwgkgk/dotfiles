@@ -3,7 +3,7 @@
 " }}}
 
 " let s:static_colo = 'industry'
-let s:static_colo = 'heavy-industry'
+" let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
@@ -40,7 +40,10 @@ let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'nuclear-dark'
 " let s:static_colo = 'fadedvision'
-" let s:static_colo = 'calmar256-dark'
+
+" Zinge
+let s:static_colo = 'calmar256-dark'
+
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
 " let s:static_colo = 'lecture-dark'
