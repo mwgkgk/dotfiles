@@ -506,17 +506,17 @@ nnoremap <Space>" :reg<CR>
 nnoremap <Space>~ :marks<CR>
 
 " Insert mode easy paste:
-inoremap <C-r><C-w> <C-r>"
+" inoremap <C-r><C-w> <C-r>"
 inoremap <C-r><C-r> <C-r>*
 inoremap <C-r><C-e> <C-r>+
 
 " Command mode easy paste:
-cnoremap <C-r><C-w> <C-r>"
+" cnoremap <C-r><C-w> <C-r>"
 cnoremap <C-r><C-r> <C-r>*
 cnoremap <C-r><C-e> <C-r>+
 
 " Bring back word-under-cursor
-cnoremap <C-r>w <C-r><C-w>
+" cnoremap <C-r>w <C-r><C-w>
 
 " Enable Paste mode for one paste:
 inoremap <C-r>w <Esc>:set paste<CR>i<C-r>"<Esc>:set nopaste<CR>'[=']
