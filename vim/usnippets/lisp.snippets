@@ -201,6 +201,10 @@ if match.group(1) is None:
 endsnippet
 
 snippet l "lambda" w
+(lambda ($1) ${0:nil})
+endsnippet
+
+snippet /(l#|#l)/ "#'lambda" r
 #'(lambda ($1) ${0:nil})
 endsnippet
 
