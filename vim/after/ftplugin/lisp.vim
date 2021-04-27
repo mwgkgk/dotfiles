@@ -3,6 +3,8 @@ setlocal formatoptions=tcqj
 setlocal tabstop=2
 setlocal shiftwidth=2
 
+setlocal iskeyword+=&
+
 " Vim recognizes .jl as lisp, and does not clean up buffer maps.
 " This fix is not Julia-specific, because we should clean up buffer maps in
 " any case.
