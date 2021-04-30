@@ -40,6 +40,13 @@ nnoremap <silent> <Leader><Space>v :call _neoterm#open#small('above', '')<CR>
 nnoremap <silent> <Leader><Space>gV :call _neoterm#open#small('above', 'vert')<CR>
 
 " ||
+" || Open filetype mappings
+" ||
+
+nnoremap <Leader><Space>u :execute "sp ~/.vim/conf/_neoterm/ftplugin/" . &ft . "/mappings.vim"<CR>
+nnoremap <Leader><Space>U :sp ~/.vim/conf/_neoterm/plugin/mappings.vim<CR>
+
+" ||
 " || Make
 " ||
 
