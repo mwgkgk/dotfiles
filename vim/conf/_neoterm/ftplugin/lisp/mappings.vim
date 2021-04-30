@@ -32,3 +32,18 @@ nnoremap <buffer> <C-g>m :silent T (documentation '<C-r><C-w> 'compiler-macro)<C
 " ECL-specific
 nnoremap <buffer> <C-g>h :silent T (help <C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-h> :silent T (help #'<C-r><C-w>)<CR>
+
+" ||
+" || Repl control
+" ||
+
+nnoremap <buffer> <LocalLeader>0 :silent T 0<CR>
+nnoremap <buffer> <LocalLeader>1 :silent T 1<CR>
+nnoremap <buffer> <LocalLeader>2 :silent T 2<CR>
+nnoremap <buffer> <LocalLeader>3 :silent T 3<CR>
+nnoremap <buffer> <LocalLeader>4 :silent T 4<CR>
+nnoremap <buffer> <LocalLeader>5 :silent T 5<CR>
+nnoremap <buffer> <LocalLeader>6 :silent T 6<CR>
+nnoremap <buffer> <LocalLeader>7 :silent T 7<CR>
+nnoremap <buffer> <LocalLeader>8 :silent T 8<CR>
+nnoremap <buffer> <LocalLeader>9 :silent T 9<CR>
