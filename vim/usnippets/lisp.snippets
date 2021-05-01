@@ -316,6 +316,18 @@ snippet ar ":around" w
 endsnippet
 
 # ||
+# || Errors
+# ||
+
+snippet "(\()?\bhc" "handler-case" rw
+(handler-case ${VISUAL}$0
+	(error (c)
+		nil)`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Structs
 # ||
 
