@@ -299,7 +299,7 @@ endsnippet
 
 # Macros
 
-snippet "(\()?\b(defmacro|defmac|defm|m)" "m" rw
+snippet "(\()?\b(defmacro|defmac|defma|macro|macr|mac|ma)" "m" rw
 (defmacro ${1:name} (${2:&body ${3:body}})
 	${0:nil}`!p
 if match.group(1) is None:
