@@ -488,6 +488,26 @@ snippet ro "rooftops" b
 	(1am:run '($1)))
 endsnippet
 
+# ||
+# || Unix
+# ||
+
+snippet "(\()?\b(pwd|cwd)" "(pwd|cwd)" rw
+(sb-posix:getcwd$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bcd" "cd" rw
+(sb-posix:chdir #P"~/$0"`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
+# || Jiv
+# ||
+
 # Jiv-within-CL, because it sometimes be like that
 
 snippet j "jiv" b
