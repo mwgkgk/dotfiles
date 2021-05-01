@@ -9,7 +9,7 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 " Send word
 nmap <silent> <buffer> <Leader>X <Plug>(neoterm-repl-send)aw
 
-nnoremap <buffer> <LocalLeader>l :silent T (load "<C-r>=expand('%')<CR>"<CR>)
+nnoremap <buffer> <LocalLeader>l :silent T (load "<C-r>=expand('%')<CR>")<CR>
 
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 
