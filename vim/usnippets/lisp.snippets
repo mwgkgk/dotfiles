@@ -326,9 +326,17 @@ endsnippet
 # ||
 
 snippet "(\()?\bhc" "handler-case" rw
-(handler-case ${VISUAL}$0
+(handler-case ${VISUAL}$1
 	(error (c)
-		nil)`!p
+		${0:nil})`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bhb" "handler-bind" rw
+(handler-bind ${VISUAL}$1
+	(($2))
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
