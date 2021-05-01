@@ -498,8 +498,14 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bcd" "cd" rw
+snippet "(\()?\bcdp" "cd-posix" rw
 (sb-posix:chdir #P"~/$0"`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bcd" "cd-load" rw
+(setf *default-pathname-defaults* #P"~/$0"`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
