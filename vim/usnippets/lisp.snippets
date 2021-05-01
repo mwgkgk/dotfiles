@@ -415,7 +415,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet p "print" w
+snippet "(\()?\bp" "print" rw
 (format ${1:t} "${0:~a}~%" ${2:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
