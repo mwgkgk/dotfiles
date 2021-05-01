@@ -301,6 +301,17 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Methods
+# ||
+
+snippet "(\()?\b(defmethod|defmet|defm|me|m)" "defmethod" rw
+(defmethod ${1:name} ($2)
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Structs
 # ||
 
