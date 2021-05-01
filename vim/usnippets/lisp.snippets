@@ -69,13 +69,17 @@ if match.group(1) is not None:
 	snip.rv = match.group(1)`;; TODO ${VISUAL}$0
 endsnippet
 
-# Strings
+# ||
+# || Strings
+# ||
 
 snippet P "path" w
 #P"${1:~/${2:shop/${3:core/${4:colony/${5:colony-cl/${6:src/$0}}}}}}"
 endsnippet
 
-# Imports & Packages
+# ||
+# || Imports & Packages
+# ||
 
 snippet defpac "defpac" w
 (defpackage ${1:name}
@@ -137,7 +141,9 @@ snippet defsys "defsystem" b
                  (:file "$1")))))
 endsnippet
 
-# Variables
+# ||
+# || Variables
+# ||
 
 snippet "(\()?\bdefp" "defparameter" rw
 (defparameter *$1*
@@ -160,7 +166,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Functions
+# ||
+# || Functions
+# ||
 
 snippet "(\()?\b(defun|defu|f)" "defun" rw
 (defun ${1:name} ($2)
@@ -266,7 +274,9 @@ if not snip.v.text:
 	snip.rv = "nil"`}))
 endsnippet
 
-# Types
+# ||
+# || Types
+# ||
 
 snippet "(\()?\bt" "deftype" rw
 (deftype $1 (${2:&optional ${3:type}})
@@ -275,7 +285,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Classes
+# ||
+# || Classes
+# ||
 
 snippet /\b(defclass|defclas|defcla|defcl|defc|class|clas|cla|c)/ "defcl" wr
 (defclass ${1:bank-account} ($2)
@@ -288,7 +300,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Structs
+# ||
+# || Structs
+# ||
 
 snippet "(\()?\bs" "struct" rw
 (defstruct ${1:name}
@@ -297,7 +311,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Macros
+# ||
+# || Macros
+# ||
 
 snippet "(\()?\b(defmacro|defmac|defma|macro|macr|mac|ma)" "m" rw
 (defmacro ${1:name} (${2:&body ${3:body}})
@@ -314,7 +330,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Cond Macro
+# ||
+# || Cond Macro
+# ||
 
 snippet "(\()?\bcond" "cond" r
 (cond
@@ -323,7 +341,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Case Macro
+# ||
+# || Case Macro
+# ||
 
 snippet "(\()?\bcase" "case" rw
 (case $1
@@ -333,7 +353,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Let, Flet, Labels
+# ||
+# || Let, Flet, Labels
+# ||
 
 snippet "(\()?\blet" "let" wr
 (let
@@ -368,7 +390,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Format
+# ||
+# || Format
+# ||
 
 snippet "(\()?\b(format|fmt)" "format" wr
 (format ${1:nil} "$0"`!p
@@ -394,7 +418,9 @@ snippet ( "(" i
 ~(${0:~a${VISUAL}}~)
 endsnippet
 
-# Loop Facility
+# ||
+# || Loop Facility
+# ||
 
 snippet "(\()?\blo(op)?" "loop" wr
 (loop
@@ -415,7 +441,9 @@ snippet /:?fin(ally)?/ "Loop finally" rw
 :finally (return ${0:($1)})
 endsnippet
 
-# Higher Order Functions
+# ||
+# || Higher Order Functions
+# ||
 
 snippet "(\()?\bfc" "funcall" wr
 (funcall $0`!p
@@ -435,7 +463,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Predicates
+# ||
+# || Predicates
+# ||
 
 snippet "(\()?\beq" "equal" wr
 (equal $0`!p
@@ -449,7 +479,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-# Quotes
+# ||
+# || Quotes
+# ||
 
 snippet ' "'" w
 '(${VISUAL}$0)
@@ -459,7 +491,9 @@ snippet ` "`" w
 \`(${VISUAL}$0)
 endsnippet
 
-# Bits and Pieces
+# ||
+# || Bits and Pieces
+# ||
 
 snippet nil "#+nil" b
 #+nil
@@ -478,7 +512,9 @@ snippet im "doing my part" b
 "I'm doing my part!"
 endsnippet
 
-# 1am
+# ||
+# || 1am
+# ||
 
 snippet ro "rooftops" b
 #+nil
@@ -540,7 +576,9 @@ snippet q "question" b
   $2)
 endsnippet
 
-# Expand whitespace
+# ||
+# || Expand whitespace
+# ||
 
 # Converted to double-stage because of line-end whitespace indent cursor bug
 snippet /^(\s+)/ "expand-whitespace" r
