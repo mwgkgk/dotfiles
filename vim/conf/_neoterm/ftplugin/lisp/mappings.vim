@@ -37,6 +37,8 @@ nnoremap <buffer> <C-g><C-h> :silent T (help #'<C-r><C-w>)<CR>
 " || Repl control
 " ||
 
+nnoremap <buffer> <LocalLeader>a :silent T abort<CR>
+
 nnoremap <buffer> <LocalLeader>0 :silent T 0<CR>
 nnoremap <buffer> <LocalLeader>1 :silent T 1<CR>
 nnoremap <buffer> <LocalLeader>2 :silent T 2<CR>
