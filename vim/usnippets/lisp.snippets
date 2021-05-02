@@ -296,12 +296,12 @@ endsnippet
 # ||
 
 snippet /\b(defclass|defclas|defcla|defcl|defc|class|clas|cla|c)/ "defcl" wr
-(defclass ${1:bank-account} ($2)
-  (${0:balance}))
+(defclass ${1:object} ($2)
+  (${0:slot}))
 endsnippet
 
 snippet "(\()?\bmi" "make-instance" rw
-(make-instance '${0:bank-account}`!p
+(make-instance '${0:object}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
