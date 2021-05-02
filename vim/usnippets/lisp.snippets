@@ -441,10 +441,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bp" "print" rw
-(format ${1:t} "${0:~a}~%" ${2:${VISUAL}}`!p
-if match.group(1) is None:
-	snip.rv = ")"`
+# Python's \b fucks with dashes yikes.
+snippet p "print" w
+(format ${1:t} "${0:~a}~%" ${2:${VISUAL}})
 endsnippet
 
 snippet { "{" i
