@@ -171,7 +171,7 @@ endsnippet
 # ||
 
 snippet "(\()?\b(defun|defu|f)" "defun" rw
-(defun ${1:name} ($2)
+(defun ${1:f} ($2)
 	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -311,7 +311,7 @@ endsnippet
 # ||
 
 snippet "(\()?\b(defmethod|defmet|defm|me|m)" "defmethod" rw
-(defmethod ${1:name} ($2)
+(defmethod ${1:method} ($2)
 	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -346,7 +346,7 @@ endsnippet
 # ||
 
 snippet "(\()?\bs" "struct" rw
-(defstruct ${1:name}
+(defstruct ${1:struct}
 	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -357,7 +357,7 @@ endsnippet
 # ||
 
 snippet "(\()?\b(defmacro|defmac|defma|macro|macr|mac|ma)" "m" rw
-(defmacro ${1:name} (${2:&body ${3:body}})
+(defmacro ${1:macro} (${2:&body ${3:body}})
 	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
