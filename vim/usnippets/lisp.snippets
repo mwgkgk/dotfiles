@@ -366,10 +366,20 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Arrays
+# ||
+
+snippet "(\()?\b(arr|marr|mar|ma)" "make-array" rw
+(make-array ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Macros
 # ||
 
-snippet "(\()?\b(defmacro|defmac|defma|macro|macr|mac|ma)" "m" rw
+snippet "(\()?\b(defmacro|defmac|defma|dm|macro|macr|mac)" "m" rw
 (defmacro ${1:macro} (${2:&body ${3:body}})
 	${0:nil}`!p
 if match.group(1) is None:
