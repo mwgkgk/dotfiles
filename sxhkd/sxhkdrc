@@ -30,6 +30,9 @@ super + c
 super + t
 	temple
 
+super + period
+	temple
+
 super + shift + i
 	fox
 
