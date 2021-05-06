@@ -81,7 +81,8 @@ nnoremap <LocalLeader><LocalLeader> :T<Space>
 nnoremap <Leader>R :silent T do-thing<CR>
 
 " ||
-" || Close
+" || C-z and fg
 " ||
 
-nnoremap <silent> <LocalLeader>d :silent T exit<CR>
+nnoremap <silent> <LocalLeader>z :call neoterm#exec({ 'cmd': ["\<C-z>"] })<CR>
+nnoremap <silent> <LocalLeader>Z :silent T fg<CR>
