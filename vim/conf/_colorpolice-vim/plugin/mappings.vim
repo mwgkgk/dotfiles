@@ -12,13 +12,13 @@ nnoremap <Leader>coL :ColorPolice<Space>
 "
 
 " Sync across all instances:
-nnoremap sol :call fzf#run(fzf#wrap({
+nnoremap sol :silent call fzf#run(fzf#wrap({
             \   'source': colorpolice#complete('', '', 0),
             \   'sink': function('colorpolice#sync'),
             \ }))<CR>
 
 " Set colorscheme locally:
-nnoremap soL :call fzf#run(fzf#wrap({
+nnoremap soL :silent call fzf#run(fzf#wrap({
             \   'source': colorpolice#complete('', '', 0),
             \   'sink': function('colorpolice#select'),
             \ }))<CR>
