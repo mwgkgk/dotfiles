@@ -52,3 +52,6 @@ nnoremap <buffer> <LocalLeader>6 :silent T 6<CR>
 nnoremap <buffer> <LocalLeader>7 :silent T 7<CR>
 nnoremap <buffer> <LocalLeader>8 :silent T 8<CR>
 nnoremap <buffer> <LocalLeader>9 :silent T 9<CR>
+
+" Exit repl:
+nnoremap <buffer> <LocalLeader>q :silent T (exit)<CR>
