@@ -54,4 +54,9 @@ nnoremap <buffer> <LocalLeader>8 :silent T 8<CR>
 nnoremap <buffer> <LocalLeader>9 :silent T 9<CR>
 
 " Exit repl:
-nnoremap <buffer> <LocalLeader>q :silent T (exit)<CR>
+nnoremap <buffer> <LocalLeader>q :silent T (quit)<CR>
+
+" Run repls:
+nnoremap <buffer> <LocalLeader>rs :silent T sbcl<CR>
+nnoremap <buffer> <LocalLeader>re :silent T ecl<CR>
+nnoremap <buffer> <LocalLeader>rc :silent T ccl<CR>
