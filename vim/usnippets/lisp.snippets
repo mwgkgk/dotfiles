@@ -381,6 +381,16 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Readtable
+# ||
+
+snippet "(\()?\b(readc|rc)" "readtable-case" rw
+(readtable-case ${0:*readtable*}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Macros
 # ||
 
