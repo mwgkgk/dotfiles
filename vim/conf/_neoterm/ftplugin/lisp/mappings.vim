@@ -41,6 +41,7 @@ nnoremap <buffer> <C-g><C-h> :silent T (help #'<C-r><C-w>)<CR>
 " ||
 
 nnoremap <buffer> <LocalLeader>a :silent T abort<CR>
+nnoremap <buffer> <LocalLeader>r :silent T retry<CR>
 
 nnoremap <buffer> <LocalLeader>0 :silent T 0<CR>
 nnoremap <buffer> <LocalLeader>1 :silent T 1<CR>
@@ -54,6 +55,6 @@ nnoremap <buffer> <LocalLeader>8 :silent T 8<CR>
 nnoremap <buffer> <LocalLeader>9 :silent T 9<CR>
 
 " Run repls:
-nnoremap <buffer> <LocalLeader>rs :silent T sbcl<CR>
-nnoremap <buffer> <LocalLeader>re :silent T ecl<CR>
-nnoremap <buffer> <LocalLeader>rc :silent T ccl<CR>
+nnoremap <buffer> <Leader>rs :silent T sbcl<CR>
+nnoremap <buffer> <Leader>re :silent T ecl<CR>
+nnoremap <buffer> <Leader>rc :silent T ccl<CR>
