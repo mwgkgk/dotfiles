@@ -42,6 +42,7 @@ nnoremap <buffer> <C-g><C-h> :silent T (help #'<C-r><C-w>)<CR>
 
 nnoremap <buffer> <LocalLeader>a :silent T abort<CR>
 nnoremap <buffer> <LocalLeader>r :silent T retry<CR>
+nnoremap <buffer> <LocalLeader>c :silent T continue<CR>
 
 nnoremap <buffer> <LocalLeader>0 :silent T 0<CR>
 nnoremap <buffer> <LocalLeader>1 :silent T 1<CR>
