@@ -19,7 +19,7 @@
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
 " let s:static_colo = 'grapes'
-let s:static_colo = 'druid'
+" let s:static_colo = 'druid'
 " let s:static_colo = 'jellyfish'
 
 " let s:static_colo = 'farout'
@@ -70,7 +70,7 @@ let s:static_colo = 'druid'
 " let s:static_colo = 'github'
 " let s:static_colo = 'pink'
 
-" let s:static_colo = 'orbital'
+let s:static_colo = 'orbital'
 " let s:static_colo = 'sceaduhelm'
 
 " let s:static_colo = 'kalisi-dark'
