@@ -8,7 +8,7 @@ nnoremap <silent> <buffer> X :call vlime#plugin#SendToREPL(vlime#ui#CurExprOrAto
 nnoremap <silent> <buffer> <Leader>x :call vlime#plugin#SendToREPL(vlime#ui#CurTopExpr())<cr>
 
 " Eval atom under cursor:
-nnoremap <silent> <buffer> <LocalLeader>x :call vlime#plugin#SendToREPL(vlime#ui#CurAtom())<cr>
+nnoremap <silent> <buffer> <Leader>X :call vlime#plugin#SendToREPL(vlime#ui#CurAtom())<cr>
 
 " Display documentation on atom under cursor:
 nnoremap <silent> <buffer> <C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui#CurAtom())<cr>
