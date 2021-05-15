@@ -19,6 +19,26 @@ endsnippet
 
 priority 0
 
+snippet dam "date, std, and main" b
+// `date-utc`
+
+const std = @import("std")
+
+pub fn main() void {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet dat "date and test" b
+// `date-utc`
+
+const std = @import("std")
+
+test "$1" {
+	${VISUAL}$0
+}
+endsnippet
+
 # ||
 # || Imports
 # ||
