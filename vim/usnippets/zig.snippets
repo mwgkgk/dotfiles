@@ -66,6 +66,10 @@ snippet ia "import std.debug.assert" w
 const assert = std.debug.assert;
 endsnippet
 
+snippet ie "import std.testing.expect" w
+const assert = std.testing.expect;
+endsnippet
+
 snippet im "import std.mem" w
 const mem = @import("std").mem;
 endsnippet
@@ -181,11 +185,11 @@ assert(${1:err} == ${0:0});
 endsnippet
 
 snippet ex "expect" b
-std.testing.expect(${VISUAL}$0);
+expect(${VISUAL}$0);
 endsnippet
 
 snippet ee "expect equals" b
-std.testing.expect(${1:err} == ${0:0});
+expect(${1:err} == ${0:0});
 endsnippet
 
 # ||
