@@ -1,8 +1,8 @@
-" Use <Leader>r to run tests on current file.
-nnoremap <buffer> <Leader>r :silent T zt <C-r>=expand('%')<CR><CR>
+" Use <LocalLeader>r to run tests on current file.
+nnoremap <buffer> <LocalLeader>r :silent T zt <C-r>=expand('%')<CR><CR>
 
 " Run file:
-nnoremap <buffer> <LocalLeader>r :silent T zr <C-r>=expand('%')<CR><CR>
+nnoremap <buffer> <Leader>r :silent T zr <C-r>=expand('%')<CR><CR>
 
 " Don't send specific lines for now.
 nnoremap <buffer> X <Nop>
