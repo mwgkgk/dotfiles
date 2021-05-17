@@ -19,13 +19,13 @@ pub fn main() void {
 endsnippet
 
 snippet dd "dd-comment" b
-// `!v system('date-jiv | tr -d "\n"')` ${0}
+// `!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
 endsnippet
 
 priority -1
 
 snippet dd "dd-inline" w
-`!v system('date-jiv | tr -d "\n"')` ${0}
+`!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
 endsnippet
 
 priority 0
@@ -90,8 +90,8 @@ endsnippet
 # || Consts & Vars
 # ||
 
-snippet /(const|c)/ "const" br
-const ${1:stdout} = ${2:std.io.getStdOut().outStream()};
+snippet /(const|cons|con|co|c)/ "const" br
+const ${1:x} = ${0:undefined};
 endsnippet
 
 snippet /(var|va|v)/ "var" br
@@ -114,13 +114,13 @@ endsnippet
 
 snippet f "f" b
 fn ${2:function_name}($3) ${4:!void} {
-	${VISUAL}$5
+	${VISUAL}$0
 }
 endsnippet
 
 snippet pf "pf" b
 pub fn ${2:function_name}($3) ${4:!void} {
-	${VISUAL}$5
+	${VISUAL}$0
 }
 endsnippet
 
@@ -166,26 +166,26 @@ test "$1" {
 }
 endsnippet
 
-snippet b "basement" b
-test "${3:BASEMENT/`date-jiv`}" {
-	${VISUAL}$2
+snippet /^$/ "test-implicit" r
+test "${1:BASEMENT/`date-jiv`}" {
+	${VISUAL}$0
 }
 endsnippet
 
 snippet a "assert" b
-assert($0);
+assert(${VISUAL}$0);
 endsnippet
 
 snippet ae "assert equals" b
-assert(${1:err} == ${2:0);}
+assert(${1:err} == ${0:0});
 endsnippet
 
 snippet ex "expect" b
-std.testing.expect($0);
+std.testing.expect(${VISUAL}$0);
 endsnippet
 
 snippet ee "expect equals" b
-std.testing.expect(${1:err} == ${2:0});
+std.testing.expect(${1:err} == ${0:0});
 endsnippet
 
 # ||
@@ -223,12 +223,12 @@ endsnippet
 priority 0
 
 snippet sc "switch clause" b
-${1:else} => ${2:unreachable},
+${1:else} => ${0:unreachable},
 endsnippet
 
 snippet for "for" b
 for (${1:xs}) |${2:x}| {
-	${VISUAL}$3
+	${VISUAL}$0
 }
 endsnippet
 
