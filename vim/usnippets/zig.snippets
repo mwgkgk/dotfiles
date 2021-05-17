@@ -130,16 +130,16 @@ pub fn main() void {
 }
 endsnippet
 
-snippet re "return" w
-return$0
+snippet r "return" w
+return ${VISUAL}$0
 endsnippet
 
 # ||
 # || Errors
 # ||
 
-snippet r "try" w
-try $0
+snippet t "try" w
+try ${VISUAL}$0
 endsnippet
 
 snippet aer "anyerror" w
@@ -160,7 +160,7 @@ endsnippet
 # || Testing
 # ||
 
-snippet t "test" b
+snippet test "test" b
 test "$1" {
 	${VISUAL}$0
 }
