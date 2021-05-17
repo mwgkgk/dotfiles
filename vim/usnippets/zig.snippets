@@ -293,6 +293,10 @@ snippet p "print" w
 print("\n${0:$1 == \{s\}}\n", .{${1:x}});
 endsnippet
 
+snippet stdout "stdout" w
+const stdout = std.io.getStdOut().writer();
+endsnippet
+
 # ||
 # || Blocks
 # ||
