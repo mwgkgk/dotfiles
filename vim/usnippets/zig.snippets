@@ -231,7 +231,7 @@ snippet sc "switch clause" b
 ${1:else} => ${0:unreachable},
 endsnippet
 
-snippet for "for" b
+snippet /\b(for|fo)/ "for" r
 for (${1:xs}) |${2:x}| {
 	${VISUAL}$0
 }
