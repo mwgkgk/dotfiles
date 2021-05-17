@@ -58,6 +58,14 @@ snippet i "import" b
 const ${1:std} = @import("${2:$1}")$0;
 endsnippet
 
+snippet ip "import std.debug.print" w
+const print = std.debug.print;
+endsnippet
+
+snippet ia "import std.debug.assert" w
+const assert = std.debug.assert;
+endsnippet
+
 snippet std "std" b
 const std = @import("std");
 endsnippet
