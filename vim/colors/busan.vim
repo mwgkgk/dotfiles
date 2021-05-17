@@ -60,3 +60,4 @@ hi Number          ctermfg=131
 hi Boolean         ctermfg=187
 hi Float           ctermfg=131
 
+hi Todo ctermfg=165 ctermbg=none
