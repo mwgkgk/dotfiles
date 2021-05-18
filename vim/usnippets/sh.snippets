@@ -222,8 +222,11 @@ snippet dd "dd" w
 `!v system('date +"%Y-%m-%d" | tr -d "\n"')`: ${0}
 endsnippet
 
-snippet T "TODO" w
-# TODO $0
+snippet /^(\s*)(// )?(T|td)/ "TODO-comment" r
+`!p
+# Whitespace:
+if match.group(1) is not None:
+	snip.rv = match.group(1)`# TODO ${VISUAL}$0
 endsnippet
 
 priority -1
