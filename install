@@ -59,6 +59,7 @@ verbose_link "$DOTFILES/bash/.bash_aliases" ~/.bash_aliases
 verbose_link "$DOTFILES/zsh/.zshrc" ~/.zshrc
 
 # Fish
+mkdir -p ~/.config/fish
 verbose_link "$DOTFILES/fish/config.fish" ~/.config/fish/config.fish
 verbose_link "$DOTFILES/fish/fishfile" ~/.config/fish/fishfile
 
