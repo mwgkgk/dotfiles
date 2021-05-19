@@ -1,8 +1,8 @@
 " Use <LocalLeader>r to run tests on current file.
-nnoremap <buffer> <LocalLeader>r :silent T zt <C-r>=expand('%')<CR><CR>
+nnoremap <buffer> <LocalLeader>r :silent T zig test <C-r>=expand('%')<CR><CR>
 
 " Run file:
-nnoremap <buffer> <Leader>r :silent T zr <C-r>=expand('%')<CR><CR>
+nnoremap <buffer> <Leader>r :silent T zig run <C-r>=expand('%')<CR><CR>
 
 " Zig build:
 nnoremap <buffer> <LocalLeader>b :silent T zig build<CR>
