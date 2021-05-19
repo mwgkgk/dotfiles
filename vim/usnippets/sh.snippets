@@ -229,6 +229,13 @@ if match.group(1) is not None:
 	snip.rv = match.group(1)`# TODO ${VISUAL}$0
 endsnippet
 
+snippet /^(\s*)(// TODO )?(Fix|fix)/ "TODO-Fix-" r
+`!p
+# Whitespace:
+if match.group(1) is not None:
+	snip.rv = match.group(1)`# TODO Fix ${VISUAL}$0
+endsnippet
+
 priority -1
 
 # See UltiSnips-custom-context-snippets
