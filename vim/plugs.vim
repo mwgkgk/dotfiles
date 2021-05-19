@@ -606,6 +606,7 @@ let g:cycle_default_groups += [
 "  -- Zig
 let g:cycle_default_groups += [
             \ [['pub fn', 'fn']],
+            \ [['const', 'var']],
             \ ]
 
 "  -- Julia
