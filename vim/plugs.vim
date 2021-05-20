@@ -1308,6 +1308,10 @@ Plug 'vmchale/ats-vim', { 'for' : 'ats' }
 Plug '~/.vim/conf/_nim.vim/'
 Plug 'zah/nim.vim'
 
+" Jiv, Mj
+Plug '~/shop/lex/mj/jiv-vim/'
+Plug '~/shop/lex/mj/mj-vim/'
+
 " }}}
 
 
