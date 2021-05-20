@@ -111,6 +111,10 @@ verbose_link "$DOTFILES/x11/.xinitrc" ~/.xinitrc
 verbose_link "$DOTFILES/x11/.Xdefaults" ~/.Xdefaults
 verbose_link "$DOTFILES/x11/.Xresources" ~/.Xresources
 
+# GTK
+mkdir -p ~/.config/gtk-3.0
+verbose_link "$DOTFILES/gtk/gtk-3.0/settings.ini" ~/.config/gtk-3.0/settings.ini
+
 # StumpWM
 verbose_link "$DOTFILES/stumpwm/" ~/.config/stumpwm
 
