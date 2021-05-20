@@ -3,10 +3,10 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <Leader>r :call _neoterm#open#small('above', '') <Bar> :silent T irb<CR>
+nnoremap <buffer> <silent> <Leader>r :T irb<CR>
 
 " Rake
-nnoremap <buffer> <silent> <LocalLeader>b :silent T rake<CR>
+nnoremap <buffer> <silent> <LocalLeader>b :T rake<CR>
 
 " ||
 " || Send
