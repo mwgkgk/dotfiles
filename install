@@ -61,7 +61,7 @@ verbose_link "$DOTFILES/zsh/.zshrc" ~/.zshrc
 # Fish
 mkdir -p ~/.config/fish
 verbose_link "$DOTFILES/fish/config.fish" ~/.config/fish/config.fish
-verbose_link "$DOTFILES/fish/fishfile" ~/.config/fish/fishfile
+verbose_link "$DOTFILES/fish/fish_plugins" ~/.config/fish/fish_plugins
 
 # Tmux
 verbose_link "$DOTFILES/tmux/.tmux.conf" ~/.tmux.conf
