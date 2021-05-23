@@ -3,7 +3,7 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T inim<CR>
+nnoremap <buffer> <silent> <LocalLeader>r :silent T inim<CR>
 
 " TODO Load current file
 " nnoremap <buffer> <silent> <Leader>r :T include <C-r>=expand("%")<CR><CR>
