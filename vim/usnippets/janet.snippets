@@ -40,6 +40,18 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Macros
+# ||
+
+snippet "(\()?\b(defmacro|defmac|defma|dm|macro|macr|mac)" "defmacro" rw
+(defmacro ${1:name} [$2]
+	${3:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+
+# ||
 # || Basement
 # ||
 
