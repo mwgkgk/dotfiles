@@ -26,7 +26,7 @@ endsnippet
 # || Functions
 # ||
 
-snippet "(\()?\bf" "defn" rw
+snippet "(\()?\b(defun|defu|defn|f)" "defn" rw
 (defn ${1:name} [$2]
 	${3:nil}`!p
 if match.group(1) is None:
