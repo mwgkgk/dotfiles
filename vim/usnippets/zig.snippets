@@ -302,6 +302,17 @@ snippet sp "stdout.print" w
 stdout.print("\n${0:$1 == \{s\}}\n", .{${1:x}});
 endsnippet
 
+snippet sp "stdin.readUntilDelimiterOrEof" w
+stdout.print("\n${0:$1 == \{s\}}\n", .{${1:x}});
+var buf: [10]u8 = undefined;
+
+if (try stdin.readUntilDelimiterOrEof(buf[0..], '\n')) |user_input| {
+	return 1;
+} else {
+	return 1;
+}
+endsnippet
+
 snippet stdout "stdout" w
 const stdout = std.io.getStdOut().writer();
 endsnippet
