@@ -1,6 +1,14 @@
+# ||
+# || Path & umask
+# ||
+
 set -x PATH ~/bin /usr/local/bin ~/.local/bin ~/.cargo/bin ~/.node_modules/bin ~/go/bin ~/buns ~/.nimble/bin $PATH
 
 umask 0007
+
+# ||
+# || Colors
+# ||
 
 # Lab / Hawk
 # set -x fish_color_prompt B5FFCE
@@ -22,6 +30,14 @@ set -x fish_command_timer_color 875F87
 set -x fish_command_timer_success_color 875F87
 set -x fish_command_timer_fail_color 875F87
 
+# ||
+# || Envs
+# ||
+
+# Editor
+set -x EDITOR "v"
+
+# FZF
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
 set -x FZF_DEFAULT_OPTS " --bind 'ctrl-q:select-all+accept,tab:print-query'"
 
