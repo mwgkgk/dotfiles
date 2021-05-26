@@ -2,3 +2,6 @@
 
 \ We include every time to make load-rc work for reloads
 include ~/shop/core/ghost/ghost-fs/src/ghost.fs
+
+\ Better colors on dark background
+dark-mode
