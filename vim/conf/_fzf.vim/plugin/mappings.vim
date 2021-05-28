@@ -19,7 +19,9 @@ nnoremap ss :FzfFilesWithPreview .<CR>
 nnoremap sw :FzfFilesWithPreview ../<CR>
 
 " Files in current buffer's dir:
-nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
+" BUGGED: uses git-root for some reason yet shows relative path.
+" nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
+nnoremap se :EditCreating <C-r>=expand('%:h').'/'<CR><C-d>
 
 " Files in current buffer's parent dir:
 nnoremap sr :FzfFilesWithPreview <C-R>=expand('%:p:h:h')<CR><CR>
