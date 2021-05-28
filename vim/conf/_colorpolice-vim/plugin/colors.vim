@@ -10,7 +10,7 @@
 " let s:static_colo = 'mayansmokemod'
 " let s:static_colo = 'badwolf'
 " let s:static_colo = 'devbox-dark-256'
-" let s:static_colo = 'fisa'
+let s:static_colo = 'fisa'
 
 " let s:static_colo = 'grind'
 " let s:static_colo = 'murphy_mod'
@@ -48,7 +48,7 @@
 
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
-let s:static_colo = 'lecture-dark'
+" let s:static_colo = 'lecture-dark'
 " let s:static_colo = 'belf'
 " let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
