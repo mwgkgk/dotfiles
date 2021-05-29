@@ -64,8 +64,7 @@ nnoremap <buffer> <Leader><C-g> :silent T locate <C-r><C-a><CR>
 " ||
 
 " Stack
-nnoremap <buffer> <LocalLeader>s :silent T .s<CR>
-inoremap <buffer> <C-q>s <Esc>:silent T .s<CR>a
+nnoremap <buffer> <Leader>s :silent T .s<CR>
 
 " Clear
 nnoremap <buffer> <LocalLeader>c :silent T clearstack<CR>
