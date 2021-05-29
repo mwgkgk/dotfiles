@@ -17,25 +17,21 @@ nnoremap <buffer> <silent> <LocalLeader>R :T load-rc<CR>
 " || Send
 " ||
 
-" : →   .s clearstack ;
-nnoremap <silent> <buffer> X :T <C-r>=getline('.')<CR> →<CR>
-" : ↓   cr .s clearstack ;
-nnoremap <silent> <buffer> gX :T <C-r>=getline('.')<CR> ↓<CR>
-
+nnoremap <silent> <buffer> X :TREPLSendLine<CR>
 vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
+
+" : →   .s clearstack ;
+nnoremap <silent> <buffer> <Leader>x :T <C-r>=getline('.')<CR> →<CR>
+" : ↓   cr .s clearstack ;
+nnoremap <silent> <buffer> <Leader>gx :T <C-r>=getline('.')<CR> ↓<CR>
+
+" qq works out to be "from here til the last bracket" and its kinda cool
+" The latter is for visual, and duplicates :TREPLSendSelection.
+nmap <buffer> q <Plug>(neoterm-repl-send)
+xmap <buffer> q <Plug>(neoterm-repl-send)
 
 " TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
 " nnoremap <Space>X :TREPLSendFile<CR>
-
-" The latter is for visual, and duplicates :TREPLSendSelection. Big hmm.
-nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
-xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
-
-nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
-
-" qq works out to be "from here til the last bracket" and its kinda cool
-nmap <buffer> q <Plug>(neoterm-repl-send)
-xmap <buffer> q <Plug>(neoterm-repl-send)
 
 " ||
 " || C-q
