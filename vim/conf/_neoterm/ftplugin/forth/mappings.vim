@@ -68,7 +68,6 @@ nnoremap <buffer> <Leader>s :silent T .s<CR>
 
 " Clear
 nnoremap <buffer> <LocalLeader>c :silent T clearstack<CR>
-inoremap <buffer> <C-q>c <Esc>:silent T clearstack<CR>a
 
 " ||
 " || Drop
