@@ -33,6 +33,10 @@ xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
 
+" qq works out to be "from here til the last bracket" and its kinda cool
+nmap <buffer> q <Plug>(neoterm-repl-send)
+xmap <buffer> q <Plug>(neoterm-repl-send)
+
 " ||
 " || C-q
 " ||
