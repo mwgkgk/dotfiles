@@ -72,7 +72,7 @@ let g:ctrlp_prompt_mappings  = {'PrtBS()' : ['<bs>', '<c-h>', '<>'],
 let g:ctrlp_switch_buffer = 'E'
 " }}}
 Plug 'pielgrzym/ctrlp-sessions' " {{{
-nnoremap <Leader>s :CtrlPSessions<CR>
+nnoremap sS :CtrlPSessions<CR>
 let g:ctrlp_session_dir = '.vim/sessions'
 nnoremap <C-w>s :MkS<CR>
 " }}}
