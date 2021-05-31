@@ -58,7 +58,11 @@ endsnippet
 # || Words
 # ||
 
-snippet : "word" w
+snippet w "word-w" w
+: ${1:word} ${0:${VISUAL}} ;
+endsnippet
+
+snippet : "word-:" w
 : ${1:word} ${0:${VISUAL}} ;
 endsnippet
 
