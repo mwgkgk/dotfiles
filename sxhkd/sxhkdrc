@@ -37,7 +37,7 @@ super + shift + i
 	fox
 
 super + u
-	firefox-og
+	firefox-super-u
 
 super + 0
 	firefox-default
