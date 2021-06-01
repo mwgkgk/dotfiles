@@ -8,3 +8,4 @@ iabbrev toolign tooling
 iabbrev teh the
 iabbrev kidna kinda
 iabbrev becuase because
+iabbrev langauge language
