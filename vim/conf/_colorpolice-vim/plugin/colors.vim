@@ -32,7 +32,7 @@
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
 " let s:static_colo = 'shenzhen'
-" let s:static_colo = 'busan'
+let s:static_colo = 'busan'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
@@ -98,7 +98,7 @@
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
-let s:static_colo = 'SerialExperimentsLain'
+" let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
 " let s:static_colo = 'nighted'
 
