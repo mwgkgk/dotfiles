@@ -291,19 +291,19 @@ endsnippet
 # ||
 
 snippet w "warn" w
-std.debug.warn("\n${0:$1 == \{s\}}\n", .{${1:x}});
+std.debug.warn("${0:$1 == \{s\}}\n", .{${1:x}});
 endsnippet
 
 snippet p "print" w
-print("\n${0:$1 == \{s\}}\n", .{${1:x}});
+print("${0:$1 == \{s\}}\n", .{${1:x}});
 endsnippet
 
 snippet sp "stdout.print" w
-stdout.print("\n${0:$1 == \{s\}}\n", .{${1:x}});
+stdout.print("${0:$1 == \{s\}}\n", .{${1:x}});
 endsnippet
 
 snippet sp "stdin.readUntilDelimiterOrEof" w
-stdout.print("\n${0:$1 == \{s\}}\n", .{${1:x}});
+stdout.print("${0:$1 == \{s\}}\n", .{${1:x}});
 var buf: [10]u8 = undefined;
 
 if (try stdin.readUntilDelimiterOrEof(buf[0..], '\n')) |user_input| {
