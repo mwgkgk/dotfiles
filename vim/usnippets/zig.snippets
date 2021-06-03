@@ -297,11 +297,11 @@ std.debug.warn("${0:$1 == \{s\}}\n", .{${1:x}});
 endsnippet
 
 snippet p "print" w
-print("${0:$1 == \{s\}}\n", .{${1:x}});
+print("$1", .{${0:${VISUAL}});
 endsnippet
 
 snippet sp "stdout.print" w
-stdout.print("${0:$1 == \{s\}}\n", .{${1:x}});
+stdout.print("$1", .{${0:${VISUAL}});
 endsnippet
 
 snippet sr "stdin.readUntilDelimiterOrEof" w
@@ -314,7 +314,7 @@ if (try stdin.readUntilDelimiterOrEof(buf[0..], '\n')) |user_input| {
 }
 endsnippet
 
-snippet stdout "stdout" w
+snippet /\b(stdout|stdo|so)/ "stdout" rw
 const stdout = std.io.getStdOut().writer();
 endsnippet
 
