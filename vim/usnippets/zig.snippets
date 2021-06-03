@@ -142,8 +142,10 @@ endsnippet
 # || Errors
 # ||
 
-snippet t "try" w
-try ${VISUAL}$0
+snippet /^(\s+)$/ "try" r
+`!p
+if match.group(1) is not None:
+    snip.rv = match.group(1)`try ${VISUAL}$0
 endsnippet
 
 snippet aer "anyerror" w
@@ -164,7 +166,7 @@ endsnippet
 # || Testing
 # ||
 
-snippet test "test" b
+snippet t "test" b
 test "$1" {
 	${VISUAL}$0
 }
