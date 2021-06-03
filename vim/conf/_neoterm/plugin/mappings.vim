@@ -71,9 +71,6 @@ nnoremap <F9> :rightbelow T make<CR>
 
 " nmap <Leader>X <Plug>(neoterm-repl-send-line)
 
-" Enter your own stuff
-nnoremap <LocalLeader><LocalLeader> :T<Space>
-
 " ||
 " || Do-thing
 " ||
