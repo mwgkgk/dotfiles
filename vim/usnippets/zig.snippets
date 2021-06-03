@@ -171,11 +171,11 @@ test "$1" {
 endsnippet
 
 # If line above is empty, test:
-snippet /^$/ "test-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-test "${1:BASEMENT/`date-jiv`}" {
-	${VISUAL}$0
-}
-endsnippet
+# snippet /^$/ "test-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+# test "${1:BASEMENT/`date-jiv`}" {
+# 	${VISUAL}$0
+# }
+# endsnippet
 
 snippet a "assert" b
 assert(${VISUAL}$0);
