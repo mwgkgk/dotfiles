@@ -148,13 +148,13 @@ endsnippet
 
 priority -1
 
-snippet  /([\!:\w=\-?]+)'/ "expand-any-word-as-quote" rw
+snippet  /([\!:\w=\-\+><\*\?]+)'/ "expand-any-word-as-quote" rw
 '`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
 endsnippet
 
-snippet  /(\([\s\!:\w=\-?]+\))'/ "expand-any-form-as-quote" rw
+snippet  /(\([\s\!:\w=\-\+><\*\?]+\))'/ "expand-any-form-as-quote" rw
 '`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
@@ -168,7 +168,7 @@ endsnippet
 
 priority -1
 
-snippet  /([\!:\w=\-?]+)\$/ "expand-any-word-as-let" rw
+snippet  /([\!:\w=\-\+><\*\?]+)\$/ "expand-any-word-as-let" rw
 (let
 	((`!p
 if match.group(1) is not None:
@@ -178,7 +178,7 @@ endsnippet
 
 priority -2
 
-snippet /^([\!:\w=\-\+><\*]+)/ "expand-any-word-b" br
+snippet /^([\!:\w=\-\+><\*\?]+)/ "expand-any-word-b" br
 (define (`!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` ${1:lst})
@@ -187,7 +187,7 @@ endsnippet
 
 priority -3
 
-snippet  /([\!:\w=\-\+><\*]+)/ "expand-any-word" rw
+snippet  /([\!:\w=\-\+><\*\?]+)/ "expand-any-word" rw
 (`!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` $1)
