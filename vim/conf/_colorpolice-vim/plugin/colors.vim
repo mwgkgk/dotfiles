@@ -32,7 +32,7 @@
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
 " let s:static_colo = 'shenzhen'
-let s:static_colo = 'busan'
+" let s:static_colo = 'busan'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
@@ -80,7 +80,7 @@ let s:static_colo = 'busan'
 " let s:static_colo = 'disciple'
 
 " let s:static_colo = 'sunday256'
-" let s:static_colo = 'summerfruit256'
+let s:static_colo = 'summerfruit256'
 
 " let s:static_colo = 'ivan'
 
