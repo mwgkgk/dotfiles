@@ -80,7 +80,7 @@
 " let s:static_colo = 'disciple'
 
 " let s:static_colo = 'sunday256'
-let s:static_colo = 'summerfruit256'
+" let s:static_colo = 'summerfruit256'
 
 " let s:static_colo = 'ivan'
 
@@ -98,7 +98,7 @@ let s:static_colo = 'summerfruit256'
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
-" let s:static_colo = 'SerialExperimentsLain'
+let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
 " let s:static_colo = 'nighted'
 
