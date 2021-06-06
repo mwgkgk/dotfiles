@@ -24,3 +24,6 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 
 " Guile:
 " nnoremap <buffer> <C-g> :silent T ,describe <C-r><C-w><CR>
+
+" Chez:
+nnoremap <buffer> <C-g> :silent T (apropos "<C-r><C-w>")<CR>
