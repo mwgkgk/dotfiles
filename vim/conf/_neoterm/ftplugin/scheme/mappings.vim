@@ -5,6 +5,13 @@
 nnoremap <buffer> <LocalLeader>r :leftabove vert T scheme<CR>
 
 " ||
+" || Load file
+" ||
+
+" Load current file
+nnoremap <buffer> <silent> <Leader>r :T (load "<C-r>=expand("%")<CR>")<CR>
+
+" ||
 " || Sending to repl
 " ||
 
@@ -16,4 +23,4 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 " ||
 
 " Guile:
-nnoremap <buffer> <C-g> :silent T ,describe <C-r><C-w><CR>
+" nnoremap <buffer> <C-g> :silent T ,describe <C-r><C-w><CR>
