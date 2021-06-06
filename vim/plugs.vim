@@ -1193,6 +1193,9 @@ Plug 'guns/vim-sexp'
 " Plug '~/.vim/conf/_slimv/', { 'for' : 'lisp' }
 " Plug 'kovisoft/slimv', { 'for' : 'lisp' }
 
+" Picolisp
+Plug '~/shop/oil/picolisp-vim/', { 'for' : 'picolisp' }
+
 " Carp
 Plug 'hellerve/carp-vim'
 
@@ -1292,6 +1295,9 @@ Plug 'mwgkgk/vim-textobj-elixir', { 'for' : 'elixir' }
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
 " Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
 
+" Kmonad
+Plug '~/shop/oil/kmonad-vim/', { 'for' : 'kmonad' }
+
 " Dhall
 Plug 'vmchale/dhall-vim', { 'for' : 'dhall' }
 
@@ -1311,6 +1317,10 @@ Plug 'zah/nim.vim'
 " Jiv, Mj
 Plug '~/shop/lex/jiv/jiv-vim/'
 Plug '~/shop/lex/mj/mj-vim/'
+Plug '~/shop/augs/spion/spion-vim/'
+
+" TODO remove nlang-vim
+Plug '~/shop/lex/nlang/nlang-vim/', { 'for' : 'nlang' }
 
 " }}}
 
@@ -1331,11 +1341,11 @@ Plug 'junegunn/vader.vim'
 
 " }}}
 
+" ||
+" || Cyrillic
+" ||
 
-" Local
-if filereadable(glob("~/.local.plugs.vimrc")) 
-    source ~/.local.plugs.vimrc
-endif
+Plug '~/shop/oil/vim-cyrillic-maps'
 
 " ||
 " || Colors
