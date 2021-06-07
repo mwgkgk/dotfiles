@@ -127,4 +127,14 @@ snippet undef "Undef Directive"
 -undef (${1:macro}).
 endsnippet
 
-# vim:ft=snippets:
+# ||
+# || Fallbacks
+# ||
+
+priority -4
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`(${1:X})$0
+endsnippet
