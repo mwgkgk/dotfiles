@@ -26,3 +26,9 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
+
+" ||
+" || Punctuation
+" ||
+
+nnoremap <buffer> <LocalLeader>. :silent T .<CR>
