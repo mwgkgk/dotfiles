@@ -12,6 +12,7 @@ nnoremap <buffer> <Leader>r :call _neoterm#prolog_repl#send('make, run_tests.')<
 " TODO nnoremap <buffer> <silent> X 0f<Space>v$:TREPLSendSelection<CR>
 " Problem lies in it only being usable on comment lines.
 
+" UPD: nevermind it does support sending escapes, look it up.
 " Unfortunately this includes a caret return, and Neoterm doesn't support
 " otherwise. Hence this is only superficially useful in enumerating results.
 " Fixed: set_prolog_flag(tty_control, false).
