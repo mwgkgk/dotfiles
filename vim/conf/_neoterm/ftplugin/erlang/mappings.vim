@@ -32,3 +32,9 @@ nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
 " ||
 
 nnoremap <buffer> <LocalLeader>. :silent T .<CR>
+
+" ||
+" || Forget
+" ||
+
+nnoremap <buffer> <LocalLeader>f :silent T f(<C-r><C-w>).<CR>
