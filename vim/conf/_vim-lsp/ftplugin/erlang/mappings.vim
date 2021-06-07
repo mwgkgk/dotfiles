@@ -3,7 +3,7 @@
 " ||
 
 " Temporarily shadow tags
-nnoremap <silent> <buffer> <C-]> :LspDeclaration<CR>
+nnoremap <silent> <buffer> <C-]> :LspDefinition<CR>
 
 nnoremap <buffer> <Leader><Tab> :LspWorkspaceSymbol<CR>
 
