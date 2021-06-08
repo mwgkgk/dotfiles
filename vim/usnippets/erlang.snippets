@@ -202,9 +202,17 @@ if match.group(1) is not None:
 	snip.rv = match.group(1)`.$0
 endsnippet
 
+priority -3
+
+snippet  /^([\!:\w=\-]+)/ "expand-any-word-b" rb
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`(${1:X}) -> ${VISUAL}$0.
+endsnippet
+
 priority -4
 
-snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+snippet  /([\!:\w=\-]+)/ "expand-any-word" rw
 `!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)`(${1:X})$0
