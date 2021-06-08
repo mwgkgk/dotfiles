@@ -15,7 +15,15 @@ endsnippet
 snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
 -ifdef(comment).
 ${VISUAL}$0
--endif.
+-endif. % `date-jiv`
+endsnippet
+
+snippet dab "dab" w
+% `date-utc`
+
+-ifdef(comment).
+${VISUAL}$0
+-endif. % `date-jiv`
 endsnippet
 
 # ||
