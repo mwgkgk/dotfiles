@@ -66,11 +66,11 @@ control + semicolon
 super + space
 	march
 
-super + BackSpace
-	rogue
+# super + BackSpace
+# 	rogue
 
-super + z
-	rogue
+# super + z
+# 	rogue
 
 super + i
 	zepp
