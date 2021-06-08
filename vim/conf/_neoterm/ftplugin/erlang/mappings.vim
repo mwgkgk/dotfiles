@@ -3,13 +3,13 @@
 " ||
 
 " Open repl:
-nnoremap <buffer> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T erl<CR>
+nnoremap <buffer> <Leader>r :call :below T erl<CR>
 
 " Exit repl:
 nnoremap <buffer> <LocalLeader>q :silent T exit().<CR>
 
 " Compile current file
-nnoremap <buffer> <Leader>r :silent T c("<C-r>=expand('%')<CR>").<CR>
+nnoremap <buffer> <LocalLeader>r :silent T compile:file("<C-r>=expand('%')<CR>", [debug_info, export_all]).<CR>
 
 " ||
 " || Send
