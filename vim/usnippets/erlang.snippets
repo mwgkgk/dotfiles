@@ -49,6 +49,18 @@ snippet ; "comment-generic" w
 endsnippet
 
 # ||
+# || Modules
+# ||
+
+snippet m "-module" b
+-module(${0:`!p snip.rv = snip.basename or "module"`}).
+endsnippet
+
+snippet e "-export" b
+-export([${1:name}/${0:0}]).
+endsnippet
+
+# ||
 # || Functions
 # ||
 
@@ -81,10 +93,6 @@ snippet def "Define Directive"
 -define (${1:macro}${2: (${3:param})}, ${4:body}).
 endsnippet
 
-snippet exp "Export Directive"
--export ([${1:function}/${2:arity}]).
-endsnippet
-
 snippet fun "Fun Expression"
 fun
 	(${1:pattern})${2: when ${3:guard}} ->
@@ -113,10 +121,6 @@ endsnippet
 
 snippet inc "Include Directive"
 -include ("${1:file}").
-endsnippet
-
-snippet m "Module Directive" b
--module (${1:`!p snip.rv = snip.basename or "module"`}).
 endsnippet
 
 snippet rcv "Receive Expression"
