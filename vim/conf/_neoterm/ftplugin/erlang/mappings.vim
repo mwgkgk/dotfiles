@@ -9,7 +9,7 @@ nnoremap <buffer> <Leader>r :call :below T erl<CR>
 nnoremap <buffer> <LocalLeader>q :silent T exit().<CR>
 
 " Compile current file
-nnoremap <buffer> <LocalLeader>r :silent T compile:file("<C-r>=expand('%')<CR>", [debug_info, export_all]).<CR>
+nnoremap <buffer> <LocalLeader>r :silent T compile:file("<C-r>=expand('%')<CR>", [debug_info, export_all, verbose]).<CR>
 
 " ||
 " || Send
