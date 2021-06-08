@@ -56,11 +56,13 @@ endsnippet
 # || Modules
 # ||
 
-snippet /^\s*\b(module|mod|m)/ "-module" br
+# Optional "-" here is outside the word boundary (denoted by \b), 
+# because python regex word characters.
+snippet /^\s*\-?\b(module|mod|m)/ "-module" br
 -module(${0:`!p snip.rv = snip.basename or "module"`}).
 endsnippet
 
-snippet /^\s*\b(export|exp|e)/ "-export" br
+snippet /^\s*\-?\b(export|exp|e)/ "-export" br
 -export([${1:name}/${0:0}]).
 endsnippet
 
