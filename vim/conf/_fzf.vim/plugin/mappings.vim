@@ -19,9 +19,7 @@ nnoremap ss :FzfFilesWithPreview .<CR>
 nnoremap sw :FzfFilesWithPreview ../<CR>
 
 " Files in current buffer's dir:
-" BUGGED: uses git-root for some reason yet shows relative path.
-" nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
-nnoremap se :VSplitCreating <C-r>=expand('%:h').'/'<CR><C-d>
+nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
 
 " Files in current buffer's parent dir:
 nnoremap sr :FzfFilesWithPreview <C-R>=expand('%:p:h:h')<CR><CR>
