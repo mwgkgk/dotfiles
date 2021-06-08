@@ -52,7 +52,7 @@ endsnippet
 # || Modules
 # ||
 
-snippet m "-module" b
+snippet /^\s*\b(module|mod|m)/ "-module" br
 -module(${0:`!p snip.rv = snip.basename or "module"`}).
 endsnippet
 
