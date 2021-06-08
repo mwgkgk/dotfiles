@@ -22,4 +22,4 @@ nnoremap <buffer> <Leader><C-g> :LspPeekDefinition<CR>
 " ||
 
 nnoremap <buffer> <Leader><LocalLeader> :LspCodeAction<CR>
-nnoremap <buffer> <LocalLeader>r :LspRename<CR>
+nnoremap <buffer> <LocalLeader>R :LspRename<CR>
