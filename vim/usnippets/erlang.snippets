@@ -49,6 +49,15 @@ snippet ; "comment-generic" w
 endsnippet
 
 # ||
+# || Functions
+# ||
+
+snippet f "Function"
+${1:name}($2) ->
+	${0:0}.
+endsnippet
+
+# ||
 # || Unsorted
 # ||
 
@@ -81,11 +90,6 @@ fun
 	(${1:pattern})${2: when ${3:guard}} ->
 		${4:body}
 end
-endsnippet
-
-snippet fu "Function"
-${1:function} (${2:param})${3: when ${4:guard}} ->
-	${5:body}
 endsnippet
 
 snippet if "If Expression"
