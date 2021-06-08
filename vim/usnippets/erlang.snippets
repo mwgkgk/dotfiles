@@ -60,7 +60,7 @@ snippet /^\s*\b(module|mod|m)/ "-module" br
 -module(${0:`!p snip.rv = snip.basename or "module"`}).
 endsnippet
 
-snippet e "-export" b
+snippet /^\s*\b(export|exp|e)/ "-export" br
 -export([${1:name}/${0:0}]).
 endsnippet
 
