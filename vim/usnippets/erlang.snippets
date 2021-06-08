@@ -215,13 +215,13 @@ if match.group(1) is not None:
     snip.rv = match.group(1)`.$0
 endsnippet
 
-snippet /^(\s+\b.*\))\.$/ "expand-endline-period-to-semicolon" rw
+snippet /^(.*);$/ "expand-endline-period-to-semicolon" rw
 `!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`;$0
 endsnippet
 
-snippet /^(\s+\b.*\));$/ "expand-endline-semicolon-to-period" rw
+snippet /^(.*);$/ "expand-endline-semicolon-to-period" rw
 `!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`.$0
