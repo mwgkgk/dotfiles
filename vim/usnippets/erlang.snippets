@@ -81,6 +81,10 @@ snippet /\b(format|fmt|p)/ "io:format" wr
 io:format("$1", [${2:${VISUAL}}])$0
 endsnippet
 
+snippet p "print" w
+io:format("$1")$0
+endsnippet
+
 # ||
 # || Unsorted
 # ||
