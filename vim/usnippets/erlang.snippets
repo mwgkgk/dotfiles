@@ -179,10 +179,8 @@ if match.group(1) is not None:
 	snip.rv = match.group(1)` -> ${VISUAL}$0
 endsnippet
 
-snippet /^(\b.*\)) \-> ?$/ "expand-endline-arrow-to-newline" rw
-`!p
-if match.group(1) is not None:
-	snip.rv = match.group(1)` ->
+snippet /\-> ?$/ "expand-endline-arrow-to-newline" rw
+->
 	${VISUAL}$0
 endsnippet
 
