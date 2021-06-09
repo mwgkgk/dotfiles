@@ -1,6 +1,5 @@
 ```
 .
-├── [4.0K]  sports
 ├── [4.3K]  install
 ├── [ 69K]  fish
 │   ├── [1.3K]  config.fish
@@ -620,7 +619,7 @@
 └── [5.7K]  alsa
     └── [1.7K]  .asoundrc
 
- 1.5M used in 226 directories, 393 files
+ 1.5M used in 225 directories, 393 files
 ```
 
-> Generated on Wednesday, June  9, 2021 at 01:19:40 AM UTC.
+> Generated on Wednesday, June  9, 2021 at 01:20:20 AM UTC.
