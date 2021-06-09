@@ -130,9 +130,21 @@ case ${1:expression} of
 end
 endsnippet
 
-snippet - "->" w
--> $0
+# ||
+# || Arrows
+# ||
+
+snippet - "->" b
+${1:_} -> ${VISUAL}$0
 endsnippet
+
+priority -1
+
+snippet - "inline ->" w
+-> ${VISUAL}$0
+endsnippet
+
+priority 0
 
 # ||
 # || Braces
