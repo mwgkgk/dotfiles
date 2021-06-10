@@ -2,3 +2,6 @@
 
 \ TODO move this to ghost-fs
 : clearstack   0sp ;
+
+\ Seems like quit should be able to run user repl, but it dont
+\ quit
