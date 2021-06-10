@@ -96,3 +96,9 @@ nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
 
 " Dup
 nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
+
+" ||
+" || Eq
+" ||
+
+nnoremap <buffer> <LocalLeader>= :silent T =<CR>
