@@ -835,8 +835,7 @@ Plug 'gcmt/taboo.vim'
 
 " {{{
 
-" Giga workaround because i want to disable it for fzf buffer:
-Plug 'airblade/vim-rooter', { 'for' : ['', 'vim', 'forth', 'lisp', 'jiv', 'mj', 'janet', 'python', 'sh', 'dash', 'c', 'Makefile', 'vifm', 'yaml', 'kmonad'] } " {{{
+Plug 'airblade/vim-rooter' " {{{
 let g:rooter_silent_chdir = 1
 let g:rooter_resolve_links = 1
 let g:rooter_cd_cmd = 'lcd'
