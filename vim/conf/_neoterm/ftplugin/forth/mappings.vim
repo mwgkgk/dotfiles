@@ -5,13 +5,14 @@ scriptencoding utf-8
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :silent T pforth<CR>
+nnoremap <silent> <buffer> <LocalLeader>rp :T pf<CR>
+nnoremap <silent> <buffer> <LocalLeader>rg :T gf<CR>
 
 " Load current file
-nnoremap <buffer> <silent> <Leader>r :T include <C-r>=expand("%")<CR><CR>
+nnoremap <silent> <buffer> <Leader>r :T include <C-r>=expand("%")<CR><CR>
 
 " Reload RC
-nnoremap <buffer> <silent> <LocalLeader>R :T load-rc<CR>
+nnoremap <silent> <buffer> <LocalLeader>R :T load-rc<CR>
 
 " ||
 " || Send
@@ -42,13 +43,13 @@ nmap <buffer> <C-q> <Plug>(neoterm-repl-send)
 xmap <buffer> <C-q> <Plug>(neoterm-repl-send)
 
 " Send 2 words, send 3 words
-inoremap <buffer> <C-q>2 <Esc>vBBy:silent T <C-r>"<CR>gi
-inoremap <buffer> <C-q>3 vBBBy:silent T <C-r>"<CR>gi
+inoremap <silent> <buffer> <C-q>2 <Esc>vBBy:T <C-r>"<CR>gi
+inoremap <silent> <buffer> <C-q>3 vBBBy:T <C-r>"<CR>gi
 
 " C-q C-q to send word under cursor or last word
-inoremap <buffer> <C-q><C-q> <Esc>:silent T <C-r><C-a><CR>a
-nnoremap <buffer> <C-q><C-q> :silent T <C-r><C-a><CR>
-nnoremap <buffer> qq :silent T <C-r><C-a><CR>
+inoremap <silent> <buffer> <C-q><C-q> <Esc>:T <C-r><C-a><CR>a
+nnoremap <silent> <buffer> <C-q><C-q> :T <C-r><C-a><CR>
+nnoremap <silent> <buffer> qq :T <C-r><C-a><CR>
 
 " C-q C-w to send from the beginning of the line til cursor
 inoremap <silent> <buffer> <C-q><C-w> <Esc>v0y:T <C-r>"<CR>gi
@@ -62,45 +63,47 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 " || See
 " ||
 
-nnoremap <buffer> <C-g> :silent T see <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g> :T see <C-r><C-a><CR>
 
 " Gforth memes
-" nnoremap <buffer> <LocalLeader><C-g> :silent T simple-see <C-r><C-a><CR>
-" nnoremap <buffer> g<C-g> :silent T help <C-r><C-a><CR>
-" nnoremap <buffer> <Leader><C-g> :silent T locate <C-r><C-a><CR>
+" nnoremap <silent> <buffer> <LocalLeader><C-g> :T simple-see <C-r><C-a><CR>
+" nnoremap <silent> <buffer> g<C-g> :T help <C-r><C-a><CR>
+" nnoremap <silent> <buffer> <Leader><C-g> :T locate <C-r><C-a><CR>
 
 " pForth memes
-nnoremap <buffer> <Leader><C-g> :silent T file? <C-r><C-w><CR>
+nnoremap <silent> <buffer> <Leader><C-g> :T file? <C-r><C-w><CR>
+nnoremap <silent> <buffer> <LocalLeader>` :T  map<CR>
 
 " ||
 " || Stack
 " ||
 
 " Stack
-nnoremap <buffer> <Leader>s :silent T .s<CR>
+nnoremap <silent> <buffer> <Leader>s :T .s<CR>
+nnoremap <silent> <buffer> <LocalLeader>s :T .s<CR>
 
 " Clear
-nnoremap <buffer> <LocalLeader>c :silent T clearstack<CR>
+nnoremap <silent> <buffer> <LocalLeader>c :T clearstack<CR>
 
 " ||
 " || Drop
 " ||
 
 " .
-nnoremap <buffer> <LocalLeader>. :silent T .<CR>
+nnoremap <silent> <buffer> <LocalLeader>. :T .<CR>
 
 " Drop
-nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
+nnoremap <silent> <buffer> <LocalLeader>d :T drop<CR>
 
 " ||
 " || Dup
 " ||
 
 " Dup
-nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
+nnoremap <silent> <buffer> <LocalLeader>D :T dup<CR>
 
 " ||
 " || Eq
 " ||
 
-nnoremap <buffer> <LocalLeader>= :silent T =<CR>
+nnoremap <silent> <buffer> <LocalLeader>= :T =<CR>
