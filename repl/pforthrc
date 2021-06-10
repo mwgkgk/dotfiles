@@ -1,0 +1,4 @@
+\ vim:ft=forth
+
+\ TODO move this to ghost-fs
+: clearstack   0sp ;
