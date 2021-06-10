@@ -8,8 +8,9 @@ scriptencoding utf-8
 nnoremap <silent> <buffer> <LocalLeader>rp :T pf<CR>
 nnoremap <silent> <buffer> <LocalLeader>rg :T gf<CR>
 
-" Load current file
+" Include current file
 nnoremap <silent> <buffer> <Leader>r :T include <C-r>=expand("%")<CR><CR>
+nnoremap <silent> <buffer> <LocalLeader>l :T include <C-r>=expand("%")<CR><CR>
 
 " Reload RC
 nnoremap <silent> <buffer> <LocalLeader>R :T load-rc<CR>
