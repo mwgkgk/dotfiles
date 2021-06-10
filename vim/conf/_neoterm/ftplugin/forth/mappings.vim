@@ -64,11 +64,13 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 
 nnoremap <buffer> <C-g> :silent T see <C-r><C-a><CR>
 
-nnoremap <buffer> <LocalLeader><C-g> :silent T simple-see <C-r><C-a><CR>
+" Gforth memes
+" nnoremap <buffer> <LocalLeader><C-g> :silent T simple-see <C-r><C-a><CR>
+" nnoremap <buffer> g<C-g> :silent T help <C-r><C-a><CR>
+" nnoremap <buffer> <Leader><C-g> :silent T locate <C-r><C-a><CR>
 
-nnoremap <buffer> g<C-g> :silent T help <C-r><C-a><CR>
-
-nnoremap <buffer> <Leader><C-g> :silent T locate <C-r><C-a><CR>
+" pForth memes
+nnoremap <buffer> <Leader><C-g> :silent T file? <C-r><C-w><CR>
 
 " ||
 " || Stack
