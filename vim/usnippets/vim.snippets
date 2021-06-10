@@ -181,11 +181,11 @@ snippet dd "dd" i
 endsnippet
 
 snippet nn "nnoremap" b
-nnoremap ${1:X} ${2::silent ${3:!${4::echo ${5:sup}}}}
+nnoremap ${1:<Leader>}$0
 endsnippet
 
-snippet nb "nnoremap buffer" b
-nnoremap <buffer> ${1:X} ${2::silent ${3:!${4::echo ${5:sup}}}}
+snippet nb "nnoremap silent buffer" b
+nnoremap <silent> <buffer> ${1:<LocalLeader>} ${2::T $0}<CR>
 endsnippet
 
 snippet b "<buffer>" w
