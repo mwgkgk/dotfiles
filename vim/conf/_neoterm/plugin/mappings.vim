@@ -71,6 +71,9 @@ nnoremap <F9> :rightbelow T make<CR>
 
 " nmap <Leader>X <Plug>(neoterm-repl-send-line)
 
+" Open :T
+nnoremap <Space><Leader> :T<Space>
+
 " ||
 " || Do-thing
 " ||
