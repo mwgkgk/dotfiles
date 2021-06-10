@@ -38,9 +38,7 @@ set -x fish_command_timer_fail_color 875F87
 set -x EDITOR "v"
 
 # FZF
-# Something's bugged with the project root and --absolute-path doesn't help.
-# set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
-set -x FZF_DEFAULT_COMMAND ""
+set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
 set -x FZF_DEFAULT_OPTS " --bind 'ctrl-q:select-all+accept,tab:print-query'"
 
 # eval (perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
