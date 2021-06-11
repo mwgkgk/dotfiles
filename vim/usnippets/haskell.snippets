@@ -1,3 +1,61 @@
+# ||
+# || Date
+# ||
+
+snippet da "date-file-start" "snip.line == 0" e
+-- `date-utc`
+
+$0
+endsnippet
+
+priority -1
+
+snippet / *da(te)?/ "Date" rb
+-- `date-utc`
+${0}
+endsnippet
+
+priority 0
+
+# ||
+# || Comments
+# ||
+
+snippet ; "comment-generic" w
+-- ${VISUAL}$0
+endsnippet
+
+snippet - "comment-default" w
+-- ${VISUAL}$0
+endsnippet
+
+priority -1
+
+# See UltiSnips-custom-context-snippets
+snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
+{-
+${VISUAL}$0
+-} -- `date-jiv`
+endsnippet
+
+priority 0
+
+snippet dab "dab" w
+-- `date-utc`
+
+{-
+${VISUAL}$0
+-} -- `date-jiv`
+endsnippet
+
+snippet t "TODO" b
+-- TODO ${VISUAL}$0
+endsnippet
+
+# ||
+# || Unsorted
+# ||
+
 snippet if "if ... then ... else ..."
 if ${1:condition}
    then ${2:expression}
