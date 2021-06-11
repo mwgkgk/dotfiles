@@ -252,6 +252,22 @@ while ($1) : ($2) {
 endsnippet
 
 # ||
+# || Arrows
+# ||
+
+snippet = "=>" b
+${1:else} => ${0:unreachable},
+endsnippet
+
+priority -1
+
+snippet = "inline =>" w
+=> ${0:unreachable},
+endsnippet
+
+priority 0
+
+# ||
 # || Predicates
 # ||
 
