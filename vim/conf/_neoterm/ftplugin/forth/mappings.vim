@@ -96,6 +96,7 @@ nnoremap <silent> <buffer> <LocalLeader>t :T 2dup type<CR>
 
 " Drop
 nnoremap <silent> <buffer> <LocalLeader>d :T drop<CR>
+nnoremap <silent> <buffer> <LocalLeader><LocalLeader>d :T 2drop<CR>
 
 " ||
 " || Dup
@@ -103,6 +104,7 @@ nnoremap <silent> <buffer> <LocalLeader>d :T drop<CR>
 
 " Dup
 nnoremap <silent> <buffer> <LocalLeader>D :T dup<CR>
+nnoremap <silent> <buffer> <LocalLeader><LocalLeader>D :T 2dup<CR>
 
 " ||
 " || Eq
