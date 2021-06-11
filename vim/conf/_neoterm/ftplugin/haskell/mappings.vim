@@ -5,9 +5,9 @@
 " Run repl
 nnoremap <silent> <buffer> <LocalLeader>r :T ghci<CR>
 
-
-" Source current file
-" nnoremap <buffer> <silent> <Leader>r :T source <C-r>=expand("%")<CR><CR>
+" Load current file
+nnoremap <silent> <buffer> <Leader>r :T :l <C-r>=expand("%")<CR><CR>
+nnoremap <silent> <buffer> <LocalLeader>l :T :l <C-r>=expand("%")<CR><CR>
 
 " ||
 " || Send
