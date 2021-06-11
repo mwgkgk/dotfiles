@@ -92,7 +92,7 @@ nnoremap <silent> <buffer> <LocalLeader>c :T clearstack<CR>
 
 " .
 nnoremap <silent> <buffer> <LocalLeader>. :T .<CR>
-nnoremap <silent> <buffer> <LocalLeader>t :T type<CR>
+nnoremap <silent> <buffer> <LocalLeader>t :T 2dup type<CR>
 
 " Drop
 nnoremap <silent> <buffer> <LocalLeader>d :T drop<CR>
