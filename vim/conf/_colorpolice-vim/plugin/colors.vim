@@ -29,7 +29,7 @@
 " let s:static_colo = 'hemisu-light'
 " let s:static_colo = 'hawk'
 " let s:static_colo = 'zorn'
-" let s:static_colo = 'nil'
+let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
 " let s:static_colo = 'shenzhen'
 " let s:static_colo = 'busan'
@@ -41,7 +41,7 @@
 
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'nuclear-dark'
-let s:static_colo = 'fadedvision'
+" let s:static_colo = 'fadedvision'
 
 " Zinge
 " let s:static_colo = 'calmar256-dark'
