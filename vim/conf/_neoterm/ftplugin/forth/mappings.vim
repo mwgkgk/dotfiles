@@ -67,13 +67,13 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 nnoremap <silent> <buffer> <C-g> :T see <C-r><C-a><CR>
 
 " Gforth memes
-" nnoremap <silent> <buffer> <LocalLeader><C-g> :T simple-see <C-r><C-a><CR>
-" nnoremap <silent> <buffer> g<C-g> :T help <C-r><C-a><CR>
-" nnoremap <silent> <buffer> <Leader><C-g> :T locate <C-r><C-a><CR>
+nnoremap <silent> <buffer> <LocalLeader><C-g> :T simple-see <C-r><C-a><CR>
+nnoremap <silent> <buffer> g<C-g> :T where <C-r><C-a><CR>
+nnoremap <silent> <buffer> <Leader><C-g> :T locate <C-r><C-a><CR>
 
 " pForth memes
-nnoremap <silent> <buffer> <Leader><C-g> :T file? <C-r><C-w><CR>
-nnoremap <silent> <buffer> <LocalLeader>` :T  map<CR>
+" nnoremap <silent> <buffer> <Leader><C-g> :T file? <C-r><C-w><CR>
+" nnoremap <silent> <buffer> <LocalLeader>` :T  map<CR>
 
 " ||
 " || Stack
