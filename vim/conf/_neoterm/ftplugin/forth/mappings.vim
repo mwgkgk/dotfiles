@@ -98,6 +98,8 @@ nnoremap <silent> <buffer> <LocalLeader>t :T 2dup type<CR>
 nnoremap <silent> <buffer> <LocalLeader>d :T drop<CR>
 nnoremap <silent> <buffer> <LocalLeader><LocalLeader>d :T 2drop<CR>
 
+nnoremap <silent> <buffer> <LocalLeader>n :T nip<CR>
+
 " ||
 " || Dup
 " ||
