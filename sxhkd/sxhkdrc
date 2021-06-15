@@ -60,6 +60,9 @@ super + bracketleft
 super + comma
 	hulk
 
+control + slash
+	xdotool key Caps_Lock
+
 control + semicolon
 	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
 
