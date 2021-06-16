@@ -122,3 +122,9 @@ nnoremap <silent> <buffer> <LocalLeader><Space>h :T hex<CR>
 nnoremap <silent> <buffer> <LocalLeader><Space>d :T decimal<CR>
 nnoremap <silent> <buffer> <LocalLeader><Space>o :T 8 base !<CR>
 nnoremap <silent> <buffer> <LocalLeader><Space>b :T 2 base !<CR>
+
+" ||
+" || Status
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>ag :T .any-new-memes?<CR>
