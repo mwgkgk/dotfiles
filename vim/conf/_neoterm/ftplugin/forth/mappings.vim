@@ -13,7 +13,7 @@ nnoremap <silent> <buffer> <Leader>r :T include <C-r>=expand("%")<CR><CR>
 nnoremap <silent> <buffer> <LocalLeader>l :T include <C-r>=expand("%")<CR><CR>
 
 " Reload RC
-nnoremap <silent> <buffer> <LocalLeader>R :T load-rc<CR>
+nnoremap <silent> <buffer> <LocalLeader>r :T load-rc<CR>
 
 " ||
 " || Send
