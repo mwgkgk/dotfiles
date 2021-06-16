@@ -64,7 +64,12 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 " || See
 " ||
 
+" See under cursor
 nnoremap <silent> <buffer> <C-g> :T see <C-r><C-a><CR>
+
+" See anything
+" Not <silent> on purpose
+nnoremap <buffer> <Space><LocalLeader> :T see<Space>
 
 " Gforth memes
 nnoremap <silent> <buffer> <LocalLeader><C-g> :T simple-see <C-r><C-a><CR>
