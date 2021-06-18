@@ -56,6 +56,6 @@ nnoremap <buffer> <LocalLeader>8 :silent T 8<CR>
 nnoremap <buffer> <LocalLeader>9 :silent T 9<CR>
 
 " Run repls:
-nnoremap <buffer> <Leader>rs :silent T sbcl<CR>
-nnoremap <buffer> <Leader>re :silent T ecl<CR>
-nnoremap <buffer> <Leader>rc :silent T ccl<CR>
+nnoremap <buffer> <LocalLeader>gs :silent T sbcl<CR>
+nnoremap <buffer> <LocalLeader>ge :silent T ecl<CR>
+nnoremap <buffer> <LocalLeader>gc :silent T ccl<CR>
