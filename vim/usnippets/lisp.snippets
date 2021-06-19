@@ -1,21 +1,31 @@
+extends words.mj
+
 # ||
 # || Date
 # ||
 
-extends words.mj
+snippet / *da(te)?/ "date-file-start" "snip.line == 0" e
+;;; `date-utc`
 
-snippet / *d(a)?(te)?/ "Date" rb
-;;; `date-utc` ;;;
-${0}
+$0
 endsnippet
 
 priority -1
 
-snippet dd "dd-inline" w
-`!v system('date-jiv | tr -d "\n"')`${0}
+snippet / *da(te)?/ "Date" rb
+;;; `date-utc`
+${0}
+endsnippet
+
+snippet dd "dd-line-start" b
+// `date-jiv`
 endsnippet
 
 priority 0
+
+snippet dd "dd-inline" w
+`!v system('date-jiv | tr -d "\n"')`${0}
+endsnippet
 
 # ||
 # || Comments
