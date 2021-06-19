@@ -42,6 +42,9 @@ super + u
 super + 0
 	firefox-default
 
+super + y
+	firefox-mwgkgk
+
 super + 9
 	firefox-super-nine
 
