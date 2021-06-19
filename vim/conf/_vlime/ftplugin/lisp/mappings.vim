@@ -40,7 +40,9 @@ nnoremap <silent> <buffer> <C-g><C-h> :call vlime#plugin#SendToREPL("(help #'" .
 " ||
 
 " Hide all vlime windows:
-nnoremap <silent> <buffer> <LocalLeader>` :call vlime#plugin#CloseWindow("")<cr>
+nnoremap <silent> <buffer> <LocalLeader>~ :call vlime#plugin#CloseWindow("")<cr>
+" Hide preview
+nnoremap <silent> <buffer> <LocalLeader>` :call vlime#plugin#CloseWindow("preview")<cr>
 
 " Close all visible preview windows:
 " Not <buffer> because we can be in any buffer
