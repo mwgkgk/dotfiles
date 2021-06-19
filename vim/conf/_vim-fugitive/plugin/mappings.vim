@@ -3,7 +3,8 @@
 " || Status
 " ||
 
-nnoremap <Leader>G :rightbelow Gstatus<CR>
+" :Gstatus deprecated in favor of :Git without args
+nnoremap <Leader>G :rightbelow Git<CR>
 
 " ||
 " || Commit
