@@ -43,3 +43,9 @@ nnoremap <silent> <buffer> <C-q><C-w> v0y:T <C-r>"<CR>
 " C-q C-e to send from cursor till EoL
 inoremap <silent> <buffer> <C-q><C-e> <Esc>v$y:T <C-r>"<CR>gi
 nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
+
+" ||
+" || Docs
+" ||
+
+nnoremap <silent> <buffer> <C-g> <Esc>:T var_dump(<C-r><C-a>);<CR>
