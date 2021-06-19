@@ -19,7 +19,7 @@ nnoremap <silent> <buffer> <Leader>X :call vlime#plugin#SendToREPL(vlime#ui#CurA
 " ||
 
 " This spawns a separate window which may be unwieldy
-nnoremap <silent> <buffer> <Leader><C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui#CurAtom())<cr>
+nnoremap <silent> <buffer> <LocalLeader><C-g> :call vlime#plugin#DocumentationSymbol(vlime#ui#CurAtom())<cr>
 
 nnoremap <silent> <buffer> <C-g>a :call vlime#plugin#SendToREPL("(apropos \"" .. vlime#ui#CurAtom() .. "\")")<cr>
 nnoremap <silent> <buffer> <C-g><C-a> :call vlime#plugin#SendToREPL("(apropos \"" .. vlime#ui#CurAtom() .. "\")")<cr>
