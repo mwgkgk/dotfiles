@@ -387,7 +387,7 @@ endsnippet
 priority -2
 
 snippet  /;$/ "expand-any-endline-semicolon" rw
-; // $0
+; // ${VISUAL}$0
 endsnippet
 
 priority -3
@@ -395,7 +395,7 @@ priority -3
 snippet  /^\s+([\!:\w=-]+)$/ "expand-any-word-endline" rw
 `!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)`($0);
+	snip.rv = match.group(0)`(${VISUAL}$0);
 endsnippet
 
 priority -4
@@ -403,5 +403,5 @@ priority -4
 snippet  /([\!:\w=-]+)/ "expand-any-word" rw
 `!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)`($0)
+	snip.rv = match.group(0)`(${VISUAL}$0)
 endsnippet
