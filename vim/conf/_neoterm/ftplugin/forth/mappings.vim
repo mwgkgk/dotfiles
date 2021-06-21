@@ -90,6 +90,8 @@ nnoremap <silent> <buffer> <LocalLeader>s :T .s<CR>
 
 " Clear
 nnoremap <silent> <buffer> <LocalLeader>c :T clearstack<CR>
+" Page
+nnoremap <silent> <buffer> <LocalLeader>C :T page<CR>
 
 " ||
 " || Drop
