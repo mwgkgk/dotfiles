@@ -224,7 +224,7 @@ priority -3
 snippet /^([\!:\w=\-?\.$><\[\]]+)/ "expand-any-word-b" br
 : `!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)` $0
+	snip.rv = match.group(0)` ${VISUAL}$0
 endsnippet
 
 # snippet /^([\!:\w=\-?\.$><\[\]]+)/ "expand-any-word-b" br
@@ -244,6 +244,6 @@ endsnippet
 
 snippet /\)\s*$/ "triple-expand-comment-to-;" wr
 )
-	${0:${VISUAL}}
+	${VISUAL}$0
 ;
 endsnippet
