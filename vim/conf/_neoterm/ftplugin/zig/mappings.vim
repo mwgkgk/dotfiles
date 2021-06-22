@@ -3,6 +3,7 @@ nnoremap <buffer> <LocalLeader><LocalLeader> :silent T zig test <C-r>=expand('%'
 
 " Run file:
 nnoremap <buffer> <Leader>r :silent T zig run <C-r>=expand('%')<CR><CR>
+nnoremap <buffer> <LocalLeader>r :silent T zig run <C-r>=expand('%')<CR><CR>
 
 " Zig build:
 nnoremap <buffer> <LocalLeader>b :silent T zig build<CR>
