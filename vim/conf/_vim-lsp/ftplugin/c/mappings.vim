@@ -9,4 +9,4 @@ nnoremap <buffer> <Leader>] :LspReferences<CR>
 nnoremap <buffer> <C-]> :LspDeclaration<CR>
 
 nnoremap <buffer> <Leader><LocalLeader> :LspCodeAction<CR>
-nnoremap <buffer> <LocalLeader>r :LspRename<CR>
+nnoremap <buffer> <LocalLeader>R :LspRename<CR>
