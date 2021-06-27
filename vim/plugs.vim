@@ -1133,10 +1133,10 @@ Plug '~/shop/oil/borzhch'
 " || Filetypes
 " ||
 
-Plug '~/.vim/conf/_vim-lsp/'
-Plug 'prabirshrestha/vim-lsp'
+Plug '~/.vim/conf/_vim-lsp/', { 'for' : 'zig' }
+Plug 'prabirshrestha/vim-lsp', { 'for' : 'zig' }
 
-Plug 'mattn/vim-lsp-settings'
+Plug 'mattn/vim-lsp-settings', { 'for' : 'zig' }
 
 
 " Many languages
