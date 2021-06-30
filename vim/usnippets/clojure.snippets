@@ -1,8 +1,27 @@
+# ||
+# || Date
+# ||
+
+# Wed Jun 30 08:42:15 UTC 2021
+
 snippet / *d(a)?(te)?/ "Date" rb
-;; `date-utc` ;;
+;; `date-utc`
 
 ${0}
 endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet ba "basement" b
+#_(do
+		${VISUAL}${0:nil})
+endsnippet
+
+# ||
+# || Functions
+# ||
 
 snippet "^(\()?f" "f" r
 (defn ${1:fname}
@@ -26,10 +45,9 @@ if match.group(1) is None:
 		($1)${VISUAL})
 endsnippet
 
-snippet ba "basement" b
-#_(do
-		${VISUAL}${0:nil})
-endsnippet
+# ||
+# || Conditionals
+# ||
 
 snippet "(\()?if" "if" r
 (if ${2:(${1:?})}
