@@ -1291,6 +1291,9 @@ Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' }
 
 Plug 'mwgkgk/vim-textobj-elixir', { 'for' : 'elixir' }
 
+" Fsharp
+Plug 'ionide/Ionide-vim'
+
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
 " Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
