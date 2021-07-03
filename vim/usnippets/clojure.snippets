@@ -4,7 +4,7 @@
 
 # Wed Jun 30 08:42:15 UTC 2021
 
-snippet / *d(a)?(te)?/ "Date" rb
+snippet / *da(te)?/ "Date" rb
 ;; `date-utc`
 
 ${0}
@@ -56,6 +56,16 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Values
+# ||
+
+snippet "^(\()?d" "def" r
+(def ${1:name} ${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Functions
 # ||
 
@@ -65,9 +75,6 @@ snippet "^(\()?f" "f" r
 	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
-
-#_(do
-		($1)${VISUAL})
 endsnippet
 
 snippet "^(\()?sf" "fn-spec" r
