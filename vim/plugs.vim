@@ -1200,12 +1200,12 @@ Plug '~/shop/oil/picolisp-vim/', { 'for' : 'picolisp' }
 Plug 'hellerve/carp-vim'
 
 " Clojure
-if has('nvim')
-    Plug 'Olical/conjure', { 'tag': 'v4.16.0' }
-else
-    Plug '~/.vim/conf/_vim-fireplace/', { 'for' : 'clojure' }
-    Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
-endif
+" if has('nvim')
+"     Plug 'Olical/conjure', { 'tag': 'v4.16.0' }
+" else
+"     Plug '~/.vim/conf/_vim-fireplace/', { 'for' : 'clojure' }
+"     Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
+" endif
 
 Plug '~/.vim/conf/_vim-cljfmt/', { 'for' : 'clojure' }
 Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
