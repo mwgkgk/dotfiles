@@ -14,9 +14,45 @@ endsnippet
 # || Comments
 # ||
 
-snippet ba "basement" b
-#_(do
-		${VISUAL}${0:nil})
+snippet /^;?;/ ";;" r
+;; ${VISUAL}$0
+endsnippet
+
+snippet /^(\s+);/ ";" r
+`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`; ${VISUAL}$0
+endsnippet
+
+# ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+(comment
+	${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = "nil"
+`}
+	nil) ; `date-jiv`
+endsnippet
+
+# ||
+# || Modules
+# ||
+
+snippet ns "ns" b
+(ns $1.`!p
+snip.rv = snip.basename`
+	$0)
+endsnippet
+
+snippet "(\()?:?req" "req" r
+(:require ${0:[${4:${1:clojure.core.match} ${3::refer [${2:match}]}}]}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 # ||
@@ -46,6 +82,18 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Let
+# ||
+
+snippet "(\()?let" "let" r
+(let
+	[$1]
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Conditionals
 # ||
 
@@ -56,13 +104,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?let" "let" r
-(let
-	[$1]
-	${0:nil}`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
+# ||
+# || Print
+# ||
 
 snippet "(\()?p" "println" r
 (println ${0:"$1"}`!p
@@ -70,14 +114,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+# ||
+# || Errors
+# ||
+
 snippet "(\()?e" "Error" r
 (errexit ${VISUAL}${1:(${0:usage})}`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
-
-snippet "(\()?:?req" "req" r
-(:require ${0:[${4:${1:clojure.core.match} ${3::refer [${2:match}]}}]}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -88,16 +130,14 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet ns "ns" b
-(ns $1.`!p
-snip.rv = snip.basename`
-	$0)
-endsnippet
+# ||
+# || Fallbacks
+# ||
 
-snippet leg "league" b
-(def league
-	{:name "${1:`!p
-snip.rv = snip.basename`}"
-	$0
-	})
+priority -3
+
+snippet  /([\!:\w=\-\/]+)/ "expand-any-word" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $1)
 endsnippet
