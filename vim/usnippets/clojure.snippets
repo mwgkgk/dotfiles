@@ -72,7 +72,9 @@ endsnippet
 snippet "^(\()?\b(defn|f)" "f" r
 (defn ${1:fname}
 	[$2]
-	${0:nil}`!p
+	${VISUAL}${0:`!p
+if not snip.v.text:
+	snip.rv = "nil"`}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
