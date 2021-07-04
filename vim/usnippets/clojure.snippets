@@ -69,7 +69,7 @@ endsnippet
 # || Functions
 # ||
 
-snippet "^(\()?f" "f" r
+snippet "^(\()?\bf" "f" r
 (defn ${1:fname}
 	[$2]
 	${0:nil}`!p
@@ -77,7 +77,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "^(\()?sf" "fn-spec" r
+snippet "^(\()?\bsf" "fn-spec" r
 (defn-spec ${1:fname} ${2:integer?}
 	[${3:a integer?}]
 	${0:nil}`!p
@@ -92,7 +92,7 @@ endsnippet
 # || Let
 # ||
 
-snippet "(\()?let" "let" r
+snippet "(\()?\blet" "let" r
 (let
 	[$1]
 	${0:nil}`!p
@@ -104,7 +104,7 @@ endsnippet
 # || Conditionals
 # ||
 
-snippet "(\()?if" "if" r
+snippet "(\()?\bif" "if" r
 (if ${2:(${1:?})}
 	$0`!p
 if match.group(1) is None:
@@ -115,7 +115,7 @@ endsnippet
 # || Print
 # ||
 
-snippet "(\()?p" "println" r
+snippet "(\()?\bp" "println" r
 (println ${0:"$1"}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -125,13 +125,13 @@ endsnippet
 # || Errors
 # ||
 
-snippet "(\()?e" "Error" r
+snippet "(\()?\be" "Error" r
 (errexit ${VISUAL}${1:(${0:usage})}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?m" "match" r
+snippet "(\()?\bm" "match" r
 (match ${0:${VISUAL}$1}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
