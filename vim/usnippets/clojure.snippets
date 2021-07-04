@@ -59,7 +59,7 @@ endsnippet
 # || Values
 # ||
 
-snippet "^(\()?d" "def" r
+snippet "^(\()?(def|d)" "def" r
 (def ${1:name} ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -69,7 +69,7 @@ endsnippet
 # || Functions
 # ||
 
-snippet "^(\()?\bf" "f" r
+snippet "^(\()?\b(defn|f)" "f" r
 (defn ${1:fname}
 	[$2]
 	${0:nil}`!p
