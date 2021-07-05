@@ -90,9 +90,10 @@ endsnippet
 # || Let
 # ||
 
+# Note that Python considers - a non-word character, so \b here doesn't prevent
+# trigger on something-let<Tab>
 snippet "(\()?\blet" "let" r
-(let
-	[$1]
+(let [$1]
 	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
