@@ -99,6 +99,14 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+# TODO Come up with a smooth mechanic for refactor-to-let
+snippet "(\()?\bil" "if-let" r
+(if-let [$1]
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Conditionals
 # ||
