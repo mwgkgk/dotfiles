@@ -10,7 +10,7 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 nmap <silent> <buffer> <Leader>X <Plug>(neoterm-repl-send)aw
 
 " Send line
-nnoremap <buffer> <LocalLeader>X :TREPLSendLine<CR>
+nnoremap <buffer> <LocalLeader>x :TREPLSendLine<CR>
 
 nnoremap <buffer> <LocalLeader>l :silent T (load #P"<C-r>=expand('%:p')<CR>")<CR>
 
