@@ -62,6 +62,16 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Atoms
+# ||
+
+snippet "(\()?\bs" "swap!" rw
+(swap! $1 ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Functions
 # ||
 
