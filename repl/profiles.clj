@@ -1,6 +1,6 @@
 {:user 
  {:dependencies
-  [[cljfmt "0.6.4"]
+  [[cljfmt "0.8.0"]
 
    ;; Provides:
    ;; - (load-project) to load new deps from project.clj
