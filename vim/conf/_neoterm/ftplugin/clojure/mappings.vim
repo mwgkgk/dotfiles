@@ -44,6 +44,12 @@ inoremap <silent> <buffer> <C-q><C-e> <Esc>v$y:T <C-r>"<CR>gi
 nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 
 " ||
+" || Load
+" ||
+
+nnoremap <silent> <buffer> <Leader>r :T (load-file "<C-r>=expand("%")<CR>")<CR>
+
+" ||
 " || Docs
 " ||
 
