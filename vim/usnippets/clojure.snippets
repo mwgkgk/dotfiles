@@ -148,10 +148,71 @@ endsnippet
 # || Fallbacks
 # ||
 
+priority -1
+
+snippet /([%\!:\w=\-\+><\*\/\?\.]*[%\!:\w=\-\+><\*\/\?])\./ "expand-any-word-as-no-arguments-call" rw
+(`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`)$0
+endsnippet
+
+snippet  /([%\!:\w=\-\+><\*\/\?\.]+):/ "expand-any-word-as-keyword" rw
+:`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`$0
+endsnippet
+
+snippet  /([%\!:\w=\-\+><\*\/\?\.]+)'/ "expand-any-word-as-quote" rw
+'`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`$0
+endsnippet
+
+snippet  /(\([\s%\!:\w=\-\+><\*\/\?\.]+\))'/ "expand-any-form-as-quote" rw
+'`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`$0
+endsnippet
+
+priority 0
+
+snippet (' "expand (' as '(" w
+'(
+endsnippet
+
+priority -1
+
+snippet  /([%\!:\w=\-\+><\*\/\?\.]+)\$/ "expand-any-word-as-let" rw
+(let
+	[`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)` ${1:nil}]
+	${0:nil})
+endsnippet
+
+priority -2
+
+snippet /^([%\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word-b" br
+(defn `!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` (${1:list})
+	${0:nil})
+endsnippet
+
 priority -3
 
-snippet  /([\!:\w=\-\/]+)/ "expand-any-word" rw
+snippet  /([%\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word" rw
 (`!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)` $1)
+	snip.rv = match.group(0)` $0)
 endsnippet
+
+priority -4
+
+snippet  /(\(([%\!:\w=\-\+><\*\/\?\.\s\(\)]+)+\))/ "expand-any-form" rw
+(`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` $0)
+endsnippet
+
+priority 0
