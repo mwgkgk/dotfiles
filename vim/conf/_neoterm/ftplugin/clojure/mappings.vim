@@ -52,6 +52,13 @@ nnoremap <buffer> g<C-g> :silent T (pprint (meta <C-r><C-w>))<CR>
 nnoremap <buffer> <Leader><C-g> :silent T (source <C-r><C-w>)<CR>
 
 " ||
+" || Errors
+" ||
+
+" Print stack trace
+nnoremap <buffer> <LocalLeader>s :silent T (pst)<CR>
+
+" ||
 " || Repl control
 " ||
 
