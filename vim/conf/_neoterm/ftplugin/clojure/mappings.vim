@@ -54,11 +54,13 @@ nnoremap <silent> <buffer> <Leader>r :T (load-file "<C-r>=expand("%")<CR>")<CR>
 " ||
 
 nnoremap <buffer> <C-g> :silent T (doc <C-r><C-w>)<CR>
-nnoremap <buffer> g<C-g> :silent T (pprint (meta <C-r><C-w>))<CR>
-nnoremap <buffer> <Leader><C-g> :silent T (source <C-r><C-w>)<CR>
+nnoremap <buffer> g<C-g> :silent T (source <C-r><C-w>)<CR>
+
+" Metadata
+nnoremap <buffer> <LocalLeader><C-g> :silent T (pprint (meta <C-r><C-w>))<CR>
 
 " Apropos
-nnoremap <buffer> <LocalLeader>g<C-g> :silent T (find-doc "<C-r><C-w>")<CR>
+nnoremap <buffer> <Leader><C-g> :silent T (find-doc "<C-r><C-w>")<CR>
 
 " ||
 " || Errors
