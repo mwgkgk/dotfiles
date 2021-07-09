@@ -128,6 +128,17 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Loop
+# ||
+
+snippet "(\()?\bloop" "loop" r
+(loop [$1]
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Conditionals
 # ||
 
