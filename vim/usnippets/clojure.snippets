@@ -144,7 +144,11 @@ endsnippet
 
 snippet "(\()?\bif" "if" r
 (if ($1)
-	$0`!p
+	${0:`!p
+
+if not snip.v.text:
+	snip.rv = "nil"
+`}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
