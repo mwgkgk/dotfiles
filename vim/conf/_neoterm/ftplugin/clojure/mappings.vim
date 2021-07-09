@@ -67,6 +67,13 @@ nnoremap <buffer> <Space><LocalLeader><LocalLeader><C-g> :silent T (meta )<Left>
 nnoremap <buffer> <Leader><C-g> :silent T (find-doc "<C-r><C-w>")<CR>
 nnoremap <buffer> <Space><LocalLeader><Leader><C-g> :silent T (find-doc "")<Left><Left>
 
+" Clojuredocs is <LocalLeader>g<C-g>
+" in ~/.vim/conf/_open-browser.vim/ftplugin/clojure/mappings.vim
+
+" Javadoc
+nnoremap <buffer> <LocalLeader>G<C-g> :silent T (javadoc "<C-r><C-w>")<CR>
+nnoremap <buffer> <Space><LocalLeader><LocalLeader>G<C-g> :silent T (javadoc "")<Left><Left>
+
 " ||
 " || Errors
 " ||
