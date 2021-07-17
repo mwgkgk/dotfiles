@@ -256,6 +256,25 @@ snippet dd "dd" w
 // ${0}
 endsnippet
 
+snippet / "comment-/" w
+// ${VISUAL}$0
+endsnippet
+
+snippet // "comment-//" w
+// ${VISUAL}$0
+endsnippet
+
+snippet ; "comment-generic" w
+// ${VISUAL}$0
+endsnippet
+
+snippet /^(\s*)(// )?(T|td)/ "TODO-comment" r
+`!p
+# Whitespace:
+if match.group(1) is not None:
+	snip.rv = match.group(1)`// TODO ${VISUAL}$0
+endsnippet
+
 # ||
 # || Fallbacks
 # ||
