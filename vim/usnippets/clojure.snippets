@@ -35,12 +35,17 @@ if not snip.v.text:
 	nil) ; `date-jiv`
 endsnippet
 
-snippet /^(\s*)(;(;)? )?t/ "TODO-comment" r
-`!p
-# Whitespace:
-if match.group(1) is not None:
-	snip.rv = match.group(1)`// TODO ${VISUAL}$0
+snippet t "TODO" b
+;; TODO ${VISUAL}$0
 endsnippet
+
+priority -1
+
+snippet t "TODO-inline" w
+TODO ${VISUAL}$0
+endsnippet
+
+priority 0
 
 # ||
 # || Modules
