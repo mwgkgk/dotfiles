@@ -46,6 +46,9 @@ super + y
 	firefox-mwgkgk
 
 super + z
+	rogue
+
+super + 8
 	firefox-roots
 
 super + 9
@@ -120,11 +123,12 @@ control + F12
 super + Return
 	dzen2-clock
 
+# TODO move proxy key, cause super+8 is now used,
+#      and Burglar-c to paste was dumb to begin with
 # Paste X selection
-
 # Kmonad: Burglar c
-super + 8
-	xpaste
+# super + 8
+#	xpaste
 
 # Firefox shadowstep tricks
 
