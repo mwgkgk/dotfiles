@@ -53,6 +53,8 @@ nnoremap <silent> <buffer> <Leader>r :T (load-file "<C-r>=expand("%")<CR>")<CR>
 " || Docs
 " ||
 
+nnoremap <buffer> <C-x><C-g> :silent T (print <C-r><C-w>)<CR>
+
 nnoremap <buffer> <C-g> :silent T (doc <C-r><C-w>)<CR>
 nnoremap <buffer> <Space><LocalLeader><C-g> :silent T (doc )<Left>
 
