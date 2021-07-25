@@ -9,6 +9,9 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 " Send word
 nmap <silent> <buffer> <Leader>X <Plug>(neoterm-repl-send)aw
 
+" Call atom under cursor
+nnoremap <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
+
 " Send line
 nnoremap <buffer> <LocalLeader>x :TREPLSendLine<CR>
 
