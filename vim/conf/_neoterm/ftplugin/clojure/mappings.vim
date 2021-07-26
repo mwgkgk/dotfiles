@@ -6,11 +6,10 @@
 " Use forms instead of lines:
 nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 
-" Send word
-nmap <silent> <buffer> <Leader>X <Plug>(neoterm-repl-send)aw
-
 " Call atom under cursor
-nnoremap <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
+nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
+" Send atom under cursor
+nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
 
 " Send line
 nnoremap <buffer> <LocalLeader>x :TREPLSendLine<CR>
