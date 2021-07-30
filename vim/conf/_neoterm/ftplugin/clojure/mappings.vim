@@ -56,28 +56,27 @@ nnoremap <silent> <buffer> <Leader>r :T (load-file "<C-r>=expand("%")<CR>")<CR>
 " || Docs
 " ||
 
-nnoremap <buffer> <C-x><C-g> :silent T (print <C-r><C-w>)<CR>
+nnoremap <silent> <buffer> <C-x><C-g> :T (print <C-r><C-w>)<CR>
 
-nnoremap <buffer> <C-g> :silent T (doc <C-r><C-w>)<CR>
-nnoremap <buffer> <Space><LocalLeader><C-g> :silent T (doc )<Left>
+nnoremap <silent> <buffer> <C-g> :T (clojure.repl/doc <C-r><C-w>)<CR>
+nnoremap <silent> <buffer> <Space><LocalLeader><C-g> :T (clojure.repl/doc )<Left>
 
-nnoremap <buffer> g<C-g> :silent T (source <C-r><C-w>)<CR>
-nnoremap <buffer> <Space><LocalLeader>g<C-g> :silent T (source )<Left>
+nnoremap <silent> <buffer> g<C-g> :T (clojure.repl/source <C-r><C-w>)<CR>
+nnoremap <silent> <buffer> <Space><LocalLeader>g<C-g> :T (clojure.repl/source )<Left>
 
 " Metadata
-nnoremap <buffer> <LocalLeader><C-g> :silent T (pprint (meta <C-r><C-w>))<CR>
-nnoremap <buffer> <Space><LocalLeader><LocalLeader><C-g> :silent T (meta )<Left>
+nnoremap <silent> <buffer> <LocalLeader><C-g> :T (clojure.pprint/pprint (meta <C-r><C-w>))<CR>
+nnoremap <silent> <buffer> <Space><LocalLeader><LocalLeader><C-g> :T (clojure.pprint/pprint (meta ))<Left><Left>
 
 " Apropos
-nnoremap <buffer> <Leader><C-g> :silent T (find-doc "<C-r><C-w>")<CR>
-nnoremap <buffer> <Space><LocalLeader><Leader><C-g> :silent T (find-doc "")<Left><Left>
-
+nnoremap <silent> <buffer> <Leader><C-g> :T (clojure.repl/find-doc "<C-r><C-w>")<CR>
+nnoremap <silent> <buffer> <Space><LocalLeader><Leader><C-g> :T (clojure.repl/find-doc "")<Left><Left>
 " Clojuredocs is <LocalLeader>g<C-g>
 " in ~/.vim/conf/_open-browser.vim/ftplugin/clojure/mappings.vim
 
 " Javadoc
-nnoremap <buffer> <LocalLeader>G<C-g> :silent T (javadoc "<C-r><C-w>")<CR>
-nnoremap <buffer> <Space><LocalLeader><LocalLeader>G<C-g> :silent T (javadoc "")<Left><Left>
+nnoremap <silent> <buffer> <LocalLeader>G<C-g> :T (clojure.java.javadoc/javadoc "<C-r><C-w>")<CR>
+nnoremap <silent> <buffer> <Space><LocalLeader><LocalLeader>G<C-g> :T (clojure.java.javadoc/javadoc "")<Left><Left>
 
 " ||
 " || Errors
