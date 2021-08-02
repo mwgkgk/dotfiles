@@ -6,7 +6,11 @@
 
 " Mon Aug  2 05:35:30 UTC 2021
 
-nnoremap <silent> <buffer> <Leader>r :T rdmd <C-r>=expand('%:p')<CR><CR>
+" Default flags recommended:
+" -de           show use of deprecated features as errors (halt compilation)
+" -w            warnings as errors (compilation will halt)
+" -unittest     compile in unit tests
+nnoremap <silent> <buffer> <Leader>r :T rdmd -de -w -unitteset <C-r>=expand('%:p')<CR><CR>
 
 " Mon Aug  2 05:50:00 UTC 2021
 
