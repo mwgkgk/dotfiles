@@ -78,7 +78,7 @@ nnoremap <Space><Leader> :T<Space>
 " || Do-thing
 " ||
 
-nnoremap <Leader>R :silent T do-thing<CR>
+" nnoremap <Leader>R :silent T do-thing<CR>
 
 " ||
 " || C-z and fg
