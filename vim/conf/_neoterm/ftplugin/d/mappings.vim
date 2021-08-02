@@ -10,7 +10,7 @@
 " -de           show use of deprecated features as errors (halt compilation)
 " -w            warnings as errors (compilation will halt)
 " -unittest     compile in unit tests
-nnoremap <silent> <buffer> <Leader>rr :T rdmd -de -w -unittest <C-r>=expand('%:p')<CR><CR>
+nnoremap <silent> <buffer> <Leader>r :T rdmd -de -w -unittest <C-r>=expand('%:p')<CR><CR>
 
 " Mon Aug  2 05:50:00 UTC 2021
 
