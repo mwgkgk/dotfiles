@@ -2,7 +2,7 @@
 " || Compiler control
 " ||
 
-# TODO function! DMap_SetCompiler(compiler)
+" TODO function! DMap_SetCompiler(compiler)
 
 " Mon Aug  2 05:35:30 UTC 2021
 
