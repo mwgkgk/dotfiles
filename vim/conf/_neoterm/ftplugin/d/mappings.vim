@@ -6,6 +6,10 @@
 
 nnoremap <silent> <buffer> <Leader>r :T rdmd <C-r>=expand('%:p')<CR><CR>
 
+" Mon Aug  2 05:50:00 UTC 2021
+
+nnoremap <silent> <buffer> <LocalLeader>dv :T dmd --version<CR>
+
 " ||
 " || REPL control
 " ||
