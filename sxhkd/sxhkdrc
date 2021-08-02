@@ -87,8 +87,11 @@ super + BackSpace
 super + i
 	zepp
 
-super + m
+super + control + m
 	motor
+
+super + m
+	firefox-roads
 
 super + apostrophe
 	druid
