@@ -35,226 +35,142 @@ endsnippet
 priority 0
 
 # ||
-# || Unsorted
+# || Modules
 # ||
 
-snippet imp "import (imp)" b
-import ${1:std.stdio};
+snippet i "import (imp)" b
+import ${0:std.stdio};
 endsnippet
 
-snippet pimp "public import (pimp)" b
-public import ${1:/*module*/};
+snippet pi "public import" b
+public import ${0:/*module*/};
 endsnippet
 
-snippet over "override (over)" b
-override ${1:/*function*/}
+# ||
+# || Functions
+# ||
+
+snippet r "return" w
+return ${0:/*value to return*/};
 endsnippet
 
-snippet al "alias (al)"
-alias ${1:/*orig*/} ${2:/*alias*/};
+# ||
+# || Values
+# ||
+
+snippet a "auto" b
+auto ${1:/*variable*/} = ${0:/*value*/};
 endsnippet
 
-snippet mixin "mixin (mixin)" b
-mixin ${1:/*mixed_in*/} ${2:/*name*/};
+snippet c "const" b
+const ${1:/*variable*/} = ${0:/*value*/};
 endsnippet
 
-snippet new "new (new)"
-new ${1}(${2});
+snippet siz "size_t" b
+size_t ${1:/*variable*/} = ${0:/*value*/};
 endsnippet
 
-snippet scpn "@safe const pure nothrow (scpn)"
-@safe const pure nothrow
-endsnippet
+# ||
+# || Conditionals
+# ||
 
-snippet spn "@safe pure nothrow (spn)"
-@safe pure nothrow
-endsnippet
-
-snippet cont "continue (cont)"
-continue;
-endsnippet
-
-snippet dis "@disable (dis)" b
-@disable ${1:/*method*/};
-endsnippet
-
-snippet pub "public (pub)" b
-public:
-    ${1:/*members*/}
-endsnippet
-
-snippet priv "private (priv)" b
-private:
-    ${1:/*members*/}
-endsnippet
-
-snippet prot "protected (prot)" b
-protected:
-    ${1:/*members*/}
-endsnippet
-
-snippet pack "package (pack)" b
-package:
-    ${1:/*members*/}
-endsnippet
-
-snippet ret "return (ret)"
-return ${1:/*value to return*/};
-endsnippet
-
-snippet auto "auto (auto)" b
-auto ${1:/*variable*/} = ${2:/*value*/};
-endsnippet
-
-snippet con "const (con)" b
-const ${1:/*variable*/} = ${2:/*value*/};
-endsnippet
-
-snippet siz "size_t (siz)" b
-size_t ${1:/*variable*/} = ${2:/*value*/};
-endsnippet
-
-snippet sup "super (sup)" b
-super(${1:/*args*/});
-endsnippet
-
-# Phobos
-
-snippet tup "tuple (tup)"
-tuple(${1:/*args*/})
-endsnippet
-
-snippet wr "writeln (wr)"
-writeln(${1:/*args*/});
-endsnippet
-
-snippet to "to (to)"
-to!(${1:/*type*/})(${2:/*arg*/})
-endsnippet
-
-snippet enf "enforce (enf)" b
-enforce(${1:/*condition*/},
-        new ${2}Exception(${3:/*args*/}));
-endsnippet
-
-# Branches
-
-snippet if "if .. (if)"
+snippet if "if" b
 if (${1:/*condition*/}) {
-    ${VISUAL}${0:/*code*/}
+    ${VISUAL}$0
 }
 endsnippet
 
-snippet ife "if .. else (ife)" b
+snippet ife "if else" b
 if (${1:/*condition*/}) {
     ${2:/*code*/}
 } else {
-    ${3:/*else*/}
+    ${0:/*else*/}
 }
 endsnippet
 
-snippet el "else (el)" b
-else
-{
-    ${VISUAL}${1:/*code*/}
+snippet /\b(else|els|el)/ "else (el)" wr
+else {
+    ${VISUAL}$0
 }
 endsnippet
 
-snippet elif "else if (elif)" b
-else if(${1:/*condition*/})
-{
-    ${VISUAL}${0:/*code*/}
+snippet elif "else if" w
+else if(${1:/*condition*/}) {
+    ${VISUAL}$0
 }
 endsnippet
 
-snippet sw "switch (sw)"
+snippet sw "switch"
 switch(${1:/*var*/})
 {
     case ${2:/*value*/}:
         ${3:/*code*/}
         break;
-    case ${4:/*value*/}:
-        ${5:/*code*/}
-        break;
-    ${7:/*more cases*/}
     default:
-        ${6:assert(false);}
+        ${0:assert(false);}
 }
 endsnippet
 
-snippet fsw "final switch (fsw)"
-switch(${1:/*var*/})
-{
-    case ${2:/*value*/}:
-        ${3:/*code*/}
-        break;
-    case ${4:/*value*/}:
-        ${5:/*code*/}
-        break;
-    ${7:/*more cases*/}
-}
-endsnippet
-
-snippet case "case (case)" b
+snippet case "case" b
 case ${1:/*value*/}:
-    ${2:/*code*/}
+    ${0:/*code*/}
     break;
 endsnippet
 
-snippet ?: "ternary operator (?:)"
-${1:/*condition*/} ? ${2:/*then*/} : ${3:/*else*/}$4
-endsnippet
+# ||
+# || Loops
+# ||
 
-# Loops
-
-snippet do "do while (do)" b
-do
-{
-    ${VISUAL}${2:/*code*/}
+snippet do "do while" b
+do {
+    ${VISUAL}$0
 } while(${1:/*condition*/});
 endsnippet
 
-snippet wh "while (wh)" b
+snippet wh "while" b
 while(${1:/*condition*/})
 {
-    ${VISUAL}${2:/*code*/}
+    ${VISUAL}$0
 }
 endsnippet
 
-snippet for "for (for)" b
+snippet for "for" b
 for (${4:size_t} ${2:i} = 0; $2 < ${1:count}; ${3:++$2})
 {
-    ${VISUAL}${0:/*code*/}
+    ${VISUAL}$0
 }
 endsnippet
 
-snippet forever "forever (forever)" b
+snippet for; "for(;;)" b
 for(;;)
 {
-    ${VISUAL}${0:/*code*/}
+    ${VISUAL}$0
 }
 endsnippet
 
-snippet fore "foreach (fore)"
+snippet /\b(foreach|fore)/ "foreach" wr
 foreach(${1:/*elem*/}; ${2:/*range*/})
 {
-    ${VISUAL}${3:/*code*/}
+    ${VISUAL}$0
 }
 endsnippet
 
 snippet forif "foreach if (forif)" b
 foreach(${1:/*elem*/}; ${2:/*range*/}) if(${3:/*condition*/})
 {
-    ${VISUAL}${4:/*code*/}
+    ${VISUAL}$0
 }
 endsnippet
 
-# Contracts
-snippet in "in contract (in)" b
+# ||
+# || Contracts
+# ||
+
+snippet in "in contract" b
 in
 {
     assert(${1:/*condition*/}, "${2:error message}");
-    ${3}
+    $0
 }
 body
 endsnippet
@@ -263,7 +179,7 @@ snippet out "out contract (out)" b
 out${1:(result)}
 {
     assert(${2:/*condition*/}, "${3:error message}");
-    ${4}
+    $0
 }
 body
 endsnippet
@@ -272,9 +188,13 @@ snippet inv "invariant (inv)" b
 invariant()
 {
     assert(${1:/*condition*/}, "${2:error message}");
-    ${3}
+    $0
 }
 endsnippet
+
+# ||
+# || Unsorted
+# ||
 
 # Functions (generic)
 
