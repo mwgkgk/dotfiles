@@ -1,4 +1,12 @@
 " ||
+" || Compiler control
+" ||
+
+" Mon Aug  2 05:35:30 UTC 2021
+
+nnoremap <silent> <buffer> <Leader>r :T rdmd <C-r>=expand('%:p')<CR><CR>
+
+" ||
 " || REPL control
 " ||
 
