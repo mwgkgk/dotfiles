@@ -7,11 +7,51 @@ snippet /^ *da(te)?/ "Date" rb
 $0
 endsnippet
 
+snippet da "implicit-dam-file-start" "snip.line == 0" e
+// `date-utc`
+
+import std.stdio;
+
+void main() {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet dd "dd-comment" b
+// `!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
+endsnippet
+
+priority -1
+
+snippet dd "dd-inline" w
+`!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
+endsnippet
+
+priority 0
+
+snippet dam "date, std, and main" b
+// `date-utc`
+
+import std.stdio;
+
+void main() {
+	${VISUAL}$0
+}
+endsnippet
+
 # ||
 # || Comments
 # ||
 
 snippet / "/" w
+// ${VISUAL}$0
+endsnippet
+
+snippet // "comment-//" w
+// ${VISUAL}$0
+endsnippet
+
+snippet ; "comment-generic" w
 // ${VISUAL}$0
 endsnippet
 
