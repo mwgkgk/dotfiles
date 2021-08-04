@@ -175,36 +175,31 @@ do {
 endsnippet
 
 snippet wh "while" b
-while(${1:/*condition*/})
-{
+while(${1:/*condition*/}) {
     ${VISUAL}$0
 }
 endsnippet
 
 snippet for "for" b
-for (${4:size_t} ${2:i} = 0; $2 < ${1:count}; ${3:++$2})
-{
+for (${4:size_t} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
     ${VISUAL}$0
 }
 endsnippet
 
 snippet for; "for(;;)" b
-for(;;)
-{
+for(;;) {
     ${VISUAL}$0
 }
 endsnippet
 
 snippet /\b(foreach|fore)/ "foreach" wr
-foreach(${1:/*elem*/}; ${2:/*range*/})
-{
+foreach(${1:/*elem*/}; ${2:/*range*/}) {
     ${VISUAL}$0
 }
 endsnippet
 
 snippet forif "foreach if (forif)" b
-foreach(${1:/*elem*/}; ${2:/*range*/}) if(${3:/*condition*/})
-{
+foreach(${1:/*elem*/}; ${2:/*range*/}) if(${3:/*condition*/}) {
     ${VISUAL}$0
 }
 endsnippet
@@ -214,8 +209,7 @@ endsnippet
 # ||
 
 snippet in "in contract" b
-in
-{
+in {
     assert(${1:/*condition*/}, "${2:error message}");
     $0
 }
@@ -223,8 +217,7 @@ body
 endsnippet
 
 snippet out "out contract (out)" b
-out${1:(result)}
-{
+out${1:(result)} {
     assert(${2:/*condition*/}, "${3:error message}");
     $0
 }
@@ -232,8 +225,7 @@ body
 endsnippet
 
 snippet inv "invariant (inv)" b
-invariant()
-{
+invariant() {
     assert(${1:/*condition*/}, "${2:error message}");
     $0
 }
