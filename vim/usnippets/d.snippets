@@ -90,6 +90,13 @@ endsnippet
 # || Functions
 # ||
 
+snippet f "function definition (fun)"
+${3:void} ${1:main}($2) {
+	${VISUAL}$0
+}
+endsnippet
+
+
 snippet r "return" w
 return ${0:/*value to return*/};
 endsnippet
@@ -243,70 +250,6 @@ endsnippet
 # ||
 # || Unsorted
 # ||
-
-# Functions (generic)
-
-snippet f "function definition (fun)"
-${1:void} ${2:/*function name*/}(${3:/*args*/}) ${4:@safe pure nothrow} {
-    ${VISUAL}${5:/*code*/}
-}
-endsnippet
-
-snippet void "void function definition (void)"
-void ${1:/*function name*/}(${2:/*args*/}) ${3:@safe pure nothrow}
-{
-    ${VISUAL}${4:/*code*/}
-}
-endsnippet
-
-snippet this "ctor (this)" w
-this(${1:/*args*/})
-{
-    ${VISUAL}${2:/*code*/}
-}
-endsnippet
-
-snippet get "getter property (get)" !
-@property ${1:/*type*/} ${2:/*member_name*/}() const pure nothrow {return ${3:$2_};}
-endsnippet
-
-snippet set "setter property (set)" !
-@property void ${1:/*member_name*/}(${2:/*type*/} rhs) pure nothrow {${3:$1_} = rhs;}
-endsnippet
-
-# Functions (concrete)
-
-snippet main "Main" b
-void main(string[] args) @safe {
-	args = args[1 .. $];
-
-	${VISUAL}${0: /*code*/}
-}
-endsnippet
-
-# Mixins
-
-snippet signal "signal (signal)" b
-mixin Signal!(${1:/*args*/}) ${2:/*name*/};
-endsnippet
-
-# Scope
-
-snippet scope "scope (scope)" b
-scope(${1:exit})
-{
-    ${VISUAL}${2:/*code*/}
-}
-endsnippet
-
-# With
-
-snippet with "with (with)"
-with(${1})
-{
-    ${VISUAL}${2:/*code*/}
-}
-endsnippet
 
 # Exception handling
 
