@@ -74,7 +74,7 @@
 " let s:static_colo = 'orbital'
 " let s:static_colo = 'sceaduhelm'
 
-" let s:static_colo = 'kalisi-dark'
+let s:static_colo = 'kalisi-dark'
 
 " let s:static_colo = 'apprentice'
 " let s:static_colo = 'disciple'
@@ -89,7 +89,7 @@
 " let s:static_colo = 'blue'
 
 " let s:static_colo = 'seoul256-light'
-let s:static_colo = 'seoul256-dark'
+" let s:static_colo = 'seoul256-dark'
 
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
