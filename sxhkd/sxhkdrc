@@ -46,7 +46,7 @@ super + y
 	firefox-mwgkgk
 
 super + z
-	rogue
+	spyglass
 
 super + 8
 	firefox-roots
@@ -79,10 +79,10 @@ super + space
 	march
 
 super + BackSpace
-	rogue
+	spyglass
 
 # super + z
-# 	rogue
+# 	spyglass
 
 super + i
 	zepp
