@@ -234,12 +234,20 @@ endsnippet
 # || Printing
 # ||
 
-snippet w "write" w
+snippet wr "write" w
 write(${VISUAL}$0);
 endsnippet
 
-snippet p "writeln" w
+snippet w "writeln" w
 writeln(${VISUAL}$0);
+endsnippet
+
+snippet pr "print words" w
+write("${VISUAL}$0");
+endsnippet
+
+snippet p "println words" w
+writeln("${VISUAL}$0");
 endsnippet
 
 # ||
