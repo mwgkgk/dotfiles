@@ -103,9 +103,9 @@ let s:static_colo = 'kalisi-dark'
 " let s:static_colo = 'nighted'
 
 " let s:static_colo = 'jellybeans'
-let s:static_colo = 'ufo'
+" let s:static_colo = 'ufo'
 
-" let s:static_colo = 'lucius-light'
+let s:static_colo = 'lucius-light'
 " let s:static_colo = 'hybrid-light'
 
 " let s:static_colo = 'lucius-dark'
