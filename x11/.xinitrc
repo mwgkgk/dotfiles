@@ -51,8 +51,9 @@ sxhkd &
 
 # hulk-init &
 
-# while true ; do
-#   date_local=$(date +"%R %a, %b %d")
+while true ; do
+  date_local=$(date +"%R")
+  # date_local=$(date +"%R %a, %b %d")
   # date_est=$(TZ=US/Eastern date +" %a, %b %d %R" | xargs)
   # date_pst=$(TZ=US/Pacific date +" %a, %b %d %R" | xargs)
 
@@ -87,15 +88,16 @@ sxhkd &
   # fi
 
   # xsetroot -name "$mood$mes_more$mes$commits$quake$date_pst  $date_local"
-  # xsetroot -name "$date_local"
+  xsetroot -name "$date_local"
   # sleep 1
-# done &
+  sleep 10
+done &
 
-if test -f "$HOME/.xsetroot-message"; then
-    xsetroot -name "$(cat ~/.xsetroot-message | tr -d '\n')"
-else
-    xsetroot -name "workout"
-fi
+# if test -f "$HOME/.xsetroot-message"; then
+#     xsetroot -name "$(cat ~/.xsetroot-message | tr -d '\n')"
+# else
+#     xsetroot -name "*"
+# fi
 
 while true; do
   # Log stderror to a file 
