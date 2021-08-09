@@ -84,6 +84,7 @@ nnoremap <silent> <buffer> <Space><LocalLeader><LocalLeader>G<C-g> :T (clojure.j
 
 " Print stack trace
 nnoremap <buffer> <LocalLeader>s :silent T (pst)<CR>
+" TODO Also: *e? Possibly *1, *2, *3.
 
 " ||
 " || Repl control
