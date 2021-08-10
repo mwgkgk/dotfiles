@@ -87,11 +87,8 @@ super + BackSpace
 super + i
 	zepp
 
-super + control + m
-	motor
-
 super + m
-	firefox-super-m
+	motor
 
 super + apostrophe
 	junglebook
