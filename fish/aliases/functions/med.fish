@@ -1,3 +1,3 @@
 function med
-  g med $argv
+  v media
 end
