@@ -118,10 +118,6 @@ verbose_link "$DOTFILES/gtk/gtk-3.0/settings.ini" ~/.config/gtk-3.0/settings.ini
 # StumpWM
 verbose_link "$DOTFILES/stumpwm/" ~/.config/stumpwm
 
-# Sxhkd
-mkdir -p ~/.config/sxhkd
-verbose_link "$DOTFILES/sxhkd/sxhkdrc" ~/.config/sxhkd/sxhkdrc
-
 # Rofi
 mkdir -p ~/.config/rofi
 verbose_link "$DOTFILES/rofi/config" ~/.config/rofi/config
