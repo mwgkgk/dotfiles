@@ -351,6 +351,12 @@ function bind_esd
   end
 end
 
+function bind_ecd
+    fd --type file --hidden --follow --exclude .git "" ~/pants/ | fzf +m --height 15 --reverse | read -l result
+    and commandline -- "v $result" ;and commandline -f execute
+    commandline -f repaint
+end
+
 function bind_ev
     fd --type file --hidden --follow --exclude .git "" ~/.vim/ | fzf +m --height 15 --reverse | read -l result
     and commandline -- "v $result" ;and commandline -f execute
@@ -509,6 +515,8 @@ function fish_user_key_bindings
     bind ä bind_ed
     # M-S-d to fzf through dotfiles in ~/, or kill-word
     bind Ä bind_esd
+    # M-C-d to fzf through ~/pants
+    bind  bind_ecd
     # M-v to fzf-vim ~/.vim
     bind ö bind_ev
     # M-b to git branch or backward-word
