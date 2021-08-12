@@ -40,7 +40,9 @@ pulseaudio --start && alsa-unmute &
 export SXHKD_SHELL='/bin/dash'
 
 # Simple X Hotkey Daemon
-sxhkd &
+# sxhkd [options] [additional config]
+# sxhkd -c [main config] [additional config]
+sxhkd -c ~/dot/sxhkd/sxhkdrc ~/pants/sxhkd/sxhkdrc &
 
 # gnumeric ~/ink/ref/gnumeric/mars.gnumeric &
 
