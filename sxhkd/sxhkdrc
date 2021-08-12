@@ -67,7 +67,7 @@ super + bracketleft
 	silk
 
 super + comma
-	hulk
+	bridge
 
 control + slash
 	xdotool key Caps_Lock
