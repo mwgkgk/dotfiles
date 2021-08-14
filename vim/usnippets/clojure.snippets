@@ -172,13 +172,25 @@ endsnippet
 # ||
 
 snippet "(\()?\bpr" "print" r
-(println ${0:"$1"}`!p
+(print ${0:"${1:${VISUAL}}"}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bp" "println" r
-(println ${0:"$1"}`!p
+(println ${0:"${1:${VISUAL}}"}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bwr" "print a symbol" r
+(print ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bw" "println a symbol" r
+(println ${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
