@@ -69,8 +69,8 @@ nnoremap <silent> <buffer> <LocalLeader><C-g> :T (clojure.pprint/pprint (meta <C
 nnoremap <silent> <buffer> <Space><LocalLeader><LocalLeader><C-g> :T (clojure.pprint/pprint (meta ))<Left><Left>
 
 " Apropos
-nnoremap <silent> <buffer> <Leader><C-g> :T (clojure.repl/find-doc "<C-r><C-w>")<CR>
-nnoremap <silent> <buffer> <Space><LocalLeader><Leader><C-g> :T (clojure.repl/find-doc "")<Left><Left>
+nnoremap <silent> <buffer> <Leader><C-g> :T (clojure.repl/find-doc #"(?i)<C-r><C-w>")<CR>
+nnoremap <silent> <buffer> <Space><LocalLeader><Leader><C-g> :T (clojure.repl/find-doc #"(?i)"")<Left><Left>
 " Clojuredocs is <LocalLeader>g<C-g>
 " in ~/.vim/conf/_open-browser.vim/ftplugin/clojure/mappings.vim
 
