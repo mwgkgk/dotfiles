@@ -171,6 +171,12 @@ endsnippet
 # || Print
 # ||
 
+snippet "(\()?\bpr" "print" r
+(println ${0:"$1"}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "(\()?\bp" "println" r
 (println ${0:"$1"}`!p
 if match.group(1) is None:
