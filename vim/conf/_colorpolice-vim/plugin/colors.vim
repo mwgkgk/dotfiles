@@ -74,7 +74,7 @@
 " let s:static_colo = 'orbital'
 " let s:static_colo = 'sceaduhelm'
 
-let s:static_colo = 'kalisi-dark'
+" let s:static_colo = 'kalisi-dark'
 
 " let s:static_colo = 'apprentice'
 " let s:static_colo = 'disciple'
@@ -109,11 +109,13 @@ let s:static_colo = 'kalisi-dark'
 " let s:static_colo = 'hybrid-light'
 
 " let s:static_colo = 'lucius-dark'
-let s:static_colo = 'luciusmod'
+" let s:static_colo = 'luciusmod'
 
 " let s:static_colo = 'morning'
 
 " let s:static_colo = 'gruvbox-dark'
+let s:static_colo = 'miramare'
+
 
 " gui {{{
 " let s:gui_colo = 'freya'
