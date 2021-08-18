@@ -2,7 +2,9 @@
 # || Path & umask
 # ||
 
-set -x PATH ~/bin /usr/local/bin ~/.local/bin ~/.cargo/bin ~/.node_modules/bin ~/go/bin ~/buns ~/.nimble/bin $PATH
+set -x PATH ~/bin /usr/local/bin ~/.local/bin ~/.cargo/bin ~/.node_modules/bin ~/go/bin ~/buns ~/.nimble/bin ~/pkg/sbin ~/pkg/bin $PATH
+
+set -x MANPATH ~/pkg/man $MANPATH
 
 umask 0007
 
