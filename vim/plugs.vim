@@ -1207,8 +1207,13 @@ Plug 'hellerve/carp-vim'
 "     Plug 'tpope/vim-fireplace', { 'for' : 'clojure' }
 " endif
 
-Plug '~/.vim/conf/_vim-cljfmt/', { 'for' : 'clojure' }
-Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
+" This uses fireplace connection
+" Plug '~/.vim/conf/_vim-cljfmt/', { 'for' : 'clojure' }
+" Plug 'venantius/vim-cljfmt', { 'for' : 'clojure' }
+
+" Uses github.com/cespare/goclj/cljfmt
+" g:cljfmt_on_save is 1 by default.
+Plug 'dmac/vim-cljfmt'
 
 " Racket
 Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
