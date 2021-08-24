@@ -85,8 +85,18 @@ endsnippet
 # || Atoms
 # ||
 
-snippet "(\()?\bs" "swap!" rw
+snippet "(\()?\bsw" "swap!" rw
 (swap! $1 ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
+# || Strings
+# ||
+
+snippet "(\()?\bs" "clojure.string/" rw
+(clojure.string/${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
