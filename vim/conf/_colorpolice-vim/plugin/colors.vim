@@ -93,8 +93,8 @@
 
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
-" let s:static_colo = 'autumn'
-let s:static_colo = 'autumnleaf'
+let s:static_colo = 'autumn'
+" let s:static_colo = 'autumnleaf'
 " let s:static_colo = 'acme'
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
