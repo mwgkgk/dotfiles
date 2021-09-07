@@ -34,7 +34,7 @@
 " let s:static_colo = 'shenzhen'
 " let s:static_colo = 'busan'
 
-" let s:static_colo = 'gentooish'
+let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
@@ -93,7 +93,7 @@
 
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
-let s:static_colo = 'autumn'
+" let s:static_colo = 'autumn'
 " let s:static_colo = 'autumnleaf'
 " let s:static_colo = 'acme'
 " let s:static_colo = 'fogbell_light'
