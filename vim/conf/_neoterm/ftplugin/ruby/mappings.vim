@@ -2,8 +2,12 @@
 " || REPL control
 " ||
 
+" Run script
+nnoremap <silent> <buffer> <Leader>r :T ruby <C-r>=expand('%')<CR><CR>
+
 " Run repl
-nnoremap <buffer> <silent> <Leader>r :T irb<CR>
+nnoremap <buffer> <silent> <LocalLeader>gg :T irb<CR>
+nnoremap <buffer> <silent> <LocalLeader>r :T irb<CR>
 
 " Rake
 nnoremap <buffer> <silent> <LocalLeader>b :T rake<CR>
