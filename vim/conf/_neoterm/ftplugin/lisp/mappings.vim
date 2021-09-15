@@ -61,4 +61,4 @@ nnoremap <buffer> <LocalLeader>9 :silent T 9<CR>
 nnoremap <buffer> <LocalLeader>gs :silent T sbcl<CR>
 nnoremap <buffer> <LocalLeader>ge :silent T ecl<CR>
 nnoremap <buffer> <LocalLeader>gc :silent T ccl<CR>
-nnoremap <buffer> <LocalLeader>gg :silent T ccl<CR>
+nnoremap <buffer> <LocalLeader>gg :silent T ecl<CR>

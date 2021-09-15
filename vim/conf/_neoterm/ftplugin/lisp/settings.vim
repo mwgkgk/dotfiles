@@ -1,3 +1,3 @@
-if executable('ccl')
-  call neoterm#repl#set('ccl')
+if executable('ecl')
+  call neoterm#repl#set('ecl')
 endif
