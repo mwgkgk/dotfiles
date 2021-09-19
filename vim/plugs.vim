@@ -1145,6 +1145,9 @@ Plug 'mattn/vim-lsp-settings', { 'for' : 'zig' }
 " let g:polyglot_disabled = ['markdown', 'racket']
 " }}}
 
+" Texinfo
+Plug 'HiPhish/info.vim'
+
 " Golang
 " Plug '~/.vim/conf/_vim-go/'
 " Plug 'fatih/vim-go', { 'for' : 'go' }
