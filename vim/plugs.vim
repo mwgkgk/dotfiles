@@ -625,8 +625,8 @@ let g:cycle_default_groups += [
 
 " {{{
 
-" Plug '~/.vim/conf/_lexima.vim/'
-" Plug 'cohama/lexima.vim'
+Plug '~/.vim/conf/_lexima.vim/', { 'for' : 'factor' }
+Plug 'cohama/lexima.vim', { 'for' : 'factor' }
 
 " }}}
 
