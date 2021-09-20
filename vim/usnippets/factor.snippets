@@ -75,3 +75,29 @@ if not snip.v.text:
 `}
 */ ! `date-jiv`
 endsnippet
+
+# ||
+# || Fallbacks
+# ||
+
+priority -3
+
+snippet /^([\!:\w=\-?\.$><\[\]]+)/ "expand-any-word-b" br
+: `!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` ${VISUAL}$0
+endsnippet
+
+snippet /^: ([\!:\w=\-?\.$><\[\]]+)\s*/ "double-expand-any-word-b" br
+: `!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)` ( $1 )$0
+endsnippet
+
+snippet /\)\s*$/ "triple-expand-comment-to-;" wr
+)
+	${VISUAL}$0
+;
+endsnippet
+
+priority 0
