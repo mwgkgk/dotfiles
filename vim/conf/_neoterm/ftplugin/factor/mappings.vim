@@ -1,3 +1,6 @@
+" Open repl
+nnoremap <buffer> <LocalLeader>gg :silent T factor-repl<CR>
+
 " <C-g> to help word
 nnoremap <buffer> <C-g> :silent T \ <C-r><C-a> help<CR>
 
