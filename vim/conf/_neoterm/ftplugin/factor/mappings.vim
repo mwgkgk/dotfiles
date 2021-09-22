@@ -37,6 +37,10 @@ xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
 
+" Send word under cursor
+nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
+nnoremap <silent> <buffer> <C-x><C-x> :silent T <C-r><C-w><CR>
+
 " ||
 " || Docs
 " ||
