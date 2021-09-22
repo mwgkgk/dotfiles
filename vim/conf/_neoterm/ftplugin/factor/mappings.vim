@@ -1,11 +1,9 @@
+" ||
+" || Repl control
+" ||
+
 " Open repl
 nnoremap <buffer> <LocalLeader>gg :silent T factor-repl<CR>
-
-" <C-g> to help word
-nnoremap <buffer> <C-g> :silent T \ <C-r><C-a> help<CR>
-
-" g<C-g> to see word
-nnoremap <buffer> g<C-g> :silent T \ <C-r><C-a> see<CR>
 
 " Restarts
 nnoremap <buffer> <LocalLeader>1 :silent T :1<CR>
@@ -20,21 +18,8 @@ nnoremap <buffer> <LocalLeader>e :silent T :errors<CR>
 " Clear
 nnoremap <buffer> <LocalLeader>c :silent T clear<CR>
 
-" Drop
-nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
-
-" Dup
-nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
-
 " Reload
 nnoremap <buffer> <LocalLeader>r :silent T "<C-r>=expand('%:t:r')<CR>" reload<CR>
-
-" USE
-nnoremap <buffer> <LocalLeader>u :silent T USE: <C-r>=expand('%:t:r')<CR><CR>
-
-" Test
-" TODO %s the -tests$ away
-nnoremap <buffer> <LocalLeader>t :silent T "<C-r>=expand('%:t:r')<CR>" test<CR>
 
 " ||
 " || Send
@@ -51,3 +36,38 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
+
+" ||
+" || Docs
+" ||
+
+" <C-g> to help word
+nnoremap <buffer> <C-g> :silent T \ <C-r><C-a> help<CR>
+
+" g<C-g> to see word
+nnoremap <buffer> g<C-g> :silent T \ <C-r><C-a> see<CR>
+
+" ||
+" || Stack
+" ||
+
+" Drop
+nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
+
+" Dup
+nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
+
+" ||
+" || Modules
+" ||
+
+" USE
+nnoremap <buffer> <LocalLeader>u :silent T USE: <C-r>=expand('%:t:r')<CR><CR>
+
+" ||
+" || Tests
+" ||
+
+" Test
+" TODO %s the -tests$ away
+nnoremap <buffer> <LocalLeader>t :silent T "<C-r>=expand('%:t:r')<CR>" test<CR>
