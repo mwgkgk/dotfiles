@@ -2,8 +2,10 @@
 
 (in-package :stumpwm)
 
+#+nil
 (ql:quickload :vlime)
 
+#+nil
 (when (not (boundp '*vlime-loaded*))
   (vlime:main :interface #(127 0 0 1)
               ;; TODO pick a free port automatically and use :port-file
