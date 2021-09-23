@@ -6,6 +6,9 @@ super + F1
 super + F2
 	tower
 
+super + F3
+	hobbit
+
 super + F4
 	basso
 
