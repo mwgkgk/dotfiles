@@ -34,7 +34,7 @@ super + t
 	temple
 
 super + slash
-	temple
+	march
 
 super + period
 	brahmin
@@ -82,7 +82,7 @@ control + semicolon
 	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
 
 super + space
-	march
+	temple
 
 super + BackSpace
 	spyglass
