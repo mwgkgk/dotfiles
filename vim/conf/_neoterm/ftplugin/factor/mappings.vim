@@ -50,6 +50,9 @@ nnoremap <buffer> <C-g><C-g> :silent T \ <C-r><C-a> help<CR>
 nnoremap <buffer> <C-g>s :silent T \ <C-r><C-a> see<CR>
 nnoremap <buffer> <C-g>g :silent T \ <C-r><C-a> see<CR>
 
+nnoremap <buffer> <C-g>u :silent T \ <C-r><C-a> usage.<CR>
+nnoremap <buffer> <C-g>U :silent T \ <C-r><C-a> uses .<CR>
+
 " ||
 " || Stack
 " ||
