@@ -6,3 +6,5 @@
 " Set up <C-c> as wide-bracket-surround-motion
 " Haha: unforch. This has to use <expr> / a function wrapper
 " nmap <buffer> <C-c> <Esc>ys.......
+
+nmap <buffer> <C-c><C-c> yss[
