@@ -110,6 +110,11 @@ super + g
 super + Delete
 	burrow ~/.burrow/leader/c-files
 
+# Factor
+
+super + s
+	factor-gui
+
 # Paste
 
 # super + ctrl + v
