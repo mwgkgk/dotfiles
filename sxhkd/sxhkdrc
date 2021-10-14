@@ -113,7 +113,10 @@ super + Delete
 # Factor
 
 super + s
-	factor-gui
+	factor-listener
+
+super + control + s
+	factor-browser
 
 # Paste
 
