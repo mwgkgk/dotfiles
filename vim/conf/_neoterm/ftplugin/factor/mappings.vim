@@ -62,6 +62,9 @@ nnoremap <buffer> <C-g>U :silent T \ <C-r><C-a> uses .<CR>
 " Drop
 nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
 
+" Dot
+nnoremap <buffer> <LocalLeader>. :silent T .<CR>
+
 " Dup
 nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
 
