@@ -115,7 +115,7 @@ super + Delete
 super + s
 	factor-listener
 
-super + control + s
+super + shift + s
 	factor-browser
 
 # Paste
