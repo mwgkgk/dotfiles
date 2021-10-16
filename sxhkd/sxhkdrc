@@ -42,9 +42,6 @@ super + period
 super + shift + i
 	fox
 
-super + u
-	firefox-super-u
-
 super + 0
 	firefox-default
 
@@ -115,7 +112,7 @@ super + Delete
 super + s
 	factor-listener
 
-super + shift + s
+super + u
 	factor-browser
 
 # Paste
