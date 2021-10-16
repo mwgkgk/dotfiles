@@ -65,6 +65,9 @@ nnoremap <buffer> <LocalLeader>d :silent T drop<CR>
 " Dot
 nnoremap <buffer> <LocalLeader>. :silent T .<CR>
 
+" Nip
+nnoremap <buffer> <LocalLeader>n :silent T nip<CR>
+
 " Dup
 nnoremap <buffer> <LocalLeader>D :silent T dup<CR>
 
