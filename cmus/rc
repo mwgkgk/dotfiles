@@ -7,6 +7,7 @@ bind -f common q :q
 bind -f common J :vol -5%
 bind -f common K :vol +5%
 bind -f common * :win-toggle
+bind -f common space  :player-pause
 
 set output_plugin=alsa
 set dsp.alsa.device=default
