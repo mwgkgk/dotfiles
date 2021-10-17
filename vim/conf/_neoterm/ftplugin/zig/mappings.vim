@@ -8,6 +8,9 @@ nnoremap <buffer> <LocalLeader>r :silent T zig run <C-r>=expand('%')<CR><CR>
 " Zig build:
 nnoremap <buffer> <LocalLeader>b :silent T zig build<CR>
 
+" Version:
+nnoremap <buffer> <LocalLeader>v :silent T zig version<CR>
+
 " Don't send specific lines for now.
 nnoremap <buffer> X <Nop>
 nnoremap <buffer> <Leader>x <Nop>
