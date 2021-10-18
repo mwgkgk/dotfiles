@@ -1181,7 +1181,7 @@ Plug 'stewy33/mercury-vim'
 Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 
 " Factor
-Plug '~/.ghq/github.com/factor/factor/misc/vim/'
+" Plug '~/.ghq/github.com/factor/factor/misc/vim/'
 
 " Smalltalk
 Plug 'davidbalbert/vim-io'
