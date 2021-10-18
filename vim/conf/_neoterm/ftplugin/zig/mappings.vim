@@ -6,6 +6,7 @@ nnoremap <buffer> <Leader>r :silent T zig run <C-r>=expand('%')<CR><CR>
 nnoremap <buffer> <LocalLeader>r :silent T zig run <C-r>=expand('%')<CR><CR>
 
 " Zig build:
+nnoremap <buffer> <Leader>f :silent T zig build<CR>
 nnoremap <buffer> <LocalLeader>b :silent T zig build<CR>
 
 " Version:
