@@ -1300,7 +1300,7 @@ Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' }
 Plug 'mwgkgk/vim-textobj-elixir', { 'for' : 'elixir' }
 
 " Fsharp
-Plug 'fsharp/vim-fsharp'
+" Plug 'fsharp/vim-fsharp'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
