@@ -82,7 +82,7 @@ control + semicolon
 	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
 
 super + space
-	temple
+	march
 
 super + BackSpace
 	spyglass
