@@ -4,7 +4,7 @@ let g:fzf_command_prefix = 'Fzf'
 " https://github.com/junegunn/fzf.vim/issues/1298
 " let g:fzf_layout = { 'down': '~20%' }
 
-let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 0.6 } }
+let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.6 } }
 
 let g:fzf_action = {
             \ 'ctrl-t': 'tab split',
