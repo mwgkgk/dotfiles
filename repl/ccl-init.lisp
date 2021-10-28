@@ -85,3 +85,9 @@
 ;;; Utils
 (ql:quickload :craftsperson)
 (use-package :craftsperson)
+
+;;; *
+;;; * CCL Config
+;;; *
+
+(setf *quit-on-eof* t)
