@@ -22,7 +22,7 @@
 " let s:static_colo = 'druid'
 " let s:static_colo = 'jellyfish'
 
-" let s:static_colo = 'farout'
+let s:static_colo = 'farout'
 " let s:static_colo = 'fahrenheit'
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
@@ -50,7 +50,7 @@
 " let s:static_colo = 'lecture'
 " let s:static_colo = 'lecture-dark'
 " let s:static_colo = 'belf'
-let s:static_colo = 'thief'
+" let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
 
