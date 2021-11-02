@@ -1302,6 +1302,9 @@ Plug 'mwgkgk/vim-textobj-elixir', { 'for' : 'elixir' }
 " Fsharp
 " Plug 'fsharp/vim-fsharp'
 
+" OCaml
+set runtimepath^="$HOME/.opam/cs3110-2021fa/share/ocp-indent/vim"
+
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for' : 'haskell' }
 " Plug 'eagletmt/ghcmod-vim', { 'for' : 'haskell' }
