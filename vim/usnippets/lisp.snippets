@@ -677,12 +677,13 @@ endsnippet
 # || Expand whitespace
 # ||
 
+# Implicit e:
 # Converted to double-stage because of line-end whitespace indent cursor bug
-snippet /^(\s+)/ "expand-whitespace" r
-`!p
-if match.group(1) is not None:
-    snip.rv = match.group(1)`e$0
-endsnippet
+# snippet /^(\s+)/ "expand-whitespace" r
+# `!p
+# if match.group(1) is not None:
+#     snip.rv = match.group(1)`e$0
+# endsnippet
 
 # ||
 # || Fallbacks
