@@ -88,7 +88,7 @@ endsnippet
 # || Strings
 # ||
 
-snippet P "path" w
+snippet p "path" w
 #P"${1:~/${2:shop/${3:core/${4:colony/${5:colony-cl/${6:src/$0}}}}}}"
 endsnippet
 
@@ -497,9 +497,9 @@ if match.group(1) is None:
 endsnippet
 
 # Python's \b fucks with dashes yikes.
-snippet p "print" w
-(format ${1:t} "${0:~A}~%" ${2:${VISUAL}})
-endsnippet
+# snippet p "print" w
+# (format ${1:t} "${0:~A}~%" ${2:${VISUAL}})
+# endsnippet
 
 snippet { "{" i
 ~{${0:~A${VISUAL}}~}
