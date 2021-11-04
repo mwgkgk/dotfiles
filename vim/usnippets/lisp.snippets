@@ -96,7 +96,7 @@ endsnippet
 # || Imports & Packages
 # ||
 
-snippet /\b(defpackage|defpac|defpkg|defp|pkg|package|pack|pac)/ "defpac" wr
+snippet /\b(defpackage|defpac|defpkg|pkg|package|pack|pac)/ "defpac" wr
 (defpackage ${1:name}
 	(:use #:cl))
 endsnippet
@@ -160,7 +160,7 @@ endsnippet
 # || Variables
 # ||
 
-snippet "(\()?\b(defpar|defparam|defparameter|par|param|dp)" "defparameter" rw
+snippet "(\()?\b(defpar|defparam|defparameter|defp|par|param|dp)" "defparameter" rw
 (defparameter *$1*
 	${0:nil}`!p
 if match.group(1) is None:
