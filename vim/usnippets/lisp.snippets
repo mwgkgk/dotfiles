@@ -89,7 +89,9 @@ endsnippet
 # ||
 
 snippet p "path" w
-#P"${1:~/${2:shop/${3:core/${4:colony/${5:colony-cl/${6:src/$0}}}}}}"
+#P"`!p
+if not snip.v.text:
+	snip.rv = "~/"`$0"
 endsnippet
 
 # ||
