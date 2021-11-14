@@ -111,8 +111,10 @@ endsnippet
 # || Print
 # ||
 
-snippet p "p" b
-(print
+snippet "(\()?\bp" "print" rw
+(print ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 # ||
