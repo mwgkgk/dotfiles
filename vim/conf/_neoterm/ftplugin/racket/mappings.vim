@@ -1,4 +1,10 @@
 " ||
+" || Repl
+" ||
+
+nnoremap <buffer> <LocalLeader>gg :silent above T racket<CR>
+
+" ||
 " || Eval
 " ||
 
