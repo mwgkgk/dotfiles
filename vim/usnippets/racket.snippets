@@ -54,16 +54,14 @@ ${VISUAL}$0
 endsnippet
 
 # ||
-# || Headers
+# || Modules
 # ||
 
+# Reason it's defined like this is to distinguish from lambda which doesn't
+# occur at top level.
 snippet /^l/ "#lang" br
 #lang ${0:typed/racket}
 endsnippet
-
-# ||
-# || Modules
-# ||
 
 snippet "(\()?\br" "require" rw
 (require $0`!p
