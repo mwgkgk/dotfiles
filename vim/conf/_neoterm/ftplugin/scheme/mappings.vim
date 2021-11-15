@@ -2,7 +2,8 @@
 " || Opening a repl
 " ||
 
-nnoremap <buffer> <LocalLeader>r :leftabove vert T scheme<CR>
+" Not for now
+" nnoremap <buffer> <LocalLeader>r :T scheme<CR>
 
 " ||
 " || Load file
