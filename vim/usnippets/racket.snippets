@@ -175,7 +175,8 @@ priority 0
 # || Basement
 # ||
 
-snippet /^$/ "basement-implicit" r
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
 #;
 (when #f
 	${VISUAL}${0:`!p
