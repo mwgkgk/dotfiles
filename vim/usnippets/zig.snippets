@@ -41,16 +41,6 @@ pub fn main() void {
 }
 endsnippet
 
-snippet dat "date and test" b
-// `date-utc`
-
-const std = @import("std")
-
-test "$1" {
-	${VISUAL}$0
-}
-endsnippet
-
 # ||
 # || Imports
 # ||
@@ -192,17 +182,10 @@ endsnippet
 # ||
 
 snippet t "test" b
-test "$1" {
+test {
 	${VISUAL}$0
 }
 endsnippet
-
-# If line above is empty, test:
-# snippet /^$/ "test-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-# test "${1:BASEMENT/`date-jiv`}" {
-# 	${VISUAL}$0
-# }
-# endsnippet
 
 snippet a "assert" b
 assert(${VISUAL}$0);
