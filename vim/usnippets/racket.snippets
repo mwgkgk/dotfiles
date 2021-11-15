@@ -177,11 +177,11 @@ priority 0
 
 snippet /^$/ "basement-implicit" r
 #;
-(quote
+(when #f
 	${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = "#f"`}
-	null)
+	null) ; `!v system('date-jiv | tr -d "\n"')`
 endsnippet
 
 # ||
