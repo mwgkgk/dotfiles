@@ -531,10 +531,12 @@ let g:VM_maps['Find Subword Under'] = 'L'
 
 Plug 'bootleq/vim-cycle' " {{{
 let g:cycle_no_mappings = 1
-nmap <silent> <C-A><C-n> <Plug>CycleNext
-nmap <silent> <C-A><C-p> <Plug>CyclePrev
-vmap <silent> <C-A><C-n> <Plug>CycleNext
-vmap <silent> <C-A><C-p> <Plug>CyclePrev
+nmap <silent> <C-a><C-a> <Plug>CycleNext
+vmap <silent> <C-a><C-a> <Plug>CycleNext
+nmap <silent> <C-a><C-n> <Plug>CycleNext
+nmap <silent> <C-a><C-p> <Plug>CyclePrev
+vmap <silent> <C-a><C-n> <Plug>CycleNext
+vmap <silent> <C-a><C-p> <Plug>CyclePrev
 noremap <silent> <Plug>CycleFallbackNext <C-A><C-n>
 noremap <silent> <Plug>CycleFallbackPrev <C-A><C-p>
 
