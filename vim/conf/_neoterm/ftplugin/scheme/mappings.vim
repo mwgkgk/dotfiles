@@ -2,8 +2,7 @@
 " || Opening a repl
 " ||
 
-" Not for now
-" nnoremap <buffer> <LocalLeader>r :T scheme<CR>
+nnoremap <buffer> <LocalLeader>gg :silent above T gosh<CR>
 
 " ||
 " || Sending to repl
