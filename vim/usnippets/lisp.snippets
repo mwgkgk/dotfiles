@@ -277,7 +277,7 @@ endsnippet
 # If line above is empty, basement:
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
 #+nil
-(quote
+(when nil
 	${VISUAL}${0:`!p
 
 if not snip.v.text:
@@ -298,7 +298,7 @@ snippet dab "dated-basement" b
 ;;; `date-utc` ;;;
 
 #+nil
-(quote
+(when nil
 	${VISUAL}${0:`!p
 
 if not snip.v.text:
