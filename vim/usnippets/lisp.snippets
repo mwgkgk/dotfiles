@@ -118,10 +118,7 @@ if match.group(1) is None:
 endsnippet
 
 snippet ql "quickload" b
-#+ql
-(progn
-	(ql:quickload '(:${1:1am}))
-	(use-package :$1))
+(ql:quickload '(:${1:1am}))
 endsnippet
 
 snippet defsys "defsystem" b
