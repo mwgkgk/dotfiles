@@ -675,6 +675,17 @@ snippet q "question" b
 endsnippet
 
 # ||
+# || Exercism
+# ||
+
+snippet runt "run-tests" w
+#+nil
+(progn
+	(load "`!v expand("%:t:r")`-test")
+	(`!v expand("%:t:r")`-test:run-tests))
+endsnippet
+
+# ||
 # || Expand whitespace
 # ||
 
