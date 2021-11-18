@@ -42,6 +42,17 @@ nnoremap <buffer> <C-g><C-h> :silent T (help #'<C-r><C-w>)<CR>
 " || Repl control
 " ||
 
+" Run repls:
+nnoremap <buffer> <LocalLeader>gs :silent T sbcl<CR>
+nnoremap <buffer> <LocalLeader>ge :silent T ecl<CR>
+nnoremap <buffer> <LocalLeader>gc :silent T ccl<CR>
+nnoremap <buffer> <LocalLeader>gg :silent T ecl<CR>
+
+" ECL
+" Return to som previous break level
+nnoremap <buffer> <LocalLeader>Q :silent T :q<CR>
+
+" SBCL
 nnoremap <buffer> <LocalLeader>a :silent T abort<CR>
 nnoremap <buffer> <LocalLeader>r :silent T retry<CR>
 nnoremap <buffer> <LocalLeader>c :silent T continue<CR>
@@ -57,8 +68,6 @@ nnoremap <buffer> <LocalLeader>7 :silent T 7<CR>
 nnoremap <buffer> <LocalLeader>8 :silent T 8<CR>
 nnoremap <buffer> <LocalLeader>9 :silent T 9<CR>
 
-" Run repls:
-nnoremap <buffer> <LocalLeader>gs :silent T sbcl<CR>
-nnoremap <buffer> <LocalLeader>ge :silent T ecl<CR>
-nnoremap <buffer> <LocalLeader>gc :silent T ccl<CR>
-nnoremap <buffer> <LocalLeader>gg :silent T ecl<CR>
+" CCL
+" List restarts
+nnoremap <buffer> <LocalLeader>R :silent T :R<CR>
