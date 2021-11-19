@@ -98,9 +98,11 @@ endsnippet
 # || Imports & Packages
 # ||
 
-snippet /\b(defpackage|defpac|defpkg|pkg|package|pack|pac)/ "defpac" wr
-(defpackage ${1:name}
-	(:use #:cl))
+snippet "(\()?\b(defpackage|defpac|defpkg|pkg|dp|pack|pac)" "defpackage" rw
+(defpackage ${VISUAL}$0
+	(:use #:cl)`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bin?\-?p?" "in-package" rw
@@ -159,7 +161,7 @@ endsnippet
 # || Variables
 # ||
 
-snippet "(\()?\b(defpar|defparam|defparameter|defp|par|param|dp|d)" "defparameter" rw
+snippet "(\()?\b(defpar|defparam|defparameter|defp|par|param|d)" "defparameter" rw
 (defparameter *$1*
 	${0:nil}`!p
 if match.group(1) is None:
