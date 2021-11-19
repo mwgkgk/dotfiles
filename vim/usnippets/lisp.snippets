@@ -715,6 +715,14 @@ if match.group(1) is not None:
 	snip.rv = match.group(1)`)$0
 endsnippet
 
+# This is only relevant at top-level, where otherwise it'd default to a new
+# defun.
+snippet /([%\!:\w=\-\+><\*\/\?\.]+)\+/ "expand-any-word-as-call" rw
+(`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)` $0)
+endsnippet
+
 snippet  /([%\!:\w=\-\+><\*\/\?\.]+):/ "expand-any-word-as-keyword" rw
 :`!p
 if match.group(1) is not None:
