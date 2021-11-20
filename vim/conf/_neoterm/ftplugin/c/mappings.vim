@@ -1,4 +1,10 @@
 " ||
+" || Compiler
+" ||
+
+nnoremap <buffer> <Leader>r :T tcc -run <C-r>=expand('%')<CR><CR>
+
+" ||
 " || REPL control
 " ||
 
