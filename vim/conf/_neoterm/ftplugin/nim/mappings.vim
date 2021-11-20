@@ -1,4 +1,11 @@
 " ||
+" || Compiler
+" ||
+
+" Run
+nnoremap <buffer> <silent> <Leader>r :T nim r <C-r>=expand("%")<CR><CR>
+
+" ||
 " || REPL control
 " ||
 
