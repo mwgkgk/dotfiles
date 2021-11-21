@@ -105,7 +105,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bmp" "make-package" rw
+snippet "(\()?\bmk?p" "make-package" rw
 (make-package '#:${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
