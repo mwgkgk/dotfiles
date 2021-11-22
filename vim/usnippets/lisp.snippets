@@ -98,7 +98,7 @@ endsnippet
 # || Imports & Packages
 # ||
 
-snippet "(\()?\b(defpackage|defpac|defp)" "defpackage" rw
+snippet "(\()?\b(defpackage|defpac|defp|pkg)" "defpackage" rw
 (defpackage ${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = os.path.splitext(fn)[0]
