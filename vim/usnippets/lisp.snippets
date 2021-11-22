@@ -99,7 +99,10 @@ endsnippet
 # ||
 
 snippet "(\()?\b(defpackage|defpac|defp)" "defpackage" rw
-(defpackage ${VISUAL}$0
+(defpackage ${VISUAL}${0:`!p
+if not snip.v.text:
+	snip.rv = os.path.splitext(fn)[0]
+`}
 	(:use #:cl)`!p
 if match.group(1) is None:
 	snip.rv = ")"`
