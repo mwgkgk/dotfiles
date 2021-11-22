@@ -98,7 +98,7 @@ endsnippet
 # || Imports & Packages
 # ||
 
-snippet "(\()?\b(defpackage|defpac|defpkg|pkg|dp|pack|pac)" "defpackage" rw
+snippet "(\()?\b(defpackage|defpac|defp)" "defpackage" rw
 (defpackage ${VISUAL}$0
 	(:use #:cl)`!p
 if match.group(1) is None:
@@ -185,7 +185,7 @@ endsnippet
 # || Variables
 # ||
 
-snippet "(\()?\b(defpar|defparam|defparameter|defp|par|param|d)" "defparameter" rw
+snippet "(\()?\b(defparameter|defparam|defpar|d)" "defparameter" rw
 (defparameter *$1*
 	${0:nil}`!p
 if match.group(1) is None:
