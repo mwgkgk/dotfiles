@@ -98,7 +98,19 @@ endsnippet
 # || Imports & Packages
 # ||
 
-snippet "(\()?\b(defpackage|defpac|defp|pkg)" "defpackage" rw
+snippet pkg "date, defpackage, in-package" w
+;;; `date-utc`
+
+(defpackage #:${VISUAL}${1:`!p
+if not snip.v.text:
+	snip.rv = os.path.splitext(fn)[0]
+`}
+	(:use #:cl$0))
+
+(in-package #:${VISUAL}$1)
+endsnippet
+
+snippet "(\()?\b(defpackage|defpac|defp)" "defpackage" rw
 (defpackage #:${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = os.path.splitext(fn)[0]
@@ -120,6 +132,15 @@ if not snip.v.text:
 	snip.rv = "common-lisp-user"`}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
+endsnippet
+
+snippet di "date, in-package" w
+;;; `date-utc`
+
+(in-package #:${VISUAL}${0:`!p
+if not snip.v.text:
+	snip.rv = os.path.splitext(fn)[0]
+`})
 endsnippet
 
 snippet "^(\()?\brq" "require" rw
