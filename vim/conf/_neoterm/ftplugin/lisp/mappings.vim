@@ -78,3 +78,4 @@ nnoremap <buffer> <LocalLeader>R :silent T :R<CR>
 
 nnoremap <buffer> <LocalLeader>pp :silent T (in-package #:common-lisp-user)<CR>
 nnoremap <buffer> <LocalLeader>pf :silent T (in-package #:<C-r>=expand('%:t:r')<CR>)<CR>
+nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
