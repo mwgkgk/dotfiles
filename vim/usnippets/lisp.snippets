@@ -263,7 +263,7 @@ snippet run "run" b
 (defun run ()
 	${1:nil})
 
-#+nil
+#+#:comment
 (progn
 	(run$0))
 endsnippet
@@ -326,7 +326,7 @@ endsnippet
 
 # If line above is empty, basement:
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-#+nil
+#+#:comment
 (when nil  ; `!v system('date-jiv | tr -d "\n"')`
 	${VISUAL}${0:`!p
 
@@ -337,7 +337,7 @@ if not snip.v.text:
 endsnippet
 
 snippet /^e/ "basement-test" r
-#+nil
+#+#:comment
 (progn
 	(e ${VISUAL}${0:`!p
 if not snip.v.text:
@@ -347,7 +347,7 @@ endsnippet
 snippet dab "dated-basement" b
 ;;; `date-utc` ;;;
 
-#+nil
+#+#:comment
 (when nil
 	${VISUAL}${0:`!p
 
@@ -645,21 +645,17 @@ endsnippet
 # || Bits and Pieces
 # ||
 
-snippet nil "#+nil" b
-#+nil
+snippet u "uninterned-symbol" w
+#:${VISUAL}$0
 endsnippet
 
-snippet #+nil "#+nil continued" b
-#+nil
+snippet nil "#+#:nil" w
+#+#:${0:nil}
+endsnippet
+
+snippet #+#:nil "#+#:nil continued" b
+#+#:nil
 ($0)
-endsnippet
-
-snippet # "#" w
-#'$0
-endsnippet
-
-snippet ## "fancy #+nil" w
-#+#:${0:error}
 endsnippet
 
 snippet im "doing my part" b
@@ -671,7 +667,7 @@ endsnippet
 # ||
 
 snippet ro "rooftops" b
-#+nil
+#+#:comment
 (progn
 	(1am:test ${1:test-name}
 		(is ${0:nil})})
@@ -735,7 +731,7 @@ endsnippet
 # ||
 
 snippet runt "run-tests" w
-#+nil
+#+#:comment
 (progn
 	(load "`!v expand("%:t:r")`-test")
 	(`!v expand("%:t:r")`-test:run-tests))
