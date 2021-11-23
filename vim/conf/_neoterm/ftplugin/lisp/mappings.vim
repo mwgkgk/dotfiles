@@ -39,6 +39,14 @@ nnoremap <buffer> <C-g>h :silent T (help <C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-h> :silent T (help #'<C-r><C-w>)<CR>
 
 " ||
+" || Debug
+" ||
+
+nnoremap <buffer> <LocalLeader>t :silent T (trace <C-r><C-w>)<CR>
+nnoremap <buffer> <LocalLeader>u :silent T (untrace <C-r><C-w>)<CR>
+nnoremap <buffer> <LocalLeader>U :silent T (untrace)<CR>
+
+" ||
 " || Repl control
 " ||
 
