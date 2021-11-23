@@ -71,3 +71,10 @@ nnoremap <buffer> <LocalLeader>9 :silent T 9<CR>
 " CCL
 " List restarts
 nnoremap <buffer> <LocalLeader>R :silent T :R<CR>
+
+" ||
+" || Package
+" ||
+
+nnoremap <buffer> <LocalLeader>pp :silent T (in-package #:common-lisp-user)<CR>
+nnoremap <buffer> <LocalLeader>pf :silent T (in-package #:<C-r>=expand('%:t:r')<CR>)<CR>

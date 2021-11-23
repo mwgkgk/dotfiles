@@ -127,9 +127,10 @@ if match.group(1) is None:
 endsnippet
 
 snippet "(\()?\bin?\-?p?" "in-package" rw
-(in-package #:${VISUAL}${1:`!p
+(in-package #:${VISUAL}${0:`!p
 if not snip.v.text:
-	snip.rv = "common-lisp-user"`}`!p
+	snip.rv = os.path.splitext(fn)[0]
+`}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
