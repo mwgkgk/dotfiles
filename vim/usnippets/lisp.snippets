@@ -167,7 +167,7 @@ if match.group(1) is None:
 	snip.rv = ")"`$0
 endsnippet
 
-snippet "(\()?\bshadow" "shadow" rw
+snippet "(\()?\bshad(ow)?" "shadow" rw
 (shadow '${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
