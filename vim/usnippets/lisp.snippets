@@ -110,6 +110,23 @@ if not snip.v.text:
 (in-package #:${VISUAL}$1)
 endsnippet
 
+snippet dip "fast date, defpackage, in-package" w
+;;; `date-utc`
+
+(defpackage #:`!p
+if not snip.v.text:
+	snip.rv = os.path.splitext(fn)[0]
+`}
+	(:use #:cl))
+
+(in-package #:`!p
+if not snip.v.text:
+	snip.rv = os.path.splitext(fn)[0]
+`)
+
+$0
+endsnippet
+
 snippet "(\()?\b(defpackage|defpac|defp)" "defpackage" rw
 (defpackage #:${VISUAL}${0:`!p
 if not snip.v.text:
