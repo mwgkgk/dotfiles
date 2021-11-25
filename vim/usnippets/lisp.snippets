@@ -259,16 +259,20 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet re "&rest" w
-&rest ${0:forms}
+snippet /\b&?re/ "&rest" rw
+&rest 
 endsnippet
 
-snippet opt "&optional" w
-&optional (${1:form} ${0:nil})
+snippet /\b&?body/ "&body" rw
+&body 
 endsnippet
 
-snippet /\b(key|kwarg|kwar|kwa|kw|k)/ "&key" wr
-&key (${1:form} ${0:nil})
+snippet /\b&?opt/ "&optional" wr
+&optional 
+endsnippet
+
+snippet /\b&?key/ "&key" wr
+&key 
 endsnippet
 
 snippet "(\()?\b(values|val|v)" "values" rw
@@ -850,12 +854,13 @@ if match.group(0) is not None:
 	snip.rv = match.group(0)` $0)
 endsnippet
 
-priority -4
+# priority -4
 
-snippet  /(\(([%\!:\w=\-\+><\*\/\?\.\s\(\)]+)+\))/ "expand-any-form" rw
-(`!p
-if match.group(0) is not None:
-	snip.rv = match.group(0)` $0)
-endsnippet
+# Temp disable: fucks with opt/re/key snippets within defun, big hmm
+#snippet  /(\(([%\!:\w=\-\+><\*\/\?\.\s\(\)]+)+\))/ "expand-any-form" rw
+#(`!p
+#if match.group(0) is not None:
+#	snip.rv = match.group(0)` $0)
+#endsnippet
 
 priority 0
