@@ -1198,6 +1198,10 @@ Plug 'guns/vim-sexp'
 " Plug '~/.vim/conf/_slimv/', { 'for' : 'lisp' }
 " Plug 'kovisoft/slimv', { 'for' : 'lisp' }
 
+if has('nvim')
+    Plug 'adolenc/cl-neovim'
+endif
+
 " Picolisp
 Plug '~/shop/oil/picolisp-vim/', { 'for' : 'picolisp' }
 
