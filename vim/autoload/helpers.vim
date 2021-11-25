@@ -7,5 +7,9 @@ function! helpers#pluralize(word, count)
 endfunction
 
 function! helpers#executable_flag(file)
-    return executable(a:file) ? ' x' : ''
+    if filereadable(a:file)
+        return executable(a:file) ? ' x' : ''
+    else
+        return ''
+    endif
 endfunction
