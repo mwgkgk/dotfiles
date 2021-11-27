@@ -11,12 +11,10 @@ nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
 " Send atom under cursor
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
 
-" Send line
-nnoremap <buffer> <LocalLeader>X :TREPLSendLine<CR>
-
 nnoremap <buffer> <LocalLeader>l :silent T (load #P"<C-r>=expand('%:p')<CR>")<CR>
 
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
+nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 
 " ||
 " || Docs
