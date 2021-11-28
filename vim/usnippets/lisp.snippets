@@ -420,7 +420,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bcts" "check-type satisfies" rw
+snippet "(\()?\bct?s" "check-type satisfies" rw
 (check-type ${1:${VISUAL}} (satisfies $0)`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -553,7 +553,7 @@ endsnippet
 # || Case Macro
 # ||
 
-snippet "(\()?\bcs" "case" rw
+snippet "(\()?\bcase" "case" rw
 (case $1
 	($2)
 	(otherwise ${0:nil})`!p
