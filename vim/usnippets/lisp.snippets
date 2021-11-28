@@ -330,14 +330,14 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bfirst" "first" rw
-(first ${0:list}`!p
+snippet "(\()?\bfi(rst)?" "first" rw
+(first ${0:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\brest" "rest" rw
-(rest ${0:list}`!p
+snippet "(\()?\br(est)?" "rest" rw
+(rest ${0:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
