@@ -395,18 +395,18 @@ snippet ct "check-type" w
 endsnippet
 
 snippet ctl "check-type list" w
-(check-type ${0:l} list)
+(check-type ${1:l} list)$0
 endsnippet
 
 snippet cti "check-type integer" w
-(check-type ${0:e} integer)
+(check-type ${1:e} integer)$0
 endsnippet
 
 snippet ctp "check-type positive integer" w
-(check-type ${1:e} (integer 0 *))
+(check-type ${1:e} (integer 0 *))$0
 endsnippet
 
-snippet cs "check-type satisfies" w
+snippet cts "check-type satisfies" w
 (check-type ${1:{VISUAL}} (satisfies $0))
 endsnippet
 
