@@ -85,3 +85,7 @@ nnoremap <buffer> <LocalLeader>R :silent T :R<CR>
 nnoremap <buffer> <LocalLeader>pp :silent T (in-package #:common-lisp-user)<CR>
 nnoremap <buffer> <LocalLeader>pf :silent T (in-package #:<C-r>=expand('%:t:r')<CR>)<CR>
 nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
+
+" Load + in-package = w
+" Reason it's <silent> is because long command requires a prompt
+nnoremap <buffer> <silent> <LocalLeader>w :silent T (progn (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>))<CR>
