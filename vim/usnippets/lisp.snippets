@@ -252,7 +252,14 @@ endsnippet
 # || Functions
 # ||
 
-snippet "(\()?\b(defun|defu|f)" "defun" rw
+snippet "^(\()?\b(defun|defu|f)" "defun" rb
+(defun ${1:function-name} ($2)
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\b(defun|defu)" "inline defun" rw
 (defun ${1:function-name} ($2)
 	${0:nil}`!p
 if match.group(1) is None:
@@ -330,11 +337,15 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bfi(rst)?" "first" rw
+priority -1
+
+snippet "(\()?\bfi?(rst)?" "first" rw
 (first ${0:${VISUAL}}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
+
+priority 0
 
 snippet "(\()?\br(est)?" "rest" rw
 (rest ${0:${VISUAL}}`!p
