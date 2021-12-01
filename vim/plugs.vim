@@ -603,6 +603,7 @@ let g:cycle_default_groups += [
 "  -- Lisp
 let g:cycle_default_groups += [
             \   [['flet', 'labels']],
+            \   [['eql', 'equal']],
             \ ]
 
 "  -- Zig
