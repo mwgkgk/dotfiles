@@ -10,7 +10,7 @@ nnoremap <buffer> <silent> <Leader>r :T nim r <C-r>=expand("%")<CR><CR>
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :silent T inim<CR>
+nnoremap <buffer> <silent> <LocalLeader>r :silent T nim secret<CR>
 
 " TODO Load current file
 " nnoremap <buffer> <silent> <Leader>r :T include <C-r>=expand("%")<CR><CR>
