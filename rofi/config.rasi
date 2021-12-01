@@ -9,6 +9,6 @@ configuration {
 	kb-remove-to-eol: "Control+Delete";
 	kb-row-down: "Control+j,Control+n";
 	kb-row-up: "Control+k,Control+p";
-
-	theme: "/usr/share/rofi/themes/gruvbox-dark.rasi";
 }
+
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
