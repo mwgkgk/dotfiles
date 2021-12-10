@@ -228,22 +228,19 @@ endsnippet
 # ||
 
 snippet "(\()?\b(defparameter|defparam|defpar|d)" "defparameter" rw
-(defparameter *$1*
-	${0:nil}`!p
+(defparameter *$1* ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\b(defvar|defv|var)" "defvar" rw
-(defvar *$1*
-	${0:nil}`!p
+(defvar *$1* ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bdefc" "defconstant" rw
-(defconstant +$1+
-	${0:nil}`!p
+(defconstant +$1+ ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
