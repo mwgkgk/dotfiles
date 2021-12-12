@@ -99,16 +99,11 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet /^\s*cond/ "cond2" r
+snippet "(\()?\bcond" "cond" r
 (cond
-	[(> 0 (vector-length (current-command-line-arguments) ()]
-	[#t ()])
-endsnippet
-
-snippet (cond "cond" i
-(cond
-	[(> 0 (vector-length (current-command-line-arguments) ()]
-	[#t ()]
+	($0${VISUAL})`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 # ||
