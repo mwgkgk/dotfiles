@@ -2,18 +2,28 @@
 # || Date
 # ||
 
+snippet / *da(te)?/ "date-file-start" "snip.line == 0" e
+;;; `date-utc`
+
+$0
+endsnippet
+
+priority -1
+
 snippet / *da(te)?/ "Date" rb
 ;;; `date-utc`
 ${0}
 endsnippet
 
-priority -1
+snippet dd "dd-line-start" b
+// `date-jiv`
+endsnippet
+
+priority 0
 
 snippet dd "dd-inline" w
 `!v system('date-jiv | tr -d "\n"')`${0}
 endsnippet
-
-priority 0
 
 # ||
 # || Comments
