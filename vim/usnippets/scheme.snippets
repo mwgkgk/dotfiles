@@ -117,6 +117,16 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Predicates
+# ||
+
+# It's often used in cond clauses where we need the double opening parens,
+# hence not the usual lisp-snippet thing.
+snippet "\b(null|n)" "null" rw
+(null? ${0:${VISUAL}})
+endsnippet
+
+# ||
 # || Macros
 # ||
 
