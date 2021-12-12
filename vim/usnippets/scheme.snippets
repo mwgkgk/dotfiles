@@ -156,7 +156,7 @@ endsnippet
 # Indent is bugged hence () there to make it easier
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
 (when #f  ; `!v system('date-jiv | tr -d "\n"')`
-	(${VISUAL}$0)
+	$1
 	#f)
 endsnippet
 
