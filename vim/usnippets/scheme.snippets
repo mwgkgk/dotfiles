@@ -143,10 +143,10 @@ endsnippet
 
 # If line above is empty, basement:
 # The #; reader macro makes ambient-form break on multiline
-# Indent is bugged hence #f there to make it easier
+# Indent is bugged hence () there to make it easier
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
 (when #f  ; `!v system('date-jiv | tr -d "\n"')`
-	#f${VISUAL}$0
+	(${VISUAL}$0)
 	#f)
 endsnippet
 
