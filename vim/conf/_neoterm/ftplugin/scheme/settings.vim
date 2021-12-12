@@ -1,4 +1,6 @@
-if executable('gosh')
+if executable('bigloo')
+    call neoterm#repl#set('bigloo')
+elseif executable('gosh')
     call neoterm#repl#set('gosh')
 elseif executable('scheme')
     call neoterm#repl#set('scheme')
