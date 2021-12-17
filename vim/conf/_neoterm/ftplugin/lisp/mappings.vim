@@ -49,7 +49,7 @@ nnoremap <buffer> <LocalLeader>U :silent T (untrace)<CR>
 " ||
 
 " Run repls:
-nnoremap <buffer> <LocalLeader>gg :silent T ecl<CR>
+nnoremap <buffer> <LocalLeader>gg :silent T sbcl<CR>
 nnoremap <buffer> <LocalLeader>ge :silent T ecl<CR>
 nnoremap <buffer> <LocalLeader>gs :silent T sbcl<CR>
 nnoremap <buffer> <LocalLeader>gc :silent T ccl<CR>
