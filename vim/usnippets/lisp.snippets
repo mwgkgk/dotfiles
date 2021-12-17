@@ -432,7 +432,13 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bct?s" "check-type satisfies" rw
+snippet "(\()?\bcts" "check-type string" rw
+(check-type ${0:${VISUAL}} string`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\b(cs|ctsa)" "check-type satisfies" rw
 (check-type ${1:${VISUAL}} (satisfies $0)`!p
 if match.group(1) is None:
 	snip.rv = ")"`
