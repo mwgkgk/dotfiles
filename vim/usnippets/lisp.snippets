@@ -804,6 +804,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\brp" "run-program" rw
+(uiop:run-program ${VISUAL}$0 :output *standard-output*`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Jiv
 # ||
