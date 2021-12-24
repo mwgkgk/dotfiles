@@ -326,6 +326,10 @@ snippet "\b(null|n)" "null" rw
 (null ${0:${VISUAL}})
 endsnippet
 
+snippet "\bnn" "null cond clause" rw
+((null ${1:list}) ${0:nil})
+endsnippet
+
 snippet "(\()?\bcar" "car" rw
 (car ${0:list}`!p
 if match.group(1) is None:
