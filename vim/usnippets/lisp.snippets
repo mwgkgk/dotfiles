@@ -395,7 +395,7 @@ endsnippet
 # || Types
 # ||
 
-snippet "^(\()?\bt" "deftype" rb
+snippet "^(\()?\b(deft|t)" "deftype" rb
 (deftype $1 ()
 	\`${0:list}`!p
 if match.group(1) is None:
