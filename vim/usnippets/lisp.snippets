@@ -193,6 +193,11 @@ snippet qup "qup" w
 (ql:update-dist "quicklisp")
 endsnippet
 
+snippet dos "dos" w
+(do-external-symbols (s (find-package "${0:QS}"))
+	(describe s))
+endsnippet
+
 snippet defsys "defsystem" b
 (defsystem "${1:school}"
   :version "0.1.0"
