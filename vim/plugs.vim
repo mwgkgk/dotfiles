@@ -640,8 +640,10 @@ Plug 'cohama/lexima.vim', { 'for' : 'factor' }
 
 " {{{
 
-Plug '~/.vim/conf/_ultisnips/'
-Plug 'SirVer/ultisnips'
+if !has('nvim')
+    Plug '~/.vim/conf/_ultisnips/'
+    Plug 'SirVer/ultisnips'
+endif
 
 " }}}
 
