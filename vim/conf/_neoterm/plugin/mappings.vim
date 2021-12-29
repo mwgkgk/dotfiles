@@ -92,3 +92,4 @@ nnoremap <silent> <LocalLeader>Z :silent T fg<CR>
 " ||
 
 nnoremap <silent> <LocalLeader>q :call neoterm#exec({ 'cmd': ["\<C-d>"] })<CR>
+nnoremap <silent> <Leader>q :call neoterm#exec({ 'cmd': ["\<C-d>"] })<CR>
