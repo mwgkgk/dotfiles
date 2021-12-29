@@ -86,7 +86,7 @@ nnoremap <Leader>< :bp<CR>
 nnoremap <Leader>> :bn<CR>
 
 " Delete buffer:
-nnoremap <Leader>q :bd<CR>
+nnoremap <Leader>Q :bd<CR>
 
 "
 "
