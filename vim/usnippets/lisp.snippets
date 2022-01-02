@@ -193,6 +193,11 @@ snippet qup "qup" w
 (ql:update-dist "quicklisp")
 endsnippet
 
+snippet dos "dos" w
+(do-external-symbols (s (find-package "${0:QS}"))
+	(describe s))
+endsnippet
+
 snippet defsys "defsystem" b
 (defsystem "${1:school}"
   :version "0.1.0"
@@ -326,6 +331,10 @@ snippet "\b(null|n)" "null" rw
 (null ${0:${VISUAL}})
 endsnippet
 
+snippet "\bnn" "null cond clause" rw
+((null ${1:list}) ${0:nil})
+endsnippet
+
 snippet "(\()?\bcar" "car" rw
 (car ${0:list}`!p
 if match.group(1) is None:
@@ -395,7 +404,7 @@ endsnippet
 # || Types
 # ||
 
-snippet "^(\()?\bt" "deftype" rb
+snippet "^(\()?\b(deft|t)" "deftype" rb
 (deftype $1 ()
 	\`${0:list}`!p
 if match.group(1) is None:
