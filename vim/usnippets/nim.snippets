@@ -123,3 +123,15 @@ try:
 except ${1:OSError}:
 	$0
 endsnippet
+
+# ||
+# || Fallbacks
+# ||
+
+priority -2
+
+snippet  /([\!:\w=-]+)/ "expand-any-word" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`(${VISUAL}$0)
+endsnippet
