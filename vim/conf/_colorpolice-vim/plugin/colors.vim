@@ -12,7 +12,7 @@
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'fisa'
 
-let s:static_colo = 'grind'
+" let s:static_colo = 'grind'
 " let s:static_colo = 'murphy_mod'
 " let s:static_colo = 'devbox-dark-256-lighter'
 " let s:static_colo = 'zenburn'
@@ -40,7 +40,7 @@ let s:static_colo = 'grind'
 " let s:static_colo = 'flatlandia'
 
 " let s:static_colo = 'nuclear'
-" let s:static_colo = 'nuclear-dark'
+let s:static_colo = 'nuclear-dark'
 " let s:static_colo = 'fadedvision'
 
 " Zinge
