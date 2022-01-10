@@ -8,6 +8,9 @@ nnoremap <buffer> <silent> <LocalLeader>r :T iex<CR>
 " Tests
 nnoremap <buffer> <silent> <Leader>f :T mix test<CR>
 
+" mix deps.get
+nnoremap <buffer> <silent> <LocalLeader>dg :T mix deps.get<CR>
+
 " ||
 " || Send
 " ||
