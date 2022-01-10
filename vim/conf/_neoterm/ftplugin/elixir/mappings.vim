@@ -3,7 +3,10 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T iex<CR>
+nnoremap <buffer> <silent> <LocalLeader>r :T iex<CR>
+
+" Tests
+nnoremap <buffer> <silent> <Leader>f :T mix test<CR>
 
 " ||
 " || Send
