@@ -229,7 +229,7 @@ endsnippet
 # ||
 
 snippet "(\()?\b(defparameter|defparam|defpar|par|d)" "defparameter" rw
-(defparameter *$1* ${0:nil}`!p
+(defparameter $1 ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
