@@ -22,6 +22,7 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 
 nnoremap <buffer> <C-g>a :silent T (apropos "<C-r><C-w>")<CR>
 nnoremap <buffer> <C-g><C-a> :silent T (apropos "<C-r><C-w>")<CR>
+nnoremap <buffer> <C-g>A :T (apropos "")<Left><Left>
 
 nnoremap <buffer> <C-g><C-g> :silent T (describe '<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g>d :silent T (describe '<C-r><C-w>)<CR>
