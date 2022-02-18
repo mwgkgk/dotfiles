@@ -55,7 +55,7 @@ nnoremap <buffer> <LocalLeader>ge :silent T ecl<CR>
 nnoremap <buffer> <LocalLeader>gs :silent T sbcl<CR>
 nnoremap <buffer> <LocalLeader>gc :silent T ccl<CR>
 nnoremap <buffer> <LocalLeader>gi :silent T clisp<CR>
-nnoremap <buffer> <LocalLeader>ga :silent T abcl<CR>
+nnoremap <buffer> <LocalLeader>ga :silent T abcl-cp<CR>
 
 " ECL
 " Return to som previous break level
