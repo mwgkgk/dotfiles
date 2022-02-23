@@ -117,7 +117,7 @@ let s:static_colo = 'orbital'
 
 " let s:static_colo = 'gruvbox-dark'
 " let s:static_colo = 'miramare'
-
+let s:static_colo = 'paramount-light'
 
 " gui {{{
 " let s:gui_colo = 'freya'

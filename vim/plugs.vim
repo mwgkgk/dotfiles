@@ -1414,6 +1414,7 @@ Plug 'fcpg/vim-farout'
 Plug 'jaredgorski/fogbell.vim'
 Plug 'plan9-for-vimspace/acme-colors'
 Plug 'franbach/miramare'
+Plug 'owickstrom/vim-colors-paramount'
 
 " }}}
 
