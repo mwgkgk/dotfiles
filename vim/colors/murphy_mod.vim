@@ -13,7 +13,7 @@ if exists("syntax_on")
 endif
 let g:colors_name = "murphy_mod"
 
-hi Normal       ctermbg=Black  ctermfg=LightGreen guibg=Black        guifg=lightgreen
+hi Normal       ctermbg=237  ctermfg=LightGreen guibg=Black        guifg=lightgreen
 hi Comment      term=bold      ctermfg=LightRed   guifg=Orange
 hi Constant     term=underline ctermfg=118 guifg=White   gui=NONE
 hi Identifier   term=underline ctermfg=LightCyan  guifg=#00ffff
@@ -31,7 +31,7 @@ hi Cursor                                         guifg=Orchid  guibg=fg
 hi Directory    term=bold      ctermfg=LightCyan  guifg=Cyan
 hi ErrorMsg     term=standout  ctermbg=DarkRed    ctermfg=White guibg=Red guifg=White
 hi IncSearch    term=reverse   cterm=reverse      gui=reverse
-hi LineNr       term=underline ctermfg=LightGreen ctermbg=242   guifg=Yellow
+hi LineNr       term=underline ctermfg=245 ctermbg=237   guifg=Yellow
 hi ModeMsg      term=bold      cterm=bold         gui=bold
 hi MoreMsg      term=bold      ctermfg=LightGreen gui=bold      guifg=SeaGreen
 hi NonText      term=bold      ctermfg=241 gui=bold      guifg=Blue
