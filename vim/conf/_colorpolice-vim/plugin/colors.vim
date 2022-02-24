@@ -13,7 +13,7 @@
 " let s:static_colo = 'fisa'
 
 " let s:static_colo = 'grind'
-" let s:static_colo = 'murphy_mod'
+let s:static_colo = 'murphy_mod'
 " let s:static_colo = 'devbox-dark-256-lighter'
 " let s:static_colo = 'zenburn'
 " let s:static_colo = 'devbox-dark-256'
@@ -72,7 +72,7 @@
 " let s:static_colo = 'github'
 " let s:static_colo = 'pink'
 
-let s:static_colo = 'orbital'
+" let s:static_colo = 'orbital'
 " let s:static_colo = 'sceaduhelm'
 
 " let s:static_colo = 'kalisi-dark'
@@ -117,7 +117,7 @@ let s:static_colo = 'orbital'
 
 " let s:static_colo = 'gruvbox-dark'
 " let s:static_colo = 'miramare'
-let s:static_colo = 'paramount-light'
+" let s:static_colo = 'paramount-light'
 
 " gui {{{
 " let s:gui_colo = 'freya'
