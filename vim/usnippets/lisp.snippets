@@ -250,6 +250,15 @@ endsnippet
 # || Functions
 # ||
 
+snippet "^(\()?\b(daf|df)" "date+defun" rb
+;;; `date-utc`
+
+(defun ${1:function-name} ($2)
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "^(\()?\b(defun|defu|f)" "defun" rb
 (defun ${1:function-name} ($2)
 	${0:nil}`!p
