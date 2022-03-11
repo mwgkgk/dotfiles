@@ -314,7 +314,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet /(\()?\b(lambda|lambd|lamb|lam|la|l)/ "lambda" r
+snippet /(\()?\b(lambda|lambd|lamb|lam|l)/ "lambda" r
 (lambda ($1) ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -617,7 +617,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\b(labels|lab)" "labels" wr
+snippet "(\()?\b(labels|lab|la)" "labels" wr
 (labels
 	((${1:x} ($2)
 		${3:nil})$4)
