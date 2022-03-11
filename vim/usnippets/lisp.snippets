@@ -652,39 +652,6 @@ if match.group(1) is None:
 endsnippet
 
 # ||
-# || Format
-# ||
-
-snippet "(\()?\b(format|fmt)" "format" wr
-(format ${1:nil} "$0"`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
-
-# Python's \b fucks with dashes yikes.
-# snippet p "print" w
-# (format ${1:t} "${0:~A}~%" ${2:${VISUAL}})
-# endsnippet
-
-snippet "(\()?\bpp" "debug-print" rw
-(format t "~A~%" ${VISUAL}$0`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
-
-snippet { "{" i
-~{${0:~A${VISUAL}}~}
-endsnippet
-
-snippet [ "[" i
-~[${0:~A${VISUAL}}~]
-endsnippet
-
-snippet ( "(" i
-~(${0:~A${VISUAL}}~)
-endsnippet
-
-# ||
 # || Loop Facility
 # ||
 
@@ -743,6 +710,39 @@ snippet "(\()?\bep" "equalp" wr
 (equalp $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
+endsnippet
+
+# ||
+# || Format
+# ||
+
+snippet "(\()?\b(format|fmt)" "format" wr
+(format ${1:nil} "$0"`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# Python's \b fucks with dashes yikes.
+# snippet p "print" w
+# (format ${1:t} "${0:~A}~%" ${2:${VISUAL}})
+# endsnippet
+
+snippet "(\()?\bpp" "debug-print" rw
+(format t "~A~%" ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet { "{" i
+~{${0:~A${VISUAL}}~}
+endsnippet
+
+snippet [ "[" i
+~[${0:~A${VISUAL}}~]
+endsnippet
+
+snippet ( "(" i
+~(${0:~A${VISUAL}}~)
 endsnippet
 
 # ||
