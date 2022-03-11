@@ -320,7 +320,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet /(\()?\b(l#|#l)/ "#'lambda" r
+snippet /(\()?\b(L)/ "#'lambda" r
 #'(lambda ($1) ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
