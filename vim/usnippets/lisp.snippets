@@ -593,15 +593,15 @@ endsnippet
 # ||
 
 snippet "(\()?\blet" "let" wr
-(let (($1${VISUAL}))
-	$0`!p
+(let (($1))
+	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\blet\*" "let*" wr
-(let* (($1${VISUAL}))
-	$0`!p
+(let* (($1))
+	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -609,7 +609,7 @@ endsnippet
 snippet "(\()?\bflet|letf" "flet" wr
 (flet ((${1:x} ($2)
 				${3:nil}))
-	$0`!p
+	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
