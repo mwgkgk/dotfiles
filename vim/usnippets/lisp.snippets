@@ -688,6 +688,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bay" "apply" wr
+(apply $0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "(\()?\bri" "remove-if" rw
 (remove-if ${1:#'nullp} ${0:nil}`!p
 if match.group(1) is None:
