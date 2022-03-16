@@ -1,0 +1,13 @@
+;;; vim: ft=lisp
+
+;;; Use a newer asdf version:
+;;; Working but lets leave the default one for now
+#+#:nil
+(let
+    ((compiled-file #P"~/.cache/local/common-lisp/abcl/asdf.fasl"))
+  (progn
+    (ensure-directories-exist (directory-namestring compiled-file))
+    (if (not (probe-file compiled-file))
+        (compile-file #P"~/asdf.lisp"
+                      :output-file compiled-file))
+    (load compiled-file)))

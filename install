@@ -90,6 +90,7 @@ verbose_link "$DOTFILES/repl/.sbclrc" ~/.sbclrc
 verbose_link "$DOTFILES/repl/ccl-init.lisp" ~/ccl-init.lisp
 verbose_link "$DOTFILES/repl/.clisprc.lisp" ~/.clisprc.lisp
 verbose_link "$DOTFILES/repl/.eclrc" ~/.eclrc
+verbose_link "$DOTFILES/repl/.abclrc" ~/.abclrc
 mkdir -p ~/.lein
 verbose_link "$DOTFILES/repl/profiles.clj" ~/.lein/profiles.clj
 verbose_link "$DOTFILES/repl/.iex.exs" ~/.iex.exs
