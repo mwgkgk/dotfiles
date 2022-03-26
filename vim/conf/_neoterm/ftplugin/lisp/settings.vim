@@ -1,3 +1,3 @@
-if executable('sbcl')
-  call neoterm#repl#set('sbcl')
+if executable('abcl-cp')
+  call neoterm#repl#set('abcl-cp')
 endif
