@@ -72,10 +72,11 @@ snippet /^\*/ "section-*" r
 ;;; *
 endsnippet
 
-snippet /^T$/ "TODO" r
+snippet /^(T|;t)$/ "TODO" r
 ;;; TODO ${VISUAL}$0
 endsnippet
-snippet /^(\s+)T$/ "TODO-indented" r
+
+snippet /^(\s+)(T|;t)$/ "TODO-indented" r
 `!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`;; TODO ${VISUAL}$0
