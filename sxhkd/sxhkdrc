@@ -75,7 +75,7 @@ super + bracketleft
 super + comma
 	bridge
 
-control + slash
+control + Delete
 	xdotool key Caps_Lock
 
 control + semicolon
