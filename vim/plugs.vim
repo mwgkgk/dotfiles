@@ -1316,6 +1316,11 @@ Plug 'mwgkgk/vim-textobj-elixir', { 'for' : 'elixir' }
 " Fsharp
 " Plug 'fsharp/vim-fsharp'
 
+" Fsharp/Forth .fs conflict:
+" see FTfs() in /usr/share/vim/vim82/autoload/dist/ft.vim
+" used from /usr/share/vim/vim82/filetype.vim
+let g:filetype_fs = 'forth'
+
 " OCaml
 set runtimepath^="$HOME/.opam/cs3110-2021fa/share/ocp-indent/vim"
 
