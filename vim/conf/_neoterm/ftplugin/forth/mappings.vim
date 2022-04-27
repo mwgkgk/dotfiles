@@ -5,9 +5,10 @@ scriptencoding utf-8
 " ||
 
 " Run repl
-nnoremap <silent> <buffer> <LocalLeader>gp :T pf<CR>
 nnoremap <silent> <buffer> <LocalLeader>gg :T gf<CR>
 nnoremap <silent> <buffer> <LocalLeader>gf :T gf<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp :T pf<CR>
+nnoremap <silent> <buffer> <LocalLeader>gb :T bf<CR>
 
 " Include current file
 nnoremap <silent> <buffer> <Leader>r :T include <C-r>=expand("%")<CR><CR>
