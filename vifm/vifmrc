@@ -15,7 +15,8 @@ set vicmd=Vim
 
 set trash
 
-set trashdir=~/.vifm/Trash/
+" Setting this option explicitly atm leads to name corruption
+" set trashdir=~/.vifm/Trash/
 
 " This is how many directories to store in the directory history.
 
