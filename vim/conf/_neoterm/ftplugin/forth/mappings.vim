@@ -129,6 +129,7 @@ nnoremap <silent> <buffer> <LocalLeader>= :T =<CR>
 " || Base
 " ||
 
+nnoremap <silent> <buffer> <LocalLeader><Space><Space> :T decimal<CR>
 nnoremap <silent> <buffer> <LocalLeader><Space>h :T hex<CR>
 nnoremap <silent> <buffer> <LocalLeader><Space>d :T decimal<CR>
 nnoremap <silent> <buffer> <LocalLeader><Space>o :T 8 base !<CR>
