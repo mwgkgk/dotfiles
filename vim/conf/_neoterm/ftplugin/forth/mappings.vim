@@ -30,8 +30,9 @@ vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
 " Uses following words:
 " : →   .s clearstack ;
 " : ↓   cr .s clearstack ;
-nnoremap <silent> <buffer> <Leader>x :T <C-r>=getline('.')<CR> →<CR>
-nnoremap <silent> <buffer> <Leader>gx :T <C-r>=getline('.')<CR> ↓<CR>
+nnoremap <silent> <buffer> <Leader>x :T clearstack<CR><Bar>:T <C-r>=getline('.')<CR> →<CR>
+nnoremap <silent> <buffer> <LocalLeader>x :T clearstack<CR><Bar>:T <C-r>=getline('.')<CR> →<CR>
+nnoremap <silent> <buffer> <Leader>gx :T clearstack<CR><Bar>:T <C-r>=getline('.')<CR> ↓<CR>
 
 " TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
 " nnoremap <Space>X :TREPLSendFile<CR>
