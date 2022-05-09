@@ -157,10 +157,6 @@ endsnippet
 # || Stack
 # ||
 
-snippet c "clearstack" w
-clearstack
-endsnippet
-
 snippet cl "clearstack" w
 clearstack
 endsnippet
@@ -212,7 +208,11 @@ endsnippet
 # ||
 
 snippet /\b(var|v)/ "variable" wr
-variable $0
+variable ${VISUAL}$0
+endsnippet
+
+snippet c "create" w
+create ${VISUAL}$0
 endsnippet
 
 # ||
