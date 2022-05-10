@@ -12,7 +12,7 @@ nnoremap <silent> <buffer> <LocalLeader>gb :T bf<CR>
 
 " Include current file
 nnoremap <silent> <buffer> <Leader>r :T include <C-r>=expand("%")<CR><CR>
-nnoremap <silent> <buffer> <LocalLeader>l :T include <C-r>=expand("%")<CR><CR>
+nnoremap <silent> <buffer> <Leader>R :T include <C-r>=expand("%:p")<CR><CR>
 
 " Reload RC
 nnoremap <silent> <buffer> <LocalLeader>r :T load-rc<CR>
