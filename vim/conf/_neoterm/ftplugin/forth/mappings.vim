@@ -141,3 +141,18 @@ nnoremap <silent> <buffer> <LocalLeader><Space>b :T 2 base !<CR>
 " ||
 
 nnoremap <silent> <buffer> <LocalLeader>ag :T .any-new-memes?<CR>
+
+" ||
+" || Numbers
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>0 :T 0<CR>
+nnoremap <silent> <buffer> <LocalLeader>1 :T 1<CR>
+nnoremap <silent> <buffer> <LocalLeader>2 :T 2<CR>
+nnoremap <silent> <buffer> <LocalLeader>3 :T 3<CR>
+nnoremap <silent> <buffer> <LocalLeader>4 :T 4<CR>
+nnoremap <silent> <buffer> <LocalLeader>5 :T 5<CR>
+nnoremap <silent> <buffer> <LocalLeader>6 :T 6<CR>
+nnoremap <silent> <buffer> <LocalLeader>7 :T 7<CR>
+nnoremap <silent> <buffer> <LocalLeader>8 :T 9<CR>
+nnoremap <silent> <buffer> <LocalLeader>9 :T 9<CR>
