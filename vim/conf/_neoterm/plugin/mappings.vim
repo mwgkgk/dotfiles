@@ -13,11 +13,11 @@ nnoremap <silent> <Leader><Space>c ::call _neoterm#open#jump('tab', '')<CR>
 " (Symmetry with <Space>ge)
 nnoremap <silent> <Leader><Space>ge :call _neoterm#open#jump('below', '')<CR>
 
-nnoremap <silent> <Leader><Space>n :call _neoterm#open#jump('above', '')<CR>
+nnoremap <silent> <Leader><Space>n :call _neoterm#open#jump('below', '')<CR>
 nnoremap <silent> <Leader><Space>N :call _neoterm#open#jump('below', 'vert')<CR>
 
 " New 50% terminal window above / to the left:
-nnoremap <silent> <Leader><Space>gn :call _neoterm#open#jump('below', '')<CR>
+nnoremap <silent> <Leader><Space>gn :call _neoterm#open#jump('above', '')<CR>
 nnoremap <silent> <Leader><Space>gN :call _neoterm#open#jump('above', 'vert')<CR>
 
 " In the following commands, leaving the original commands for plain :term as
@@ -26,18 +26,18 @@ nnoremap <silent> <Leader><Space>gN :call _neoterm#open#jump('above', 'vert')<CR
 " New 33% terminal window:
 
 " nnoremap <silent> <Leader><Space>V :exec 'term ++rows=' . winheight(0)/4<CR>
-nnoremap <silent> <Leader><Space>V :call _neoterm#open#small('below', '')<CR>
+nnoremap <silent> <Leader><Space>V :call _neoterm#open#small('below', 'vert')<CR>
 
 " nnoremap <silent> <Leader><Space>gv :exec 'vert term ++cols=' . winwidth(0)/4<CR>
-nnoremap <silent> <Leader><Space>gv :call _neoterm#open#small('below', 'vert')<CR>
+nnoremap <silent> <Leader><Space>gv :call _neoterm#open#small('above', '')<CR>
 
 " New 33% terminal above/to the left:
 
-" nnoremap <silent> <Leader><Space>v :exec 'above term ++rows=' . winheight(0)/4<CR>
-nnoremap <silent> <Leader><Space>v :call _neoterm#open#small('above', '')<CR>
+" nnoremap <silent> <Leader><Space>v :exec 'below term ++rows=' . winheight(0)/4<CR>
+nnoremap <silent> <Leader><Space>v :call _neoterm#open#small('below', '')<CR>
 
 " nnoremap <silent> <Leader><Space>gV :exec 'above vert term ++cols=' . winwidth(0)/4<CR>
-nnoremap <silent> <Leader><Space>gV :call _neoterm#open#small('above', 'vert')<CR>
+nnoremap <silent> <Leader><Space>gV :call _neoterm#open#small('below', 'vert')<CR>
 
 " ||
 " || Open filetype mappings
