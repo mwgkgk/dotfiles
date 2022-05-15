@@ -27,7 +27,7 @@ set lazyredraw
 
 " Show invisibles:
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:→\ ,eol:¬
 
 " No bells:
 set noerrorbells 
