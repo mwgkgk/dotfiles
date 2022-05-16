@@ -7,7 +7,10 @@
 
 
 " Source current file
-nnoremap <buffer> <silent> <Leader>r :T exec(open('<C-r>=expand("%")<CR>').read())<CR>
+nnoremap <buffer> <silent> <LocalLeader>l :T exec(open('<C-r>=expand("%")<CR>').read())<CR>
+
+" Run current file
+nnoremap <buffer> <silent> <Leader>r :T python <C-r>=expand("%")<CR><CR>
 
 " ||
 " || Send
