@@ -20,7 +20,7 @@
 " let s:static_colo = 'haze'
 " let s:static_colo = 'grapes'
 " let s:static_colo = 'druid'
-" let s:static_colo = 'jellyfish'
+let s:static_colo = 'jellyfish'
 
 " let s:static_colo = 'farout'
 " let s:static_colo = 'fahrenheit'
@@ -41,7 +41,7 @@
 
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'nuclear-dark'
-let s:static_colo = 'fadedvision'
+" let s:static_colo = 'fadedvision'
 
 " Zinge
 " let s:static_colo = 'calmar256-dark'
