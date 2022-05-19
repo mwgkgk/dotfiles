@@ -68,6 +68,8 @@ function! _vim_sexp#setup_mappings()
   xmap <silent><buffer> <C-c><C-w>      <Plug>(sexp_round_tail_wrap_element)<Space>
   nmap <silent><buffer> <C-c>ew         <Plug>(sexp_round_tail_wrap_element)
   xmap <silent><buffer> <C-c>ew         <Plug>(sexp_round_tail_wrap_element)
+  nmap <silent><buffer> <C-c><C-c>      <Plug>(sexp_round_tail_wrap_element)<Esc>
+  xmap <silent><buffer> <C-c><C-c>      <Plug>(sexp_round_tail_wrap_element)<Esc>
   nmap <silent><buffer> <C-c>e)         <Plug>(sexp_round_tail_wrap_element)
   xmap <silent><buffer> <C-c>e)         <Plug>(sexp_round_tail_wrap_element)
   nmap <silent><buffer> <C-c>e[         <Plug>(sexp_square_head_wrap_element)
