@@ -69,6 +69,8 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 
 " See under cursor
 nnoremap <silent> <buffer> <C-g><C-g> :T see <C-r><C-a><CR>
+" Locate
+nnoremap <silent> <buffer> <C-g>g :T locate <C-r><C-a><CR>
 " Variable under cursor
 nnoremap <silent> <buffer> <C-g>v :T <C-r><C-a> ?<CR>
 
