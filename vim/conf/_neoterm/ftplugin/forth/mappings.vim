@@ -69,8 +69,6 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 
 " See under cursor
 nnoremap <silent> <buffer> <C-g><C-g> :T see <C-r><C-a><CR>
-" Locate
-nnoremap <silent> <buffer> <C-g>g :T locate <C-r><C-a><CR>
 " Variable under cursor
 nnoremap <silent> <buffer> <C-g>v :T <C-r><C-a> ?<CR>
 
@@ -82,6 +80,7 @@ nnoremap <buffer> <Space><LocalLeader> :T see<Space>
 nnoremap <silent> <buffer> <LocalLeader><C-g> :T simple-see <C-r><C-a><CR>
 nnoremap <silent> <buffer> g<C-g> :T where <C-r><C-a><CR>
 nnoremap <silent> <buffer> <Leader><C-g> :T locate <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>g :T help <C-r><C-a><CR>
 
 " pForth memes
 " nnoremap <silent> <buffer> <Leader><C-g> :T file? <C-r><C-w><CR>
