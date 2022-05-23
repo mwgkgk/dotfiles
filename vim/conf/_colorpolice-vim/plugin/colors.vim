@@ -20,7 +20,7 @@
 " let s:static_colo = 'haze'
 " let s:static_colo = 'grapes'
 " let s:static_colo = 'druid'
-let s:static_colo = 'jellyfish'
+" let s:static_colo = 'jellyfish'
 
 " let s:static_colo = 'farout'
 " let s:static_colo = 'fahrenheit'
@@ -31,7 +31,7 @@ let s:static_colo = 'jellyfish'
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
-" let s:static_colo = 'shenzhen'
+let s:static_colo = 'shenzhen'
 " let s:static_colo = 'busan'
 
 " let s:static_colo = 'gentooish'
