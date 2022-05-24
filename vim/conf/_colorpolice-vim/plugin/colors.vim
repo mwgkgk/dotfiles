@@ -31,7 +31,7 @@
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
-let s:static_colo = 'shenzhen'
+" let s:static_colo = 'shenzhen'
 " let s:static_colo = 'busan'
 
 " let s:static_colo = 'gentooish'
@@ -44,7 +44,7 @@ let s:static_colo = 'shenzhen'
 " let s:static_colo = 'fadedvision'
 
 " Zinge
-" let s:static_colo = 'calmar256-dark'
+let s:static_colo = 'calmar256-dark'
 
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
