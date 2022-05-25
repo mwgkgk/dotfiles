@@ -147,6 +147,7 @@ nnoremap <silent> <buffer> <LocalLeader>ag :T .any-new-memes?<CR>
 " || Numbers
 " ||
 
+nnoremap <silent> <buffer> <LocalLeader>- :T -1<CR>
 nnoremap <silent> <buffer> <LocalLeader>0 :T 0<CR>
 nnoremap <silent> <buffer> <LocalLeader>1 :T 1<CR>
 nnoremap <silent> <buffer> <LocalLeader>2 :T 2<CR>
