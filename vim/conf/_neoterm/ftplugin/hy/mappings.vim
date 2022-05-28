@@ -3,9 +3,7 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T hy-repl<CR>
-
-nnoremap <buffer> <silent> <LocalLeader>q :T q<CR>
+nnoremap <buffer> <silent> <LocalLeader>gg :silent T hy<CR>
 
 " ||
 " || Send
