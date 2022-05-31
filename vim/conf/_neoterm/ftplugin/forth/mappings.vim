@@ -71,16 +71,18 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 nnoremap <silent> <buffer> <C-g><C-g> :T see <C-r><C-a><CR>
 " Variable under cursor
 nnoremap <silent> <buffer> <C-g>v :T <C-r><C-a> ?<CR>
+" Defined? (useful to preserve the stacks)
+nnoremap <silent> <buffer> <C-g>d :T [defined] <C-r><C-a> .<CR>
 
 " See anything
 " Not <silent> on purpose
-nnoremap <buffer> <Space><LocalLeader> :T see<Space>
+nnoremap <buffer> <C-g><Leader> :T see<Space>
 
 " Gforth memes
-nnoremap <silent> <buffer> <LocalLeader><C-g> :T simple-see <C-r><C-a><CR>
-nnoremap <silent> <buffer> g<C-g> :T where <C-r><C-a><CR>
-nnoremap <silent> <buffer> <Leader><C-g> :T locate <C-r><C-a><CR>
-nnoremap <silent> <buffer> <C-g>g :T help <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>s :T simple-see <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>w :T where <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>l :T locate <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>h :T help <C-r><C-a><CR>
 
 " pForth memes
 " nnoremap <silent> <buffer> <Leader><C-g> :T file? <C-r><C-w><CR>
