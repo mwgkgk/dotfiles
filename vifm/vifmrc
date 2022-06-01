@@ -185,7 +185,7 @@ nmap ;G :!slap<CR>
 " program.
 
 " Pdf
-filetype *.pdf,*.mobi okular %f,apvlv %f,xpdf %f
+filetype *.pdf,*.mobi okular %f &,apvlv %f,xpdf %f
 fileview *.pdf pdftotext -nopgbrk %c -
 
 " Exe
