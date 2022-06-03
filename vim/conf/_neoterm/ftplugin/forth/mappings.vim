@@ -73,6 +73,10 @@ nnoremap <silent> <buffer> <C-g><C-g> :T see <C-r><C-a><CR>
 nnoremap <silent> <buffer> <C-g>v :T <C-r><C-a> ?<CR>
 " Defined? (useful to preserve the stacks)
 nnoremap <silent> <buffer> <C-g>d :T [defined] <C-r><C-a> .<CR>
+" Dump 8 cells under cursor
+nnoremap <silent> <buffer> <C-g>u :T <C-r><C-a> 8 cells dump<CR>
+" Dump 32 cells under cursor
+nnoremap <silent> <buffer> <C-g>U :T <C-r><C-a> 32 cells dump<CR>
 
 " See anything
 " Not <silent> on purpose
