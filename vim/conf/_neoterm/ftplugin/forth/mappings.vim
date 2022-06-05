@@ -5,17 +5,17 @@ scriptencoding utf-8
 " ||
 
 " Run repl
-nnoremap <silent> <buffer> <LocalLeader>gg :T gf<CR>
-nnoremap <silent> <buffer> <LocalLeader>gf :T gf<CR>
-nnoremap <silent> <buffer> <LocalLeader>gp :T pf<CR>
-nnoremap <silent> <buffer> <LocalLeader>gb :T bf<CR>
+nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T gf<CR>
+nnoremap <silent> <buffer> <LocalLeader>[g :T gf<CR>
+nnoremap <silent> <buffer> <LocalLeader>[p :T pf<CR>
+nnoremap <silent> <buffer> <LocalLeader>[b :T bf<CR>
 
 " Include current file
-nnoremap <silent> <buffer> <Leader>r :T include <C-r>=expand("%")<CR><CR>
-nnoremap <silent> <buffer> <Leader>R :T include <C-r>=expand("%:p")<CR><CR>
+nnoremap <silent> <buffer> <Leader>i :T include <C-r>=expand("%")<CR><CR>
+nnoremap <silent> <buffer> <Leader>I :T include <C-r>=expand("%:p")<CR><CR>
 
 " Reload RC
-nnoremap <silent> <buffer> <LocalLeader>r :T load-rc<CR>
+nnoremap <silent> <buffer> <LocalLeader>[r :T load-rc<CR>
 
 " ||
 " || Send
@@ -98,7 +98,6 @@ nnoremap <silent> <buffer> <C-g>h :T help <C-r><C-a><CR>
 
 " Stack
 nnoremap <silent> <buffer> <Leader>s :T .s<CR>
-nnoremap <silent> <buffer> <LocalLeader>s :T .s<CR>
 
 " Clear
 nnoremap <silent> <buffer> <LocalLeader>c :T clearstack<CR>
@@ -111,11 +110,11 @@ nnoremap <silent> <buffer> <LocalLeader>C :T page<CR>
 
 " .
 nnoremap <silent> <buffer> <LocalLeader>. :T .<CR>
-nnoremap <silent> <buffer> <LocalLeader>t :T 2dup type<CR>
+nnoremap <silent> <buffer> <LocalLeader>T :T 2dup type<CR>
 
 " Drop
 nnoremap <silent> <buffer> <LocalLeader>d :T drop<CR>
-nnoremap <silent> <buffer> <LocalLeader>2d :T 2drop<CR>
+nnoremap <silent> <buffer> <LocalLeader>td :T 2drop<CR>
 
 nnoremap <silent> <buffer> <LocalLeader>n :T nip<CR>
 
@@ -125,7 +124,41 @@ nnoremap <silent> <buffer> <LocalLeader>n :T nip<CR>
 
 " Dup
 nnoremap <silent> <buffer> <LocalLeader>D :T dup<CR>
-nnoremap <silent> <buffer> <LocalLeader>2D :T 2dup<CR>
+nnoremap <silent> <buffer> <LocalLeader>tD :T 2dup<CR>
+
+" ||
+" || Swap, rot
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>s :T swap<CR>
+nnoremap <silent> <buffer> <LocalLeader>r :T rot<CR>
+nnoremap <silent> <buffer> <LocalLeader>R :T -rot<CR>
+
+" ||
+" || Roll, pick
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>gr0 :T 0 roll<CR>
+nnoremap <silent> <buffer> <LocalLeader>gr1 :T 1 roll<CR>
+nnoremap <silent> <buffer> <LocalLeader>gr2 :T 2 roll<CR>
+nnoremap <silent> <buffer> <LocalLeader>gr3 :T 3 roll<CR>
+nnoremap <silent> <buffer> <LocalLeader>gr4 :T 4 roll<CR>
+nnoremap <silent> <buffer> <LocalLeader>gr5 :T 5 roll<CR>
+nnoremap <silent> <buffer> <LocalLeader>gr6 :T 6 roll<CR>
+nnoremap <silent> <buffer> <LocalLeader>gr7 :T 7 roll<CR>
+nnoremap <silent> <buffer> <LocalLeader>gr8 :T 8 roll<CR>
+nnoremap <silent> <buffer> <LocalLeader>gr9 :T 9 roll<CR>
+
+nnoremap <silent> <buffer> <LocalLeader>gp0 :T 0 pick<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp1 :T 1 pick<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp2 :T 2 pick<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp3 :T 3 pick<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp4 :T 4 pick<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp5 :T 5 pick<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp6 :T 6 pick<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp7 :T 7 pick<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp8 :T 8 pick<CR>
+nnoremap <silent> <buffer> <LocalLeader>gp9 :T 9 pick<CR>
 
 " ||
 " || Eq
