@@ -242,11 +242,13 @@ nnoremap <silent> <buffer> <Leader>re :T r@ execute<CR>
 nnoremap <silent> <buffer> <Leader>rl :T >r<CR>
 nnoremap <silent> <buffer> <Leader>rg :T r><CR>
 nnoremap <silent> <buffer> <Leader>r> :T r><CR>
+nnoremap <silent> <buffer> <Leader>rf :T r@<CR>
 nnoremap <silent> <buffer> <Leader>r@ :T r@<CR>
 nnoremap <silent> <buffer> <Leader>rd :T rdrop<CR>
 
 nnoremap <silent> <buffer> <Leader>rtl :T 2>r<CR>
 nnoremap <silent> <buffer> <Leader>rtg :T 2r><CR>
 nnoremap <silent> <buffer> <Leader>rt> :T 2r><CR>
+nnoremap <silent> <buffer> <Leader>rtf :T 2r@<CR>
 nnoremap <silent> <buffer> <Leader>rt@ :T 2r@<CR>
 nnoremap <silent> <buffer> <Leader>rtd :T 2rdrop<CR>
