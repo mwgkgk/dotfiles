@@ -223,3 +223,22 @@ nnoremap <silent> <buffer> <LocalLeader>mr6 :T -save6<CR>
 nnoremap <silent> <buffer> <LocalLeader>mr7 :T -save7<CR>
 nnoremap <silent> <buffer> <LocalLeader>mr8 :T -save8<CR>
 nnoremap <silent> <buffer> <LocalLeader>mr9 :T -save9<CR>
+
+" ||
+" || Return stack
+" ||
+
+nnoremap <silent> <buffer> <Leader>rp :T <C-r><C-a> >r<CR>
+nnoremap <silent> <buffer> <Leader>r. :T r@ .<CR>
+
+nnoremap <silent> <buffer> <Leader>rl :T >r<CR>
+nnoremap <silent> <buffer> <Leader>rg :T r><CR>
+nnoremap <silent> <buffer> <Leader>r> :T r><CR>
+nnoremap <silent> <buffer> <Leader>r@ :T r@<CR>
+nnoremap <silent> <buffer> <Leader>rd :T rdrop<CR>
+
+nnoremap <silent> <buffer> <Leader>rtl :T 2>r<CR>
+nnoremap <silent> <buffer> <Leader>rtg :T 2r><CR>
+nnoremap <silent> <buffer> <Leader>rt> :T 2r><CR>
+nnoremap <silent> <buffer> <Leader>rt@ :T 2r@<CR>
+nnoremap <silent> <buffer> <Leader>rtd :T 2rdrop<CR>
