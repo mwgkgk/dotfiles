@@ -235,7 +235,9 @@ nnoremap <silent> <buffer> <LocalLeader>mr9 :T -save9<CR>
 " ||
 
 nnoremap <silent> <buffer> <Leader>rp :T <C-r><C-a> >r<CR>
+nnoremap <silent> <buffer> <Leader>rP :T ' <C-r><C-a> >r<CR>
 nnoremap <silent> <buffer> <Leader>r. :T r@ .<CR>
+nnoremap <silent> <buffer> <Leader>re :T r@ execute<CR>
 
 nnoremap <silent> <buffer> <Leader>rl :T >r<CR>
 nnoremap <silent> <buffer> <Leader>rg :T r><CR>
