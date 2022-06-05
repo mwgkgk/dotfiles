@@ -162,5 +162,31 @@ nnoremap <silent> <buffer> <LocalLeader>4 :T 4<CR>
 nnoremap <silent> <buffer> <LocalLeader>5 :T 5<CR>
 nnoremap <silent> <buffer> <LocalLeader>6 :T 6<CR>
 nnoremap <silent> <buffer> <LocalLeader>7 :T 7<CR>
-nnoremap <silent> <buffer> <LocalLeader>8 :T 9<CR>
+nnoremap <silent> <buffer> <LocalLeader>8 :T 8<CR>
 nnoremap <silent> <buffer> <LocalLeader>9 :T 9<CR>
+
+" ||
+" || Markers
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>m0 :T marker -save0<CR>
+nnoremap <silent> <buffer> <LocalLeader>m1 :T marker -save1<CR>
+nnoremap <silent> <buffer> <LocalLeader>m2 :T marker -save2<CR>
+nnoremap <silent> <buffer> <LocalLeader>m3 :T marker -save3<CR>
+nnoremap <silent> <buffer> <LocalLeader>m4 :T marker -save4<CR>
+nnoremap <silent> <buffer> <LocalLeader>m5 :T marker -save5<CR>
+nnoremap <silent> <buffer> <LocalLeader>m6 :T marker -save6<CR>
+nnoremap <silent> <buffer> <LocalLeader>m7 :T marker -save7<CR>
+nnoremap <silent> <buffer> <LocalLeader>m8 :T marker -save8<CR>
+nnoremap <silent> <buffer> <LocalLeader>m9 :T marker -save9<CR>
+
+nnoremap <silent> <buffer> <LocalLeader>mr0 :T -save0<CR>
+nnoremap <silent> <buffer> <LocalLeader>mr1 :T -save1<CR>
+nnoremap <silent> <buffer> <LocalLeader>mr2 :T -save2<CR>
+nnoremap <silent> <buffer> <LocalLeader>mr3 :T -save3<CR>
+nnoremap <silent> <buffer> <LocalLeader>mr4 :T -save4<CR>
+nnoremap <silent> <buffer> <LocalLeader>mr5 :T -save5<CR>
+nnoremap <silent> <buffer> <LocalLeader>mr6 :T -save6<CR>
+nnoremap <silent> <buffer> <LocalLeader>mr7 :T -save7<CR>
+nnoremap <silent> <buffer> <LocalLeader>mr8 :T -save8<CR>
+nnoremap <silent> <buffer> <LocalLeader>mr9 :T -save9<CR>

@@ -5,3 +5,5 @@ include ~/shop/core/ghost/ghost-fs/src/ghost.fs
 
 \ Better colors on dark background
 dark-mode
+
+marker -save0
