@@ -167,6 +167,12 @@ nnoremap <silent> <buffer> <LocalLeader>gp9 :T 9 pick<CR>
 nnoremap <silent> <buffer> <LocalLeader>= :T =<CR>
 
 " ||
+" || Execution tokens
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>" :T ' <C-r><C-a><CR>
+
+" ||
 " || Base
 " ||
 
