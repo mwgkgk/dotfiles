@@ -304,10 +304,10 @@ nmap gx <Plug>(operator-openbrowser)
 " }}}
 
 Plug 'mwgkgk/vim-operator-append' " {{{
-map <Leader>a <Plug>(operator-append)
+map g<Leader>a <Plug>(operator-append)
 " }}}
 Plug 'mwgkgk/vim-operator-insert' " {{{
-map <Leader>i <Plug>(operator-insert)
+map g<Leader>i <Plug>(operator-insert)
 " }}}
 
 Plug '~/shop/oil/vim-operator-replacemode/' " {{{

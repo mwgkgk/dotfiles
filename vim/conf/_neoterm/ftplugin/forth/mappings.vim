@@ -11,8 +11,8 @@ nnoremap <silent> <buffer> <LocalLeader>[p :T pf<CR>
 nnoremap <silent> <buffer> <LocalLeader>[b :T bf<CR>
 
 " Include current file
-nnoremap <silent> <buffer> <Leader>i :T include <C-r>=expand("%")<CR><CR>
-nnoremap <silent> <buffer> <Leader>I :T include <C-r>=expand("%:p")<CR><CR>
+nnoremap <silent> <buffer> <LocalLeader>i :T include <C-r>=expand("%")<CR><CR>
+nnoremap <silent> <buffer> <LocalLeader>I :T include <C-r>=expand("%:p")<CR><CR>
 
 " Reload RC
 nnoremap <silent> <buffer> <LocalLeader>[r :T load-rc<CR>
