@@ -72,7 +72,7 @@ nnoremap <F9> :rightbelow T make<CR>
 " nmap <Leader>X <Plug>(neoterm-repl-send-line)
 
 " Open :T
-nnoremap <Space><Leader> :T<Space>
+nnoremap <Space><LocalLeader> :T<Space>
 
 " ||
 " || Do-thing
