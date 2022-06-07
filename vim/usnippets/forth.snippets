@@ -216,6 +216,12 @@ snippet /\b(ife|ie)/ "if else" rw
 if ${1:${VISUAL}} else $0 then
 endsnippet
 
+snippet case "case .. endcase" w
+case
+${0:${VISUAL}}
+endcase
+endsnippet
+
 snippet of "of .. endof" w
 of ${0:${VISUAL}} endof
 endsnippet
