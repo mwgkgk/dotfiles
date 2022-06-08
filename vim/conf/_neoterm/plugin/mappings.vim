@@ -73,6 +73,7 @@ nnoremap <F9> :rightbelow T make<CR>
 
 " Open :T
 nnoremap <LocalLeader><Space> :T<Space>
+nnoremap <Space><LocalLeader> :T<Space>
 
 " ||
 " || Do-thing
