@@ -167,6 +167,14 @@ nnoremap <silent> <buffer> <LocalLeader>gp9 :T 9 pick<CR>
 nnoremap <silent> <buffer> <LocalLeader>= :T =<CR>
 
 " ||
+" || Variables
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>vv :T <C-r><C-a> ?<CR>
+nnoremap <silent> <buffer> <LocalLeader>vk :T 1 <C-r><C-a> +!<CR>
+nnoremap <silent> <buffer> <LocalLeader>vj :T -1 <C-r><C-a> +!<CR>
+
+" ||
 " || Execution tokens
 " ||
 
