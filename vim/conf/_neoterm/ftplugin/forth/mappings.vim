@@ -184,11 +184,10 @@ nnoremap <silent> <buffer> <LocalLeader>" :T ' <C-r><C-a><CR>
 " || Base
 " ||
 
-nnoremap <silent> <buffer> <LocalLeader><Space><Space> :T decimal<CR>
-nnoremap <silent> <buffer> <LocalLeader><Space>h :T hex<CR>
-nnoremap <silent> <buffer> <LocalLeader><Space>d :T decimal<CR>
-nnoremap <silent> <buffer> <LocalLeader><Space>o :T 8 base !<CR>
-nnoremap <silent> <buffer> <LocalLeader><Space>b :T 2 base !<CR>
+nnoremap <silent> <buffer> <LocalLeader>bh :T hex<CR>
+nnoremap <silent> <buffer> <LocalLeader>bd :T decimal<CR>
+nnoremap <silent> <buffer> <LocalLeader>bo :T 8 base !<CR>
+nnoremap <silent> <buffer> <LocalLeader>bb :T 2 base !<CR>
 
 " ||
 " || Status
