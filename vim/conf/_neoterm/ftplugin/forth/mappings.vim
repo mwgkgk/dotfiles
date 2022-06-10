@@ -71,6 +71,8 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 nnoremap <silent> <buffer> <C-g><C-g> :T see <C-r><C-a><CR>
 " Variable under cursor
 nnoremap <silent> <buffer> <C-g>v :T <C-r><C-a> ?<CR>
+" 2variable under cursor
+nnoremap <silent> <buffer> <C-g>tv :T <C-r><C-a> 2@ d.<CR>
 " Defined? (useful to preserve the stacks)
 nnoremap <silent> <buffer> <C-g>d :T [defined] <C-r><C-a> .<CR>
 " Dump 8 cells under cursor
