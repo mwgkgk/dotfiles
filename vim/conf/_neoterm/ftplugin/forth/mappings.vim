@@ -121,12 +121,15 @@ nnoremap <silent> <buffer> <LocalLeader>td :T 2drop<CR>
 nnoremap <silent> <buffer> <LocalLeader>n :T nip<CR>
 
 " ||
-" || Dup
+" || Dup, over
 " ||
 
 " Dup
 nnoremap <silent> <buffer> <LocalLeader>D :T dup<CR>
 nnoremap <silent> <buffer> <LocalLeader>tD :T 2dup<CR>
+
+nnoremap <silent> <buffer> <LocalLeader>o :T over<CR>
+nnoremap <silent> <buffer> <LocalLeader>T :T tuck<CR>
 
 " ||
 " || Swap, rot
@@ -261,3 +264,25 @@ nnoremap <silent> <buffer> <Leader>rt> :T 2r><CR>
 nnoremap <silent> <buffer> <Leader>rtf :T 2r@<CR>
 nnoremap <silent> <buffer> <Leader>rt@ :T 2r@<CR>
 nnoremap <silent> <buffer> <Leader>rtd :T 2rdrop<CR>
+
+" ||
+" || Floating point stack
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>fd :T fdrop<CR>
+nnoremap <silent> <buffer> <LocalLeader>fn :T fnip<CR>
+nnoremap <silent> <buffer> <LocalLeader>fs :T fswap<CR>
+nnoremap <silent> <buffer> <LocalLeader>fD :T fdup<CR>
+nnoremap <silent> <buffer> <LocalLeader>fo :T fover<CR>
+nnoremap <silent> <buffer> <LocalLeader>ft :T ftuck<CR>
+
+nnoremap <silent> <buffer> <LocalLeader>fgp0 :T 0 fpick<CR>
+nnoremap <silent> <buffer> <LocalLeader>fgp1 :T 1 fpick<CR>
+nnoremap <silent> <buffer> <LocalLeader>fgp2 :T 2 fpick<CR>
+nnoremap <silent> <buffer> <LocalLeader>fgp3 :T 3 fpick<CR>
+nnoremap <silent> <buffer> <LocalLeader>fgp4 :T 4 fpick<CR>
+nnoremap <silent> <buffer> <LocalLeader>fgp5 :T 5 fpick<CR>
+nnoremap <silent> <buffer> <LocalLeader>fgp6 :T 6 fpick<CR>
+nnoremap <silent> <buffer> <LocalLeader>fgp7 :T 7 fpick<CR>
+nnoremap <silent> <buffer> <LocalLeader>fgp8 :T 8 fpick<CR>
+nnoremap <silent> <buffer> <LocalLeader>fgp9 :T 9 fpick<CR>
