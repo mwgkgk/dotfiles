@@ -33,6 +33,7 @@
 " let s:static_colo = 'fukuoka'
 " let s:static_colo = 'shenzhen'
 " let s:static_colo = 'busan'
+let s:static_colo = 'stalker'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
@@ -72,7 +73,7 @@
 " let s:static_colo = 'github'
 " let s:static_colo = 'pink'
 
-let s:static_colo = 'orbital'
+" let s:static_colo = 'orbital'
 " let s:static_colo = 'sceaduhelm'
 
 " let s:static_colo = 'kalisi-dark'
