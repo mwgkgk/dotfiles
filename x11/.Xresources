@@ -104,9 +104,9 @@ URxvt*.tabbed.tab-bg: 9
 /* URxvt*boldFont: xft:Anka/Coder Narrow:size=9:weight=Bold:antialias=true */
 /* URxvt.letterSpace: -1 */
 
-URxvt*font: xft:Anka/Coder Narrow:size=11:antialias=true
-URxvt*boldFont: xft:Anka/Coder Narrow:size=11:weight=Bold:antialias=true
-URxvt.letterSpace: -1
+/* URxvt*font: xft:Anka/Coder Narrow:size=11:antialias=true */
+/* URxvt*boldFont: xft:Anka/Coder Narrow:size=11:weight=Bold:antialias=true */
+/* URxvt.letterSpace: -1 */
 
 /* URxvt*font: xft:Anka/Coder Narrow:size=12:antialias=true */
 /* URxvt*boldFont: xft:Anka/Coder Narrow:size=12:weight=Bold:antialias=true */
@@ -116,9 +116,9 @@ URxvt.letterSpace: -1
 /* URxvt*boldFont: xft:Hack:size=6:weight=Bold:antialias=true */
 /* URxvt.letterSpace: -1 */
 
-/* URxvt*font: xft:Scientifica:size=10:antialias=true */
-/* URxvt*boldFont: xft:Scientifica:size=10:weight=Bold:antialias=true */
-/* URxvt.letterSpace: 1 */
+URxvt*font: xft:Scientifica:size=8:antialias=true
+URxvt*boldFont: xft:Scientifica:size=8:weight=Bold:antialias=true
+URxvt.letterSpace: 1
 
 !Black
 ! *color0: #262626
