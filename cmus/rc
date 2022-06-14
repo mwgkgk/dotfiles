@@ -1,6 +1,6 @@
 cd ~/music/
 
-colorscheme zenburn
+colorscheme amazon
 set lib_sort=filename
 
 bind -f common q :q
