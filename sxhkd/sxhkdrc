@@ -12,11 +12,14 @@ super + F3
 super + F4
 	basso
 
-super + F8
-	girl Top
-
 super + F5
 	girl alsamixer -c 0
+
+super + F7
+	unprowl-okular
+
+super + F8
+	girl Top
 
 super + F9
 	girl upd
