@@ -234,9 +234,12 @@ endsnippet
 # || Loops
 # ||
 
-snippet b "begin" w
-begin $0
-again
+snippet /\b(begin|b)/ "begin" wr
+begin
+	${VISUAL}$0
+while
+	
+repeat
 endsnippet
 
 snippet /\b(loop|do)/ "do" wr
