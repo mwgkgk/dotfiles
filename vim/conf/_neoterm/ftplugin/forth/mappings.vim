@@ -82,6 +82,10 @@ nnoremap <silent> <buffer> <LocalLeader>u :T <C-r><C-a> 8 cells dump<CR>
 nnoremap <silent> <buffer> <C-g>U :T <C-r><C-a> 32 cells dump<CR>
 nnoremap <silent> <buffer> <LocalLeader>U :T <C-r><C-a> 32 cells dump<CR>
 
+" Pad
+nnoremap <silent> <buffer> <C-g>p :T pad 32 cells dump<CR>
+nnoremap <silent> <buffer> <LocalLeader>p :T pad 32 cells dump<CR>
+
 " See anything
 " Not <silent> on purpose
 nnoremap <buffer> <LocalLeader><C-g> :T see<Space>
