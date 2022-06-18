@@ -1,2 +1,2 @@
 " Refresh the status:
-nnoremap <buffer> <F1> :Gstatus<CR>
+nnoremap <buffer> <F1> :Git<CR>
