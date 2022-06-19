@@ -1,4 +1,10 @@
 " ||
+" || Cargo
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>b :T cargo build<CR>
+
+" ||
 " || REPL control
 " ||
 
