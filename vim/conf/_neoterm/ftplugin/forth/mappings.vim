@@ -186,6 +186,7 @@ nnoremap <silent> <buffer> <LocalLeader>vj :T -1 <C-r><C-a> +!<CR>
 " ||
 
 nnoremap <silent> <buffer> <LocalLeader>" :T ' <C-r><C-a><CR>
+nnoremap <silent> <buffer> <LocalLeader>e :T execute<CR>
 
 " ||
 " || Base
