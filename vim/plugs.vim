@@ -1347,6 +1347,9 @@ Plug 'vmchale/ats-vim', { 'for' : 'ats' }
 Plug '~/.vim/conf/_nim.vim/'
 Plug 'zah/nim.vim'
 
+" HLA
+Plug 'jmahler/hla.vim'
+
 " Jiv, Mj
 Plug '~/shop/lex/jiv/jiv-vim/'
 Plug '~/shop/lex/mj/mj-vim/'
