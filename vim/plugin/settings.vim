@@ -165,7 +165,7 @@ set noequalalways
 
 " The default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
-set statusline=\ %{winnr()}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m%{helpers#executable_flag(expand('%'))}\ %{exists('g:loaded_fugitive')?fugitive#head(6):''}\ %{bufnr()}\ %=\ %{expand('#:t')}\ %P
+set statusline=\ %{winnr()}\ %<%{expand('%:h:t')}/%t\ %h%y%r%m%{helpers#executable_flag(expand('%'))}\ %{exists('g:loaded_fugitive')?FugitiveHead(6):''}\ %{bufnr()}\ %=\ %{expand('#:t')}\ %P
 
  " Show even in last window:
 set laststatus=2
