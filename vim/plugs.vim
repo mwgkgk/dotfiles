@@ -642,7 +642,8 @@ Plug 'cohama/lexima.vim', { 'for' : 'factor' }
 
 if !has('win32')
     Plug '~/.vim/conf/_ultisnips/'
-    Plug 'SirVer/ultisnips'
+    " Major insert-mode slowdown after this
+    Plug 'SirVer/ultisnips', { 'commit' : '3f8bdedd574633979f71822325b1da91762935f9' }
 else
     if has('nvim')
         Plug '~/.vim/conf/_LuaSnip/'
