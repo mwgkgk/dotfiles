@@ -53,3 +53,6 @@ set -x npm_config_prefix ~/.node_modules
 
 # Carp
 set -x CARP_DIR ~/.ghq/github.com/carp-lang/Carp/
+
+# Perl
+eval (perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
