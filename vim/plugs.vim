@@ -1258,7 +1258,7 @@ Plug 'bakpakin/fennel.vim'
 " endif
 
 " Janet
-Plug 'bakpakin/janet.vim'
+Plug 'janet-lang/janet.vim'
 
 " Python
 Plug 'bps/vim-textobj-python', { 'for' : 'python' } " {{{
