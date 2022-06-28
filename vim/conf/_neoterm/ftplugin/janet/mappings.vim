@@ -3,7 +3,7 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T janet<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T janet<CR>
 
 " ||
 " || Send
