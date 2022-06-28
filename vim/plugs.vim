@@ -1169,9 +1169,10 @@ Plug 'dag/vim-fish'
 Plug 'hotchpotch/perldoc-vim', { 'for' : 'perl' }
 
 " Prolog
-" This is an undocument Vim ft detection variable for resolving blank .pl ft
+" This is an undocumented Vim ft detection variable for resolving blank .pl ft
 " detection. Is recognized by vim-polyglot as well.
-let g:filetype_pl = 'prolog'
+" let g:filetype_pl = 'prolog'
+let g:filetype_pl = 'perl'
 
 Plug 'adimit/prolog.vim'
 
