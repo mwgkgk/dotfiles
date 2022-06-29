@@ -82,6 +82,11 @@ snippet u "using" b
 using ${1:Test: @test}$2
 endsnippet
 
+snippet pkg "pkg" w
+using Pkg
+Pkg.add("${VISUAL}$0")
+endsnippet
+
 # ||
 # || Structs
 # ||
