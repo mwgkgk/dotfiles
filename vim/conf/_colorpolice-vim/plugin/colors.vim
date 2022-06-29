@@ -54,7 +54,7 @@
 " let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
-let s:static_colo = 'alien-nes'
+" let s:static_colo = 'alien-nes'
 
 " let s:static_colo = 'Tomorrow'
 " let s:static_colo = 'primary'
@@ -101,7 +101,7 @@ let s:static_colo = 'alien-nes'
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
-" let s:static_colo = 'SerialExperimentsLain'
+let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
 " let s:static_colo = 'nighted'
 
