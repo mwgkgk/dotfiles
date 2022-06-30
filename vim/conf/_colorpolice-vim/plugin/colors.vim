@@ -8,7 +8,7 @@
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
 " let s:static_colo = 'mayansmokemod'
-" let s:static_colo = 'badwolf'
+let s:static_colo = 'badwolf'
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'fisa'
 
@@ -101,7 +101,7 @@
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
-let s:static_colo = 'SerialExperimentsLain'
+" let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
 " let s:static_colo = 'nighted'
 
