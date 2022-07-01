@@ -58,6 +58,13 @@ snippet csreq "chicken-scheme require-extension" b
 (require-extension ${1:shell})
 endsnippet
 
+# Bigloo
+snippet "(\()?\bmod(ule)?" "module" rw
+(module ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Define
 # ||
