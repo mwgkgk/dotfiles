@@ -1,4 +1,10 @@
 " ||
+" || Run
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>r :T bigloo-run <C-r>=expand('%')<CR><CR>
+
+" ||
 " || Opening a repl
 " ||
 
