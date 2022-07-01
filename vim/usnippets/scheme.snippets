@@ -81,8 +81,7 @@ snippet l "lambda" w
 endsnippet
 
 snippet "(\()?\b(define|def|d)" "define" rw
-(define $1
-	${VISUAL}$0`!p
+(define $1 ${0:#f}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
