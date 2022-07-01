@@ -2,10 +2,10 @@
 " || Opening a repl
 " ||
 
-nnoremap <buffer> <LocalLeader>gg :silent above T bigloo<CR>
-nnoremap <buffer> <LocalLeader>gb :silent above T bigloo<CR>
-nnoremap <buffer> <LocalLeader>ga :silent above T gosh<CR>
-nnoremap <buffer> <LocalLeader>ga :silent above T guile<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :T bigloo<CR>
+nnoremap <buffer> <LocalLeader>[b :T bigloo<CR>
+nnoremap <buffer> <LocalLeader>[g :T gosh<CR>
+nnoremap <buffer> <LocalLeader>[u :T guile<CR>
 
 " ||
 " || Sending to repl
