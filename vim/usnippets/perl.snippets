@@ -47,8 +47,12 @@ endsnippet
 # || Print
 # ||
 
-snippet p "p"
-say "$1";
+snippet /\b(say|s)/ "say" r
+say "${VISUAL}$0";
+endsnippet
+
+snippet p "also say" w
+say "${VISUAL}$0";
 endsnippet
 
 # ||
