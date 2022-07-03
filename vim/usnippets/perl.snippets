@@ -3,7 +3,32 @@
 # ||
 
 snippet u "use" w
-use ${VISUAL}$0;
+use $0;
+endsnippet
+
+# ||
+# || Date
+# ||
+
+snippet /^ *da(te)?/ "Date" rb
+# `date-utc`
+${0}
+endsnippet
+
+snippet da "date-file-start" "snip.line == 0" e
+#!/usr/bin/env perl
+
+use v5.10;
+use strict;
+use warnings;
+
+# `date-utc`
+
+$0
+endsnippet
+
+snippet dd "dd-inline" w
+`!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
 endsnippet
 
 # ||
@@ -19,161 +44,57 @@ snippet # "comment-#" w
 endsnippet
 
 # ||
-# || Unsorted
+# || Print
 # ||
 
-# Tue Jun 28 06:34:35 UTC 2022
+snippet p "p"
+say "$1";
+endsnippet
 
-###########################################################################
-#                            TextMate Snippets                            #
-###########################################################################
-snippet ife "Conditional if..else (ife)"
-if ($1) {
-	${2:# body...}
-} else {
-	${3:# else...}
+# ||
+# || Subroutines
+# ||
+
+snippet f "sub"
+sub $1 {
+	${VISUAL}$0
 }
-
 endsnippet
 
-snippet ifee "Conditional if..elsif..else (ifee)"
-if ($1) {
-	${2:# body...}
-} elsif ($3) {
-	${4:# elsif...}
-} else {
-	${5:# else...}
-}
-
-endsnippet
-
-snippet xunless "Conditional one-line (unless)"
-${1:expression} unless ${2:condition};
-
-endsnippet
-
-snippet xif "Conditional one-line (xif)"
-${1:expression} if ${2:condition};
-
-endsnippet
-
-snippet f "Function (sub)"
-sub ${1:function_name} {
-	my (${2:$a}) = @_;
-
-	${3:...}
-}
-
-endsnippet
-
-snippet xfore "Loop one-line (xforeach)"
-${1:expression} foreach @${2:array};
-
-endsnippet
-
-snippet xwhile "Loop one-line (xwhile)"
-${1:expression} while ${2:condition};
-
-endsnippet
-
-snippet # "Description" b
-#!/usr/bin/env perl
-
-$0
-endsnippet
-
-snippet test "Test"
-#!/usr/bin/env perl -w
-
-use strict;
-use Test::More tests => ${1:1};
-use ${2:ModuleName};
-
-ok(${3:assertion});
-
-endsnippet
-
-snippet class "class"
-package ${1:ClassName};
-
-${2:use base qw(${3:ParentClass});}${2/.+/\n\n/}sub new {
-	my $class = shift;
-	$class = ref $class if ref $class;
-	my $self = bless {}, $class;
-	$self;
-}
-
-1;
-
-endsnippet
-
-snippet eval "eval"
-eval {
-	${1:# do something risky...}
-};
-if ($@) {
-	${2:# handle failure...}
-}
-
-endsnippet
+# ||
+# || Loops
+# ||
 
 snippet for "for"
 for (my $${1:var} = 0; $$1 < ${2:expression}; $$1++) {
-	${3:# body...}
+	${VISUAL}$0
 }
-
 endsnippet
 
 snippet fore "foreach"
-foreach ${1:my $${2:x}} (@${3:array}) {
-	${4:# body...}
+foreach$1 (@${2:array}) {
+	${VISUAL}$0
 }
-
 endsnippet
+
+# ||
+# || Control flow
+# ||
 
 snippet if "if"
 if ($1) {
-	${2:# body...}
+	${VISUAL}$0
 }
-
-endsnippet
-
-snippet slurp "slurp"
-my $${1:var} = do { local $/ = undef; open my $fh, '<', ${2:$file}; <$fh> };
-
-endsnippet
-
-snippet file "file" b
-open my $fh, '+<', $gitignore
-	or die "Can't open file: $_";
-
-close $fh or die "Couldn't close file : $_";
 endsnippet
 
 snippet unless "unless"
 unless ($1) {
-	${2:# body...}
+	${VISUAL}$0
 }
-
 endsnippet
 
 snippet while "while"
 while ($1) {
-	${2:# body...}
+	${VISUAL}$0
 }
-
 endsnippet
-
-snippet cho "chomp" b
-chomp($${1:} = <STDIN>);
-endsnippet
-
-snippet p "p"
-print "$1";
-endsnippet
-
-snippet s "s" b
-say "$1";
-endsnippet
-
-# vim:ft=snippets:
