@@ -21,3 +21,12 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
+
+" Send atom under cursor
+nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-a><CR>
+
+" ||
+" || Docs
+" ||
+
+nnoremap <silent> <buffer> <C-g>s :T say <C-r><C-a><CR>
