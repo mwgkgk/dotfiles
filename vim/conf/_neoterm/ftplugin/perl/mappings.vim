@@ -4,7 +4,7 @@
 
 nnoremap <silent> <buffer> <Leader>r :T perl <C-r>=expand('%')<CR><CR>
 
-nnoremap <silent> <buffer> <LocalLeader>r :T perl -de1<CR>
+nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T re.pl<CR>
 
 " ||
 " || Send
