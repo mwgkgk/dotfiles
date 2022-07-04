@@ -72,8 +72,12 @@ snippet /\b(say|sa|s)/ "say" r
 say "${VISUAL}$0";
 endsnippet
 
-snippet p "also say" w
-say "${VISUAL}$0";
+snippet p "say minus quotes" w
+say ${VISUAL}$0;
+endsnippet
+
+snippet pr "print" w
+print ${VISUAL}$0;
 endsnippet
 
 # ||
