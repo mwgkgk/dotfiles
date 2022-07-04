@@ -132,6 +132,11 @@ snippet /\b(my|m)/ "my" r
 my $$1 = ${VISUAL}$0;
 endsnippet
 
+# Should be above thing but escaping in regex didnt work
+snippet $ "$" w
+my $$1 = ${VISUAL}$0;
+endsnippet
+
 # ||
 # || Processes
 # ||
