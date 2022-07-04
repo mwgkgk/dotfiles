@@ -48,6 +48,13 @@ snippet # "comment-#" w
 # ${VISUAL}$0
 endsnippet
 
+snippet /^(\s*)(// )?(T|td)/ "TODO-comment" r
+`!p
+# Whitespace:
+if match.group(1) is not None:
+	snip.rv = match.group(1)`# TODO ${VISUAL}$0
+endsnippet
+
 snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
 =begin comment `date-jiv`
 
@@ -131,4 +138,30 @@ endsnippet
 
 snippet ` "``" w
 `${VISUAL}$0`
+endsnippet
+
+# ||
+# || Fallback
+# ||
+
+priority -2
+
+snippet  /;$/ "expand-endline-semicolon" rw
+; # ${VISUAL}$0
+endsnippet
+
+priority -3
+
+snippet  /^\s+([:\w]+)$/ "expand-any-word-endline" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`(${VISUAL}$0);
+endsnippet
+
+priority -4
+
+snippet  /([:\w]+)/ "expand-any-word" rw
+`!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)`(${VISUAL}$0)
 endsnippet
