@@ -48,6 +48,15 @@ snippet # "comment-#" w
 # ${VISUAL}$0
 endsnippet
 
+snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
+=begin comment `date-jiv`
+
+${VISUAL}$0
+
+=end comment
+=cut
+endsnippet
+
 # ||
 # || Print
 # ||
