@@ -155,6 +155,18 @@ snippet  /;$/ "expand-endline-semicolon" rw
 ; # ${VISUAL}$0
 endsnippet
 
+snippet /([:\w]+)\$/ "expand-any-word-as-scalar" r
+$`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)` $0
+endsnippet
+
+snippet /([:\w]+)@/ "expand-any-word-as-array" r
+@`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)` $0
+endsnippet
+
 priority -3
 
 snippet  /^\s+([:\w]+)$/ "expand-any-word-endline" rw
