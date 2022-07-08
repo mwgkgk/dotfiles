@@ -158,9 +158,16 @@ snippet /\b(my|m)/ "my" r
 my $$1 = ${VISUAL}$0;
 endsnippet
 
-# Should be above thing but escaping in regex didnt work
-snippet $ "$" w
+snippet $ "$variable" w
 my $$1 = ${VISUAL}$0;
+endsnippet
+
+snippet @ "@array" w
+my @$1 = ${VISUAL}$0;
+endsnippet
+
+snippet % "%hash" w
+my %$1 = ${VISUAL}$0;
 endsnippet
 
 # ||
