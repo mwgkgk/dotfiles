@@ -1,4 +1,10 @@
 " ||
+" || Run
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>r :T racket <C-r>=expand('%')<CR><CR>
+
+" ||
 " || Repl
 " ||
 
