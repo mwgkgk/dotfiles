@@ -2,7 +2,7 @@
 " || Repl
 " ||
 
-nnoremap <buffer> <LocalLeader>gg :silent above T racket<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :T racket<CR>
 
 " ||
 " || Eval
