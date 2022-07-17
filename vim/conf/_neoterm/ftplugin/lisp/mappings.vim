@@ -50,12 +50,12 @@ nnoremap <buffer> <LocalLeader>U :silent T (untrace)<CR>
 " ||
 
 " Run repls:
-nnoremap <buffer> <LocalLeader>gg :silent T sbcl<CR>
-nnoremap <buffer> <LocalLeader>ge :silent T ecl<CR>
-nnoremap <buffer> <LocalLeader>gs :silent T sbcl<CR>
-nnoremap <buffer> <LocalLeader>gc :silent T ccl<CR>
-nnoremap <buffer> <LocalLeader>gi :silent T clisp<CR>
-nnoremap <buffer> <LocalLeader>ga :silent T abcl-cp<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :silent T sbcl<CR>
+nnoremap <buffer> <LocalLeader>[e :silent T ecl<CR>
+nnoremap <buffer> <LocalLeader>[s :silent T sbcl<CR>
+nnoremap <buffer> <LocalLeader>[c :silent T ccl<CR>
+nnoremap <buffer> <LocalLeader>[i :silent T clisp<CR>
+nnoremap <buffer> <LocalLeader>[a :silent T abcl-cp<CR>
 
 " ECL
 " Return to som previous break level
