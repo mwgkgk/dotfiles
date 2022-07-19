@@ -22,6 +22,22 @@
                       :output-file compiled-file)
         (load compiled-file)))))
 
-;;; Utils
+
+;;; *
+;;; * Colored prompt
+;;; *
+
+(require 'sb-aclrepl)
+
+(setf sb-aclrepl:*prompt*
+      (lambda (&rest args)
+        (let
+          ((formatstring (format nil "~c[36m~A~c[0m" #\ESC sb-aclrepl::*default-prompt* #\ESC)))
+          (apply #'format (concatenate 'list (list nil formatstring) args)))))
+
+;;; *
+;;; * Utils
+;;; *
+
 (ql:quickload :craftsperson)
 (use-package :craftsperson)
