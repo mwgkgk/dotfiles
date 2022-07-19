@@ -10,6 +10,8 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
 " Send atom under cursor
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
+" Unintern symbol under cursor
+nnoremap <silent> <buffer> <C-x>u :silent T (unintern '<C-r><C-w>)<CR>
 
 nnoremap <buffer> <LocalLeader>l :silent T (load #P"<C-r>=expand('%:p')<CR>")<CR>
 
