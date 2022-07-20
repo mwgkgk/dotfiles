@@ -22,13 +22,17 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 " || Docs
 " ||
 
-nnoremap <buffer> <C-g>a :silent T (apropos "<C-r><C-w>")<CR>
-nnoremap <buffer> <C-g><C-a> :silent T (apropos "<C-r><C-w>")<CR>
-nnoremap <buffer> <C-g>A :T (apropos "")<Left><Left>
-
 nnoremap <buffer> <C-g><C-g> :silent T (describe '<C-r><C-w>)<CR>
-nnoremap <buffer> <C-g>d :silent T (describe '<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-d> :silent T (describe #'<C-r><C-w>)<CR>
+
+nnoremap <buffer> <C-g>d :silent T (find-all-symbols (string-upcase "<C-r><C-w>"))<CR>
+nnoremap <buffer> <C-g>D :silent T (apropos "<C-r><C-w>")<CR>
+
+nnoremap <buffer> <C-g>a :T (apropos "")<Left><Left>
+
+" https://github.com/tkych/quicksearch
+nnoremap <buffer> <C-g>q :T (qs:? "" :du)<Left><Left><Left><Left><Left><Left>
+nnoremap <buffer> <C-g>Q :silent T (qs:? "<C-r><C-w>" :du)<CR>
 
 nnoremap <buffer> <C-g>v :silent T (documentation '<C-r><C-w> 'variable)<CR>
 nnoremap <buffer> <C-g>s :silent T (documentation '<C-r><C-w> 'symbol)<CR>

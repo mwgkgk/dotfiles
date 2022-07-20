@@ -19,5 +19,5 @@
 ;;; * Repl utils
 ;;; *
 
-(ql:quickload :ghost :silent t)
+(ql:quickload '(#:ghost) :silent t)
 (use-package :ghost)
