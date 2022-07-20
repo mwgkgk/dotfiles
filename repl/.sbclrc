@@ -36,8 +36,8 @@
           (apply #'format (concatenate 'list (list nil formatstring) args)))))
 
 ;;; *
-;;; * Utils
+;;; * Repl utils
 ;;; *
 
-(ql:quickload :craftsperson)
-(use-package :craftsperson)
+(ql:quickload :ghost :silent t)
+(use-package :ghost)

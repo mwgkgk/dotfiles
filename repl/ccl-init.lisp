@@ -82,12 +82,15 @@
   (if (search ".ghq/" (ccl::current-directory-name)))
   nil) ; 2021-06-19/04:52:50
 
-;;; Utils
-(ql:quickload :craftsperson)
-(use-package :craftsperson)
-
 ;;; *
 ;;; * CCL Config
 ;;; *
 
 (setf *quit-on-eof* t)
+
+;;; *
+;;; * Repl utils
+;;; *
+
+(ql:quickload :ghost :silent t)
+(use-package :ghost)

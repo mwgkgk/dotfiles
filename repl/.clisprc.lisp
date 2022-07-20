@@ -14,3 +14,10 @@
       (compile-file #P"~/asdf.lisp"
                     :output-file compiled-file))
     (load compiled-file)))
+
+;;; *
+;;; * Repl utils
+;;; *
+
+(ql:quickload :ghost :silent t)
+(use-package :ghost)
