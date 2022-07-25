@@ -12,6 +12,14 @@ nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
 " Unintern symbol under cursor
 nnoremap <silent> <buffer> <C-x>u :silent T (unintern '<C-r><C-w>)<CR>
+" Also mind: (f)makunbound, delete-package, make-instances-obsolete, and
+" remove-method, as per https://stackoverflow.com/a/57346413/2383252
+" For values:
+nnoremap <silent> <buffer> <C-x>UM :silent T (makunbound '<C-r><C-w>)<CR>
+" For functions and macros:
+nnoremap <silent> <buffer> <C-x>UF :silent T (fmakunbound '<C-r><C-w>)<CR>
+" For packages:
+nnoremap <silent> <buffer> <C-x>UP :silent T (delete-package '<C-r><C-w>)<CR>
 
 nnoremap <buffer> <LocalLeader>l :silent T (load #P"<C-r>=expand('%:p')<CR>")<CR>
 
