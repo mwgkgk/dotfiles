@@ -36,8 +36,9 @@ super + c
 super + t
 	temple
 
-super + slash
-	march
+# Free it up
+# super + slash
+# 	march
 
 super + period
 	brahmin
@@ -62,6 +63,9 @@ super + 8
 
 super + 9
 	firefox-super-nine
+
+super + equal
+	forgepriest
 
 super + o
 	firefox-ulm

@@ -40,6 +40,8 @@ endfunction
 function! colors#chi_colo(chi, static_colo)
     if a:chi ==# 'march'
         return a:static_colo
+    elseif a:chi ==# 'forgepriest'
+        return a:static_colo
     elseif a:chi ==# 'ship'
         return a:static_colo
     elseif a:chi ==# 'girl'
