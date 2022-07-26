@@ -125,7 +125,7 @@ if not snip.v.text:
 $0
 endsnippet
 
-snippet "(\()?\b(defpackage|defpac|pac)" "defpackage" rw
+snippet "(\()?\b(defpackage|defpkg|defpac|pac)" "defpackage" rw
 (defpackage #:${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = os.path.splitext(fn)[0]
