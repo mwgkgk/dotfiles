@@ -34,6 +34,10 @@ nnoremap <buffer> <C-g><C-g> :silent T (describe '<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-d> :silent T (describe #'<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-s> :silent T (describe <C-r><C-w>)<CR>
 
+nnoremap <buffer> <C-g>g<C-g> :silent T (inspect '<C-r><C-w>)<CR>
+nnoremap <buffer> <C-g>g<C-d> :silent T (inspect #'<C-r><C-w>)<CR>
+nnoremap <buffer> <C-g>g<C-s> :silent T (inspect <C-r><C-w>)<CR>
+
 nnoremap <buffer> <C-g>d :silent T (find-all-symbols (string-upcase "<C-r><C-w>"))<CR>
 nnoremap <buffer> <C-g>D :silent T (apropos "<C-r><C-w>")<CR>
 
