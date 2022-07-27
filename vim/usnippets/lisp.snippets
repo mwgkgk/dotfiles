@@ -493,7 +493,7 @@ endsnippet
 
 snippet "(\()?\b(defmethod|defmet|defm|me|m)" "defmethod" rw
 (defmethod ${1:method} ($2)
-	${VISUAL}$0`!p
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
