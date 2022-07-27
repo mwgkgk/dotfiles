@@ -20,12 +20,14 @@ function! folding#lisp#get_fold_level(lnum)
         return '-1'
     endif
 
-    if l:current_line_contents =~? '^#+nil'
+    if l:current_line_contents =~? '^#+nil' ||
+                \ l:current_line_contents =~? '^#+#:'
         return '>1'
     endif
 
     if l:current_line_contents =~? '^\S'
-        if getline(a:lnum - 1) =~? '^#+nil'
+        if getline(a:lnum - 1) =~? '^#+nil' ||
+                    \ getline(a:lnum - 1) =~? '^#+#:'
             return '1'
         endif
 
