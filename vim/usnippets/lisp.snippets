@@ -76,6 +76,10 @@ snippet /^(T|;t)$/ "TODO" r
 ;;; TODO ${VISUAL}$0
 endsnippet
 
+snippet tbd "TBD" w
+;;; TBD ${VISUAL}$0
+endsnippet
+
 snippet /^(\s+)(T|;t)$/ "TODO-indented" r
 `!p
 if match.group(1) is not None:
