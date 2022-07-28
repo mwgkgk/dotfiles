@@ -161,11 +161,11 @@ alt + ~c
 # Thunderbird
 
 # Kmonad: Wraith x
-super + 6
+super + control+ 7
 	thunderbird-open-link
 
 # Kmonad: Wraith f
-super + shift + 6
+super + shift + 7
 	thunderbird-open-link-with-image
 
 # Kmonad: Wraith e
