@@ -96,7 +96,7 @@ endsnippet
 # || Imports & Packages
 # ||
 
-snippet pkg "date, defpackage, in-package" w
+snippet pd "date, defpackage, in-package" w
 ;;; `date-utc`
 
 (defpackage #:${VISUAL}${1:`!p
@@ -125,7 +125,7 @@ if not snip.v.text:
 $0
 endsnippet
 
-snippet "(\()?\b(defpackage|defpkg|defpac|pac|dp)" "defpackage" rw
+snippet "(\()?\b(defpackage|defpkg|defpac|pac|pkg|dp)" "defpackage" rw
 (defpackage #:${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = os.path.splitext(fn)[0]
