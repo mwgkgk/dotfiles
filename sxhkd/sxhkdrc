@@ -36,9 +36,8 @@ super + c
 super + t
 	temple
 
-# Free it up
-# super + slash
-# 	march
+super + slash
+	torghast
 
 super + period
 	brahmin
