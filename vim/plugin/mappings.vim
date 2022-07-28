@@ -1,5 +1,5 @@
 " This file contains mappings for base Vim. Plugin mappings can be found in
-" corresponding conf/<plugin>/plugin/mappings.vim files.
+" corresponding conf/<plugin>/plugin/mappings.vim files.:
 " Filetype specific mappings can be found in ftplugin/<filetype>/mappings.vim
 
 "
@@ -129,6 +129,10 @@ nnoremap <silent> <Space>gl :call window#suckless#move("l")<CR>
 
 " Split alt file:
 nnoremap <Space># :sp #<CR>
+" Vert split alt file:
+nnoremap <Space><Leader># :vert sp #<CR>
+" Above split alt file:
+nnoremap <Space>g# :above sp #<CR>
 
 " Disable <C-w>o, use :only instead.
 nnoremap <C-w>o <Nop>
