@@ -89,6 +89,7 @@ function! _vim_sexp#setup_mappings()
   xmap <silent><buffer> <C-c>o          <Plug>(sexp_raise_element)
   nmap <silent><buffer> <C-c><C-o>      <Plug>(sexp_raise_element)
   xmap <silent><buffer> <C-c><C-o>      <Plug>(sexp_raise_element)
+  imap <silent><buffer> <C-g><C-f>      <Esc><Plug>(sexp_round_tail_wrap_element)a
   nmap <silent><buffer> <C-k>           <Plug>(sexp_swap_list_backward)
   xmap <silent><buffer> <C-k>           <Plug>(sexp_swap_list_backward)
   nmap <silent><buffer> <C-j>           <Plug>(sexp_swap_list_forward)
