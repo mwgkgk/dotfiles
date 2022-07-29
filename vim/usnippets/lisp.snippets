@@ -684,14 +684,14 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\b(dolist|dol)" "dolist" rw
+snippet "(\()?\b(dolist|dol|dl)" "dolist" rw
 (dolist ($1)
 	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\b(dotimes|dot)" "dolist" rw
+snippet "(\()?\b(dotimes|dot|dt)" "dotimes" rw
 (dotimes ($1)
 	${VISUAL}$0`!p
 if match.group(1) is None:
