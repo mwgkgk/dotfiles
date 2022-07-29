@@ -110,9 +110,6 @@ super + w
 super + g
 	~/.burrow/quick-launch/go/guns
 
-super + Delete
-	burrow ~/.burrow/leader/c-files
-
 super + slash
 	burrow ~/.burrow/terminals/
 
