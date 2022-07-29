@@ -95,4 +95,4 @@
 (ql:quickload '(#:ghost) :silent t)
 (use-package :ghost)
 
-(ql:quickload '(#:quicksearch) :silent t)
+; (ql:quickload '(#:quicksearch) :silent t)
