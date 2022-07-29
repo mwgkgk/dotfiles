@@ -13,6 +13,8 @@
               :backend :vlime-usocket)
   (defvar *vlime-loaded* t))
 
+(ql:quickload '(#:centre-of-the-pacific))
+(cotp:open-repl)
 
 ;;; Root prefix
 (set-prefix-key (kbd "s-space"))
