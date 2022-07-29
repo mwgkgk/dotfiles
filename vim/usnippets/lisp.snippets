@@ -76,13 +76,13 @@ snippet /^(T|;t)$/ "TODO" r
 ;;; TODO ${VISUAL}$0
 endsnippet
 
-snippet /^(\s+)tbd/ ";;" r
+snippet /^(\s+)tbd?/ ";;" r
 `!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`;; TBD ${VISUAL}$0
 endsnippet
 
-snippet /^tbd/ ";;;" r
+snippet /^tbd?/ ";;;" r
 ;;; TBD ${VISUAL}$0
 endsnippet
 
