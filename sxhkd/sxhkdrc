@@ -36,9 +36,6 @@ super + c
 super + t
 	temple
 
-super + slash
-	torghast
-
 super + period
 	brahmin
 
@@ -115,6 +112,9 @@ super + g
 
 super + Delete
 	burrow ~/.burrow/leader/c-files
+
+super + slash
+	burrow ~/.burrow/terminals/
 
 # Factor
 
