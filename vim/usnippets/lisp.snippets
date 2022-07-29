@@ -397,6 +397,17 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Conditionals
+# ||
+
+snippet "(\()?\bwhen" "when" rw
+(when $1
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Basement
 # ||
 
