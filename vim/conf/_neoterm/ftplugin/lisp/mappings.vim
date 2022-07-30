@@ -51,6 +51,8 @@ nnoremap <buffer> <C-g>a :T (apropos "")<Left><Left>
 nnoremap <buffer> <C-g>q :T (qs:? "" :du)<Left><Left><Left><Left><Left><Left>
 nnoremap <buffer> <C-g>Q :silent T (qs:? "<C-r><C-w>" :du)<CR>
 
+nnoremap <silent> <buffer> <C-g>gq :T (ql:quickload '(#:))<Left><Left>
+
 nnoremap <buffer> <C-g>v :silent T (documentation '<C-r><C-w> 'variable)<CR>
 nnoremap <buffer> <C-g>s :silent T (documentation '<C-r><C-w> 'symbol)<CR>
 nnoremap <buffer> <C-g>f :silent T (documentation '<C-r><C-w> 'function)<CR>
