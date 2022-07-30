@@ -2,18 +2,8 @@
 
 (in-package :stumpwm)
 
-#+nil
-(ql:quickload :vlime)
-
-#+nil
-(when (not (boundp '*vlime-loaded*))
-  (vlime:main :interface #(127 0 0 1)
-              ;; TODO pick a free port automatically and use :port-file
-              :port 44820
-              :backend :vlime-usocket)
-  (defvar *vlime-loaded* t))
-
 (ql:quickload '(#:centre-of-the-pacific))
+
 (cotp:open-repl)
 
 ;;; Root prefix
@@ -269,8 +259,7 @@
 
 ;;; Leader
 
-;; TODO refactor it to define inplace, because defvars are not meant for reev
-(defvar *leader-map*
+(defparameter leader-map*
   (let ((m (make-sparse-keymap)))
     (define-key m (kbd "s-semicolon") "colon")
     (define-key m (kbd "s-space") '*leader-space-map*)
@@ -283,7 +272,7 @@
 
 (define-key *top-map* (kbd "s-semicolon") '*leader-map*)
 
-(defvar *leader-space-map*
+(defparameter *leader-space-map*
   (let ((m (make-sparse-keymap)))
     (define-key m (kbd "s-n") "split-run down 50 tileterm")
     (define-key m (kbd "n") "split-run down 50 tileterm")
