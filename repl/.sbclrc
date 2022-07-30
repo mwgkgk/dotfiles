@@ -43,3 +43,5 @@
 (use-package :ghost)
 
 (ql:quickload '(#:quicksearch) :silent t)
+
+(ql:quickload '(#:colony) :silent t)
