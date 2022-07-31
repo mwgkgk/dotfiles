@@ -71,6 +71,16 @@ nnoremap <buffer> <LocalLeader>u :silent T (untrace <C-r><C-w>)<CR>
 nnoremap <buffer> <LocalLeader>U :silent T (untrace)<CR>
 
 " ||
+" || Fallbacks
+" ||
+
+" ghost-cl
+nnoremap <silent> <buffer> <LocalLeader>fa :T (ask-user-for-fallback '<C-r><C-w>) <CR>
+nnoremap <silent> <buffer> <LocalLeader>fl :T fallback-list<CR>
+nnoremap <silent> <buffer> <LocalLeader>fc :T (clear-fallback-list)<CR>
+nnoremap <silent> <buffer> <LocalLeader>fd :T (delete-fallback '<C-r><C-w>)<CR>
+
+" ||
 " || Repl control
 " ||
 
