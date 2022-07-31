@@ -164,6 +164,11 @@ snippet up "use-package" w
 (use-package '(#:$0))
 endsnippet
 
+snippet ulp "unlock-package" w
+#+sbcl
+(sb-ext:unlock-package (find-package "CL"))
+endsnippet
+
 snippet di "date, in-package" w
 ;;; `date-utc`
 
