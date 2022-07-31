@@ -68,6 +68,8 @@ function! colors#chi_colo(chi, static_colo)
         return a:static_colo
     elseif a:chi ==# 'johnconnor'
         return a:static_colo
+    elseif a:chi ==# 'ice'
+        return a:static_colo
     elseif a:chi ==# 'endless-fortress'
         return 'busan'
     elseif a:chi ==# 'gums'
