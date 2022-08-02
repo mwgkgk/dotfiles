@@ -3,7 +3,7 @@
 " ||
 
 " Open repl
-nnoremap <buffer> <LocalLeader>gg :silent T factor-repl<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :silent T factor-repl<CR>
 
 " Restarts
 nnoremap <buffer> <LocalLeader>1 :silent T :1<CR>
