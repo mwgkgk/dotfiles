@@ -3,7 +3,7 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>gg :silent T hy<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :silent T hy<CR>
 
 " ||
 " || Send
