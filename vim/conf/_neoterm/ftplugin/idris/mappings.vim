@@ -12,3 +12,10 @@ nnoremap <silent> <buffer> <Leader>r :T idris2 -x main <C-r>=expand('%:p')<CR><C
 " ||
 
 nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T idris2<CR>
+
+" ||
+" || Send
+" ||
+
+nnoremap <silent> <buffer> X :TREPLSendLine<CR>
+vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
