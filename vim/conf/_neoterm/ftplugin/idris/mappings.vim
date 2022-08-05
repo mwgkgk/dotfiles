@@ -19,3 +19,9 @@ nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T idris2<CR>
 
 nnoremap <silent> <buffer> X :TREPLSendLine<CR>
 vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
+
+" ||
+" || Load
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>l :T :l "<C-r>=expand('%:p')<CR>"<CR>
