@@ -712,22 +712,20 @@ endsnippet
 # ||
 
 snippet "(\()?\blo(op)?" "loop" wr
-(loop
-	${0::for }$1`!p
-if match.group(1) is None:
+(loop ${VISUAL}$0$1`!p if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet for "Loop for" w
-:for ${1:x} ${2::across} ${0:str}
+(loop for ${1:item} in ${0:items})
 endsnippet
 
 snippet /:?col(lect)?/ "Loop collect" rw
-:collect ${VISUAL}$0
+collect ${VISUAL}$0
 endsnippet
 
 snippet /:?fin(ally)?/ "Loop finally" rw
-:finally (return ${0:($1)})
+finally (return ${0:($1)})
 endsnippet
 
 # ||
