@@ -533,7 +533,7 @@ endsnippet
 # || Methods
 # ||
 
-snippet "(\()?\b(defmethod|defmet|defm|me|m)" "defmethod" rw
+snippet "(\()?\b(defmethod|defmet|defm|mtd|me)" "defmethod" rw
 (defmethod ${1:method} ($2)
 	${0:nil}`!p
 if match.group(1) is None:
@@ -603,7 +603,7 @@ endsnippet
 # || Macros
 # ||
 
-snippet "(\()?\b(defmacro|defmac|defma|dm|macro|macr|mac|mc)" "m" rw
+snippet "(\()?\b(defmacro|defmac|defma|dm|macro|macr|mac|ma|m)" "m" rw
 (defmacro ${1:macro} (${2:&body ${3:body}})
 	${0:nil}`!p
 if match.group(1) is None:
