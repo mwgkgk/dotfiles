@@ -75,7 +75,7 @@ nnoremap <buffer> <LocalLeader>U :silent T (untrace)<CR>
 " ||
 
 " ghost-cl
-nnoremap <silent> <buffer> <LocalLeader>fa :T (ask-user-for-fallback '<C-r><C-w>) <CR>
+nnoremap <silent> <buffer> <LocalLeader>fa :T (deffallback <C-r><C-w> )<Left>
 nnoremap <silent> <buffer> <LocalLeader>fl :T fallback-list<CR>
 nnoremap <silent> <buffer> <LocalLeader>fc :T (clear-fallback-list)<CR>
 nnoremap <silent> <buffer> <LocalLeader>fu :T (delete-fallback '<C-r><C-w>)<CR>
