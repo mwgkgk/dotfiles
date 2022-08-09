@@ -1,0 +1,43 @@
+# ||
+# || Date
+# ||
+
+snippet / *d(a)?(te)?/ "Date" rb
+# `date-utc`
+
+${0}
+endsnippet
+
+snippet dd "date-inline" w
+`date-jiv` ${VISUAL}$0
+endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet T "TODO" b
+# TODO 
+endsnippet
+
+snippet ; "Comment-generic" w
+# `!v system('date-jiv | tr -d "\n"')` ${0}
+endsnippet
+
+snippet # "Comment-#" w
+# `!v system('date-jiv | tr -d "\n"')` ${0}
+endsnippet
+
+# Tue Aug  9 10:53:11 UTC 2022
+
+# ||
+# || Methods
+# ||
+
+snippet f "method" w
+def $1()
+	${VISUAL}$0
+end
+endsnippet
+
+# vim:ft=snippets:
