@@ -1349,6 +1349,9 @@ Plug 'vmchale/ats-vim', { 'for' : 'ats' }
 Plug '~/.vim/conf/_nim.vim/'
 Plug 'zah/nim.vim'
 
+" Crystal
+Plug 'vim-crystal/vim-crystal'
+
 " HLA
 Plug 'jmahler/hla.vim'
 
