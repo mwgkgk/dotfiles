@@ -28,6 +28,35 @@ snippet # "Comment-#" w
 # `!v system('date-jiv | tr -d "\n"')` ${0}
 endsnippet
 
+# Tue Aug  9 11:24:05 UTC 2022
+
+# ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+if false # `!v system('date-jiv | tr -d "\n"')`
+    ${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+end
+endsnippet
+
+snippet dab "dab" w
+# `date-utc`
+
+if false # `!v system('date-jiv | tr -d "\n"')`
+    ${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = ""
+`}
+endif
+endsnippet
+
 # Tue Aug  9 10:53:11 UTC 2022
 
 # ||
