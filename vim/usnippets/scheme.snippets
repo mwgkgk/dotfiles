@@ -148,7 +148,7 @@ endsnippet
 # ||
 
 snippet "(\()?\bp" "print" rw
-(display ${2:"${1:Hello!}"}$3`!p
+(display ${2:"${1:Hello!}"}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
@@ -161,9 +161,9 @@ endsnippet
 # The #; reader macro makes ambient-form break on multiline
 # Indent is bugged hence () there to make it easier
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-(when #f  ; `!v system('date-jiv | tr -d "\n"')`
-	$1
-	#f)
+(when #f ; `!v system('date-jiv | tr -d "\n"')`
+  $0
+  #f)
 endsnippet
 
 # ||
@@ -212,7 +212,7 @@ snippet  /([\!:\w=\-\+><\*\?]+)\$/ "expand-any-word-as-let" rw
 	((`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)` ${1:#f})$2)
-	${3:#f})
+	${0:#f})
 endsnippet
 
 priority -2
@@ -229,5 +229,5 @@ priority -3
 snippet  /([\!:\w=\-\+><\*\?]+)/ "expand-any-word" rw
 (`!p
 if match.group(0) is not None:
-	snip.rv = match.group(0)` $1)
+	snip.rv = match.group(0)` $0)
 endsnippet
