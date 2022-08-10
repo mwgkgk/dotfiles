@@ -129,3 +129,10 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 " Load + in-package = w
 " Reason it's <silent> is because long command requires a prompt
 nnoremap <buffer> <silent> <LocalLeader>w :silent T (progn (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>))<CR>
+
+" ||
+" || Silly
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>sr :T (1+ (random 100))<CR>
+nnoremap <silent> <buffer> <LocalLeader>sd :T (list (1+ (random 6)) (1+ (random 6)))<CR>
