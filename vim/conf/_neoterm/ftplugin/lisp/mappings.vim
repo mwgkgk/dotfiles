@@ -137,4 +137,5 @@ nnoremap <buffer> <silent> <LocalLeader>w :silent T (progn (load #P"<C-r>=expand
 nnoremap <silent> <buffer> <LocalLeader>sr :T (1+ (random 100))<CR>
 nnoremap <silent> <buffer> <LocalLeader>sd :T (list (1+ (random 6)) (1+ (random 6)))<CR>
 
-nnoremap <silent> <buffer> <LocalLeader>sa :T (agenda)<CR>
+nnoremap <silent> <buffer> <LocalLeader>sa :T (scheduling-facility:agenda)<CR>
+nnoremap <silent> <buffer> <LocalLeader>sq :T (colony:nearest-asd-quicklisp-status)<CR>
