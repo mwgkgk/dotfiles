@@ -46,6 +46,9 @@
 
 (ql:quickload '(#:colony #:scheduling-facility #:condition-system) :silent t)
 
+;;; neoterm workaround meme
+(defparameter sbcl t)
+
 ;;; *
 ;;; * Greeting
 ;;; *
