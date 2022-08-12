@@ -44,4 +44,4 @@
 
 (ql:quickload '(#:quicksearch) :silent t)
 
-(ql:quickload '(#:colony) :silent t)
+(ql:quickload '(#:colony #:scheduling-facility #:condition-system) :silent t)
