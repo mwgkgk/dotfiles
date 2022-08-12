@@ -533,7 +533,7 @@ endsnippet
 # || Methods
 # ||
 
-snippet "(\()?\b(defmethod|defmet|defm|mtd|me)" "defmethod" rw
+snippet "(\()?\b(defmethod|defmeth|defmet|defm|mtd|me)" "defmethod" rw
 (defmethod ${1:method} ($2)
 	${0:nil}`!p
 if match.group(1) is None:
