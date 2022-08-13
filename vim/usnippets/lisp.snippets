@@ -833,7 +833,17 @@ snippet nil "#+#:nil" w
 #+#:${0:nil}
 endsnippet
 
-snippet : "#+#:" w
+priority -1
+
+# this one gets to be prioritied down because # in #: is apparently not a word
+# symbol 
+snippet : "#:" w
+#:${0:${VISUAL}}
+endsnippet
+
+priority 0
+
+snippet #: "#+#:" w
 #+#:${0:${VISUAL}}
 endsnippet
 
