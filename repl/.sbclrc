@@ -48,6 +48,8 @@
 
 ;;; neoterm workaround meme
 (defparameter sbcl t)
+;;; mis-send cause muscle memory to abort from errors
+(defparameter abort t)
 
 ;;; *
 ;;; * Greeting
