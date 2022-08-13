@@ -98,7 +98,12 @@ nnoremap <buffer> <LocalLeader>[a :silent T abcl-cp<CR>
 nnoremap <buffer> <LocalLeader>Q :silent T :q<CR>
 
 " SBCL
-nnoremap <buffer> <LocalLeader>a :silent T abort<CR>
+
+" Use short alias because cant override abort without unlocking,
+" and you want to make it be defined in bare repl because accidentally sending
+" nnoremap <buffer> <LocalLeader>a :silent T abort<CR>
+nnoremap <buffer> <LocalLeader>a :silent T a<CR>
+
 nnoremap <buffer> <LocalLeader>r :silent T retry<CR>
 nnoremap <buffer> <LocalLeader>c :silent T continue<CR>
 nnoremap <buffer> <LocalLeader>b :silent T backtrace<CR>
