@@ -136,6 +136,12 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 nnoremap <buffer> <silent> <LocalLeader>w :silent T (progn (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>))<CR>
 
 " ||
+" || Quicklisp
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>gql :T (ql:quickload '(#:<C-r><C-w>))<CR>
+
+" ||
 " || Silly
 " ||
 
