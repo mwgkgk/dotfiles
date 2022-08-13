@@ -16,8 +16,7 @@
     (load compiled-file)))
 
 ;;; *
-;;; * Repl utils
+;;; * Common utilities
 ;;; *
 
-(ql:quickload '(#:ghost) :silent t)
-(use-package :ghost)
+(load #p"~/dot/repl/cl-common.lisp")

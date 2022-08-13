@@ -36,23 +36,13 @@
           (apply #'format (concatenate 'list (list nil formatstring) args)))))
 
 ;;; *
-;;; * Repl utils
+;;; * Quicksearch
 ;;; *
-
-(ql:quickload '(#:ghost) :silent t)
-(use-package :ghost)
 
 (ql:quickload '(#:quicksearch) :silent t)
 
-(ql:quickload '(#:colony #:scheduling-facility #:condition-system) :silent t)
-
-;;; neoterm workaround meme
-(defparameter sbcl t)
-;;; mis-send cause muscle memory to abort from errors
-(defparameter abort t)
-
 ;;; *
-;;; * Greeting
+;;; * Common utilities
 ;;; *
 
-(scheduling-facility:agenda)
+(load #p"~/dot/repl/cl-common.lisp")

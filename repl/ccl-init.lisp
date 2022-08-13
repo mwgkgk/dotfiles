@@ -89,10 +89,7 @@
 (setf *quit-on-eof* t)
 
 ;;; *
-;;; * Repl utils
+;;; * Common utilities
 ;;; *
 
-(ql:quickload '(#:ghost) :silent t)
-(use-package :ghost)
-
-; (ql:quickload '(#:quicksearch) :silent t)
+(load #p"~/dot/repl/cl-common.lisp")
