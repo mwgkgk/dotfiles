@@ -74,12 +74,12 @@ nnoremap <buffer> <LocalLeader>U :silent T (untrace)<CR>
 " || Fallbacks
 " ||
 
-" ghost-cl
-nnoremap <buffer> <LocalLeader>fa :T (deffallback <C-r><C-w> )<Left>
-nnoremap <silent> <buffer> <LocalLeader>fl :T fallback-list<CR>
-nnoremap <silent> <buffer> <LocalLeader>fc :T (clear-fallback-list)<CR>
-nnoremap <silent> <buffer> <LocalLeader>fu :T (delete-fallback '<C-r><C-w>)<CR>
-nnoremap <silent> <buffer> <LocalLeader>fd :T (drop-last-fallback)<CR>
+" ghost-cl. Fully qualified because in-package
+nnoremap <buffer> <LocalLeader>fa :T (ghost:deffallback <C-r><C-w> )<Left>
+nnoremap <silent> <buffer> <LocalLeader>fl :T ghost:fallback-list<CR>
+nnoremap <silent> <buffer> <LocalLeader>fc :T (ghost:clear-fallback-list)<CR>
+nnoremap <silent> <buffer> <LocalLeader>fu :T (ghost:delete-fallback '<C-r><C-w>)<CR>
+nnoremap <silent> <buffer> <LocalLeader>fd :T (ghost:drop-last-fallback)<CR>
 
 " ||
 " || Repl control
