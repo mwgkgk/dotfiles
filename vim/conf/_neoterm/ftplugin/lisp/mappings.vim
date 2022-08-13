@@ -101,8 +101,9 @@ nnoremap <buffer> <LocalLeader>Q :silent T :q<CR>
 
 " Use short alias because cant override abort without unlocking,
 " and you want to make it be defined in bare repl because accidentally sending
-" nnoremap <buffer> <LocalLeader>a :silent T abort<CR>
 nnoremap <buffer> <LocalLeader>a :silent T a<CR>
+" Sometimes A is ambiguous
+nnoremap <buffer> <LocalLeader>A :silent T abort<CR>
 
 nnoremap <buffer> <LocalLeader>r :silent T retry<CR>
 nnoremap <buffer> <LocalLeader>c :silent T continue<CR>
