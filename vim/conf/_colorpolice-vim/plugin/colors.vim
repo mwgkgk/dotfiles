@@ -19,7 +19,7 @@
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
 " let s:static_colo = 'grapes'
-let s:static_colo = 'druid'
+" let s:static_colo = 'druid'
 " let s:static_colo = 'jellyfish'
 
 " let s:static_colo = 'farout'
@@ -36,7 +36,7 @@ let s:static_colo = 'druid'
 " let s:static_colo = 'stalker'
 
 " let s:static_colo = 'gentooish'
-" let s:static_colo = 'xoria256'
+let s:static_colo = 'xoria256'
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
 
