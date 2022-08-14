@@ -75,6 +75,7 @@ nnoremap <buffer> <LocalLeader>U :silent T (untrace)<CR>
 " ||
 
 " ghost-cl. Fully qualified because in-package
+nnoremap <buffer> <C-c>a :T (ghost:deffallback <C-r><C-w> )<Left>
 nnoremap <buffer> <LocalLeader>fa :T (ghost:deffallback <C-r><C-w> )<Left>
 nnoremap <silent> <buffer> <LocalLeader>fl :T ghost:fallback-list<CR>
 nnoremap <silent> <buffer> <LocalLeader>fc :T (ghost:clear-fallback-list)<CR>
