@@ -48,7 +48,7 @@ super + u
 super + 0
 	firefox-default
 
-super + y
+super + i
 	firefox-mwgkgk
 
 super + z
@@ -93,7 +93,7 @@ super + BackSpace
 # super + z
 # 	spyglass
 
-super + i
+super + y
 	zepp
 
 super + m
