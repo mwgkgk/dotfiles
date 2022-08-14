@@ -5,7 +5,7 @@ setlocal shiftwidth=2
 
 setlocal iskeyword+=&
 
-setlocal lispwords+=ctypecase,defsystem,with-client-socket
+setlocal lispwords+=ctypecase,defsystem,with-client-socket,test
 " My things
 setlocal lispwords+=defproduct
 
