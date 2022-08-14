@@ -143,6 +143,12 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 nnoremap <buffer> <silent> <LocalLeader>w :silent T (progn (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>))<CR>
 
 " ||
+" || Tests
+" ||
+
+nnoremap <silent> <buffer> <Leader>r :T (5am:run-all-tests)<CR>
+
+" ||
 " || Silly
 " ||
 
