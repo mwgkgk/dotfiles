@@ -51,8 +51,6 @@ nnoremap <buffer> <C-g>a :T (apropos "")<Left><Left>
 nnoremap <buffer> <C-g>q :T (qs:? "" :du)<Left><Left><Left><Left><Left><Left>
 nnoremap <buffer> <C-g>Q :silent T (qs:? "<C-r><C-w>" :du)<CR>
 
-nnoremap <buffer> <C-g>gq :T (ql:quickload '(#:))<Left><Left>
-
 nnoremap <buffer> <C-g>v :silent T (documentation '<C-r><C-w> 'variable)<CR>
 nnoremap <buffer> <C-g>s :silent T (documentation '<C-r><C-w> 'symbol)<CR>
 nnoremap <buffer> <C-g>f :silent T (documentation '<C-r><C-w> 'function)<CR>
@@ -69,6 +67,13 @@ nnoremap <buffer> <C-g><C-h> :silent T (help #'<C-r><C-w>)<CR>
 nnoremap <buffer> <LocalLeader>t :silent T (trace <C-r><C-w>)<CR>
 nnoremap <buffer> <LocalLeader>u :silent T (untrace <C-r><C-w>)<CR>
 nnoremap <buffer> <LocalLeader>U :silent T (untrace)<CR>
+
+" ||
+" || Quicklisp
+" ||
+
+nnoremap <buffer> <C-c>gq :T (ql:quickload '(#:))<Left><Left>
+nnoremap <silent> <buffer> <C-c><C-q> :T (ql:quickload '(#:<C-r><C-w>))<CR>
 
 " ||
 " || Fallbacks
@@ -136,12 +141,6 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 " Load + in-package = w
 " Reason it's <silent> is because long command requires a prompt
 nnoremap <buffer> <silent> <LocalLeader>w :silent T (progn (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>))<CR>
-
-" ||
-" || Quicklisp
-" ||
-
-nnoremap <silent> <buffer> <LocalLeader>gql :T (ql:quickload '(#:<C-r><C-w>))<CR>
 
 " ||
 " || Silly
