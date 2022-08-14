@@ -1212,6 +1212,9 @@ if has('nvim')
     Plug 'adolenc/cl-neovim'
 endif
 
+" Product management
+Plug '~/shop/buro/condition-system/condition-system-vim/'
+
 " Picolisp
 Plug '~/shop/oil/picolisp-vim/', { 'for' : 'picolisp' }
 
