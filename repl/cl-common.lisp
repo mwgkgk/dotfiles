@@ -21,6 +21,12 @@
 (ql:quickload '(#:colony #:scheduling-facility #:condition-system) :silent t)
 
 ;;; *
+;;; * Playpen
+;;; *
+
+(ql:quickload '(#:sprawl) :silent t)
+
+;;; *
 ;;; * Greeting
 ;;; *
 
