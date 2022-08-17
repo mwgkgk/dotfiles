@@ -3,7 +3,7 @@
 " ||
 
 " Open repl:
-nnoremap <buffer> <silent> <Leader>r :below T erl<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T erl<CR>
 
 " Exit repl:
 nnoremap <buffer> <silent> <LocalLeader>q :T exit().<CR>
