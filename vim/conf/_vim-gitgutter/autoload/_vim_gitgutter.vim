@@ -102,7 +102,8 @@ function! _vim_gitgutter#stage_commit_current_hunk_with_message_from_form()
     " Yank ambient form: <Plug>(sexp_outer_list)
     " Which is sexp#select_current_list from ~/plugs/vim-sexp/autoload/sexp.vim
     " Trying to use the actual function doesn't seem to be worth it.
-    normal yaf
+    " 2022-08-17: change yaf to ya)
+    normal ya)
 
     GitGutterStageHunk
 
