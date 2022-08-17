@@ -22,6 +22,11 @@ nnoremap <buffer> <LocalLeader>R :silent T (reset-environment)<CR>
 " |# comments as evaluation history.
 nmap <silent> <buffer> X <Plug>(neoterm-repl-send)a)
 
+" Call atom under cursor
+nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
+" Send atom under cursor
+nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
+
 " ||
 " || Load
 " ||
