@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 " https://docs.racket-lang.org/style/Textual_Matters.html
 " Recommended line width is 102
 setlocal textwidth=79
