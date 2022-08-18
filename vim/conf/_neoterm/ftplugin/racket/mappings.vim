@@ -35,3 +35,10 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 
 nnoremap <buffer> g<C-g> :silent T ,doc <C-r><C-w><CR>
 nnoremap <buffer> <C-g> :silent T ,describe <C-r><C-w><CR>
+
+" ||
+" || raco
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>pi :T (begin (require pkg) (pkg-install-command "<C-r><C-w>"))<CR>
+nnoremap <buffer> <LocalLeader>pI :T (begin (require pkg) (pkg-install-command ""))<Left><Left><Left>
