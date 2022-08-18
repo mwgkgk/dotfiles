@@ -49,3 +49,12 @@ nnoremap <buffer> <C-g> :silent T ,describe <C-r><C-w><CR>
 
 nnoremap <silent> <buffer> <LocalLeader>pi :T (begin (require pkg) (pkg-install-command "<C-r><C-w>"))<CR>
 nnoremap <buffer> <LocalLeader>pI :T (begin (require pkg) (pkg-install-command ""))<Left><Left><Left>
+
+" ||
+" || Buffer mappings
+" ||
+
+" Temp fix 2022-08-18
+nnoremap <silent> <buffer> <LocalLeader>B :source ~/dot/vim/conf/_neoterm/ftplugin/racket/mappings.vim<CR>
+
+runtime
