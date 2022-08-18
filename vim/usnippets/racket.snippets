@@ -63,7 +63,7 @@ snippet /^l/ "#lang" br
 #lang ${0:typed/racket}
 endsnippet
 
-snippet "(\()?\br" "require" rw
+snippet "(\()?\b(require|req|r)" "require" rw
 (require $0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
