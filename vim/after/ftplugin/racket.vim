@@ -8,3 +8,5 @@ setlocal shiftwidth=2
 
 setl commentstring=;%s
 setl comments^=:;;;,:;;,sr:#\|,mb:\|,ex:\|#
+
+setlocal lispwords+=with-output-to-file,λ
