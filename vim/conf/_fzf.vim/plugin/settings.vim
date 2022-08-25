@@ -29,3 +29,9 @@ let g:fzf_colors =
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 let g:fzf_buffers_jump = 1
+
+" Weird input lag,
+" see https://github.com/junegunn/fzf.vim/issues/1011
+if has('nvim') && has('win32')
+    let g:fzf_preview_window=''
+endif
