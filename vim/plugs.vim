@@ -646,10 +646,13 @@ if !has('win32')
     " Major insert-mode slowdown after this
     Plug 'SirVer/ultisnips', { 'commit' : '3f8bdedd574633979f71822325b1da91762935f9' }
 else
-    if has('nvim')
-        Plug '~/.vim/conf/_LuaSnip/'
-        Plug 'L3MON4D3/LuaSnip'
-    endif
+    Plug '~/.vim/conf/_ultisnips/'
+    " Major insert-mode slowdown after this
+    Plug 'SirVer/ultisnips', { 'commit' : '3f8bdedd574633979f71822325b1da91762935f9' }
+    " if has('nvim')
+    "     Plug '~/.vim/conf/_LuaSnip/'
+    "     Plug 'L3MON4D3/LuaSnip'
+    " endif
 endif
 
 " }}}
@@ -1271,6 +1274,10 @@ map ]f ]pf
 map [f [pf
 " }}}
 Plug 'fisadev/vim-isort', { 'for' : 'python' }
+
+if has('win32')
+    let g:python3_host_prog = "~/AppData/Local/Programs/Python/Python37/python.exe"
+endif
 
 " Django
 Plug 'mjbrownie/delete-surround-html', { 'for' : 'htmldjango' }
