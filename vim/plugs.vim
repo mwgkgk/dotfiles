@@ -44,7 +44,8 @@ Plug 'arecarn/selection.vim'
 
 Plug '~/.vim/conf/_fzf.vim/'
 Plug 'junegunn/fzf.vim'
-Plug '~/.ghq/github.com/junegunn/fzf'
+" Plug '~/.ghq/github.com/junegunn/fzf'
+Plug 'junegunn/fzf'
 
 Plug 'kien/ctrlp.vim' " {{{
 map s <NOP>
