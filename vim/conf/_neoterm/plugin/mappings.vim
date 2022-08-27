@@ -39,6 +39,9 @@ nnoremap <silent> <Leader><Space>v :call _neoterm#open#small('below', '')<CR>
 " nnoremap <silent> <Leader><Space>gV :exec 'above vert term ++cols=' . winwidth(0)/4<CR>
 nnoremap <silent> <Leader><Space>gV :call _neoterm#open#small('below', 'vert')<CR>
 
+" Toggle g:neoterm_direct_open_repl
+nnoremap <silent> <buffer> <LocalLeader>[[ :call _neoterm#toggle#neoterm_direct_open_repl()<CR>
+
 " ||
 " || Open filetype mappings
 " ||
