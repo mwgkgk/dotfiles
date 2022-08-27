@@ -1163,6 +1163,9 @@ Plug 'mattn/vim-lsp-settings', { 'for' : 'zig' }
 " Texinfo
 Plug 'HiPhish/info.vim'
 
+" Org
+Plug 'jceb/vim-orgmode'
+
 " Golang
 " Plug '~/.vim/conf/_vim-go/'
 " Plug 'fatih/vim-go', { 'for' : 'go' }
