@@ -104,6 +104,31 @@ if not snip.v.text:
 endsnippet
 
 # ||
+# || Streams
+# ||
+
+snippet "(\()?\bwof" "with-open-file" rw
+(with-open-file (${1:s} ${2:"~/path"} :direction ${3:in}put)
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bwots" "with-output-to-string" rw
+(with-output-to-string (${1:out})
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bwifs" "with-input-from-string" rw
+(with-input-from-string (${1:s} ${2:"string"})
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Imports & Packages
 # ||
 
