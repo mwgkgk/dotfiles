@@ -108,7 +108,7 @@ endsnippet
 # ||
 
 snippet "(\()?\bwof" "with-open-file" rw
-(with-open-file (${1:s} ${2:"~/path"} :direction ${3:in}put)
+(with-open-file (${1:s} ${2:"~/path"} :direction :${3:in}put)
 	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
