@@ -107,13 +107,6 @@ endsnippet
 # || Streams
 # ||
 
-snippet "(\()?\bwof" "with-open-file" rw
-(with-open-file (${1:s} ${2:"~/path"} :direction :${3:in}put)
-	${VISUAL}$0`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
-
 snippet "(\()?\bwots" "with-output-to-string" rw
 (with-output-to-string (${1:out})
 	${VISUAL}$0`!p
@@ -123,6 +116,27 @@ endsnippet
 
 snippet "(\()?\bwifs" "with-input-from-string" rw
 (with-input-from-string (${1:s} ${2:"string"})
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bwof" "with-open-file" rw
+(with-open-file (${1:s} ${2:"~/path"} :direction :${3:in}put)
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bwf" "with-open-file output" rw
+(with-open-file (${1:s} ${2:"~/path"} :direction :output :if-does-not-exist :create :if-exists :append)
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\brf" "with-open-file input" rw
+(with-open-file (${1:s} ${2:"~/path"} :direction :input)
 	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
