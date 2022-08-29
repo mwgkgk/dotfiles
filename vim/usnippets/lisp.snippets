@@ -797,11 +797,12 @@ endsnippet
 # || Predicates
 # ||
 
-snippet "(\()?\beq" "equal" wr
-(equal $0`!p
-if match.group(1) is None:
-	snip.rv = ")"`
-endsnippet
+# eq is not a good trigger
+# snippet "(\()?\beq" "equal" wr
+# (equal $0`!p
+# if match.group(1) is None:
+# 	snip.rv = ")"`
+# endsnippet
 
 snippet "(\()?\bep" "equalp" wr
 (equalp $0`!p
