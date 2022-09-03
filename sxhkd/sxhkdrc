@@ -87,11 +87,11 @@ control + semicolon
 super + space
 	march
 
-super + BackSpace
+super + control + BackSpace
 	minerals
 
-# super + z
-# 	spyglass
+super + BackSpace
+	spyglass
 
 super + y
 	zepp
