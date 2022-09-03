@@ -31,3 +31,9 @@
 ;;; *
 
 (scheduling-facility:agenda)
+
+;;; *
+;;; * In-package
+;;; *
+
+(load #p"~/in-package.lisp" :if-does-not-exist nil)
