@@ -593,6 +593,47 @@ snippet :acc ":acc" w
 endsnippet
 
 # ||
+# || Alist, Plist
+# ||
+
+snippet "(\()?\b(assoc|asc)" "assoc" rw
+(assoc ${1:key} ${0:alist}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bgetf" "getf" rw
+(getf ${1:plist} ${2:key}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bget" "get" rw
+(get ${1:symbol} ${2:indicator}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# Might as well have setf
+snippet "(\()?\bsetf" "setf" rw
+(setf ${1:place} ${0:value}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bsetq" "setq" rw
+(setq ${1:symbol} ${0:value}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bset" "set" rw
+(set ${1:'symbol} ${0:value}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Errors
 # ||
 
