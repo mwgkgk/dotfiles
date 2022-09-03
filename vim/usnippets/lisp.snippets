@@ -563,12 +563,18 @@ endsnippet
 # ||
 
 snippet /\b(defclass|defclas|defcla|defcl|class|clas|cla|cl)/ "defcl" wr
-(defclass ${1:object} ($2)
+(defclass ${1:obj} ($2)
   (${0:slot}))
 endsnippet
 
 snippet "(\()?\bmi" "make-instance" rw
-(make-instance '${0:object}`!p
+(make-instance '${0:obj}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bsv" "slot-value" rw
+(slot-value ${1:obj} ${0:slot}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
