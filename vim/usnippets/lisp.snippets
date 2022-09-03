@@ -322,14 +322,14 @@ endsnippet
 snippet "^(\()?\bdaf" "date+defun" rb
 ;;; `date-utc`
 
-(defun ${1:function-name} ($2)
+(defun ${1:${VISUAL}} ($2)
 	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "^(\()?\b(defun|defu|f)" "defun" rb
-(defun ${1:function-name} ($2)
+(defun ${1:${VISUAL}} ($2)
 	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -346,7 +346,7 @@ endsnippet
 priority -1
 
 snippet "(\()?\b(defun|defu)" "inline defun" rw
-(defun ${1:function-name} ($2)
+(defun ${1:${VISUAL}} ($2)
 	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
