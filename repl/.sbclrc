@@ -46,3 +46,6 @@
 ;;; *
 
 (load #p"~/dot/repl/common-rc.lisp")
+
+;;; https://stackoverflow.com/questions/73593685/how-to-set-package-from-file
+(ghost:recall-package)

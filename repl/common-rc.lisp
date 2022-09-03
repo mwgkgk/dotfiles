@@ -36,4 +36,6 @@
 ;;; * In-package
 ;;; *
 
-(load #p"~/lisp-package.lisp" :if-does-not-exist nil)
+;;; https://stackoverflow.com/questions/73593685/how-to-set-package-from-file
+#+#:nil
+(ghost:recall-package)
