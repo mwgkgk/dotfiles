@@ -641,6 +641,12 @@ snippet mht "(make-hash-table)" w
 (make-hash-table)
 endsnippet
 
+snippet "(\()?\bgh" "gethash" rw
+(gethash ${1:key} ${0:hash}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Readtable
 # ||
