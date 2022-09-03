@@ -36,4 +36,4 @@
 ;;; * In-package
 ;;; *
 
-(load #p"~/in-package.lisp" :if-does-not-exist nil)
+(load #p"~/lisp-package.lisp" :if-does-not-exist nil)
