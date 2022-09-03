@@ -19,4 +19,4 @@
 ;;; * Common utilities
 ;;; *
 
-(load #p"~/dot/repl/cl-common.lisp")
+(load #p"~/dot/repl/common-rc.lisp")
