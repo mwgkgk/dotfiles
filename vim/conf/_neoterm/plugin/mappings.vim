@@ -69,8 +69,8 @@ nnoremap <F9> :rightbelow T make<CR>
 " " nnoremap <Space>X :TREPLSendFile<CR>
 
 " " The latter is for visual, and duplicates :TREPLSendSelection. Big hmm.
-" nmap <Leader>x <Plug>(neoterm-repl-send)
-" xmap <Leader>x <Plug>(neoterm-repl-send)
+nmap <LocalLeader>x <Plug>(neoterm-repl-send)
+xmap <LocalLeader>x <Plug>(neoterm-repl-send)
 
 " nmap <Leader>X <Plug>(neoterm-repl-send-line)
 
