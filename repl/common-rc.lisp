@@ -31,11 +31,3 @@
 ;;; *
 
 (scheduling-facility:agenda)
-
-;;; *
-;;; * In-package
-;;; *
-
-;;; https://stackoverflow.com/questions/73593685/how-to-set-package-from-file
-#+#:nil
-(ghost:recall-package)
