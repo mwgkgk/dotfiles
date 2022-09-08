@@ -38,7 +38,7 @@
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
 " let s:static_colo = 'peaksea_mod'
-" let s:static_colo = 'flatlandia'
+let s:static_colo = 'flatlandia'
 
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'nuclear-dark'
@@ -119,7 +119,7 @@
 " let s:static_colo = 'gruvbox-dark'
 " let s:static_colo = 'miramare'
 " let s:static_colo = 'paramount-light'
-let s:static_colo = 'lunaperche-dark'
+" let s:static_colo = 'lunaperche-dark'
 
 " gui {{{
 " let s:gui_colo = 'freya'
