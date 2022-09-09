@@ -144,6 +144,9 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 " Reason it's <silent> is because long command requires a prompt
 nnoremap <buffer> <silent> <LocalLeader>w :silent T (progn (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>))<CR>
 
+" Inject ghost-cl tools
+nnoremap <silent> <buffer> <LocalLeader>pg :T (use-package :ghost) <CR>
+
 " ||
 " || Tests
 " ||
