@@ -3,8 +3,8 @@
 " Wildmenu
 "
 
-nnoremap <Leader>coL :ColorPoliceSync<Space>
-nnoremap <Leader>col :ColorPolice<Space>
+nnoremap <Leader>soL :ColorPoliceSync<Space>
+nnoremap <Leader>sol :ColorPolice<Space>
 
 "
 "
