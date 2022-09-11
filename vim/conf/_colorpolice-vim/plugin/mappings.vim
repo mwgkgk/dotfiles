@@ -5,6 +5,7 @@
 
 nnoremap <Leader>soL :ColorPoliceSync<Space>
 nnoremap <Leader>sol :ColorPolice<Space>
+nnoremap <Leader>soo :ColorPoliceSync<CR>
 
 "
 "
