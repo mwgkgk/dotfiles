@@ -51,7 +51,7 @@
 " let s:static_colo = 'lecture'
 " let s:static_colo = 'lecture-dark'
 " let s:static_colo = 'belf'
-let s:static_colo = 'thief'
+" let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
 " let s:static_colo = 'alien-nes'
@@ -87,7 +87,7 @@ let s:static_colo = 'thief'
 " let s:static_colo = 'ivan'
 
 " let s:static_colo = 'mwgkgk'
-" let s:static_colo = 'moot'
+let s:static_colo = 'moot'
 " let s:static_colo = 'blue'
 
 " let s:static_colo = 'seoul256-light'
