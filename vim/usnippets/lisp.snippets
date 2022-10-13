@@ -866,7 +866,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\brin" "remove-if-not" rw
+snippet "(\()?\b(rin|filter)" "remove-if-not" rw
 (remove-if-not ${1:#'nullp} ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
