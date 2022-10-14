@@ -149,7 +149,7 @@ nnoremap <buffer> <silent> <LocalLeader>w :silent T (progn (load #P"<C-r>=expand
 nnoremap <silent> <buffer> <LocalLeader>pu :T (package-use-list *package*)<CR>
 
 " Inject ghost-cl tools
-nnoremap <silent> <buffer> <LocalLeader>pg :T (use-package :ghost) <CR>
+nnoremap <silent> <buffer> <LocalLeader>pig :T (use-package :ghost) <CR>
 
 " ||
 " || Tests
