@@ -2,7 +2,7 @@
 " vim: foldmethod=marker foldlevel=0
 " }}}
 
-" let s:static_colo = 'industry'
+let s:static_colo = 'industry'
 " let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
@@ -101,7 +101,7 @@
 " let s:static_colo = 'fogbell_light'
 " let s:static_colo = 'machinery'
 
-let s:static_colo = 'SerialExperimentsLain'
+" let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
 " let s:static_colo = 'nighted'
 
