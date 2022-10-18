@@ -663,6 +663,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bunw" "unwind-protect" rw
+(unwind-protect ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Structs
 # ||
