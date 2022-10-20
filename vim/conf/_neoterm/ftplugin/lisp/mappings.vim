@@ -166,8 +166,10 @@ nnoremap <silent> <buffer> <LocalLeader>sd :T (list (1+ (random 6)) (1+ (random 
 
 nnoremap <silent> <buffer> <LocalLeader>sa :T (scheduling-facility:agenda)<CR>
 nnoremap <silent> <buffer> <LocalLeader>sw :T (scheduling-facility:what-do)<CR>
-nnoremap <silent> <buffer> <LocalLeader>sp :T (condition-system:latest-product-summary)<CR>
-nnoremap <silent> <buffer> <LocalLeader>sP :T (condition-system:list-products :verbose t)<CR>
-nnoremap <silent> <buffer> <LocalLeader>sgp :T (condition-system:list-products :verbose nil)<CR>
+nnoremap <silent> <buffer> <LocalLeader>spp :T (condition-system:latest-minimal-product)<CR>
+nnoremap <silent> <buffer> <LocalLeader>spa :T (condition-system:latest-atomizable-product)<CR>
+nnoremap <silent> <buffer> <LocalLeader>spr :T (condition-system:random-mvp)<CR>
+nnoremap <silent> <buffer> <LocalLeader>spL :T (condition-system:list-products :verbose t)<CR>
+nnoremap <silent> <buffer> <LocalLeader>spl :T (condition-system:list-products :verbose nil)<CR>
 
 nnoremap <silent> <buffer> <LocalLeader>sq :T (colony:nearest-asd-quicklisp-status)<CR>
