@@ -87,7 +87,7 @@ control + semicolon
 super + space
 	march
 
-super + control + BackSpace
+super + control + z
 	minerals
 
 super + BackSpace
