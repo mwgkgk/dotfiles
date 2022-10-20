@@ -122,21 +122,21 @@ if match.group(1) is None:
 endsnippet
 
 snippet "(\()?\bwof" "with-open-file" rw
-(with-open-file (${1:s} ${2:"~/path"} :direction :${3:in}put)
+(with-open-file (${1:f} ${2:"~/path"} :direction :${3:in}put)
 	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\b(wotf|wof|wf)" "with-open-file output" rw
-(with-open-file (${1:s} ${2:"~/path"} :direction :output :if-does-not-exist :create :if-exists :append)
+snippet "(\()?\bwf" "with-open-file output" rw
+(with-open-file (${1:f} ${2:"~/path"} :direction :output :if-does-not-exist :create :if-exists :append)
 	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\brf" "with-open-file input" rw
-(with-open-file (${1:s} ${2:"~/path"} :direction :input)
+(with-open-file (${1:f} ${2:"~/path"} :direction :input)
 	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
