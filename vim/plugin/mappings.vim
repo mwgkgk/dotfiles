@@ -461,6 +461,9 @@ inoremap <C-g><C-j> <CR><Esc>kA
 inoremap <M-j> <Esc>jA
 inoremap <M-k> <Esc>kA
 
+" Center screen
+inoremap <M-m> <C-o>zz
+
 " Insert word from the line above (C-y improved)
 inoremap <expr> <C-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\s\=\\|.\)')
 
