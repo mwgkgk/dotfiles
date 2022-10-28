@@ -1046,12 +1046,20 @@ highlight link EchoDocPopup Pmenu
 Plug '~/.vim/conf/_vim-fugitive/'
 Plug 'tpope/vim-fugitive'
 
-Plug '~/.vim/conf/_vim-gitgutter/'
-Plug 'airblade/vim-gitgutter' " {{{
+if has('nvim')
+    " Plug 'lewis6991/gitsigns.nvim'
+    " lua require('gitsigns').setup()
 
-" Stage hunk & commit with message from the unnamed register
-" autocmd plugs FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Git commit<CR>p:wq<CR><Space>
-" }}}
+    Plug '~/.vim/conf/_vim-gitgutter/'
+    Plug 'airblade/vim-gitgutter' 
+else
+    Plug '~/.vim/conf/_vim-gitgutter/'
+    Plug 'airblade/vim-gitgutter' " {{{
+    
+    " Stage hunk & commit with message from the unnamed register
+    " autocmd plugs FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Git commit<CR>p:wq<CR><Space>
+    " }}}
+endif
 
 Plug 'rbong/vim-flog' " {{{
 " Big log
