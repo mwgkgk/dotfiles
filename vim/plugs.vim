@@ -1054,11 +1054,7 @@ if has('nvim')
     Plug 'airblade/vim-gitgutter' 
 else
     Plug '~/.vim/conf/_vim-gitgutter/'
-    Plug 'airblade/vim-gitgutter' " {{{
-    
-    " Stage hunk & commit with message from the unnamed register
-    " autocmd plugs FileType * nmap <buffer> <Leader>l <Plug>(GitGutterStageHunk):Git commit<CR>p:wq<CR><Space>
-    " }}}
+    Plug 'airblade/vim-gitgutter'
 endif
 
 Plug 'rbong/vim-flog' " {{{
