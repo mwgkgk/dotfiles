@@ -34,7 +34,7 @@ vmap <Space> <C-w>
 "
 
 " Close all:
-nnoremap <Space>Q :silent! TcloseAll!<CR> <Bar> :qa<CR>
+nnoremap <Space>Q :qa<CR>
 
 " Write file:
 nnoremap <Space>w :w<CR>
