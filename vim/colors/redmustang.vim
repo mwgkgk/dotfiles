@@ -69,5 +69,7 @@ hi markdownH1      ctermfg=230  cterm=bold
 hi markdownH2      ctermfg=230  cterm=bold
 hi markdownHeadingDelimiter ctermfg=185 cterm=bold
 
-
-"set background=dark"
+hi GitGutterAdd ctermbg=none ctermfg=130
+hi GitGutterDelete ctermbg=none ctermfg=122
+hi GitGutterChange ctermbg=none ctermfg=122
+hi GitGutterChangeDeleteLine ctermbg=none ctermfg=122
