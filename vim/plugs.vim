@@ -1179,6 +1179,7 @@ Plug 'jceb/vim-orgmode'
 Plug 'dag/vim-fish'
 
 " Perl
+Plug '~/.vim/conf/_perldoc-vim/'
 Plug 'hotchpotch/perldoc-vim', { 'for' : 'perl' }
 
 " Prolog
