@@ -108,8 +108,8 @@ endsnippet
 # || Subroutines
 # ||
 
-snippet f "sub"
-sub $1 {
+snippet /\b(sub|f)/ "sub" wr
+sub ${1:name} {
 	${VISUAL}$0
 }
 endsnippet
