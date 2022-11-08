@@ -1180,7 +1180,7 @@ Plug 'dag/vim-fish'
 
 " Perl
 Plug '~/.vim/conf/_perldoc-vim/'
-Plug 'hotchpotch/perldoc-vim', { 'for' : 'perl' }
+Plug 'hotchpotch/perldoc-vim'
 
 " Prolog
 " This is an undocumented Vim ft detection variable for resolving blank .pl ft
