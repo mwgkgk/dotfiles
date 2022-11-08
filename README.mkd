@@ -1,26 +1,50 @@
 ```
-[1.3M]  .
-├── [4.3K]  install
-├── [ 55K]  repl
-│   ├── [ 182]  gforthrc
-│   ├── [ 673]  .abclrc
+[1.4M]  .
+├── [ 61K]  fish
+│   ├── [1.4K]  config.fish
+│   ├── [ 158]  fish_plugins
+│   ├── [8.3K]  tools
+│   │   └── [4.3K]  functions
+│   │       ├── [  32]  shop.fish
+│   │       ├── [  43]  heap.fish
+│   │       └── [ 250]  do-thing.fish
+│   ├── [ 22K]  config
+│   │   └── [ 18K]  functions
+│   │       ├── [ 12K]  fish_user_key_bindings.fish
+│   │       ├── [ 182]  fish_greeting.fish
+│   │       ├── [ 387]  fish_title.fish
+│   │       └── [1.4K]  fish_prompt.fish
+│   └── [ 26K]  completions
+│       └── [ 22K]  functions
+│           └── [ 18K]  rustup.fish
+├── [ 57K]  repl
+│   ├── [1.3K]  .sbclrc
+│   ├── [ 522]  common-rc.lisp
+│   ├── [ 702]  .eclrc
 │   ├── [2.9K]  ccl-init.lisp
-│   ├── [ 940]  .sbclrc
+│   ├── [ 747]  .abclrc
+│   ├── [ 664]  .clisprc.lisp
+│   ├── [ 182]  gforthrc
 │   ├── [ 259]  profiles.clj
 │   ├── [ 137]  pforthrc
-│   ├── [ 628]  .eclrc
 │   ├── [  30]  startup.jl
 │   ├── [ 150]  .scryerrc
 │   ├── [ 119]  .minrc
 │   ├── [  48]  .lambda-term-inputrc
 │   ├── [ 38K]  ipython_config.py
 │   ├── [5.9K]  init.pl
-│   ├── [ 859]  .iex.exs
-│   └── [ 590]  .clisprc.lisp
-├── [984K]  vim
-│   ├── [4.0K]  colors  [112 entries exceeds filelimit, not opening dir]
-│   ├── [ 32K]  plugs.vim
-│   ├── [589K]  conf
+│   └── [ 859]  .iex.exs
+├── [1007K]  vim
+│   ├── [ 33K]  plugs.vim
+│   ├── [610K]  conf
+│   │   ├── [ 20K]  _perldoc-vim
+│   │   │   ├── [ 12K]  ftplugin
+│   │   │   │   ├── [4.1K]  man
+│   │   │   │   │   └── [ 140]  mappings.vim
+│   │   │   │   └── [4.1K]  perl
+│   │   │   │       └── [  94]  mappings.vim
+│   │   │   └── [4.1K]  plugin
+│   │   │       └── [  78]  commands.vim
 │   │   ├── [ 25K]  _vim-surround
 │   │   │   └── [ 21K]  ftplugin
 │   │   │       ├── [4.2K]  scheme
@@ -111,6 +135,10 @@
 │   │   │           ├── [ 126]  settings.vim
 │   │   │           └── [ 245]  mappings.vim
 │   │   ├── [ 45K]  _vim-gitgutter
+│   │   │   ├── [8.3K]  plugin
+│   │   │   │   ├── [ 506]  settings.vim
+│   │   │   │   ├── [1019]  operators.vim
+│   │   │   │   └── [2.8K]  mappings.vim
 │   │   │   ├── [5.0K]  ftplugin
 │   │   │   │   ├── [ 192]  scheme.vim
 │   │   │   │   ├── [ 192]  lisp.vim
@@ -118,12 +146,8 @@
 │   │   │   │   ├── [ 192]  jiv.vim
 │   │   │   │   ├── [  52]  gitcommit.vim
 │   │   │   │   └── [ 192]  clojure.vim
-│   │   │   ├── [8.3K]  plugin
-│   │   │   │   ├── [ 506]  settings.vim
-│   │   │   │   ├── [1019]  operators.vim
-│   │   │   │   └── [2.8K]  mappings.vim
 │   │   │   └── [ 27K]  autoload
-│   │   │       ├── [3.3K]  _vim_gitgutter.vim
+│   │   │       ├── [3.4K]  _vim_gitgutter.vim
 │   │   │       └── [ 20K]  _vim_gitgutter
 │   │   │           └── [ 16K]  operators.vim
 │   │   ├── [ 23K]  _vim-fugitive
@@ -131,7 +155,7 @@
 │   │   │   │   └── [ 839]  mappings.vim
 │   │   │   ├── [8.1K]  ftplugin
 │   │   │   │   └── [4.1K]  fugitive
-│   │   │   │       └── [  58]  mappings.vim
+│   │   │   │       └── [  54]  mappings.vim
 │   │   │   └── [5.8K]  autoload
 │   │   │       └── [1.8K]  _vim_fugitive.vim
 │   │   ├── [ 13K]  _vim-fireplace
@@ -187,13 +211,14 @@
 │   │   │   └── [8.3K]  ftplugin
 │   │   │       └── [4.3K]  clojure
 │   │   │           └── [ 337]  mappings.vim
-│   │   ├── [ 25K]  _neoterm
-│   │   │   ├── [7.0K]  plugin
-│   │   │   │   ├── [2.9K]  mappings.vim
-│   │   │   │   └── [ 111]  settings.vim
-│   │   │   ├── [4.0K]  ftplugin  [41 entries exceeds filelimit, not opening dir]
+│   │   ├── [ 26K]  _neoterm
+│   │   │   ├── [4.0K]  ftplugin  [44 entries exceeds filelimit, not opening dir]
+│   │   │   ├── [7.4K]  plugin
+│   │   │   │   ├── [ 343]  settings.vim
+│   │   │   │   └── [3.1K]  mappings.vim
 │   │   │   └── [ 10K]  autoload
-│   │   │       └── [6.1K]  _neoterm
+│   │   │       └── [6.4K]  _neoterm
+│   │   │           ├── [ 312]  toggle.vim
 │   │   │           ├── [ 777]  prolog_repl.vim
 │   │   │           └── [1.4K]  open.vim
 │   │   ├── [ 12K]  _lexima.vim
@@ -208,41 +233,41 @@
 │   │   │       └── [4.2K]  julia
 │   │   │           └── [ 184]  mappings.vim
 │   │   ├── [ 72K]  _fzf.vim
-│   │   │   ├── [ 57K]  ftplugin
-│   │   │   │   ├── [4.2K]  scheme
-│   │   │   │   │   └── [ 233]  mappings.vim
-│   │   │   │   ├── [4.1K]  fzf
-│   │   │   │   │   └── [  53]  mappings.vim
-│   │   │   │   ├── [4.1K]  zig
-│   │   │   │   │   └── [  92]  mappings.vim
-│   │   │   │   ├── [4.3K]  vim
-│   │   │   │   │   └── [ 301]  mappings.vim
-│   │   │   │   ├── [4.0K]  tmux
-│   │   │   │   │   └── [  41]  mappings.vim
-│   │   │   │   ├── [4.1K]  sxhkd
-│   │   │   │   │   └── [  68]  mappings.vim
-│   │   │   │   ├── [4.1K]  snippets
-│   │   │   │   │   └── [  97]  mappings.vim
-│   │   │   │   ├── [4.1K]  mj
-│   │   │   │   │   └── [  87]  mappings.vim
-│   │   │   │   ├── [4.1K]  markdown
-│   │   │   │   │   └── [  87]  mappings.vim
-│   │   │   │   ├── [4.2K]  lisp
-│   │   │   │   │   └── [ 196]  mappings.vim
-│   │   │   │   ├── [4.1K]  kmonad
-│   │   │   │   │   └── [  77]  mappings.vim
-│   │   │   │   ├── [4.1K]  forth
-│   │   │   │   │   └── [  92]  mappings.vim
-│   │   │   │   └── [4.0K]  elixir
-│   │   │   │       └── [  34]  mappings.vim
-│   │   │   └── [ 10K]  plugin
-│   │   │       ├── [1.1K]  settings.vim
-│   │   │       ├── [3.4K]  mappings.vim
-│   │   │       └── [1.8K]  commands.vim
+│   │   │   ├── [ 10K]  plugin
+│   │   │   │   ├── [1.2K]  settings.vim
+│   │   │   │   ├── [3.4K]  mappings.vim
+│   │   │   │   └── [1.8K]  commands.vim
+│   │   │   └── [ 57K]  ftplugin
+│   │   │       ├── [4.2K]  scheme
+│   │   │       │   └── [ 233]  mappings.vim
+│   │   │       ├── [4.1K]  fzf
+│   │   │       │   └── [  53]  mappings.vim
+│   │   │       ├── [4.1K]  zig
+│   │   │       │   └── [  92]  mappings.vim
+│   │   │       ├── [4.3K]  vim
+│   │   │       │   └── [ 301]  mappings.vim
+│   │   │       ├── [4.0K]  tmux
+│   │   │       │   └── [  41]  mappings.vim
+│   │   │       ├── [4.1K]  sxhkd
+│   │   │       │   └── [  68]  mappings.vim
+│   │   │       ├── [4.1K]  snippets
+│   │   │       │   └── [  97]  mappings.vim
+│   │   │       ├── [4.1K]  mj
+│   │   │       │   └── [  87]  mappings.vim
+│   │   │       ├── [4.1K]  markdown
+│   │   │       │   └── [  87]  mappings.vim
+│   │   │       ├── [4.2K]  lisp
+│   │   │       │   └── [ 196]  mappings.vim
+│   │   │       ├── [4.1K]  kmonad
+│   │   │       │   └── [  77]  mappings.vim
+│   │   │       ├── [4.1K]  forth
+│   │   │       │   └── [  92]  mappings.vim
+│   │   │       └── [4.0K]  elixir
+│   │   │           └── [  34]  mappings.vim
 │   │   ├── [ 12K]  _colorpolice-vim
 │   │   │   └── [8.4K]  plugin
-│   │   │       ├── [3.8K]  colors.vim
-│   │   │       └── [ 542]  mappings.vim
+│   │   │       ├── [3.9K]  colors.vim
+│   │   │       └── [ 584]  mappings.vim
 │   │   ├── [ 29K]  _asyncrun.vim
 │   │   │   ├── [ 21K]  ftplugin
 │   │   │   │   ├── [4.0K]  c
@@ -264,68 +289,10 @@
 │   │       └── [4.3K]  plugin
 │   │           ├── [ 111]  settings.vim
 │   │           └── [ 232]  mappings.vim
-│   ├── [4.5K]  ftdetect
-│   │   ├── [  45]  text.vim
-│   │   ├── [  68]  rebol.vim
-│   │   ├── [  46]  pl.vim
-│   │   ├── [  47]  plt.vim
-│   │   ├── [  53]  noft.vim
-│   │   ├── [  44]  min.vim
-│   │   ├── [  45]  lisp.vim
-│   │   ├── [  47]  idris.vim
-│   │   ├── [  55]  gitignore.vim
-│   │   └── [  50]  arret.vim
-│   ├── [4.0K]  usnippets  [94 entries exceeds filelimit, not opening dir]
-│   ├── [ 31K]  plugin
-│   │   ├── [4.0K]  settings.vim
-│   │   ├── [ 13K]  mappings.vim
-│   │   ├── [ 243]  iabbrev.vim
-│   │   ├── [ 999]  term_apis.vim
-│   │   ├── [ 379]  golf.vim
-│   │   ├── [5.6K]  git
-│   │   │   └── [1.6K]  mappings.vim
-│   │   ├── [2.1K]  commands.vim
-│   │   ├── [ 115]  change_paste.vim
-│   │   └── [ 338]  browsh.vim
-│   ├── [4.0K]  skeletons  [41 entries exceeds filelimit, not opening dir]
-│   ├── [211K]  autoload
-│   │   ├── [ 81K]  plug.vim
-│   │   ├── [ 341]  helpers.vim
-│   │   ├── [ 81K]  plug.vim.old
-│   │   ├── [1.9K]  colors.vim
-│   │   ├── [6.6K]  files
-│   │   │   ├── [ 865]  from_date.vim
-│   │   │   ├── [ 669]  conf.vim
-│   │   │   └── [1.1K]  by_date.vim
-│   │   ├── [ 566]  window.vim
-│   │   ├── [6.0K]  window
-│   │   │   └── [2.0K]  suckless.vim
-│   │   ├── [1.1K]  toggle.vim
-│   │   ├── [ 497]  system.vim
-│   │   ├── [ 714]  shell.vim
-│   │   ├── [4.1K]  operators
-│   │   │   └── [ 108]  vim.vim
-│   │   ├── [  14]  .gitignore
-│   │   ├── [ 11K]  git
-│   │   │   ├── [ 469]  stage.vim
-│   │   │   ├── [ 935]  reset.vim
-│   │   │   ├── [ 182]  remote.vim
-│   │   │   ├── [1.8K]  popup.vim
-│   │   │   ├── [ 236]  log.vim
-│   │   │   ├── [ 737]  hardreset.vim
-│   │   │   ├── [ 569]  diff.vim
-│   │   │   ├── [2.2K]  commit.vim
-│   │   │   └── [ 194]  branch.vim
-│   │   ├── [1.6K]  ftdetect.vim
-│   │   ├── [ 626]  folding.vim
-│   │   ├── [5.9K]  folding
-│   │   │   ├── [1023]  lisp.vim
-│   │   │   └── [ 883]  clojure.vim
-│   │   ├── [1.5K]  files.vim
-│   │   ├── [ 417]  dirs.vim
-│   │   ├── [ 902]  date.vim
-│   │   └── [1.6K]  browsh.vim
-│   ├── [ 54K]  ftplugin
+│   ├── [4.0K]  usnippets  [96 entries exceeds filelimit, not opening dir]
+│   ├── [ 58K]  ftplugin
+│   │   ├── [4.0K]  c
+│   │   │   └── [  28]  settings.vim
 │   │   ├── [4.1K]  erlang
 │   │   │   └── [  88]  mappings.vim
 │   │   ├── [4.0K]  zig
@@ -356,75 +323,85 @@
 │   │   └── [4.2K]  clojure
 │   │       ├── [  86]  mappings.vim
 │   │       └── [ 103]  folding.vim
-│   ├── [ 25K]  after
-│   │   ├── [8.2K]  ftplugin
-│   │   │   ├── [  28]  elixir.vim
-│   │   │   ├── [  29]  rebol.vim
-│   │   │   ├── [  50]  ruby.vim
-│   │   │   ├── [  81]  d.vim
-│   │   │   ├── [ 209]  c.vim
-│   │   │   ├── [  50]  erlang.vim
-│   │   │   ├── [  87]  scheme.vim
-│   │   │   ├── [  76]  zig.vim
-│   │   │   ├── [ 820]  lisp.vim
-│   │   │   ├── [ 115]  nim.vim
-│   │   │   ├── [ 250]  racket.vim
-│   │   │   ├── [  50]  lua.vim
-│   │   │   ├── [ 148]  fennel.vim
-│   │   │   ├── [  28]  yaml.vim
-│   │   │   ├── [  79]  vim.vim
-│   │   │   ├── [  28]  vifm.vim
-│   │   │   ├── [ 149]  text.vim
-│   │   │   ├── [ 130]  tcl.vim
-│   │   │   ├── [  28]  sxhkd.vim
-│   │   │   ├── [ 125]  shen.vim
-│   │   │   ├── [  22]  python.vim
-│   │   │   ├── [  83]  prolog.vim
-│   │   │   ├── [  30]  ocaml.vim
-│   │   │   ├── [  44]  markdown.vim
-│   │   │   ├── [  28]  make.vim
-│   │   │   ├── [ 148]  lfe.vim
-│   │   │   ├── [ 134]  julia.vim
-│   │   │   ├── [  64]  java.vim
-│   │   │   ├── [  50]  javascript.vim
-│   │   │   ├── [  86]  html.vim
-│   │   │   ├── [  86]  htmldjango.vim
-│   │   │   ├── [  72]  go.vim
-│   │   │   ├── [ 375]  forth.vim
-│   │   │   ├── [  26]  fish.vim
-│   │   │   ├── [ 142]  factor.vim
-│   │   │   ├── [  64]  css.vim
-│   │   │   ├── [  28]  conf.vim
-│   │   │   ├── [  69]  clojure.vim
-│   │   │   └── [ 198]  carp.vim
-│   │   ├── [4.1K]  indent
-│   │   │   └── [  95]  php.vim
-│   │   └── [8.4K]  syntax
-│   │       ├── [ 275]  scheme.vim
-│   │       └── [4.1K]  min.vim
+│   ├── [212K]  autoload
+│   │   ├── [2.2K]  colors.vim
+│   │   ├── [1.1K]  toggle.vim
+│   │   ├── [ 81K]  plug.vim
+│   │   ├── [ 81K]  plug.vim.old
+│   │   ├── [ 341]  helpers.vim
+│   │   ├── [6.6K]  files
+│   │   │   ├── [ 865]  from_date.vim
+│   │   │   ├── [ 669]  conf.vim
+│   │   │   └── [1.1K]  by_date.vim
+│   │   ├── [ 566]  window.vim
+│   │   ├── [6.0K]  window
+│   │   │   └── [2.0K]  suckless.vim
+│   │   ├── [ 497]  system.vim
+│   │   ├── [ 714]  shell.vim
+│   │   ├── [4.1K]  operators
+│   │   │   └── [ 108]  vim.vim
+│   │   ├── [  14]  .gitignore
+│   │   ├── [ 11K]  git
+│   │   │   ├── [ 469]  stage.vim
+│   │   │   ├── [ 935]  reset.vim
+│   │   │   ├── [ 182]  remote.vim
+│   │   │   ├── [1.8K]  popup.vim
+│   │   │   ├── [ 236]  log.vim
+│   │   │   ├── [ 737]  hardreset.vim
+│   │   │   ├── [ 569]  diff.vim
+│   │   │   ├── [2.2K]  commit.vim
+│   │   │   └── [ 194]  branch.vim
+│   │   ├── [1.6K]  ftdetect.vim
+│   │   ├── [ 626]  folding.vim
+│   │   ├── [6.0K]  folding
+│   │   │   ├── [1.1K]  lisp.vim
+│   │   │   └── [ 883]  clojure.vim
+│   │   ├── [1.5K]  files.vim
+│   │   ├── [ 417]  dirs.vim
+│   │   ├── [ 902]  date.vim
+│   │   └── [1.6K]  browsh.vim
+│   ├── [4.5K]  ftdetect
+│   │   ├── [  44]  hla.vim
+│   │   ├── [  45]  text.vim
+│   │   ├── [  68]  rebol.vim
+│   │   ├── [  46]  pl.vim
+│   │   ├── [  47]  plt.vim
+│   │   ├── [  53]  noft.vim
+│   │   ├── [  44]  min.vim
+│   │   ├── [  45]  lisp.vim
+│   │   ├── [  47]  idris.vim
+│   │   ├── [  55]  gitignore.vim
+│   │   └── [  50]  arret.vim
+│   ├── [4.0K]  colors  [112 entries exceeds filelimit, not opening dir]
+│   ├── [ 31K]  plugin
+│   │   ├── [ 13K]  mappings.vim
+│   │   ├── [5.6K]  git
+│   │   │   └── [1.6K]  mappings.vim
+│   │   ├── [4.0K]  settings.vim
+│   │   ├── [ 243]  iabbrev.vim
+│   │   ├── [ 999]  term_apis.vim
+│   │   ├── [ 379]  golf.vim
+│   │   ├── [2.1K]  commands.vim
+│   │   ├── [ 115]  change_paste.vim
+│   │   └── [ 338]  browsh.vim
+│   ├── [4.0K]  skeletons  [41 entries exceeds filelimit, not opening dir]
+│   ├── [ 21K]  after
+│   │   ├── [8.4K]  syntax
+│   │   │   ├── [  44]  lisp.vim
+│   │   │   ├── [ 275]  scheme.vim
+│   │   │   └── [4.1K]  min.vim
+│   │   ├── [4.0K]  ftplugin  [41 entries exceeds filelimit, not opening dir]
+│   │   └── [4.1K]  indent
+│   │       └── [  95]  php.vim
 │   ├── [ 230]  vimrc
 │   ├── [4.1K]  syntax
 │   │   └── [ 122]  gitignore.vim
 │   ├── [  50]  settings.json
 │   ├── [ 17K]  oldconfigs.vim
 │   └── [  52]  .gitignore
-├── [ 61K]  fish
-│   ├── [ 158]  fish_plugins
-│   ├── [1.3K]  config.fish
-│   ├── [8.3K]  tools
-│   │   └── [4.3K]  functions
-│   │       ├── [  32]  shop.fish
-│   │       ├── [  43]  heap.fish
-│   │       └── [ 250]  do-thing.fish
-│   ├── [ 22K]  config
-│   │   └── [ 18K]  functions
-│   │       ├── [ 12K]  fish_user_key_bindings.fish
-│   │       ├── [ 182]  fish_greeting.fish
-│   │       ├── [ 387]  fish_title.fish
-│   │       └── [1.4K]  fish_prompt.fish
-│   └── [ 26K]  completions
-│       └── [ 22K]  functions
-│           └── [ 18K]  rustup.fish
+├── [ 13K]  stumpwm
+│   └── [9.1K]  config
+├── [4.3K]  install
 ├── [8.1K]  gtk
 │   └── [4.1K]  gtk-3.0
 │       └── [  82]  settings.ini
@@ -462,8 +439,6 @@
 ├── [9.6K]  sxhkd
 │   ├── [4.2K]  sxhkdrc
 │   └── [1.4K]  sxhkdrc-stumpwm
-├── [ 13K]  stumpwm
-│   └── [9.3K]  config
 ├── [4.6K]  rofi
 │   ├── [ 314]  config.rasi
 │   └── [ 333]  config
@@ -498,13 +473,13 @@
 │   ├── [2.7K]  conky.conf
 │   └── [1.9K]  conky-birds.conf
 ├── [5.7K]  cmus
-│   ├── [ 317]  rc
+│   ├── [ 316]  rc
 │   ├── [ 743]  xterm-snowwhite.theme
 │   └── [ 674]  gruvbox-light.theme
 └── [5.7K]  alsa
     └── [1.7K]  .asoundrc
 
- 1.3M used in 193 directories, 310 files
+ 1.4M used in 199 directories, 279 files
 ```
 
-> Generated on Tuesday, June 14, 2022 at 09:31:09 AM UTC.
+> Generated on Tuesday, November  8, 2022 at 06:33:49 AM UTC.
