@@ -31,3 +31,4 @@ nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-a><CR>
 " ||
 
 nnoremap <silent> <buffer> <C-g>s :T say <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>r :T ref <C-r><C-a><CR>
