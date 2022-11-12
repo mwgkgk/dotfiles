@@ -56,5 +56,3 @@ nnoremap <buffer> <LocalLeader>pI :T (begin (require pkg) (pkg-install-command "
 
 " Temp fix 2022-08-18
 nnoremap <silent> <buffer> <LocalLeader>B :source ~/dot/vim/conf/_neoterm/ftplugin/racket/mappings.vim<CR>
-
-runtime
