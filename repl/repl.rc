@@ -1,0 +1,10 @@
+# Perl's Devel::REPL
+# vim:ft=perl
+
+use v5.10;
+use strict;
+use warnings;
+
+load_plugin(qw( Colors ));
+
+binmode($_REPL->term->IN, ':encoding(UTF-8)');
