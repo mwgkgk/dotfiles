@@ -30,5 +30,9 @@ nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-a><CR>
 " || Docs
 " ||
 
-nnoremap <silent> <buffer> <C-g>s :T say <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>S :T say <C-r><C-a><CR>
 nnoremap <silent> <buffer> <C-g>r :T ref <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>s :T scalar <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>d :T defined <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-g>f :T Class::Inspector->methods(ref <C-r><C-a>, 'full', 'public');<CR>
+nnoremap <silent> <buffer> <C-g>F :T Class::Inspector->methods(ref <C-r><C-a>[0], 'full', 'public');<CR>
