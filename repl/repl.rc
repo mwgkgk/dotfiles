@@ -7,4 +7,6 @@ use warnings;
 
 load_plugin(qw( Colors ));
 
+use Class::Inspector;
+
 binmode($_REPL->term->IN, ':encoding(UTF-8)');
