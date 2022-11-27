@@ -1260,7 +1260,7 @@ Plug 'nimaai/vim-shen', { 'for' : 'shen' }
 Plug '~/.vim/conf/_julia-vim/', { 'for' : 'julia' }
 Plug 'JuliaEditorSupport/julia-vim', { 'for' : 'julia' }
 
-Plug '~/.vim/conf/_JuliaFormatter.vim/'
+Plug '~/.vim/conf/_JuliaFormatter.vim/', { 'for' : 'julia' }
 Plug 'kdheepak/JuliaFormatter.vim', { 'for' : 'julia' }
 
 " Lua
