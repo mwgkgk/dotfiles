@@ -1383,8 +1383,8 @@ Plug '~/shop/augs/spion/spion-vim/'
 " TODO remove nlang-vim
 Plug '~/shop/lex/nlang/nlang-vim/', { 'for' : 'nlang' }
 
-" }}}
-
+" Hex
+Plug 'fidian/hexmode'
 
 " ||
 " || Vimscript
@@ -1401,6 +1401,12 @@ Plug 'fcpg/vim-complimentary', { 'for' : 'vim' }
 Plug 'junegunn/vader.vim'
 
 " }}}
+
+" ||
+" || Hex
+" ||
+
+Plug 'fidian/hexmode'
 
 " ||
 " || Cyrillic
