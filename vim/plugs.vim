@@ -1182,6 +1182,8 @@ Plug 'dag/vim-fish'
 Plug '~/.vim/conf/_perldoc-vim/'
 Plug 'hotchpotch/perldoc-vim'
 
+Plug '~/shop/gulf/CNPP/CNPP-vim/'
+
 " Prolog
 " This is an undocumented Vim ft detection variable for resolving blank .pl ft
 " detection. Is recognized by vim-polyglot as well.
