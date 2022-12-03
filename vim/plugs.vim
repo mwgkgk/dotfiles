@@ -892,7 +892,7 @@ let g:vista_sidebar_position = 'vertical topleft'
 
 " TODO Open :Vista automatically on some filetypes
 nnoremap <silent> <F4> :Vista vim_lsp<CR>
-nnoremap sd :call vista#finder#fzf#Run()<CR>
+nnoremap sgz :call vista#finder#fzf#Run()<CR>
 
 " }}}}
 
