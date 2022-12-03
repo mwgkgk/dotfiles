@@ -103,3 +103,6 @@ nnoremap <silent> <Leader>q :call neoterm#exec({ 'cmd': ["\<C-d>"] })<CR>
 " ||
 
 nnoremap <silent> <Leader><Space>Q :TcloseAll!<CR>
+
+" Close & exit
+nnoremap <C-x><C-c> :TcloseAll! <Bar> :qa<CR>
