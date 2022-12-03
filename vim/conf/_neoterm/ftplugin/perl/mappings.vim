@@ -27,7 +27,9 @@ nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-a><CR>
 
 " Require file
-nnoremap <buffer> <LocalLeader>l :silent T require "<C-r>=expand('%:p')<CR>"<CR>
+nnoremap <buffer> <LocalLeader>L :silent T require "<C-r>=expand('%:p')<CR>"<CR>
+" Send file
+nnoremap <buffer> <LocalLeader>l :silent TREPLSendFile<CR>
 
 " ||
 " || Docs
