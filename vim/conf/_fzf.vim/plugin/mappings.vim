@@ -94,10 +94,10 @@ noremap sar :Rg <C-r>=expand('%:p:h:h')<CR><CR>
 "
 
 " Select from git tracked files in current dir:
-nnoremap sf :FzfGFiles<CR>
+nnoremap sF :FzfGFiles<CR>
 
 " Select from  untracked + unstaged files in current dir:
-nnoremap sF :FzfGitModified<CR>
+nnoremap sf :FzfGitModified<CR>
 
 " All commits:
 nnoremap sl :FzfCommits<CR>
