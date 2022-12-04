@@ -152,14 +152,14 @@ endsnippet
 # || Loops
 # ||
 
-snippet for "for"
+snippet for1 "for"
 for (my $${1:var} = 0; $$1 < ${2:expression}; $$1++) {
 	${VISUAL}$0
 }
 endsnippet
 
-snippet fore "foreach"
-for$1 (@${2:array}) {
+snippet for "foreach"
+for$2 (@${1:array}) {
 	${VISUAL}$0
 }
 endsnippet
