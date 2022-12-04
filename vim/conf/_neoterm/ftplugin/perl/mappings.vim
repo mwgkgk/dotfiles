@@ -25,6 +25,7 @@ nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
 
 " Send atom under cursor
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-a><CR>
+nnoremap <silent> <buffer> <C-x><C-x> :silent T <C-r><C-a><CR>
 
 " Require file
 nnoremap <buffer> <LocalLeader>L :silent T require "<C-r>=expand('%:p')<CR>"<CR>
