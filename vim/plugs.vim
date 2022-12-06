@@ -1156,6 +1156,9 @@ Plug '~/.vim/conf/_vim-lsp/', { 'for' : 'zig' }
 Plug 'prabirshrestha/vim-lsp', { 'for' : 'zig' }
 
 Plug 'mattn/vim-lsp-settings', { 'for' : 'zig' }
+" Failed attempt at perl lsp
+" let g:lsp_settings = { 'pls': {'cmd': ['pls']} }
+" let g:lsp_settings_filetype_perl = 'pls'
 
 
 " Many languages
