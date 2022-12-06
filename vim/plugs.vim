@@ -234,8 +234,7 @@ xmap A <Plug>(textobj-entire-a)
 omap A <Plug>(textobj-entire-a)
 " }}}
 
-" Borken atm
-" Plug 'kana/vim-textobj-function'
+Plug 'kana/vim-textobj-function'
 " Fallback for vim-textobj-function using syntax definitions:
 " Plug 'haya14busa/vim-textobj-function-syntax'
 
@@ -1181,6 +1180,9 @@ Plug 'dag/vim-fish'
 " Perl
 Plug '~/.vim/conf/_perldoc-vim/'
 Plug 'hotchpotch/perldoc-vim'
+
+" Requires kana/vim-textobj-function
+Plug 'thinca/vim-textobj-function-perl'
 
 Plug '~/shop/gulf/CNPP/CNPP-vim/'
 

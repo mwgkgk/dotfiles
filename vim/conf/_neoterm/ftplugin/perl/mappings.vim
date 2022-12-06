@@ -17,11 +17,13 @@ vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
 " TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
 " nnoremap <Space>X :TREPLSendFile<CR>
 
-" The latter is for visual, and duplicates :TREPLSendSelection. Big hmm.
-nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
+" Uses textobj-function-perl to send surrounding function definition
+nmap <buffer> <Leader>x vaf<Plug>(neoterm-repl-send)
+" for visual, same as X
 xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
-nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
+" Uses textobj-function-perl to send function contents
+nmap <buffer> <Leader>X vif<Plug>(neoterm-repl-send)
 
 " Send atom under cursor
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-a><CR>
