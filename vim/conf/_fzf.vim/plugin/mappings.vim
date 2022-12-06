@@ -24,6 +24,12 @@ nnoremap se :FzfFilesWithPreview <C-R>=expand('%:p:h')<CR><CR>
 " Files in current buffer's parent dir:
 nnoremap sr :FzfFilesWithPreview <C-R>=expand('%:p:h:h')<CR><CR>
 
+" Files in current buffer's parent dir's parent dir:
+nnoremap s2r :FzfFilesWithPreview <C-R>=expand('%:p:h:h:h')<CR><CR>
+nnoremap s3r :FzfFilesWithPreview <C-R>=expand('%:p:h:h:h:h')<CR><CR>
+nnoremap s4r :FzfFilesWithPreview <C-R>=expand('%:p:h:h:h:h:h')<CR><CR>
+nnoremap s5r :FzfFilesWithPreview <C-R>=expand('%:p:h:h:h:h:h:h')<CR><CR>
+
 
 " Select from recently opened files:
 nnoremap s' :FzfHistory<CR>
