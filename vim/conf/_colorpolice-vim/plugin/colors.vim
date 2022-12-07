@@ -23,7 +23,7 @@
 " let s:static_colo = 'jellyfish'
 
 " let s:static_colo = 'farout'
-" let s:static_colo = 'fahrenheit'
+let s:static_colo = 'fahrenheit'
 " let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
 " let s:static_colo = 'hemisu-light'
@@ -87,7 +87,7 @@
 " let s:static_colo = 'ivan'
 
 " let s:static_colo = 'mwgkgk'
-let s:static_colo = 'moot'
+" let s:static_colo = 'moot'
 " let s:static_colo = 'blue'
 
 " let s:static_colo = 'seoul256-light'
