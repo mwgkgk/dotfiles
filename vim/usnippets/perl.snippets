@@ -67,13 +67,22 @@ if match.group(1) is not None:
 	snip.rv = match.group(1)`# TODO ${VISUAL}$0
 endsnippet
 
-snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
-=begin comment `date-jiv`
+# snippet /^$/ "basement-implicit" "snip.line > 0 and re.match('^$', snip.buffer[snip.line-1])" re
+# =begin comment `date-jiv`
 
-${VISUAL}$0
+# ${VISUAL}$0
 
-=end comment
-=cut
+# =end comment
+# =cut
+# endsnippet
+
+snippet ba "basement" w
+# =begin comment `date-jiv`
+
+# ${VISUAL}$0
+
+# =end comment
+# =cut
 endsnippet
 
 # ||
