@@ -243,13 +243,19 @@ endsnippet
 snippet /([:\w]+)\$/ "expand-any-word-as-scalar" r
 $`!p
 if match.group(1) is not None:
-	snip.rv = match.group(1)` $0
+	snip.rv = match.group(1)`$0
 endsnippet
 
 snippet /([:\w]+)@/ "expand-any-word-as-array" r
 @`!p
 if match.group(1) is not None:
-	snip.rv = match.group(1)` $0
+	snip.rv = match.group(1)`$0
+endsnippet
+
+snippet /([:\w]+)%/ "expand-any-word-as-hash" r
+%`!p
+if match.group(1) is not None:
+	snip.rv = match.group(1)`$0
 endsnippet
 
 priority -3
