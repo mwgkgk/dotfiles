@@ -145,7 +145,11 @@ return ${VISUAL}$0
 endsnippet
 
 snippet map "map" w
-map { $_$0 } ${VISUAL}
+map { $_$0 } @_
+endsnippet
+
+snippet mapj "map join" w
+join "\n", map { $_$0 } @_
 endsnippet
 
 # ||
