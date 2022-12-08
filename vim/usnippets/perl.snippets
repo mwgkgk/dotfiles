@@ -202,8 +202,12 @@ endsnippet
 # || Variables
 # ||
 
-snippet /\b(my|m)/ "my" r
+snippet /\bmy/ "my" r
 my ${VISUAL}$0;
+endsnippet
+
+snippet /\bm/ "my ($0) = @_" r
+my ($0) = @_;
 endsnippet
 
 snippet let "let" w
