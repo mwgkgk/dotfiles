@@ -175,12 +175,12 @@ priority 0
 
 # If line above is empty, basement:
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-#;
+#; `!v system('date-jiv | tr -d "\n"')`
 (when #f
 	${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = "#f"`}
-	null) ; `!v system('date-jiv | tr -d "\n"')`
+	null)
 endsnippet
 
 # ||
