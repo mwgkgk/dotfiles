@@ -30,8 +30,11 @@ super + F12
 super + f
 	smuggler
 
-super + c
+super + Home
 	cmums
+
+super + c
+	johnconnor cheapshot
 
 super + t
 	temple
