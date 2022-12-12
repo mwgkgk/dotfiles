@@ -140,6 +140,16 @@ snippet si "<STDIN>" w
 endsnippet
 
 # ||
+# || Files
+# ||
+
+snippet fh "fh" w
+open my $fh, '<:encoding(utf8)', $${0:filepath} or die 'File not found';
+${VISUAL}
+close $fh;
+endsnippet
+
+# ||
 # || Subroutines
 # ||
 
