@@ -96,7 +96,7 @@ super + BackSpace
 super + y
 	zepp
 
-super + m
+super + End
 	motor
 
 super + apostrophe
