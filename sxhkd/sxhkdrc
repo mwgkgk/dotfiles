@@ -113,7 +113,7 @@ super + w
 super + g
 	~/.burrow/quick-launch/go/guns
 
-super + slash
+super + Delete
 	burrow ~/.burrow/terminals/
 
 # Factor
