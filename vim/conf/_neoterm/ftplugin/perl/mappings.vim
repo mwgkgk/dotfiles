@@ -4,6 +4,7 @@
 
 nnoremap <silent> <buffer> <Leader>r :T perl <C-r>=expand('%')<CR><CR>
 nnoremap <silent> <buffer> <Leader>R :T perl -MO=Deparse <C-r>=expand('%')<CR><CR>
+nnoremap <silent> <buffer> <LocalLeader>r :T prove -lr t/<CR>
 
 nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T re.pl<CR>
 
