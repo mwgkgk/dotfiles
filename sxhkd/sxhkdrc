@@ -39,7 +39,10 @@ super + c
 super + t
 	temple
 
-super + period
+# super + period
+# 	brahmin
+
+super + m
 	brahmin
 
 super + shift + i
