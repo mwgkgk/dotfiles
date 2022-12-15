@@ -47,7 +47,13 @@ nnoremap <silent> <buffer> <C-g>f :T Class::Inspector->methods(ref <C-r><C-a>, '
 nnoremap <silent> <buffer> <C-g>F :T Class::Inspector->methods(ref <C-r><C-a>[0], 'full', 'public');<CR>
 
 " ||
-" || Insert
+" || Wrap
 " ||
 
 nmap <silent> <buffer> <C-c><C-c> ysiW)
+
+" ||
+" || Insert
+" ||
+
+inoremap <buffer> <S-tab> ()<Left>
