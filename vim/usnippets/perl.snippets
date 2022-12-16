@@ -223,6 +223,18 @@ snippet } "} else" w
 }
 endsnippet
 
+snippet /el(se)?/ "else" rw
+else {
+	${VISUAL}$0
+}
+endsnippet
+
+snippet /elsif|ei/ "elsif" rw
+elsif ($1) {
+	${VISUAL}$0
+}
+endsnippet
+
 snippet unless "unless"
 unless ($1) {
 	${VISUAL}$0
