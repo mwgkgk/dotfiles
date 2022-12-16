@@ -4,17 +4,23 @@ extends cnpp.perl
 # || Modules
 # ||
 
-snippet /(use|u)/ "use" rw
+snippet /(use|u)/ "use" rb
 use $0;
 endsnippet
 
-snippet utf "utf" w
+snippet utf "utf" b
 use utf8;
 use open ":std", ":encoding(UTF-8)";
 endsnippet
 
-snippet exp "export" w
+snippet exp "export" b
 our @export = qw( ${VISUAL}$0 );
+endsnippet
+
+snippet pex "pex" b
+package $0;
+
+our @export = qw(  );
 endsnippet
 
 # ||
