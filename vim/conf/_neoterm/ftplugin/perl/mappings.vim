@@ -47,7 +47,6 @@ inoremap <silent> <buffer> <C-q>3 vBBBy:T <C-r>"<CR>gi
 " C-q C-q to send word under cursor or last word
 inoremap <silent> <buffer> <C-q><C-q> <Esc>:T <C-r><C-a><CR>a
 nnoremap <silent> <buffer> <C-q><C-q> :T <C-r><C-a><CR>
-nnoremap <silent> <buffer> qq :T <C-r><C-a><CR>
 
 " C-q C-w to send from the beginning of the line til cursor
 inoremap <silent> <buffer> <C-q><C-w> <Esc>v0y:T <C-r>"<CR>gi
