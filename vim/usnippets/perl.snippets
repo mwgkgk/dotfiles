@@ -163,15 +163,11 @@ endsnippet
 # || Subroutines
 # ||
 
-priority -1
-
-snippet /\b(sub|f)/ "sub" br
+snippet /^\b(sub|f)/ "sub" wr
 sub ${1:name} {
 	${VISUAL}$0
 }
 endsnippet
-
-priority 0
 
 snippet r "return" w
 return ${VISUAL}$0
