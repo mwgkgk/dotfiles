@@ -30,10 +30,10 @@ super + F12
 super + f
 	smuggler
 
-super + Home
+super + c
 	cmums
 
-super + c
+super + ctrl + c
 	johnconnor cheapshot
 
 super + t
