@@ -1377,7 +1377,8 @@ Plug '~/.vim/conf/_nim.vim/'
 Plug 'zah/nim.vim'
 
 " Crystal
-Plug 'vim-crystal/vim-crystal'
+Plug '~/.vim/conf/_vim-crystal/', { 'for' : 'crystal' }
+Plug 'vim-crystal/vim-crystal', { 'for' : 'crystal' }
 
 " HLA
 Plug 'jmahler/hla.vim'
