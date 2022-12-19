@@ -9,7 +9,7 @@ nnoremap <buffer> <Leader>r :T tcc -run <C-r>=expand('%')<CR><CR>
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T cling<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T cling-repl<CR>
 
 " ||
 " || Send
