@@ -3,6 +3,7 @@
 " ||
 
 nnoremap <buffer> <Leader>r :T crystal run <C-r>=expand('%')<CR><CR>
+nnoremap <buffer> <Leader>R :T crystal run --release <C-r>=expand('%')<CR><CR>
 
 " ||
 " || Repl
