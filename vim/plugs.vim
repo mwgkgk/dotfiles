@@ -1063,6 +1063,10 @@ nnoremap <Leader>gl :Flog -all<CR>
 nnoremap <Leader>gL :Flog -all -path=<C-R>=expand('%')<CR><CR>
 " }}}
 
+Plug 'rhysd/git-messenger.vim'
+let g:git_messenger_always_into_popup = v:true
+let g:git_messenger_include_diff = 'current'
+
 " }}}
 
 
