@@ -1,3 +1,8 @@
+// vim: ft=c
+
 #include "cling/Interpreter/Interpreter.h"
 
-gCling->allowRedefinition()
+gCling->allowRedefinition();
+
+// New syntax that doesn't work
+// gClingOpts->AllowRedefinition = 1; // or 0 to disable

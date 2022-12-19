@@ -11,6 +11,13 @@ nnoremap <buffer> <Leader>r :T tcc -run <C-r>=expand('%')<CR><CR>
 " Run repl
 nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T cling-repl<CR>
 
+" The proper way to handle rc file seems to be,
+"   cling < ~/dot/repl/.clingrc
+" However, probably due to standard library mismatch,
+" the import line completes with errors, which makes the whole thing exit.
+" This way thing it works despite errors:
+nnoremap <silent> <buffer> <LocalLeader>pig :T #include "cling/Interpreter/Interpreter.h"<CR> <Bar> :T gCling->allowRedefinition()<CR>
+
 " ||
 " || Send
 " ||
