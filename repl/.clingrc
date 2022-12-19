@@ -1,0 +1,3 @@
+#include "cling/Interpreter/Interpreter.h"
+
+gCling->allowRedefinition()
