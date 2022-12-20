@@ -24,3 +24,9 @@ nmap <Leader>x <Plug>(neoterm-repl-send)
 xmap <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <Leader>X <Plug>(neoterm-repl-send-line)
+
+" ||
+" || Insert
+" ||
+
+inoremap <buffer> <S-tab> ()<Left>
