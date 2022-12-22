@@ -89,8 +89,14 @@ if $1
 end
 endsnippet
 
-snippet do "do" w
+snippet d "do without ||" w
 do
+	${VISUAL}$0
+end
+endsnippet
+
+snippet do "do with ||" w
+do |$1|
 	${VISUAL}$0
 end
 endsnippet
