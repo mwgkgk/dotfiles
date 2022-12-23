@@ -242,6 +242,11 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet top "top" w
+(eval-when (:compile-toplevel :load-toplevel :execute)
+	$0)
+endsnippet
+
 snippet ql "quickload" b
 (ql:quickload '(#:${1:1am}))
 endsnippet
