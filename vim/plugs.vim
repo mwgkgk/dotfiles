@@ -657,6 +657,17 @@ endif
 
 " }}}
 
+" ||
+" || Treesitter
+" ||
+
+" {{{
+
+if has('nvim')
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+endif
+
+" }}}
 
 " ||
 " || Macros
