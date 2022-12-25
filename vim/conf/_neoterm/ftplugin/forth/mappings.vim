@@ -17,6 +17,9 @@ nnoremap <silent> <buffer> <LocalLeader>I :T include <C-r>=expand("%:p")<CR><CR>
 " Reload RC
 nnoremap <silent> <buffer> <LocalLeader>[r :T load-rc<CR>
 
+" Run
+nnoremap <silent> <buffer> <Leader><C-r> :T gf <C-r>=expand('%')<CR><CR>
+
 " ||
 " || Send
 " ||
