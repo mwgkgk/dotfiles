@@ -98,6 +98,7 @@ nnoremap <buffer> <LocalLeader><LocalLeader> :silent T sbcl<CR>
 nnoremap <buffer> <LocalLeader>[e :silent T ecl<CR>
 nnoremap <buffer> <LocalLeader>[s :silent T sbcl<CR>
 nnoremap <buffer> <LocalLeader>[c :silent T ccl<CR>
+nnoremap <buffer> <LocalLeader>[l :silent T clasp<CR>
 nnoremap <buffer> <LocalLeader>[i :silent T clisp<CR>
 nnoremap <buffer> <LocalLeader>[a :silent T abcl-cp<CR>
 nnoremap <buffer> <LocalLeader>[f :silent T sawfish-dev<CR>
