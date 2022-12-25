@@ -1,65 +1,74 @@
-snippet deps "espec" i
-${VISUAL}
-	{:espec, "~> 1.4.0", only: :test},
-	{:true_story, "~> 0.1.0", only: :test},
-	{:wallaby, "~> 0.17.0"},
-	{:temp, "~> 0.4", only: :test},
-	{:poison, "~> 3.1"},
-	{:apex, "~>1.0.0", only: [:test, :dev]},
-	{:csvlixir, "~> 2.0.3"},
-	{:feeder_ex, "~> 1.1.0"},
-	{:httpoison, "~> 0.11.1"},
-	{:flowex, "0.5.0"},$0
+# ||
+# || Global
+# ||
 
+# global !p
+# def unpack_fn(str):
+# 	return (''.join(x.capitalize() for x in str.split('_')).split('.')[0],
+# 			str.split('_')[0])
+# def mix_project():
+# 	from os.path import exists, join, dirname, abspath
+# 	p = path
+# 	i = 0
+# 	while True:
+# 		mixfile = join(dirname(abspath(p)), "mix.exs")
+# 		if exists(mixfile):
+# 			with open(mixfile) as f:
+# 				return  f.readline().split()[1].split('.')[0]
+# 		i += 1
+# 		if i >= 5 :
+# 			return "Unknown"
+# 		p = dirname(p)
+# endglobal
+
+# ||
+# || Date
+# ||
+
+snippet da "date-file-start" "snip.line == 0" e
+# `date-utc`
+
+$0
 endsnippet
 
-# Order of definitions:
-#
-#       @moduledoc
-#       @behaviour
-#       use
-#       import
-#       alias
-#       require
-#       defstruct
-#       @type
-#       @module_attribute
-#       @callback
-#       @macrocallback
-#       @optional_callbacks
-
-global !p
-def unpack_fn(str):
-	return (''.join(x.capitalize() for x in str.split('_')).split('.')[0],
-			str.split('_')[0])
-def mix_project():
-	from os.path import exists, join, dirname, abspath
-	p = path
-	i = 0
-	while True:
-		mixfile = join(dirname(abspath(p)), "mix.exs")
-		if exists(mixfile):
-			with open(mixfile) as f:
-				return  f.readline().split()[1].split('.')[0]
-		i += 1
-		if i >= 5 :
-			return "Unknown"
-		p = dirname(p)
-endglobal
-
-snippet doc "doctest" b
-@doc ~S"""
-	iex> $0
-"""
+snippet /^ *da(te)?/ "Date" rb
+# `date-utc`
+${0}
 endsnippet
 
-snippet "\sf" "inline function" r
- &(${VISUAL}$1)
+snippet dd "dd-inline" w
+`!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
 endsnippet
+
+# ||
+# || Comments
+# ||
+
+snippet ; "comment-generic" w
+# ${VISUAL}$0
+endsnippet
+
+snippet ; "comment" w
+# ${VISUAL}$0
+endsnippet
+
+snippet # "section" w
+# *
+# * ${VISUAL}$0
+# *
+endsnippet
+
+snippet /^(T|#t)$/ "TODO" rb
+# TODO ${VISUAL}$0
+endsnippet
+
+# ||
+# || Control flow
+# ||
 
 snippet do "do..end" i
 do
-	${VISUAL}$1
+	${VISUAL}$0
 end
 endsnippet
 
@@ -77,15 +86,35 @@ cond do
 end
 endsnippet
 
+snippet rec "receive" b
+receive do
+	${VISUAL}$1
+end
+endsnippet
+
+# ||
+# || Functions
+# ||
+
+snippet doc "doctest" b
+@doc ~S"""
+	iex> $0
+"""
+endsnippet
+
+snippet l "lambda" w
+&(${VISUAL}$0)
+endsnippet
+
 snippet cb "callback" b
-@callback ${1:hello}($2) :: ${3:String.t}
+@callback ${1:hello}($2) :: ${0:String.t}
 endsnippet
 
 snippet d "def" b
 def ${1:hello}($2), do: ${3:"hello"}
 endsnippet
 
-snippet def "def" b
+snippet /\b(def|f)/ "def" rb
 @spec $1($2) :: ${3:String.t}
 def ${1:hello}(${4:$2}) do
 	${VISUAL}$0
@@ -135,12 +164,6 @@ def version() do
 end
 endsnippet
 
-snippet rec "receive" b
-receive do
-	${VISUAL}$1
-end
-endsnippet
-
 snippet test "test" b
 test "${1:does something}", %{${2:values}: $2} do
 	${VISUAL}$3
@@ -155,12 +178,9 @@ snippet map "map" i
 Enum.map(&${VISUAL}$0/1)
 endsnippet
 
-snippet / *d(a)?(te)?/ "Date" rb
-## `date-utc` ##
-${0}
-endsnippet
-
-# Espec
+# ||
+# || Espec
+# ||
 
 snippet cont "context" b
 context $1do
@@ -182,7 +202,9 @@ snippet /(sho|should)/ "should" br
 |> should(${0:be_ok_result()})
 endsnippet
 
-# Phoenix
+# ||
+# || Phoenix
+# ||
 
 snippet scope "phoenix scope" b
 scope "/${1:scope}", ${2:Pweb} do
@@ -206,18 +228,18 @@ snippet red "phoenix redirect" b
 redirect conn, to: "/$1"
 endsnippet
 
-snippet chan "phoenix channel" b
-defmodule ${1:`!p snip.rv = mix_project()`}.${2:`!p snip.rv, chan_name = unpack_fn(fn)`} do
-	use Phoenix.Channel
+# snippet chan "phoenix channel" b
+# defmodule ${1:`!p snip.rv = mix_project()`}.${2:`!p snip.rv, chan_name = unpack_fn(fn)`} do
+# 	use Phoenix.Channel
 
-	def join("${3:`!p snip.rv = chan_name`}:${4:lobby}", _message, socket) do
-		{:ok, socket}
-	end
-	def join("$3:" <> _private_room_id, _params, _socket) do
-		{:error, %{reason: "unauthorized"}}
-	end
-end
-endsnippet
+# 	def join("${3:`!p snip.rv = chan_name`}:${4:lobby}", _message, socket) do
+# 		{:ok, socket}
+# 	end
+# 	def join("$3:" <> _private_room_id, _params, _socket) do
+# 		{:error, %{reason: "unauthorized"}}
+# 	end
+# end
+# endsnippet
 
 snippet http "http" b
 http: [port: {:system, "PORT"}],
@@ -244,7 +266,9 @@ end
 
 endsnippet
 
-# true_story
+# ||
+# || true_story
+# ||
 
 snippet put "put" b
 defp put_${1:something}(c) do
