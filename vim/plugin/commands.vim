@@ -15,6 +15,8 @@ cab <expr> vh getcmdtype() == ':' ? 'vert help' : 'vh'
 
 cab <expr> ww getcmdtype() == ':' ? "saveas <C-r>=expand('%:p:h')<CR>/" : 'ww'
 
+cab <expr> nn getcmdtype() == ':' ? "verb nn" : 'nn'
+
 "
 "
 " Files
