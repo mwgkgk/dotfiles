@@ -44,4 +44,4 @@ inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
 " || Help
 " ||
 
-nnoremap <buffer> g<C-g> :silent T h(<C-r><C-a>)<CR>
+nnoremap <buffer> <C-g>h :silent T h(<C-r><C-a>)<CR>

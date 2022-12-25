@@ -1,1 +1,1 @@
-nnoremap <buffer> <silent> <C-g> :call alchemist#exdoc()<CR>
+nnoremap <buffer> <silent> <C-g><C-g> :call alchemist#exdoc()<CR>
