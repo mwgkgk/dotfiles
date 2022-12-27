@@ -163,6 +163,12 @@ ${VISUAL}
 close $fh;
 endsnippet
 
+snippet fw "fw" w
+open my $fh, '>:encoding(utf8)', $${0:filepath} or die 'File not found';
+${VISUAL}
+close $fh;
+endsnippet
+
 # ||
 # || Subroutines
 # ||
