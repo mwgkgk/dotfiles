@@ -1,4 +1,11 @@
 " ||
+" || Repl
+" ||
+
+" Debug mode
+nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T pil +<CR>
+
+" ||
 " || Eval
 " ||
 
@@ -19,4 +26,5 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 " || Docs
 " ||
 
-nnoremap <buffer> <C-g> :silent T (show '<C-r><C-w>)<CR>
+nnoremap <buffer> <C-g><C-g> :silent T (show '<C-r><C-w>)<CR>
+nnoremap <buffer> <C-g>g :silent T (doc '<C-r><C-w>)<CR>
