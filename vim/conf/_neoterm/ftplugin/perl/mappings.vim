@@ -7,6 +7,8 @@ nnoremap <silent> <buffer> <Leader>R :T perl -MO=Deparse <C-r>=expand('%')<CR><C
 nnoremap <silent> <buffer> <LocalLeader>R :T prove -lr t/<CR>
 nnoremap <silent> <buffer> <LocalLeader>r :T shortprove -lr t/<CR>
 nnoremap <silent> <buffer> <LocalLeader>gr :T prove .<CR>
+nnoremap <silent> <buffer> <LocalLeader><Leader>r :T perl <C-r>=expand('%:t')<CR><CR>
+nnoremap <silent> <buffer> <LocalLeader><Leader>R :T perl -d <C-r>=expand('%:t')<CR><CR>
 
 nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T re.pl<CR>
 
