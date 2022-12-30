@@ -61,6 +61,13 @@ inoremap <silent> <buffer> <C-q><C-e> <Esc>v$y:T <C-r>"<CR>gi
 nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 
 " ||
+" || Debugger
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>n :T n<CR>
+nnoremap <silent> <buffer> <LocalLeader>s :T s<CR>
+
+" ||
 " || Docs
 " ||
 
