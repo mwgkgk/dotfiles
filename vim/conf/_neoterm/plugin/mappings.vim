@@ -85,6 +85,13 @@ nnoremap <Space><LocalLeader> :T<Space>
 " nnoremap <Leader>R :silent T do-thing<CR>
 
 " ||
+" || Change dir
+" ||
+
+nnoremap <silent> <LocalLeader>]e :T cd <C-r>=expand('%:h')<CR><CR>
+nnoremap <silent> <LocalLeader>]w :T cd <C-r>=expand('%:h:h')<CR><CR>
+
+" ||
 " || C-z and fg
 " ||
 
