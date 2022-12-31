@@ -314,8 +314,9 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+# Normie variant: (defconstant +$1+ ${0:nil}`!p
 snippet "(\()?\bdefc" "defconstant" rw
-(defconstant +$1+ ${0:nil}`!p
+(defconstant $1 ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
