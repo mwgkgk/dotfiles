@@ -2,8 +2,7 @@
 " || REPL control
 " ||
 
-" This one conflicts with neoterm#repl#set which cannot be unset
-" nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T python<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T python<CR>
 
 
 " Source current file
