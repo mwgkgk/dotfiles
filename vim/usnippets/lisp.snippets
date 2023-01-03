@@ -1042,19 +1042,26 @@ endsnippet
 # ||
 
 snippet "(\()?\b(pwd|cwd)" "(pwd|cwd)" rw
-(sb-posix:getcwd$0`!p
+(uiop/os:getcwd$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bcd" "cd-posix" rw
-(sb-posix:chdir #P"~/$0"`!p
+(uiop:chdir #P"~/$0"`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bhere" "here" rw
+(merge-pathnames ${VISUAL}$0 (uiop/os:getcwd)`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bcdl" "cd-load" rw
-(setf *default-pathname-defaults* #P"~/$0"`!p
+(let ((*default-pathname-defaults* #P"~/$1"))
+	${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
