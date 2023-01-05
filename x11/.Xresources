@@ -80,9 +80,9 @@ URxvt*.tabbed.tab-bg: 9
 /* URxvt.keysym.Meta-F3: perl:tabbedex:new_tab */
 /* URxvt.keysym.Meta-F4: perl:tabbedex:rename_tab */
 
-URxvt.font: xft:Liberation Mono:pixelsize=10
-URxvt.boldFont: xft:Liberation Mono:bold:pixelsize=10
-URxvt.letterSpace: -1
+/* URxvt.font: xft:Liberation Mono:pixelsize=10 */
+/* URxvt.boldFont: xft:Liberation Mono:bold:pixelsize=10 */
+/* URxvt.letterSpace: -1 */
 
 /* URxvt*font: xft:Fixed:size=8:antialias=false */
 /* URxvt*boldFont: xft:Fixed:size=8:weight=Bold:antialias=false */
@@ -119,6 +119,8 @@ URxvt.letterSpace: -1
 /* URxvt*font: xft:Scientifica:size=8:antialias=true */
 /* URxvt*boldFont: xft:Scientifica:size=8:weight=Bold:antialias=true */
 /* URxvt.letterSpace: 1 */
+
+#include ".Xres_fonts"
 
 !Black
 ! *color0: #262626
