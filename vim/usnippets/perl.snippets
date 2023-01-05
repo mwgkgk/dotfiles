@@ -157,16 +157,16 @@ endsnippet
 # || Files
 # ||
 
-snippet fh "fh" w
-open my $fh, '<:encoding(utf8)', $${0:filepath} or die 'File not found';
+snippet fr "fr" w
+open my $fhr, '<:encoding(utf8)', $${0:filepath} or die "$$0 not found";
 ${VISUAL}
-close $fh;
+close $fhr;
 endsnippet
 
 snippet fw "fw" w
-open my $fh, '>:encoding(utf8)', $${0:filepath} or die 'File not found';
+open my $fhw, '>:encoding(utf8)', $${0:filepath} or die "$$0 not found";
 ${VISUAL}
-close $fh;
+close $fhw;
 endsnippet
 
 # ||
