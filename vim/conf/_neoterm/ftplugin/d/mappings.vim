@@ -21,7 +21,7 @@ nnoremap <silent> <buffer> <LocalLeader>dv :T dmd --version<CR>
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T dub run drepl<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :silent T d-repl<CR>
 
 " ||
 " || Send
