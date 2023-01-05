@@ -88,6 +88,14 @@ URxvt*.tabbed.tab-bg: 9
 /* URxvt*boldFont: xft:Fixed:size=8:weight=Bold:antialias=false */
 /* URxvt.letterSpace: -4 */
 
+/* Obtained via  appres XTerm xterm | grep font5
+ * The default also benefits from other params, idk how to get the exact spacing */
+/* URxvt*font: -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1 */
+/* URxvt*boldFont: -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1 */
+
+/* URxvt*font: -misc-fixed-medium-r-normal--10-*-*-*-c-*-iso10646-1 */
+/* URxvt*boldFont: -misc-fixed-medium-r-normal--10-*-*-*-c-*-iso10646-1 */
+
 /* URxvt*font: xft:Monospace:size=8:antialias=true */
 /* URxvt*boldFont: xft:Monospace:size=8:weight=Bold:antialias=true */
 /* URxvt.letterSpace: -1 */
