@@ -1167,10 +1167,10 @@ Plug '~/shop/oil/borzhch'
 " || Filetypes
 " ||
 
-Plug '~/.vim/conf/_vim-lsp/', { 'for' : ['zig', 'd'] }
-Plug 'prabirshrestha/vim-lsp', { 'for' : ['zig', 'd'] }
+Plug '~/.vim/conf/_vim-lsp/', { 'for' : ['zig', 'd', 'c'] }
+Plug 'prabirshrestha/vim-lsp', { 'for' : ['zig', 'd', 'c'] }
 
-Plug 'mattn/vim-lsp-settings', { 'for' : ['zig', 'd'] }
+Plug 'mattn/vim-lsp-settings', { 'for' : ['zig', 'd', 'c'] }
 " Failed attempt at perl lsp
 " let g:lsp_settings = { 'pls': {'cmd': ['pls']} }
 " let g:lsp_settings_filetype_perl = 'pls'
