@@ -263,6 +263,24 @@ constant ${VISUAL}$0
 endsnippet
 
 # ||
+# || FFI
+# ||
+
+snippet clib "c-library" w
+c-library $1
+$0
+end-c-library
+endsnippet
+
+snippet cf "c-function" w
+c-function $1 ${0:$1} --
+endsnippet
+
+snippet ci  "c include" w
+\c #include <${0:stdlib.h}>
+endsnippet
+
+# ||
 # || Fallbacks
 # ||
 
