@@ -1195,6 +1195,10 @@ Plug 'jceb/vim-orgmode'
 " Fish
 Plug 'dag/vim-fish'
 
+" Ruby
+Plug '~/.vim/conf/_vim-textobj-ruby/'
+Plug 'rhysd/vim-textobj-ruby'
+
 " Perl
 Plug '~/.vim/conf/_perldoc-vim/'
 Plug 'hotchpotch/perldoc-vim'
