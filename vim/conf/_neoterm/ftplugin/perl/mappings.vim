@@ -19,9 +19,6 @@ nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T re.pl<CR>
 nnoremap <silent> <buffer> X :TREPLSendLine<CR>
 vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
 
-" TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
-" nnoremap <Space>X :TREPLSendFile<CR>
-
 " Uses textobj-function-perl to send surrounding function definition
 nmap <buffer> <Leader>x vaf<Plug>(neoterm-repl-send)
 " for visual, same as X
