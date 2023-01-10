@@ -38,6 +38,32 @@ ${VISUAL}$0
 =end
 endsnippet
 
+# Tue Jan 10 03:13:06 UTC 2023
+
+# ||
+# || Function
+# ||
+
+snippet "\b(de)?f" "def <name>..." r
+def ${1:function_name}
+  ${0:# TODO}
+end
+endsnippet
+
+# Tue Jan 10 03:10:17 UTC 2023
+
+# ||
+# || Printing
+# ||
+
+snippet p "puts w/o quotes" w
+puts ${VISUAL}$0
+endsnippet
+
+snippet puts "puts w/ quotes" w
+puts w/ quotes
+endsnippet
+
 # ||
 # || Unsorted
 # ||
@@ -126,12 +152,6 @@ end
 endsnippet
 
 
-
-snippet "\b(de)?f" "def <name>..." r
-def ${1:function_name}${2: ${3:*args}}
-	${0:# TODO}
-end
-endsnippet
 
 
 
