@@ -7,6 +7,41 @@ snippet da "da" w
 ${0}
 endsnippet
 
+# Tue Jan 10 00:11:59 UTC 2023
+
+# ||
+# || Comments
+# ||
+
+snippet ; "comment-generic" w
+# ${VISUAL}$0
+endsnippet
+
+snippet # "comment-default" w
+# ${VISUAL}$0
+endsnippet
+
+snippet ## "section" w
+# ||
+# || ${0:Section}
+# ||
+endsnippet
+
+# ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+=begin `!v system('date-jiv | tr -d "\n"')`
+${VISUAL}${0:`!p
+
+if not snip.v.text:
+  snip.rv = "nil"
+`}
+=end
+endsnippet
+
 # ||
 # || Unsorted
 # ||
@@ -570,12 +605,5 @@ module ${1:module_name}
 end
 endsnippet
 
-
-
-snippet ###
-=begin
-  $0
-=end
-endsnippet
 
 # vim: set ts=2 sw=2 expandtab:
