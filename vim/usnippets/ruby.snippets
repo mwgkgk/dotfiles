@@ -76,7 +76,7 @@ puts ${VISUAL}$0
 endsnippet
 
 snippet puts "puts w/ quotes" w
-puts w/ quotes
+puts "${VISUAL}$0"
 endsnippet
 
 # ||
@@ -619,14 +619,6 @@ alias :${1:new_name} :${2:old_name}
 endsnippet
 
 
-
-snippet class "class <class_name> def initialize ... end end"
-class ${1:class_name}
-	def initialize ${2:*args}
-		$0
-	end
-end
-endsnippet
 
 
 
