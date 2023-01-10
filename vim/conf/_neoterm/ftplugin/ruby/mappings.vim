@@ -18,8 +18,8 @@ nnoremap <buffer> <silent> <LocalLeader>b :T rake<CR>
 nnoremap <silent> <buffer> X :TREPLSendLine<CR>
 vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
 
-" Uses vim-textobj-ruby to send surrounding function definition
-nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)arr<Esc>
+" Uses vim-textobj-rubyblock to send surrounding function definition
+nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)arb<Esc>
 " for visual, same as X
 xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
