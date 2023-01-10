@@ -17,9 +17,10 @@ snippet ; "comment-generic" w
 # ${VISUAL}$0
 endsnippet
 
-snippet # "comment-default" w
-# ${VISUAL}$0
-endsnippet
+# Use it for #{}
+# snippet # "comment-default" w
+# # ${VISUAL}$0
+# endsnippet
 
 snippet ## "section" w
 # ||
@@ -91,8 +92,16 @@ snippet p "puts w/ quotes" w
 puts "${VISUAL}$0"
 endsnippet
 
-snippet #{ "#{}" w
+snippet #{ "longform #{}" w
 #{${VISUAL}$0}
+endsnippet
+
+snippet # "shortform #{}" w
+#{${VISUAL}$0}
+endsnippet
+
+snippet "# "quoted #{}" w
+"#{${VISUAL}$0}
 endsnippet
 
 # ||
