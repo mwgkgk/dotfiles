@@ -24,9 +24,9 @@ nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)arr
 xmap <buffer> <Leader>x <Plug>(neoterm-repl-send)
 
 " Send file
-nnoremap <buffer> <LocalLeader>l :silent TREPLSendFile<CR>
+nnoremap <buffer> <LocalLeader>L :silent TREPLSendFile<CR>
 " Require file
-nnoremap <buffer> <LocalLeader>L :silent T Kernel#load "<C-r>=expand('%:p')<CR>"<CR>
+nnoremap <buffer> <LocalLeader>l :silent T load "<C-r>=expand('%:p')<CR>"<CR>
 
 " Send atom under cursor
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-a><CR>
