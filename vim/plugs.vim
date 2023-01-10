@@ -1199,6 +1199,9 @@ Plug 'dag/vim-fish'
 Plug '~/.vim/conf/_vim-textobj-ruby/'
 Plug 'rhysd/vim-textobj-ruby'
 
+Plug '~/.vim/conf/_vim-textobj-rubyblock/'
+Plug 'nelstrom/vim-textobj-rubyblock'
+
 " Perl
 Plug '~/.vim/conf/_perldoc-vim/'
 Plug 'hotchpotch/perldoc-vim'
