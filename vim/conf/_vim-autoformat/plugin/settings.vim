@@ -20,3 +20,5 @@ let g:formatters_d = ['dfmt']
 let g:formatdef_jsfmt = '"jsfmt"'
 let g:formatters_js = ['jsfmt']
 let g:formatters_python = ['black']
+let g:formatdef_rufo = '"rufo -x"'
+let g:formatters_ruby = ['rufo']
