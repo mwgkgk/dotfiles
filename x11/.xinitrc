@@ -101,7 +101,10 @@ else
     xsetroot -name "*"
 fi
 
-while true; do
+# Workaround for terminate:ctrl_alt_bksp not working
+touch ~/.dwm-running
+
+while test -f "$HOME/.dwm-running"; do
   # Log stderror to a file 
   dwm 2> ~/.dwm.log
   # No error logging
