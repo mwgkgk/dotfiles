@@ -114,6 +114,16 @@ snippet "# "quoted #{}" w
 endsnippet
 
 # ||
+# || Main
+# ||
+
+snippet /\b(main|ifmain|ifm)/ "ifmain" br
+if $PROGRAM_NAME == __FILE__
+  ${VISUAL}$0
+end 
+endsnippet
+
+# ||
 # || Unsorted
 # ||
 
