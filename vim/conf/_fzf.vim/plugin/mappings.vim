@@ -126,7 +126,7 @@ nnoremap <silent> sb :call fzf#run(fzf#wrap({
 "
 
 " Prepop from command history:
-nnoremap s: :FzfHistory:<CR>
+nnoremap s; :FzfHistory:<CR>
 
 "
 "
@@ -137,7 +137,7 @@ nnoremap s: :FzfHistory:<CR>
 nnoremap sM :FzfMaps<CR>
 
 " Prepopulate with a fuzzy-selected command:
-nnoremap s; :FzfCommands<CR>
+nnoremap s: :FzfCommands<CR>
 
 " Insert a snippet:
 nnoremap s<Tab> :FzfSnippets<CR>
