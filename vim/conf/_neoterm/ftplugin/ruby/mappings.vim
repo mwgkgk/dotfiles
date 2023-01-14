@@ -11,6 +11,9 @@ nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T irb<CR>
 " Rake
 nnoremap <buffer> <silent> <LocalLeader>b :T rake<CR>
 
+" Test under cursor
+nnoremap <silent> <buffer> <Leader>R :T ruby <C-r>=expand('%')<CR> -n <C-r><C-w><CR>
+
 " ||
 " || Send
 " ||
