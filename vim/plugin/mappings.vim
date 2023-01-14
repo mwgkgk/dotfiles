@@ -353,6 +353,12 @@ nnoremap <Leader>Q q
 
 " q for %:
 map q %
+xmap q %
+xmap aq a%
+xmap iq i%
+omap q %
+omap aq a%
+omap iq i%
 
 " Join up
 nnoremap K -J
