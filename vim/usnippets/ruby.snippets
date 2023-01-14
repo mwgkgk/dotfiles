@@ -127,6 +127,19 @@ snippet "# "quoted #{}" w
 "#{${VISUAL}$0}
 endsnippet
 
+# Fri Jan 13 15:27:09 UTC 2023
+
+# ||
+# || Exception
+# ||
+
+snippet try "begin/rescue/end" w
+begin
+  ${VISUAL}$0
+rescue
+end
+endsnippet
+
 # ||
 # || Main
 # ||
@@ -607,33 +620,6 @@ begin
 	${0:# TODO}
 end while ${1:expression}
 endsnippet
-
-
-
-snippet begin "begin ... rescue ... end"
-begin
-	${1:# TODO}
-rescue
-	${0:# TODO}
-end
-endsnippet
-
-
-
-snippet begin "begin ... rescue ... else ... ensure ... end"
-begin
-	${1:# Raise exception}
-rescue Exception => e
-	puts e.message
-	puts e.backtrace.inspect
-	${2:# Rescue}
-else
-	${3:# other exception}
-ensure
-	${0:# always excute}
-end
-endsnippet
-
 
 
 snippet rescue
