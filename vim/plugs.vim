@@ -223,6 +223,7 @@ xmap iN  <Plug>(textobj-indent-same-i)
 omap iN  <Plug>(textobj-indent-same-i)
 
 " }}}
+Plug '~/.vim/conf/_vim-textobj-lastpat/'
 Plug 'kana/vim-textobj-lastpat'
 Plug 'kana/vim-textobj-entire' " {{{
 let g:textobj_entire_no_default_key_mappings = 1
