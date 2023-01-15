@@ -95,13 +95,17 @@ sxhkd -c ~/dot/sxhkd/sxhkdrc ~/pants/sxhkd/sxhkdrc &
   # sleep 10
 # done &
 
-if test -f "$HOME/.xsetroot-message"; then
-    xsetroot -name "$(cat ~/.xsetroot-message | tr -d '\n')"
+if command -v acpi; then
+    dwm-statusline &
 else
-    xsetroot -name "*"
+    if test -f "$HOME/.xsetroot-message"; then
+        xsetroot -name "$(cat ~/.xsetroot-message | tr -d '\n')"
+    else
+        xsetroot -name "*"
+    fi
 fi
 
-# Workaround for terminate:ctrl_alt_bksp not working
+# Safeguard for a rainy day
 touch ~/.dwm-running
 
 while test -f "$HOME/.dwm-running"; do
