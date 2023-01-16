@@ -1,4 +1,4 @@
-cd ~/music/
+cd ~/bank/music/
 
 colorscheme amazon
 set lib_sort=filename
