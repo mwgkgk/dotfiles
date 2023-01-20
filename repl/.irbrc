@@ -1,0 +1,3 @@
+# Fri Jan 20 12:19:39 UTC 2023
+
+IRB.conf[:BACK_TRACE_LIMIT] = 100
