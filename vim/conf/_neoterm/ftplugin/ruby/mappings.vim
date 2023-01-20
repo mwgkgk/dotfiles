@@ -70,6 +70,13 @@ inoremap <buffer> <C-q>2 <Esc>vBBy:silent T <C-r>"<CR>gi
 inoremap <buffer> <C-q>3 <Esc>vBBBy:silent T <C-r>"<CR>gi
 
 " ||
+" || Send to Vim
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>vx :rubydo <C-r><C-l><CR>
+nnoremap <silent> <buffer> <LocalLeader>vf :rubydo load "<c-r>=expand("%")<CR>"<CR>
+
+" ||
 " || Help
 " ||
 
