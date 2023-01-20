@@ -1,10 +1,10 @@
 # Citizens
 
 XF86MonBrightnessUp
-	brightnessctl s 250-
+	brightnessctl s 249-
 
 XF86MonBrightnessDown
-	brightnessctl s +250
+	brightnessctl s +249
 
 super + F1
 	ship
