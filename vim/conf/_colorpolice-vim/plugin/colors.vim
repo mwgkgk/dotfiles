@@ -24,7 +24,7 @@
 
 " let s:static_colo = 'farout'
 " let s:static_colo = 'fahrenheit'
-let s:static_colo = 'shady'
+" let s:static_colo = 'shady'
 " let s:static_colo = 'hemisu-dark'
 " let s:static_colo = 'hemisu-light'
 " let s:static_colo = 'hawk'
@@ -55,6 +55,7 @@ let s:static_colo = 'shady'
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
 " let s:static_colo = 'alien-nes'
+let s:static_colo = 'grid'
 
 " let s:static_colo = 'Tomorrow'
 " let s:static_colo = 'primary'
