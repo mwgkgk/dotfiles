@@ -128,7 +128,7 @@ defp ${1:hello}(${4:$2}) do
 end
 endsnippet
 
-snippet defm "defmodule" b
+snippet /^(defmodule|defmod|defm|module|mod)/ "defmodule" rb
 defmodule ${1:Default} do
 	${VISUAL}$2
 end
