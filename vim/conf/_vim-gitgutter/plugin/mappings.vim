@@ -44,7 +44,7 @@ nmap <Leader>gc <Plug>(operator-commit-file-with-message)
 
 " Stage and commit hunk everything with message specified by motion,
 " prepending Add:
-nmap <Leader>gMa <Plug>(operator-commit-everything-as-add)
+nmap <Leader>gA <Plug>(operator-commit-everything-as-add)
 
 " Rename last commit with message specified by motion:
 nmap <Leader>hr <Plug>(operator-rename-last-commit)
