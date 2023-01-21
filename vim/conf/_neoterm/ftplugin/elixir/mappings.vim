@@ -11,6 +11,9 @@ nnoremap <buffer> <silent> <Leader>f :T mix test<CR>
 " mix deps.get
 nnoremap <buffer> <silent> <LocalLeader>dg :T mix deps.get<CR>
 
+" Load
+nnoremap <buffer> <silent> <LocalLeader>l :T c "<C-r>=expand('%')<CR>"<CR>
+
 " ||
 " || Send
 " ||
