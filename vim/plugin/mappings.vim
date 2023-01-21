@@ -366,6 +366,9 @@ nnoremap K -J
 " Kill till EoL from normal
 nnoremap <Leader><C-k> d$
 
+" Restore C-x
+nnoremap <C-x><C-a> <C-x>
+
 " Restore single-quote functionality
 nnoremap <Leader>` '
 
