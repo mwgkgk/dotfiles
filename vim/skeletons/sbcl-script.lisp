@@ -1,4 +1,4 @@
-#!/usr/bin/sbcl --script
+#!/usr/bin/env runsbcl
 ; vim:ft=lisp
 
 (defpackage #:__new_package
@@ -7,4 +7,5 @@
 (in-package #:__new_package)
 
 (defun main ()
-  (print *posix-argv*))
+  (let ((filepath (second sb-ext:*posix-argv*)))
+    (error "unfinished")))
