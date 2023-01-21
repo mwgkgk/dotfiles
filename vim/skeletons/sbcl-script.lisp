@@ -1,7 +1,10 @@
-; #!/usr/bin/sbcl --script
+#!/usr/bin/sbcl --script
+; vim:ft=lisp
 
-(defun mn (args)
-  nil)
+(defpackage #:__new_package
+  (:use #:cl))
+
+(in-package #:__new_package)
 
 (defun main ()
-  (mn (cdr *posix-argv*)))
+  (print *posix-argv*))
