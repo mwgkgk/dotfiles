@@ -97,7 +97,7 @@ endsnippet
 # || Strings
 # ||
 
-snippet P "path" w
+snippet p "path" w
 #p"`!p
 if not snip.v.text:
 	snip.rv = "~/"`$0"
@@ -913,7 +913,7 @@ endsnippet
 # || Format
 # ||
 
-snippet "(\()?\b(format|fmt|p)" "format" wr
+snippet "(\()?\b(format|fmt)" "format" wr
 (format ${1:nil} "$0"`!p
 if match.group(1) is None:
 	snip.rv = ")"`
