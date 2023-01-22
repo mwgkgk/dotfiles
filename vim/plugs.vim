@@ -1350,6 +1350,9 @@ Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' }
 
 Plug 'mwgkgk/vim-textobj-elixir', { 'for' : 'elixir' }
 
+"Haxe
+Plug 'jdonaldson/vaxe'
+
 " Fsharp
 " Plug 'fsharp/vim-fsharp'
 
