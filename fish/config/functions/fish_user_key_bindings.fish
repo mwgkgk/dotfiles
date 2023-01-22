@@ -409,6 +409,12 @@ function bind_fdz_vim_ink
     commandline -f repaint
 end
 
+function bind_fdz_vim_ghq
+    fdz-file ~/.ghq | read -l result
+    and commandline -- "v $result" ;and commandline -f execute
+    commandline -f repaint
+end
+
 function fish_user_key_bindings
     # Emulate bash: !!, !$
     bind ! bind_bang
@@ -491,10 +497,13 @@ function fish_user_key_bindings
     bind ã bind_fdz_dir_cases
     # M-S-x to fdz-dir ~/shop/ink/
     bind Ø bind_fdz_dir_ink
-    # M-q to fdz-dir ~/.ghq/
-    bind ñ bind_fdz_dir_ghq
     # M-w to fdz-dir .
     bind ÷ bind_fdz_dir_here
+
+    # M-S-q to fdz-dir ~/.ghq/
+    bind Ñ bind_fdz_dir_ghq
+    # M-S-q to fdz-file ~/.ghq/
+    bind ñ bind_fdz_vim_ghq
 
     # M-r to fzf through siblings
     bind ò bind_er
