@@ -1061,6 +1061,11 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bjoin" "join" rw
+(merge-pathnames ${VISUAL}$0`!p if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "(\()?\bhere" "here" rw
 (merge-pathnames ${VISUAL}$0 (uiop/os:getcwd)`!p
 if match.group(1) is None:
