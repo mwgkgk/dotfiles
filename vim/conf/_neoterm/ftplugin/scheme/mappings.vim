@@ -9,10 +9,11 @@ nnoremap <silent> <buffer> <LocalLeader>r :T bigloo-run <C-r>=expand('%')<CR><CR
 " ||
 
 nnoremap <buffer> <LocalLeader><LocalLeader> :T chez<CR>
-nnoremap <buffer> <LocalLeader>[g :T gsi<CR>
+nnoremap <buffer> <LocalLeader>[c :T icyc<CR>
+nnoremap <buffer> <LocalLeader>[gu :T guile<CR>
+nnoremap <buffer> <LocalLeader>[ga :T gsi<CR>
 nnoremap <buffer> <LocalLeader>[b :T bigloo<CR>
-nnoremap <buffer> <LocalLeader>[o :T gosh<CR>
-nnoremap <buffer> <LocalLeader>[u :T guile<CR>
+nnoremap <buffer> <LocalLeader>[go :T gosh<CR>
 
 " ||
 " || Sending to repl
