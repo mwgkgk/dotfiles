@@ -31,7 +31,7 @@
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
-" let s:static_colo = 'shenzhen'
+let s:static_colo = 'shenzhen'
 " let s:static_colo = 'busan'
 " let s:static_colo = 'stalker'
 
@@ -55,7 +55,7 @@
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
 " let s:static_colo = 'alien-nes'
-let s:static_colo = 'grid'
+" let s:static_colo = 'grid'
 
 " let s:static_colo = 'Tomorrow'
 " let s:static_colo = 'primary'
