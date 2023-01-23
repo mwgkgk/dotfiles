@@ -31,7 +31,7 @@
 " let s:static_colo = 'zorn'
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
-let s:static_colo = 'shenzhen'
+" let s:static_colo = 'shenzhen'
 " let s:static_colo = 'busan'
 " let s:static_colo = 'stalker'
 
@@ -121,6 +121,8 @@ let s:static_colo = 'shenzhen'
 " let s:static_colo = 'miramare'
 " let s:static_colo = 'paramount-light'
 " let s:static_colo = 'lunaperche-dark'
+
+let s:static_colo = 'distinguishedmod'
 
 " gui {{{
 " let s:gui_colo = 'freya'
