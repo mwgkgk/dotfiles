@@ -1,6 +1,6 @@
 cd ~/bank/music/
 
-colorscheme amazon
+colorscheme night
 set lib_sort=filename
 
 bind -f common q :q
