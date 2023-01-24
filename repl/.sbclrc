@@ -39,10 +39,10 @@
 ;;; * Quicksearch
 ;;; *
 
-; (ql:quickload '(#:quicksearch) :silent t)
+(ql:quickload '(#:quicksearch) :silent t)
 
 ;;; *
 ;;; * Common utilities
 ;;; *
 
-; (load #p"~/dot/repl/common-rc.lisp")
+(load #p"~/dot/repl/common-rc.lisp")
