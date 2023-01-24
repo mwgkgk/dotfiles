@@ -49,7 +49,7 @@
 
 " let s:static_colo = 'hell'
 " let s:static_colo = 'lecture'
-let s:static_colo = 'lecture-dark'
+" let s:static_colo = 'lecture-dark'
 " let s:static_colo = 'belf'
 " let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
@@ -123,6 +123,7 @@ let s:static_colo = 'lecture-dark'
 " let s:static_colo = 'lunaperche-dark'
 
 " let s:static_colo = 'distinguishedmod'
+let s:static_colo = 'freeform'
 
 " gui {{{
 " let s:gui_colo = 'freya'
