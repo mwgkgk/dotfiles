@@ -195,7 +195,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bin?\-?p?" "in-package" rw
+snippet "(\()?\bin\-?p?" "in-package" rw
 (in-package #:${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = os.path.splitext(fn)[0]
@@ -251,7 +251,7 @@ snippet top "top" w
 	$0)
 endsnippet
 
-snippet ql "quickload" b
+snippet /\b(ql|i)/ "quickload" br
 (ql:quickload '(#:${1:1am}))
 endsnippet
 
