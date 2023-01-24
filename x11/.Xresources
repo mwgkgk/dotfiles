@@ -62,10 +62,16 @@ URxvt*.meta8: true
 /* URxvt*.cursorColor: #B7F2D2 */
 
 ! Acme
-URxvt*.foreground: #EEE36A
-URxvt*.background: #0E0A17
-Urxvt*.cursorColor: #EC7154
-Urxvt*.cursorColor2: #0E0A17
+/* URxvt*.foreground: #EEE36A */
+/* URxvt*.background: #0E0A17 */
+/* Urxvt*.cursorColor: #EC7154 */
+/* Urxvt*.cursorColor2: #0E0A17 */
+
+! Freeform
+URxvt*.foreground: #DFDFDF
+URxvt*.background: #0F0F0F
+Urxvt*.cursorColor: #0F0F0F
+Urxvt*.cursorColor2: #DFDFDF
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
@@ -140,6 +146,8 @@ URxvt*.tabbed.tab-bg: 9
 ! *color3: #CFC17A
 
 ! Dzen2
-dzen2.font: -*-clean-*-*-*-*-9-*-*-*-*-*-iso10646-*
-dzen2.foreground: #F7DC75
-dzen2.background: #262626
+dzen2.font: -misc-fixed-medium-r-semicondensed--10-*-*-*-c-*-*-1
+/* dzen2.foreground: #F7DC75 */
+/* dzen2.background: #262626 */
+dzen2.foreground: #DFDFDF
+dzen2.background: #0F0F0F
