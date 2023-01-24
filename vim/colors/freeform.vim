@@ -35,7 +35,7 @@ hi SpecialKey ctermfg=238
 hi ColorColumn ctermbg=235 ctermfg=none cterm=none
 hi CursorColumn ctermbg=235 ctermfg=none cterm=none
 hi CursorLine ctermbg=235 ctermfg=none cterm=none
-hi CursorLineNr ctermfg=249 ctermbg=237 cterm=none
+hi CursorLineNr ctermfg=246 ctermbg=none cterm=none
 
 hi LineNr ctermfg=242
 hi SignColumn ctermbg=235
@@ -83,3 +83,5 @@ hi ALEWarning ctermbg=242 ctermfg=235
 hi ALEWarningLine ctermbg=none ctermfg=none
 hi ALEWarningSign ctermbg=242 ctermfg=235
 hi ALEWarningSignLineNr ctermbg=242 ctermfg=235
+
+hi Terminal ctermbg=233 ctermfg=254 cterm=none
