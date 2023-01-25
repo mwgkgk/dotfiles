@@ -307,7 +307,7 @@ endsnippet
 # || Variables
 # ||
 
-snippet "(\()?\b(defparameter|defparam|defpar|defp|par|d)" "defparameter" rw
+snippet "(\()?\b(defparameter|defparam|defpar|defp|par)" "defparameter" rw
 (defparameter $1 ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
