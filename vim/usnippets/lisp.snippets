@@ -1175,6 +1175,12 @@ if match.group(1) is not None:
 	${0:nil})
 endsnippet
 
+snippet /^(\*[%\!:\w=\-\+><\*\/\?\.]+)/ "expand-defparameter-b" br
+(defparameter `!p
+if match.group(0) is not None:
+	snip.rv = match.group(0)` ${0:nil})
+endsnippet
+
 priority -2
 
 snippet /^([%\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word-b" br
