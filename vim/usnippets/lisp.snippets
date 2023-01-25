@@ -196,7 +196,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bin\-?p?" "in-package" rw
+snippet "(\()?\b(in-p|in|ip)" "in-package" rw
 (in-package #:${VISUAL}${0:`!p
 if not snip.v.text:
 	snip.rv = os.path.splitext(fn)[0]
