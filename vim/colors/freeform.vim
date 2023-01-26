@@ -85,3 +85,5 @@ hi ALEWarningSign ctermbg=242 ctermfg=235
 hi ALEWarningSignLineNr ctermbg=242 ctermfg=235
 
 hi Terminal ctermbg=233 ctermfg=254 cterm=none
+
+hi MarkdownLinkText ctermfg=none
