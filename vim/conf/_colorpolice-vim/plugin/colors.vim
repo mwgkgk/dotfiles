@@ -124,6 +124,7 @@
 
 " let s:static_colo = 'distinguishedmod'
 let s:static_colo = 'freeform'
+" let s:static_colo = 'ruby'
 
 " gui {{{
 " let s:gui_colo = 'freya'
