@@ -6,6 +6,7 @@
 #+#:nil
 (ql:quickload '(#:cotp))
 
+#+#:nil
 (cotp:open-repl)
 
 ;;; Root prefix
@@ -49,10 +50,10 @@
 (define-key *top-map* (kbd "s-9") "fselect 9")
 
 ;; Creating frames
-(define-key *root-map* (kbd "N") "split-run right 50 tileterm Vim")
-(define-key *root-map* (kbd "s-N") "split-run right 50 tileterm Vim")
-(define-key *root-map* (kbd "n") "split-run down 50 tileterm Vim")
-(define-key *root-map* (kbd "s-n") "split-run down 50 tileterm Vim")
+(define-key *root-map* (kbd "N") "split-run right 50 tileterm")
+(define-key *root-map* (kbd "s-N") "split-run right 50 tileterm")
+(define-key *root-map* (kbd "n") "split-run down 50 tileterm")
+(define-key *root-map* (kbd "s-n") "split-run down 50 tileterm")
 
 ;; Remove split
 (define-key *root-map* (kbd "q") "remove-split")
