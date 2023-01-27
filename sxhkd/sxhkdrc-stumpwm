@@ -59,7 +59,7 @@ super + BackSpace
 super + z
 	rogue
 
-super + Return
+super + y
 	zepp
 
 super + Delete
