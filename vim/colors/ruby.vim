@@ -20,7 +20,7 @@ let g:colors_name = 'ruby'
 hi Normal ctermbg=233 ctermfg=254 cterm=none
 hi Type ctermfg=250
 hi Statement ctermfg=252
-hi Identifier ctermfg=202 cterm=none
+hi Identifier ctermfg=192 cterm=none
 hi PreProc ctermfg=196
 hi Constant ctermfg=251
 hi Keyword ctermfg=254
