@@ -92,7 +92,7 @@
 " let s:static_colo = 'blue'
 
 " let s:static_colo = 'seoul256-light'
-" let s:static_colo = 'seoul256-dark'
+let s:static_colo = 'seoul256-dark'
 
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
@@ -123,7 +123,7 @@
 " let s:static_colo = 'lunaperche-dark'
 
 " let s:static_colo = 'distinguishedmod'
-let s:static_colo = 'freeform'
+" let s:static_colo = 'freeform'
 " let s:static_colo = 'ruby'
 
 " gui {{{
