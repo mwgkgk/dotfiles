@@ -3,7 +3,7 @@
 " ||
 
 " Run repl
-nnoremap <silent> <buffer> <LocalLeader>r :T ghci<CR>
+nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T ghci<CR>
 
 " Load current file
 nnoremap <silent> <buffer> <Leader>r :T :l <C-r>=expand("%")<CR><CR>
