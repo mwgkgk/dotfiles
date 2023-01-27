@@ -199,6 +199,13 @@
 
 (define-key *top-map* (kbd "s-B") "mode-line")
 
+;;; TODO load ppcre though quicklisp
+#+#:nil
+(defun acpi-info ()
+  (with-output-to-string (out)
+    (uiop:run-program "acpi" :output out)
+    out))
+
 (setf *screen-mode-line-format* "%n %W^>%d")
 ;; TODO investigate urxvt crash on maximize with mode-line-border-width 0
 (setf *mode-line-border-width* 1)
@@ -262,7 +269,7 @@
 
 ;;; Leader
 
-(defparameter leader-map*
+(defparameter *leader-map*
   (let ((m (make-sparse-keymap)))
     (define-key m (kbd "s-semicolon") "colon")
     (define-key m (kbd "s-space") '*leader-space-map*)
