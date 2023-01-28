@@ -1,13 +1,25 @@
 ;; vim:ft=lisp:
 
-(in-package :stumpwm)
+;;; *
+;;; * Quicklisp
+;;; *
 
-;;; pacman-based stump doesn't know about ql
-#+#:nil
+; #-quicklisp
+; (let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp"
+;                                        (user-homedir-pathname))))
+;   (when (probe-file quicklisp-init)
+;     (load quicklisp-init)))
+
+;;; *
+;;; * REPL
+;;; *
+
+
 (ql:quickload '(#:cotp))
 
-#+#:nil
-(cotp:open-repl)
+; (swank:start-server)
+
+(in-package :stumpwm)
 
 ;;; Root prefix
 (set-prefix-key (kbd "s-space"))
@@ -16,10 +28,11 @@
 ;;; Esc on C-;
 (define-key *top-map* (kbd "C-semicolon") "meta Escape")
 
-
 ;;; Help
 (define-key *root-map* (kbd "k") "describe-key")
 
+(define-key *top-map* (kbd "s-semicolon") "colon")
+(define-key *top-map* (kbd "s-colon") "loadrc")
 
 ;;; Frames
 
@@ -38,24 +51,13 @@
 (define-key *top-map* (kbd "s-h") "move-focus left")
 (define-key *top-map* (kbd "s-l") "move-focus right")
 
-;; Fselect:
-(define-key *top-map* (kbd "s-1") "fselect 1")
-(define-key *top-map* (kbd "s-2") "fselect 2")
-(define-key *top-map* (kbd "s-3") "fselect 3")
-(define-key *top-map* (kbd "s-4") "fselect 4")
-(define-key *top-map* (kbd "s-5") "fselect 5")
-(define-key *top-map* (kbd "s-6") "fselect 6")
-(define-key *top-map* (kbd "s-7") "fselect 7")
-(define-key *top-map* (kbd "s-8") "fselect 8")
-(define-key *top-map* (kbd "s-9") "fselect 9")
-
 ;; Creating frames
 (define-key *root-map* (kbd "N") "split-run right 50 tileterm")
 (define-key *root-map* (kbd "s-N") "split-run right 50 tileterm")
 (define-key *root-map* (kbd "n") "split-run down 50 tileterm")
 (define-key *root-map* (kbd "s-n") "split-run down 50 tileterm")
 
-;; Remove split
+;; Removec split
 (define-key *root-map* (kbd "q") "remove-split")
 (define-key *top-map* (kbd "s-q") "remove-split")
 
@@ -82,7 +84,8 @@
 ;; Kill -9
 (define-key *top-map* (kbd "s-S-Escape") "kill-window")
 ;; Wother
-(define-key *top-map* (kbd "M-TAB") "other-window")
+; (define-key *top-map* (kbd "M-TAB") "other-window")
+(define-key *top-map* (kbd "M-TAB") "gother")
 
 ;; Prev/next in-frame
 (define-key *top-map* (kbd "s-p") "prev-in-frame")
@@ -116,30 +119,11 @@
 (define-key *groups-map* (kbd "C") "kill-windows-current-group")
 (define-key *groups-map* (kbd "C") "kill-windows-other")
 
-(define-key *root-map* (kbd "1") "gselect 1")
-(define-key *root-map* (kbd "2") "gselect 2")
-(define-key *root-map* (kbd "3") "gselect 3")
-(define-key *root-map* (kbd "4") "gselect 4")
-(define-key *root-map* (kbd "5") "gselect 5")
-(define-key *root-map* (kbd "6") "gselect 6")
-(define-key *root-map* (kbd "7") "gselect 7")
-(define-key *root-map* (kbd "8") "gselect 8")
-(define-key *root-map* (kbd "9") "gselect 9")
-
-(define-key *root-map* (kbd "s-1") "gselect 1")
-(define-key *root-map* (kbd "s-2") "gselect 2")
-(define-key *root-map* (kbd "s-3") "gselect 3")
-(define-key *root-map* (kbd "s-4") "gselect 4")
-(define-key *root-map* (kbd "s-5") "gselect 5")
-(define-key *root-map* (kbd "s-6") "gselect 6")
-(define-key *root-map* (kbd "s-7") "gselect 7")
-(define-key *root-map* (kbd "s-8") "gselect 8")
-(define-key *root-map* (kbd "s-9") "gselect 9")
 
 
 ;;; Message window
 
-(set-font "-*-hack-medium-r-*-*-11-*-*-*-*-*-*-*")
+(set-font "-misc-fixed-medium-r-semicondensed--13-*-*-*-c-*-*-1")
 (set-fg-color "#F7DC75")
 (set-border-color "#6F9D7F")
 
@@ -212,6 +196,7 @@
 (setf *mode-line-border-color* "#1A1A1A")
 (setf *mode-line-background-color* "#000000")
 (setf *mode-line-foreground-color* "#777777")
+(enable-mode-line (current-screen) (current-head) t)
 
 
 ;;; Debug
@@ -230,6 +215,7 @@
 ;;; Spawn
 
 (define-key *top-map* (kbd "s-w") "exec burrow ~/.burrow/quick-launch")
+(define-key *top-map* (kbd "s-Return") "exec tileterm")
 
 (define-key *root-map* (kbd "t") "exec tileterm")
 
@@ -269,26 +255,26 @@
 
 ;;; Leader
 
-(defparameter *leader-map*
-  (let ((m (make-sparse-keymap)))
-    (define-key m (kbd "s-semicolon") "colon")
-    (define-key m (kbd "s-space") '*leader-space-map*)
-    (define-key m (kbd "s-n") "vsplit")
-    (define-key m (kbd "n") "vsplit")
-    (define-key m (kbd "s-N") "hsplit")
-    (define-key m (kbd "N") "hsplit")
-    (define-key m (kbd "s-quoteright") "run-shell-echo")
-    m))
+; (defparameter *leader-map*
+;   (let ((m (make-sparse-keymap)))
+;     (define-key m (kbd "s-semicolon") "colon")
+;     (define-key m (kbd "s-space") '*leader-space-map*)
+;     (define-key m (kbd "s-n") "vsplit")
+;     (define-key m (kbd "n") "vsplit")
+;     (define-key m (kbd "s-N") "hsplit")
+;     (define-key m (kbd "N") "hsplit")
+;     (define-key m (kbd "s-quoteright") "run-shell-echo")
+;     m))
 
-(define-key *top-map* (kbd "s-semicolon") '*leader-map*)
+; (define-key *top-map* (kbd "s-semicolon") '*leader-map*)
 
-(defparameter *leader-space-map*
-  (let ((m (make-sparse-keymap)))
-    (define-key m (kbd "s-n") "split-run down 50 tileterm")
-    (define-key m (kbd "n") "split-run down 50 tileterm")
-    (define-key m (kbd "s-N") "split-run right 50 tileterm")
-    (define-key m (kbd "N") "split-run right 50 tileterm")
-    m))
+; (defparameter *leader-space-map*
+;   (let ((m (make-sparse-keymap)))
+;     (define-key m (kbd "s-n") "split-run down 50 tileterm")
+;     (define-key m (kbd "n") "split-run down 50 tileterm")
+;     (define-key m (kbd "s-N") "split-run right 50 tileterm")
+;     (define-key m (kbd "N") "split-run right 50 tileterm")
+;     m))
 
 
 ;;; Browser-leader
@@ -338,6 +324,3 @@
 
 (setf *suppress-deny-messages* t)
 (push '(:instance "Navigator") *deny-raise-request*)
-
-(define-frame-preference "ink"
-  (0 t t :class "URxvt" :instance "zepp"))
