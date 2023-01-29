@@ -99,7 +99,7 @@ super + comma
 super + space
 	march
 
-super + control + z
+super + control + equal
 	minerals
 
 super + BackSpace
