@@ -106,6 +106,13 @@ nnoremap <silent> <LocalLeader>q :call neoterm#exec({ 'cmd': ["\<C-d>"] })<CR>
 nnoremap <silent> <Leader>q :call neoterm#exec({ 'cmd': ["\<C-d>"] })<CR>
 
 " ||
+" || C-c
+" ||
+
+" ??? Not working
+nnoremap <LocalLeader>C :call neoterm#exec({ 'cmd': ["\<C-c>"] })<CR>
+
+" ||
 " || Close all
 " ||
 
