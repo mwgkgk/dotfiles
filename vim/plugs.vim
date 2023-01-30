@@ -488,8 +488,8 @@ let g:quickhl_manual_colors = [
 " map H <Plug>(operator-quickhl-manual-this-motion)
 " }}}
 
-" Plug 'RRethy/vim-illuminate' " {{{
-" let g:Illuminate_delay = 0
+Plug 'RRethy/vim-illuminate', { 'for' : 'factor' } " {{{
+let g:Illuminate_delay = 0
 " }}}
 
 Plug 'haya14busa/vim-operator-flashy', { 'commit' : 'b24673a9b0d5d60b26d202deb13d4ebf90d7a2ae' } " {{{
