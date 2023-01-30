@@ -2,6 +2,9 @@
 " || Repl control
 " ||
 
+" Runfactor
+nnoremap <silent> <buffer> <Leader>r :T runfactor <C-r>=expand("%")<CR><CR>
+
 " Open repl
 nnoremap <buffer> <LocalLeader><LocalLeader> :silent T factor-repl<CR>
 
