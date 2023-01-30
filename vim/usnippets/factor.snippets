@@ -117,6 +117,7 @@ snippet /^([\!:\w=\-?\.$><\[\]]+)/ "expand-any-word-b" br
 : `!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` ( $1 )$0
+; ! `date-jiv`
 endsnippet
 
 snippet /^: ([\!:\w=\-?\.$><\[\]]+)\s*/ "double-expand-any-word-b" br
