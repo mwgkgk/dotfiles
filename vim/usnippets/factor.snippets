@@ -40,10 +40,16 @@ endsnippet
 # || Words
 # ||
 
-snippet f "f" b
+snippet f "word" b
 : ${1:word} ( ${2:x} -- $3 )
 	${VISUAL}$0
-;
+; ! `date-jiv`
+endsnippet
+
+snippet ff "word w/ lexicals" b
+:: ${1:word} ( ${2:x} -- $3 )
+	${VISUAL}$0
+; ! `date-jiv`
 endsnippet
 
 snippet /(; )?(inline|inlin|inli|inl)/ "inline" wr
@@ -51,7 +57,7 @@ snippet /(; )?(inline|inlin|inli|inl)/ "inline" wr
 endsnippet
 
 snippet [ "quotation" w
-[ $1 ]$2
+[ $0 
 endsnippet
 
 snippet priv "private" b
