@@ -46,6 +46,10 @@ snippet f "word" b
 ; ! `date-jiv`
 endsnippet
 
+snippet : "short word" w
+: ${1:word} ( ${2:x} -- $3 ) $0 ;
+endsnippet
+
 snippet ff "word w/ lexicals" b
 :: ${1:word} ( ${2:x} -- $3 )
 	${VISUAL}$0
