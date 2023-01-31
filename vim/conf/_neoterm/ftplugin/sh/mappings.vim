@@ -3,7 +3,7 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T bash<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :silent T bash<CR>
 
 
 " Source current file
