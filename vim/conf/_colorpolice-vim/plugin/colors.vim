@@ -3,7 +3,7 @@
 " }}}
 
 " let s:static_colo = 'industry'
-" let s:static_colo = 'heavy-industry'
+let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'light-industry'
 " let s:static_colo = '256-jungle'
 " let s:static_colo = 'tactical'
@@ -54,7 +54,7 @@
 " let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
-let s:static_colo = 'alien-nes'
+" let s:static_colo = 'alien-nes'
 " let s:static_colo = 'grid'
 
 " let s:static_colo = 'Tomorrow'
