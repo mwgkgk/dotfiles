@@ -54,7 +54,7 @@
 " let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
-" let s:static_colo = 'alien-nes'
+let s:static_colo = 'alien-nes'
 " let s:static_colo = 'grid'
 
 " let s:static_colo = 'Tomorrow'
@@ -92,7 +92,7 @@
 " let s:static_colo = 'blue'
 
 " let s:static_colo = 'seoul256-light'
-let s:static_colo = 'seoul256-dark'
+" let s:static_colo = 'seoul256-dark'
 
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
