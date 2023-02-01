@@ -15,7 +15,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = 'glueform'
+let g:colors_name = 'glowform'
 
 hi Normal ctermbg=233 ctermfg=83 cterm=none
 hi Type ctermfg=83
@@ -27,7 +27,7 @@ hi Constant ctermfg=83
 hi Keyword ctermfg=83
 hi Special ctermfg=83
 
-hi Comment ctermfg=255
+hi Comment ctermfg=221
 
 hi NonText ctermfg=238
 hi SpecialKey ctermfg=238

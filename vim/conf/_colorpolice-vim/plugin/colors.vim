@@ -125,6 +125,7 @@ let s:static_colo = 'heavy-industry'
 " let s:static_colo = 'distinguishedmod'
 " let s:static_colo = 'freeform'
 " let s:static_colo = 'ruby'
+" let s:static_colo = 'glowform'
 
 " gui {{{
 " let s:gui_colo = 'freya'
