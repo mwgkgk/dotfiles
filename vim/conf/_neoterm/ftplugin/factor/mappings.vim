@@ -3,7 +3,7 @@
 " ||
 
 " Runfactor
-nnoremap <silent> <buffer> <Leader>r :T runfactor <C-r>=expand("%")<CR><CR>
+nnoremap <silent> <buffer> <Leader>r :T runfactor <C-r>=expand("%:p")<CR><CR>
 
 " Open repl
 nnoremap <buffer> <LocalLeader><LocalLeader> :silent T factor-repl<CR>
