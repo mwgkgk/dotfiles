@@ -65,7 +65,8 @@ function! colors#chi_colo(chi, static_colo)
     elseif a:chi ==# 'bridge'
         return a:static_colo
     elseif a:chi ==# 'brahmin'
-        return 'thief'
+        " return 'thief'
+        return a:static_colo
     elseif a:chi ==# 'tianxia'
         return a:static_colo
     elseif a:chi ==# 'johnconnor'
