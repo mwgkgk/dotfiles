@@ -30,6 +30,9 @@ nnoremap <buffer> <LocalLeader>r :silent T "<C-r>=expand('%:t:r')<CR>" reload<CR
 " Load file
 nnoremap <buffer> <LocalLeader>l :silent T "<C-r>=expand('%:p')<CR>" run-file<CR>
 
+" Package
+nnoremap <buffer> <LocalLeader>i :silent T IN: <C-r>=expand('%:t:r')<CR><CR>
+
 " ||
 " || Send
 " ||
