@@ -89,6 +89,10 @@ snippet t "test" b
 { ${1:t} } [ ${VISUAL}$2 ] unit-test
 endsnippet
 
+snippet main "main" b
+MAIN: ${0:h-run}
+endsnippet
+
 # If line above is empty, basement:
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
 /*
