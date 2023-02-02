@@ -28,7 +28,7 @@ nnoremap <buffer> <LocalLeader>c :silent T clear<CR>
 nnoremap <buffer> <LocalLeader>r :silent T "<C-r>=expand('%:t:r')<CR>" reload<CR>
 
 " Load file
-nnoremap <buffer> <LocalLeader>l :silent T "<C-r>=expand('%')<CR>" run-file<CR>
+nnoremap <buffer> <LocalLeader>l :silent T "<C-r>=expand('%:p')<CR>" run-file<CR>
 
 " ||
 " || Send
