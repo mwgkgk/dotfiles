@@ -42,7 +42,7 @@
 
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'nuclear-dark'
-let s:static_colo = 'fadedvision'
+" let s:static_colo = 'fadedvision'
 
 " Zinge
 " let s:static_colo = 'calmar256-dark'
@@ -123,7 +123,7 @@ let s:static_colo = 'fadedvision'
 " let s:static_colo = 'lunaperche-dark'
 
 " let s:static_colo = 'distinguishedmod'
-" let s:static_colo = 'freeform'
+let s:static_colo = 'freeform'
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
 
