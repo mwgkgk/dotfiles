@@ -6,6 +6,7 @@
     (load quicklisp-init)))
 
 ;;; Use a newer asdf version:
+#+#:nil
 (let
   ((compiled-file #P"~/.cache/local/common-lisp/clisp/asdf.fas"))
   (progn
