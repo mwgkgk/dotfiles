@@ -104,11 +104,16 @@ nnoremap <buffer> <LocalLeader>[j :silent T abcl-cp<CR>
 nnoremap <buffer> <LocalLeader>[a :silent T alisp<CR>
 nnoremap <buffer> <LocalLeader>[f :silent T sawfish-dev<CR>
 
-" ECL
+" ||
+" || ECL
+" ||
+
 " Return to som previous break level
 nnoremap <buffer> <LocalLeader>Q :silent T :q<CR>
 
-" SBCL
+" ||
+" || SBCL
+" ||
 
 " Use short alias because cant override abort without unlocking,
 " and you want to make it be defined in bare repl because accidentally sending
@@ -117,7 +122,7 @@ nnoremap <buffer> <Leader>a :silent T a<CR>
 " Sometimes A is ambiguous
 nnoremap <buffer> <LocalLeader>A :silent T abort<CR>
 
-nnoremap <buffer> <LocalLeader>r :silent T retry<CR>
+nnoremap <buffer> <LocalLeader>R :silent T retry<CR>
 nnoremap <buffer> <LocalLeader>c :silent T continue<CR>
 nnoremap <buffer> <LocalLeader>b :silent T backtrace<CR>
 
@@ -132,9 +137,19 @@ nnoremap <buffer> <LocalLeader>7 :silent T 7<CR>
 nnoremap <buffer> <LocalLeader>8 :silent T 8<CR>
 nnoremap <buffer> <LocalLeader>9 :silent T 9<CR>
 
-" CCL
+" ||
+" || CCL
+" ||
+
 " List restarts
-nnoremap <buffer> <LocalLeader>R :silent T :R<CR>
+nnoremap <buffer> <LocalLeader>h :silent T :R<CR>
+
+" ||
+" || ABCL
+" ||
+
+" Reset to toplevel
+nnoremap <silent> <buffer> <LocalLeader>r :T :reset<CR>
 
 " ||
 " || Package
