@@ -11,6 +11,8 @@ setlocal lispwords+=when-let,if-let
 " My things
 setlocal lispwords+=defproduct
 
+setlocal colorcolumn=0
+
 " Vim recognizes .jl as lisp, and does not clean up buffer maps.
 " This fix is not Julia-specific, because we should clean up buffer maps in
 " any case.
@@ -23,5 +25,5 @@ setlocal lispwords+=defproduct
 " to fuck with Lisp plugins that should not have been loaded in the first
 " place.
 " https://github.com/vim/vim/issues/6178
-let b:undo_ftplugin = 'setlocal comments< define< formatoptions< iskeyword< lisp<'
+let b:undo_ftplugin = 'setlocal comments< define< formatoptions< iskeyword< lisp< colorcolumn<'
             \ . '| mapclear <buffer>'
