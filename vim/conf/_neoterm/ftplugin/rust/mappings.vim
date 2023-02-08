@@ -9,7 +9,8 @@ nnoremap <silent> <buffer> <LocalLeader>b :T cargo build<CR>
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :silent T papyrus<CR>
+" nnoremap <buffer> <silent> <LocalLeader>r :silent T papyrus<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :silent T rust-repl<CR>
 
 
 " Source current file
