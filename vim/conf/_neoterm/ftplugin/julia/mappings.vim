@@ -18,6 +18,8 @@ xmap <Leader>x <Plug>(neoterm-repl-send)
 
 nmap <Leader>X <Plug>(neoterm-repl-send-line)
 
+nnoremap <buffer> <LocalLeader>l :silent T include("<C-r>=expand('%:p')<CR>")<CR>
+
 " ||
 " || Docs
 " ||
