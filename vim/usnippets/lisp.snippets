@@ -166,7 +166,7 @@ snippet dp "date, defpackage, in-package" w
 if not snip.v.text:
 	snip.rv = os.path.splitext(fn)[0]
 `}
-	(:use #:cl$0))
+	(:use #:cl #:serapeum$0))
 
 (in-package #:${VISUAL}$1)
 endsnippet
@@ -178,7 +178,7 @@ snippet dip "fast date, defpackage, in-package" w
 if not snip.v.text:
 	snip.rv = os.path.splitext(fn)[0]
 `
-	(:use #:cl))
+	(:use #:cl #:serapeum))
 
 (in-package #:`!p
 if not snip.v.text:
@@ -193,7 +193,7 @@ snippet "(\()?\b(defpackage|defpkg|defpac|pac|pkg)" "defpackage" rw
 if not snip.v.text:
 	snip.rv = os.path.splitext(fn)[0]
 `}
-	(:use #:cl)`!p
+	(:use #:cl #:serapeum)`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
