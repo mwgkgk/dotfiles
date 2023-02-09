@@ -127,8 +127,8 @@
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
 " let s:static_colo = 'default'
-" let s:static_colo = 'peterburg'
-let s:static_colo = 'bubblegum'
+let s:static_colo = 'peterburg'
+" let s:static_colo = 'bubblegum'
 
 
 " gui {{{
