@@ -1,4 +1,4 @@
-;;; vim:ft=lisp
+;;; vim:ft=lisp foldlevel=0
 
 (defpackage #:__new_package
   (:use #:cl))
