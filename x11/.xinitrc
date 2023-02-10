@@ -96,7 +96,7 @@ sxhkd -c ~/dot/sxhkd/sxhkdrc ~/pants/sxhkd/sxhkdrc &
 # done &
 
 if command -v acpi; then
-    dwm-statusline &
+    xsetmaster &
 else
     if test -f "$HOME/.xsetroot-message"; then
         xsetroot -name "$(cat ~/.xsetroot-message | tr -d '\n')"
