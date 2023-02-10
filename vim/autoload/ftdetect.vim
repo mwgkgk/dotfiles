@@ -3,6 +3,8 @@ function! ftdetect#detect_empty()
         setfiletype sh
     elsei getline(1) =~# '#!\/usr\/bin\/sbcl --script'
         setfiletype lisp
+    elsei getline(1) =~# '#!\/usr\/bin\/env ruby'
+        setfiletype ruby
     endif
 endfunction
 
