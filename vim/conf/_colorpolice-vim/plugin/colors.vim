@@ -54,7 +54,7 @@
 " let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
-let s:static_colo = 'alien-nes'
+" let s:static_colo = 'alien-nes'
 " let s:static_colo = 'grid'
 
 " let s:static_colo = 'Tomorrow'
@@ -123,7 +123,7 @@ let s:static_colo = 'alien-nes'
 " let s:static_colo = 'lunaperche-dark'
 
 " let s:static_colo = 'distinguishedmod'
-" let s:static_colo = 'freefall'
+let s:static_colo = 'freefall'
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
 " let s:static_colo = 'default'
