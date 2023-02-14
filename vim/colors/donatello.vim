@@ -37,8 +37,8 @@ hi CursorColumn ctermbg=235 ctermfg=none cterm=none
 hi CursorLine ctermbg=235 ctermfg=none cterm=none
 hi CursorLineNr ctermfg=246 ctermbg=none cterm=none
 
-hi LineNr ctermfg=242
-hi SignColumn ctermbg=235
+hi LineNr ctermfg=94
+hi SignColumn ctermbg=232
 
 hi Folded ctermbg=236 ctermfg=252
 
@@ -46,9 +46,9 @@ hi TabLineFill ctermfg=235
 hi TabLineSel ctermbg=236 cterm=none
 hi TabLine ctermfg=242 ctermbg=235 cterm=none
 
-hi StatusLine ctermbg=235 ctermfg=251 cterm=none
-hi StatusLineNC ctermbg=235 ctermfg=251 cterm=none
-hi VertSplit ctermbg=235 ctermfg=242 cterm=none
+hi StatusLine ctermbg=235 ctermfg=94 cterm=none
+hi StatusLineNC ctermbg=235 ctermfg=94 cterm=none
+hi VertSplit ctermbg=235 ctermfg=94 cterm=none
 
 hi Pmenu ctermbg=232 ctermfg=251
 hi PmenuSel ctermbg=251 ctermfg=232
