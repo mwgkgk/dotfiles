@@ -17,17 +17,17 @@ endif
 
 let g:colors_name = 'glowform'
 
-hi Normal ctermbg=233 ctermfg=83 cterm=none
-hi Type ctermfg=83
-hi Statement ctermfg=83
-hi Constant ctermfg=83
-hi Identifier ctermfg=83 cterm=none
-hi PreProc ctermfg=83
-hi Constant ctermfg=83
-hi Keyword ctermfg=83
-hi Special ctermfg=83
+hi Normal ctermbg=233 ctermfg=63 cterm=none
+hi Type ctermfg=63
+hi Statement ctermfg=63
+hi Constant ctermfg=63
+hi Identifier ctermfg=63 cterm=none
+hi PreProc ctermfg=63
+hi Constant ctermfg=63
+hi Keyword ctermfg=63
+hi Special ctermfg=63
 
-hi Comment ctermfg=221
+hi Comment ctermfg=50
 
 hi NonText ctermfg=238
 hi SpecialKey ctermfg=238
@@ -46,15 +46,15 @@ hi TabLineFill ctermfg=235
 hi TabLineSel ctermbg=236 cterm=none
 hi TabLine ctermfg=242 ctermbg=235 cterm=none
 
-hi StatusLine ctermbg=235 ctermfg=251 cterm=none
-hi StatusLineNC ctermbg=235 ctermfg=251 cterm=none
+hi StatusLine ctermbg=235 ctermfg=87 cterm=none
+hi StatusLineNC ctermbg=235 ctermfg=62 cterm=none
 hi VertSplit ctermbg=235 ctermfg=242 cterm=none
 
 hi Pmenu ctermbg=232 ctermfg=251
 hi PmenuSel ctermbg=251 ctermfg=232
 
-hi Search cterm=none ctermbg=83 ctermfg=233
-hi IncSearch ctermbg=83 ctermfg=233 cterm=none
+hi Search cterm=none ctermbg=63 ctermfg=233
+hi IncSearch ctermbg=63 ctermfg=233 cterm=none
 
 hi SpellBad ctermbg=none ctermfg=202 cterm=none
 hi TODO ctermbg=none ctermfg=none
@@ -84,6 +84,6 @@ hi ALEWarningLine ctermbg=none ctermfg=none
 hi ALEWarningSign ctermbg=242 ctermfg=235
 hi ALEWarningSignLineNr ctermbg=242 ctermfg=235
 
-hi Terminal ctermbg=233 ctermfg=83 cterm=none
+hi Terminal ctermbg=233 ctermfg=63 cterm=none
 
 hi MarkdownLinkText ctermfg=none
