@@ -100,7 +100,7 @@
 " let s:static_colo = 'autumnleaf'
 " let s:static_colo = 'acme'
 " let s:static_colo = 'fogbell_light'
-" let s:static_colo = 'machinery'
+let s:static_colo = 'machinery'
 
 " let s:static_colo = 'SerialExperimentsLain'
 " let s:static_colo = 'arcadia'
@@ -126,7 +126,7 @@
 " let s:static_colo = 'freefall'
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
-let s:static_colo = 'donatello'
+" let s:static_colo = 'donatello'
 
 
 " let s:static_colo = 'default'
