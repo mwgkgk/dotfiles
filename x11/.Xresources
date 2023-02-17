@@ -67,8 +67,14 @@ URxvt*.meta8: true
 /* Urxvt*.cursorColor: #EC7154 */
 /* Urxvt*.cursorColor2: #0E0A17 */
 
-! Freeform
-URxvt*.foreground: #DFDFDF
+! Freefall
+/* URxvt*.foreground: #DFDFDF */
+/* URxvt*.background: #0F0F0F */
+/* Urxvt*.cursorColor: #0F0F0F */
+/* Urxvt*.cursorColor2: #DFDFDF */
+
+! Net-yellow
+URxvt*.foreground: #DE9144
 URxvt*.background: #0F0F0F
 Urxvt*.cursorColor: #0F0F0F
 Urxvt*.cursorColor2: #DFDFDF

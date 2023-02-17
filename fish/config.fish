@@ -30,13 +30,21 @@ umask 0007
 # set -x fish_command_timer_success_color 875F87
 # set -x fish_command_timer_fail_color 875F87
 
-# Freeform
-set -x fish_color_prompt DFDFDF
-set -x fish_color_cwd FFFFFF
+# Freefall
+# set -x fish_color_prompt DFDFDF
+# set -x fish_color_cwd FFFFFF
 # Keep in mind: these bad boys implicitly use 256 colors:
-set -x fish_command_timer_color C4C4C4
-set -x fish_command_timer_success_color C4C4C4
-set -x fish_command_timer_fail_color C4C4C4
+# set -x fish_command_timer_color C4C4C4
+# set -x fish_command_timer_success_color C4C4C4
+# set -x fish_command_timer_fail_color C4C4C4
+
+# Net-yellow
+set -x fish_color_prompt DE9144
+set -x fish_color_cwd E5BD1A
+# Keep in mind: these bad boys implicitly use 256 colors:
+set -x fish_command_timer_color 06604B
+set -x fish_command_timer_success_color 06604B
+set -x fish_command_timer_fail_color 06604B
 
 # ||
 # || Envs
