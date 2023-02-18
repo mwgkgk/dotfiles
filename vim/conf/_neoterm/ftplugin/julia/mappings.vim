@@ -5,6 +5,9 @@
 " Run repl
 nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T julia<CR>
 
+" Run script
+nnoremap <silent> <buffer> <Leader>r :T julia <C-r>=expand("%:p")<CR><CR>
+
 " ||
 " || Send
 " ||
