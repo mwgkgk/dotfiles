@@ -9,6 +9,8 @@
 (ql:quickload '(#:ghost) :silent t)
 (use-package :ghost)
 
+(ql:quickload '(#:ghost/spellbook) :silent t)
+
 ;;; neoterm workaround meme
 (defparameter sbcl nil)
 ;;; mis-send cause muscle memory to abort from errors
