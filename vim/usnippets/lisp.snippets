@@ -692,7 +692,7 @@ endsnippet
 # || Structs
 # ||
 
-snippet "(\()?\b(struct|st)" "struct" rw
+snippet "(\()?\b(struct|st|s)" "struct" rw
 (defstruct ${1:struct}
 	${0:nil}`!p
 if match.group(1) is None:
