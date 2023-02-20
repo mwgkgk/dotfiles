@@ -1139,7 +1139,7 @@ endsnippet
 
 priority -1
 
-snippet /([%\!:\w=\-\+><\*\/\?\.]+)_/ "expand-any-word-as-no-arguments-call" rw
+snippet /([%\!:\w=\-\+\|><\*\/\?\.]+)_/ "expand-any-word-as-no-arguments-call" rw
 (`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`)$0
@@ -1147,25 +1147,25 @@ endsnippet
 
 # This is only relevant at top-level, where otherwise it'd default to a new
 # defun.
-snippet /([%\!:\w=\-\+><\*\/\?\.]+)\+/ "expand-any-word-as-call" rw
+snippet /([%\!:\w=\-\+\|><\*\/\?\.]+)\+/ "expand-any-word-as-call" rw
 (`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)` $0)
 endsnippet
 
-snippet  /([%\!:\w=\-\+><\*\/\?\.]+):/ "expand-any-word-as-keyword" rw
+snippet  /([%\!:\w=\-\+\|><\*\/\?\.]+):/ "expand-any-word-as-keyword" rw
 :`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
 endsnippet
 
-snippet  /([%\!:\w=\-\+><\*\/\?\.]+)'/ "expand-any-word-as-quote" rw
+snippet  /([%\!:\w=\-\+\|><\*\/\?\.]+)'/ "expand-any-word-as-quote" rw
 '`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
 endsnippet
 
-snippet  /(\([\s%\!:\w=\-\+><\*\/\?\.]+\))'/ "expand-any-form-as-quote" rw
+snippet  /(\([\s%\!:\w=\-\+\|><\*\/\?\.]+\))'/ "expand-any-form-as-quote" rw
 '`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
@@ -1179,19 +1179,19 @@ endsnippet
 
 priority -1
 
-snippet  /([%\!:\w=\-\+><\*\/\?\.]+)(#'|'#)/ "expand-any-word-as-sharp-quote" rw
+snippet  /([%\!:\w=\-\+\|><\*\/\?\.]+)(#'|'#)/ "expand-any-word-as-sharp-quote" rw
 #'`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
 endsnippet
 
-snippet  /(\([\s%\!:\w=\-\+><\*\/\?\.]+\))(#'|'#)/ "expand-any-form-as-sharp-quote" rw
+snippet  /(\([\s%\!:\w=\-\+\|><\*\/\?\.]+\))(#'|'#)/ "expand-any-form-as-sharp-quote" rw
 #'`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
 endsnippet
 
-snippet  /([%\!:\w=\-\+><\*\/\?\.]+)\$/ "expand-any-word-as-let" rw
+snippet  /([%\!:\w=\-\+\|><\*\/\?\.]+)\$/ "expand-any-word-as-let" rw
 (let
 	((`!p
 if match.group(1) is not None:
@@ -1199,7 +1199,7 @@ if match.group(1) is not None:
 	${0:nil})
 endsnippet
 
-snippet /^(\*[%\!:\w=\-\+><\*\/\?\.]+)/ "expand-defparameter-b" br
+snippet /^(\*[%\!:\w=\-\+\|><\*\/\?\.]+)/ "expand-defparameter-b" br
 (defparameter `!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` ${0:nil})
@@ -1207,7 +1207,7 @@ endsnippet
 
 priority -2
 
-# snippet /^([%\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word-b" br
+# snippet /^([%\!:\w=\-\+\|><\*\/\?\.]+)/ "expand-any-word-b" br
 # (defun `!p
 # if match.group(0) is not None:
 # 	snip.rv = match.group(0)` ($1)
@@ -1216,7 +1216,7 @@ priority -2
 
 priority -3
 
-snippet  /([%\!:\w=\-\+><\*\/\?\.]+)/ "expand-any-word" rw
+snippet  /([%\!:\w=\-\+\|><\*\/\?\.]+)/ "expand-any-word" rw
 (`!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` $0)
