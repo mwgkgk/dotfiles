@@ -213,6 +213,10 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet ipclu "in-package cl-user" w
+(common-lisp:in-package #:common-lisp-user)
+endsnippet
+
 snippet up "use-package" w
 (use-package '(#:$0))
 endsnippet
