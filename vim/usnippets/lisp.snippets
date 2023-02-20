@@ -748,6 +748,16 @@ snippet gs "gs" w
 (gensym)
 endsnippet
 
+snippet "(\()?\bdefdef" "defdef" rw
+(defmacro def${1:something} (name$0)
+  `(car (push (make-instance '$1 :name ,name)
+         *$1-list*)))
+
+(defdef ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Cond Macro
 # ||
