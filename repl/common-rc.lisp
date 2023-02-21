@@ -20,7 +20,7 @@
 ;;; * Project management
 ;;; *
 
-(ql:quickload '(#:colony #:scheduling-facility #:condition-system) :silent t)
+(ql:quickload '(#:colony #:scheduling-facility #:condition-system #:ants) :silent t)
 
 ;;; *
 ;;; * Playpen
