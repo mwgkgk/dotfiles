@@ -198,6 +198,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bexp" "exp" rw
+ (:export #:${0:init}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "(\()?\bmk?p" "make-package" rw
 (make-package '#:${VISUAL}$0`!p
 if match.group(1) is None:
