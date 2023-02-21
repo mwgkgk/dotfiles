@@ -199,7 +199,7 @@ if match.group(1) is None:
 endsnippet
 
 snippet "(\()?\bexp" "exp" rw
- (:export #:${0:init}`!p
+(:export #:${0:init}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
