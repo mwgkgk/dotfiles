@@ -91,4 +91,4 @@ nnoremap <buffer> <LocalLeader>s :silent T (pst)<CR>
 " ||
 
 " Run repl
-nnoremap <buffer> <LocalLeader>gg :silent T lein repl<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :silent T lein repl<CR>
