@@ -43,6 +43,7 @@
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'nuclear-dark'
 let s:static_colo = 'fadedvision'
+let s:static_colo = 'fadedvision-dark'
 
 " Zinge
 " let s:static_colo = 'calmar256-dark'
