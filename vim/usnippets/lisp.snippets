@@ -17,9 +17,13 @@ snippet da "date-file-start" "snip.line == 0" e
 $0
 endsnippet
 
+priority -1
+
 snippet dd "dd-inline" w
 `!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
 endsnippet
+
+priority 0
 
 snippet dad "date-intro-comment" w
 ;;;; `date-utc`
