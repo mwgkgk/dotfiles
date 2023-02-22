@@ -42,7 +42,7 @@
 
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'nuclear-dark'
-" let s:static_colo = 'fadedvision'
+let s:static_colo = 'fadedvision'
 
 " Zinge
 " let s:static_colo = 'calmar256-dark'
@@ -70,7 +70,7 @@
 
 " let s:static_colo = 'outsider'
 " let s:static_colo = 'alduin'
-let s:static_colo = 'dragonlands'
+" let s:static_colo = 'dragonlands'
 
 " let s:static_colo = 'apples'
 " let s:static_colo = 'github'
