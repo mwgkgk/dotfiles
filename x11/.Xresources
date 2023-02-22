@@ -153,7 +153,9 @@ URxvt*.tabbed.tab-bg: 9
 
 ! Dzen2
 dzen2.font: -misc-fixed-medium-r-semicondensed--10-*-*-*-c-*-*-1
-/* dzen2.foreground: #F7DC75 */
-/* dzen2.background: #262626 */
-dzen2.foreground: #DFDFDF
-dzen2.background: #0F0F0F
+dzen2.foreground: #F7DC75
+dzen2.background: #262626
+
+/* freefall */
+/* dzen2.foreground: #DFDFDF */
+/* dzen2.background: #0F0F0F */
