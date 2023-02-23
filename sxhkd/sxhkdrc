@@ -57,6 +57,9 @@ super + shift + i
 super + u
 	firefox-super-u
 
+super + control + u
+	march v super-u
+
 super + 0
 	firefox-default
 
