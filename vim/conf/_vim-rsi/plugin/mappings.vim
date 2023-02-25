@@ -10,3 +10,14 @@ inoremap <M-p> <Up>
 
 " Use actual <Del> which joins lines.
 inoremap <C-d> <Del>
+
+" Sat Feb 25 00:15:58 UTC 2023
+
+" Slightly modify C-f to send-to-repl?
+
+" Maybe it redirects wto normal c-f?
+" inoremap <expr> <C-F> col('.')>strlen(getline('.'))?"\<Lt>C-F>":"\<Lt>Right>"
+" cnoremap <expr> <C-F> getcmdpos()>strlen(getcmdline())?&cedit:"\<Lt>Right>"
+
+" No but it's also bringing up a bigger problem
+" inoremap <C-f> <Esc>:TREPLSendLine<CR>A
