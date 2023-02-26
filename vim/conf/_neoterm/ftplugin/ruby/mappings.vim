@@ -6,7 +6,7 @@
 nnoremap <silent> <buffer> <Leader>r :T ruby <C-r>=expand('%')<CR><CR>
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T irb<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T irb --nocolorize<CR>
 
 " Rake
 nnoremap <buffer> <silent> <LocalLeader>b :T rake<CR>
