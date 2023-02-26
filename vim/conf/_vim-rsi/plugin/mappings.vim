@@ -12,12 +12,7 @@ inoremap <M-p> <Up>
 inoremap <C-d> <Del>
 
 " Sat Feb 25 00:15:58 UTC 2023
+" Sun Feb 26 04:49:06 UTC 2023
+" Slightly modify C-f to send-to-repl as fallback
 
-" Slightly modify C-f to send-to-repl?
-
-" Maybe it redirects wto normal c-f?
-" inoremap <expr> <C-F> col('.')>strlen(getline('.'))?"\<Lt>C-F>":"\<Lt>Right>"
-" cnoremap <expr> <C-F> getcmdpos()>strlen(getcmdline())?&cedit:"\<Lt>Right>"
-
-" No but it's also bringing up a bigger problem
-" inoremap <C-f> <Esc>:TREPLSendLine<CR>A
+inoremap <expr> <C-F> col('.')>strlen(getline('.'))?"\<Lt>Esc>:TREPLSendLine\<Lt>CR>A":"\<Lt>Right>"
