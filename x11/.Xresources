@@ -74,9 +74,15 @@ URxvt*.meta8: true
 /* Urxvt*.cursorColor2: #DFDFDF */
 
 ! Net-yellow
-URxvt*.foreground: #DE9144
-URxvt*.background: #0F0F0F
-Urxvt*.cursorColor: #0F0F0F
+/* URxvt*.foreground: #DE9144 */
+/* URxvt*.background: #0F0F0F */
+/* Urxvt*.cursorColor: #0F0F0F */
+/* Urxvt*.cursorColor2: #DFDFDF */
+
+! Chernozem
+URxvt*.foreground: #AF5F5F
+URxvt*.background: #080808
+Urxvt*.cursorColor: #080808
 Urxvt*.cursorColor2: #DFDFDF
 
 ! URxvt*.tabbed.tab-bg: #98D53D

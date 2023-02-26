@@ -32,23 +32,23 @@ hi Comment ctermfg=131
 hi NonText ctermfg=238
 hi SpecialKey ctermfg=238
 
-hi ColorColumn ctermbg=234 ctermfg=none cterm=none
-hi CursorColumn ctermbg=234 ctermfg=none cterm=none
-hi CursorLine ctermbg=234 ctermfg=none cterm=none
+hi ColorColumn ctermbg=233 ctermfg=none cterm=none
+hi CursorColumn ctermbg=233 ctermfg=none cterm=none
+hi CursorLine ctermbg=233 ctermfg=none cterm=none
 hi CursorLineNr ctermfg=246 ctermbg=none cterm=none
 
 hi LineNr ctermfg=95
 hi SignColumn ctermbg=232
 
-hi Folded ctermbg=234 ctermfg=95
+hi Folded ctermbg=233 ctermfg=95
 
 hi TabLineFill ctermfg=235
 hi TabLineSel ctermbg=236 cterm=none
 hi TabLine ctermfg=95 ctermbg=235 cterm=none
 
-hi StatusLine ctermbg=234 ctermfg=131 cterm=none
-hi StatusLineNC ctermbg=234 ctermfg=131 cterm=none
-hi VertSplit ctermbg=234 ctermfg=95 cterm=none
+hi StatusLine ctermbg=233 ctermfg=131 cterm=none
+hi StatusLineNC ctermbg=233 ctermfg=131 cterm=none
+hi VertSplit ctermbg=233 ctermfg=95 cterm=none
 
 hi Pmenu ctermbg=232 ctermfg=95
 hi PmenuSel ctermbg=95 ctermfg=232

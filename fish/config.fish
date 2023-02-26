@@ -39,12 +39,20 @@ umask 0007
 # set -x fish_command_timer_fail_color C4C4C4
 
 # Net-yellow
-set -x fish_color_prompt DE9144
-set -x fish_color_cwd E5BD1A
+# set -x fish_color_prompt DE9144
+# set -x fish_color_cwd E5BD1A
 # Keep in mind: these bad boys implicitly use 256 colors:
-set -x fish_command_timer_color 06604B
-set -x fish_command_timer_success_color 06604B
-set -x fish_command_timer_fail_color 06604B
+# set -x fish_command_timer_color 06604B
+# set -x fish_command_timer_success_color 06604B
+# set -x fish_command_timer_fail_color 06604B
+
+# Chernozem
+set -x fish_color_prompt AF5F5F
+set -x fish_color_cwd AF5F5F
+# Keep in mind: these bad boys implicitly use 256 colors:
+set -x fish_command_timer_color 875F5F
+set -x fish_command_timer_success_color 875F5F
+set -x fish_command_timer_fail_color 875F5F
 
 # ||
 # || Envs
@@ -55,7 +63,7 @@ set -x EDITOR "v"
 
 # FZF
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
-set -x FZF_DEFAULT_OPTS " --bind 'ctrl-q:select-all+accept,tab:print-query'"
+set -x FZF_DEFAULT_OPTS " --bind 'ctrl-q:select-all+accept,tab:print-query' --no-color"
 
 # OPAM configuration
 # source $HOME/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
