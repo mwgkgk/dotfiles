@@ -29,6 +29,7 @@
 
 (require 'sb-aclrepl)
 
+#+#:nil
 (setf sb-aclrepl:*prompt*
       (lambda (&rest args)
         (let
