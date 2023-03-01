@@ -87,8 +87,7 @@ nnoremap <silent> <buffer> <LocalLeader>U :T <C-r><C-a> 32 cells dump<CR>
 
 " See anything
 " Not <silent> on purpose
-nnoremap <buffer> <LocalLeader><C-g> :T see<Space>
-nnoremap <buffer> <C-g><LocalLeader> :T see<Space>
+nnoremap <buffer> <C-g>a :T see<Space>
 
 " Gforth memes
 nnoremap <silent> <buffer> <C-g>s :T simple-see <C-r><C-a><CR>
