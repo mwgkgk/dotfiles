@@ -61,7 +61,7 @@
 " highlight ErrorMsg cterm=none ctermfg=red ctermbg=black
 " highlight Border cterm=none ctermfg=black ctermbg=white
 
-highlight Win cterm=none ctermfg=210 ctermbg=234
+highlight Win cterm=none ctermfg=255 ctermbg=234
 highlight Directory cterm=bold ctermfg=254 ctermbg=234
 highlight Link cterm=bold ctermfg=220 ctermbg=234
 highlight BrokenLink cterm=bold ctermfg=166 ctermbg=234
