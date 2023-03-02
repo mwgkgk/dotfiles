@@ -131,6 +131,7 @@
 " let s:static_colo = 'glowform'
 " let s:static_colo = 'donatello'
 let s:static_colo = 'chernozem'
+" let s:static_colo = 'salmon'
 
 
 " let s:static_colo = 'default'
