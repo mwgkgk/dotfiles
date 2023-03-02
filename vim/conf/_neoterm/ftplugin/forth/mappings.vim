@@ -10,6 +10,8 @@ nnoremap <silent> <buffer> <LocalLeader>[g :T gf<CR>
 nnoremap <silent> <buffer> <LocalLeader>[p :T pf<CR>
 nnoremap <silent> <buffer> <LocalLeader>[b :T bf<CR>
 
+nnoremap <silent> <buffer> <LocalLeader>[[ :T gf -e bye <C-r>=expand('%:p')<CR><CR>
+
 " Include current file
 nnoremap <silent> <buffer> <LocalLeader>i :T include <C-r>=expand("%")<CR><CR>
 nnoremap <silent> <buffer> <LocalLeader>I :T include <C-r>=expand("%:p")<CR><CR>
