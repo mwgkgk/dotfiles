@@ -84,13 +84,28 @@ URxvt*.foreground: #AF5F5F
 URxvt*.background: #080808
 Urxvt*.cursorColor: #080808
 Urxvt*.cursorColor2: #DFDFDF
+URxvt*.color0: #AF5F5F
+URxvt*.color1: #AF5F5F
+URxvt*.color2: #AF5F5F
+URxvt*.color3: #AF5F5F
+URxvt*.color4: #AF5F5F
+URxvt*.color5: #AF5F5F
+URxvt*.color6: #AF5F5F
+URxvt*.color7: #AF5F5F
+URxvt*.color8: #AF5F5F
+URxvt*.color9: #AF5F5F
+URxvt*.color10: #AF5F5F
+URxvt*.color11: #AF5F5F
+URxvt*.color12: #AF5F5F
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
-URxvt*.color0: #3F3F3F
-URxvt*.color9: #98D53D
-URxvt*.color12: #8775E8
-URxvt*.color4:  #3465A4
+
+/* This block gets overridden by monotone schemes
+/* URxvt*.color0: #3F3F3F */
+/* URxvt*.color9: #98D53D */
+/* URxvt*.color12: #8775E8 */
+/* URxvt*.color4:  #3465A4 */
 URxvt*.tabbed.tab-bg: 9
 
 /* URxvt.keysym.Meta-F1: perl:tabbedex:prev_tab */
