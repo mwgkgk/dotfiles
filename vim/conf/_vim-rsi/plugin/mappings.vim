@@ -10,9 +10,3 @@ inoremap <M-p> <Up>
 
 " Use actual <Del> which joins lines.
 inoremap <C-d> <Del>
-
-" Sat Feb 25 00:15:58 UTC 2023
-" Sun Feb 26 04:49:06 UTC 2023
-" Slightly modify C-f to send-to-repl as fallback
-
-inoremap <expr> <C-F> col('.')>strlen(getline('.'))?"\<Lt>Esc>:TREPLSendLine\<Lt>CR>A":"\<Lt>Right>"
