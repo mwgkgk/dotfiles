@@ -47,12 +47,20 @@ umask 0007
 # set -x fish_command_timer_fail_color 06604B
 
 # Chernozem
-set -x fish_color_prompt AF5F5F
-set -x fish_color_cwd AF5F5F
+# set -x fish_color_prompt AF5F5F
+# set -x fish_color_cwd AF5F5F
 # Keep in mind: these bad boys implicitly use 256 colors:
-set -x fish_command_timer_color 875F5F
-set -x fish_command_timer_success_color 875F5F
-set -x fish_command_timer_fail_color 875F5F
+# set -x fish_command_timer_color 875F5F
+# set -x fish_command_timer_success_color 875F5F
+# set -x fish_command_timer_fail_color 875F5F
+
+# alien-nes
+set -x fish_color_prompt 5FFFAF
+set -x fish_color_cwd 5FFFAF
+# Keep in mind: these bad boys implicitly use 256 colors:
+set -x fish_command_timer_color 5FD7AF
+set -x fish_command_timer_success_color 5FD7AF
+set -x fish_command_timer_fail_color 5FD7AF
 
 # ||
 # || Envs
