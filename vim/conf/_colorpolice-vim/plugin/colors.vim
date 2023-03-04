@@ -55,7 +55,7 @@
 " let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
-" let s:static_colo = 'alien-nes'
+let s:static_colo = 'alien-nes'
 " let s:static_colo = 'grid'
 
 " let s:static_colo = 'Tomorrow'
@@ -130,7 +130,7 @@
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
 " let s:static_colo = 'donatello'
-let s:static_colo = 'chernozem'
+" let s:static_colo = 'chernozem'
 " let s:static_colo = 'salmon'
 
 
