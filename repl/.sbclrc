@@ -29,11 +29,10 @@
 
 (require 'sb-aclrepl)
 
-#+#:nil
 (setf sb-aclrepl:*prompt*
       (lambda (&rest args)
         (let
-          ((formatstring (format nil "~c[36m~A~c[0m" #\ESC sb-aclrepl::*default-prompt* #\ESC)))
+          ((formatstring (format nil "~c[33m~A~c[0m" #\ESC sb-aclrepl::*default-prompt* #\ESC)))
           (apply #'format (concatenate 'list (list nil formatstring) args)))))
 
 ;;; *
