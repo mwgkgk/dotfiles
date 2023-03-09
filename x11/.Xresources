@@ -99,7 +99,13 @@ URxvt*.meta8: true
 /* URxvt*.color12: #AF5F5F */
 
 ! alien-nes
-URxvt*.foreground: #5FFFAF
+/* URxvt*.foreground: #5FFFAF */
+/* URxvt*.background: #0F0F0F */
+/* Urxvt*.cursorColor: #0F0F0F */
+/* Urxvt*.cursorColor2: #DFDFDF */
+
+! druid
+URxvt*.foreground: #AF875F
 URxvt*.background: #0F0F0F
 Urxvt*.cursorColor: #0F0F0F
 Urxvt*.cursorColor2: #DFDFDF

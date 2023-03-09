@@ -55,12 +55,20 @@ umask 0007
 # set -x fish_command_timer_fail_color 875F5F
 
 # alien-nes
-set -x fish_color_prompt 5FFFAF
-set -x fish_color_cwd 5FFFAF
+# set -x fish_color_prompt 5FFFAF
+# set -x fish_color_cwd 5FFFAF
 # Keep in mind: these bad boys implicitly use 256 colors:
-set -x fish_command_timer_color 5FD7AF
-set -x fish_command_timer_success_color 5FD7AF
-set -x fish_command_timer_fail_color 5FD7AF
+# set -x fish_command_timer_color 5FD7AF
+# set -x fish_command_timer_success_color 5FD7AF
+# set -x fish_command_timer_fail_color 5FD7AF
+
+# druid
+set -x fish_color_prompt 5A8400
+set -x fish_color_cwd FFFFAF
+# Keep in mind: these bad boys implicitly use 256 colors:
+set -x fish_command_timer_color 5A8400
+set -x fish_command_timer_success_color 5A8400
+set -x fish_command_timer_fail_color 5A8400
 
 # ||
 # || Envs
