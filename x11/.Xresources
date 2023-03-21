@@ -74,10 +74,10 @@ URxvt*.meta8: true
 /* Urxvt*.cursorColor2: #DFDFDF */
 
 ! Net-yellow
-/* URxvt*.foreground: #DE9144 */
-/* URxvt*.background: #0F0F0F */
-/* Urxvt*.cursorColor: #0F0F0F */
-/* Urxvt*.cursorColor2: #DFDFDF */
+URxvt*.foreground: #DE9144
+URxvt*.background: #0F0F0F
+Urxvt*.cursorColor: #0F0F0F
+Urxvt*.cursorColor2: #DFDFDF
 
 ! Chernozem
 /* URxvt*.foreground: #AF5F5F */
@@ -105,10 +105,10 @@ URxvt*.meta8: true
 /* Urxvt*.cursorColor2: #DFDFDF */
 
 ! druid
-URxvt*.foreground: #AF875F
-URxvt*.background: #0F0F0F
-Urxvt*.cursorColor: #0F0F0F
-Urxvt*.cursorColor2: #DFDFDF
+/* URxvt*.foreground: #AF875F */
+/* URxvt*.background: #0F0F0F */
+/* Urxvt*.cursorColor: #0F0F0F */
+/* Urxvt*.cursorColor2: #DFDFDF */
 
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5

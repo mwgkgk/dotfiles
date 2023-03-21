@@ -39,12 +39,12 @@ umask 0007
 # set -x fish_command_timer_fail_color C4C4C4
 
 # Net-yellow
-# set -x fish_color_prompt DE9144
-# set -x fish_color_cwd E5BD1A
+set -x fish_color_prompt DE9144
+set -x fish_color_cwd E5BD1A
 # Keep in mind: these bad boys implicitly use 256 colors:
-# set -x fish_command_timer_color 06604B
-# set -x fish_command_timer_success_color 06604B
-# set -x fish_command_timer_fail_color 06604B
+set -x fish_command_timer_color 06604B
+set -x fish_command_timer_success_color 06604B
+set -x fish_command_timer_fail_color 06604B
 
 # Chernozem
 # set -x fish_color_prompt AF5F5F
@@ -63,12 +63,12 @@ umask 0007
 # set -x fish_command_timer_fail_color 5FD7AF
 
 # druid
-set -x fish_color_prompt 5A8400
-set -x fish_color_cwd FFFFAF
+# set -x fish_color_prompt 5A8400
+# set -x fish_color_cwd FFFFAF
 # Keep in mind: these bad boys implicitly use 256 colors:
-set -x fish_command_timer_color 5A8400
-set -x fish_command_timer_success_color 5A8400
-set -x fish_command_timer_fail_color 5A8400
+# set -x fish_command_timer_color 5A8400
+# set -x fish_command_timer_success_color 5A8400
+# set -x fish_command_timer_fail_color 5A8400
 
 # ||
 # || Envs
