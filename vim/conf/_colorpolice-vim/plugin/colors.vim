@@ -71,7 +71,7 @@
 
 " let s:static_colo = 'outsider'
 " let s:static_colo = 'alduin'
-let s:static_colo = 'dragonlands'
+" let s:static_colo = 'dragonlands'
 
 " let s:static_colo = 'apples'
 " let s:static_colo = 'github'
@@ -125,7 +125,7 @@ let s:static_colo = 'dragonlands'
 " let s:static_colo = 'paramount-light'
 " let s:static_colo = 'lunaperche-dark'
 
-" let s:static_colo = 'distinguishedmod'
+let s:static_colo = 'distinguishedmod'
 " let s:static_colo = 'freefall'
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
