@@ -76,7 +76,7 @@ endsnippet
 
 priority -3
 
-snippet  /([\!:\w=\-\/]+)/ "expand-any-word" rw
+snippet  /([\!:\w=\-\/\?]+)/ "expand-any-word" rw
 (`!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` $1)
