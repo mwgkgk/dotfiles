@@ -114,7 +114,7 @@ super + BackSpace
 super + y
 	zepp
 
-super + control + End
+super + End
 	motor
 
 super + apostrophe
