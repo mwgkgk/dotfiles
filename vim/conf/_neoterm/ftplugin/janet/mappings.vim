@@ -3,7 +3,7 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T janet<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T jpm-m repl<CR>
 
 " ||
 " || Send
