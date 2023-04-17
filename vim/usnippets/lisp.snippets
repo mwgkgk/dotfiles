@@ -530,7 +530,7 @@ endsnippet
 # || Types
 # ||
 
-snippet "^(\()?\b(deft|t)" "deftype" rb
+snippet "^(\()?\b(deftype|defty|deft|ty)" "deftype" rb
 (deftype $1 ()
 	\`${0:list}`!p
 if match.group(1) is None:
@@ -1081,15 +1081,14 @@ snippet im "doing my part" b
 endsnippet
 
 # ||
-# || 1am
+# || Tests
 # ||
 
-snippet ro "rooftops" b
-#+#:comment
-(progn
-	(1am:test ${1:test-name}
-		(is ${0:nil})})
-	(1am:run '($1)))
+snippet "(\()?\b(test|t)" "fiveam test" rw
+(test ${1:story-unfolds-as-expected}
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 # ||
