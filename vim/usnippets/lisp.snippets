@@ -606,6 +606,22 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+# ||
+# || Slots
+# ||
+
+snippet :ac ":ac" w
+:accessor $1
+endsnippet
+
+snippet :acc ":acc" w
+:accessor $1 :initarg :$1
+endsnippet
+
+snippet doc "slot :documentation" w
+:documentation "${VISUAL}$0"
+endsnippet
+
 snippet "(\()?\bsv" "slot-value" rw
 (slot-value ${1:obj} ${0:slot}`!p
 if match.group(1) is None:
@@ -625,14 +641,6 @@ endsnippet
 
 snippet ar ":around" w
 :around
-endsnippet
-
-snippet :ac ":ac" w
-:accessor $1
-endsnippet
-
-snippet :acc ":acc" w
-:accessor $1 :initarg :$1
 endsnippet
 
 # ||
