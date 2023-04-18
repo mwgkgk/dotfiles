@@ -35,7 +35,7 @@
 " let s:static_colo = 'busan'
 " let s:static_colo = 'stalker'
 
-" let s:static_colo = 'gentooish'
+let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
 " let s:static_colo = 'peaksea_mod'
 " let s:static_colo = 'flatlandia'
@@ -125,7 +125,7 @@
 " let s:static_colo = 'paramount-light'
 " let s:static_colo = 'lunaperche-dark'
 
-let s:static_colo = 'distinguishedmod'
+" let s:static_colo = 'distinguishedmod'
 " let s:static_colo = 'freefall'
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
