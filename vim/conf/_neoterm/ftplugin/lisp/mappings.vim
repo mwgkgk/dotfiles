@@ -173,7 +173,8 @@ nnoremap <silent> <buffer> <LocalLeader>pig :T (use-package :ghost) <CR>
 " || Tests
 " ||
 
-nnoremap <silent> <buffer> <Leader>r :T (5am:run-all-tests)<CR>
+nnoremap <silent> <buffer> <Leader>r :T (ghost:run-fiveam-test-suite-for-the-current-package)<CR>
+nnoremap <silent> <buffer> <Leader>R :T (5am:run-all-tests)<CR>
 
 " ||
 " || Silly
