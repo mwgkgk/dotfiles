@@ -1088,7 +1088,8 @@ endsnippet
 # || Tests
 # ||
 
-snippet "(\()?\b(test|t)" "fiveam test" rw
+# no t cause cond
+snippet "(\()?\b(test)" "fiveam test" rw
 (test ${1:story-unfolds-as-expected}
 	${0:nil}`!p
 if match.group(1) is None:
