@@ -1130,6 +1130,10 @@ endsnippet
 # || Unix
 # ||
 
+snippet args "args" w
+uiop:*command-line-arguments*
+endsnippet
+
 snippet "(\()?\b(pwd|cwd)" "(pwd|cwd)" rw
 (uiop/os:getcwd$0`!p
 if match.group(1) is None:
