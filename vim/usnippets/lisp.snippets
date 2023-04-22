@@ -1001,6 +1001,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bsay" "say" rw
+(format t "${VISUAL}$0~%"`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet { "{" i
 ~{${0:~A${VISUAL}}~}
 endsnippet
