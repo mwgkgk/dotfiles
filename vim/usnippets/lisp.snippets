@@ -579,7 +579,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bctp" "check-type positive integer" rw
+snippet "(\()?\bct\+" "check-type positive integer" rw
 (check-type ${0:${VISUAL}} (integer 0 *)`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -593,6 +593,12 @@ endsnippet
 
 snippet "(\()?\bcts" "check-type string" rw
 (check-type ${0:${VISUAL}} string`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bctp" "check-type pathname" rw
+(check-type ${0:${VISUAL}} pathname`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
