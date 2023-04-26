@@ -311,6 +311,12 @@ snippet dos "dos" w
 	(describe s))
 endsnippet
 
+snippet build "build" w
+:build-operation program-op
+:build-pathname "target/release/$1"
+:entry-point "$1::main"
+endsnippet
+
 snippet defsys "defsystem" b
 (defsystem "${1:school}"
   :version "0.1.0"
