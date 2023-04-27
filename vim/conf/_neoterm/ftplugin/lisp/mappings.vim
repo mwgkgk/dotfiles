@@ -115,6 +115,9 @@ nnoremap <buffer> <LocalLeader>Q :silent T :q<CR>
 " || SBCL
 " ||
 
+" Print error condition and restart cases
+nnoremap <buffer> <LocalLeader>e :silent T :error<CR>
+
 " Use short alias because cant override abort without unlocking,
 " and you want to make it be defined in bare repl because accidentally sending
 nnoremap <buffer> <LocalLeader>a :silent T a<CR>
