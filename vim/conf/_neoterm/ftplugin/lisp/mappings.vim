@@ -166,13 +166,17 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 
 " Load + in-package = w
 " Reason it's <silent> is because long command requires a prompt
-nnoremap <buffer> <silent> <LocalLeader>w :silent T (progn (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>))<CR>
+nnoremap <buffer> <silent> <LocalLeader>w :silent T (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
 
 " Used packages
 nnoremap <silent> <buffer> <LocalLeader>pu :T (package-use-list *package*)<CR>
 
 " Inject ghost-cl tools
 nnoremap <silent> <buffer> <LocalLeader>pig :T (use-package :ghost) <CR>
+
+" Memorize and recall package
+nnoremap <silent> <buffer> <LocalLeader>pm :T (ghost:memorize-package)<CR>
+nnoremap <silent> <buffer> <LocalLeader>pr :T (ghost:recall-package)<CR>
 
 " ||
 " || Tests
