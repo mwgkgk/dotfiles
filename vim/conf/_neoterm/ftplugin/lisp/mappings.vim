@@ -22,6 +22,8 @@ nnoremap <silent> <buffer> <C-x>UF :silent T (fmakunbound '<C-r><C-w>)<CR>
 nnoremap <silent> <buffer> <C-x>UP :silent T (delete-package '<C-r><C-w>)<CR>
 
 nnoremap <buffer> <LocalLeader>l :silent T (load #P"<C-r>=expand('%:p')<CR>")<CR>
+" Master Leader
+nnoremap <buffer> <LocalLeader><Leader> :silent T (load #P"<C-r>=expand('%:p:h')<CR>/package.lisp") (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
 
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
