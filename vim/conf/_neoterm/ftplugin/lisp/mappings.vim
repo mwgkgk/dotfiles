@@ -32,7 +32,7 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 " || Docs
 " ||
 
-nnoremap <buffer> <C-g><C-g> :silent T (maybe-describe "<C-r><C-w>")<CR>
+nnoremap <buffer> <C-g><C-g> :silent T (ghost:query-symbol "<C-r><C-w>")<CR>
 
 nnoremap <buffer> <C-g><C-d> :silent T (describe '<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-f> :silent T (describe #'<C-r><C-w>)<CR>
