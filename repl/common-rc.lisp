@@ -11,11 +11,6 @@
 
 (ql:quickload '(#:ghost/spellbook) :silent t)
 
-;;; neoterm workaround meme
-(defparameter sbcl nil)
-;;; mis-send cause muscle memory to abort from errors
-(defparameter a nil)
-
 ;;; *
 ;;; * Project management
 ;;; *
