@@ -355,6 +355,21 @@ snippet dep ":depends-on" w
 :depends-on (#:${2:alexandria})
 endsnippet
 
+snippet "(\()?\bmain" "main" rw
+(defun main ()
+	${0:nil}
+	nil`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+
+#+#:comment
+(when nil
+  (let ((path #p"~/shop/core/${1:x}/$1-cl/live/$1"))
+      (ensure-directories-exist path)
+      (sb-ext:save-lisp-and-die path :toplevel #'main :executable t))
+  nil)
+endsnippet
+
 # ||
 # || Variables
 # ||
