@@ -109,6 +109,13 @@ nnoremap <buffer> <LocalLeader>[a :silent T alisp<CR>
 nnoremap <buffer> <LocalLeader>[f :silent T sawfish-dev<CR>
 
 " ||
+" || Ghost
+" ||
+
+" Scrolling prompt
+nnoremap <silent> <buffer> <LocalLeader>d :T d<CR>
+
+" ||
 " || ECL
 " ||
 
