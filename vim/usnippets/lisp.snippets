@@ -972,6 +972,12 @@ snippet /:?fin(ally)?/ "Loop finally" rw
 finally (return ${0:($1)})
 endsnippet
 
+snippet "(\()?\breturn" "return" rw
+(return$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Higher Order Functions
 # ||
