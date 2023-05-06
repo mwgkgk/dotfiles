@@ -604,8 +604,14 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bct\+" "check-type positive integer" rw
+snippet "(\()?\bct0" "check-type 0+" rw
 (check-type ${0:${VISUAL}} (integer 0 *)`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bct1" "check-type 1+" rw
+(check-type ${0:${VISUAL}} (integer 1 *)`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
