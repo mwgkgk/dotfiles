@@ -68,7 +68,7 @@ verbose_link "$DOTFILES/tmux/.tmux.conf" ~/.tmux.conf
 
 # Vim
 verbose_link "$DOTFILES/vim/" ~/.vim
-mkdir ~/.vim/undo
+mkdir -p ~/.vim/undo
 
 # Vifm
 mkdir -p ~/.vifm
