@@ -46,6 +46,10 @@ function! colors#chi_colo(chi, static_colo)
         return a:static_colo
     elseif a:chi ==# 'ship'
         return a:static_colo
+    elseif a:chi ==# 'tower'
+        return 'heavy-industry'
+    elseif a:chi ==# 'hobbit'
+        return a:static_colo
     elseif a:chi ==# 'girl'
         return 'hangar-lab'
     elseif a:chi ==# 'silk'
