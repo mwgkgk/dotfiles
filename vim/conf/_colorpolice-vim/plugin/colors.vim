@@ -32,7 +32,7 @@
 " let s:static_colo = 'nil'
 " let s:static_colo = 'fukuoka'
 " let s:static_colo = 'shenzhen'
-" let s:static_colo = 'busan'
+let s:static_colo = 'busan'
 " let s:static_colo = 'stalker'
 
 " let s:static_colo = 'gentooish'
@@ -124,7 +124,7 @@
 " let s:static_colo = 'miramare'
 " let s:static_colo = 'paramount-light'
 " let s:static_colo = 'lunaperche-dark'
-let s:static_colo = 'paramount-dark'
+" let s:static_colo = 'paramount-dark'
 
 " let s:static_colo = 'distinguishedmod'
 " let s:static_colo = 'freefall'
