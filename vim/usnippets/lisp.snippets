@@ -1106,7 +1106,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet puo "print-object print-unreadable-object" w
+snippet po "print-object" w
 (defmethod print-object ((obj ${0:mylilobjeyboy}) out)
 	(print-unreadable-object (obj out :type t)
 		(format out "~s" (name obj))))
