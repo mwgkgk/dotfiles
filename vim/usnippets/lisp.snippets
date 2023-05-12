@@ -1056,6 +1056,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bpe" "print-to-std-err" rw
+(format *error-output* "$0~A~%" ${1:reason}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet { "{" i
 ~{${0:~A${VISUAL}}~}
 endsnippet
