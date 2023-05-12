@@ -720,6 +720,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\b(assocs|asx)" "assoc-string" rw
+(assoc ${1:key} ${0:alist} :test #'equal`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "(\()?\bgetf" "getf" rw
 (getf ${1:plist} ${2:key}`!p
 if match.group(1) is None:
