@@ -1062,6 +1062,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bfl" "format list" rw
+(format nil "~{~A~^, ~}~%" ${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet { "{" i
 ~{${0:~A${VISUAL}}~}
 endsnippet
