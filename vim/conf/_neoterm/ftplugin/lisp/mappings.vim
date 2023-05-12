@@ -53,6 +53,8 @@ nnoremap <buffer> <C-g>D :silent T (apropos "<C-r><C-w>")<CR>
 
 nnoremap <buffer> <C-g>a :T (apropos "")<Left><Left>
 
+nnoremap <buffer> <C-g>c :T (ghost:shell "")<Left><Left>
+
 " https://github.com/tkych/quicksearch
 nnoremap <buffer> <C-g>q :T (qs:? "" :du)<Left><Left><Left><Left><Left><Left>
 nnoremap <buffer> <C-g>Q :silent T (qs:? "<C-r><C-w>" :du)<CR>
