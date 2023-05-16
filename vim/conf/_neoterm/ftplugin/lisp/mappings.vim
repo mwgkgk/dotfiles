@@ -186,6 +186,10 @@ nnoremap <silent> <buffer> <LocalLeader>pu :T (package-use-list *package*)<CR>
 " Inject ghost-cl tools
 nnoremap <silent> <buffer> <LocalLeader>pig :T (use-package :ghost) <CR>
 
+" Package reload
+nnoremap <silent> <buffer> <LocalLeader>prg :T (asdf:load-system :ghost)<CR>
+nnoremap <buffer> <LocalLeader>pR :T (asdf:load-system :)<Left>
+
 " Memorize and recall package
 nnoremap <silent> <buffer> <LocalLeader>pm :T (ghost:memorize-package)<CR>
 nnoremap <silent> <buffer> <LocalLeader>pr :T (ghost:recall-package)<CR>
