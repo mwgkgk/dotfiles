@@ -35,6 +35,7 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 " ||
 
 nnoremap <buffer> <C-g><C-g> :silent T (ghost:query-symbol "<C-r><C-w>")<CR>
+nnoremap <buffer> <C-g>h :silent T (ghost:query-unix-help "<C-r><C-w>")<CR>
 
 nnoremap <buffer> <C-g><C-d> :silent T (describe '<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-f> :silent T (describe #'<C-r><C-w>)<CR>
@@ -65,8 +66,8 @@ nnoremap <buffer> <C-g>f :silent T (documentation '<C-r><C-w> 'function)<CR>
 nnoremap <buffer> <C-g>m :silent T (documentation '<C-r><C-w> 'compiler-macro)<CR>
 
 " ECL-specific
-nnoremap <buffer> <C-g>h :silent T (help <C-r><C-w>)<CR>
-nnoremap <buffer> <C-g><C-h> :silent T (help #'<C-r><C-w>)<CR>
+nnoremap <buffer> <C-g>eh :silent T (help <C-r><C-w>)<CR>
+nnoremap <buffer> <C-g>e<C-h> :silent T (help #'<C-r><C-w>)<CR>
 
 " ||
 " || Debug
