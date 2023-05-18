@@ -35,7 +35,11 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 " ||
 
 nnoremap <buffer> <C-g><C-g> :silent T (ghost:query-symbol "<C-r><C-w>")<CR>
-nnoremap <buffer> <C-g>h :silent T (ghost:query-unix-help "<C-r><C-w>")<CR>
+nnoremap <buffer> <C-g>uh :silent T (ghost:shell "<C-r><C-w> --help")<CR>
+nnoremap <buffer> <C-g>h  :silent T (ghost:shell "<C-r><C-w> --help")<CR>
+nnoremap <buffer> <C-g>uv :silent T (ghost:shell "<C-r><C-w> --version")<CR>
+nnoremap <buffer> <C-g>up :silent T (ghost:shell "yay -Qi <C-r><C-w>")<CR>
+nnoremap <buffer> <C-g>uu :silent T (ghost:shell "yay -Qu")<CR>
 
 nnoremap <buffer> <C-g><C-d> :silent T (describe '<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-f> :silent T (describe #'<C-r><C-w>)<CR>
@@ -117,6 +121,7 @@ nnoremap <buffer> <LocalLeader>[f :silent T sawfish-dev<CR>
 
 " Scrolling prompt
 nnoremap <silent> <buffer> <LocalLeader>d :T d<CR>
+nnoremap <silent> <buffer> <LocalLeader>v :T v<CR>
 
 " ||
 " || ECL
