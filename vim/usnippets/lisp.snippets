@@ -260,7 +260,7 @@ snippet ulp "unlock-package" w
 (sb-ext:unlock-package (find-package "CL"))
 endsnippet
 
-snippet di "date, in-package" w
+snippet dai "date, in-package" w
 ;;; `date-utc`
 
 (in-package #:${VISUAL}${0:`!p
@@ -467,8 +467,10 @@ snippet run "run" b
 	(run$0))
 endsnippet
 
-snippet decl "decl " w
-(declare (ignore ${0:args}))
+snippet "(\()?\b(decl|di)" "declare ignore" rw
+(declare (ignore ${VISUAL}$0)`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 snippet "(\()?\bfmk" "fmk" rw
