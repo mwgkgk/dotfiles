@@ -1139,6 +1139,32 @@ if has('nvim')
 endif
 
 " ||
+" || AI
+" ||
+
+Plug 'github/copilot.vim' " {{{
+
+let g:copilot_filetypes = {
+            \   'mj': v:false,
+            \ }
+let g:copilot_no_tab_map = v:true
+
+function! ToggleCopilot()
+    if(exists('b:copilot_enabled') && b:copilot_enabled)
+        let b:copilot_enabled = 0
+    else
+        let b:copilot_enabled = 1
+    endif
+    echo 'Copilot is ' . (b:copilot_enabled ? 'enabled' : 'disabled')
+endfunction
+
+imap <silent><script><expr> <M-l> copilot#Accept("\<CR>")
+inoremap <M-h> <Esc>:call ToggleCopilot()<CR>a
+nnoremap <M-h> :call ToggleCopilot()<CR>
+
+" }}}
+
+" ||
 " || Writing
 " ||
 
