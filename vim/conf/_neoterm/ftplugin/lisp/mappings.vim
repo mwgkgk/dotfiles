@@ -122,6 +122,7 @@ nnoremap <buffer> <LocalLeader>[f :silent T sawfish-dev<CR>
 " Scrolling prompt
 nnoremap <silent> <buffer> <LocalLeader>d :T d<CR>
 nnoremap <silent> <buffer> <LocalLeader>v :T v<CR>
+nnoremap <silent> <buffer> <LocalLeader>w :T w<CR>
 
 " ||
 " || ECL
@@ -183,7 +184,7 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 
 " Load + in-package = w
 " Reason it's <silent> is because long command requires a prompt
-nnoremap <buffer> <silent> <LocalLeader>w :silent T (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
+" nnoremap <buffer> <silent> <LocalLeader>w :silent T (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
 
 " Used packages
 nnoremap <silent> <buffer> <LocalLeader>pu :T (package-use-list *package*)<CR>
