@@ -1159,7 +1159,7 @@ function! ToggleCopilot()
 endfunction
 
 imap <silent><script><expr> <M-l> copilot#Accept("\<CR>")
-inoremap <M-h> <Esc>:call ToggleCopilot()<CR>a
+imap <M-h> <C-o>:call ToggleCopilot()<CR>
 nnoremap <M-h> :call ToggleCopilot()<CR>
 
 " }}}
