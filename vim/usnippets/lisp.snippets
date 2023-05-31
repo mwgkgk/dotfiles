@@ -1208,6 +1208,16 @@ if match.group(1) is None:
 endsnippet
 
 # ||
+# || Datetime
+# ||
+
+snippet "(\()?\bgut" "get-universal-time" rw
+(get-universal-time`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Unix
 # ||
 
