@@ -20,4 +20,5 @@
 ;;; * Common utilities
 ;;; *
 
+#+#:nil
 (load #p"~/dot/repl/common-rc.lisp")
