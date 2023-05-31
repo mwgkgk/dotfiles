@@ -55,9 +55,7 @@ nnoremap <buffer> <C-g>t :T (type-of <C-r><C-w>)<CR>
 
 nnoremap <buffer> <C-g>gd :T (disassemble '<C-r><C-w>)<CR>
 
-nnoremap <buffer> <C-g>d :silent T (find-all-symbols (string-upcase "<C-r><C-w>"))<CR>
-nnoremap <buffer> <C-g>D :silent T (apropos "<C-r><C-w>")<CR>
-
+nnoremap <buffer> <C-g>d :silent T (apropos "<C-r><C-w>")<CR>
 nnoremap <buffer> <C-g>a :T (apropos "")<Left><Left>
 
 nnoremap <buffer> <C-g>c :T (ghost:shell "")<Left><Left>
