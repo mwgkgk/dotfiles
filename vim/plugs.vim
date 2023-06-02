@@ -604,6 +604,7 @@ let g:cycle_default_groups += [
             \   [['flet', 'labels']],
             \   [['eql', 'equal']],
             \   [['defun', 'defmacro']],
+            \   [['&optional', '&key', '&aux']],
             \ ]
 
 "  -- Zig
