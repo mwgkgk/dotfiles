@@ -35,6 +35,8 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 " ||
 
 nnoremap <buffer> <C-g><C-g> :silent T (ghost:query-symbol "<C-r><C-w>")<CR>
+nnoremap <buffer> <C-g>r :silent T (ghost:redisplay)<CR>
+
 nnoremap <buffer> <C-g>uh :silent T (ghost:shell "<C-r><C-w> --help")<CR>
 nnoremap <buffer> <C-g>h  :silent T (ghost:shell "<C-r><C-w> --help")<CR>
 nnoremap <buffer> <C-g>uv :silent T (ghost:shell "<C-r><C-w> --version")<CR>
