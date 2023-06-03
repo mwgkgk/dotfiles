@@ -65,6 +65,9 @@ nmap <Leader>gV <Plug>(operator-verb-commit-everything-with-message)
 " TODO Move out of conf/_vim-gitgutter when operator-flashy is more abstracted
 nmap <Leader>hR <Plug>(operator-verb-rename-last-commit)
 
+" This used to be a standard map.
+nmap <Leader>hu <Plug>(GitGutterUndoHunk)
+
 " ||
 " || Preview
 " ||
