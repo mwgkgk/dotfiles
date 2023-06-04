@@ -25,8 +25,6 @@ nnoremap <silent> <buffer> <C-x>ut :silent T (5am:rem-test '<C-r><C-w>)<CR>
 
 nnoremap <buffer> <LocalLeader>l :silent T (ghost:load* #P"<C-r>=expand('%:p')<CR>")<CR>
 nnoremap <buffer> <LocalLeader><Leader> :silent T (ghost:tldr-load #P"<C-r>=expand('%:p')<CR>")<CR>
-" Master Leader
-nnoremap <buffer> <LocalLeader><Leader> :silent T (load #P"<C-r>=expand('%:p:h')<CR>/package.lisp") (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
 
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
