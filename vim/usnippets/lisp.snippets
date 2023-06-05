@@ -902,6 +902,24 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+priority 1
+
+snippet "(\()?\bwhen-let" "when-let" wr
+(when-let (($1))
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\bcond-let" "cond-let" wr
+(cond-let $1
+	(($0))`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+priority 0
+
 snippet "(\()?\blet\*" "let*" wr
 (let* (($1))
 	${VISUAL}$0`!p
