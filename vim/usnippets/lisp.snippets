@@ -840,7 +840,7 @@ endsnippet
 # || Macros
 # ||
 
-snippet "(\()?\b(defmacro|defmac|defma|dm|macro|macr|mac|ma)" "m" rw
+snippet "(\()?\b(defmacro|defmac|defma|dm|macro|macr|mac|mc)" "m" rw
 (defmacro ${1:macro} (${2:&body ${3:body}})
 	${0:nil}`!p
 if match.group(1) is None:
