@@ -44,7 +44,7 @@
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'nuclear-dark'
 " let s:static_colo = 'fadedvision'
-let s:static_colo = 'fadedvision-dark'
+" let s:static_colo = 'fadedvision-dark'
 
 " Zinge
 " let s:static_colo = 'calmar256-dark'
@@ -54,7 +54,7 @@ let s:static_colo = 'fadedvision-dark'
 " let s:static_colo = 'lecture-dark'
 " let s:static_colo = 'belf'
 " let s:static_colo = 'thief'
-" let s:static_colo = 'dubai'
+let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
 " let s:static_colo = 'alien-nes'
 " let s:static_colo = 'grid'
