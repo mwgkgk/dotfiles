@@ -3,7 +3,7 @@ setlocal formatoptions=tcqj
 setlocal tabstop=2
 setlocal shiftwidth=2
 
-setlocal iskeyword+=&
+setlocal iskeyword+=&,.
 
 setlocal lispwords+=ctypecase,defsystem,with-client-socket,test,block
 " alexandria
