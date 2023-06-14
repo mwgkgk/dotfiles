@@ -41,6 +41,9 @@ nnoremap <buffer> <C-g>h  :silent T (ghost:shell "<C-r><C-w> --help")<CR>
 nnoremap <buffer> <C-g>uv :silent T (ghost:shell "<C-r><C-w> --version")<CR>
 nnoremap <buffer> <C-g>up :silent T (ghost:shell "yay -Qi <C-r><C-w>")<CR>
 nnoremap <buffer> <C-g>uu :silent T (ghost:shell "yay -Qu")<CR>
+nnoremap <buffer> <C-g>gs :silent T (ghost:shell "git status")<CR>
+nnoremap <buffer> <C-g>gp :silent T (ghost:shell "git pull")<CR>
+nnoremap <buffer> <C-g>gg :silent T (ghost:shell "git push")<CR>
 
 nnoremap <buffer> <C-g>wd :silent T (uiop/os:getcwd)<CR>
 
@@ -181,6 +184,8 @@ nnoremap <silent> <buffer> <LocalLeader>r :T :reset<CR>
 
 nnoremap <buffer> <LocalLeader>pp :silent T (in-package #:common-lisp-user)<CR>
 nnoremap <buffer> <LocalLeader>pf :silent T (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
+" nnoremap <buffer> <LocalLeader>pg :silent T (in-package (ghost:guess-package #P"<C-r>=expand('%:p')<CR>")) (use-package :ghost)<CR>
+nnoremap <buffer> <LocalLeader>pg :silent T (ghost:guess-package #P"<C-r>=expand('%:p')<CR>" <C-r>=line('.')<CR>)<CR>
 nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 
 " Load + in-package = w
