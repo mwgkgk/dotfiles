@@ -27,4 +27,5 @@
 ;;; * Greeting
 ;;; *
 
+#+#:nil
 (scheduling-facility:agenda)
