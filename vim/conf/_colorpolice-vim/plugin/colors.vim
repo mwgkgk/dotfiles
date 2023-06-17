@@ -53,11 +53,12 @@
 " let s:static_colo = 'lecture'
 " let s:static_colo = 'lecture-dark'
 " let s:static_colo = 'belf'
-let s:static_colo = 'thief'
+" let s:static_colo = 'thief'
 " let s:static_colo = 'dubai'
 " let s:static_colo = 'hangar-lab'
 " let s:static_colo = 'alien-nes'
 " let s:static_colo = 'grid'
+let s:static_colo = 'darkblue'
 
 " let s:static_colo = 'Tomorrow'
 " let s:static_colo = 'primary'
