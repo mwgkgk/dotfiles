@@ -36,14 +36,13 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 nnoremap <buffer> <C-g><C-g> :silent T (ghost:query-symbol "<C-r><C-w>")<CR>
 nnoremap <buffer> <C-g>r :silent T (ghost:redisplay)<CR>
 
-nnoremap <buffer> <C-g>uh :silent T (ghost:shell "<C-r><C-w> --help")<CR>
 nnoremap <buffer> <C-g>h  :silent T (ghost:shell "<C-r><C-w> --help")<CR>
-nnoremap <buffer> <C-g>uv :silent T (ghost:shell "<C-r><C-w> --version")<CR>
+nnoremap <buffer> <C-g>v :silent T (ghost:shell "<C-r><C-w> --version")<CR>
 nnoremap <buffer> <C-g>up :silent T (ghost:shell "yay -Qi <C-r><C-w>")<CR>
 nnoremap <buffer> <C-g>uu :silent T (ghost:shell "yay -Qu")<CR>
-nnoremap <buffer> <C-g>gs :silent T (ghost:shell "git status")<CR>
-nnoremap <buffer> <C-g>gp :silent T (ghost:shell "git pull")<CR>
-nnoremap <buffer> <C-g>gg :silent T (ghost:shell "git push")<CR>
+nnoremap <buffer> <LocalLeader>gs :silent T (ghost:shell "git status")<CR>
+nnoremap <buffer> <LocalLeader>gp :silent T (ghost:shell "git pull")<CR>
+nnoremap <buffer> <LocalLeader>gg :silent T (ghost:shell "git push")<CR>
 
 nnoremap <buffer> <C-g>wd :silent T (uiop/os:getcwd)<CR>
 
@@ -65,13 +64,13 @@ nnoremap <buffer> <C-g>a :T (apropos "")<Left><Left>
 nnoremap <buffer> <C-g>c :T (ghost:shell "")<Left><Left>
 
 " https://github.com/tkych/quicksearch
-nnoremap <buffer> <C-g>q :T (qs:? "" :du)<Left><Left><Left><Left><Left><Left>
-nnoremap <buffer> <C-g>Q :silent T (qs:? "<C-r><C-w>" :du)<CR>
+nnoremap <buffer> <C-g>s :T (qs:? "" :du)<Left><Left><Left><Left><Left><Left>
+nnoremap <buffer> <C-g>q :silent T (qs:? "<C-r><C-w>" :du)<CR>
 
-nnoremap <buffer> <C-g>v :silent T (documentation '<C-r><C-w> 'variable)<CR>
-nnoremap <buffer> <C-g>s :silent T (documentation '<C-r><C-w> 'symbol)<CR>
-nnoremap <buffer> <C-g>f :silent T (documentation '<C-r><C-w> 'function)<CR>
-nnoremap <buffer> <C-g>m :silent T (documentation '<C-r><C-w> 'compiler-macro)<CR>
+nnoremap <buffer> <C-g>Gv :silent T (documentation '<C-r><C-w> 'variable)<CR>
+nnoremap <buffer> <C-g>Gs :silent T (documentation '<C-r><C-w> 'symbol)<CR>
+nnoremap <buffer> <C-g>Gf :silent T (documentation '<C-r><C-w> 'function)<CR>
+nnoremap <buffer> <C-g>Gm :silent T (documentation '<C-r><C-w> 'compiler-macro)<CR>
 
 " ECL-specific
 nnoremap <buffer> <C-g>eh :silent T (help <C-r><C-w>)<CR>
@@ -191,6 +190,9 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 " Load + in-package = w
 " Reason it's <silent> is because long command requires a prompt
 " nnoremap <buffer> <silent> <LocalLeader>w :silent T (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
+
+" Load a package.lisp in same dir
+nnoremap <buffer> <LocalLeader>pl :silent T (load #P"<C-r>=expand('%:p:h')<CR>/package.lisp") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
 
 " Used packages
 nnoremap <silent> <buffer> <LocalLeader>pu :T (package-use-list *package*)<CR>
