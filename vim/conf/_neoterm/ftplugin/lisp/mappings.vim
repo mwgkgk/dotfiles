@@ -108,7 +108,7 @@ nnoremap <silent> <buffer> <LocalLeader>fd :T (ghost:drop-last-fallback)<CR>
 " ||
 
 " Run repls:
-nnoremap <buffer> <LocalLeader><LocalLeader> :silent T sbcl<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :silent T manufacturing-facility<CR>
 nnoremap <buffer> <LocalLeader>[e :silent T ecl<CR>
 nnoremap <buffer> <LocalLeader>[s :silent T sbcl<CR>
 nnoremap <buffer> <LocalLeader>[c :silent T ccl<CR>
@@ -117,6 +117,9 @@ nnoremap <buffer> <LocalLeader>[i :silent T clisp<CR>
 nnoremap <buffer> <LocalLeader>[j :silent T abcl-cp<CR>
 nnoremap <buffer> <LocalLeader>[a :silent T alisp<CR>
 nnoremap <buffer> <LocalLeader>[f :silent T sawfish-dev<CR>
+
+" Re-generate default pre-baked image
+nnoremap <buffer> <LocalLeader>[r :silent T (manufacturing-facility:reissue-self)<CR>
 
 " ||
 " || Ghost
