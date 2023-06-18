@@ -16,7 +16,7 @@
 ;;; *
 
 (ql:quickload '(#:colony #:scheduling-facility #:condition-system #:ants
-                #:manufacturing-facility) :silent t)
+                #:manufacturing-facility #:hug) :silent t)
 
 ;;; *
 ;;; * Playpen
