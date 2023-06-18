@@ -23,8 +23,8 @@ nnoremap <silent> <buffer> <C-x>up :silent T (delete-package '<C-r><C-w>)<CR>
 " 5am tests:
 nnoremap <silent> <buffer> <C-x>ut :silent T (5am:rem-test '<C-r><C-w>)<CR>
 
-nnoremap <buffer> <LocalLeader>l :silent T (ghost:load* #P"<C-r>=expand('%:p')<CR>")<CR>
-nnoremap <buffer> <LocalLeader><Leader> :silent T (ghost:tldr-load #P"<C-r>=expand('%:p')<CR>")<CR>
+nnoremap <silent> <buffer> <LocalLeader>l :silent T (ghost:load* #P"<C-r>=expand('%:p')<CR>")<CR>
+nnoremap <silent> <buffer> <LocalLeader><Leader> :silent T (ghost:tldr-load #P"<C-r>=expand('%:p')<CR>")<CR>
 
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
@@ -118,13 +118,10 @@ nnoremap <buffer> <LocalLeader>[j :silent T abcl-cp<CR>
 nnoremap <buffer> <LocalLeader>[a :silent T alisp<CR>
 nnoremap <buffer> <LocalLeader>[f :silent T sawfish-dev<CR>
 
-" This is also <LocalLeader>pp. Just to reset the repl in certain sense.
-nnoremap <buffer> <LocalLeader>[[ :silent T (in-package #:common-lisp-user)<CR>
-
 " Re-generate default pre-baked image
 nnoremap <buffer> <LocalLeader>[r :silent T (manufacturing-facility:reissue-self)<CR>
 
-nnoremap <buffer> <LocalLeader>[q :silent T (manufacturing-facility:toggle-flat-errors)<CR>
+nnoremap <buffer> <LocalLeader>[[ :silent T (manufacturing-facility:toggle-flat-errors)<CR>
 
 
 " ||
