@@ -124,6 +124,9 @@ nnoremap <buffer> <LocalLeader>[[ :silent T (in-package #:common-lisp-user)<CR>
 " Re-generate default pre-baked image
 nnoremap <buffer> <LocalLeader>[r :silent T (manufacturing-facility:reissue-self)<CR>
 
+nnoremap <buffer> <LocalLeader>[q :silent T (manufacturing-facility:toggle-flat-errors)<CR>
+
+
 " ||
 " || Ghost
 " ||
