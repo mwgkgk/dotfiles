@@ -51,8 +51,6 @@ sxhkd -c ~/dot/sxhkd/sxhkdrc ~/pants/sxhkd/sxhkdrc &
 
 # outlaw &
 
-tianxia &
-
 # hulk-init &
 
 # while true ; do
