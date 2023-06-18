@@ -118,6 +118,9 @@ nnoremap <buffer> <LocalLeader>[j :silent T abcl-cp<CR>
 nnoremap <buffer> <LocalLeader>[a :silent T alisp<CR>
 nnoremap <buffer> <LocalLeader>[f :silent T sawfish-dev<CR>
 
+" This is also <LocalLeader>pp. Just to reset the repl in certain sense.
+nnoremap <buffer> <LocalLeader>[[ :silent T (in-package #:common-lisp-user)<CR>
+
 " Re-generate default pre-baked image
 nnoremap <buffer> <LocalLeader>[r :silent T (manufacturing-facility:reissue-self)<CR>
 
