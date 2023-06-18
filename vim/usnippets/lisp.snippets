@@ -362,7 +362,7 @@ snippet dep ":depends-on" w
 endsnippet
 
 snippet "(\()?\bmain" "main" rw
-(defun main ()
+(defun main (&optional (args (uiop:command-line-arguments)))
 	${0:nil}
 	nil`!p
 if match.group(1) is None:
