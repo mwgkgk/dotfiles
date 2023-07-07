@@ -943,7 +943,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\b(mvb|bind|mul)" "multiple-value-bind" wr
+snippet "(\()?\b(mvb)" "multiple-value-bind" wr
 (multiple-value-bind ($1)
 	${0:nil}`!p
 if match.group(1) is None:
@@ -955,6 +955,13 @@ snippet mvbd "multiple value bind date" w
 	(get-decoded-time)
 	(declare (ignore sec min hr day mon yr dow dst-p tz))
 	${VISUAL}$0)
+endsnippet
+
+snippet "(\()?\b(db)" "destructuring-bind" wr
+(destructuring-bind (a . b) $1
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
 endsnippet
 
 # ||
