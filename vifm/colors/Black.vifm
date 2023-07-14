@@ -70,7 +70,7 @@ highlight Device cterm=bold ctermfg=196 ctermbg=234
 highlight Fifo cterm=bold ctermfg=cyan ctermbg=234
 highlight Executable cterm=bold ctermfg=155 ctermbg=234
 highlight Selected cterm=bold ctermfg=magenta ctermbg=234
-highlight CurrLine cterm=bold ctermfg=default ctermbg=16
+highlight CurrLine cterm=bold ctermfg=default ctermbg=237
 highlight TopLine cterm=none ctermfg=240 ctermbg=16
 highlight TopLineSel cterm=bold ctermfg=254 ctermbg=16
 highlight StatusLine cterm=bold ctermfg=254 ctermbg=16
