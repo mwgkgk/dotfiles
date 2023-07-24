@@ -161,8 +161,7 @@ endsnippet
 # The #; reader macro makes ambient-form break on multiline
 # Indent is bugged hence () there to make it easier
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-(when #f
-  ;; `!v system('date-jiv | tr -d "\n"')`$0${VISUAL}
+(when #f ; `!v system('date-jiv | tr -d "\n"')`$0${VISUAL}
   #f)
 endsnippet
 
