@@ -4,4 +4,4 @@ setlocal softtabstop=2
 
 setlocal textwidth=79
 
-setlocal lispwords+=module
+setlocal lispwords+=module,library
