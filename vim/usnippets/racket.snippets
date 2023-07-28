@@ -59,7 +59,7 @@ endsnippet
 
 # Reason it's defined like this is to distinguish from lambda which doesn't
 # occur at top level.
-snippet /^l/ "#lang" br
+snippet lang "#lang" b
 #lang ${0:typed/racket}
 endsnippet
 
@@ -394,11 +394,19 @@ if match.group(1) is not None:
 	snip.rv = match.group(1)`$0
 endsnippet
 
-snippet /([\!:\w=\-\+><\*\/\?\.]*[\!:\w=\-\+><\*\/\?])\./ "expand-any-word-as-no-arguments-call" rw
+# Idk why this regex is like this but lets copy a simple one from lisp
+# snippet /([\!:\w=\-\+><\*\/\?\.]*[\!:\w=\-\+><\*\/\?])\./ "expand-any-word-as-no-arguments-call" rw
+# (`!p
+# if match.group(1) is not None:
+# 	snip.rv = match.group(1)`)$0
+# endsnippet
+
+snippet /([%\!:\w=\-\+\|><\*\/\?\.]+)_/ "expand-any-word-as-no-arguments-call" rw
 (`!p
 if match.group(1) is not None:
 	snip.rv = match.group(1)`)$0
 endsnippet
+
 
 snippet /([\!:\w=\-\+><\*\/\?\.]+),/ "expand-any-word-as-compose" rw
 (compose `!p
