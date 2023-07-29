@@ -21,7 +21,7 @@ nnoremap <buffer> <LocalLeader>X :TREPLSendLine<CR>
 
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 
-# Does not work
+" Does not work
 nnoremap <buffer> <LocalLeader>l :silent T (require "<C-r>=expand('%:p')<CR>")<CR>
 
 " ||
