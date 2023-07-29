@@ -2,7 +2,7 @@
 " || Compiler
 " ||
 
-nnoremap <buffer> <Leader>r :T tcc -run <C-r>=expand('%')<CR><CR>
+nnoremap <buffer> <Leader>r :T tcc -lgit2 -run <C-r>=expand('%')<CR><CR>
 
 " ||
 " || REPL control
