@@ -5,6 +5,9 @@
 " Run repl
 nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :silent T hy<CR>
 
+" Run current file
+nnoremap <buffer> <silent> <Leader>r :T hy <C-r>=expand("%")<CR><CR>
+
 " ||
 " || Send
 " ||
