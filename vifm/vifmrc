@@ -209,7 +209,7 @@ filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.bik
 fileviewer *.mp3 mp3info
 
 " Video
-filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.flvm,*.webm
+filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv,*.flvm,*.webm,*.mov
         \ {View using vlc}
         \ vlc -q --one-instance %f &,
         \ {View using ffplay}
