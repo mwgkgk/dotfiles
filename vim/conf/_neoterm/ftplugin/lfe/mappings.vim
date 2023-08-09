@@ -27,6 +27,9 @@ nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
 " Send atom under cursor
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
 
+nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
+nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
+
 " ||
 " || Load
 " ||
