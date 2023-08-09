@@ -6,3 +6,5 @@ setl lisp
 
 setl commentstring=;%s
 setl comments^=:;;;,:;;,sr:#\|,mb:\|,ex:\|#
+
+setlocal lispwords+=defmodule,defrecord
