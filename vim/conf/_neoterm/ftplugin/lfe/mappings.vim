@@ -43,3 +43,8 @@ nnoremap <buffer> <LocalLeader>s :silent T (slurp "<C-r>=expand('%')<CR>")<CR>
 " Unslurp
 nnoremap <buffer> <LocalLeader>u :silent T (unslurp)<CR>
 
+" ||
+" || Docs
+" ||
+
+nnoremap <buffer> <C-g><C-g> :T (doc )<Left>
