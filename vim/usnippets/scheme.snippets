@@ -49,8 +49,12 @@ endsnippet
 # || Imports
 # ||
 
+snippet i "import" w
+(import (rnrs)$0)
+endsnippet
+
 # TODO module name completion
-snippet /(i|u)/ "guile use-modules" r
+snippet u "guile use-modules" b
 (use-modules (ice-9 ${1:match}))
 endsnippet
 
