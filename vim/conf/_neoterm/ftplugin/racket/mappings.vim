@@ -41,7 +41,8 @@ nnoremap <silent> <buffer> <LocalLeader>b :T ,bt<CR>
 " ||
 
 nnoremap <buffer> g<C-g> :silent T ,doc <C-r><C-w><CR>
-nnoremap <buffer> <C-g> :silent T ,describe <C-r><C-w><CR>
+nnoremap <buffer> <C-g><C-g> :silent T ,describe <C-r><C-w><CR>
+nnoremap <buffer> <C-g>d :silent T (procedure-arity <C-r><C-w>)<CR>
 
 " ||
 " || raco
