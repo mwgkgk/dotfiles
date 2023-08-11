@@ -120,3 +120,12 @@ nnoremap <silent> <Leader><Space>Q :TcloseAll!<CR>
 
 " Close & exit
 nnoremap <C-x><C-c> :TcloseAll! <Bar> :qa<CR>
+
+" Fri Aug 11 04:57:10 UTC 2023
+
+" ||
+" || Git
+" ||
+
+nnoremap <Leader>gj :T git pull<CR>
+nnoremap <Leader>gk :T git push<CR>
