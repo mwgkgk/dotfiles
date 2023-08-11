@@ -1,3 +1,16 @@
+# ||
+# || Date
+# ||
+
+snippet /^ *da(te)?/ "Date" rb
+# `date-utc`
+${0}
+endsnippet
+
+# ||
+# || Targets
+# ||
+
 snippet all "all" b
 all:
 	g++ ${1:main}.cpp -o $1
