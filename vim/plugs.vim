@@ -1297,7 +1297,7 @@ Plug 'hellerve/carp-vim'
 Plug 'dmac/vim-cljfmt'
 
 " Racket
-Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
+" Plug 'wlangstroth/vim-racket', { 'for' : 'racket' }
 
 " Shen
 Plug 'nimaai/vim-shen', { 'for' : 'shen' }
