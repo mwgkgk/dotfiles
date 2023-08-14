@@ -10,13 +10,13 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
 " Send atom under cursor
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
+" Print atom under cursor
+nnoremap <silent> <buffer> <C-x><C-g> :T (print <C-r><C-w>)<CR>
 
 " Send line
-nnoremap <buffer> <LocalLeader>x :TREPLSendLine<CR>
+nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 
-" nnoremap <buffer> <LocalLeader>l :silent T (load-file "<C-r>=expand('%:p')<CR>")<CR>
-nnoremap <buffer> <LocalLeader>l :TREPLSendFile<CR>
-
+" Top-level form
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 
 " C-q and q offer word- and section-based send:
@@ -52,31 +52,31 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 
 nnoremap <silent> <buffer> <Leader>r :T (load-file "<C-r>=expand("%")<CR>")<CR>
 
+nnoremap <buffer> <LocalLeader>l :TREPLSendFile<CR>
+
 " ||
 " || Docs
 " ||
 
-nnoremap <silent> <buffer> <C-x><C-g> :T (print <C-r><C-w>)<CR>
+nnoremap <silent> <buffer> <C-g><C-g> :T (clojure.repl/doc <C-r><C-w>)<CR>
+nnoremap <silent> <buffer> <Leader><C-g><C-g> :T (clojure.repl/doc )<Left>
 
-nnoremap <silent> <buffer> <C-g> :T (clojure.repl/doc <C-r><C-w>)<CR>
-nnoremap <silent> <buffer> <Space><LocalLeader><C-g> :T (clojure.repl/doc )<Left>
-
-nnoremap <silent> <buffer> g<C-g> :T (clojure.repl/source <C-r><C-w>)<CR>
-nnoremap <silent> <buffer> <Space><LocalLeader>g<C-g> :T (clojure.repl/source )<Left>
+nnoremap <silent> <buffer> <C-g>s :T (clojure.repl/source <C-r><C-w>)<CR>
+nnoremap <silent> <buffer> <Leader><C-g>s :T (clojure.repl/source )<Left>
 
 " Metadata
-nnoremap <silent> <buffer> <LocalLeader><C-g> :T (clojure.pprint/pprint (meta <C-r><C-w>))<CR>
-nnoremap <silent> <buffer> <Space><LocalLeader><LocalLeader><C-g> :T (clojure.pprint/pprint (meta ))<Left><Left>
+nnoremap <silent> <buffer> <C-g>m :T (clojure.pprint/pprint (meta <C-r><C-w>))<CR>
+nnoremap <silent> <buffer> <Leader><C-g>m :T (clojure.pprint/pprint (meta ))<Left><Left>
 
 " Apropos
-nnoremap <silent> <buffer> <Leader><C-g> :T (clojure.repl/find-doc #"(?i)<C-r><C-w>")<CR>
-nnoremap <silent> <buffer> <Space><LocalLeader><Leader><C-g> :T (clojure.repl/find-doc #"(?i)"")<Left><Left>
-" Clojuredocs is <LocalLeader>g<C-g>
+nnoremap <silent> <buffer> <C-g>a :T (clojure.repl/find-doc #"(?i)<C-r><C-w>")<CR>
+nnoremap <silent> <buffer> <Leader><C-g>a :T (clojure.repl/find-doc #"(?i)"")<Left><Left>
+" Clojuredocs is <C-g>c
 " in ~/.vim/conf/_open-browser.vim/ftplugin/clojure/mappings.vim
 
 " Javadoc
-nnoremap <silent> <buffer> <LocalLeader>G<C-g> :T (clojure.java.javadoc/javadoc "<C-r><C-w>")<CR>
-nnoremap <silent> <buffer> <Space><LocalLeader><LocalLeader>G<C-g> :T (clojure.java.javadoc/javadoc "")<Left><Left>
+nnoremap <silent> <buffer> <C-g>j :T (clojure.java.javadoc/javadoc "<C-r><C-w>")<CR>
+nnoremap <silent> <buffer> <Leader><C-g>j :T (clojure.java.javadoc/javadoc "")<Left><Left>
 
 " ||
 " || Errors
