@@ -15,7 +15,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = 'freefall'
+let g:colors_name = 'freeform'
 
 hi Normal ctermbg=233 ctermfg=254 cterm=none
 hi Type ctermfg=254
