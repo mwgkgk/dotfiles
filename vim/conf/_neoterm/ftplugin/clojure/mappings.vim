@@ -58,6 +58,10 @@ nnoremap <buffer> <LocalLeader>l :TREPLSendFile<CR>
 " || Docs
 " ||
 
+" Defined?
+nnoremap <silent> <buffer> <C-g>d :T (resolve '<C-r><C-w>)<CR>
+nnoremap <silent> <buffer> <Leader><C-g>d :T (resolve ')<Left>
+
 nnoremap <silent> <buffer> <C-g><C-g> :T (clojure.repl/doc <C-r><C-w>)<CR>
 nnoremap <silent> <buffer> <Leader><C-g><C-g> :T (clojure.repl/doc )<Left>
 
