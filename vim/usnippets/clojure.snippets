@@ -2,16 +2,28 @@
 # || Date
 # ||
 
-# Wed Jun 30 08:42:15 UTC 2021
-
-snippet / *da(te)?/ "Date" rb
-;; `date-utc`
-
+snippet /^ *da(te)?/ "Date" rb
+;;; `date-utc`
 ${0}
 endsnippet
 
-snippet dd "date-inline" w
-`date-jiv` ${VISUAL}$0
+snippet da "date-file-start" "snip.line == 0" e
+;;; `date-utc`
+
+$0
+endsnippet
+
+priority -1
+
+snippet dd "dd-inline" w
+`!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
+endsnippet
+
+priority 0
+
+snippet dad "date-intro-comment" w
+;;;; `date-utc`
+;;;; $0
 endsnippet
 
 # ||
@@ -30,26 +42,14 @@ endsnippet
 
 # If line above is empty, basement:
 snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
-(comment
+(comment ; `date-jiv`
 	${VISUAL}${0:`!p
 
 if not snip.v.text:
 	snip.rv = "nil"
 `}
-	nil) ; `date-jiv`
+	nil)
 endsnippet
-
-snippet t "TODO" b
-;; TODO ${VISUAL}$0
-endsnippet
-
-priority -1
-
-snippet t "TODO-inline" w
-TODO ${VISUAL}$0
-endsnippet
-
-priority 0
 
 # ||
 # || Modules
