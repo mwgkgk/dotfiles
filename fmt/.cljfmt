@@ -1,0 +1,4 @@
+;;; vim:ft=clojure
+;;; This is a configuration file for github.com/cespare/goclj
+
+{:indent-overrides [["comment"] :list-body]}
