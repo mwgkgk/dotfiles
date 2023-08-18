@@ -136,6 +136,17 @@ snippet k "lambda" w
 endsnippet
 
 # ||
+# || Macros
+# ||
+
+snippet "(\()?\b(defmacro|defmac|defma|dm|macro|macr|mac|mc)" "m" rw
+(defmacro ${1:macro} [${2:& ${3:body}}]
+	${0:nil}`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Let
 # ||
 
