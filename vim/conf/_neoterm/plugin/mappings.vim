@@ -127,5 +127,5 @@ nnoremap <C-x><C-c> :TcloseAll! <Bar> :qa<CR>
 " || Git
 " ||
 
-nnoremap <Leader>gj :T git join<CR>
+nnoremap <Leader>gj :T good job<CR>
 nnoremap <Leader>gk :T git kick<CR>
