@@ -9,7 +9,7 @@ nnoremap <silent> <buffer> <Leader>r :T runfactor <C-r>=expand("%:p")<CR><CR>
 nnoremap <buffer> <LocalLeader><LocalLeader> :silent T factor-repl<CR>
 
 " Autouse
-nnoremap <buffer> <LocalLeader>a :silent T auto-use<CR>
+nnoremap <buffer> <LocalLeader>a :silent T auto-use toggle<CR>
 
 " Restarts
 nnoremap <buffer> <LocalLeader>1 :silent T :1<CR>
