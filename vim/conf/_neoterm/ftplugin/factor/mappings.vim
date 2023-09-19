@@ -100,6 +100,9 @@ nnoremap <buffer> <C-g>U :silent T \ <C-r><C-a> uses .<CR>
 nnoremap <buffer> <C-g>i :silent T inspect<CR>
 nnoremap <buffer> <C-g><C-i> :silent T <C-r><C-a> inspect<CR>
 
+" infer stack effect of line under cursor
+nnoremap <buffer> <C-g>f :silent T [ <C-r><C-l> ] infer.<CR>
+
 " ||
 " || Stack
 " ||
