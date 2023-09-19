@@ -96,6 +96,10 @@ nnoremap <buffer> <C-g><C-a> :silent T "<C-r><C-a>" apropos<CR>
 nnoremap <buffer> <C-g>u :silent T \ <C-r><C-a> usage.<CR>
 nnoremap <buffer> <C-g>U :silent T \ <C-r><C-a> uses .<CR>
 
+" inspect
+nnoremap <buffer> <C-g>i :silent T inspect<CR>
+nnoremap <buffer> <C-g><C-i> :silent T <C-r><C-a> inspect<CR>
+
 " ||
 " || Stack
 " ||
