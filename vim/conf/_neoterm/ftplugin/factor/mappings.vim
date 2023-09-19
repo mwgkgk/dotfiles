@@ -85,9 +85,9 @@ nnoremap <silent> <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 " || Docs
 " ||
 
-nnoremap <buffer> <C-g><C-g> :silent T \ <C-r><C-a> see<CR>
+nnoremap <buffer> <C-g><C-g> :silent T \ <C-r><C-a> help<CR>
 
-nnoremap <buffer> <C-g>g :silent T \ <C-r><C-a> help<CR>
+nnoremap <buffer> <C-g>s :silent T \ <C-r><C-a> see<CR>
 nnoremap <buffer> <C-g>w :silent T "<C-r><C-a>" words.<CR>
 
 nnoremap <buffer> <C-g>a :silent T "<C-r><C-a>" apropos<CR>
