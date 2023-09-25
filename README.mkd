@@ -1,5 +1,28 @@
 ```
 [1.5M]  .
+├── [ 58K]  repl
+│   ├── [  40]  .factor-rc
+│   ├── [ 497]  common-rc.lisp
+│   ├── [ 680]  .clisprc.lisp
+│   ├── [ 710]  .eclrc
+│   ├── [1.3K]  .sbclrc
+│   ├── [  66]  .irbrc
+│   ├── [ 443]  .clinit.cl
+│   ├── [ 349]  .clasprc
+│   ├── [ 177]  .clingrc
+│   ├── [ 172]  repl.rc
+│   ├── [2.9K]  ccl-init.lisp
+│   ├── [ 747]  .abclrc
+│   ├── [ 182]  gforthrc
+│   ├── [ 259]  profiles.clj
+│   ├── [ 137]  pforthrc
+│   ├── [  30]  startup.jl
+│   ├── [ 150]  .scryerrc
+│   ├── [ 119]  .minrc
+│   ├── [  48]  .lambda-term-inputrc
+│   ├── [ 38K]  ipython_config.py
+│   ├── [5.9K]  init.pl
+│   └── [ 859]  .iex.exs
 ├── [4.2K]  fmt
 │   ├── [ 127]  .cljfmt
 │   └── [  38]  .rustfmt.toml
@@ -445,28 +468,6 @@
 │   └── [8.4K]  config
 ├── [4.3K]  rofi
 │   └── [ 310]  config.rasi
-├── [ 58K]  repl
-│   ├── [ 497]  common-rc.lisp
-│   ├── [ 680]  .clisprc.lisp
-│   ├── [ 710]  .eclrc
-│   ├── [1.3K]  .sbclrc
-│   ├── [  66]  .irbrc
-│   ├── [ 443]  .clinit.cl
-│   ├── [ 349]  .clasprc
-│   ├── [ 177]  .clingrc
-│   ├── [ 172]  repl.rc
-│   ├── [2.9K]  ccl-init.lisp
-│   ├── [ 747]  .abclrc
-│   ├── [ 182]  gforthrc
-│   ├── [ 259]  profiles.clj
-│   ├── [ 137]  pforthrc
-│   ├── [  30]  startup.jl
-│   ├── [ 150]  .scryerrc
-│   ├── [ 119]  .minrc
-│   ├── [  48]  .lambda-term-inputrc
-│   ├── [ 38K]  ipython_config.py
-│   ├── [5.9K]  init.pl
-│   └── [ 859]  .iex.exs
 ├── [5.9K]  keyd
 │   └── [1.9K]  default.conf
 ├── [ 63K]  fish
@@ -532,7 +533,7 @@
 └── [5.7K]  alsa
     └── [1.7K]  .asoundrc
 
- 5.0M used in 228 directories, 304 files
+ 5.0M used in 228 directories, 305 files
 ```
 
-> Generated on Monday, September 25, 2023 at 10:40:45 AM UTC.
+> Generated on Monday, September 25, 2023 at 10:47:44 AM UTC.
