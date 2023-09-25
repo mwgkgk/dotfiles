@@ -20,6 +20,7 @@ nnoremap <buffer> <LocalLeader>5 :T :5<CR>
 
 " Errors
 nnoremap <buffer> <LocalLeader>e :T :errors<CR>
+nnoremap <buffer> <LocalLeader>E :T :user-init-errors<CR>
 
 " Clear
 nnoremap <buffer> <LocalLeader>c :T clear<CR>
