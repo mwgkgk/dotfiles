@@ -104,6 +104,7 @@ verbose_link "$DOTFILES/repl/init.pl" ~/.config/swi-prolog/init.pl
 verbose_link "$DOTFILES/repl/.scryerrc" ~/.scryerrc
 verbose_link "$DOTFILES/repl/gforthrc" ~/.config/gforthrc
 verbose_link "$DOTFILES/repl/.irbrc" ~/.irbrc
+verbose_link "$DOTFILES/repl/.factor-rc" ~/.factor-rc
 
 # Cmus
 mkdir -p ~/.config/cmus
