@@ -117,7 +117,7 @@ nnoremap <buffer> <C-g>f :T [ <C-r><C-l> ] infer.<CR>
 nnoremap <buffer> <LocalLeader>d :T drop<CR>
 
 " Dot
-nnoremap <buffer> <LocalLeader>. :T .<CR>
+nnoremap <buffer> <LocalLeader>. :T [ . ] without-limits<CR>
 
 " Nip
 nnoremap <buffer> <LocalLeader>n :T nip<CR>
