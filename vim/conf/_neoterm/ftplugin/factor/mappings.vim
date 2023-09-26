@@ -81,6 +81,11 @@ nnoremap <buffer> <C-q><C-w> v0y:T <C-r>"<CR>
 inoremap <buffer> <C-q><C-e> <Esc>v$y:T <C-r>"<CR>gi
 nnoremap <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 
+" ||
+" || Variables
+" ||
+
+nnoremap <silent> <buffer> <LocalLeader>g :T <C-r><C-a> get<CR>
 
 " ||
 " || Docs
