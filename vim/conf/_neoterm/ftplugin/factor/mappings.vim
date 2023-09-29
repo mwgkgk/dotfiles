@@ -6,7 +6,7 @@
 nnoremap <silent> <buffer> <Leader>r :T runfactor <C-r>=expand("%:p")<CR><CR>
 
 " Open repl
-nnoremap <buffer> <LocalLeader><LocalLeader> :T factor-repl<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :vert T factor-repl<CR>
 
 " Autouse
 nnoremap <buffer> <LocalLeader>a :T auto-use? toggle<CR>
@@ -139,3 +139,7 @@ nnoremap <buffer> <LocalLeader>u :T USE: <C-r>=expand('%:t:r')<CR><CR>
 " Test
 " TODO %s the -tests$ away
 nnoremap <buffer> <LocalLeader>t :T "<C-r>=expand('%:t:r')<CR>" test<CR>
+
+" ||
+" || Ctags
+" ||
