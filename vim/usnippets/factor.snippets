@@ -62,7 +62,6 @@ endsnippet
 snippet f "word" b
 : ${1:word} ( ${2:x} -- $3 )
 	${VISUAL}$0
-;
 endsnippet
 
 snippet : "short word" w
@@ -72,7 +71,6 @@ endsnippet
 snippet ff "word w/ lexicals" b
 :: ${1:word} ( ${2:x} -- $3 )
 	${VISUAL}$0
-; ! `date-jiv`
 endsnippet
 
 snippet /(; )?(inline|inlin|inli|inl)/ "inline" wr
@@ -154,7 +152,6 @@ snippet /^([\!:\w=\-?\.$><\[\]]+)/ "expand-any-word-b" br
 : `!p
 if match.group(0) is not None:
 	snip.rv = match.group(0)` ( $1 )$0
-; ! `date-jiv`
 endsnippet
 
 snippet /^: ([\!:\w=\-?\.$><\[\]]+)\s*/ "double-expand-any-word-b" br
