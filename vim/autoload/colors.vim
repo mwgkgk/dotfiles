@@ -77,7 +77,7 @@ function! colors#chi_colo(chi, static_colo)
         return a:static_colo
     elseif a:chi ==# 'arrakis'
         return a:static_colo
-    elseif a:chi ==# 'muaddib'
+    elseif a:chi ==# 'ice'
         return a:static_colo
     elseif a:chi ==# 'endless-fortress'
         return a:static_colo
