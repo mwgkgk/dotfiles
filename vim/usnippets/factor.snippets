@@ -44,11 +44,11 @@ IN: ${0:`!v expand('%:t:r')`}
 endsnippet
 
 snippet /\b(using|usi|us|u)/ "USING" wr
-USING: ${0:`!p 
+USING: `!p 
 if not snip.v.text:
 	snip.rv = "multiline"
 else:
-	snip.rv = snip.v.text`} ;
+	snip.rv = snip.v.text` ${0:${VISUAL}} ;
 endsnippet
 
 # ||
