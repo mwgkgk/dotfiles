@@ -59,8 +59,8 @@ nnoremap <buffer> <C-x><C-x> :T <C-r><C-w><CR>
 " In the general case, <C-q> and q both offer neoterm-repl-send motion.
 " C-q works in insert mode.
 " xmap is for visual, and duplicates :TREPLSendSelection.
-nmap <buffer> q <Plug>(neoterm-repl-send)
-xmap <buffer> q <Plug>(neoterm-repl-send)
+" nmap <buffer> q <Plug>(neoterm-repl-send)
+" xmap <buffer> q <Plug>(neoterm-repl-send)
 nmap <buffer> <C-q> <Plug>(neoterm-repl-send)
 xmap <buffer> <C-q> <Plug>(neoterm-repl-send)
 
@@ -71,7 +71,7 @@ inoremap <buffer> <C-q>3 vBBBy:T <C-r>"<CR>gi
 " C-q C-q to send word under cursor or last word
 inoremap <buffer> <C-q><C-q> <Esc>:T <C-r><C-a><CR>a
 nnoremap <buffer> <C-q><C-q> :T <C-r><C-a><CR>
-nnoremap <buffer> qq :T <C-r><C-a><CR>
+" nnoremap <buffer> qq :T <C-r><C-a><CR>
 
 " C-q C-w to send from the beginning of the line til cursor
 inoremap <buffer> <C-q><C-w> <Esc>v0y:T <C-r>"<CR>gi
