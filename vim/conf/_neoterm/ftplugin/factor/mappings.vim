@@ -6,7 +6,8 @@
 nnoremap <silent> <buffer> <Leader>r :T runfactor <C-r>=expand("%:p")<CR><CR>
 
 " Open repl
-nnoremap <buffer> <LocalLeader><LocalLeader> :vert T factor-repl<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :T factor-repl<CR>
+nnoremap <buffer> <LocalLeader><CR> :vert T factor-repl<CR>
 
 " Autouse
 nnoremap <buffer> <LocalLeader>a :T auto-use? toggle<CR>
