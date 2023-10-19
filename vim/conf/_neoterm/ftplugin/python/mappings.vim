@@ -31,5 +31,7 @@ nmap <buffer> <Leader>X <Plug>(neoterm-repl-send-line)
 " || Docs
 " ||
 
-nnoremap <buffer> <C-g> <Esc> :T info args <C-r><C-a><CR>
-nnoremap <buffer> g<C-g> <Esc> :T info body <C-r><C-a><CR>
+" nnoremap <buffer> <C-g> <Esc> :T info args <C-r><C-a><CR>
+" nnoremap <buffer> g<C-g> <Esc> :T info body <C-r><C-a><CR>
+
+nnoremap <buffer> <C-g> <Esc> :T help(<C-r><C-w>)<CR>
