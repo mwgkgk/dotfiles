@@ -87,6 +87,7 @@ nnoremap <buffer> <C-q><C-e> v$y:T <C-r>"<CR>
 " ||
 
 nnoremap <silent> <buffer> <LocalLeader>g :T <C-r><C-a> get<CR>
+nnoremap <silent> <buffer> <LocalLeader>G :T <C-r><C-a> get .<CR>
 
 " ||
 " || Docs
