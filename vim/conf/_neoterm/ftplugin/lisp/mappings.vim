@@ -215,6 +215,10 @@ nnoremap <buffer> <LocalLeader>pR :T (asdf:load-system :)<Left>
 nnoremap <silent> <buffer> <LocalLeader>pm :T (ghost:memorize-package)<CR>
 nnoremap <silent> <buffer> <LocalLeader>pr :T (ghost:recall-package)<CR>
 
+" Guess ASD and make sure it's linked to quicklisp/local-projects
+nnoremap <silent> <buffer> <LocalLeader>pa :T (colony:guess-asd-and-ensure-linked #P"<C-r>=expand('%:p')<CR>")<CR>
+nnoremap <silent> <buffer> <LocalLeader>pA :T (colony:guess-asd-and-ensure-unlinked #P"<C-r>=expand('%:p')<CR>")<CR>
+
 " ||
 " || Tests
 " ||
