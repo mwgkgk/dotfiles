@@ -7,7 +7,7 @@
 ;;; *
 
 (ql:quickload '(#:ghost) :silent t)
-(use-package :ghost)
+(use-package :ghost-artifacts)
 
 (ql:quickload '(#:ghost/spellbook) :silent t)
 
