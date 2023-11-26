@@ -3,15 +3,6 @@
 ;;; Common things between impls
 
 ;;; *
-;;; * Repl utils
-;;; *
-
-(ql:quickload '(#:ghost) :silent t)
-(use-package :ghost-artifacts)
-
-(ql:quickload '(#:ghost/spellbook) :silent t)
-
-;;; *
 ;;; * Project management
 ;;; *
 
@@ -23,6 +14,15 @@
 ;;; *
 
 (ql:quickload '(#:sprawl) :silent t)
+
+;;; *
+;;; * Repl utils
+;;; *
+
+(ql:quickload '(#:ghost) :silent t)
+(use-package :ghost-artifacts)
+
+(ql:quickload '(#:ghost/spellbook) :silent t)
 
 ;;; *
 ;;; * Greeting
