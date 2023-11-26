@@ -10,6 +10,9 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
 " Send atom under cursor
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
+" Macroexpand call under cursor
+nnoremap <silent> <buffer> <C-x>X :silent T (macroexpand-1 '(<C-r><C-w>))<CR>
+
 " Unintern symbol under cursor
 nnoremap <silent> <buffer> <C-x>U :silent T (unintern '<C-r><C-w>)<CR>
 " Also mind: (f)makunbound, delete-package, make-instances-obsolete, and
