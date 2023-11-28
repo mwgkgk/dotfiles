@@ -191,10 +191,18 @@ nnoremap <silent> <buffer> <LocalLeader>r :T :reset<CR>
 " || Package
 " ||
 
-nnoremap <buffer> <LocalLeader>pp :silent T (in-package #:common-lisp-user)<CR>
+" CL-USER
+nnoremap <buffer> <LocalLeader>pu :silent T (in-package #:common-lisp-user)<CR>
+
+" Derive package name from file name
 nnoremap <buffer> <LocalLeader>pf :silent T (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
-" nnoremap <buffer> <LocalLeader>pg :silent T (in-package (ghost:guess-package #P"<C-r>=expand('%:p')<CR>")) (use-package :ghost)<CR>
-nnoremap <buffer> <LocalLeader>pg :silent T (ghost:guess-package #P"<C-r>=expand('%:p')<CR>" <C-r>=line('.')<CR>)<CR>
+
+" Derive package name from closest in-package line to cursor
+nnoremap <buffer> <LocalLeader>pp :silent T (ghost:in-guessed-package #P"<C-r>=expand('%:p')<CR>" <C-r>=line('.')<CR> :link-asd t)<CR>
+
+" Just plain guess-package for debugging
+nnoremap <buffer> <LocalLeader>pg :silent T (packaging-extra:guess-package #P"<C-r>=expand('%:p')<CR>" <C-r>=line('.')<CR>)<CR>
+
 nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 
 " Load + in-package = w
@@ -202,13 +210,13 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 " nnoremap <buffer> <silent> <LocalLeader>w :silent T (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
 
 " Load a package.lisp in same dir
-nnoremap <buffer> <LocalLeader>pl :silent T (load #P"<C-r>=expand('%:p:h')<CR>/package.lisp") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
+nnoremap <buffer> <LocalLeader>pn :silent T (load #P"<C-r>=expand('%:p:h')<CR>/package.lisp") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
 
 " Used packages
-nnoremap <silent> <buffer> <LocalLeader>pu :T (package-use-list *package*)<CR>
+nnoremap <silent> <buffer> <LocalLeader>pU :T (package-use-list *package*)<CR>
 
 " Inject ghost-cl tools
-nnoremap <silent> <buffer> <LocalLeader>pig :T (use-package :ghost) <CR>
+nnoremap <silent> <buffer> <LocalLeader>pig :T (use-package :ghost-debugging) <CR>
 
 " Package reload
 nnoremap <silent> <buffer> <LocalLeader>prg :T (asdf:load-system :ghost)<CR>
@@ -216,11 +224,14 @@ nnoremap <buffer> <LocalLeader>pR :T (asdf:load-system :)<Left>
 
 " Memorize and recall package
 nnoremap <silent> <buffer> <LocalLeader>pm :T (ghost:memorize-package)<CR>
-nnoremap <silent> <buffer> <LocalLeader>pr :T (ghost:recall-package)<CR>
+nnoremap <silent> <buffer> <LocalLeader>pM :T (ghost:recall-package)<CR>
 
 " Guess ASD and make sure it's linked to quicklisp/local-projects
-nnoremap <silent> <buffer> <LocalLeader>pa :T (colony:guess-asd-and-ensure-linked #P"<C-r>=expand('%:p')<CR>")<CR>
-nnoremap <silent> <buffer> <LocalLeader>pA :T (colony:guess-asd-and-ensure-unlinked #P"<C-r>=expand('%:p')<CR>")<CR>
+nnoremap <silent> <buffer> <LocalLeader>pa :T (packaging-extra:guess-asd-and-ensure-linked #P"<C-r>=expand('%:p')<CR>")<CR>
+nnoremap <silent> <buffer> <LocalLeader>pA :T (packaging-extra:guess-asd-and-ensure-unlinked #P"<C-r>=expand('%:p')<CR>")<CR>
+
+" 'Re'load the guessed asd
+nnoremap <silent> <buffer> <LocalLeader>pl :T (packaging-extra:guess-asd-and-asdf-load #P"<C-r>=expand('%:p')<CR>" :ensure-linked t)<CR>
 
 " ||
 " || Tests
