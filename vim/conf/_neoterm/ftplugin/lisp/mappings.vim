@@ -112,7 +112,8 @@ nnoremap <silent> <buffer> <LocalLeader>fd :T (ghost:drop-last-fallback)<CR>
 " ||
 
 " Run repls:
-nnoremap <buffer> <LocalLeader><LocalLeader> :silent T manufacturing-facility<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :silent T manufacturing-facility --arrive-immediately<CR>
+nnoremap <buffer> <LocalLeader>[m :silent T manufacturing-facility<CR>
 nnoremap <buffer> <LocalLeader>[e :silent T ecl<CR>
 nnoremap <buffer> <LocalLeader>[s :silent T sbcl<CR>
 nnoremap <buffer> <LocalLeader>[c :silent T ccl<CR>
@@ -195,10 +196,10 @@ nnoremap <silent> <buffer> <LocalLeader>r :T :reset<CR>
 nnoremap <buffer> <LocalLeader>pu :silent T (in-package #:common-lisp-user)<CR>
 
 " Derive package name from file name
-nnoremap <buffer> <LocalLeader>pf :silent T (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
+nnoremap <buffer> <LocalLeader>pf :silent T (in-package #:<C-r>=expand('%:t:r')<CR>)<CR>
 
 " Derive package name from closest in-package line to cursor
-nnoremap <buffer> <LocalLeader>pp :silent T (ghost:in-guessed-package #P"<C-r>=expand('%:p')<CR>" <C-r>=line('.')<CR> :link-asd t)<CR>
+nnoremap <buffer> <LocalLeader>pp :silent T (ghost:in-guessed-package #P"<C-r>=expand('%:p')<CR>" :line <C-r>=line('.')<CR> :link-asd t)<CR>
 
 " Just plain guess-package for debugging
 nnoremap <buffer> <LocalLeader>pg :silent T (packaging-extra:guess-package #P"<C-r>=expand('%:p')<CR>" <C-r>=line('.')<CR>)<CR>
@@ -207,10 +208,10 @@ nnoremap <buffer> <LocalLeader>P :silent T *package*<CR>
 
 " Load + in-package = w
 " Reason it's <silent> is because long command requires a prompt
-" nnoremap <buffer> <silent> <LocalLeader>w :silent T (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
+" nnoremap <buffer> <silent> <LocalLeader>w :silent T (load #P"<C-r>=expand('%:p')<CR>") (in-package #:<C-r>=expand('%:t:r')<CR>)<CR>
 
 " Load a package.lisp in same dir
-nnoremap <buffer> <LocalLeader>pn :silent T (load #P"<C-r>=expand('%:p:h')<CR>/package.lisp") (in-package #:<C-r>=expand('%:t:r')<CR>) (use-package :ghost)<CR>
+nnoremap <buffer> <LocalLeader>pn :silent T (load #P"<C-r>=expand('%:p:h')<CR>/package.lisp")<CR>
 
 " Used packages
 nnoremap <silent> <buffer> <LocalLeader>pU :T (package-use-list *package*)<CR>
