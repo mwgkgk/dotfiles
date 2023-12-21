@@ -8,6 +8,8 @@ setlocal iskeyword+=&,.
 setlocal lispwords+=ctypecase,defsystem,with-client-socket,test,block
 " alexandria
 setlocal lispwords+=when-let,if-let
+" ltk
+setlocal lispwords+=with-ltk
 " My things
 setlocal lispwords+=defproduct
 
