@@ -62,8 +62,8 @@ nnoremap <buffer> <C-g>t :T (type-of <C-r><C-w>)<CR>
 
 nnoremap <buffer> <C-g>gd :T (disassemble '<C-r><C-w>)<CR>
 
-nnoremap <buffer> <C-g>d :silent T (apropos "<C-r><C-w>")<CR>
-nnoremap <buffer> <C-g>a :T (apropos "")<Left><Left>
+nnoremap <buffer> <C-g>d :silent T (apropos '<C-r><C-w>)<CR>
+nnoremap <buffer> <C-g>a :T (apropos ')<Left>
 
 nnoremap <buffer> <C-g>c :T (ghost:shell "")<Left><Left>
 
