@@ -1147,6 +1147,7 @@ Plug 'github/copilot.vim' " {{{
 
 let g:copilot_filetypes = {
             \   'mj': v:false,
+            \   'jiv': v:false,
             \ }
 let g:copilot_no_tab_map = v:true
 
@@ -1250,6 +1251,7 @@ Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 " Factor
 Plug '~/.ghq/github.com/factor/factor/misc/vim/' " {{{
 
+let g:FactorRoot = expand('~/.ghq/github.com/factor/factor')
 let g:factor_syn_no_rainbow = 1
 
 " }}}
