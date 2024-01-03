@@ -13,6 +13,13 @@ nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
 " Macroexpand call under cursor
 nnoremap <silent> <buffer> <C-x>X :silent T (macroexpand-1 '(<C-r><C-w>))<CR>
 
+" Re-send memorized form
+nnoremap <silent> <buffer> <C-x><C-g> :silent T (ghost:resend-memorized-form)<CR>
+" This is just print
+nnoremap <silent> <buffer> <C-x>g :silent T (ghost:memorized-form)<CR>
+" Instead of CLEAN-MEMORIZED-FORM, just memorize a nil
+nnoremap <silent> <buffer> <C-x>G :silent T (ghost:memorize-last-sent-form)<CR>
+
 " Unintern symbol under cursor
 nnoremap <silent> <buffer> <C-x>U :silent T (unintern '<C-r><C-w>)<CR>
 " Also mind: (f)makunbound, delete-package, make-instances-obsolete, and
