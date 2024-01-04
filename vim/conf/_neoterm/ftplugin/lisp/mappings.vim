@@ -107,8 +107,9 @@ nnoremap <silent> <buffer> <C-c><C-q> :T (ql:quickload '(#:<C-r><C-w>))<CR>
 " ||
 
 " ghost-cl. Fully qualified because in-package
-nnoremap <buffer> <C-c>a :T (ghost:deffallback <C-r><C-w> )<Left>
-nnoremap <buffer> <LocalLeader>fa :T (ghost:deffallback <C-r><C-w> )<Left>
+nnoremap <buffer> <C-c>a y%:T (ghost:deffallback-pair-or-list <C-r>")<CR>
+nnoremap <buffer> <LocalLeader>fa :T (ghost:deffallback-pair-or-list <C-r><C-w>)<CR>
+nnoremap <buffer> <LocalLeader>fA :T (ghost:deffallback <C-r><C-w> )<Left>
 nnoremap <silent> <buffer> <LocalLeader>fl :T ghost:fallback-list<CR>
 nnoremap <silent> <buffer> <LocalLeader>fc :T (ghost:clear-fallback-list)<CR>
 nnoremap <silent> <buffer> <LocalLeader>fu :T (ghost:delete-fallback '<C-r><C-w>)<CR>
