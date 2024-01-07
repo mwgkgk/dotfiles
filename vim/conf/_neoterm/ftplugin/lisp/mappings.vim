@@ -10,8 +10,10 @@ nmap <silent> <buffer> X <Plug>(neoterm-repl-send)af
 nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
 " Send atom under cursor
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
-" Macroexpand call under cursor
+" Macroexpand+call under cursor (for no argument macros)
 nnoremap <silent> <buffer> <C-x>X :silent T (macroexpand-1 '(<C-r><C-w>))<CR>
+" Macroexpand under cursor
+nnoremap <silent> <buffer> <C-x>m y%:T (macroexpand-1 '<C-r>")<CR>
 
 " Re-send memorized form
 nnoremap <silent> <buffer> <C-x><C-g> :silent T (ghost:resend-memorized-form)<CR>
