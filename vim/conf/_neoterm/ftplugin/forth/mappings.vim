@@ -60,6 +60,10 @@ inoremap <silent> <buffer> <C-q><C-q> <Esc>:T <C-r><C-a><CR>a
 nnoremap <silent> <buffer> <C-q><C-q> :T <C-r><C-a><CR>
 nnoremap <silent> <buffer> qq :T <C-r><C-a><CR>
 
+" Lisp compat
+nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-a> .<CR>
+nnoremap <silent> <buffer> <C-x><C-x> :silent T <C-r><C-a> .<CR>
+
 " C-q C-w to send from the beginning of the line til cursor
 inoremap <silent> <buffer> <C-q><C-w> <Esc>v0y:T <C-r>"<CR>gi
 nnoremap <silent> <buffer> <C-q><C-w> v0y:T <C-r>"<CR>
