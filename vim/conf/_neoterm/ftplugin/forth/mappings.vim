@@ -13,8 +13,8 @@ nnoremap <silent> <buffer> <LocalLeader>[b :T bf<CR>
 nnoremap <silent> <buffer> <LocalLeader>[[ :T rungf <C-r>=expand('%:p')<CR><CR>
 
 " Include current file
-nnoremap <silent> <buffer> <LocalLeader>i :T include <C-r>=expand("%")<CR><CR>
-nnoremap <silent> <buffer> <LocalLeader>I :T include <C-r>=expand("%:p")<CR><CR>
+nnoremap <silent> <buffer> <LocalLeader>l :T include <C-r>=expand("%")<CR><CR>
+nnoremap <silent> <buffer> <LocalLeader>L :T include <C-r>=expand("%:p")<CR><CR>
 
 " Reload RC
 nnoremap <silent> <buffer> <LocalLeader>[r :T load-rc<CR>
