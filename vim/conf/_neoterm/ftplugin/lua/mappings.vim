@@ -1,14 +1,20 @@
 if !has('nvim')
     " ||
+    " || Run file
+    " ||
+
+    nnoremap <buffer> <silent> <Leader>r :T lua <C-r>=expand("%")<CR><CR>
+
+    " ||
     " || REPL control
     " ||
 
     " Run repl
-    nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T lua<CR>
+    nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :silent T lua<CR>
 
 
     " Source current file
-    nnoremap <buffer> <silent> <Leader>r :T loadfile(<C-r>=expand("%")<CR>)<CR>
+    nnoremap <buffer> <silent> <LocalLeader>l :T loadfile(<C-r>=expand("%")<CR>)<CR>
 
     " ||
     " || Send
