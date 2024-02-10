@@ -8,6 +8,16 @@ ${0}
 endsnippet
 
 # ||
+# || Comment
+# ||
+
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+--[[ `!v system('date-jiv | tr -d "\n"')`
+${VISUAL}$0
+]]--
+endsnippet
+
+# ||
 # || Header
 # ||
 
