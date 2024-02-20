@@ -41,7 +41,7 @@ hi MatchParen   ctermfg=48 ctermbg=192 cterm=bold
 hi ModeMsg      ctermfg=47 ctermbg=none cterm=none
 hi MoreMsg      ctermfg=47 ctermbg=none cterm=bold
 hi NonText      ctermfg=237 ctermbg=none cterm=none
-hi Normal       ctermfg=84 ctermbg=234 cterm=none
+hi Normal       ctermfg=84 ctermbg=233 cterm=none
 hi Pmenu        ctermfg=47 ctermbg=none cterm=none
 hi PmenuSbar    ctermfg=47 ctermbg=192 cterm=none
 hi PmenuSel     ctermfg=48 ctermbg=192 cterm=none
