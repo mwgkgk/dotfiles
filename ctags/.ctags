@@ -2,9 +2,9 @@
 
 --langmap=Scheme:.scm.ss
 
---langdef=forth
---map-forth=+.fth
---map-forth=+.ftb
---map-forth=+.fs
---kinddef-forth=d,definition,definitions
---regex-forth=/^\s*:\s+([^ ]+)/\1/d/
+# --langdef=forth
+# --map-forth=+.fth
+# --map-forth=+.ftb
+# --map-forth=+.fs
+# --kinddef-forth=d,definition,definitions
+# --regex-forth=/^\s*:\s+([^ ]+)/\1/d/
