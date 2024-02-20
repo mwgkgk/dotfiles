@@ -1378,9 +1378,6 @@ Plug 'lambdatoast/elm.vim', { 'for' : 'elm' }
 " Elixir
 Plug 'elixir-editors/vim-elixir'
 
-Plug '~/.vim/conf/_alchemist.vim/', { 'for' : 'elixir' }
-Plug 'slashmili/alchemist.vim', { 'for' : 'elixir' }
-
 Plug 'mwgkgk/vim-textobj-elixir', { 'for' : 'elixir' }
 
 "Haxe
