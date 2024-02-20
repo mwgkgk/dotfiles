@@ -3,7 +3,7 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T iex<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T iex -S mix<CR>
 
 " Tests
 nnoremap <buffer> <silent> <Leader>f :T mix test<CR>
