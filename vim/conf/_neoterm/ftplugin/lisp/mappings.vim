@@ -42,6 +42,9 @@ nnoremap <silent> <buffer> <LocalLeader>L :silent T (load #P"<C-r>=expand('%:p')
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 
+" Send executable script
+nnoremap <silent> <buffer> <Leader>S :T ./<C-r>=expand('%')<CR><CR>
+
 " ||
 " || Docs
 " ||
