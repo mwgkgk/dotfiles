@@ -2,7 +2,7 @@
 # || Path & umask
 # ||
 
-set -x PATH ~/bin /usr/local/bin ~/.local/bin ~/.cargo/bin ~/.node_modules/bin ~/go/bin ~/buns ~/.nimble/bin ~/.gem/ruby/3.0.0/bin ~/pkg/sbin ~/pkg/bin $PATH
+set -x PATH ~/bin /usr/local/bin ~/.local/bin ~/.cargo/bin ~/.node_modules/bin ~/go/bin ~/buns ~/.nimble/bin ~/.gem/ruby/3.0.0/bin ~/.rvm/bin ~/pkg/sbin ~/pkg/bin $PATH
 
 umask 0007
 
@@ -97,4 +97,10 @@ eval (perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH $HOME/.ghcup/bin # ghcup-env
 
 # Ruby
-status --is-interactive; and rbenv init - fish | source
+# rvm default
+
+# fcitx5 (input method)
+
+set -x GTK_IM_MODULE "fcitx"
+set -x QT_IM_MODULE "fcitx"
+set -x XMODIFIERS "@im=fcitx"
