@@ -61,7 +61,9 @@ hi Todo            ctermfg=000 ctermbg=002 cterm=none
 hi Type            ctermfg=046 ctermbg=none cterm=none
 hi Underlined      ctermfg=002 ctermbg=none cterm=underline
 hi VertSplit       ctermfg=233 ctermbg=233 cterm=none
-hi Visual          ctermbg=none cterm=reverse
+" Used to be: ctermbg=none cterm=reverse
+" Something happened
+hi Visual          ctermbg=046 cterm=underline
 hi VisualNOS       ctermbg=022 cterm=reverse
 hi WarningMsg      ctermfg=010 ctermbg=none cterm=none
 hi WildMenu        ctermfg=000 ctermbg=010 cterm=reverse
