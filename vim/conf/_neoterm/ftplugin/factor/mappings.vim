@@ -117,6 +117,7 @@ nnoremap <buffer> <C-g>f :T [ <C-r><C-l> ] infer.<CR>
 
 " Drop
 nnoremap <buffer> <LocalLeader>d :T drop<CR>
+nnoremap <buffer> <LocalLeader>td :T 2drop<CR>
 
 " Dot
 nnoremap <buffer> <LocalLeader>. :T [ . ] without-limits<CR>
@@ -140,7 +141,7 @@ nnoremap <buffer> <LocalLeader>u :T USE: <C-r>=expand('%:t:r')<CR><CR>
 
 " Test
 " TODO %s the -tests$ away
-nnoremap <buffer> <LocalLeader>t :T "<C-r>=expand('%:t:r')<CR>" test<CR>
+nnoremap <buffer> <LocalLeader>f :T "<C-r>=expand('%:t:r')<CR>" test<CR>
 
 " ||
 " || Ctags
