@@ -63,6 +63,21 @@ snippet /^(T|#t)$/ "TODO" rb
 endsnippet
 
 # ||
+# || Basement
+# ||
+
+# If line above is empty, basement:
+snippet /^$/ "basement-implicit" "re.match('^$', snip.buffer[snip.line-1])" re
+if false do # `!v system('date-jiv | tr -d "\n"')`
+	${VISUAL}${0:`!p
+
+if not snip.v.text:
+	snip.rv = "nil"
+`}
+end
+endsnippet
+
+# ||
 # || Control flow
 # ||
 
