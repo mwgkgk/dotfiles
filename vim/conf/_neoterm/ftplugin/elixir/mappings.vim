@@ -5,6 +5,9 @@
 " Run repl
 nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T iex -S mix<CR>
 
+" Run script
+nnoremap <silent> <buffer> <Leader>r :T elixir <C-r>=expand('%')<CR><CR>
+
 " Tests
 nnoremap <buffer> <silent> <Leader>f :T mix test<CR>
 
