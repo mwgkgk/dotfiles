@@ -82,7 +82,7 @@ super + equal
 	forgepriest
 
 super + o
-	firefox-ulm
+	firefox-super-o
 
 super + backslash
 	girl
@@ -99,8 +99,8 @@ super + comma
 # control + Delete
 # 	xdotool key Caps_Lock
 
-# control + semicolon
-# 	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
+control + semicolon
+	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
 
 super + space
 	march
