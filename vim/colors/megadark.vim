@@ -35,7 +35,7 @@ hi SpecialKey ctermfg=238
 hi ColorColumn ctermbg=233 ctermfg=none cterm=none
 hi CursorColumn ctermbg=233 ctermfg=none cterm=none
 hi CursorLine ctermbg=233 ctermfg=none cterm=none
-hi CursorLineNr ctermfg=246 ctermbg=none cterm=none
+hi CursorLineNr ctermfg=240 ctermbg=none cterm=none
 
 hi LineNr ctermfg=238
 hi SignColumn ctermbg=232
