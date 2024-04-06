@@ -40,7 +40,7 @@ super + c
 	cmums
 
 super + ctrl + c
-	johnconnor cheapshot
+	arrakis cheapshot
 
 super + t
 	temple
@@ -64,7 +64,7 @@ super + 0
 	firefox-default
 
 super + i
-	firefox-mwgkgk
+	firefox-super-i
 
 super + control + i
 	xsetroot -name "$(pipeinput)"
