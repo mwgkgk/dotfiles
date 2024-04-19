@@ -292,7 +292,7 @@ fileview *.docx, docx2txt.pl %f -
 filextype *.pro qtcreator %f &
 
 " Qt projects
-filextype *.aup, *.aup3 audacity %f
+filextype *.aup,*.aup3 audacity %f
 
 " Directories
 filextype */
