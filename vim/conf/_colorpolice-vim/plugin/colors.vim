@@ -125,17 +125,21 @@
 
 " let s:static_colo = 'gruvbox-dark'
 " let s:static_colo = 'miramare'
+" let s:static_colo = 'redwire'
+let s:static_colo = 'zaibatsu'
+
 " let s:static_colo = 'paramount-light'
 " let s:static_colo = 'lunaperche-dark'
 " let s:static_colo = 'paramount-dark'
 
 " let s:static_colo = 'distinguishedmod'
-let s:static_colo = 'freeform'
+" let s:static_colo = 'freeform'
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
 " let s:static_colo = 'donatello'
 " let s:static_colo = 'chernozem'
 " let s:static_colo = 'salmon'
+" let s:static_colo = 'megadark'
 
 
 " let s:static_colo = 'default'
