@@ -107,5 +107,5 @@ set -x XMODIFIERS "@im=fcitx"
 
 # lua
 
-set -x LUA_PATH "$HOME/pre/lua/share/lua/5.4/?.lua;$HOME/pre/share/lua/5.4/?/init.lua;;" $LUA_PATH
-set -x LUA_CPATH "$HOME/pre/lua/lib/lua/5.4/?.so;;" $LUA_CPATH
+set -x LUA_PATH "$HOME/.luarocks/share/lua/5.4/?.lua;$HOME/.luarocks/share/lua/5.4/?/init.lua;$HOME/pre/lua/share/lua/5.4/?.lua;$HOME/pre/share/lua/5.4/?/init.lua;;" $LUA_PATH
+set -x LUA_CPATH "$HOME/.luarocks/lib/lua/5.4/?.so;$HOME/pre/lua/lib/lua/5.4/?.so;;" $LUA_CPATH
