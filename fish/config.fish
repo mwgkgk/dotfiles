@@ -2,7 +2,7 @@
 # || Path & umask
 # ||
 
-set -x PATH ~/bin /usr/local/bin ~/.local/bin ~/.cargo/bin ~/.node_modules/bin ~/go/bin ~/buns ~/.nimble/bin ~/.gem/ruby/3.0.0/bin ~/.rvm/bin ~/pkg/sbin ~/pkg/bin $PATH
+set -x PATH ~/bin /usr/local/bin ~/.local/bin ~/.cargo/bin ~/.node_modules/bin ~/go/bin ~/buns ~/.nimble/bin ~/.gem/ruby/3.0.0/bin ~/.rvm/bin  ~/pre/lua  $PATH
 
 umask 0007
 
@@ -104,3 +104,8 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 set -x GTK_IM_MODULE "fcitx"
 set -x QT_IM_MODULE "fcitx"
 set -x XMODIFIERS "@im=fcitx"
+
+# lua
+
+set -x LUA_PATH "$HOME/pre/lua/share/lua/5.4/?.lua;$HOME/pre/share/lua/5.4/?/init.lua;;" $LUA_PATH
+set -x LUA_CPATH "$HOME/pre/lua/lib/lua/5.4/?.so;;" $LUA_CPATH
