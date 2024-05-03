@@ -113,11 +113,14 @@ Urxvt*.cursorColor2: #DFDFDF
 ! URxvt*.tabbed.tab-bg: #98D53D
 ! URxvt*.tabbed.tab-bg: 5
 
-/* This block gets overridden by monotone schemes
+/* This block gets overridden by monotone schemes */
 URxvt*.color0: #3F3F3F
+URxvt*.color1: #E57952
+URxvt*.color2: #267952
+URxvt*.color4: #3465A4
+URxvt*.color5: #CC44DE
 URxvt*.color9: #98D53D
-URxvt*.color12: #8775E8
-URxvt*.color4:  #3465A4
+URxvt*.color12: #3A7BDE
 URxvt*.tabbed.tab-bg: 9
 
 /* URxvt.keysym.Meta-F1: perl:tabbedex:prev_tab */
