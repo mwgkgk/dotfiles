@@ -23,6 +23,10 @@ if !has('nvim')
     nnoremap <silent> <buffer> X :TREPLSendLine<CR>
     vnoremap <silent> <buffer> X :TREPLSendSelection<CR>
 
+    " Send atom
+    nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-a><CR>
+    nnoremap <silent> <buffer> <C-x><C-x> :silent T <C-r><C-a><CR>
+
     " TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
     " nnoremap <Space>X :TREPLSendFile<CR>
 
