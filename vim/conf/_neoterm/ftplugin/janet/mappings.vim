@@ -18,6 +18,7 @@ nnoremap <silent> <buffer> <C-x><C-x> :silent T (<C-r><C-w>)<CR>
 nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
 
 nnoremap <buffer> <LocalLeader>X :TREPLSendLine<CR>
+nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 
