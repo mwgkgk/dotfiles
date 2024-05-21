@@ -8,3 +8,17 @@
 # --map-forth=+.fs
 # --kinddef-forth=d,definition,definitions
 # --regex-forth=/^\s*:\s+([^ ]+)/\1/d/
+
+--langdef=Janet
+--langmap=Janet:.janet
+--regex-janet=/^\([ \t]*def[ \t]+([^0-9:#][^ \t\[{(]+)/\1/D,def/
+--regex-janet=/^\([ \t]*def-[ \t]+([^0-9:#][^ \t\[{(]+)/\1/d,privatedef/
+--regex-janet=/^\([ \t]*defglobal[ \t]+([^0-9:#][^ \t\[{(]+)/\1/g,defglobal/
+--regex-janet=/^\([ \t]*defmacro[ \t]+([^0-9:#][^ \t\[{(]+)/\1/M,macro/
+--regex-janet=/^\([ \t]*defmacro-[ \t]+([^0-9:#][^ \t\[{(]+)/\1/m,privatemacro/
+--regex-janet=/^\([ \t]*defn[ \t]+([^0-9:#][^ \t\[{(]+)/\1/N,function/
+--regex-janet=/^\([ \t]*defn-[ \t]+([^0-9:#][^ \t\[{(]+)/\1/n,privatefunction/
+--regex-janet=/^\([ \t]*var[ \t]+([^0-9:#][^ \t\[{(]+)/\1/V,var/
+--regex-janet=/^\([ \t]*var-[ \t]+([^0-9:#][^ \t\[{(]+)/\1/v,privatevar/
+--regex-janet=/^\([ \t]*varfn[ \t]+([^0-9:#][^ \t\[{(]+)/\1/R,varfun/
+--regex-janet=/^\([ \t]*varglobal[ \t]+([^0-9:#][^ \t\[{(]+)/\1/G,varglobal/
