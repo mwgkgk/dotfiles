@@ -72,10 +72,14 @@
   ((compiled-file #P"~/.cache/local/common-lisp/ccl/asdf.lx64fsl"))
   (progn
     (ensure-directories-exist (directory-namestring compiled-file))
-    (if (not (probe-file compiled-file))
-      (compile-file #P"~/asdf.lisp"
-                    :output-file compiled-file))
-    (load compiled-file)))
+    (handler-case
+      (load compiled-file)
+      (error (e)
+             (format t "Error: ~A~%Compiling..~%" e)
+             (ignore-errors (delete-file compiled-file))
+             (compile-file #P"~/asdf.lisp"
+                    :output-file compiled-file)
+             (load compiled-file)))))
 
 #+nil
 (quote
