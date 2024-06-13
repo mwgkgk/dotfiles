@@ -207,6 +207,14 @@ super + grave
 super + control + grave
 	punt-all
 
+# Volume
+
+super + Up
+	amixer set Master 5%+
+
+super + Down
+	amixer set Master 5%-
+
 # Maus
 
 super + h
