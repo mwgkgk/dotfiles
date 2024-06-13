@@ -30,8 +30,8 @@ super + F8
 super + F9
 	girl upd
 
-super + F12
-	march Vim ~/dot/sxhkd/sxhkdrc
+# super + F12
+# 	march Vim ~/dot/sxhkd/sxhkdrc
 
 super + f
 	smuggler
