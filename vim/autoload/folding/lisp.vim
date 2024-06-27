@@ -8,12 +8,25 @@
 function! folding#lisp#get_fold_level(lnum)
     let l:current_line_contents = getline(a:lnum)
 
+    if l:current_line_contents =~? '{{{$'
+        let b:in_marker_fold = v:true
+        return '>2'
+    endif
+
+    if l:current_line_contents =~? '}}}$'
+        let b:in_marker_fold = v:false
+        return '<2'
+    endif
+
     if empty(l:current_line_contents)
         let l:next_line_number = folding#next_non_blank_line_num(a:lnum)
 
         " We're short circuiting the -1 check for the sake of hot path.
         " getline() is safe to use on non-existent lines and returns ''.
         if getline(l:next_line_number) =~? '^\S' || l:next_line_number == -1
+            if b:in_marker_fold
+                return '2'
+            endif
             return '0'
         end
 
@@ -31,7 +44,10 @@ function! folding#lisp#get_fold_level(lnum)
             return '1'
         endif
 
-        return '>0'
+        if b:in_marker_fold
+            return '2'
+        endif
+        return '0'
     endif
 
     return '='
