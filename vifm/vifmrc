@@ -57,7 +57,7 @@ set noiec
 
 " Selected color scheme
 
-colorscheme matrix
+colorscheme Black
 
 " The FUSE_HOME directory will be used as a root dir for all FUSE mounts.
 " Unless it exists with write/exec permissions set, vifm will attempt to
@@ -130,6 +130,7 @@ command unrar unrar x %f
 command tar tar -czf %f.tar.gz %f
 command untar tar -xzf %f
 command untgz tar -xzf %f
+command untargz tar -xzf %f
 command untarxz tar -xf %f
 command unbz tar -xjf %f
 command unxz tar -xvJf %f
