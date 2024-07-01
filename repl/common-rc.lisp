@@ -22,7 +22,7 @@
 (ql:quickload '(#:ghost) :silent t)
 ; (use-package :ghost-artifacts)
 
-(ql:quickload '(#:ghost/spellbook) :silent t)
+; (ql:quickload '(#:ghost/spellbook) :silent t)
 
 ;;; *
 ;;; * Greeting
