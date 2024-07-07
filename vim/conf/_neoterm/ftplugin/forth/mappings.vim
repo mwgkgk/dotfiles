@@ -5,7 +5,7 @@ scriptencoding utf-8
 " ||
 
 " Run repl
-nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T gf<CR>
+nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T pf<CR>
 nnoremap <silent> <buffer> <LocalLeader>[g :T gf<CR>
 nnoremap <silent> <buffer> <LocalLeader>[p :T pf<CR>
 nnoremap <silent> <buffer> <LocalLeader>[b :T bf<CR>
