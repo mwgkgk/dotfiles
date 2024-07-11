@@ -121,6 +121,8 @@ nnoremap <buffer> <LocalLeader>td :T 2drop<CR>
 
 " Dot
 nnoremap <buffer> <LocalLeader>. :T [ . ] without-limits<CR>
+" Sneak peek the first element
+nnoremap <buffer> <LocalLeader>, :T nl dup first .<CR>
 
 " Nip
 nnoremap <buffer> <LocalLeader>n :T nip<CR>
