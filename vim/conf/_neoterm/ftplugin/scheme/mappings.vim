@@ -3,12 +3,13 @@
 " ||
 
 nnoremap <silent> <buffer> <LocalLeader>r :T bigloo-run <C-r>=expand('%')<CR><CR>
+nnoremap <silent> <buffer> <Leader>r :T chez-current --script <C-r>=expand('%')<CR><CR>
 
 " ||
 " || Opening a repl
 " ||
 
-nnoremap <buffer> <LocalLeader><LocalLeader> :T chez<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :T chez-current<CR>
 nnoremap <buffer> <LocalLeader>[cy :T icyc<CR>
 nnoremap <buffer> <LocalLeader>[ch :T chez<CR>
 nnoremap <buffer> <LocalLeader>[gu :T guile<CR>
