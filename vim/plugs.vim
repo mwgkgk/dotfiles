@@ -1143,28 +1143,28 @@ endif
 " || AI
 " ||
 
-Plug 'github/copilot.vim' " {{{
+" Plug 'github/copilot.vim' " {{{
 
-let g:copilot_filetypes = {
-            \   'mj': v:false,
-            \   'jiv': v:false,
-            \ }
-let g:copilot_no_tab_map = v:true
+" let g:copilot_filetypes = {
+"             \   'mj': v:false,
+"             \   'jiv': v:false,
+"             \ }
+" let g:copilot_no_tab_map = v:true
 
-function! ToggleCopilot()
-    if(exists('b:copilot_enabled') && b:copilot_enabled)
-        let b:copilot_enabled = 0
-    else
-        let b:copilot_enabled = 1
-    endif
-    echo 'Copilot is ' . (b:copilot_enabled ? 'enabled' : 'disabled')
-endfunction
+" function! ToggleCopilot()
+"     if(exists('b:copilot_enabled') && b:copilot_enabled)
+"         let b:copilot_enabled = 0
+"     else
+"         let b:copilot_enabled = 1
+"     endif
+"     echo 'Copilot is ' . (b:copilot_enabled ? 'enabled' : 'disabled')
+" endfunction
 
-imap <silent><script><expr> <M-l> copilot#Accept("\<CR>")
-imap <M-h> <C-o>:call ToggleCopilot()<CR>
-nnoremap <M-h> :call ToggleCopilot()<CR>
+" imap <silent><script><expr> <M-l> copilot#Accept("\<CR>")
+" imap <M-h> <C-o>:call ToggleCopilot()<CR>
+" nnoremap <M-h> :call ToggleCopilot()<CR>
 
-" }}}
+" " }}}
 
 " ||
 " || Writing
