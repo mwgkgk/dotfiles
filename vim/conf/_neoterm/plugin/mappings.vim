@@ -128,4 +128,4 @@ nnoremap <C-x><C-c> :TcloseAll! <Bar> :qa<CR>
 " ||
 
 nnoremap <Leader>gj :T good job<CR>
-nnoremap <Leader>gk :T git kick<CR>
+nnoremap <Leader>gk :T good luck<CR>
