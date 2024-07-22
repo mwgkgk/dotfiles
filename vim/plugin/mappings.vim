@@ -252,8 +252,11 @@ nnoremap zd zb9<C-E>9<C-E>
 " C-f as a reading scroll:
 nnoremap <C-f> 6<C-e>6j
 
-" C-e as C-u:
-nnoremap <C-e> <C-u>
+" Scroll up on left hand (used to be <C-e>)
+nnoremap <C-g><C-d> <C-u>
+
+" Mirror shell behavior with <C-e>
+nnoremap <C-e> A
 
 " Replacements for H, M, L:
 nnoremap ,h H

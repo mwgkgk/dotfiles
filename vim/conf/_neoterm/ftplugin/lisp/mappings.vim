@@ -62,11 +62,11 @@ nnoremap <buffer> <LocalLeader>gg :silent T (ghost:shell "git push")<CR>
 
 nnoremap <buffer> <C-g>wd :silent T (uiop/os:getcwd)<CR>
 
-nnoremap <buffer> <C-g><C-d> :silent T (describe '<C-r><C-w>)<CR>
+nnoremap <buffer> <C-g><C-s> :silent T (describe '<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-f> :silent T (describe #'<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g><C-v> :silent T (describe <C-r><C-w>)<CR>
 
-nnoremap <buffer> <C-g>g<C-d> :silent T (inspect '<C-r><C-w>)<CR>
+nnoremap <buffer> <C-g>g<C-s> :silent T (inspect '<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g>g<C-f> :silent T (inspect #'<C-r><C-w>)<CR>
 nnoremap <buffer> <C-g>g<C-v> :silent T (inspect <C-r><C-w>)<CR>
 
