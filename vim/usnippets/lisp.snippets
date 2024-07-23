@@ -86,6 +86,12 @@ snippet /^\*/ "section-*" r
 ;;; *
 endsnippet
 
+snippet /^=/ "section-boxed" r
+;;; `!p snip.rv = '=' * len(t[1])`
+;;; ${VISUAL}$1
+;;; `!p snip.rv = '=' * len(t[1])`
+endsnippet
+
 snippet /^(T|;t)$/ "TODO" r
 ;;; TODO ${VISUAL}$0
 endsnippet
