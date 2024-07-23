@@ -5,9 +5,9 @@
 " Run repl
 nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :silent T bash<CR>
 
+nnoremap <buffer> <silent> <Leader>r :T sh <C-r>=expand("%")<CR><CR>
 
-" Source current file
-nnoremap <buffer> <silent> <Leader>r :T source <C-r>=expand("%")<CR><CR>
+nnoremap <buffer> <silent> <LocalLeader>r :T source <C-r>=expand("%")<CR><CR>
 
 " ||
 " || Send
