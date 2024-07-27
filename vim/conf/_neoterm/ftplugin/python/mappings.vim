@@ -9,7 +9,8 @@ nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :T python<CR>
 nnoremap <buffer> <silent> <LocalLeader>l :T exec(open('<C-r>=expand("%")<CR>').read())<CR>
 
 " Run current file
-nnoremap <buffer> <silent> <Leader>r :T python <C-r>=expand("%")<CR><CR>
+nnoremap <buffer> <silent> <Leader>r :T ~/pre/python/bin/python <C-r>=expand("%")<CR><CR>
+nnoremap <buffer> <silent> <Leader>R :T python <C-r>=expand("%")<CR><CR>
 
 " ||
 " || Send
