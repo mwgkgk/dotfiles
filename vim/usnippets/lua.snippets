@@ -40,11 +40,15 @@ endsnippet
 # || Function
 # ||
 
-snippet !f(un)?! "New function" br
+priority -1
+
+snippet !f(un)?! "local function" br
 local function ${1:new_function}(${2:args})
    $0
 end
 endsnippet
+
+priority 0
 
 snippet f "lambda" w
 function()
