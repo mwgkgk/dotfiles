@@ -71,19 +71,19 @@ endsnippet
 
 snippet if "if" b
 if $1 then
-	$2
+	${VISUAL}$0
 end
 endsnippet
 
 snippet then "then" i
 then
-	$0
+	${VISUAL}$0
 end
 endsnippet
 
 snippet else "else" i
 else
-	$0
+	${VISUAL}$0
 endsnippet
 
 # ||
@@ -92,19 +92,19 @@ endsnippet
 
 snippet for "pair for loop" b
 for ${1:k},${2:v} in ipairs(${3:table_name}) do
-   $0
+   ${VISUAL}$0
 end
 endsnippet
 
 snippet fori "ipair for foop" b
 for ${1:idx},${2:val} in ipairs(${3:table_name}) do
-   $0
+   ${VISUAL}$0
 end
 endsnippet
 
 snippet forn "numeric for loop" b
 for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
-   $0
+   ${VISUAL}$0
 end
 endsnippet
 
