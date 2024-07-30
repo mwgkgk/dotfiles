@@ -130,6 +130,12 @@ nnoremap <buffer> <LocalLeader>n :T nip<CR>
 " Dup
 nnoremap <buffer> <LocalLeader>D :T dup<CR>
 
+" Swap, rot
+
+nnoremap <silent> <buffer> <LocalLeader>s :T swap<CR>
+nnoremap <silent> <buffer> <LocalLeader>r :T rot<CR>
+nnoremap <silent> <buffer> <LocalLeader>R :T -rot<CR>
+
 " ||
 " || Modules
 " ||
