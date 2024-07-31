@@ -112,8 +112,8 @@ endsnippet
 # || Vars
 # ||
 
-snippet /(l|local)/ "local x = 1" r
-local ${1:x} = ${0:1}
+snippet /(l|local)/ "local x = {}" r
+local ${1:x} = ${0:{}}
 endsnippet
 
 # ||
