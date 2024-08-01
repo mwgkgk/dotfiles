@@ -125,9 +125,6 @@ super + apostrophe
 super + w
 	burrow ~/.burrow/quick-launch
 
-super + g
-	~/.burrow/quick-launch/go/guns
-
 super + Delete
 	burrow ~/.burrow/terminals/
 
@@ -154,7 +151,7 @@ alt + F12
 control + F12
 	run-aloud tmux-kill-detached
 
-# Show clock: Kmonad: Omega ret
+# Show clock:
 super + Return
 	dzen2-clock
 
