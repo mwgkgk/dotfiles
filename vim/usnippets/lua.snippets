@@ -44,6 +44,10 @@ snippet i "require @ beginning of line" b
 local ${1:naughty} = require("$0${2:$1}")
 endsnippet
 
+snippet il "require sub-dir" b
+local ${1:dzen2} = require("$0.$1")
+endsnippet
+
 snippet req "require midline" w
 require("$0")
 endsnippet
