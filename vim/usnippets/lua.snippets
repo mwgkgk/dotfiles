@@ -53,6 +53,28 @@ require("$0")
 endsnippet
 
 # ||
+# || Modules
+# ||
+
+snippet mod "mod" b
+local ${1:`!p snip.rv = snip.basename`} = {}
+
+${VISUAL}$0
+
+return $1
+endsnippet
+
+snippet dm "date mod" b
+-- `date-utc`
+
+local `!p snip.rv = snip.basename` = {}
+
+${VISUAL}$0
+
+return `!p snip.rv = snip.basename`
+endsnippet
+
+# ||
 # || Function
 # ||
 
