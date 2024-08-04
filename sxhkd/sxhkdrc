@@ -48,8 +48,8 @@ super + t
 # super + period
 # 	goldenboy
 
-super + m
-	goldenboy
+# super + m
+# 	goldenboy
 
 super + shift + i
 	fox
