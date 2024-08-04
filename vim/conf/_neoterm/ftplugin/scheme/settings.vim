@@ -13,3 +13,5 @@
 " elseif executable('guile')
 "     call neoterm#repl#set('guile')
 " endif
+
+call neoterm#repl#set('')

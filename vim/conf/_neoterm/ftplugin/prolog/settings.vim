@@ -3,3 +3,6 @@
 " if executable('swipl')
 "   call neoterm#repl#set('swipl')
 " endif
+
+" We now use '' as standard behavior across all types
+call neoterm#repl#set('')

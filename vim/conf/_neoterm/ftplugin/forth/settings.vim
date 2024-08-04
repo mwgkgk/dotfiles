@@ -4,3 +4,6 @@
 " if executable('gf')
 "   call neoterm#repl#set('gf')
 " endif
+
+" Heh now we just use '' as standard behavior for all types so nvm
+call neoterm#repl#set('')
