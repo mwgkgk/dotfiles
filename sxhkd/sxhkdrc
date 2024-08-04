@@ -214,17 +214,17 @@ super + Down
 
 # Maus
 
-super + h
-	xdotool mousemove --sync 400 560
+# super + h
+# 	xdotool mousemove --sync 400 560
 
-super + l
-	xdotool mousemove --sync 1690 480
+# super + l
+# 	xdotool mousemove --sync 1690 480
 
-super + k
-	xdotool mousemove --sync 1030 50
+# super + k
+# 	xdotool mousemove --sync 1030 50
 
-super + j
-	xdotool mousemove --sync 630 1020
+# super + j
+# 	xdotool mousemove --sync 630 1020
 
 # super + control + k
 # 	xdotool mousemove_relative --sync 0 -300
