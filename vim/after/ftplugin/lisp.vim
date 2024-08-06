@@ -12,6 +12,8 @@ setlocal lispwords+=when-let,if-let
 setlocal lispwords+=with-ltk
 " trivia
 setlocal lispwords+=match
+" cffi
+setlocal lispwords+=define-foreign-library,defcfun,defctype
 " My things
 setlocal lispwords+=defproduct
 
