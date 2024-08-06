@@ -10,6 +10,8 @@ setlocal lispwords+=ctypecase,defsystem,with-client-socket,test,block
 setlocal lispwords+=when-let,if-let
 " ltk
 setlocal lispwords+=with-ltk
+" trivia
+setlocal lispwords+=match
 " My things
 setlocal lispwords+=defproduct
 
