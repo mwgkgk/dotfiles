@@ -195,14 +195,14 @@ super + minus
 # 	punt
 # -- aka gas
 
-# super + semicolon
-# 	punt
+super + semicolon
+	punt
 
-# super + grave
-# 	punt
+super + grave
+	punt
 
-# super + control + grave
-# 	punt-all
+super + control + grave
+	punt-all
 
 # Volume
 
