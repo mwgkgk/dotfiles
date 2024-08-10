@@ -82,8 +82,14 @@ endsnippet
 # || Function
 # ||
 
-snippet !f(un)?! "local function" br
+snippet lf "Tab_trigger" w
 local function ${1:new_function}(${2:args})
+   ${VISUAL}$0
+end
+endsnippet
+
+snippet f "function" w
+function `!p snip.rv = snip.basename`.${1:new_function}(${2:args})
    ${VISUAL}$0
 end
 endsnippet
@@ -97,6 +103,7 @@ end
 endsnippet
 
 priority 0
+
 # ||
 # || Scope
 # ||
