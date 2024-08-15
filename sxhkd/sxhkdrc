@@ -164,11 +164,11 @@ super + Return
 
 # Firefox shadowstep tricks
 
-control + ~c
-	browser-doubleyank
+# control + ~c
+# 	browser-doubleyank
 
-alt + ~c
-	browser-unbookmark
+# alt + ~c
+# 	browser-unbookmark
 
 # Thunderbird
 
