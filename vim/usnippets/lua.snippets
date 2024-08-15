@@ -197,6 +197,30 @@ gears.timer {
 }
 endsnippet
 
+snippet ctrl "Control_L" w
+root.fake_input("key_press", "Control_L")
+${VISUAL}$0
+root.fake_input("key_release", "Control_L")
+endsnippet
+
+snippet alt "alt" w
+root.fake_input("key_press", "Alt_L")
+${VISUAL}$0
+root.fake_input("key_release", "Alt_L")
+endsnippet
+
+snippet shift "shift" w
+root.fake_input("key_press", "Shift_L")
+${VISUAL}$0
+root.fake_input("key_release", "Shift_L")
+endsnippet
+
+snippet super "super" w
+root.fake_input("key_press", "Super_L")
+${VISUAL}$0
+root.fake_input("key_release", "Super_L")
+endsnippet
+
 # ||
 # || Print
 # ||
