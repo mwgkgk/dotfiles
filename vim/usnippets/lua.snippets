@@ -186,6 +186,17 @@ root.fake_input("key_press", "$1")
 root.fake_input("key_release", "$1")
 endsnippet
 
+snippet delay "delay" w
+gears.timer {
+	timeout = 0.15,
+	autostart = true,
+	single_shot = true,
+	callback = function()
+		${VISUAL}$0
+	end
+}
+endsnippet
+
 # ||
 # || Print
 # ||
