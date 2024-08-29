@@ -101,9 +101,8 @@ endsnippet
 # ||
 
 snippet "(\()?\blet" "let" wr
-(let
-	(($1 ${3:(${2:${VISUAL}})})$4)
-	${5:$1}`!p
+(let (($1))
+	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
