@@ -1202,6 +1202,9 @@ Plug 'HiPhish/info.vim'
 " Org
 Plug 'jceb/vim-orgmode'
 
+" C++
+Plug 'bfrg/vim-cpp-modern', { 'for' : 'cpp' }
+
 " Golang
 " Plug '~/.vim/conf/_vim-go/'
 " Plug 'fatih/vim-go', { 'for' : 'go' }
