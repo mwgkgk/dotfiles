@@ -1252,7 +1252,7 @@ Plug 'stewy33/mercury-vim'
 Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 
 " Factor
-Plug '~/.ghq/github.com/factor/factor/misc/vim/' " {{{
+Plug '~/.ghq/github.com/factor/factor/misc/vim/', { 'for' : 'factor' } " {{{
 
 let g:FactorRoot = expand('~/.ghq/github.com/factor/factor')
 let g:factor_syn_no_rainbow = 1
@@ -1361,10 +1361,10 @@ let g:racer_experimental_completer = 1
 Plug 'vmchale/ion-vim', { 'for' : 'ion' }
 
 " Zig
-Plug 'ziglang/zig.vim', { 'for' : 'zig' } " {{{
-" let g:zig_fmt_autosave = 1
-" let g:zig_fmt_command = ['zig2', 'fmt', '--color', 'off']
-" }}}
+" Plug 'ziglang/zig.vim', { 'for' : 'zig' } " {{{
+" " let g:zig_fmt_autosave = 1
+" " let g:zig_fmt_command = ['zig2', 'fmt', '--color', 'off']
+" " }}}
 
 " JS
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
