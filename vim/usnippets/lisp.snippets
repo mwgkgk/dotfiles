@@ -1251,6 +1251,12 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bskip" "skip" rw
+(skip "TODO ${VISUAL}$0"`!p
+if match.group(1) is None:
+	snip.rv = ")"` #+#:skip
+endsnippet
+
 # ||
 # || Datetime
 # ||
