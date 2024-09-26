@@ -153,6 +153,9 @@ nnoremap <silent> <buffer> <LocalLeader>d :T d<CR>
 nnoremap <silent> <buffer> <LocalLeader>v :T v<CR>
 nnoremap <silent> <buffer> <LocalLeader>w :T w<CR>
 
+" Clear screen
+nnoremap <silent> <buffer> <LocalLeader>\ :T (ghost:clear-screen)<Cr>
+
 " ||
 " || ECL
 " ||
