@@ -39,8 +39,8 @@ super + f
 super + c
 	cmums
 
-super + ctrl + c
-	arrakis cheapshot
+# super + ctrl + c
+# 	arrakis cheapshot
 
 super + t
 	temple
