@@ -57,8 +57,8 @@ nnoremap <buffer> <C-g>v :silent T (ghost:shell "<C-r><C-w> --version")<CR>
 nnoremap <buffer> <C-g>up :silent T (ghost:shell "yay -Qi <C-r><C-w>")<CR>
 nnoremap <buffer> <C-g>uu :silent T (ghost:shell "yay -Qu")<CR>
 nnoremap <buffer> <LocalLeader>gs :silent T (ghost:shell "git status")<CR>
-nnoremap <buffer> <LocalLeader>gp :silent T (ghost:shell "gj")<CR>
-nnoremap <buffer> <LocalLeader>gg :silent T (ghost:shell "gl")<CR>
+nnoremap <buffer> <LocalLeader>gp :silent T (ghost:shell "good job")<CR>
+nnoremap <buffer> <LocalLeader>gg :silent T (ghost:shell "good luck")<CR>
 
 nnoremap <buffer> <C-g>wd :silent T (uiop/os:getcwd)<CR>
 
