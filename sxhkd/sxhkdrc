@@ -212,6 +212,9 @@ super + Up
 super + Down
 	amixer set Master 5%-
 
+super + KP_Enter
+	amixer set Master 60%
+
 # Maus
 
 # super + h
