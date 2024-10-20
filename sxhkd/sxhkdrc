@@ -206,14 +206,14 @@ super + minus
 
 # Volume
 
-super + Up
-	amixer set Master 5%+
+# super + Up
+# 	amixer set Master 5%+
 
-super + Down
-	amixer set Master 5%-
+# super + Down
+# 	amixer set Master 5%-
 
-super + KP_Enter
-	amixer set Master 60%
+# super + KP_Enter
+# 	amixer set Master 60%
 
 # Maus
 
