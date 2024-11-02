@@ -376,6 +376,12 @@ snippet dep ":depends-on" w
 :depends-on (#:${2:alexandria})
 endsnippet
 
+snippet "(\()?:?\bfile" "file" rw
+(:file "$0"`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "(\()?\bmain" "main" rw
 (defun main (&optional (args (uiop:command-line-arguments)))
 	${0:nil}
