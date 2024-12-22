@@ -19,7 +19,7 @@
 " let s:static_colo = 'zenburn'
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'haze'
-" let s:static_colo = 'grapes'
+let s:static_colo = 'grapes'
 " let s:static_colo = 'druid'
 " let s:static_colo = 'jellyfish'
 
@@ -46,6 +46,8 @@
 " let s:static_colo = 'nuclear-dark'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'fadedvision-dark'
+" let s:static_colo = 'koehler'
+" let s:static_colo = 'pablo'
 
 " Zinge
 " let s:static_colo = 'calmar256-dark'
@@ -99,6 +101,7 @@
 
 " let s:static_colo = 'seoul256-light'
 " let s:static_colo = 'seoul256-dark'
+" let s:static_colo = 'seoul256-darkest'
 
 " let s:static_colo = 'solarized-light'
 " let s:static_colo = 'gruvbox-light'
@@ -126,7 +129,11 @@
 " let s:static_colo = 'gruvbox-dark'
 " let s:static_colo = 'miramare'
 " let s:static_colo = 'redwire'
-let s:static_colo = 'zaibatsu'
+" let s:static_colo = 'zaibatsu'
+" let s:static_colo = 'sorbet'
+" let s:static_colo = 'retrobox'
+" let s:static_colo = 'retrobox-dark'
+" let s:static_colo = 'carvedwood'
 
 " let s:static_colo = 'paramount-light'
 " let s:static_colo = 'lunaperche-dark'
