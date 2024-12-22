@@ -197,7 +197,8 @@ filetype *.exe wine %f
 filextype *.ps,*.ps.gz gv %c %i &
 
 " Djvu
-filextype *.djvu apvlv %f
+" filextype *.djvu apvlv %f
+filextype *.djvu okular %f
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.ogg,*.m4a,*.bik
