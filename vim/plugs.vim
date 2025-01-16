@@ -1060,6 +1060,7 @@ Plug 'rbong/vim-flog' " {{{
 nnoremap <Leader>gl :Flog -all<CR>
 " Log in file
 nnoremap <Leader>gL :Flog -all -path=<C-R>=expand('%')<CR><CR>
+let g:flog_use_internal_lua = v:true
 " }}}
 
 Plug 'rhysd/git-messenger.vim'
