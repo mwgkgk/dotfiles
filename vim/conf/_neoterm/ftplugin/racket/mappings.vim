@@ -26,6 +26,7 @@ nnoremap <silent> <buffer> <C-x>x :silent T <C-r><C-w><CR>
 nnoremap <buffer> <LocalLeader>X :TREPLSendLine<CR>
 
 nnoremap <buffer> <LocalLeader>l :silent T ,load "<C-r>=expand('%')<CR>"<CR>
+nnoremap <buffer> <LocalLeader><Leader> :silent T (enter! "<C-r>=expand('%')<CR>")<CR>
 
 nmap <buffer> <Leader>x <Plug>(neoterm-repl-send)<Plug>(sexp_outer_top_list)
 
