@@ -95,6 +95,15 @@ endsnippet
 
 priority 0
 
+# Dynamic vars
+
+snippet "(\()?\bpar" "parameterize" rw
+(parameterize ([$1])
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 # ||
 # || Structs
 # ||
