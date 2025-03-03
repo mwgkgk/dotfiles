@@ -42,6 +42,9 @@ nnoremap <silent> <buffer> <Leader>gx :T clearstack<CR><Bar>:T <C-r>=getline('.'
 " TODO Remap! Temp comment out to free-up <Space>x as <C-w>x
 " nnoremap <Space>X :TREPLSendFile<CR>
 
+" Send line with <C-f> at the end of the line
+inoremap <expr> <C-f> col('.')>strlen(getline('.'))?"\<Lt>Esc>:TREPLSendLine\<Lt>CR>A":"\<Lt>Right>"
+
 " C-q and q offer word- and section-based send:
 " In the general case, <C-q> and q both offer neoterm-repl-send motion.
 " C-q works in insert mode.
