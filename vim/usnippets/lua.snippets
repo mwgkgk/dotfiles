@@ -201,6 +201,17 @@ gears.timer {
 }
 endsnippet
 
+snippet timer "timer" w
+gears.timer({
+		timeout = 10,
+		call_now = true,
+		autostart = true,
+		callback = function()
+			${VISUAL}$0
+		end
+	})
+endsnippet
+
 snippet ctrl "Control_L" w
 root.fake_input("key_press", "Control_L")
 ${VISUAL}$0
