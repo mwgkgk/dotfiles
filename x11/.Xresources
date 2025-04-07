@@ -46,9 +46,14 @@ URxvt*.meta8: true
 ! URxvt*.cursorColor: #B7F2D2
 
 ! Lab
-/* URxvt*.foreground: #5FFF87 */
-/* URxvt*.background: #031403 */
-/* URxvt*.cursorColor: #B7F2D2 */
+! URxvt*.foreground: #5FFF87
+! URxvt*.background: #031403
+! URxvt*.cursorColor: #B7F2D2
+
+! Fadedvision
+URxvt*.foreground: #5FFF5F
+URxvt*.background: #080808
+URxvt*.cursorColor: #5FFFAF
 
 ! Science
 /* URxvt*.foreground: #383838 */
@@ -74,10 +79,10 @@ URxvt*.meta8: true
 /* Urxvt*.cursorColor2: #DFDFDF */
 
 ! Net-yellow
-URxvt*.foreground: #DE9144
-URxvt*.background: #0F0F0F
-Urxvt*.cursorColor: #0F0F0F
-Urxvt*.cursorColor2: #DFDFDF
+! URxvt*.foreground: #DE9144
+! URxvt*.background: #0F0F0F
+! Urxvt*.cursorColor: #0F0F0F
+! Urxvt*.cursorColor2: #DFDFDF
 
 ! Chernozem
 /* URxvt*.foreground: #AF5F5F */

@@ -15,6 +15,13 @@ umask 0007
 # set -x fish_color_cwd 7CFFAA
 # set -x fish_command_timer_color 82826E
 
+# Fadedvision
+set -x fish_color_prompt 5FFF5F
+set -x fish_color_cwd 00875F
+set -x fish_command_timer_color 00FF00
+set -x fish_command_timer_success_color 00FF00
+set -x fish_command_timer_fail_color 00FF00
+
 # Science
 # set -x fish_color_prompt 383838
 # set -x fish_color_cwd C4A980
@@ -39,12 +46,12 @@ umask 0007
 # set -x fish_command_timer_fail_color C4C4C4
 
 # Net-yellow
-set -x fish_color_prompt DE9144
-set -x fish_color_cwd E5BD1A
+# set -x fish_color_prompt DE9144
+# set -x fish_color_cwd E5BD1A
 # Keep in mind: these bad boys implicitly use 256 colors:
-set -x fish_command_timer_color 06604B
-set -x fish_command_timer_success_color 06604B
-set -x fish_command_timer_fail_color 06604B
+# set -x fish_command_timer_color 06604B
+# set -x fish_command_timer_success_color 06604B
+# set -x fish_command_timer_fail_color 06604B
 
 # Chernozem
 # set -x fish_color_prompt AF5F5F
@@ -97,7 +104,9 @@ eval (perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH $HOME/.ghcup/bin # ghcup-env
 
 # Ruby
+# slow:
 # rvm default
+set -x PATH ~/.rvm/rubies/ruby-3.4.0-preview1/bin $PATH
 
 # fcitx5 (input method)
 
@@ -109,3 +118,9 @@ set -x XMODIFIERS "@im=fcitx"
 
 set -x LUA_PATH "$HOME/.luarocks/share/lua/5.4/?.lua;$HOME/.luarocks/share/lua/5.4/?/init.lua;$HOME/pre/lua/share/lua/5.4/?.lua;$HOME/pre/share/lua/5.4/?/init.lua;;" $LUA_PATH
 set -x LUA_CPATH "$HOME/.luarocks/lib/lua/5.4/?.so;$HOME/pre/lua/lib/lua/5.4/?.so;;" $LUA_CPATH
+
+# opam configuration
+source "$HOME/.opam/opam-init/init.fish" > /dev/null 2> /dev/null; or true
+
+set -x PYTHONPATH $HOME/pre/python $PYTHONPATH
+
