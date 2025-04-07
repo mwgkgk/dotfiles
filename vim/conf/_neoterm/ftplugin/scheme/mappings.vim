@@ -42,10 +42,10 @@ nnoremap <buffer> <LocalLeader>l :silent T (load "<C-r>=expand('%')<CR>")<CR>
 " ||
 
 " Guile:
-" nnoremap <buffer> <C-g> :silent T ,describe <C-r><C-w><CR>
+nnoremap <buffer> <C-g> :silent T ,describe <C-r><C-w><CR>
 
 " Chez:
 " nnoremap <buffer> <C-g> :silent T (apropos "<C-r><C-w>")<CR>
 
 " Ypsilon:
-nnoremap <buffer> <C-g> :silent T <C-r><C-w><CR>
+" nnoremap <buffer> <C-g> :silent T <C-r><C-w><CR>
