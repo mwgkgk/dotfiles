@@ -2,24 +2,24 @@
 " by Michael jubalh Vetter
 " https://github.com/jubalh/vifm-colors
 
-highlight Win             cterm=none ctermfg=green    ctermbg=black
+highlight Win             cterm=none ctermfg=47    ctermbg=232
 
-highlight TopLine         cterm=none ctermfg=green       ctermbg=none
-highlight TopLineSel      cterm=none ctermfg=green       ctermbg=none
-highlight StatusLine      cterm=none ctermfg=green       ctermbg=none
-highlight Border          cterm=none ctermfg=green       ctermbg=none
+highlight TopLine         cterm=none ctermfg=34       ctermbg=234
+highlight TopLineSel      cterm=none ctermfg=34       ctermbg=234
+highlight StatusLine      cterm=none ctermfg=34       ctermbg=234
+highlight Border          cterm=none ctermfg=34       ctermbg=234
 
-highlight Selected        cterm=bold ctermfg=red    ctermbg=default
-highlight CurrLine        cterm=bold ctermfg=black    ctermbg=green
+highlight Selected        cterm=bold ctermfg=default    ctermbg=37
+highlight CurrLine        cterm=bold ctermfg=default    ctermbg=29
 
-highlight WildMenu        cterm=underline,reverse ctermfg=green ctermbg=black
-highlight CmdLine         cterm=none ctermfg=green ctermbg=black
+highlight WildMenu        cterm=underline,reverse ctermfg=47 ctermbg=black
+highlight CmdLine         cterm=none ctermfg=47 ctermbg=232
 highlight ErrorMsg        cterm=none ctermfg=red ctermbg=black
 
-highlight Directory       cterm=bold ctermfg=green ctermbg=default
+highlight Directory       cterm=bold ctermfg=47 ctermbg=default
 highlight Link            cterm=none ctermfg=yellow ctermbg=default
 highlight BrokenLink      cterm=none ctermfg=red ctermbg=default
 highlight Socket          cterm=none ctermfg=yellow ctermbg=default
 highlight Device          cterm=none ctermfg=yellow ctermbg=default
 highlight Fifo            cterm=none ctermfg=yellow ctermbg=default
-highlight Executable      cterm=none ctermfg=green ctermbg=default
+highlight Executable      cterm=none ctermfg=155 ctermbg=default
