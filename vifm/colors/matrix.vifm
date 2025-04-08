@@ -4,10 +4,10 @@
 
 highlight Win             cterm=none ctermfg=47    ctermbg=232
 
-highlight TopLine         cterm=none ctermfg=34       ctermbg=234
-highlight TopLineSel      cterm=none ctermfg=34       ctermbg=234
-highlight StatusLine      cterm=none ctermfg=34       ctermbg=234
-highlight Border          cterm=none ctermfg=34       ctermbg=234
+highlight TopLine         cterm=none ctermfg=29       ctermbg=234
+highlight TopLineSel      cterm=none ctermfg=29       ctermbg=234
+highlight StatusLine      cterm=none ctermfg=29       ctermbg=234
+highlight Border          cterm=none ctermfg=29       ctermbg=234
 
 highlight Selected        cterm=bold ctermfg=default    ctermbg=37
 highlight CurrLine        cterm=bold ctermfg=default    ctermbg=29
