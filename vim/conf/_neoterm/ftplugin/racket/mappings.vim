@@ -2,7 +2,7 @@
 " || Run
 " ||
 
-nnoremap <silent> <buffer> <LocalLeader>r :T racket <C-r>=expand('%')<CR><CR>
+nnoremap <silent> <buffer> <Leader>r :T racket <C-r>=expand('%')<CR><CR>
 
 " ||
 " || Repl
