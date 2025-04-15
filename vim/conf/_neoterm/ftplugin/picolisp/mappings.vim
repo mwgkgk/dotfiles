@@ -5,6 +5,9 @@
 " Debug mode
 nnoremap <silent> <buffer> <LocalLeader><LocalLeader> :T pil +<CR>
 
+" Send
+nnoremap <silent> <buffer> <Leader>r :T pil <C-r>=expand('%')<CR> -bye<CR>
+
 " ||
 " || Eval
 " ||
