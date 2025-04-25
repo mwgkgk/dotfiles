@@ -148,6 +148,9 @@ snippet ft "ft" w
 ;;; }}}
 endsnippet
 
+# Error is instead of monkey patching asdf
+# cause in-guessed-package links and loads the asdf system
+# thankfully with no restarts dialog
 snippet stop "discard after this point" w
 (eval-when (:compile-toplevel :load-toplevel :execute)
 	(signal 'ghost:discard-after-this-point :package *package*)
