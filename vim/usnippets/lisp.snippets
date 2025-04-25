@@ -148,6 +148,12 @@ snippet ft "ft" w
 ;;; }}}
 endsnippet
 
+snippet stop "discard after this point" w
+(eval-when (:compile-toplevel :load-toplevel :execute)
+	(signal 'ghost:discard-after-this-point :package *package*)
+	(error "stopping here"))
+endsnippet
+
 # ||
 # || Strings
 # ||
