@@ -3,10 +3,13 @@
 " ||
 
 " Run repl
-nnoremap <buffer> <silent> <LocalLeader>r :call _neoterm#open#small('above', '') <Bar> :silent T node<CR>
+nnoremap <buffer> <silent> <LocalLeader><LocalLeader> :silent T node<CR>
+
+" Run file
+nnoremap <buffer> <silent> <Leader>r :silent T node <C-r>=expand("%")<CR><CR>
 
 " Load current file
-nnoremap <buffer> <silent> <Leader>r :T .load <C-r>=expand("%")<CR><CR>
+nnoremap <buffer> <silent> <LocalLeader>l :T .load <C-r>=expand("%")<CR><CR>
 
 " ||
 " || Send
