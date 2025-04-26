@@ -1,4 +1,9 @@
 function! git#popup#status()
+    if has('nvim')
+        lua require('git.popup').status()
+        return
+    endif
+
     if exists('b:git_status_popup')
         " Using win_id2win() never returns anything but 0 for this window, so
         " unfortunately we can't use it to guard against dead windows.
