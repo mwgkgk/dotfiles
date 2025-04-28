@@ -616,7 +616,9 @@ nnoremap <Leader>ep :pwd<CR>
 "
 
 " Toggle paste/nopaste:
-set pastetoggle=<Leader>tp
+if !has('nvim')
+    set pastetoggle=<Leader>tp
+endif
 
 " Toggle scrollbind:
 nnoremap <Leader>tb :windo set scrollbind!<CR>
