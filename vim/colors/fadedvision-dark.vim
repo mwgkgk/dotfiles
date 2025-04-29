@@ -67,7 +67,7 @@ hi Visual          ctermbg=046 cterm=underline
 hi VisualNOS       ctermbg=022 cterm=reverse
 hi WarningMsg      ctermfg=010 ctermbg=none cterm=none
 hi WildMenu        ctermfg=000 ctermbg=010 cterm=reverse
-hi ColorColumn     ctermbg=233
+hi ColorColumn     cterm=none ctermbg=233
 hi SignColumn      ctermbg=232
 
 hi markdownH1 ctermfg=82 cterm=bold
@@ -78,3 +78,7 @@ hi! link markdownH5 markdownH1
 hi! link markdownH6 markdownH1
 
 hi yamlKey cterm=bold
+
+" Nvim fixes
+hi! link Function Identifier
+hi! link String Constant
