@@ -194,8 +194,15 @@ set wrapscan
 "
 " Undo
 "
-
-set undodir=~/.vim/undo
+if has('nvim')
+    set undodir=${XDG_CACHE_HOME}/nvim/undo//
+    set directory=${XDG_CACHE_HOME}/nvim/swap//
+    set backupdir=${XDG_CACHE_HOME}/nvim/backup//
+else
+    set undodir=${XDG_CACHE_HOME}/vim/undo//
+    set directory=${XDG_CACHE_HOME}/vim/swap//
+    set backupdir=${XDG_CACHE_HOME}/vim/backup//
+endif
 set undofile
 
 "
