@@ -82,3 +82,4 @@ hi yamlKey cterm=bold
 " Nvim fixes
 hi! link Function Identifier
 hi! link String Constant
+hi! link WinSeparator VertSplit
