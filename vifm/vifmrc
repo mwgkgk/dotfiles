@@ -142,6 +142,10 @@ command mkdatedir !mkdatedir "%a"
 command mktimedir !mktimedir "%a"
 command FF !firefox-default %f &
 command cdgit :execute 'cd' system('git rev-parse --git-dir')
+command wallfill :!feh --bg-fill %c
+command wallcenter :!feh --bg-center %c
+command walltile :!feh --bg-tile %c
+command wallmax :!feh --bg-max %c
 
 " This conflicts with fish auto-rename on cd
 " command Ren :screen | :execute "!tmux rename-window `fish -c prompt_pwd`/" | :screen
