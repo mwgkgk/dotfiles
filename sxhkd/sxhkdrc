@@ -66,8 +66,8 @@ super + 0
 # super + i
 # 	firefox-super-i
 
-super + control + i
-	xsetroot -name "$(pipeinput)"
+# super + control + i
+# 	xsetroot -name "$(pipeinput)"
 
 super + z
 	spyglass
