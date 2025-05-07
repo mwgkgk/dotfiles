@@ -54,17 +54,17 @@ super + m
 super + shift + i
 	fox
 
-super + u
-	firefox-super-u
+# super + u
+# 	firefox-super-u
 
-super + control + u
-	march v super-u
+# super + control + u
+# 	march v super-u
 
 super + 0
 	firefox-default
 
-super + i
-	firefox-super-i
+# super + i
+# 	firefox-super-i
 
 super + control + i
 	xsetroot -name "$(pipeinput)"
@@ -72,17 +72,17 @@ super + control + i
 super + z
 	spyglass
 
-super + 8
-	firefox-roots
+# super + 8
+# 	firefox-roots
 
-super + 9
-	firefox-super-nine
+# super + 9
+# 	firefox-super-nine
 
 super + equal
 	forgepriest
 
-super + o
-	firefox-super-o
+# super + o
+# 	firefox-super-o
 
 super + backslash
 	girl
