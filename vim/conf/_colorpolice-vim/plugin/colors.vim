@@ -11,6 +11,7 @@
 " let s:static_colo = 'badwolf'
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'fisa'
+let s:static_colo = 'gigafisa' " LOOKS GOOD WITH LISP
 
 " let s:static_colo = 'grind'
 " let s:static_colo = 'murphy_black'
@@ -45,7 +46,7 @@
 " let s:static_colo = 'nuclear'
 " let s:static_colo = 'nuclear-dark'
 " let s:static_colo = 'fadedvision'
-let s:static_colo = 'fadedvision-dark'
+" let s:static_colo = 'fadedvision-dark'
 " let s:static_colo = 'koehler'
 " let s:static_colo = 'pablo'
 
@@ -141,12 +142,14 @@ let s:static_colo = 'fadedvision-dark'
 
 " let s:static_colo = 'distinguishedmod'
 " let s:static_colo = 'freeform'
+" let s:static_colo = 'tombstone'
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
 " let s:static_colo = 'donatello'
 " let s:static_colo = 'chernozem'
 " let s:static_colo = 'salmon'
 " let s:static_colo = 'megadark'
+" let s:static_colo = 'sandtrap'
 
 
 " let s:static_colo = 'default'
