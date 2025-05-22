@@ -249,7 +249,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bmk?p" "make-package" rw
+snippet "(\()?\bmkp" "make-package" rw
 (make-package '#:${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
@@ -1302,8 +1302,10 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bjoin" "join" rw
-(merge-pathnames ${VISUAL}$0`!p if match.group(1) is None:
+# Somewhat counterintuitively, merge-pathname's DEFAULT-PATHNAME aka base,
+# comes second.
+snippet "(\()?\bmp" "merge-pathnames" rw
+(merge-pathnames ${0:${VISUAL}} ${1:BASE-WITH-TRAILING-SLASH}`!p if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
