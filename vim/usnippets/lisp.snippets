@@ -1322,8 +1322,18 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\b(rp|sh)" "run-program" rw
+snippet "(\()?\bsh" "simple run-program" rw
 (uiop:run-program ${VISUAL}$0 :output :interactive`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\brp" "run-program mvb" rw
+(multiple-value-bind (output error-output exit-code)
+	(uiop:run-program ${1:cmd} :output '(:string :stripped t)
+					:error-output '(:string :stripped t)
+					:ignore-error-status t)
+	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
