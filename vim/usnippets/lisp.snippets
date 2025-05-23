@@ -1330,9 +1330,10 @@ endsnippet
 
 snippet "(\()?\brp" "run-program mvb" rw
 (multiple-value-bind (output error-output exit-code)
-	(uiop:run-program ${1:cmd} :output '(:string :stripped t)
-					:error-output '(:string :stripped t)
-					:ignore-error-status t)
+	(uiop:run-program ${1:cmd}
+		:output '(:string :stripped t)
+		:error-output '(:string :stripped t)
+		:ignore-error-status t)
 	${VISUAL}$0`!p
 if match.group(1) is None:
 	snip.rv = ")"`
