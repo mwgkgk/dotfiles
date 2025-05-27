@@ -72,7 +72,7 @@ snippet /^dd/ "dd-comment" r
 ;;; `!v system('date-jiv | tr -d "\n"')` ${VISUAL}$0
 endsnippet
 
-snippet /^\*/ "section-*" r
+snippet /^\#/ "section-*" r
 ;;; *
 ;;; * ${VISUAL}$0
 ;;; *
@@ -406,6 +406,11 @@ snippet "(\()?\b(defparameter|defparam|defpar|defp|par)" "defparameter" rw
 (defparameter $1 ${0:nil}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
+endsnippet
+
+snippet * "*" w
+(defparameter *${1:name}*
+	${0:${VISUAL}})
 endsnippet
 
 snippet "(\()?\b(defvar|defv|var)" "defvar" rw
@@ -1242,9 +1247,13 @@ snippet abcl "abcl" w
 #+abcl
 endsnippet
 
+priority -1
+
 snippet # "#'" w
 #'
 endsnippet
+
+priority 0
 
 snippet im "doing my part" b
 "I'm doing my part!"
