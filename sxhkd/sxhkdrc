@@ -36,6 +36,12 @@ super + F9
 super + f
 	smuggler
 
+super + control + f
+	tts-xsel
+
+super + shift + f
+	pkill -fi RHVoice-test
+
 super + c
 	cmums
 
