@@ -262,9 +262,9 @@ nnoremap <silent> <buffer> <Leader>R :T (5am:run-all-tests)<CR>
 nnoremap <silent> <buffer> <Leader>f :T (5am:run! '<C-r><C-a>)<CR>
 nnoremap <silent> <buffer> <Leader>z :T (5am:debug! '<C-r><C-a>)<CR>
 nnoremap <silent> <buffer> <Leader>F :T (5am:rem-test '<C-r><C-a>)<CR>
-nnoremap <silent> <buffer> <Leader>1 :T (5am:! '<C-r><C-a>)<CR>
-nnoremap <silent> <buffer> <Leader>2 :T (5am:!! '<C-r><C-a>)<CR>
-nnoremap <silent> <buffer> <Leader>3 :T (5am:!!! '<C-r><C-a>)<CR>
+nnoremap <silent> <buffer> <Leader>1 :T (5am:!)<CR>
+nnoremap <silent> <buffer> <Leader>2 :T (5am:!!)<CR>
+nnoremap <silent> <buffer> <Leader>3 :T (5am:!!!)<CR>
 
 command! GhostClearSuite execute "T (ghost:remove-all-tests-in-fiveam-suite-for-the-current-package)<CR>"
 
