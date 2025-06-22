@@ -3,6 +3,7 @@ let g:ale_linters = {
       \ 'perl'   : ['perl', 'perlcritic'],
       \ 'rust'   : ['cargo'],
       \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
+      \ 'lisp'   : ['crow'],
       \ }
 let g:ale_tcl_nagelfar_executable = 'nagelfar'
 let g:ale_sign_error = '>'
