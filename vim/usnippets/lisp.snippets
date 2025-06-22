@@ -398,6 +398,15 @@ if match.group(1) is None:
   nil)
 endsnippet
 
+snippet bake "bake" w
+#+#:comment
+(when nil
+  (let ((path #p"~/shop/${2:forge}/${1:x}/$1-cl/live/$1"))
+      (ensure-directories-exist path)
+      (sb-ext:save-lisp-and-die path :toplevel #'main :executable t))
+  nil)
+endsnippet
+
 # ||
 # || Variables
 # ||
