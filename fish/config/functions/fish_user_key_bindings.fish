@@ -500,10 +500,10 @@ function fish_user_key_bindings
     # M-w to fdz-dir .
     bind ÷ bind_fdz_dir_here
 
-    # M-q to fdz-dir ~/.ghq/
-    bind ñ bind_fdz_dir_ghq
-    # M-S-q to fdz-file ~/.ghq/
-    bind Ñ bind_fdz_vim_ghq
+    # M-q to fdz-file ~/.ghq/
+    bind ñ bind_fdz_vim_ghq
+    # M-S-q to fdz-dir ~/.ghq/
+    bind Ñ bind_fdz_dir_ghq
 
     # M-r to fzf through siblings
     bind ò bind_er
