@@ -146,6 +146,7 @@ command wallfill :!feh --bg-fill %c
 command wallcenter :!feh --bg-center %c
 command walltile :!feh --bg-tile %c
 command wallmax :!feh --bg-max %c
+command mpthree :!ffmpeg -i %c:p %c:p:r.mp3
 
 " This conflicts with fish auto-rename on cd
 " command Ren :screen | :execute "!tmux rename-window `fish -c prompt_pwd`/" | :screen
