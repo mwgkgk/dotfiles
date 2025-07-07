@@ -99,9 +99,6 @@ super + bracketright
 super + bracketleft
 	silk
 
-super + Tab
-	silk
-
 super + comma
 	bridge
 
