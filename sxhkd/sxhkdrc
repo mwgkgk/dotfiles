@@ -54,11 +54,11 @@ super + c
 # super + period
 # 	goldenboy
 
-super + m
-	goldenboy
+# super + m
+# 	goldenboy
 
-super + shift + i
-	fox
+# super + shift + i
+# 	fox
 
 # super + u
 # 	firefox-super-u
@@ -75,8 +75,8 @@ super + 0
 # super + control + i
 # 	xsetroot -name "$(pipeinput)"
 
-super + z
-	spyglass
+# super + z
+# 	spyglass
 
 # super + 8
 # 	firefox-roots
@@ -84,23 +84,23 @@ super + z
 # super + 9
 # 	firefox-super-nine
 
-super + equal
-	forgepriest
+# super + equal
+# 	forgepriest
 
 # super + o
 # 	firefox-super-o
 
-super + backslash
-	girl
+# super + backslash
+# 	girl
 
-super + bracketright
-	will
+# super + bracketright
+# 	will
 
-super + bracketleft
-	silk
+# super + bracketleft
+# 	silk
 
-super + comma
-	bridge
+# super + comma
+# 	bridge
 
 # control + Delete
 # 	xdotool key Caps_Lock
@@ -108,23 +108,23 @@ super + comma
 control + semicolon
 	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
 
-super + space
-	march
+# super + space
+# 	march
 
-super + control + equal
-	minerals
+# super + control + equal
+# 	minerals
 
-super + BackSpace
-	spyglass
+# super + BackSpace
+# 	spyglass
 
-super + y
-	zepp
+# super + y
+# 	zepp
 
-super + End
-	motor
+# super + End
+# 	motor
 
-super + apostrophe
-	junglebook
+# super + apostrophe
+# 	junglebook
 
 # Burrow
 
