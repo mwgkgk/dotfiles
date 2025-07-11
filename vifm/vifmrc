@@ -148,6 +148,8 @@ command walltile :!feh --bg-tile %c
 command wallmax :!feh --bg-max %c
 command mpthree :!ffmpeg -i %c:p %c:p:r.mp3
 command audacity :!audacity %c:p &
+command topng :!ffmpeg -i %c:p %c:p:r.png
+command gimp :!gimp %c:p &
 
 " This conflicts with fish auto-rename on cd
 " command Ren :screen | :execute "!tmux rename-window `fish -c prompt_pwd`/" | :screen
