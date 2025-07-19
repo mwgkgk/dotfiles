@@ -28,7 +28,10 @@ super + F8
 	girl Top
 
 super + F9
-	girl upd
+	march upd
+
+super + F11
+	say-do "hiding cursor" unclutter -idle 0
 
 # super + F12
 # 	march Vim ~/dot/sxhkd/sxhkdrc
