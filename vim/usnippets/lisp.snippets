@@ -269,6 +269,11 @@ snippet ins "in-package + in-suite" w
 (in-suite* $1-tests)
 endsnippet
 
+snippet inp "in-package + in-suite" w
+(in-package #:$1)
+(in-suite* $1-tests)
+endsnippet
+
 snippet ipclu "in-package cl-user" w
 (common-lisp:in-package #:common-lisp-user)
 endsnippet
