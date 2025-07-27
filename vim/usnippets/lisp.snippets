@@ -264,12 +264,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet ins "in-package + in-suite" w
-(in-package #:$1)
-(in-suite* $1-tests)
-endsnippet
-
-snippet inp "in-package + in-suite" w
+snippet /^(ins|inp|ips)/ "in-package + in-suite" r
 (in-package #:$1)
 (in-suite* $1-tests)
 endsnippet
