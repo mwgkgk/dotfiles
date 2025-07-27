@@ -35,7 +35,7 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 " ||
 
 " Compile current file
-nnoremap <buffer> <Leader>r :silent T (c "<C-r>=expand('%')<CR>")<CR>
+nnoremap <buffer> <LocalLeader>l :silent T (c "<C-r>=expand('%')<CR>")<CR>
 
 " Slurp current file
 nnoremap <buffer> <LocalLeader>s :silent T (slurp "<C-r>=expand('%')<CR>")<CR>
