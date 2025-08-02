@@ -243,6 +243,17 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
+snippet "(\()?\bfrom" "import-from" rw
+(:import-from #:${1:fiveam}
+							#:in-suite*
+							#:test
+							#:is
+							#:is-true
+							#:is-false`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
 snippet "(\()?\bexp" "exp" rw
 (:export #:${0:init}`!p
 if match.group(1) is None:
