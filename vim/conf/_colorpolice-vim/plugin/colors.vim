@@ -11,7 +11,7 @@
 " let s:static_colo = 'badwolf'
 " let s:static_colo = 'devbox-dark-256'
 " let s:static_colo = 'fisa'
-let s:static_colo = 'gigafisa' " LOOKS GOOD WITH LISP
+" let s:static_colo = 'gigafisa' " LOOKS GOOD WITH LISP
 
 " let s:static_colo = 'grind'
 " let s:static_colo = 'murphy_black'
@@ -37,6 +37,7 @@ let s:static_colo = 'gigafisa' " LOOKS GOOD WITH LISP
 " let s:static_colo = 'shenzhen-dark'
 " let s:static_colo = 'busan'
 " let s:static_colo = 'stalker'
+" let s:static_colo = 'synthwave'
 
 " let s:static_colo = 'gentooish'
 " let s:static_colo = 'xoria256'
@@ -63,6 +64,7 @@ let s:static_colo = 'gigafisa' " LOOKS GOOD WITH LISP
 " let s:static_colo = 'alien-nes'
 " let s:static_colo = 'grid'
 " let s:static_colo = 'darkblue'
+" let s:static_colo = 'ron'
 
 " let s:static_colo = 'Tomorrow'
 " let s:static_colo = 'primary'
@@ -99,6 +101,7 @@ let s:static_colo = 'gigafisa' " LOOKS GOOD WITH LISP
 " let s:static_colo = 'mwgkgk'
 " let s:static_colo = 'moot'
 " let s:static_colo = 'blue'
+" let s:static_colo = 'pyramids'
 
 " let s:static_colo = 'seoul256-light'
 " let s:static_colo = 'seoul256-dark'
@@ -143,6 +146,7 @@ let s:static_colo = 'gigafisa' " LOOKS GOOD WITH LISP
 " let s:static_colo = 'distinguishedmod'
 " let s:static_colo = 'freeform'
 " let s:static_colo = 'tombstone'
+let s:static_colo = 'eyy'
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
 " let s:static_colo = 'donatello'
