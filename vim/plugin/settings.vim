@@ -245,12 +245,12 @@ if has('gui_running')
     set guioptions=a
 
     " Font
-    set guifont=Liberation\ Mono\ 9
+    " set guifont=Liberation\ Mono\ 9
     " set guifont=Fixed\ 8
     " set guifont=Anonymous\ Pro\ 10
     " set guifont=Iosevka\ SS04\ 11
     " set noantialias
-    " set guifont=Hack\ 6
+    set guifont=Hack\ 20
 
     set guicursor+=a:blinkon0
     set guicursor+=i:block
