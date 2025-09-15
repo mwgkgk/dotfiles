@@ -1,6 +1,6 @@
-! URxvt*.transparent: true
+URxvt*.transparent: true
 ! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
-! URxvt*.shading: 90
+URxvt*.shading: 30
 
 ! Fixing flickering:
 ! URxvt*.transparent:  false
