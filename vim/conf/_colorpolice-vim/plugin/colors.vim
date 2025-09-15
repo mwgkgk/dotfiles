@@ -76,6 +76,7 @@
 " let s:static_colo = 'redmustang'
 " let s:static_colo = 'mustangmod'
 " let s:static_colo = 'mustang'
+" let s:static_colo = 'mustanggreenbg'
 
 " let s:static_colo = 'outsider'
 " let s:static_colo = 'alduin'
@@ -86,6 +87,7 @@
 " let s:static_colo = 'pink'
 
 " let s:static_colo = 'orbital'
+let s:static_colo = 'orbital-transparent'
 " let s:static_colo = 'sceaduhelm'
 
 " let s:static_colo = 'kalisi-dark'
@@ -146,7 +148,8 @@
 " let s:static_colo = 'distinguishedmod'
 " let s:static_colo = 'freeform'
 " let s:static_colo = 'tombstone'
-let s:static_colo = 'eyy'
+" let s:static_colo = 'tombstonec'
+" let s:static_colo = 'eyy'
 " let s:static_colo = 'ruby'
 " let s:static_colo = 'glowform'
 " let s:static_colo = 'donatello'
@@ -154,6 +157,8 @@ let s:static_colo = 'eyy'
 " let s:static_colo = 'salmon'
 " let s:static_colo = 'megadark'
 " let s:static_colo = 'sandtrap'
+" let s:static_colo = 'sandtrapc'
+" let s:static_colo = 'undercurrent'
 
 
 " let s:static_colo = 'default'
