@@ -142,10 +142,10 @@ command mkdatedir !mkdatedir "%a"
 command mktimedir !mktimedir "%a"
 command FF !firefox-default %f &
 command cdgit :execute 'cd' system('git rev-parse --git-dir')
-command wallfill :!feh --bg-fill %c
-command wallcenter :!feh --bg-center %c
-command walltile :!feh --bg-tile %c
-command wallmax :!feh --bg-max %c
+command setwallfill :!feh --bg-fill %c
+command setwallcenter :!feh --bg-center %c
+command setwalltile :!feh --bg-tile %c
+command setwallmax :!feh --bg-max %c
 command mpthree :!ffmpeg -i %c:p %c:p:r.mp3
 command audacity :!audacity %c:p &
 command topng :!ffmpeg -i %c:p %c:p:r.png
