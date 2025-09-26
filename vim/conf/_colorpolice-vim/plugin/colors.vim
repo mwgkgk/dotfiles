@@ -48,6 +48,7 @@
 " let s:static_colo = 'nuclear-dark'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'fadedvision-dark'
+let s:static_colo = 'fadedvision-transparent'
 " let s:static_colo = 'koehler'
 " let s:static_colo = 'pablo'
 
@@ -87,7 +88,7 @@
 " let s:static_colo = 'pink'
 
 " let s:static_colo = 'orbital'
-let s:static_colo = 'orbital-transparent'
+" let s:static_colo = 'orbital-transparent'
 " let s:static_colo = 'sceaduhelm'
 
 " let s:static_colo = 'kalisi-dark'
