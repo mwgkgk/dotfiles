@@ -48,7 +48,8 @@
 " let s:static_colo = 'nuclear-dark'
 " let s:static_colo = 'fadedvision'
 " let s:static_colo = 'fadedvision-dark'
-let s:static_colo = 'fadedvision-transparent'
+" let s:static_colo = 'fadedvision-transparent'
+let s:static_colo = 'values'
 " let s:static_colo = 'koehler'
 " let s:static_colo = 'pablo'
 
