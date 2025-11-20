@@ -80,12 +80,12 @@ set nocindent
 
 " These are necessary even with per-window cursorline, because there's no
 " WinEnter for the very first window.
-set cursorline
+" set cursorline
 " set cursorcolumn
 
 " Only show cursorline in current window:
-autocmd settings WinEnter * setlocal cursorline
-autocmd settings WinLeave * setlocal nocursorline
+" autocmd settings WinEnter * setlocal cursorline
+" autocmd settings WinLeave * setlocal nocursorline
 " autocmd settings WinEnter * setlocal cursorline cursorcolumn
 " autocmd settings WinLeave * setlocal nocursorline nocursorcolumn
 
