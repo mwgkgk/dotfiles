@@ -635,6 +635,17 @@ if not snip.v.text:
 endsnippet
 
 # ||
+# || Progn
+# ||
+
+snippet "(\()?\bprogn" "progn" rw
+(progn
+	${VISUAL}$0`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+# ||
 # || Types
 # ||
 
