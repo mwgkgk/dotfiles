@@ -68,8 +68,8 @@ function! colors#chi_colo(chi, static_colo)
         return a:static_colo
     elseif a:chi ==# 'bridge'
         " return 'orbital-transparent'
-        return 'thief-transparent'
-        " return a:static_colo
+        " return 'thief-transparent'
+        return a:static_colo
     elseif a:chi ==# 'goldenboy'
         return 'thief-transparent'
         " return a:static_colo
