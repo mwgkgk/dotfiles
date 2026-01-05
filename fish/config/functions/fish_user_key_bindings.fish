@@ -442,7 +442,8 @@ function fish_user_key_bindings
     # C-o to jump back
     bind \co bind_co
     # F2 to fm .
-    bind -k f2 bind_f2
+    # No longer supported as of 4.3.2
+    # bind -k f2 bind_f2
 
     # M-h M-l M-j M-k HJKL-navigation:
     bind è bind_eh
