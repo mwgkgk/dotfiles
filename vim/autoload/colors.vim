@@ -73,7 +73,8 @@ function! colors#chi_colo(chi, static_colo)
     elseif a:chi ==# 'goldenboy'
         " return 'thief-transparent'
         " return 'grid'
-        return 'fadedvision-transparent'
+        " return 'fadedvision-transparent'
+        return 'mono'
         " return a:static_colo
     elseif a:chi ==# 'pyramids'
         return a:static_colo
