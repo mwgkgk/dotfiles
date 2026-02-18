@@ -67,6 +67,7 @@
 
 ;;; Apparently this relies on asdf-install method which is deprecated
 ;;; TODO detect trunk based on current-directory-name, use separate path
+#+#:nil
 (let
   ;; Clozure CL uses flatform-specific FASL extensions:
   ((compiled-file #P"~/.cache/local/common-lisp/ccl/asdf.lx64fsl"))
