@@ -23,4 +23,5 @@
 ;;; * Common utilities
 ;;; *
 
-(load #p"~/dot/repl/common-rc.lisp")
+;;; cursed atm
+; (load #p"~/dot/repl/common-rc.lisp")
