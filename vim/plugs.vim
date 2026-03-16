@@ -1256,12 +1256,16 @@ Plug 'stewy33/mercury-vim'
 Plug 'kovetskiy/sxhkd-vim', { 'for' : 'sxhkd' }
 
 " Factor
-Plug '~/.ghq/github.com/factor/factor/misc/vim/', { 'for' : 'factor' } " {{{
+" Plug '~/.ghq/github.com/factor/factor/misc/vim/', { 'for' : 'factor' } " {{{
 
-let g:FactorRoot = expand('~/.ghq/github.com/factor/factor')
-let g:factor_syn_no_rainbow = 1
+" let g:FactorRoot = expand('~/.ghq/github.com/factor/factor')
+" let g:factor_syn_no_rainbow = 1
 
-" }}}
+" " }}}
+
+Plug 'factor/factor.vim'
+
+let g:FactorResourcePath = expand('~/.ghq/github.com/factor/factor')
 
 " Smalltalk
 Plug 'davidbalbert/vim-io'
