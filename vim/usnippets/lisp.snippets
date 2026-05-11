@@ -831,7 +831,16 @@ endsnippet
 # || Errors
 # ||
 
-snippet "(\()?\bhc" "handler-case" rw
+snippet "(\()?\b(rsc|rc)" "restart-case" rw
+(restart-case ${VISUAL}${0:nil}
+	(store-value (new-value)
+		:report "Supply a new ${1:pathname}."
+		(${2:fn-name-again} $1))`!p
+if match.group(1) is None:
+	snip.rv = ")"`
+endsnippet
+
+snippet "(\()?\b(hdc|hc)" "handler-case" rw
 (handler-case ${VISUAL}$1
 	(error (c)
 		${0:nil})`!p
@@ -839,7 +848,7 @@ if match.group(1) is None:
 	snip.rv = ")"`
 endsnippet
 
-snippet "(\()?\bhb" "handler-bind" rw
+snippet "(\()?\b(hdb|hb)" "handler-bind" rw
 (handler-bind ${VISUAL}$1
 	(($2))
 	${0:nil}`!p
@@ -896,7 +905,7 @@ endsnippet
 # || Readtable
 # ||
 
-snippet "(\()?\b(readc|rc)" "readtable-case" rw
+snippet "(\()?\b(readc|rdc)" "readtable-case" rw
 (readtable-case ${0:*readtable*}`!p
 if match.group(1) is None:
 	snip.rv = ")"`
