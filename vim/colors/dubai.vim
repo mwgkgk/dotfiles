@@ -61,7 +61,7 @@ hi Todo         guifg=#000000 guibg=#00ed00 gui=none ctermfg=000 ctermbg=95 cter
 hi Type         guifg=#1fb631 guibg=#000000 gui=none ctermfg=187 ctermbg=none cterm=none
 hi Underlined   guifg=#00b400 guibg=#000000 gui=underline ctermfg=95 ctermbg=none cterm=underline
 hi VertSplit    guifg=#000600 guibg=#001f00 gui=none ctermfg=236 ctermbg=236 cterm=none
-hi Visual       guibg=#001500 gui=reverse ctermbg=none cterm=reverse
+hi Visual       guibg=#001500 gui=reverse ctermbg=137 cterm=reverse
 hi VisualNOS    guibg=#002700 gui=reverse ctermbg=137 cterm=reverse
 hi WarningMsg   guifg=#000000 guibg=#00ff00 gui=none ctermfg=167 ctermbg=none cterm=none
 hi WildMenu     guifg=#00cb00 guibg=#000000 gui=reverse ctermfg=000 ctermbg=167 cterm=reverse
