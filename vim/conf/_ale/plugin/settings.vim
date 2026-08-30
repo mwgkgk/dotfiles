@@ -4,6 +4,8 @@ let g:ale_linters = {
       \ 'rust'   : ['cargo'],
       \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
       \ 'lisp'   : ['crow'],
+      \ 'cpp'    : ['cc', 'gcc', 'clang'],
+      \ 'javascript' : ['eslint'],
       \ }
 
 " This is the official blessed way of disabling ale for an extension.
@@ -23,7 +25,6 @@ let g:ale_set_highlights = 0
 let g:ale_virtualtext_cursor=0
 
 let cpp_opts = '-std=c++20 -Wall -Wextra'
-let g:ale_linters = { 'cpp': ['cc', 'gcc', 'clang'] }
 let g:ale_cpp_cc_options    = cpp_opts
 let g:ale_cpp_gcc_options   = cpp_opts
 let g:ale_cpp_clang_options = cpp_opts
