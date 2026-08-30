@@ -3,7 +3,7 @@
 " ||
 
 " Open repl:
-nnoremap <buffer> <LocalLeader><LocalLeader> :silent above T lfe<CR>
+nnoremap <buffer> <LocalLeader><LocalLeader> :silent T rebar3 lfe repl<CR>
 
 " Exit repl:
 nnoremap <buffer> <LocalLeader>q :silent T (exit)<CR>
@@ -35,7 +35,12 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 " ||
 
 " Compile current file
-nnoremap <buffer> <LocalLeader>l :silent T (c "<C-r>=expand('%')<CR>")<CR>
+" nnoremap <buffer> <LocalLeader>l :silent T (c "<C-r>=expand('%')<CR>")<CR>
+
+" Compile into the _build dir (default is project root, harmless but this way
+" there's no paranoia about mismatched .beam files which did happen and (c ..)
+" was part of the solution.
+nnoremap <buffer> <LocalLeader><Leader> :silent T (c "<C-r>=expand('%')<CR>" '(#(outdir "_build/default/lib/sandstorm/ebin")))<CR>:redraw!<CR>
 
 " Slurp current file
 nnoremap <buffer> <LocalLeader>s :silent T (slurp "<C-r>=expand('%')<CR>")<CR>
