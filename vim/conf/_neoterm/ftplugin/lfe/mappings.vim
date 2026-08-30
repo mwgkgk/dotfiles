@@ -35,7 +35,8 @@ nnoremap <buffer> <Leader>X :TREPLSendLine<CR>
 " ||
 
 " Compile current file
-" nnoremap <buffer> <LocalLeader>l :silent T (c "<C-r>=expand('%')<CR>")<CR>
+nnoremap <buffer> <LocalLeader>l :silent T (c "<C-r>=expand('%')<CR>")<CR>
+nnoremap <buffer> <LocalLeader><Leader> :silent T (c "<C-r>=expand('%')<CR>")<CR>
 
 " Compile into the _build dir (default is project root, harmless but this way
 " there's no paranoia about mismatched .beam files which did happen and (c ..)
