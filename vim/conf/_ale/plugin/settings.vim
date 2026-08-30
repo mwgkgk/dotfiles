@@ -5,6 +5,15 @@ let g:ale_linters = {
       \ 'elixir' : ['credo', 'elixir-ls', 'mix'],
       \ 'lisp'   : ['crow'],
       \ }
+
+" This is the official blessed way of disabling ale for an extension.
+" If you try to give it an empty list in g:ale_linters, its going to apply the
+" default set of linters.
+let g:ale_pattern_options = {
+\   '\.min\.js$': {'ale_enabled': 0},
+\   'jscl\.js$': {'ale_enabled': 0},
+\}
+
 let g:ale_tcl_nagelfar_executable = 'nagelfar'
 let g:ale_sign_error = '>'
 let g:ale_sign_warning = '?'
