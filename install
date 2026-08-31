@@ -74,6 +74,7 @@ mkdir -p ~/.vim/undo
 mkdir -p ~/.vifm
 verbose_link "$DOTFILES/vifm/vifmrc" ~/.vifm/vifmrc
 verbose_link "$DOTFILES/vifm/colors/" ~/.vifm/colors
+verbose_link "$DOTFILES/vifm/plugins/" ~/.vifm/plugins
 
 # Git
 verbose_link "$DOTFILES/git/.gitconfig" ~/.gitconfig
