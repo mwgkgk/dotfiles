@@ -1,4 +1,10 @@
 " ||
+" || Nimble
+" ||
+
+nnoremap <buffer> <silent> <Leader>f :T nimble test<CR>
+
+" ||
 " || Compiler
 " ||
 
