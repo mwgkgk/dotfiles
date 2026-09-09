@@ -27,7 +27,7 @@ set color_error=lightred
 set color_info=lightgreen
 
 # Color of currently playing track.
-set color_win_cur=lightgreen
+set color_win_cur=28
 
 # Color of the separator line between windows in view (1).
 set color_separator=black
@@ -52,11 +52,11 @@ set color_win_cur_sel_fg=white
 
 # Color of the selected row which is also the currently playing track in inactive window.
 set color_win_inactive_cur_sel_bg=default
-set color_win_inactive_cur_sel_fg=white
+set color_win_inactive_cur_sel_fg=gray
 
 # Color of selected row in inactive window.
 set color_win_inactive_sel_bg=default
-set color_win_inactive_sel_fg=white
+set color_win_inactive_sel_fg=gray
 
 # Color of selected row in active window.
 set color_win_sel_bg=default
