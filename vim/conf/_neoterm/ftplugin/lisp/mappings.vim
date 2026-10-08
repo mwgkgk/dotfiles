@@ -126,6 +126,7 @@ nnoremap <silent> <buffer> <LocalLeader>fd :T (ghost:drop-last-fallback)<CR>
 
 " Run repls:
 nnoremap <buffer> <LocalLeader><LocalLeader> :silent T sbcl --eval "(ghost:in-guessed-package #P\"<C-r>=expand('%:p')<CR>\" <C-r>=line('.')<CR> :link-asd t)"<CR>
+nnoremap <buffer> <LocalLeader>: :silent T ccl --eval "(ghost:in-guessed-package #P\"<C-r>=expand('%:p')<CR>\" <C-r>=line('.')<CR> :link-asd t)"<CR>
 nnoremap <buffer> <LocalLeader>" :silent T manufacturing-facility --guess-package "<C-r>=expand('%')<CR>" <C-r>=line('.')<CR><CR>
 
 nnoremap <buffer> <LocalLeader>[m :silent T manufacturing-facility<CR>
