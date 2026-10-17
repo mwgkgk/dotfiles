@@ -1,5 +1,11 @@
 # Citizens
 
+ctrl + XF86MonBrightnessUp
+	brightnessctl s 1-
+
+ctrl + XF86MonBrightnessDown
+	brightnessctl s +1
+
 XF86MonBrightnessUp
 	brightnessctl s 249-
 
