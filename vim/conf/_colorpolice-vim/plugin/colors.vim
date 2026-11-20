@@ -68,11 +68,11 @@
 " let s:static_colo = 'alien-nes'
 " let s:static_colo = 'grid'
 " let s:static_colo = 'darkblue'
-" let s:static_colo = 'ron'
+let s:static_colo = 'ron'
 " let s:static_colo = 'herald'
 " let s:static_colo = 'quiet'
 " let s:static_colo = 'wildcharm-dark'
-let s:static_colo = 'anarchy'
+" let s:static_colo = 'anarchy'
 
 " let s:static_colo = 'Tomorrow'
 " let s:static_colo = 'primary'

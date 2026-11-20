@@ -13,7 +13,7 @@ URxvt.tabbed.title: false
 URxvt*.scrollBar: false
 
 ! Alt keys:
-URxvt*.meta8: true
+URxvt*.meta8: false
 
 ! URxvt.foreground: DarkGoldenrod1
 ! URxvt*.foreground: #EBC593

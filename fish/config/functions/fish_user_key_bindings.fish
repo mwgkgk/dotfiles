@@ -415,6 +415,9 @@ function bind_fdz_vim_ghq
     commandline -f repaint
 end
 
+# Alt bindings come in two forms: the 8-bit character urxvt sends with
+# meta8 on (æ for M-f), and ESC+key, what terminals send with meta8 off
+# and what tmux passes on. Each 8-bit bind has its \e twin under it.
 function fish_user_key_bindings
     # Emulate bash: !!, !$
     bind ! bind_bang
@@ -432,9 +435,11 @@ function fish_user_key_bindings
 
     # M-CR
     bind  bind_run_keep
+    bind \e\r bind_run_keep
 
     # M-;
     bind » bind_rerun
+    bind \e\; bind_rerun
 
     # C-g to select-repl
     bind \cg bind_select_repl
@@ -447,67 +452,95 @@ function fish_user_key_bindings
 
     # M-h M-l M-j M-k HJKL-navigation:
     bind è bind_eh
+    bind \eh bind_eh
     bind ì bind_el
+    bind \el bind_el
     bind ê bind_ej
+    bind \ej bind_ej
     bind ë bind_ek
+    bind \ek bind_ek
 
     # M-S-l to cd !$
     bind Ì bind_cd_lastcmd
+    bind \eL bind_cd_lastcmd
 
     # M-o to ls
     bind ï bind_ls_here
+    bind \eo bind_ls_here
     # M-S-o to exa -l --sort modified --tree
     bind Ï bind_lstree_here
+    bind \eO bind_lstree_here
 
     # M-i to git status
     bind é bind_git_status
+    bind \ei bind_git_status
     # M-S-i to git diff
     bind É bind_git_diff
+    bind \eI bind_git_diff
     # C-M-i to raise
     bind  bind_raise
+    bind \e\t bind_raise
 
     # M-u to suh
     bind õ bind_suh
+    bind \eu bind_suh
     # M-S-u to suh -v
     bind Õ bind_suh_v
+    bind \eU bind_suh_v
     # C-M-u to suck
     bind  bind_suck
+    bind \e\cu bind_suck
 
     # M-y to git log -n <smallnumber>
     bind ù bind_git_log
+    bind \ey bind_git_log
     # M-S-y to git shortlog
     bind Ù bind_git_shortlog
+    bind \eY bind_git_shortlog
     # C-M-y to slap
     bind  bind_slap
+    bind \e\cy bind_slap
 
     # M-m to git remote -v
     bind í bind_git_remote
+    bind \em bind_git_remote
     # M-S-m to Bat gitconfig
     bind Í bind_git_config
+    bind \eM bind_git_config
 
     # M-f to Bat or forward-word
     bind æ bind_bat_here
+    bind \ef bind_bat_here
     # M-S-f to Bat $(fz-preview-git-changes )
     bind Æ bind_bat_git_changes
+    bind \eF bind_bat_git_changes
 
     # M-~ to fdz-dir ~
     bind à bind_fdz_dir_home
+    bind \e\` bind_fdz_dir_home
     # M-S-s to fdz-dir ~/shop/
     bind Ó bind_fdz_dir_shop
+    bind \eS bind_fdz_dir_shop
     # M-c to fdz-dir ~/shop/cases/
     bind ã bind_fdz_dir_cases
+    bind \ec bind_fdz_dir_cases
     # M-S-x to fdz-dir ~/shop/ink/
     bind Ø bind_fdz_dir_ink
+    bind \eX bind_fdz_dir_ink
     # M-w to fdz-dir .
     bind ÷ bind_fdz_dir_here
+    bind \ew bind_fdz_dir_here
 
     # M-q to fdz-file ~/.ghq/
     bind ñ bind_fdz_vim_ghq
+    bind \eq bind_fdz_vim_ghq
     # M-S-q to fdz-dir ~/.ghq/
     bind Ñ bind_fdz_dir_ghq
+    bind \eQ bind_fdz_dir_ghq
 
     # M-r to fzf through siblings
     bind ò bind_er
+    bind \er bind_er
 
     # C-r to fzf-history
     bind \cr bind_cr
@@ -515,32 +548,44 @@ function fish_user_key_bindings
     bind \ct bind_fz_here
     # M-t to append fz-git-changes to commandline
     bind ô bind_fz_git_changes
+    bind \et bind_fz_git_changes
 
     # M-e to v $(fz-here)
     bind å bind_v_here
+    bind \ee bind_v_here
     # M-S-e to v $(fz-git-changes)
     bind Å bind_v_git_changes
+    bind \eE bind_v_git_changes
 
     # M-d to fzf through dotfile folder, or kill-word
     bind ä bind_ed
+    bind \ed bind_ed
     # M-S-d to fzf through dotfiles in ~/, or kill-word
     bind Ä bind_esd
+    bind \eD bind_esd
     # M-C-d to fzf through ~/pants
     bind  bind_ecd
+    bind \e\cd bind_ecd
     # M-v to fzf-vim ~/.vim
     bind ö bind_ev
+    bind \ev bind_ev
     # M-b to git branch or backward-word
     bind â bind_eb
+    bind \eb bind_eb
     # C-b to become royal
     bind \cb bind_royals
     # M-g
     bind ç bind_fdz_guns
+    bind \eg bind_fdz_guns
     # M-a
     bind á bind_fdz_vim_ark
+    bind \ea bind_fdz_vim_ark
     # M-s
     bind ó bind_fdz_vim_shop
+    bind \es bind_fdz_vim_shop
     # M-x
     bind ø bind_fdz_vim_ink
+    bind \ex bind_fdz_vim_ink
 
     # Move \ee to \ex
     bind \ex edit_command_buffer
