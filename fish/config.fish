@@ -106,8 +106,10 @@ set -x npm_config_prefix ~/.node_modules
 # Carp
 set -x CARP_DIR ~/.ghq/github.com/carp-lang/Carp/
 
-# Perl
-eval (perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)
+# Perl. local::lib lives in ~/perl5 when installed by hand; quiet when it isn't.
+if set -l perl_env (perl -I$HOME/perl5/lib/perl5 -Mlocal::lib 2>/dev/null)
+    eval $perl_env
+end
 
 # Haskell
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH $HOME/.ghcup/bin # ghcup-env
