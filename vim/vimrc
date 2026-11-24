@@ -9,6 +9,17 @@ set encoding=utf-8
 
 "
 "
+" tmux 3.x+ alt-keys workaround
+"
+
+" Together with URxvt*.meta8: false in .Xresources and
+" set -s extended-keys on  in .tmux.conf,
+" this fixes the tmux 3.x+ alt-keys problem in vim proper
+
+set keyprotocol+=screen-256color:mok2
+
+"
+"
 " Filetype & Syntax
 "
 

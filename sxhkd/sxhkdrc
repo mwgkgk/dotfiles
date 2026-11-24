@@ -114,6 +114,7 @@ super + 0
 # control + Delete
 # 	xdotool key Caps_Lock
 
+# This only fires if keyd is not installed
 control + semicolon
 	sleep 0.15 && xdotool keyup ctrl+semicolon key Escape space w
 
